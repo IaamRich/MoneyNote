@@ -1,6 +1,7 @@
 ﻿using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using MoneyNote.Pages;
 using System;
 using Xamarin.Forms;
 
@@ -12,7 +13,7 @@ namespace MoneyNote
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new ContactsPage();
         }
 
         protected override void OnStart()
