@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MoneyNote.Views.StartView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Main"
+    mc:Ignorable="d">
+    <ContentPage.ToolbarItems>
+        <!--<ToolbarItem Clicked="AddItem_Clicked" Text="Add income  " />-->
+        <ToolbarItem Text="Add income  " />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Margin="0">
+
+        <Grid Margin="10,5,10,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*" />
+                <ColumnDefinition Width="50*" />
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Column="0" Orientation="Vertical">
+                <Label Text="Current bill:" />
+                <Label x:Name="currentbill" />
+            </StackLayout>
+            <StackLayout
+                Grid.Column="1"
+                HorizontalOptions="End"
+                Orientation="Vertical">
+                <Label HorizontalOptions="EndAndExpand" Text="Saving:" />
+                <Label HorizontalOptions="EndAndExpand" Text="999999" />
+            </StackLayout>
+        </Grid>
+
+        <Image
+            Margin="10,50"
+            HeightRequest="50"
+            Source="logo.png"
+            WidthRequest="100" />
+
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Frame Margin="10,0">
+                <StackLayout>
+                    <Label
+                        FontSize="Title"
+                        HorizontalOptions="Center"
+                        Text="Enter spent amount:" />
+                    <Frame>
+                        <Entry FontSize="Large" Placeholder="Value" />
+                    </Frame>
+                    <!--<Button
+                        Clicked="OnAdd"
+                        CornerRadius="10"
+                        Text="Commit" />-->
+                    <Button CornerRadius="10" Text="Commit" />
+                </StackLayout>
+            </Frame>
+            <ListView x:Name="moneyList" ItemsSource="{Binding}">
+                <!--  ItemSelected="OnItemSelected"  -->
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label FontSize="Medium" Text="{Binding Name}" />
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+
+        <StackLayout
+            Margin="10,0,10,20"
+            HorizontalOptions="EndAndExpand"
+            Orientation="Horizontal"
+            VerticalOptions="EndAndExpand">
+            <Label Margin="10,0" Text="Share" />
+            <Label Margin="10,0" Text="Vote" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

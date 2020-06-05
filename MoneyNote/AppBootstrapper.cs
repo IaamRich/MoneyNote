@@ -2,6 +2,7 @@
 using MoneyNote.Pages;
 using MoneyNote.Services;
 using MoneyNote.ViewModels;
+using MoneyNote.Views;
 using ReactiveUI;
 using ReactiveUI.XamForms;
 using Splat;
@@ -17,7 +18,7 @@ namespace MoneyNote
             Locator.CurrentMutable.RegisterConstant(this, typeof(IScreen));
             RegisterServices();
             RegisterViews();
-            Router.Navigate.Execute(new CollectionViewModel());
+            Router.Navigate.Execute(new MainViewModel());
         }
 
         public RoutingState Router { get; }
@@ -32,6 +33,7 @@ namespace MoneyNote
             Locator.CurrentMutable.Register(() => new FirstPage(), typeof(IViewFor<FirstViewModel>));
             Locator.CurrentMutable.Register(() => new SecondPage(), typeof(IViewFor<SecondViewModel>));
             Locator.CurrentMutable.Register(() => new CollectionPage(), typeof(IViewFor<CollectionViewModel>));
+            Locator.CurrentMutable.Register(() => new MainView(), typeof(IViewFor<MainViewModel>));
             //Locator.CurrentMutable.RegisterViewsForViewModels(Assembly.GetExecutingAssembly());
         }
         public Page CreateMainPage()
