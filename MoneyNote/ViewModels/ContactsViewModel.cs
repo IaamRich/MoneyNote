@@ -1,42 +1,67 @@
 ﻿using MoneyNote.Models;
+using MoneyNote.Services;
 using ReactiveUI;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
+using System.Reactive;
 using System.Reactive.Linq;
 
 namespace MoneyNote.ViewModels
 {
     public class ContactsViewModel : ReactiveObject
     {
-        private List<Contact> _samples = new List<Contact>()
-        {
-            new Contact{FullName = "GGGG", Email = "gggg@gmail.com", Phone="092358182"},
-            new Contact{FullName = "GGGG1", Email = "gggg1@gmail.com", Phone="092358182"},
-            new Contact{FullName = "GGGG2", Email = "gggg2@gmail.com", Phone="097345182"},
-            new Contact{FullName = "GGGG3", Email = "gggg3@gmail.com", Phone="093468182"},
-            new Contact{FullName = "GGGG4", Email = "gggg4@gmail.com", Phone="034568182"},
-            new Contact{FullName = "GGGG5", Email = "gggg5@gmail.com", Phone="0923465182"},
-            new Contact{FullName = "GGGG6", Email = "gggg6@gmail.com", Phone="0974328182"},
-            new Contact{FullName = "GGGG7", Email = "gggg7@gmail.com", Phone="092236182"},
-        };
+        private IContactServices _contactService;
 
-        public ContactsViewModel()
+        public ContactsViewModel(IContactServices contactServices = null)
         {
-            _contacts = new ObservableCollection<Contact>(_samples);
+            _contactService = contactServices ?? (IContactServices)Splat.Locator.Current.GetService(typeof(IContactServices));
+
+            //_contacts = new ObservableCollection<Contact>(_samples);
+            var allContacts = _contactService.GetAllContacts();
+            _contacts = new ObservableCollection<Contact>(allContacts);
 
             this.WhenAnyValue(vm => vm.SearchQuery)
                 .Throttle(TimeSpan.FromSeconds(1))
                 .Subscribe(query =>
                 {
-                    var filteredContacts = _samples.Where(c => c.FullName.ToLower().Contains(query) ||
+                    var filteredContacts = allContacts.Where(c => c.FullName.ToLower().Contains(query) ||
                     c.Phone.Contains(query) || c.Email.Contains(query)).ToList();
 
                     Contacts = new ObservableCollection<Contact>(filteredContacts);
                 });
+
+            this.WhenAnyValue(vm => vm.Contacts)
+                .Select(contacts =>
+                {
+                    if (Contacts.Count == allContacts.Count())
+                    {
+                        return "No filters applied";
+                    }
+                    return $"{Contacts.Count} have been found in result for '{SearchQuery}'";
+                })
+                .ToProperty(this, vm => vm.SearchResult, out _searchResult);
+
+            var canExecuteClear = this.WhenAnyValue(vm => vm.SearchQuery)
+                .Select(query =>
+                {
+                    if (string.IsNullOrWhiteSpace(query))
+                    {
+                        return false;
+                    }
+                    return true;
+                });
+            //Simple Command
+            ClearCommand = ReactiveCommand.Create(ClearSerach, canExecuteClear);
+            //Handle the Exceptions
+            ClearCommand.ThrownExceptions.Subscribe(ex =>
+            {
+                Debug.WriteLine(ex.Message);
+            });
         }
 
+        #region Properties
         private string _searchQuery = "";
         public string SearchQuery
         {
@@ -44,11 +69,25 @@ namespace MoneyNote.ViewModels
             set { this.RaiseAndSetIfChanged(ref _searchQuery, value); }
         }
 
+        private readonly ObservableAsPropertyHelper<string> _searchResult;
+        public string SearchResult { get => _searchResult.Value; }
         private ObservableCollection<Contact> _contacts;
         public ObservableCollection<Contact> Contacts
         {
             get => _contacts;
             set { this.RaiseAndSetIfChanged(ref _contacts, value); }
         }
+        #endregion
+        #region Commands
+        public ReactiveCommand<Unit, Unit> ClearCommand { get; }
+        #endregion
+
+        #region Methods
+        private void ClearSerach()
+        {
+            //throw new Exception("this is an example");
+            SearchQuery = string.Empty;
+        }
+        #endregion
     }
 }
