@@ -12,7 +12,7 @@ namespace MoneyNote
         {
             InitializeComponent();
             var bootstrapper = new AppBootstrapper();
-            MainPage = bootstrapper.CreateMainPage();
+            MainPage = new MainPage(bootstrapper.CreateMainViewModel());
         }
         protected override void OnStart()
         {
