@@ -1,6 +1,7 @@
 ﻿using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using MoneyNote.Resources;
 using System;
 using Xamarin.Forms;
 
@@ -11,8 +12,8 @@ namespace MoneyNote
         public App()
         {
             InitializeComponent();
-            var bootstrapper = new AppBootstrapper();
-            MainPage = new MainPage(bootstrapper.CreateMainViewModel());
+            //var bootstrapper = new AppBootstrapper();
+            MainPage = new NavigationPage(new SplashPage());//MasterView(bootstrapper.CreateMasterViewModel());
         }
         protected override void OnStart()
         {

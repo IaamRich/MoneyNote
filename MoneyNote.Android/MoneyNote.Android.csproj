@@ -120,5 +120,45 @@
       <Link>Resources\drawable\xamarin_logo.png</Link>
     </AndroidResource>
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\about.png">
+      <Link>Resources\drawable\about.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\history.png">
+      <Link>Resources\drawable\history.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\main.png">
+      <Link>Resources\drawable\main.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\settings.png">
+      <Link>Resources\drawable\settings.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\terms.png">
+      <Link>Resources\drawable\terms.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\account.png">
+      <Link>Resources\drawable\account.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\hamburger_white.png">
+      <Link>Resources\drawable\hamburger_white.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\splash.png">
+      <Link>Resources\drawable\splash.png</Link>
+    </AndroidResource>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

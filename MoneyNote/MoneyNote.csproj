@@ -24,6 +24,27 @@
     <Compile Update="Pages\Learning\CollectionPage.xaml.cs">
       <DependentUpon>CollectionPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\TermsView.xaml.cs">
+      <DependentUpon>TermsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\AboutView.xaml.cs">
+      <DependentUpon>AboutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HistoryView.xaml.cs">
+      <DependentUpon>HistoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\SettingsView.xaml.cs">
+      <DependentUpon>SettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MainAndMenu\MasterView.xaml.cs">
+      <DependentUpon>MasterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\AccountView.xaml.cs">
+      <DependentUpon>AccountView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

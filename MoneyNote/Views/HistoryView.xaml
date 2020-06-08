@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<rxui:ReactiveContentPage
+    x:Class="MoneyNote.HistoryView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MoneyNote"
+    xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
+    x:TypeArguments="local:HistoryViewModel">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Имя" />
+            <Entry Text="{Binding Name}" />
+            <Label Text="Email" />
+            <Entry Text="{Binding Email}" />
+            <Label Text="Телефон" />
+            <Entry Text="{Binding Phone}" />
+            <StackLayout Orientation="Horizontal">
+                <!--<Button Clicked="SaveFriend" Text="Сохранить" />-->
+                <Button Text="Сохранить" />
+                <Button Text="Удалить" />
+                <Button Text="Отмена" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</rxui:ReactiveContentPage>

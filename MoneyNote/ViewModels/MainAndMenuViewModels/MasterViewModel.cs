@@ -8,9 +8,9 @@ using System.Reactive.Linq;
 
 namespace MoneyNote
 {
-    public class MainViewModel : ReactiveObject, IScreen
+    public class MasterViewModel : ReactiveObject, IScreen
     {
-        public MainViewModel()
+        public MasterViewModel()
         {
             Router = new RoutingState();
             Locator.CurrentMutable.RegisterConstant(this, typeof(IScreen));
@@ -44,9 +44,12 @@ namespace MoneyNote
         {
             return new[]
             {
-                new MasterCellViewModel { Title = "Navigable Page", IconSource = "contacts.png", TargetType = typeof(NavigableViewModel) },
-                new MasterCellViewModel { Title = "Number Stream Page", IconSource = "reminders.png", TargetType = typeof(NumberStreamViewModel) },
-                new MasterCellViewModel { Title = "Letter Stream Page", IconSource = "todo.png", TargetType = typeof(LetterStreamViewModel) },
+                new MasterCellViewModel { Title = "Main", IconSource = "main.png", TargetType = typeof(MainViewModel) },
+                new MasterCellViewModel { Title = "Account", IconSource = "account.png", TargetType = typeof(AccountViewModel) },
+                new MasterCellViewModel { Title = "Settings", IconSource = "settings.png", TargetType = typeof(SettingsViewModel) },
+                new MasterCellViewModel { Title = "History", IconSource = "history.png", TargetType = typeof(HistoryViewModel) },
+                new MasterCellViewModel { Title = "Terms", IconSource = "terms.png", TargetType = typeof(TermsViewModel) },
+                new MasterCellViewModel { Title = "About", IconSource = "about.png", TargetType = typeof(AboutViewModel) },
             };
         }
     }

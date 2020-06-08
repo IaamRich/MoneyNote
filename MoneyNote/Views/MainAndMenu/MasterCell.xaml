@@ -13,7 +13,10 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Image x:Name="IconImage" />
-        <Label x:Name="TitleLabel" Grid.Column="1" />
+        <Label
+            x:Name="TitleLabel"
+            Grid.Column="1"
+            VerticalOptions="CenterAndExpand" />
     </Grid>
 
 </rxui:ReactiveViewCell>

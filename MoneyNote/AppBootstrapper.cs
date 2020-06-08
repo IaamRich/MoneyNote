@@ -14,7 +14,7 @@ namespace MoneyNote
             RegisterServices();
             RegisterViews();
             RegisterViewModels();
-            //Router.Navigate.Execute(new MainViewModel());
+            //Router.Navigate.Execute(new MasterViewModel());
         }
 
         public RoutingState Router { get; }
@@ -23,12 +23,12 @@ namespace MoneyNote
         {
             Splat.Locator.CurrentMutable.Register(() => new StaticContactsService(), typeof(IContactServices));
         }
-        public MainViewModel CreateMainViewModel()
+        public MasterViewModel CreateMasterViewModel()
         {
             // In a typical routing example the IScreen implementation would be this bootstrapper class.
             // However, a MasterDetailPage is designed to at the root. So, we assign the master-detail
             // view model to play the part of IScreen, instead.
-            var viewModel = new MainViewModel();
+            var viewModel = new MasterViewModel();
 
             return viewModel;
         }
@@ -39,17 +39,23 @@ namespace MoneyNote
 
             // Detail pages
             Locator.CurrentMutable.Register(() => new DummyPage(), typeof(IViewFor<DummyViewModel>));
-            Locator.CurrentMutable.Register(() => new NavigablePage(), typeof(IViewFor<NavigableViewModel>));
-            Locator.CurrentMutable.Register(() => new NumberStreamPage(), typeof(IViewFor<NumberStreamViewModel>));
-            Locator.CurrentMutable.Register(() => new LetterStreamPage(), typeof(IViewFor<LetterStreamViewModel>));
+            Locator.CurrentMutable.Register(() => new MainView(), typeof(IViewFor<MainViewModel>));
+            Locator.CurrentMutable.Register(() => new AccountView(), typeof(IViewFor<AccountViewModel>));
+            Locator.CurrentMutable.Register(() => new SettingsView(), typeof(IViewFor<SettingsViewModel>));
+            Locator.CurrentMutable.Register(() => new HistoryView(), typeof(IViewFor<HistoryViewModel>));
+            Locator.CurrentMutable.Register(() => new TermsView(), typeof(IViewFor<TermsViewModel>));
+            Locator.CurrentMutable.Register(() => new AboutView(), typeof(IViewFor<AboutViewModel>));
         }
         private void RegisterViewModels()
         {
             // Here, we use contracts to distinguish which routable view model we want to instantiate.
             // This helps us avoid a manual cast to IRoutableViewModel when calling Router.Navigate.Execute(...)
-            Locator.CurrentMutable.Register(() => new NavigableViewModel(), typeof(IRoutableViewModel), typeof(NavigableViewModel).FullName);
-            Locator.CurrentMutable.Register(() => new NumberStreamViewModel(), typeof(IRoutableViewModel), typeof(NumberStreamViewModel).FullName);
-            Locator.CurrentMutable.Register(() => new LetterStreamViewModel(), typeof(IRoutableViewModel), typeof(LetterStreamViewModel).FullName);
+            Locator.CurrentMutable.Register(() => new MainViewModel(), typeof(IRoutableViewModel), typeof(MainViewModel).FullName);
+            Locator.CurrentMutable.Register(() => new AccountViewModel(), typeof(IRoutableViewModel), typeof(AccountViewModel).FullName);
+            Locator.CurrentMutable.Register(() => new SettingsViewModel(), typeof(IRoutableViewModel), typeof(SettingsViewModel).FullName);
+            Locator.CurrentMutable.Register(() => new HistoryViewModel(), typeof(IRoutableViewModel), typeof(HistoryViewModel).FullName);
+            Locator.CurrentMutable.Register(() => new TermsViewModel(), typeof(IRoutableViewModel), typeof(TermsViewModel).FullName);
+            Locator.CurrentMutable.Register(() => new AboutViewModel(), typeof(IRoutableViewModel), typeof(AboutViewModel).FullName);
         }
         //public Page CreateMainPage()
         //{

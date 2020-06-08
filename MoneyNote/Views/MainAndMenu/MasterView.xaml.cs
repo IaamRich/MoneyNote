@@ -8,9 +8,9 @@ using System.Reactive.Linq;
 
 namespace MoneyNote
 {
-    public partial class MainPage : ReactiveMasterDetailPage<MainViewModel>
+    public partial class MasterView : ReactiveMasterDetailPage<MasterViewModel>
     {
-        public MainPage(MainViewModel viewModel)
+        public MasterView(MasterViewModel viewModel)
         {
             ViewModel = viewModel;
 

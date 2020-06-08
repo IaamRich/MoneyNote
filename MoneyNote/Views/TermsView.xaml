@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<rxui:ReactiveContentPage
+    x:Class="MoneyNote.TermsView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MoneyNote"
+    xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
+    x:TypeArguments="local:TermsViewModel">
+    <ContentPage.Content>
+        <StackLayout Margin="10,5">
+            <Label Text="1. This page (together with the documents referred to on it) tells you the terms of use (the 'Terms of Use') on which you may make use of our 'goop city guides' application for mobile devices (the 'App'). Please read these Terms of Use carefully before you download, install or use the App. By downloading, installing or using the App, you indicate that you accept these Terms of Use and that you agree to abide by them. Your download, installation or use of the App constitutes your acceptance of these Terms of Use which takes effect on the date on which you download, install or use the App. If you do not agree with these Terms of Use, you should cease downloading, installing or using the App immediately." />
+        </StackLayout>
+    </ContentPage.Content>
+</rxui:ReactiveContentPage>

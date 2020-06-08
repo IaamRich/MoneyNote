@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<rxui:ReactiveMasterDetailPage
+    x:Class="MoneyNote.MasterView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MoneyNote"
+    xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
+    x:TypeArguments="local:MasterViewModel">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Master">
+            <StackLayout Spacing="0">
+                <Grid BackgroundColor="Green" ColumnSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="36" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="56" />
+                    </Grid.RowDefinitions>
+                    <BoxView Grid.ColumnSpan="2" BackgroundColor="Green" />
+                    <Grid Grid.Column="0" Padding="5,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image x:Name="IconImage" />
+                        <Label x:Name="TitleLabel" Grid.Column="1" />
+                    </Grid>
+                    <Image
+                        Grid.Column="1"
+                        Margin="0,0,18,0"
+                        Source="hamburger_white.png" />
+                </Grid>
+                <ListView
+                    x:Name="MyListView"
+                    HasUnevenRows="True"
+                    SeparatorColor="Green"
+                    SeparatorVisibility="Default"
+                    VerticalOptions="Start">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <local:MasterCell />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <rxui:RoutedViewHost x:Name="ViewHost" />
+    </MasterDetailPage.Detail>
+
+</rxui:ReactiveMasterDetailPage>

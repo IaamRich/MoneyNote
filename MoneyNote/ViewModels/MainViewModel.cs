@@ -5,9 +5,9 @@ using System.Reactive.Linq;
 
 namespace MoneyNote
 {
-    public class NavigableViewModel : ReactiveObject, IRoutableViewModel
+    public class MainViewModel : ReactiveObject, IRoutableViewModel
     {
-        public NavigableViewModel(IScreen hostScreen = null)
+        public MainViewModel(IScreen hostScreen = null)
         {
             HostScreen = hostScreen ?? Locator.Current.GetService<IScreen>();
             NavigateToDummyPage = ReactiveCommand.CreateFromObservable(
@@ -16,7 +16,7 @@ namespace MoneyNote
 
         public ReactiveCommand<Unit, Unit> NavigateToDummyPage { get; }
 
-        public string UrlPathSegment => "Navigable Page";
+        public string UrlPathSegment => "Main";
 
         public IScreen HostScreen { get; }
     }
