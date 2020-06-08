@@ -12,6 +12,13 @@
                 Margin="3"
                 Placeholder="Search"
                 Text="{Binding SearchQuery}" />
+            <Label Margin="2" Text="{Binding SearchResult}" />
+            <Button
+                Margin="2"
+                BackgroundColor="Red"
+                Command="{Binding ClearCommand}"
+                Text="Clear"
+                TextColor="White" />
             <ListView
                 Margin="2"
                 HasUnevenRows="True"

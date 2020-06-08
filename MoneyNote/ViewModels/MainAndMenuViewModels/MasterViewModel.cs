@@ -1,0 +1,56 @@
+﻿using ReactiveUI;
+using Splat;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reactive;
+using System.Reactive.Linq;
+
+
+namespace MoneyNote
+{
+    public class MasterViewModel : ReactiveObject, IScreen
+    {
+        public MasterViewModel()
+        {
+            Router = new RoutingState();
+            Locator.CurrentMutable.RegisterConstant(this, typeof(IScreen));
+
+            MenuItems = GetMenuItems();
+
+            NavigateToMenuItem = ReactiveCommand.CreateFromObservable<IRoutableViewModel, Unit>(
+                routableVm => Router.NavigateAndReset.Execute(routableVm).Select(_ => Unit.Default));
+
+            this.WhenAnyValue(x => x.Selected)
+                .Where(x => x != null)
+                .StartWith(MenuItems.First())
+                .Select(x => Locator.Current.GetService<IRoutableViewModel>(x.TargetType.FullName))
+                .InvokeCommand(NavigateToMenuItem);
+        }
+
+        private MasterCellViewModel _selected;
+        public MasterCellViewModel Selected
+        {
+            get => _selected;
+            set => this.RaiseAndSetIfChanged(ref _selected, value);
+        }
+
+        public ReactiveCommand<IRoutableViewModel, Unit> NavigateToMenuItem { get; }
+
+        public IEnumerable<MasterCellViewModel> MenuItems { get; }
+
+        public RoutingState Router { get; }
+
+        private IEnumerable<MasterCellViewModel> GetMenuItems()
+        {
+            return new[]
+            {
+                new MasterCellViewModel { Title = "Main", IconSource = "main.png", TargetType = typeof(MainViewModel) },
+                new MasterCellViewModel { Title = "Account", IconSource = "account.png", TargetType = typeof(AccountViewModel) },
+                new MasterCellViewModel { Title = "Settings", IconSource = "settings.png", TargetType = typeof(SettingsViewModel) },
+                new MasterCellViewModel { Title = "History", IconSource = "history.png", TargetType = typeof(HistoryViewModel) },
+                new MasterCellViewModel { Title = "Terms", IconSource = "terms.png", TargetType = typeof(TermsViewModel) },
+                new MasterCellViewModel { Title = "About", IconSource = "about.png", TargetType = typeof(AboutViewModel) },
+            };
+        }
+    }
+}

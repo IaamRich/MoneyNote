@@ -1,7 +1,7 @@
 ﻿using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
-using MoneyNote.Pages;
+using MoneyNote.Resources;
 using System;
 using Xamarin.Forms;
 
@@ -12,10 +12,9 @@ namespace MoneyNote
         public App()
         {
             InitializeComponent();
-
-            MainPage = new ContactsPage();
+            //var bootstrapper = new AppBootstrapper();
+            MainPage = new NavigationPage(new SplashPage());//MasterView(bootstrapper.CreateMasterViewModel());
         }
-
         protected override void OnStart()
         {
             AppCenter.Start("android=f38a5d72-667c-4eeb-8a2c-1c534ccd9b3e;" +
