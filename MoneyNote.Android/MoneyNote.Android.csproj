@@ -96,23 +96,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\contacts.png">
-      <Link>Resources\drawable\contacts.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="..\MoneyNote\Resources\Images\hamburger.png">
       <Link>Resources\drawable\hamburger.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\reminders.png">
-      <Link>Resources\drawable\reminders.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\todo.png">
-      <Link>Resources\drawable\todo.png</Link>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
