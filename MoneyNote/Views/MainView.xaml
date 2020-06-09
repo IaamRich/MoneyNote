@@ -37,6 +37,8 @@
             </StackLayout>
 
 
+
+
             <StackLayout VerticalOptions="CenterAndExpand">
                 <Frame Margin="10,0">
                     <StackLayout>
@@ -45,29 +47,63 @@
                             HorizontalOptions="Center"
                             Text="Enter spent amount:" />
                         <Frame>
-                            <Entry FontSize="Medium" Placeholder="Value" />
+                            <Entry
+                                x:Name="entrySpend"
+                                FontSize="Medium"
+                                Keyboard="Numeric"
+                                Placeholder="Amount" />
                         </Frame>
-                        <Button CornerRadius="10" Text="Commit" />
+                        <StackLayout Orientation="Horizontal">
+                            <Button
+                                BackgroundColor="{StaticResource MainBackGround}"
+                                Clicked="OnDelete"
+                                CornerRadius="10"
+                                Text="Delete"
+                                TextColor="White" />
+                            <Button
+                                BackgroundColor="{StaticResource MainBackGround}"
+                                Clicked="OnUpdate"
+                                CornerRadius="10"
+                                Text="Update"
+                                TextColor="White" />
+                            <Button
+                                BackgroundColor="{StaticResource MainBackGround}"
+                                Clicked="OnAdd"
+                                CornerRadius="10"
+                                HorizontalOptions="FillAndExpand"
+                                Text="Commit"
+                                TextColor="White" />
+                        </StackLayout>
+
                     </StackLayout>
                 </Frame>
-                <ListView x:Name="moneyList" ItemsSource="{Binding}">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <ViewCell.View>
-                                    <StackLayout Orientation="Horizontal">
-                                        <Label FontSize="Medium" Text="{Binding Name}" />
-                                    </StackLayout>
-                                </ViewCell.View>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                <Frame Margin="10,0" Padding="8">
+                    <StackLayout>
+                        <Label HorizontalOptions="CenterAndExpand" Text="Last spent money:" />
+                        <ListView
+                            x:Name="spendingListView"
+                            Margin="10,0"
+                            BackgroundColor="{StaticResource ListBackColor}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <ViewCell.View>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label FontSize="Medium" Text="{Binding Amount}" />
+                                                <Label FontSize="Medium" Text="{Binding WhereText}" />
+                                            </StackLayout>
+                                        </ViewCell.View>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                </Frame>
             </StackLayout>
 
 
             <StackLayout
-                Margin="10,0,10,20"
+                Margin="10,20"
                 HorizontalOptions="EndAndExpand"
                 Orientation="Horizontal"
                 VerticalOptions="EndAndExpand">

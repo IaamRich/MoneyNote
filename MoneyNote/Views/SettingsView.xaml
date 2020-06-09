@@ -56,7 +56,7 @@
                 <StackLayout>
                     <Label
                         HorizontalOptions="Center"
-                        Text="Set my all savings:"
+                        Text="Set value this month income:"
                         VerticalOptions="Center" />
                     <Entry
                         FontAttributes="Bold"
@@ -73,7 +73,7 @@
                 <StackLayout>
                     <Label
                         HorizontalOptions="Center"
-                        Text="Set my all savings:"
+                        Text="Set value this month spent:"
                         VerticalOptions="Center" />
                     <Entry
                         FontAttributes="Bold"
@@ -89,6 +89,7 @@
                 HorizontalOptions="FillAndExpand">
                 <StackLayout>
                     <Button
+                        BackgroundColor="{StaticResource MainBackGround}"
                         CornerRadius="10"
                         HorizontalOptions="FillAndExpand"
                         Text="Update"
