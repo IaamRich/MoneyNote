@@ -6,9 +6,9 @@
     xmlns:local="clr-namespace:MoneyNote"
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
     x:TypeArguments="local:MainViewModel">
-    <ContentPage.Content>
-        <StackLayout Margin="0">
 
+    <ContentPage.Content>
+        <StackLayout Margin="0" Spacing="0">
             <Grid Margin="10,5,10,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="50*" />
@@ -27,11 +27,15 @@
                 </StackLayout>
             </Grid>
 
-            <Image
-                Margin="10,50"
-                HeightRequest="50"
-                Source="logo.png"
-                WidthRequest="100" />
+            <StackLayout Margin="30">
+                <Image
+                    Margin="0,30,0,0"
+                    Aspect="AspectFit"
+                    HeightRequest="100"
+                    Source="logo.png"
+                    VerticalOptions="Start" />
+            </StackLayout>
+
 
             <StackLayout VerticalOptions="CenterAndExpand">
                 <Frame Margin="10,0">
@@ -41,7 +45,7 @@
                             HorizontalOptions="Center"
                             Text="Enter spent amount:" />
                         <Frame>
-                            <Entry FontSize="Large" Placeholder="Value" />
+                            <Entry FontSize="Medium" Placeholder="Value" />
                         </Frame>
                         <Button CornerRadius="10" Text="Commit" />
                     </StackLayout>
@@ -67,7 +71,7 @@
                 HorizontalOptions="EndAndExpand"
                 Orientation="Horizontal"
                 VerticalOptions="EndAndExpand">
-                <Label Margin="10,0" Text="Share" />
+                <Label Text="Share" />
                 <Label Margin="10,0" Text="Vote" />
             </StackLayout>
         </StackLayout>

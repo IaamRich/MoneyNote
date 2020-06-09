@@ -12,7 +12,7 @@ namespace MoneyNote.Resources
             var sub = new AbsoluteLayout();
             splashImage = new Image
             {
-                Source = "splash.png",
+                Source = "logo.png",
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 VerticalOptions = LayoutOptions.FillAndExpand
             };
@@ -21,7 +21,7 @@ namespace MoneyNote.Resources
 
             sub.Children.Add(splashImage);
 
-            this.BackgroundColor = Color.White;
+            this.BackgroundColor = Color.FromHex("#bedb39");
             this.Content = sub;
         }
         protected override async void OnAppearing()
@@ -30,7 +30,7 @@ namespace MoneyNote.Resources
 
             await splashImage.ScaleTo(1, 2000);
             await splashImage.ScaleTo(0.5, 1500, Easing.Linear);
-            await splashImage.ScaleTo(80, 1200, Easing.Linear);
+            await splashImage.ScaleTo(3, 1200, Easing.Linear);
             var bootstrapper = new AppBootstrapper();
             Application.Current.MainPage = new MasterView(bootstrapper.CreateMasterViewModel());
 

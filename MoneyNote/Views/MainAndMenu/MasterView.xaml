@@ -5,12 +5,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MoneyNote"
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
+    Title="Menuu"
     x:TypeArguments="local:MasterViewModel">
-
     <MasterDetailPage.Master>
         <ContentPage Title="Master">
             <StackLayout Spacing="0">
-                <Grid BackgroundColor="Green" ColumnSpacing="0">
+                <Grid BackgroundColor="#bedb39" ColumnSpacing="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="36" />
@@ -18,14 +18,20 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="56" />
                     </Grid.RowDefinitions>
-                    <BoxView Grid.ColumnSpan="2" BackgroundColor="Green" />
+                    <BoxView Grid.ColumnSpan="2" BackgroundColor="{StaticResource MainBackGround}" />
                     <Grid Grid.Column="0" Padding="5,10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="30" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         <Image x:Name="IconImage" />
-                        <Label x:Name="TitleLabel" Grid.Column="1" />
+                        <Label
+                            x:Name="TitleLabel"
+                            Grid.Column="1"
+                            FontAttributes="Bold"
+                            Text="Menu"
+                            TextColor="White"
+                            VerticalOptions="CenterAndExpand" />
                     </Grid>
                     <Image
                         Grid.Column="1"
@@ -44,12 +50,16 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+                <Label
+                    Margin="10,10"
+                    HorizontalOptions="StartAndExpand"
+                    Text="© BMT Company 2020" />
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
 
-    <MasterDetailPage.Detail>
-        <rxui:RoutedViewHost x:Name="ViewHost" />
-    </MasterDetailPage.Detail>
+    <rxui:ReactiveMasterDetailPage.Detail>
+        <rxui:RoutedViewHost x:Name="ViewHost" BarBackgroundColor="{StaticResource MainBackGround}" />
+    </rxui:ReactiveMasterDetailPage.Detail>
 
 </rxui:ReactiveMasterDetailPage>
