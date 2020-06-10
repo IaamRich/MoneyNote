@@ -32,6 +32,7 @@ namespace MoneyNote
         {
             await _connection.CreateTableAsync<Spend>();
             var spendings = await _connection.Table<Spend>().ToListAsync();
+            spendings.Reverse();
             _spendings = new ObservableCollection<Spend>(spendings);
             spendingListView.ItemsSource = _spendings;
 
@@ -46,16 +47,22 @@ namespace MoneyNote
                 int amount = Int32.Parse(entrySpend.Text);
                 if (!String.IsNullOrWhiteSpace(entrySpend.Text) && amount > 0)
                 {
+                    string Description = await DisplayPromptAsync("Write description:", "You can skip this...");
+                    if (Description == "")
+                    {
+                        Description = "Not specified";
+                    }
                     var spend = new Spend
                     {
                         Amount = amount,
-                        WhereText = "Restaurant",
+                        WhereText = Description,
                         TransactionDate = DateTime.Now
                     };
 
                     await _connection.InsertAsync(spend);
 
-                    _spendings.Add(spend);
+                    //_spendings.Add(spend);
+                    _spendings.Insert(0, spend);
                     entrySpend.Text = "";
                 }
                 else
@@ -69,8 +76,6 @@ namespace MoneyNote
                 await DisplayAlert("Wrong Value", "Enter some value", "Ok");
                 entrySpend.Text = "";
             }
-
-
         }
 
         async void OnUpdate(object sender, System.EventArgs e)

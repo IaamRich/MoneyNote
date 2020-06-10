@@ -20,7 +20,7 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <StackLayout
-                BackgroundColor="{StaticResource Accent}"
+                BackgroundColor="{StaticResource AboutBackGround}"
                 HorizontalOptions="Fill"
                 VerticalOptions="FillAndExpand">
                 <StackLayout
@@ -81,13 +81,14 @@
                     </Label>
                     <Button
                         Margin="0,10,0,0"
-                        BackgroundColor="{StaticResource Primary}"
+                        BackgroundColor="{StaticResource MainBackGround}"
                         Command="{Binding OpenWebCommand}"
                         Text="Learn more"
                         TextColor="White" />
                     <Label
+                        FontSize="Micro"
                         HorizontalOptions="Center"
-                        Text="BMTCompany 2020"
+                        Text="© Sapec Software. All Rights Reserved. 2020"
                         VerticalOptions="EndAndExpand" />
                 </StackLayout>
 

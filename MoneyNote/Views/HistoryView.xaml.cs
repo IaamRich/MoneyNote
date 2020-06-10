@@ -23,6 +23,7 @@ namespace MoneyNote
         {
             await _connection.CreateTableAsync<Spend>();
             var spendings = await _connection.Table<Spend>().ToListAsync();
+            spendings.Reverse();
             _spendings = new ObservableCollection<Spend>(spendings);
             historyListView.ItemsSource = _spendings;
 
