@@ -16,7 +16,7 @@
                 </Grid.ColumnDefinitions>
                 <StackLayout Grid.Column="0" Orientation="Vertical">
                     <Label Text="Current bill:" />
-                    <Label x:Name="currentbill" Text="999999" />
+                    <Label x:Name="currentbill" />
                 </StackLayout>
                 <StackLayout
                     Grid.Column="1"

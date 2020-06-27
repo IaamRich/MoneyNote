@@ -2,13 +2,30 @@
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using MoneyNote.Resources;
+using MoneyNote.Services;
 using System;
+using System.IO;
 using Xamarin.Forms;
 
 namespace MoneyNote
 {
     public partial class App : Application
     {
+        public const string DATABASE_NAME = "money.db";
+        public static MoneyService database;
+        public static MoneyService Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new MoneyService(
+                        Path.Combine(
+                            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DATABASE_NAME));
+                }
+                return database;
+            }
+        }
         public App()
         {
             InitializeComponent();

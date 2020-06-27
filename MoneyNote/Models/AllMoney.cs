@@ -4,6 +4,7 @@ namespace MoneyNote.Models
 {
     public class AllMoney
     {
+        public int Id { get; set; }
         public decimal MyCahsMoney { get; set; }
         public decimal MyCardMoney { get; set; }
         public decimal AllTimeOutlay { get; set; }
