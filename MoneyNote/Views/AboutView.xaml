@@ -47,9 +47,9 @@
                                     <Span
                                         FontAttributes="Bold"
                                         FontSize="22"
-                                        Text="MoneyNote" />
+                                        Text="{Binding Strings[app_name_camel]}" />
                                     <Span Text=" " />
-                                    <Span ForegroundColor="{StaticResource LightTextColor}" Text="1.0" />
+                                    <Span ForegroundColor="{StaticResource LightTextColor}" Text="{Binding Strings[about_version]}" />
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
@@ -58,9 +58,9 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="This app is written by" />
+                                    <Span Text="{Binding Strings[this_app_is]}" />
                                     <Span Text=" " />
-                                    <Span FontAttributes="Bold" Text="Vladimir Curaciov" />
+                                    <Span FontAttributes="Bold" Text="{Binding Strings[my_name]}" />
                                     <Span Text="." />
                                 </FormattedString.Spans>
                             </FormattedString>
@@ -70,11 +70,11 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="It's released on iOS and Android versions." />
+                                    <Span Text="{Binding Strings[released]}" />
                                     <Span Text=" " />
-                                    <Span FontAttributes="Bold" Text="iOS and Android" />
+                                    <Span FontAttributes="Bold" Text="{Binding Strings[ios_android]}" />
                                     <Span Text=" " />
-                                    <Span Text="versions." />
+                                    <Span Text="{Binding Strings[versions]}" />
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
@@ -83,12 +83,12 @@
                         Margin="0,10,0,0"
                         BackgroundColor="{StaticResource MainBackGround}"
                         Command="{Binding OpenWebCommand}"
-                        Text="Learn more"
+                        Text="{Binding Strings[learn_more]}"
                         TextColor="White" />
                     <Label
                         FontSize="Micro"
                         HorizontalOptions="Center"
-                        Text="© Sapec Software. All Rights Reserved. 2020"
+                        Text="{Binding Strings[footer_about]}"
                         VerticalOptions="EndAndExpand" />
                 </StackLayout>
 

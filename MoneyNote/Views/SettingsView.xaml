@@ -22,7 +22,7 @@
                 <StackLayout>
                     <Label
                         HorizontalOptions="Center"
-                        Text="Set my all savings:"
+                        Text="{Binding Strings[set_my_savings]}"
                         VerticalOptions="Center" />
                     <Entry
                         FontAttributes="Bold"
@@ -39,7 +39,7 @@
                 <StackLayout>
                     <Label
                         HorizontalOptions="Center"
-                        Text="Set my current money:"
+                        Text="{Binding Strings[set_my_current]}"
                         VerticalOptions="Center" />
                     <Entry
                         FontAttributes="Bold"
@@ -56,7 +56,7 @@
                 <StackLayout>
                     <Label
                         HorizontalOptions="Center"
-                        Text="Set value this month income:"
+                        Text="{Binding Strings[set_month_income]}"
                         VerticalOptions="Center" />
                     <Entry
                         FontAttributes="Bold"
@@ -73,7 +73,7 @@
                 <StackLayout>
                     <Label
                         HorizontalOptions="Center"
-                        Text="Set value this month spent:"
+                        Text="{Binding Strings[set_month_outlay]}"
                         VerticalOptions="Center" />
                     <Entry
                         FontAttributes="Bold"
@@ -92,7 +92,7 @@
                         BackgroundColor="{StaticResource MainBackGround}"
                         CornerRadius="10"
                         HorizontalOptions="FillAndExpand"
-                        Text="Update"
+                        Text="{Binding Strings[update]}"
                         VerticalOptions="FillAndExpand" />
                 </StackLayout>
             </Frame>

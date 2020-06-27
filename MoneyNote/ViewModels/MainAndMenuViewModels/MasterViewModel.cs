@@ -1,4 +1,5 @@
-﻿using ReactiveUI;
+﻿using I18NPortable;
+using ReactiveUI;
 using Splat;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace MoneyNote
 {
     public class MasterViewModel : ReactiveObject, IScreen
     {
+        public II18N Strings => I18N.Current;
         public MasterViewModel()
         {
             Router = new RoutingState();
@@ -44,12 +46,12 @@ namespace MoneyNote
         {
             return new[]
             {
-                new MasterCellViewModel { Title = "Main", IconSource = "main.png", TargetType = typeof(MainViewModel) },
-                new MasterCellViewModel { Title = "Account", IconSource = "account.png", TargetType = typeof(AccountViewModel) },
-                new MasterCellViewModel { Title = "Settings", IconSource = "settings.png", TargetType = typeof(SettingsViewModel) },
-                new MasterCellViewModel { Title = "History", IconSource = "history.png", TargetType = typeof(HistoryViewModel) },
-                new MasterCellViewModel { Title = "Terms", IconSource = "terms.png", TargetType = typeof(TermsViewModel) },
-                new MasterCellViewModel { Title = "About", IconSource = "about.png", TargetType = typeof(AboutViewModel) },
+                new MasterCellViewModel { Title = Strings["menu_main"], IconSource = "main.png", TargetType = typeof(MainViewModel) },
+                new MasterCellViewModel { Title = Strings["menu_account"], IconSource = "account.png", TargetType = typeof(AccountViewModel) },
+                new MasterCellViewModel { Title = Strings["menu_settings"], IconSource = "settings.png", TargetType = typeof(SettingsViewModel) },
+                new MasterCellViewModel { Title = Strings["menu_history"], IconSource = "history.png", TargetType = typeof(HistoryViewModel) },
+                new MasterCellViewModel { Title = Strings["menu_terms"], IconSource = "terms.png", TargetType = typeof(TermsViewModel) },
+                new MasterCellViewModel { Title = Strings["menu_about"], IconSource = "about.png", TargetType = typeof(AboutViewModel) },
             };
         }
     }

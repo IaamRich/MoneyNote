@@ -1,9 +1,11 @@
-﻿using ReactiveUI;
+﻿using I18NPortable;
+using ReactiveUI;
 
 namespace MoneyNote
 {
     public class AccountViewModel : ReactiveObject, IRoutableViewModel
     {
+        public II18N Strings => I18N.Current;
         public AccountViewModel()
         {
             //NumberStream = Observable
@@ -13,7 +15,7 @@ namespace MoneyNote
 
         //public IObservable<string> NumberStream { get; }
 
-        public string UrlPathSegment => "Account";
+        public string UrlPathSegment => Strings["menu_account"];
 
         public IScreen HostScreen { get; }
     }

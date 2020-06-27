@@ -12,9 +12,9 @@
             <ColumnDefinition Width="30" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <Image x:Name="IconImage" />
+        <Image x:Name="iconImage" />
         <Label
-            x:Name="TitleLabel"
+            x:Name="titleLabel"
             Grid.Column="1"
             VerticalOptions="CenterAndExpand" />
     </Grid>

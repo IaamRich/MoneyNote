@@ -20,7 +20,7 @@
                 <StackLayout>
                     <Label
                         HorizontalOptions="Center"
-                        Text="My cash money:"
+                        Text="{Binding Strings[my_cash]}"
                         VerticalOptions="Center" />
                     <Label
                         FontAttributes="Bold"
@@ -32,7 +32,7 @@
                 <StackLayout>
                     <Label
                         HorizontalOptions="Center"
-                        Text="My card money:"
+                        Text="{Binding Strings[my_card]}"
                         VerticalOptions="Center" />
                     <Label
                         FontAttributes="Bold"
@@ -44,7 +44,7 @@
                 <StackLayout>
                     <Label
                         HorizontalOptions="Center"
-                        Text="My current money:"
+                        Text="{Binding Strings[my_current]}"
                         VerticalOptions="Center" />
                     <Label
                         FontAttributes="Bold"
@@ -61,7 +61,7 @@
                 <StackLayout>
                     <Label
                         HorizontalOptions="Center"
-                        Text="This month income:"
+                        Text="{Binding Strings[month_income]}"
                         VerticalOptions="Center" />
                     <Label
                         FontAttributes="Bold"
@@ -73,7 +73,7 @@
                 <StackLayout>
                     <Label
                         HorizontalOptions="Center"
-                        Text="This month outlay:"
+                        Text="{Binding Strings[month_outlay]}"
                         VerticalOptions="Center" />
                     <Label
                         FontAttributes="Bold"
@@ -90,7 +90,7 @@
                 <StackLayout>
                     <Label
                         HorizontalOptions="Center"
-                        Text="This month savings:"
+                        Text="{Binding Strings[month_saving]}"
                         VerticalOptions="Center" />
                     <Label
                         FontAttributes="Bold"
@@ -102,7 +102,7 @@
                 <StackLayout>
                     <Label
                         HorizontalOptions="Center"
-                        Text="All time savings:"
+                        Text="{Binding Strings[all_saving]}"
                         VerticalOptions="Center" />
                     <Label
                         FontAttributes="Bold"

@@ -1,2 +1,65 @@
 ﻿/* Main Page */
+main_title = Main
 current = Current bill
+saving = Saving:
+enter_spent_amount = Enter spent amount:
+last_spent_money = Last spent money:
+
+/* Account Page */
+my_cash = My cash money:
+my_card = My card money:
+my_current = My current money:
+month_income = This month income:
+month_outlay = This month outlay:
+month_saving = This month savings:
+all_saving = All time savings:
+
+/* History Page */
+history_spent = Spent:
+history_description = Description:
+history_transaction_date = Transaction date:
+
+/* Settings Page */
+set_my_savings = Set my all savings:
+set_my_current = Set my current money:
+set_month_income = Set value this month income:
+set_month_outlay = Set value this month spent:
+
+/* Terms Page */
+terms_text = 1. This page (together with the documents referred to on it) tells you the terms of use (the 'Terms of Use') on which you may make use of our 'goop city guides' application for mobile devices (the 'App'). Please read these Terms of Use carefully before you download, install or use the App. By downloading, installing or using the App, you indicate that you accept these Terms of Use and that you agree to abide by them. Your download, installation or use of the App constitutes your acceptance of these Terms of Use which takes effect on the date on which you download, install or use the App. If you do not agree with these Terms of Use, you should cease downloading, installing or using the App immediately.
+
+/* About Page */
+this_app_is = This app is written by
+released = It's released on iOS and Android versions.
+ios_android = iOS and Android
+versions = versions.
+learn_more = Learn more
+footer_about = © Sapec Software. All Rights Reserved. 2020
+about_version = 1.0
+
+/* Common */
+master = Master
+app_name_camel = MoneyNote
+app_name = Money Note
+delete = Delete
+save = Save
+cancel = Cancel
+ok = Ok
+update = Update
+create = Create
+share = Share
+vote = Vote
+amount = Amount
+commit = Commit
+main = Main
+menu = Menu
+my_name = Vladimir Curaciov
+
+/* Menu */
+menu_main = Main
+menu_account = Account
+menu_settings = Settings
+menu_history = History
+menu_terms = Terms
+menu_about = About
+menu_footer = © Sapec Software 2020

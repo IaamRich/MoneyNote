@@ -38,20 +38,20 @@
                                         <Label
                                             FontAttributes="Bold"
                                             FontSize="Micro"
-                                            Text="Spent:"
+                                            Text="{Binding Strings[history_spent]}"
                                             VerticalOptions="CenterAndExpand" />
                                         <Label FontSize="Medium" Text="{Binding Amount}" />
                                         <Label
                                             FontAttributes="Bold"
                                             FontSize="Micro"
-                                            Text="Description:"
+                                            Text="{Binding Strings[history_description]}"
                                             VerticalOptions="CenterAndExpand" />
                                         <Label FontSize="Medium" Text="{Binding WhereText}" />
                                     </StackLayout>
                                     <Label
                                         FontAttributes="Bold"
                                         FontSize="Micro"
-                                        Text="Transaction date:" />
+                                        Text="{Binding Strings[history_transaction_date]}" />
                                     <Label FontSize="Small" Text="{Binding TransactionDate}" />
                                 </StackLayout>
 

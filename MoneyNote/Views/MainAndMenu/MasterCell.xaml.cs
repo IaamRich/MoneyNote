@@ -28,8 +28,8 @@ namespace MoneyNote
             // Because menu items usually don't change for the lifetime of an app (for most use cases),
             // set the values directly instead of binding, for better performance.
             // If your ViewModel properties don't change over time, definitely use this pattern.
-            TitleLabel.Text = viewModel.Title;
-            IconImage.Source = viewModel.IconSource;
+            titleLabel.Text = viewModel.Title;
+            iconImage.Source = viewModel.IconSource;
         }
     }
 }

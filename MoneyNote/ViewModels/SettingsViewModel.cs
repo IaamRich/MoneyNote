@@ -1,4 +1,5 @@
-﻿using ReactiveUI;
+﻿using I18NPortable;
+using ReactiveUI;
 
 namespace MoneyNote
 {
@@ -6,6 +7,7 @@ namespace MoneyNote
     {
         private ObservableAsPropertyHelper<char> _currentLetter;
 
+        public II18N Strings => I18N.Current;
         public SettingsViewModel()
         {
             //_currentLetter = Observable
@@ -18,7 +20,7 @@ namespace MoneyNote
 
         //public char CurrentLetter => _currentLetter.Value;
 
-        public string UrlPathSegment => "Settings";
+        public string UrlPathSegment => Strings["menu_settings"];
 
         public IScreen HostScreen { get; }
     }
