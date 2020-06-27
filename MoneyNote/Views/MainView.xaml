@@ -15,7 +15,7 @@
                     <ColumnDefinition Width="50*" />
                 </Grid.ColumnDefinitions>
                 <StackLayout Grid.Column="0" Orientation="Vertical">
-                    <Label Text="Current bill:" />
+                    <Label Text="{Binding Strings[current]}" />
                     <Label x:Name="currentbill" />
                 </StackLayout>
                 <StackLayout

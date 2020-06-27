@@ -15,6 +15,7 @@ namespace MoneyNote
         private static SQLiteAsyncConnection _connection;
         private ObservableCollection<Spend> _spendings;
         private ObservableCollection<AllMoney> _allMoney;
+
         public MainView()
         {
             InitializeComponent();
