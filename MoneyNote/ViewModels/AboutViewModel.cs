@@ -4,7 +4,6 @@ namespace MoneyNote
 {
     public class AboutViewModel : ReactiveObject, IRoutableViewModel
     {
-
         public AboutViewModel()
         {
 

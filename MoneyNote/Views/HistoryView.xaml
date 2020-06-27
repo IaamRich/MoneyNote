@@ -8,18 +8,58 @@
     x:TypeArguments="local:HistoryViewModel">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Имя" />
+            <!--<Label Text="Имя" />
             <Entry Text="{Binding Name}" />
             <Label Text="Email" />
             <Entry Text="{Binding Email}" />
             <Label Text="Телефон" />
             <Entry Text="{Binding Phone}" />
             <StackLayout Orientation="Horizontal">
-                <!--<Button Clicked="SaveFriend" Text="Сохранить" />-->
+            -->
+            <!--<Button Clicked="SaveFriend" Text="Сохранить" />-->
+            <!--
                 <Button Text="Сохранить" />
                 <Button Text="Удалить" />
                 <Button Text="Отмена" />
-            </StackLayout>
+            </StackLayout>-->
+            <ListView
+                x:Name="historyListView"
+                Margin="10,0"
+                HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout
+                                    Margin="0,5"
+                                    Orientation="Vertical"
+                                    Spacing="0">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontSize="Micro"
+                                            Text="Spent:"
+                                            VerticalOptions="CenterAndExpand" />
+                                        <Label FontSize="Medium" Text="{Binding Amount}" />
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontSize="Micro"
+                                            Text="Description:"
+                                            VerticalOptions="CenterAndExpand" />
+                                        <Label FontSize="Medium" Text="{Binding WhereText}" />
+                                    </StackLayout>
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontSize="Micro"
+                                        Text="Transaction date:" />
+                                    <Label FontSize="Small" Text="{Binding TransactionDate}" />
+                                </StackLayout>
+
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </rxui:ReactiveContentPage>

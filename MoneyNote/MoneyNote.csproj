@@ -11,6 +11,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Locales\en-US.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Locales\en-US.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="I18NPortable" Version="1.0.1" />
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.2.2" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.2.2" />
     <PackageReference Include="ReactiveUI" Version="11.4.1" />
@@ -49,9 +58,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Models\SecondPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Pages\Learning\CollectionPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

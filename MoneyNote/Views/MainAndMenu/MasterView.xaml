@@ -53,7 +53,7 @@
                 <Label
                     Margin="10,10"
                     HorizontalOptions="StartAndExpand"
-                    Text="© BMT Company 2020" />
+                    Text="© Sapec Software 2020" />
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
