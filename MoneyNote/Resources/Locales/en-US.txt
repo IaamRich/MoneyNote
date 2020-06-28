@@ -29,12 +29,16 @@ set_month_outlay = Set value this month spent:
 terms_text = 1. This page (together with the documents referred to on it) tells you the terms of use (the 'Terms of Use') on which you may make use of our 'goop city guides' application for mobile devices (the 'App'). Please read these Terms of Use carefully before you download, install or use the App. By downloading, installing or using the App, you indicate that you accept these Terms of Use and that you agree to abide by them. Your download, installation or use of the App constitutes your acceptance of these Terms of Use which takes effect on the date on which you download, install or use the App. If you do not agree with these Terms of Use, you should cease downloading, installing or using the App immediately.
 
 /* About Page */
-this_app_is = This app is written by
-released = It's released on iOS and Android versions.
-ios_android = iOS and Android
-versions = versions.
+creator_name = Vladimir Curaciov
+supporter_name = Feodor Songurov
+imaginator_name = Alexandr Sergeevich
+images_by = Images by:
+created_by = Created by:
+supported_by = Supported by:
+about_platforms = Platforms available:
+platforms_available = iOS, Android.
 learn_more = Learn more
-footer_about = © Sapec Software. All Rights Reserved. 2020
+about_footer = © Sapec Software. All Rights Reserved. 2020
 about_version = 1.0
 
 /* Common */
@@ -53,7 +57,6 @@ amount = Amount
 commit = Commit
 main = Main
 menu = Menu
-my_name = Vladimir Curaciov
 
 /* Menu */
 menu_main = Main

@@ -5,12 +5,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MoneyNote"
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
-    Title="{Binding Strings[menu]}"
     x:TypeArguments="local:MasterViewModel">
     <MasterDetailPage.Master>
+        <!--  No need reference to strings[]  -->
         <ContentPage Title="Master">
             <StackLayout Spacing="0">
-                <Grid BackgroundColor="#bedb39" ColumnSpacing="0">
+                <Grid ColumnSpacing="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="36" />
@@ -18,7 +18,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="56" />
                     </Grid.RowDefinitions>
-                    <BoxView Grid.ColumnSpan="2" BackgroundColor="{StaticResource MainBackGround}" />
+                    <BoxView Grid.ColumnSpan="2" BackgroundColor="{StaticResource MainGreen}" />
                     <Grid Grid.Column="0" Padding="5,10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="30" />
@@ -52,6 +52,7 @@
                 </ListView>
                 <Label
                     Margin="10,10"
+                    FontSize="Micro"
                     HorizontalOptions="StartAndExpand"
                     Text="{Binding Strings[menu_footer]}" />
             </StackLayout>
@@ -59,7 +60,7 @@
     </MasterDetailPage.Master>
 
     <rxui:ReactiveMasterDetailPage.Detail>
-        <rxui:RoutedViewHost x:Name="ViewHost" BarBackgroundColor="{StaticResource MainBackGround}" />
+        <rxui:RoutedViewHost x:Name="ViewHost" BarBackgroundColor="{StaticResource MainGreen}" />
     </rxui:ReactiveMasterDetailPage.Detail>
 
 </rxui:ReactiveMasterDetailPage>

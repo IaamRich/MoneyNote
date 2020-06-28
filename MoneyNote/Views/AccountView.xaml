@@ -13,52 +13,60 @@
                 <RowDefinition Height="30*" />
                 <RowDefinition Height="30*" />
             </Grid.RowDefinitions>
-            <StackLayout
+            <Frame
                 Grid.Row="0"
-                HorizontalOptions="Center"
-                VerticalOptions="Center">
-                <StackLayout>
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <StackLayout Spacing="0">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Title"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Current Bill:"
+                        VerticalOptions="StartAndExpand" />
                     <Label
                         HorizontalOptions="Center"
                         Text="{Binding Strings[my_cash]}"
-                        VerticalOptions="Center" />
+                        VerticalOptions="StartAndExpand" />
                     <Label
                         FontAttributes="Bold"
                         FontSize="Title"
                         HorizontalOptions="Center"
                         Text="9999999"
-                        VerticalOptions="Center" />
-                </StackLayout>
-                <StackLayout>
+                        VerticalOptions="StartAndExpand" />
                     <Label
                         HorizontalOptions="Center"
                         Text="{Binding Strings[my_card]}"
-                        VerticalOptions="Center" />
+                        VerticalOptions="StartAndExpand" />
                     <Label
                         FontAttributes="Bold"
                         FontSize="Title"
                         HorizontalOptions="Center"
                         Text="9999999"
-                        VerticalOptions="Center" />
-                </StackLayout>
-                <StackLayout>
+                        VerticalOptions="StartAndExpand" />
                     <Label
                         HorizontalOptions="Center"
                         Text="{Binding Strings[my_current]}"
-                        VerticalOptions="Center" />
+                        VerticalOptions="StartAndExpand" />
                     <Label
                         FontAttributes="Bold"
                         FontSize="Title"
                         HorizontalOptions="Center"
                         Text="9999999"
-                        VerticalOptions="Center" />
+                        VerticalOptions="StartAndExpand" />
+
                 </StackLayout>
-            </StackLayout>
-            <StackLayout
+            </Frame>
+            <Frame
                 Grid.Row="1"
-                HorizontalOptions="Center"
-                VerticalOptions="Center">
-                <StackLayout>
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <StackLayout Spacing="0">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Title"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Income/Outlay:" />
                     <Label
                         HorizontalOptions="Center"
                         Text="{Binding Strings[month_income]}"
@@ -69,8 +77,6 @@
                         HorizontalOptions="Center"
                         Text="9999999"
                         VerticalOptions="Center" />
-                </StackLayout>
-                <StackLayout>
                     <Label
                         HorizontalOptions="Center"
                         Text="{Binding Strings[month_outlay]}"
@@ -82,12 +88,17 @@
                         Text="9999999"
                         VerticalOptions="Center" />
                 </StackLayout>
-            </StackLayout>
-            <StackLayout
+            </Frame>
+            <Frame
                 Grid.Row="2"
-                HorizontalOptions="Center"
-                VerticalOptions="Center">
-                <StackLayout>
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <StackLayout Spacing="0">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Title"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Savings:" />
                     <Label
                         HorizontalOptions="Center"
                         Text="{Binding Strings[month_saving]}"
@@ -98,8 +109,6 @@
                         HorizontalOptions="Center"
                         Text="9999999"
                         VerticalOptions="Center" />
-                </StackLayout>
-                <StackLayout>
                     <Label
                         HorizontalOptions="Center"
                         Text="{Binding Strings[all_saving]}"
@@ -111,7 +120,7 @@
                         Text="9999999"
                         VerticalOptions="Center" />
                 </StackLayout>
-            </StackLayout>
+            </Frame>
 
         </Grid>
     </ContentPage.Content>

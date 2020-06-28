@@ -89,7 +89,7 @@
                 HorizontalOptions="FillAndExpand">
                 <StackLayout>
                     <Button
-                        BackgroundColor="{StaticResource MainBackGround}"
+                        BackgroundColor="{StaticResource MainGreen}"
                         CornerRadius="10"
                         HorizontalOptions="FillAndExpand"
                         Text="{Binding Strings[update]}"
