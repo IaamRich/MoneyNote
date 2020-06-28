@@ -3,6 +3,7 @@
     x:Class="MoneyNote.AccountView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MoneyNote.Controls"
     xmlns:local="clr-namespace:MoneyNote"
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
     x:TypeArguments="local:AccountViewModel">
@@ -19,42 +20,28 @@
                 VerticalOptions="FillAndExpand">
                 <StackLayout Spacing="0">
                     <Label
+                        Margin="0,0,0,5"
                         FontAttributes="Bold"
-                        FontSize="Title"
-                        HorizontalOptions="StartAndExpand"
+                        FontSize="Small"
+                        HorizontalOptions="Center"
                         Text="Current Bill:"
-                        VerticalOptions="StartAndExpand" />
-                    <Label
-                        HorizontalOptions="Center"
+                        VerticalOptions="Start" />
+                    <controls:AccountSwitchFrame
+                        Command="{Binding MyCashCommand}"
+                        HorizontalOptions="FillAndExpand"
+                        Money="{Binding MyCash, Mode=TwoWay}"
                         Text="{Binding Strings[my_cash]}"
-                        VerticalOptions="StartAndExpand" />
-                    <Label
-                        FontAttributes="Bold"
-                        FontSize="Title"
-                        HorizontalOptions="Center"
-                        Text="9999999"
-                        VerticalOptions="StartAndExpand" />
-                    <Label
-                        HorizontalOptions="Center"
+                        VerticalOptions="FillAndExpand" />
+                    <controls:AccountSwitchFrame
+                        HorizontalOptions="FillAndExpand"
+                        Money="9999999"
                         Text="{Binding Strings[my_card]}"
-                        VerticalOptions="StartAndExpand" />
-                    <Label
-                        FontAttributes="Bold"
-                        FontSize="Title"
-                        HorizontalOptions="Center"
-                        Text="9999999"
-                        VerticalOptions="StartAndExpand" />
-                    <Label
-                        HorizontalOptions="Center"
+                        VerticalOptions="FillAndExpand" />
+                    <controls:AccountSwitchFrame
+                        HorizontalOptions="FillAndExpand"
+                        Money="9999999"
                         Text="{Binding Strings[my_current]}"
-                        VerticalOptions="StartAndExpand" />
-                    <Label
-                        FontAttributes="Bold"
-                        FontSize="Title"
-                        HorizontalOptions="Center"
-                        Text="9999999"
-                        VerticalOptions="StartAndExpand" />
-
+                        VerticalOptions="FillAndExpand" />
                 </StackLayout>
             </Frame>
             <Frame
@@ -63,30 +50,22 @@
                 VerticalOptions="FillAndExpand">
                 <StackLayout Spacing="0">
                     <Label
+                        Margin="0,0,0,5"
                         FontAttributes="Bold"
-                        FontSize="Title"
-                        HorizontalOptions="StartAndExpand"
-                        Text="Income/Outlay:" />
-                    <Label
+                        FontSize="Small"
                         HorizontalOptions="Center"
+                        Text="Income/Outlay:"
+                        VerticalOptions="Start" />
+                    <controls:AccountSwitchFrame
+                        HorizontalOptions="FillAndExpand"
+                        Money="9999999"
                         Text="{Binding Strings[month_income]}"
-                        VerticalOptions="Center" />
-                    <Label
-                        FontAttributes="Bold"
-                        FontSize="Title"
-                        HorizontalOptions="Center"
-                        Text="9999999"
-                        VerticalOptions="Center" />
-                    <Label
-                        HorizontalOptions="Center"
+                        VerticalOptions="FillAndExpand" />
+                    <controls:AccountSwitchFrame
+                        HorizontalOptions="FillAndExpand"
+                        Money="9999999"
                         Text="{Binding Strings[month_outlay]}"
-                        VerticalOptions="Center" />
-                    <Label
-                        FontAttributes="Bold"
-                        FontSize="Title"
-                        HorizontalOptions="Center"
-                        Text="9999999"
-                        VerticalOptions="Center" />
+                        VerticalOptions="FillAndExpand" />
                 </StackLayout>
             </Frame>
             <Frame
@@ -95,33 +74,24 @@
                 VerticalOptions="FillAndExpand">
                 <StackLayout Spacing="0">
                     <Label
+                        Margin="0,0,0,5"
                         FontAttributes="Bold"
-                        FontSize="Title"
-                        HorizontalOptions="StartAndExpand"
-                        Text="Savings:" />
-                    <Label
+                        FontSize="Small"
                         HorizontalOptions="Center"
+                        Text="Savings:"
+                        VerticalOptions="Start" />
+                    <controls:AccountSwitchFrame
+                        HorizontalOptions="FillAndExpand"
+                        Money="9999999"
                         Text="{Binding Strings[month_saving]}"
-                        VerticalOptions="Center" />
-                    <Label
-                        FontAttributes="Bold"
-                        FontSize="Title"
-                        HorizontalOptions="Center"
-                        Text="9999999"
-                        VerticalOptions="Center" />
-                    <Label
-                        HorizontalOptions="Center"
+                        VerticalOptions="FillAndExpand" />
+                    <controls:AccountSwitchFrame
+                        HorizontalOptions="FillAndExpand"
+                        Money="9999999"
                         Text="{Binding Strings[all_saving]}"
-                        VerticalOptions="Center" />
-                    <Label
-                        FontAttributes="Bold"
-                        FontSize="Title"
-                        HorizontalOptions="Center"
-                        Text="9999999"
-                        VerticalOptions="Center" />
+                        VerticalOptions="FillAndExpand" />
                 </StackLayout>
             </Frame>
-
         </Grid>
     </ContentPage.Content>
 </rxui:ReactiveContentPage>
