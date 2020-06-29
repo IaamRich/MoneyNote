@@ -24,22 +24,27 @@
                         FontAttributes="Bold"
                         FontSize="Small"
                         HorizontalOptions="Center"
-                        Text="Current Bill:"
+                        Text="{Binding Strings[my_current]}"
                         VerticalOptions="Start" />
                     <controls:AccountSwitchFrame
                         Command="{Binding MyCashCommand}"
                         HorizontalOptions="FillAndExpand"
                         Money="{Binding MyCash, Mode=TwoWay}"
+                        MoneyColor="Blue"
                         Text="{Binding Strings[my_cash]}"
                         VerticalOptions="FillAndExpand" />
                     <controls:AccountSwitchFrame
+                        Command="{Binding MyCardCommand}"
                         HorizontalOptions="FillAndExpand"
-                        Money="9999999"
+                        Money="{Binding MyCard, Mode=TwoWay}"
+                        MoneyColor="Blue"
                         Text="{Binding Strings[my_card]}"
                         VerticalOptions="FillAndExpand" />
                     <controls:AccountSwitchFrame
+                        Command="{Binding MyCurrentCommand}"
                         HorizontalOptions="FillAndExpand"
-                        Money="9999999"
+                        Money="{Binding MyCurrent, Mode=TwoWay}"
+                        MoneyColor="Blue"
                         Text="{Binding Strings[my_current]}"
                         VerticalOptions="FillAndExpand" />
                 </StackLayout>
@@ -54,16 +59,20 @@
                         FontAttributes="Bold"
                         FontSize="Small"
                         HorizontalOptions="Center"
-                        Text="Income/Outlay:"
+                        Text="{Binding Strings[income_outlay]}"
                         VerticalOptions="Start" />
                     <controls:AccountSwitchFrame
+                        Command="{Binding MyIncomeCommand}"
                         HorizontalOptions="FillAndExpand"
-                        Money="9999999"
+                        Money="{Binding MyIncome, Mode=TwoWay}"
+                        MoneyColor="Green"
                         Text="{Binding Strings[month_income]}"
                         VerticalOptions="FillAndExpand" />
                     <controls:AccountSwitchFrame
+                        Command="{Binding MyOutlayCommand}"
                         HorizontalOptions="FillAndExpand"
-                        Money="9999999"
+                        Money="{Binding MyOutlay, Mode=TwoWay}"
+                        MoneyColor="Red"
                         Text="{Binding Strings[month_outlay]}"
                         VerticalOptions="FillAndExpand" />
                 </StackLayout>
@@ -78,16 +87,20 @@
                         FontAttributes="Bold"
                         FontSize="Small"
                         HorizontalOptions="Center"
-                        Text="Savings:"
+                        Text="{Binding Strings[savings]}"
                         VerticalOptions="Start" />
                     <controls:AccountSwitchFrame
+                        Command="{Binding MySavingsCommand}"
                         HorizontalOptions="FillAndExpand"
-                        Money="9999999"
+                        Money="{Binding MySavings, Mode=TwoWay}"
+                        MoneyColor="Blue"
                         Text="{Binding Strings[month_saving]}"
                         VerticalOptions="FillAndExpand" />
                     <controls:AccountSwitchFrame
+                        Command="{Binding MyCashCommand}"
                         HorizontalOptions="FillAndExpand"
-                        Money="9999999"
+                        Money="{Binding MyAllSavingsCommand, Mode=TwoWay}"
+                        MoneyColor="Blue"
                         Text="{Binding Strings[all_saving]}"
                         VerticalOptions="FillAndExpand" />
                 </StackLayout>

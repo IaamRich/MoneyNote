@@ -8,9 +8,11 @@ last_spent_money = Last spent money:
 /* Account Page */
 my_cash = My cash money:
 my_card = My card money:
-my_current = My current money:
+my_current = Current Bill:
+income_outlay = Income/Outlay:
 month_income = This month income:
 month_outlay = This month outlay:
+savings = Savings:
 month_saving = This month savings:
 all_saving = All time savings:
 
