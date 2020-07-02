@@ -3,6 +3,7 @@ using MoneyNote.Models;
 using ReactiveUI;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -39,20 +40,16 @@ namespace MoneyNote
 
         private List<Language> languages = new List<Language>();
         //public SourceList<Language> LanguagesSource = new SourceList<Language>();
-        public ObservableCollection<Language> LanguagesList;
+        public ObservableCollection<Language> LanguagesList { get; set; }
         public II18N Strings => I18N.Current;
         public SettingsViewModel()
         {
-            GetLanguages();
+            _ = GetLanguages();
             ResetAll = ReactiveCommand.Create(() =>
             {
                 ResetAllMethod();
             });
 
-            foreach (var item in languages)
-            {
-                LanguagesList.Add(item);
-            }
             //_currentLetter = Observable
             //    .Interval(TimeSpan.FromSeconds(1))
             //    .Scan(64, (acc, current) => acc + 1)
@@ -73,11 +70,24 @@ namespace MoneyNote
             Application.Current.MainPage.DisplayAlert("Method", "ResetAll is done", "Cancel", "ok");
         }
 
-        private void GetLanguages()
+        private async Task GetLanguages()
         {
-            languages.Add(new Language { Id = 0, Sign = "en-US", Name = "English", Image = "us.png" });
-            languages.Add(new Language { Id = 1, Sign = "ru-RU", Name = "Russian", Image = "ru.png" });
-            languages.Add(new Language { Id = 2, Sign = "md-MD", Name = "Romanian", Image = "md.png" });
+            LanguagesList = new ObservableCollection<Language>()
+            {
+                new Language { Id = 0, Sign = "en-US", Name = "English", Image = "us.png" },
+                new Language { Id = 1, Sign = "ru-RU", Name = "Russian", Image = "ru.png" },
+                new Language { Id = 2, Sign = "md-MD", Name = "Romanian", Image = "md.png" },
+                new Language { Id = 3, Sign = "it-IT", Name = "Italian", Image = "it.png" },
+                new Language { Id = 4, Sign = "de-DE", Name = "German", Image = "de.png" },
+                new Language { Id = 5, Sign = "fr-FR", Name = "French", Image = "fr.png" },
+                new Language { Id = 6, Sign = "zh-CN", Name = "Chinese", Image = "zh.png" }
+            };
+
+
+            //foreach (var item in languages)
+            //{
+            //    LanguagesList.Add(item);
+            //}
         }
 
     }

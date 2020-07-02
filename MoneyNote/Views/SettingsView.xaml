@@ -42,14 +42,29 @@
                 Grid.Row="2"
                 Margin="10,0"
                 HorizontalOptions="FillAndExpand">
-                <StackLayout Orientation="Horizontal" Spacing="0">
+                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
                     <Label
+                        x:Name="languageLabel"
                         FontSize="Title"
+                        HorizontalOptions="Start"
                         Text="Choose Language"
-                        VerticalOptions="Center" />
+                        VerticalOptions="CenterAndExpand" />
                     <!--  Language Collection  -->
+                    <ImageButton
+                        x:Name="img11"
+                        Margin="0,0,0,5"
+                        Aspect="AspectFill"
+                        BorderColor="Black"
+                        Clicked="img11_Clicked"
+                        HeightRequest="60"
+                        HorizontalOptions="EndAndExpand"
+                        Source="us.png"
+                        VerticalOptions="FillAndExpand"
+                        WidthRequest="60" />
                     <ScrollView
                         x:Name="CollectionsList"
+                        HorizontalOptions="FillAndExpand"
+                        IsVisible="False"
                         Orientation="Horizontal">
                         <StackLayout
                             Margin="0,0,0,0"
@@ -57,25 +72,36 @@
                             Orientation="Horizontal">
                             <BindableLayout.ItemTemplate>
                                 <DataTemplate>
-                                    <ImageButton
-                                        x:Name="img11"
-                                        Margin="0,0,0,5"
-                                        Aspect="AspectFill"
-                                        BorderColor="Black"
-                                        HeightRequest="60"
-                                        HorizontalOptions="Fill"
-                                        Source="{Binding Image}"
-                                        VerticalOptions="Fill"
-                                        WidthRequest="60">
-                                        <!--<ImageButton.GestureRecognizers>
+                                    <StackLayout>
+                                        <ImageButton
+                                            x:Name="img11"
+                                            Margin="0,0,0,5"
+                                            Aspect="AspectFill"
+                                            BorderColor="Black"
+                                            HeightRequest="60"
+                                            HorizontalOptions="Fill"
+                                            Source="{Binding Image}"
+                                            VerticalOptions="FillAndExpand"
+                                            WidthRequest="60">
+
+                                            <!--<ImageButton.GestureRecognizers>
                                             <TapGestureRecognizer Command="{Binding BindingContext.SelectCollectionCommand, Source={x:Reference CollectionsList}}" CommandParameter="{Binding CollectionId}" />
                                         </ImageButton.GestureRecognizers>-->
-                                    </ImageButton>
+
+                                            <ImageButton.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding ResetAll}" />
+                                            </ImageButton.GestureRecognizers>
+                                        </ImageButton>
+                                    </StackLayout>
                                 </DataTemplate>
                             </BindableLayout.ItemTemplate>
 
                         </StackLayout>
+                        <ScrollView.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="img11_Clicked" />
+                        </ScrollView.GestureRecognizers>
                     </ScrollView>
+
                 </StackLayout>
             </Frame>
             <Frame

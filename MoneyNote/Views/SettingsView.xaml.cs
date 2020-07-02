@@ -18,5 +18,21 @@ namespace MoneyNote
             //            .DisposeWith(disposables);
             //    });
         }
+
+        private void img11_Clicked(object sender, System.EventArgs e)
+        {
+            if (img11.IsVisible == true)
+            {
+                CollectionsList.IsVisible = true;
+                languageLabel.IsVisible = false;
+                img11.IsVisible = false;
+            }
+            else
+            {
+                CollectionsList.IsVisible = false;
+                languageLabel.IsVisible = true;
+                img11.IsVisible = true;
+            }
+        }
     }
 }
