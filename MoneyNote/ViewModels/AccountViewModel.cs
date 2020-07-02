@@ -13,7 +13,6 @@ namespace MoneyNote
             GetData();
             MyCashCommand = ReactiveCommand.Create(async () =>
             {
-                //Application.Current.MainPage.DisplayAlert("Alert", "Hello", "Cancel", "ok");
                 string summ = await Application.Current.MainPage.DisplayPromptAsync("Change My Cash Manually:", "Be carrefull, this function will delete current cash record");
                 if (!string.IsNullOrEmpty(summ))
                 {

@@ -136,5 +136,79 @@
       <Name>MoneyNote</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\about.png">
+      <Link>Resources\about.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\account.png">
+      <Link>Resources\account.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\hamburger.png">
+      <Link>Resources\hamburger.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\hamburger_white.png">
+      <Link>Resources\hamburger_white.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\history.png">
+      <Link>Resources\history.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\logo.png">
+      <Link>Resources\logo.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\Logo2.png">
+      <Link>Resources\Logo2.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\main.png">
+      <Link>Resources\main.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\md.png">
+      <Link>Resources\md.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\ru.png">
+      <Link>Resources\ru.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\settings.png">
+      <Link>Resources\settings.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\splash.png">
+      <Link>Resources\splash.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\terms.png">
+      <Link>Resources\terms.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\us.png">
+      <Link>Resources\us.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\xamarin_logo.png">
+      <Link>Resources\xamarin_logo.png</Link>
+    </BundleResource>
+  </ItemGroup>
 </Project>

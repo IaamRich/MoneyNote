@@ -9,61 +9,73 @@
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="20*" />
-                <RowDefinition Height="20*" />
-                <RowDefinition Height="20*" />
-                <RowDefinition Height="20*" />
-                <RowDefinition Height="20*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Frame
                 Grid.Row="0"
                 Margin="10,5,10,0"
                 HorizontalOptions="FillAndExpand">
                 <StackLayout>
-                    <Label
-                        HorizontalOptions="Center"
-                        Text="{Binding Strings[set_my_savings]}"
-                        VerticalOptions="Center" />
-                    <Entry
-                        FontAttributes="Bold"
-                        FontSize="Title"
-                        HorizontalOptions="Center"
-                        Text="999999"
-                        VerticalOptions="Center" />
+                    <Button
+                        Command="{Binding ResetAll}"
+                        Text="{Binding Strings[reset_all]}"
+                        VerticalOptions="FillAndExpand" />
                 </StackLayout>
             </Frame>
             <Frame
                 Grid.Row="1"
                 Margin="10,0"
                 HorizontalOptions="FillAndExpand">
-                <StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="0">
                     <Label
-                        HorizontalOptions="Center"
-                        Text="{Binding Strings[set_my_current]}"
-                        VerticalOptions="Center" />
-                    <Entry
-                        FontAttributes="Bold"
                         FontSize="Title"
-                        HorizontalOptions="Center"
-                        Text="999999"
+                        Text="Sounds"
                         VerticalOptions="Center" />
+                    <CheckBox HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
                 </StackLayout>
             </Frame>
             <Frame
                 Grid.Row="2"
                 Margin="10,0"
                 HorizontalOptions="FillAndExpand">
-                <StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="0">
                     <Label
-                        HorizontalOptions="Center"
-                        Text="{Binding Strings[set_month_income]}"
-                        VerticalOptions="Center" />
-                    <Entry
-                        FontAttributes="Bold"
                         FontSize="Title"
-                        HorizontalOptions="Center"
-                        Text="999999"
+                        Text="Choose Language"
                         VerticalOptions="Center" />
+                    <!--  Language Collection  -->
+                    <ScrollView
+                        x:Name="CollectionsList"
+                        Orientation="Horizontal">
+                        <StackLayout
+                            Margin="0,0,0,0"
+                            BindableLayout.ItemsSource="{Binding LanguagesList}"
+                            Orientation="Horizontal">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate>
+                                    <ImageButton
+                                        x:Name="img11"
+                                        Margin="0,0,0,5"
+                                        Aspect="AspectFill"
+                                        BorderColor="Black"
+                                        HeightRequest="60"
+                                        HorizontalOptions="Fill"
+                                        Source="{Binding Image}"
+                                        VerticalOptions="Fill"
+                                        WidthRequest="60">
+                                        <!--<ImageButton.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding BindingContext.SelectCollectionCommand, Source={x:Reference CollectionsList}}" CommandParameter="{Binding CollectionId}" />
+                                        </ImageButton.GestureRecognizers>-->
+                                    </ImageButton>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+
+                        </StackLayout>
+                    </ScrollView>
                 </StackLayout>
             </Frame>
             <Frame

@@ -22,6 +22,7 @@ history_description = Description:
 history_transaction_date = Transaction date:
 
 /* Settings Page */
+reset_all = Reset all to default
 set_my_savings = Set my all savings:
 set_my_current = Set my current money:
 set_month_income = Set value this month income:

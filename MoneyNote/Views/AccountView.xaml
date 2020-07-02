@@ -97,9 +97,9 @@
                         Text="{Binding Strings[month_saving]}"
                         VerticalOptions="FillAndExpand" />
                     <controls:AccountSwitchFrame
-                        Command="{Binding MyCashCommand}"
+                        Command="{Binding MyAllSavingsCommand}"
                         HorizontalOptions="FillAndExpand"
-                        Money="{Binding MyAllSavingsCommand, Mode=TwoWay}"
+                        Money="{Binding MyAllSavings, Mode=TwoWay}"
                         MoneyColor="Blue"
                         Text="{Binding Strings[all_saving]}"
                         VerticalOptions="FillAndExpand" />
