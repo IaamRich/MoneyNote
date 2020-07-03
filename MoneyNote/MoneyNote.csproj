@@ -22,6 +22,7 @@
     <PackageReference Include="I18NPortable" Version="1.0.1" />
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.2.2" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.2.2" />
+    <PackageReference Include="PropertyChanged.Fody" Version="3.2.8" />
     <PackageReference Include="ReactiveUI" Version="11.4.1" />
     <PackageReference Include="ReactiveUI.Validation" Version="1.4.15" />
     <PackageReference Include="ReactiveUI.XamForms" Version="10.0.1" />
@@ -33,6 +34,9 @@
   <ItemGroup>
     <Compile Update="Pages\Learning\CollectionPage.xaml.cs">
       <DependentUpon>CollectionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Styles\ButtonStyles.xaml.cs">
+      <DependentUpon>ButtonStyles.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\TermsView.xaml.cs">
       <DependentUpon>TermsView.xaml</DependentUpon>
@@ -76,9 +80,8 @@
     <EmbeddedResource Update="Pages\Learning\ValidationDemoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Styles\" />
+    <EmbeddedResource Update="Styles\ButtonStyles.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

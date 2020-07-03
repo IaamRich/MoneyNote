@@ -5,9 +5,11 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <Color x:Key="MainBackGround">#008900</Color>
+    <Color x:Key="ButtonText">#ffffff</Color>
+    <Color x:Key="MainGreen">#008900</Color>
     <Color x:Key="AboutBackGround">#e6ffe6</Color>
     <Color x:Key="ListBackColor">#f9fff6</Color>
+    <Color x:Key="AboutBoldLabel">#000000</Color>
 
 
 </ResourceDictionary>

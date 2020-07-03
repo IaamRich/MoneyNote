@@ -22,7 +22,7 @@
                     Grid.Column="1"
                     HorizontalOptions="End"
                     Orientation="Vertical">
-                    <Label HorizontalOptions="EndAndExpand" Text="Saving:" />
+                    <Label HorizontalOptions="EndAndExpand" Text="{Binding Strings[saving]}" />
                     <Label HorizontalOptions="EndAndExpand" Text="999999" />
                 </StackLayout>
             </Grid>
@@ -45,33 +45,33 @@
                         <Label
                             FontSize="Title"
                             HorizontalOptions="Center"
-                            Text="Enter spent amount:" />
+                            Text="{Binding Strings[enter_spent_amount]}" />
                         <Frame>
                             <Entry
                                 x:Name="entrySpend"
                                 FontSize="Medium"
                                 Keyboard="Numeric"
-                                Placeholder="Amount" />
+                                Placeholder="{Binding Strings[amount]}" />
                         </Frame>
                         <StackLayout Orientation="Horizontal">
                             <Button
-                                BackgroundColor="{StaticResource MainBackGround}"
+                                BackgroundColor="{StaticResource MainGreen}"
                                 Clicked="OnDelete"
                                 CornerRadius="10"
-                                Text="Delete"
+                                Text="{Binding Strings[delete]}"
                                 TextColor="White" />
                             <Button
-                                BackgroundColor="{StaticResource MainBackGround}"
+                                BackgroundColor="{StaticResource MainGreen}"
                                 Clicked="OnUpdate"
                                 CornerRadius="10"
-                                Text="Update"
+                                Text="{Binding Strings[update]}"
                                 TextColor="White" />
                             <Button
-                                BackgroundColor="{StaticResource MainBackGround}"
+                                BackgroundColor="{StaticResource MainGreen}"
                                 Clicked="OnAdd"
                                 CornerRadius="10"
                                 HorizontalOptions="FillAndExpand"
-                                Text="Commit"
+                                Text="{Binding Strings[commit]}"
                                 TextColor="White" />
                         </StackLayout>
 
@@ -79,7 +79,7 @@
                 </Frame>
                 <Frame Margin="10,0" Padding="8">
                     <StackLayout>
-                        <Label HorizontalOptions="CenterAndExpand" Text="Last spent money:" />
+                        <Label HorizontalOptions="CenterAndExpand" Text="{Binding Strings[last_spent_money]}" />
                         <ListView
                             x:Name="spendingListView"
                             Margin="10,0"
@@ -107,8 +107,8 @@
                 HorizontalOptions="EndAndExpand"
                 Orientation="Horizontal"
                 VerticalOptions="EndAndExpand">
-                <Label Text="Share" />
-                <Label Margin="10,0" Text="Vote" />
+                <Label Text="{Binding Strings[share]}" />
+                <Label Margin="10,0" Text="{Binding Strings[vote]}" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

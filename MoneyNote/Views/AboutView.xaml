@@ -6,94 +6,88 @@
     xmlns:local="clr-namespace:MoneyNote"
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
     x:TypeArguments="local:AboutViewModel">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Color x:Key="Primary">#2196F3</Color>
-            <Color x:Key="Accent">#96d1ff</Color>
-            <Color x:Key="LightTextColor">#999999</Color>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-    <ContentPage.Content>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <StackLayout
-                BackgroundColor="{StaticResource AboutBackGround}"
-                HorizontalOptions="Fill"
-                VerticalOptions="FillAndExpand">
-                <StackLayout
-                    HorizontalOptions="Center"
-                    Orientation="Horizontal"
-                    VerticalOptions="Center">
-                    <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                        <Image
-                            HeightRequest="64"
-                            Source="logo.png"
-                            VerticalOptions="Center" />
-                    </ContentView>
-                </StackLayout>
+    <StackLayout>
+
+        <Frame HasShadow="True">
+            <StackLayout Spacing="10">
+                <Image
+                    HeightRequest="64"
+                    Source="logo.png"
+                    VerticalOptions="Center" />
+                <Label FontSize="22">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span
+                                    FontAttributes="Bold"
+                                    FontSize="22"
+                                    Text="{Binding Strings[app_name]}" />
+                                <Span Text=" " />
+                                <Span ForegroundColor="{StaticResource MainGreen}" Text="{Binding Strings[about_version]}" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="{Binding Strings[created_by]}" />
+                                <Span Text=" " />
+                                <Span FontAttributes="Bold" Text="{Binding Strings[creator_name]}" />
+                                <Span Text="." />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="{Binding Strings[supported_by]}" />
+                                <Span Text=" " />
+                                <Span FontAttributes="Bold" Text="{Binding Strings[supporter_name]}" />
+                                <Span Text="." />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="{Binding Strings[images_by]}" />
+                                <Span Text=" " />
+                                <Span FontAttributes="Bold" Text="{Binding Strings[imaginator_name]}" />
+                                <Span Text="." />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="{Binding Strings[about_platforms]}" />
+                                <Span Text=" " />
+                                <Span FontAttributes="Bold" Text="{Binding Strings[platforms_available]}" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Button
+                    Margin="0,10,0,0"
+                    Command="{Binding OpenWebCommand}"
+                    Text="{Binding Strings[learn_more]}" />
             </StackLayout>
-            <ScrollView Grid.Row="1">
-                <StackLayout
-                    Padding="10,5,10,20"
-                    Orientation="Vertical"
-                    Spacing="10">
-                    <Label FontSize="22">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <FormattedString.Spans>
-                                    <Span
-                                        FontAttributes="Bold"
-                                        FontSize="22"
-                                        Text="MoneyNote" />
-                                    <Span Text=" " />
-                                    <Span ForegroundColor="{StaticResource LightTextColor}" Text="1.0" />
-                                </FormattedString.Spans>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <FormattedString.Spans>
-                                    <Span Text="This app is written by" />
-                                    <Span Text=" " />
-                                    <Span FontAttributes="Bold" Text="Vladimir Curaciov" />
-                                    <Span Text="." />
-                                </FormattedString.Spans>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Label>
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <FormattedString.Spans>
-                                    <Span Text="It's released on iOS and Android versions." />
-                                    <Span Text=" " />
-                                    <Span FontAttributes="Bold" Text="iOS and Android" />
-                                    <Span Text=" " />
-                                    <Span Text="versions." />
-                                </FormattedString.Spans>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Button
-                        Margin="0,10,0,0"
-                        BackgroundColor="{StaticResource MainBackGround}"
-                        Command="{Binding OpenWebCommand}"
-                        Text="Learn more"
-                        TextColor="White" />
-                    <Label
-                        FontSize="Micro"
-                        HorizontalOptions="Center"
-                        Text="© Sapec Software. All Rights Reserved. 2020"
-                        VerticalOptions="EndAndExpand" />
-                </StackLayout>
+        </Frame>
 
-            </ScrollView>
-
-        </Grid>
-    </ContentPage.Content>
+        <Label
+            Margin="0,10"
+            FontSize="Micro"
+            HorizontalOptions="Center"
+            Text="{Binding Strings[about_footer]}"
+            VerticalOptions="EndAndExpand" />
+    </StackLayout>
 </rxui:ReactiveContentPage>

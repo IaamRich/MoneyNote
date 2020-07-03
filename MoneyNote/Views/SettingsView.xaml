@@ -9,61 +9,99 @@
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="20*" />
-                <RowDefinition Height="20*" />
-                <RowDefinition Height="20*" />
-                <RowDefinition Height="20*" />
-                <RowDefinition Height="20*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Frame
                 Grid.Row="0"
                 Margin="10,5,10,0"
                 HorizontalOptions="FillAndExpand">
                 <StackLayout>
-                    <Label
-                        HorizontalOptions="Center"
-                        Text="Set my all savings:"
-                        VerticalOptions="Center" />
-                    <Entry
-                        FontAttributes="Bold"
-                        FontSize="Title"
-                        HorizontalOptions="Center"
-                        Text="999999"
-                        VerticalOptions="Center" />
+                    <Button
+                        Command="{Binding ResetAll}"
+                        Text="{Binding Strings[reset_all]}"
+                        VerticalOptions="FillAndExpand" />
                 </StackLayout>
             </Frame>
             <Frame
                 Grid.Row="1"
                 Margin="10,0"
                 HorizontalOptions="FillAndExpand">
-                <StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="0">
                     <Label
-                        HorizontalOptions="Center"
-                        Text="Set my current money:"
-                        VerticalOptions="Center" />
-                    <Entry
-                        FontAttributes="Bold"
                         FontSize="Title"
-                        HorizontalOptions="Center"
-                        Text="999999"
+                        Text="Sounds"
                         VerticalOptions="Center" />
+                    <CheckBox HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
                 </StackLayout>
             </Frame>
             <Frame
                 Grid.Row="2"
                 Margin="10,0"
                 HorizontalOptions="FillAndExpand">
-                <StackLayout>
+                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
                     <Label
-                        HorizontalOptions="Center"
-                        Text="Set value this month income:"
-                        VerticalOptions="Center" />
-                    <Entry
-                        FontAttributes="Bold"
+                        x:Name="languageLabel"
                         FontSize="Title"
-                        HorizontalOptions="Center"
-                        Text="999999"
-                        VerticalOptions="Center" />
+                        HorizontalOptions="Start"
+                        Text="Choose Language"
+                        VerticalOptions="CenterAndExpand" />
+                    <!--  Language Collection  -->
+                    <ImageButton
+                        x:Name="img11"
+                        Margin="0,0,0,5"
+                        Aspect="AspectFill"
+                        BorderColor="Black"
+                        Clicked="img11_Clicked"
+                        HeightRequest="60"
+                        HorizontalOptions="EndAndExpand"
+                        Source="us.png"
+                        VerticalOptions="FillAndExpand"
+                        WidthRequest="60" />
+                    <ScrollView
+                        x:Name="CollectionsList"
+                        HorizontalOptions="FillAndExpand"
+                        IsVisible="False"
+                        Orientation="Horizontal">
+                        <StackLayout
+                            Margin="0,0,0,0"
+                            BindableLayout.ItemsSource="{Binding LanguagesList}"
+                            Orientation="Horizontal">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout>
+                                        <ImageButton
+                                            x:Name="img11"
+                                            Margin="0,0,0,5"
+                                            Aspect="AspectFill"
+                                            BorderColor="Black"
+                                            HeightRequest="60"
+                                            HorizontalOptions="Fill"
+                                            Source="{Binding Image}"
+                                            VerticalOptions="FillAndExpand"
+                                            WidthRequest="60">
+
+                                            <!--<ImageButton.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding BindingContext.SelectCollectionCommand, Source={x:Reference CollectionsList}}" CommandParameter="{Binding CollectionId}" />
+                                        </ImageButton.GestureRecognizers>-->
+
+                                            <ImageButton.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding ResetAll}" />
+                                            </ImageButton.GestureRecognizers>
+                                        </ImageButton>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+
+                        </StackLayout>
+                        <ScrollView.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="img11_Clicked" />
+                        </ScrollView.GestureRecognizers>
+                    </ScrollView>
+
                 </StackLayout>
             </Frame>
             <Frame
@@ -73,7 +111,7 @@
                 <StackLayout>
                     <Label
                         HorizontalOptions="Center"
-                        Text="Set value this month spent:"
+                        Text="{Binding Strings[set_month_outlay]}"
                         VerticalOptions="Center" />
                     <Entry
                         FontAttributes="Bold"
@@ -89,10 +127,10 @@
                 HorizontalOptions="FillAndExpand">
                 <StackLayout>
                     <Button
-                        BackgroundColor="{StaticResource MainBackGround}"
+                        BackgroundColor="{StaticResource MainGreen}"
                         CornerRadius="10"
                         HorizontalOptions="FillAndExpand"
-                        Text="Update"
+                        Text="{Binding Strings[update]}"
                         VerticalOptions="FillAndExpand" />
                 </StackLayout>
             </Frame>

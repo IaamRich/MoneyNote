@@ -18,7 +18,7 @@ namespace MoneyNote
 
         public ReactiveCommand<Unit, Unit> NavigateToDummyPage { get; }
 
-        public string UrlPathSegment => "Main";
+        public string UrlPathSegment => Strings["menu_main"];
 
         public IScreen HostScreen { get; }
     }
