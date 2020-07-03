@@ -11,12 +11,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Images\de.png" />
     <None Remove="Resources\Images\en.png" />
+    <None Remove="Resources\Images\fr.png" />
+    <None Remove="Resources\Images\it.png" />
+    <None Remove="Resources\Images\md.png" />
+    <None Remove="Resources\Images\ru.png" />
+    <None Remove="Resources\Images\zh.png" />
     <None Remove="Resources\Locales\en-US.txt" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\de.png" />
     <EmbeddedResource Include="Resources\Images\en.png" />
+    <EmbeddedResource Include="Resources\Images\fr.png" />
+    <EmbeddedResource Include="Resources\Images\it.png" />
+    <EmbeddedResource Include="Resources\Images\md.png" />
+    <EmbeddedResource Include="Resources\Images\ru.png" />
+    <EmbeddedResource Include="Resources\Images\zh.png" />
     <EmbeddedResource Include="Resources\Locales\en-US.txt" />
   </ItemGroup>
 

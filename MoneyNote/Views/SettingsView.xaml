@@ -81,8 +81,9 @@
                                         x:Name="img11"
                                         Aspect="AspectFit"
                                         Clicked="img11_Clicked"
+                                        Command="{Binding Path=BindingContext.ImageCommand, Source={x:Reference bindingStack}}"
+                                        CommandParameter="{Binding Id}"
                                         Source="{Binding Image}">
-
                                         <!--<ImageButton.GestureRecognizers>
                                             <TapGestureRecognizer Command="{Binding BindingContext.SelectCollectionCommand, Source={x:Reference CollectionsList}}" CommandParameter="{Binding CollectionId}" />
                                         </ImageButton.GestureRecognizers>-->

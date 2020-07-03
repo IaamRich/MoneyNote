@@ -57,12 +57,10 @@ namespace MoneyNote
             //{
             //    LanguageImage = ImageSource.FromFile("md.png");
 
-            //});            //_currentLetter = Observable
-            //    .Interval(TimeSpan.FromSeconds(1))
-            //    .Scan(64, (acc, current) => acc + 1)
-            //    .Select(x => (char)x)
-            //    .Take(26)
-            //    .ToProperty(this, x => x.CurrentLetter, scheduler: RxApp.MainThreadScheduler);
+
+            //});
+            ImageCommand = new Command(ButtonClicked);
+
         }
 
         //public char CurrentLetter => _currentLetter.Value;
@@ -96,6 +94,35 @@ namespace MoneyNote
             //{
             //    LanguagesList.Add(item);
             //}
+        }
+
+
+        private async void ButtonClicked(object sender)
+        {
+            switch ((int)sender)
+            {
+                case 1:
+                    LanguageImage = ImageSource.FromResource(ImageResources.russian_language);
+                    break;
+                case 2:
+                    LanguageImage = ImageSource.FromResource(ImageResources.romanian_language);
+                    break;
+                case 3:
+                    LanguageImage = ImageSource.FromResource(ImageResources.italian_language);
+                    break;
+                case 4:
+                    LanguageImage = ImageSource.FromResource(ImageResources.german_language);
+                    break;
+                case 5:
+                    LanguageImage = ImageSource.FromResource(ImageResources.french_language);
+                    break;
+                case 6:
+                    LanguageImage = ImageSource.FromResource(ImageResources.chinese_language);
+                    break;
+                default:
+                    LanguageImage = ImageSource.FromResource(ImageResources.english_language);
+                    break;
+            }
         }
 
     }
