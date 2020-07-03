@@ -180,11 +180,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\us.png">
-      <Link>Resources\drawable\us.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="..\MoneyNote\Resources\Images\fr.png">
       <Link>Resources\drawable\fr.png</Link>
     </AndroidResource>
@@ -202,6 +197,11 @@
   <ItemGroup>
     <AndroidResource Include="..\MoneyNote\Resources\Images\zh.png">
       <Link>Resources\drawable\zh.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\en.png">
+      <Link>Resources\drawable\en.png</Link>
     </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

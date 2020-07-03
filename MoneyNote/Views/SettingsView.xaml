@@ -5,6 +5,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MoneyNote"
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
+    xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+    x:Name="this"
     x:TypeArguments="local:SettingsViewModel">
     <ContentPage.Content>
         <Grid>
@@ -15,6 +17,8 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
+            <!--  To do Method After initialization elements sizes of the page  -->
+            <skia:SKCanvasView x:Name="canvasView" PaintSurface="CanvasView_PaintSurface" />
             <Frame
                 Grid.Row="0"
                 Margin="10,5,10,0"
@@ -42,7 +46,10 @@
                 Grid.Row="2"
                 Margin="10,0"
                 HorizontalOptions="FillAndExpand">
-                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                <StackLayout
+                    x:Name="chooseLanguageStack"
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal">
                     <Label
                         x:Name="languageLabel"
                         FontSize="Title"
@@ -52,47 +59,35 @@
                     <!--  Language Collection  -->
                     <ImageButton
                         x:Name="img11"
-                        Margin="0,0,0,5"
-                        Aspect="AspectFill"
-                        BorderColor="Black"
+                        Aspect="AspectFit"
                         Clicked="img11_Clicked"
-                        HeightRequest="60"
                         HorizontalOptions="EndAndExpand"
-                        Source="us.png"
-                        VerticalOptions="FillAndExpand"
-                        WidthRequest="60" />
+                        Source="{Binding LanguageImage}"
+                        VerticalOptions="FillAndExpand" />
                     <ScrollView
                         x:Name="CollectionsList"
+                        Padding="0,0,0,3"
                         HorizontalOptions="FillAndExpand"
                         IsVisible="False"
-                        Orientation="Horizontal">
+                        Orientation="Horizontal"
+                        VerticalOptions="FillAndExpand">
                         <StackLayout
-                            Margin="0,0,0,0"
+                            x:Name="bindingStack"
                             BindableLayout.ItemsSource="{Binding LanguagesList}"
                             Orientation="Horizontal">
                             <BindableLayout.ItemTemplate>
                                 <DataTemplate>
-                                    <StackLayout>
-                                        <ImageButton
-                                            x:Name="img11"
-                                            Margin="0,0,0,5"
-                                            Aspect="AspectFill"
-                                            BorderColor="Black"
-                                            HeightRequest="60"
-                                            HorizontalOptions="Fill"
-                                            Source="{Binding Image}"
-                                            VerticalOptions="FillAndExpand"
-                                            WidthRequest="60">
+                                    <ImageButton
+                                        x:Name="img11"
+                                        Aspect="AspectFit"
+                                        Clicked="img11_Clicked"
+                                        Source="{Binding Image}">
 
-                                            <!--<ImageButton.GestureRecognizers>
+                                        <!--<ImageButton.GestureRecognizers>
                                             <TapGestureRecognizer Command="{Binding BindingContext.SelectCollectionCommand, Source={x:Reference CollectionsList}}" CommandParameter="{Binding CollectionId}" />
                                         </ImageButton.GestureRecognizers>-->
 
-                                            <ImageButton.GestureRecognizers>
-                                                <TapGestureRecognizer Command="{Binding ResetAll}" />
-                                            </ImageButton.GestureRecognizers>
-                                        </ImageButton>
-                                    </StackLayout>
+                                    </ImageButton>
                                 </DataTemplate>
                             </BindableLayout.ItemTemplate>
 

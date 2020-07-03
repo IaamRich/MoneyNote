@@ -11,10 +11,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Images\en.png" />
     <None Remove="Resources\Locales\en-US.txt" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\en.png" />
     <EmbeddedResource Include="Resources\Locales\en-US.txt" />
   </ItemGroup>
 
@@ -26,6 +28,7 @@
     <PackageReference Include="ReactiveUI" Version="11.4.1" />
     <PackageReference Include="ReactiveUI.Validation" Version="1.4.15" />
     <PackageReference Include="ReactiveUI.XamForms" Version="10.0.1" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.1.1" />
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />

@@ -1,4 +1,5 @@
 ﻿using ReactiveUI.XamForms;
+using SkiaSharp.Views.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace MoneyNote
@@ -6,6 +7,8 @@ namespace MoneyNote
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SettingsView : ReactiveContentPage<SettingsViewModel>
     {
+        public static double WidthAfter { get; set; } = 10;
+
         public SettingsView()
         {
             InitializeComponent();
@@ -33,6 +36,24 @@ namespace MoneyNote
                 languageLabel.IsVisible = true;
                 img11.IsVisible = true;
             }
+        }
+        private void CanvasView_PaintSurface(object sender, SKPaintSurfaceEventArgs e)
+        {
+            //first element check is enough because all elements have the same size.
+            OnPlatformChangeFunc(chooseLanguageStack.Height);
+        }
+        private void OnPlatformChangeFunc(double element)
+        {
+            WidthAfter = element - 10;
+            //switch (Device.RuntimePlatform)
+            //{
+            //    case Device.iOS:
+            //        BorderAfter = element.Height / 2;
+            //        break;
+            //    default:
+            //        BorderAfter = element.Height / 2 + 5;
+            //        break;
+            //}
         }
     }
 }

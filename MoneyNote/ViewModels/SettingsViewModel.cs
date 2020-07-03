@@ -1,5 +1,6 @@
 ﻿using I18NPortable;
 using MoneyNote.Models;
+using MoneyNote.Resources.Images;
 using ReactiveUI;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -41,16 +42,22 @@ namespace MoneyNote
         private List<Language> languages = new List<Language>();
         //public SourceList<Language> LanguagesSource = new SourceList<Language>();
         public ObservableCollection<Language> LanguagesList { get; set; }
+        public ImageSource LanguageImage { get; set; }
         public II18N Strings => I18N.Current;
         public SettingsViewModel()
         {
+            LanguageImage = ImageSource.FromResource(ImageResources.english_language);
             _ = GetLanguages();
             ResetAll = ReactiveCommand.Create(() =>
             {
                 ResetAllMethod();
             });
 
-            //_currentLetter = Observable
+            //ImageCommand = ReactiveCommand.Create(() =>
+            //{
+            //    LanguageImage = ImageSource.FromFile("md.png");
+
+            //});            //_currentLetter = Observable
             //    .Interval(TimeSpan.FromSeconds(1))
             //    .Scan(64, (acc, current) => acc + 1)
             //    .Select(x => (char)x)
@@ -62,6 +69,7 @@ namespace MoneyNote
 
         public string UrlPathSegment => Strings["menu_settings"];
         public ICommand ResetAll { get; set; }
+        public ICommand ImageCommand { get; set; }
 
         public IScreen HostScreen { get; }
 
@@ -74,7 +82,7 @@ namespace MoneyNote
         {
             LanguagesList = new ObservableCollection<Language>()
             {
-                new Language { Id = 0, Sign = "en-US", Name = "English", Image = "us.png" },
+                new Language { Id = 0, Sign = "en-US", Name = "English", Image = "en.png" },
                 new Language { Id = 1, Sign = "ru-RU", Name = "Russian", Image = "ru.png" },
                 new Language { Id = 2, Sign = "md-MD", Name = "Romanian", Image = "md.png" },
                 new Language { Id = 3, Sign = "it-IT", Name = "Italian", Image = "it.png" },
