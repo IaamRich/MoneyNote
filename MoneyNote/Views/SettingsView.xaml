@@ -111,11 +111,11 @@
             <!--  5  -->
             <Frame
                 Grid.Row="4"
-                Margin="10,0"
+                Margin="10,0,10,5"
                 HorizontalOptions="FillAndExpand">
                 <StackLayout>
                     <Button
-                        IsEnabled="False"
+                        Command="{Binding OffAds}"
                         Text="{Binding Strings[dis_add]}"
                         VerticalOptions="FillAndExpand" />
                 </StackLayout>
