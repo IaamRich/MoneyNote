@@ -12,6 +12,7 @@ namespace MoneyNote
         public SettingsView()
         {
             InitializeComponent();
+            //BindingContext = ViewModel = new SettingsViewModel();
 
             //this.WhenActivated(
             //    disposables =>

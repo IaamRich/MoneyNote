@@ -2,7 +2,7 @@
 using MoneyNote.Models;
 using MoneyNote.Resources.Images;
 using ReactiveUI;
-using System.Collections.Generic;
+using Splat;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -12,15 +12,13 @@ namespace MoneyNote
 {
     public class SettingsViewModel : ReactiveObject, IRoutableViewModel
     {
-        private ObservableAsPropertyHelper<char> _currentLetter;
-
-        private List<Language> languages = new List<Language>();
-        //public SourceList<Language> LanguagesSource = new SourceList<Language>();
+        //private ObservableAsPropertyHelper<char> _currentLetter;
         public ObservableCollection<Language> LanguagesList { get; set; }
         public ImageSource LanguageImage { get; set; }
         public II18N Strings => I18N.Current;
-        public SettingsViewModel()
+        public SettingsViewModel(IScreen screen = null)
         {
+            HostScreen = screen ?? Locator.Current.GetService<IScreen>();
             LanguageImage = ImageSource.FromResource(ImageResources.english_language);
             _ = GetLanguages();
             ResetAll = ReactiveCommand.Create(() =>
@@ -32,19 +30,17 @@ namespace MoneyNote
                 Application.Current.MainPage.DisplayAlert("Message", "In developing...", "", "ok");
             });
             ImageCommand = new Command(ImageCommandFunc);
-            GoAccount = ReactiveCommand.Create(() =>
+            GoAccount = ReactiveCommand.CreateFromObservable(() =>
             {
-                Application.Current.MainPage.DisplayAlert("Message", "Go Account", "", "ok");
+                return HostScreen.Router.Navigate.Execute(new AccountViewModel("From Settings"));
             });
 
         }
 
-        //public char CurrentLetter => _currentLetter.Value;
-
         public string UrlPathSegment => Strings["menu_settings"];
         public ICommand ResetAll { get; set; }
         public ICommand ImageCommand { get; set; }
-        public ICommand GoAccount { get; set; }
+        public ICommand GoAccount { get; }
         public ICommand OffAds { get; set; }
         public IScreen HostScreen { get; }
 
@@ -65,12 +61,6 @@ namespace MoneyNote
                 new Language { Id = 5, Sign = "fr-FR", Name = "French", Image = "fr.png" },
                 new Language { Id = 6, Sign = "zh-CN", Name = "Chinese", Image = "zh.png" }
             };
-
-
-            //foreach (var item in languages)
-            //{
-            //    LanguagesList.Add(item);
-            //}
         }
 
 
@@ -101,6 +91,5 @@ namespace MoneyNote
                     break;
             }
         }
-
     }
 }

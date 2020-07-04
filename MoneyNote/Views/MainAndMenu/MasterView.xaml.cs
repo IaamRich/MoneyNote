@@ -4,7 +4,7 @@ using System;
 using System.Linq;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
-
+using Xamarin.Forms;
 
 namespace MoneyNote
 {
@@ -13,8 +13,9 @@ namespace MoneyNote
         public MasterView(MasterViewModel viewModel)
         {
             ViewModel = viewModel;
-
             InitializeComponent();
+
+            AddCloseMenuFuncToMenuTitleElements();
 
             this.WhenActivated(
                 disposables =>
@@ -39,10 +40,20 @@ namespace MoneyNote
                         .DisposeWith(disposables);
                 });
         }
-
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        private void AddCloseMenuFuncToMenuTitleElements()
         {
-            IsPresented = false;
+            var tapGestureRecognizer = new TapGestureRecognizer();
+            tapGestureRecognizer.Tapped += (sender, e) =>
+            {
+                // cast to an image
+                //Image theImage = (Image)sender;
+                IsPresented = false;
+                // now you have a reference to the image
+            };
+            foreach (var item in menuTitle.Children)
+            {
+                item.GestureRecognizers.Add(tapGestureRecognizer);
+            }
         }
     }
 }

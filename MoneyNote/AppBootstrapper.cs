@@ -14,6 +14,7 @@ namespace MoneyNote
             RegisterServices();
             RegisterViews();
             RegisterViewModels();
+
             //Router.Navigate.Execute(new MasterViewModel());
         }
 
@@ -45,6 +46,8 @@ namespace MoneyNote
             Locator.CurrentMutable.Register(() => new HistoryView(), typeof(IViewFor<HistoryViewModel>));
             Locator.CurrentMutable.Register(() => new TermsView(), typeof(IViewFor<TermsViewModel>));
             Locator.CurrentMutable.Register(() => new AboutView(), typeof(IViewFor<AboutViewModel>));
+
+            //Locator.CurrentMutable.RegisterViewsForViewModels(Assembly.GetExecutingAssembly());
         }
         private void RegisterViewModels()
         {

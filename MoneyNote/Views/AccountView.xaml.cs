@@ -10,6 +10,8 @@ namespace MoneyNote
         {
             InitializeComponent();
 
+            //BindingContext = ViewModel = new AccountViewModel();
+
             //this.WhenActivated(
             //    disposables =>
             //    {

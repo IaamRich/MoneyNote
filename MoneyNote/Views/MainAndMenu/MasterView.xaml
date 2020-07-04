@@ -10,7 +10,7 @@
         <!--  No need reference to strings[]  -->
         <ContentPage Title="Master">
             <StackLayout Spacing="0">
-                <Grid ColumnSpacing="0">
+                <Grid x:Name="menuTitle" ColumnSpacing="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="36" />
@@ -24,32 +24,19 @@
                             <ColumnDefinition Width="30" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Image x:Name="IconImage">
-                            <Image.GestureRecognizers>
-                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped" />
-                            </Image.GestureRecognizers>
-                        </Image>
+                        <Image x:Name="IconImage" />
                         <Label
                             x:Name="TitleLabel"
                             Grid.Column="1"
                             FontAttributes="Bold"
                             Text="{Binding Strings[menu]}"
                             TextColor="White"
-                            VerticalOptions="CenterAndExpand">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped" />
-                            </Label.GestureRecognizers>
-
-                        </Label>
+                            VerticalOptions="CenterAndExpand" />
                     </Grid>
                     <Image
                         Grid.Column="1"
                         Margin="0,0,18,0"
-                        Source="hamburger_white.png">
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped" />
-                        </Image.GestureRecognizers>
-                    </Image>
+                        Source="hamburger_white.png" />
                 </Grid>
                 <ListView
                     x:Name="MyListView"

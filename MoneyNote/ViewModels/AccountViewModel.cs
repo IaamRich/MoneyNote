@@ -1,5 +1,6 @@
 ﻿using I18NPortable;
 using ReactiveUI;
+using Splat;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -8,8 +9,27 @@ namespace MoneyNote
     public class AccountViewModel : ReactiveObject, IRoutableViewModel
     {
         public II18N Strings => I18N.Current;
-        public AccountViewModel()
+        public string UrlPathSegment => Strings["menu_account"];
+        public IScreen HostScreen { get; }
+        public ICommand MyCashCommand { get; set; }
+        public ICommand MyCardCommand { get; set; }
+        public ICommand MyCurrentCommand { get; set; }
+        public ICommand MyIncomeCommand { get; set; }
+        public ICommand MyOutlayCommand { get; set; }
+        public ICommand MySavingsCommand { get; set; }
+        public ICommand MyAllSavingsCommand { get; set; }
+        public string MyCash { get; set; }
+        public string MyCard { get; set; }
+        public string MyCurrent { get; set; }
+        public string MyIncome { get; set; }
+        public string MyOutlay { get; set; }
+        public string MySavings { get; set; }
+        public string MyAllSavings { get; set; }
+        public AccountViewModel(string message = null, IScreen screen = null)
         {
+            HostScreen = screen ?? Locator.Current.GetService<IScreen>();
+            if (!string.IsNullOrEmpty(message)) ShowMessage(message);
+
             GetData();
             MyCashCommand = ReactiveCommand.Create(async () =>
             {
@@ -74,10 +94,6 @@ namespace MoneyNote
 
                 }
             });
-
-            //NumberStream = Observable
-            //    .Interval(TimeSpan.FromSeconds(1))
-            //    .Select(x => x.ToString());
         }
 
         private void GetData()
@@ -89,26 +105,11 @@ namespace MoneyNote
             MyOutlay = "9993239";
             MySavings = "8769999";
             MyAllSavings = "9112999";
-
         }
 
-        //public IObservable<string> NumberStream { get; }
-
-        public string UrlPathSegment => Strings["menu_account"];
-        public ICommand MyCashCommand { get; set; }
-        public ICommand MyCardCommand { get; set; }
-        public ICommand MyCurrentCommand { get; set; }
-        public ICommand MyIncomeCommand { get; set; }
-        public ICommand MyOutlayCommand { get; set; }
-        public ICommand MySavingsCommand { get; set; }
-        public ICommand MyAllSavingsCommand { get; set; }
-        public string MyCash { get; set; }
-        public string MyCard { get; set; }
-        public string MyCurrent { get; set; }
-        public string MyIncome { get; set; }
-        public string MyOutlay { get; set; }
-        public string MySavings { get; set; }
-        public string MyAllSavings { get; set; }
-        public IScreen HostScreen { get; }
+        private void ShowMessage(string message)
+        {
+            Application.Current.MainPage.DisplayAlert("Message", message, "", "ok");
+        }
     }
 }
