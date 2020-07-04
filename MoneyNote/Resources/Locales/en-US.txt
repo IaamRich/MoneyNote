@@ -23,10 +23,11 @@ history_transaction_date = Transaction date:
 
 /* Settings Page */
 reset_all = Reset all to default
-set_my_savings = Set my all savings:
-set_my_current = Set my current money:
-set_month_income = Set value this month income:
-set_month_outlay = Set value this month spent:
+sounds = Sounds
+choose_language = Choose Language
+set_every_places = Set each Money Notes
+dis_add = Turn off Ads
+(in developing)
 
 /* Terms Page */
 terms_text = 1. This page (together with the documents referred to on it) tells you the terms of use (the 'Terms of Use') on which you may make use of our 'goop city guides' application for mobile devices (the 'App'). Please read these Terms of Use carefully before you download, install or use the App. By downloading, installing or using the App, you indicate that you accept these Terms of Use and that you agree to abide by them. Your download, installation or use of the App constitutes your acceptance of these Terms of Use which takes effect on the date on which you download, install or use the App. If you do not agree with these Terms of Use, you should cease downloading, installing or using the App immediately.

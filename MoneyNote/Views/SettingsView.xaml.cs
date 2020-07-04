@@ -22,38 +22,28 @@ namespace MoneyNote
             //    });
         }
 
-        private void img11_Clicked(object sender, System.EventArgs e)
+        private void iconLanguage_Clicked(object sender, System.EventArgs e)
         {
-            if (img11.IsVisible == true)
+            if (iconLanguage.IsVisible == true)
             {
                 CollectionsList.IsVisible = true;
                 languageLabel.IsVisible = false;
-                img11.IsVisible = false;
+                iconLanguage.IsVisible = false;
             }
             else
             {
                 CollectionsList.IsVisible = false;
                 languageLabel.IsVisible = true;
-                img11.IsVisible = true;
+                iconLanguage.IsVisible = true;
             }
         }
         private void CanvasView_PaintSurface(object sender, SKPaintSurfaceEventArgs e)
         {
-            //first element check is enough because all elements have the same size.
-            OnPlatformChangeFunc(chooseLanguageStack.Height);
+            SetWidthFunc(chooseLanguageStack.Height);
         }
-        private void OnPlatformChangeFunc(double element)
+        private void SetWidthFunc(double element)
         {
-            WidthAfter = element - 10;
-            //switch (Device.RuntimePlatform)
-            //{
-            //    case Device.iOS:
-            //        BorderAfter = element.Height / 2;
-            //        break;
-            //    default:
-            //        BorderAfter = element.Height / 2 + 5;
-            //        break;
-            //}
+            WidthAfter = element;
         }
     }
 }

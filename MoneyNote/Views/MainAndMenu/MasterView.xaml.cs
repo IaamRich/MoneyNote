@@ -39,5 +39,10 @@ namespace MoneyNote
                         .DisposeWith(disposables);
                 });
         }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            IsPresented = false;
+        }
     }
 }

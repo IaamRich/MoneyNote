@@ -8,31 +8,6 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-
-
-//using DynamicData;
-//using MvvmCross.Logging;
-//using MvvmCross.Navigation;
-//using Plugin.Media;
-//using Plugin.Media.Abstractions;
-//using ReactiveUI;
-//using ReactiveUI.Fody.Helpers;
-//using ReportTrailer.Core.Extensions;
-//using ReportTrailer.Core.Helpers;
-//using ReportTrailer.Core.Model.Account;
-//using ReportTrailer.Core.ViewModel.Base;
-//using ReportTrailer.Core.ViewModel.Popups;
-//using ReportTrailer.WebServices.Abstraction.Services;
-//using System;
-//using System.Collections.Generic;
-//using System.Collections.ObjectModel;
-//using System.Reactive;
-//using System.Threading.Tasks;
-//using Xamarin.Essentials;
-//using Xamarin.Forms;
-
-
-
 namespace MoneyNote
 {
     public class SettingsViewModel : ReactiveObject, IRoutableViewModel
@@ -52,14 +27,15 @@ namespace MoneyNote
             {
                 ResetAllMethod();
             });
-
-            //ImageCommand = ReactiveCommand.Create(() =>
-            //{
-            //    LanguageImage = ImageSource.FromFile("md.png");
-
-
-            //});
-            ImageCommand = new Command(ButtonClicked);
+            OffAds = ReactiveCommand.Create(() =>
+            {
+                Application.Current.MainPage.DisplayAlert("Message", "In developing...", "", "ok");
+            });
+            ImageCommand = new Command(ImageCommandFunc);
+            GoAccount = ReactiveCommand.Create(() =>
+            {
+                Application.Current.MainPage.DisplayAlert("Message", "Go Account", "", "ok");
+            });
 
         }
 
@@ -68,7 +44,8 @@ namespace MoneyNote
         public string UrlPathSegment => Strings["menu_settings"];
         public ICommand ResetAll { get; set; }
         public ICommand ImageCommand { get; set; }
-
+        public ICommand GoAccount { get; set; }
+        public ICommand OffAds { get; set; }
         public IScreen HostScreen { get; }
 
         private void ResetAllMethod()
@@ -97,7 +74,7 @@ namespace MoneyNote
         }
 
 
-        private async void ButtonClicked(object sender)
+        private async void ImageCommandFunc(object sender)
         {
             switch ((int)sender)
             {
