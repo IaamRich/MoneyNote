@@ -9,7 +9,7 @@
     <Color x:Key="MainGreen">#008900</Color>
     <Color x:Key="AboutBackGround">#e6ffe6</Color>
     <Color x:Key="ListBackColor">#f9fff6</Color>
-    <Color x:Key="AboutBoldLabel">#000000</Color>
+    <Color x:Key="BoldLabel">#000000</Color>
 
 
 </ResourceDictionary>

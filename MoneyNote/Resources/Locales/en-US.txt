@@ -17,9 +17,10 @@ month_saving = This month savings:
 all_saving = All time savings:
 
 /* History Page */
+last_notes = Last Notes:
 history_spent = Spent:
 history_description = Description:
-history_transaction_date = Transaction date:
+history_transaction_date = Note date:
 
 /* Settings Page */
 reset_all = Reset all to default
