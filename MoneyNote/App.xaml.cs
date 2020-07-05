@@ -16,6 +16,7 @@ namespace MoneyNote
     {
         public const string DATABASE_NAME = "money.db";
         public static MoneyService database;
+
         public static MoneyService Database
         {
             get
@@ -33,7 +34,9 @@ namespace MoneyNote
         {
             InitializeComponent();
             var bootstrapper = new AppBootstrapper();
-            MainPage = new NavigationPage(new SplashPage());//MasterView(bootstrapper.CreateMasterViewModel());
+            MainPage = new NavigationPage(new SplashPage());
+            //MainPage = new MasterView(bootstrapper.CreateMasterViewModel());
+
         }
         protected override void OnStart()
         {

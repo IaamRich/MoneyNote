@@ -7,6 +7,7 @@
   <style name="MainTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
     <!--If you are using revision 22.1 please use just windowNoTitle. Without android:-->
     <item name="windowNoTitle">true</item>
+    <item name="android:windowBackground">@drawable/splash</item>
     <!--We will be using the toolbar so no need to show ActionBar-->
     <item name="windowActionBar">false</item>
     <!-- Set theme colors from https://aka.ms/material-colors -->

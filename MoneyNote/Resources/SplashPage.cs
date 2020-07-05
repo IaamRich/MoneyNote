@@ -28,12 +28,11 @@ namespace MoneyNote.Resources
         {
             base.OnAppearing();
 
-            await splashImage.ScaleTo(1, 500);
-            await splashImage.ScaleTo(0.5, 500, Easing.Linear);
-            await splashImage.ScaleTo(3, 500, Easing.Linear);
+            //await splashImage.ScaleTo(1, 500);
+            //await splashImage.ScaleTo(0.5, 500, Easing.Linear);
+            //await splashImage.ScaleTo(3, 500, Easing.Linear);
             var bootstrapper = new AppBootstrapper();
             Application.Current.MainPage = new MasterView(bootstrapper.CreateMasterViewModel());
-
         }
     }
 }
