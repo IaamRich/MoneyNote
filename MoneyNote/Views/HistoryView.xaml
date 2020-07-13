@@ -7,15 +7,15 @@
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
     x:TypeArguments="local:HistoryViewModel">
     <ContentPage.Content>
-        <StackLayout Margin="10,0" Spacing="0">
+        <StackLayout
+            Margin="10,0"
+            Spacing="0"
+            VerticalOptions="FillAndExpand">
             <Label
                 FontSize="Title"
                 HorizontalOptions="Center"
                 Text="{Binding Strings[last_notes]}" />
-            <ListView
-                x:Name="historyListView"
-                BackgroundColor="Red"
-                HasUnevenRows="True">
+            <ListView x:Name="historyListView" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

@@ -33,10 +33,9 @@ namespace MoneyNote
         public App()
         {
             InitializeComponent();
-            var bootstrapper = new AppBootstrapper();
             MainPage = new NavigationPage(new SplashPage());
+            //var bootstrapper = new AppBootstrapper();
             //MainPage = new MasterView(bootstrapper.CreateMasterViewModel());
-
         }
         protected override void OnStart()
         {

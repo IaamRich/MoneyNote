@@ -12,22 +12,23 @@ namespace MoneyNote
     public partial class HistoryView : ReactiveContentPage<HistoryViewModel>
     {
         private SQLiteAsyncConnection _connection;
-        private ObservableCollection<Spend> _spendings;
+        private ObservableCollection<Spend> _spendings { get; set; }
         public HistoryView()
         {
             InitializeComponent();
             _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
-
         }
         protected override async void OnAppearing()
         {
+            base.OnAppearing();
+
             await _connection.CreateTableAsync<Spend>();
             var spendings = await _connection.Table<Spend>().ToListAsync();
             spendings.Reverse();
             _spendings = new ObservableCollection<Spend>(spendings);
             historyListView.ItemsSource = _spendings;
 
-            base.OnAppearing();
+
         }
 
     }

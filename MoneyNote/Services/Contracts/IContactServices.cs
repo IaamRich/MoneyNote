@@ -1,11 +1,19 @@
 ﻿using MoneyNote.Models;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MoneyNote.Services
 {
     public interface IContactServices
     {
         IEnumerable<Contact> GetAllContacts();
+
+        Task<IEnumerable<Contact>> GetContactsAsync();
+        Task<Contact> GetContact(int id);
+        Task AddContact(Contact contact);
+        Task UpdateContact(Contact contact);
+        Task DeleteContact(Contact contact);
+
     }
 
     public class StaticContactsService : IContactServices
@@ -22,9 +30,34 @@ namespace MoneyNote.Services
             new Contact{FullName = "GGGG7", Email = "gggg7@gmail.com", Phone="092236182"},
         };
 
+        public Task AddContact(Contact contact)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task DeleteContact(Contact contact)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public IEnumerable<Contact> GetAllContacts()
         {
             return _samples;
+        }
+
+        public Task<Contact> GetContact(int id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<IEnumerable<Contact>> GetContactsAsync()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task UpdateContact(Contact contact)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

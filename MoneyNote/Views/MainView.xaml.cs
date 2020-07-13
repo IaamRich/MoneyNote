@@ -32,18 +32,16 @@ namespace MoneyNote
         }
         protected override async void OnAppearing()
         {
+            // создание таблицы, если ее нет
+            //await App.Database.CreateTable();
+            // привязка данных
+            //spendingListView.ItemsSource = await App.Database.GetItemsAsync();
             await _connection.CreateTableAsync<Spend>();
-            await _connection.CreateTableAsync<AllMoney>();
-            var allmoney = await _connection.Table<AllMoney>().ToListAsync();
+
             var spendings = await _connection.Table<Spend>().ToListAsync();
             spendings.Reverse();
             _spendings = new ObservableCollection<Spend>(spendings);
-            _allMoney = new ObservableCollection<AllMoney>(allmoney);
             spendingListView.ItemsSource = _spendings;
-            foreach (var item in allmoney)
-            {
-                currentbill.Text = item.AllTimeOutlay.ToString();
-            }
 
             base.OnAppearing();
         }
@@ -74,20 +72,20 @@ namespace MoneyNote
                     };
                     await _connection.InsertAsync(spend);
                     _spendings.Insert(0, spend);
-                    _allMoney.Clear();
-                    var allmoney = await _connection.Table<AllMoney>().ToListAsync();
-                    foreach (var item in allmoney)
-                    {
-                        var sum = item.AllTimeOutlay + amount;
-                        item.AllTimeOutlay = sum;
-                        _allMoney.Add(item);
-                        currentbill.Text = sum.ToString();
-                    }
-                    foreach (var item in _allMoney)
-                    {
-                        allmoney.Add(item);
-                    }
-                    await _connection.InsertOrReplaceAsync(allMoney);
+                    //_allMoney.Clear();
+                    //var allmoney = await _connection.Table<AllMoney>().ToListAsync();
+                    //foreach (var item in allmoney)
+                    //{
+                    //    var sum = item.AllTimeOutlay + amount;
+                    //    item.AllTimeOutlay = sum;
+                    //    _allMoney.Add(item);
+                    //    currentbill.Text = sum.ToString();
+                    //}
+                    //foreach (var item in _allMoney)
+                    //{
+                    //    allmoney.Add(item);
+                    //}
+                    //await _connection.InsertOrReplaceAsync(allMoney);
 
                     entrySpend.Text = "";
                 }
