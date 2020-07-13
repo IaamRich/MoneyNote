@@ -103,7 +103,7 @@ namespace MoneyNote
 
         private async Task GetData()
         {
-            await App.Database.CreateTable();
+
             var result = await App.Database.GetItemAsync(0);
             MyCash = result.MyCahsMoney.ToString();
             MyCard = "9972599";

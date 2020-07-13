@@ -72,6 +72,12 @@ namespace MoneyNote
                     };
                     await _connection.InsertAsync(spend);
                     _spendings.Insert(0, spend);
+
+                    var result = await App.Database.GetItemAsync(0);
+                    result.MyCahsMoney -= amount;
+
+                    var hz = await App.Database.SaveItemAsync(result);
+                    await DisplayAlert("Changed", hz.ToString(), "Ok");
                     //_allMoney.Clear();
                     //var allmoney = await _connection.Table<AllMoney>().ToListAsync();
                     //foreach (var item in allmoney)

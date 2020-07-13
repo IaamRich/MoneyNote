@@ -33,6 +33,7 @@ namespace MoneyNote
         public App()
         {
             InitializeComponent();
+            _ = App.Database.CreateTable();
             MainPage = new NavigationPage(new SplashPage());
             //var bootstrapper = new AppBootstrapper();
             //MainPage = new MasterView(bootstrapper.CreateMasterViewModel());

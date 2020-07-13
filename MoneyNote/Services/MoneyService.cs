@@ -33,15 +33,21 @@ namespace MoneyNote.Services
         }
         public async Task<int> SaveItemAsync(AllMoney item)
         {
-            if (item.Id != 0)
-            {
-                await database.UpdateAsync(item);
-                return item.Id;
-            }
-            else
-            {
-                return await database.InsertAsync(item);
-            }
+            //if (item.Id != 0)
+            //{
+            await database.UpdateAsync(item);
+            return item.Id;
+            //}
+            //else
+            //{
+            //    return await database.InsertAsync(item);
+            //}
         }
+        //public async Task SaveItemAsync(AllMoney item)
+        //{
+
+        //    await database.UpdateAsync(item);
+
+        //}
     }
 }

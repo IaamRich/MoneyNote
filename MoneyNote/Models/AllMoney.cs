@@ -1,9 +1,11 @@
-﻿using System;
+﻿using SQLite;
+using System;
 
 namespace MoneyNote.Models
 {
     public class AllMoney
     {
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public decimal MyCahsMoney { get; set; }
         public decimal MyCardMoney { get; set; }
