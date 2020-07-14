@@ -1,13 +1,13 @@
-﻿using I18NPortable;
+﻿using System;
+using System.Diagnostics;
+using System.Reflection;
+using I18NPortable;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using MoneyNote.Persistence;
 using MoneyNote.Resources;
-using MoneyNote.Services;
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Reflection;
+using SQLite;
 using Xamarin.Forms;
 
 namespace MoneyNote
@@ -15,25 +15,41 @@ namespace MoneyNote
     public partial class App : Application
     {
         public const string DATABASE_NAME = "money.db";
-        public static MoneyService database;
+        //public static MoneyService database;
 
-        public static MoneyService Database
-        {
-            get
-            {
-                if (database == null)
-                {
-                    database = new MoneyService(
-                        Path.Combine(
-                            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DATABASE_NAME));
-                }
-                return database;
-            }
-        }
+        //public static MoneyService Database
+        //{
+        //    get
+        //    {
+        //        if (database == null)
+        //        {
+        //            database = new MoneyService(
+        //                Path.Combine(
+        //                    Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DATABASE_NAME));
+        //        }
+        //        return database;
+        //    }
+        //}
+        public static SQLiteAsyncConnection Connection;
+
+        //public static SQLiteAsyncConnection Database
+        //{
+        //    get
+        //    {
+        //        if (database == null)
+        //        {
+        //            database = new SQLiteAsyncConnection(
+        //                Path.Combine(
+        //                    Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DATABASE_NAME));
+        //        }
+        //        return database;
+        //    }
+        //}
         public App()
         {
             InitializeComponent();
-            _ = App.Database.CreateTable();
+            Connection = DependencyService.Get<ISQLiteDb>().GetConnection();
+            //_ = App.Database.CreateTable();
             MainPage = new NavigationPage(new SplashPage());
             //var bootstrapper = new AppBootstrapper();
             //MainPage = new MasterView(bootstrapper.CreateMasterViewModel());

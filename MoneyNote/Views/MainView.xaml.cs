@@ -1,10 +1,8 @@
-﻿using MoneyNote.Models;
-using MoneyNote.Persistence;
+﻿using System;
+using System.Collections.ObjectModel;
+using MoneyNote.Models;
 using ReactiveUI.XamForms;
 using SQLite;
-using System;
-using System.Collections.ObjectModel;
-using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace MoneyNote
@@ -16,11 +14,12 @@ namespace MoneyNote
         private ObservableCollection<Spend> _spendings;
         private ObservableCollection<AllMoney> _allMoney;
 
+
         public MainView()
         {
             InitializeComponent();
 
-            _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
+            //_connection = DependencyService.Get<ISQLiteDb>().GetConnection();
             //this.WhenActivated(
             //    disposables =>
             //    {
@@ -30,18 +29,18 @@ namespace MoneyNote
             //    });
 
         }
-        protected override async void OnAppearing()
+        protected override void OnAppearing()
         {
             // создание таблицы, если ее нет
             //await App.Database.CreateTable();
             // привязка данных
             //spendingListView.ItemsSource = await App.Database.GetItemsAsync();
-            await _connection.CreateTableAsync<Spend>();
+            //await _connection.CreateTableAsync<Spend>();
 
-            var spendings = await _connection.Table<Spend>().ToListAsync();
-            spendings.Reverse();
-            _spendings = new ObservableCollection<Spend>(spendings);
-            spendingListView.ItemsSource = _spendings;
+            //var spendings = await _connection.Table<Spend>().ToListAsync();
+            //spendings.Reverse();
+            //_spendings = new ObservableCollection<Spend>(spendings);
+            //spendingListView.ItemsSource = _spendings;
 
             base.OnAppearing();
         }
@@ -73,11 +72,15 @@ namespace MoneyNote
                     await _connection.InsertAsync(spend);
                     _spendings.Insert(0, spend);
 
-                    var result = await App.Database.GetItemAsync(0);
-                    result.MyCahsMoney -= amount;
+                    //var result = await App.Database.GetItemAsync(0);
+                    //result.MyCahsMoney -= amount;
 
-                    var hz = await App.Database.SaveItemAsync(result);
-                    await DisplayAlert("Changed", hz.ToString(), "Ok");
+                    //var hz = await App.Database.SaveItemAsync(result);
+                    //await DisplayAlert("Changed", hz.ToString(), "Ok");
+
+                    //====================================================
+
+
                     //_allMoney.Clear();
                     //var allmoney = await _connection.Table<AllMoney>().ToListAsync();
                     //foreach (var item in allmoney)

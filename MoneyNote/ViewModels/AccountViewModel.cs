@@ -1,9 +1,8 @@
-﻿using I18NPortable;
+﻿using System.Windows.Input;
+using I18NPortable;
 using MoneyNote.Models;
 using ReactiveUI;
 using Splat;
-using System.Threading.Tasks;
-using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace MoneyNote
@@ -32,7 +31,7 @@ namespace MoneyNote
             HostScreen = screen ?? Locator.Current.GetService<IScreen>();
             if (!string.IsNullOrEmpty(message)) ShowMessage(message);
 
-            _ = GetData();
+            GetData();
             MyCashCommand = ReactiveCommand.Create(async () =>
             {
                 string summ = await Application.Current.MainPage.DisplayPromptAsync("Change My Cash Manually:", "Be carrefull, this function will delete current cash record");
@@ -41,7 +40,7 @@ namespace MoneyNote
                     MyCash = summ;
 
                     var cash = new AllMoney { MyCahsMoney = System.Int32.Parse(summ) };
-                    await App.Database.SaveItemAsync(cash);
+                    //await App.Database. .SaveItemAsync(cash);
 
                 }
             });
@@ -101,11 +100,11 @@ namespace MoneyNote
             });
         }
 
-        private async Task GetData()
+        private void GetData()
         {
 
-            var result = await App.Database.GetItemAsync(0);
-            MyCash = result.MyCahsMoney.ToString();
+            //var result = await App.Database.GetItemAsync(0);
+            //MyCash = result.MyCahsMoney.ToString();
             MyCard = "9972599";
             MyCurrent = "9991629";
             MyIncome = "9998769";

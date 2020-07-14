@@ -83,7 +83,8 @@
                         <ListView
                             x:Name="spendingListView"
                             Margin="10,0"
-                            BackgroundColor="{StaticResource ListBackColor}">
+                            BackgroundColor="{StaticResource ListBackColor}"
+                            ItemsSource="{Binding SpendingList}">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>

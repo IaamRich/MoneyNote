@@ -1,8 +1,8 @@
-﻿using MoneyNote.Droid;
+﻿using System;
+using System.IO;
+using MoneyNote.Droid;
 using MoneyNote.Persistence;
 using SQLite;
-using System;
-using System.IO;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(SQLiteDb))]
@@ -23,19 +23,6 @@ namespace MoneyNote.Droid
                 var path = Path.Combine(documentsPath, "MySQLite.db3");
 
                 return new SQLiteAsyncConnection(path);
-                // ================================
-                // string documentsPath = System.Environment
-                //.GetFolderPath(System.Environment.SpecialFolder.Personal);
-                // var path =
-                // Path.Combine(documentsPath, Constants.csDataBaseName);
-                // var isShouldGenerateTables = false;
-                // if (!System.IO.File.Exists(path))
-                //     isShouldGenerateTables = true;
-                // var conn = new SQLite.SQLiteConnection(path);
-
-                // if (isShouldGenerateTables)
-                //     conn.CreateTable<InfoItem>();
-                // return conn;
             }
             catch (Exception ex)
             {
