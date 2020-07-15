@@ -1,14 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using MoneyNote.Models;
+using MoneyNote.Services.Contracts;
 
 namespace MoneyNote.Services
 {
-    public class SpendService
+    public class SpendService : ISpendService
     {
-        public async Task CreateTable()
+        public SpendService()
         {
-            await App.Database.CreateTableAsync<Spend>();
+            App.Database.CreateTableAsync<Spend>();
         }
         public async Task<List<Spend>> GetAll()
         {

@@ -1,6 +1,7 @@
 ﻿using System.Windows.Input;
 using I18NPortable;
 using MoneyNote.Models;
+using MoneyNote.Services;
 using ReactiveUI;
 using Splat;
 using Xamarin.Forms;
@@ -9,6 +10,8 @@ namespace MoneyNote
 {
     public class AccountViewModel : ReactiveObject, IRoutableViewModel
     {
+
+        private static MoneyService moneyService;
         public II18N Strings => I18N.Current;
         public string UrlPathSegment => Strings["menu_account"];
         public IScreen HostScreen { get; }
@@ -19,7 +22,7 @@ namespace MoneyNote
         public ICommand MyOutlayCommand { get; set; }
         public ICommand MySavingsCommand { get; set; }
         public ICommand MyAllSavingsCommand { get; set; }
-        public string MyCash { get; set; }
+        public decimal MyCash { get; set; }
         public string MyCard { get; set; }
         public string MyCurrent { get; set; }
         public string MyIncome { get; set; }
@@ -30,6 +33,7 @@ namespace MoneyNote
         {
             HostScreen = screen ?? Locator.Current.GetService<IScreen>();
             if (!string.IsNullOrEmpty(message)) ShowMessage(message);
+            moneyService = new MoneyService();
 
             GetData();
             MyCashCommand = ReactiveCommand.Create(async () =>
@@ -37,10 +41,9 @@ namespace MoneyNote
                 string summ = await Application.Current.MainPage.DisplayPromptAsync("Change My Cash Manually:", "Be carrefull, this function will delete current cash record");
                 if (!string.IsNullOrEmpty(summ))
                 {
-                    MyCash = summ;
+                    MyCash = decimal.Parse(summ);
 
                     var cash = new AllMoney { MyCahsMoney = System.Int32.Parse(summ) };
-                    //await App.Database. .SaveItemAsync(cash);
 
                 }
             });
@@ -102,9 +105,7 @@ namespace MoneyNote
 
         private void GetData()
         {
-
-            //var result = await App.Database.GetItemAsync(0);
-            //MyCash = result.MyCahsMoney.ToString();
+            MyCash = moneyService.GetCurrentBill().Result.MyCahsMoney;
             MyCard = "9972599";
             MyCurrent = "9991629";
             MyIncome = "9998769";

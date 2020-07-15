@@ -1,7 +1,13 @@
-﻿namespace MoneyNote.Services.Contracts
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using MoneyNote.Models;
+
+namespace MoneyNote.Services.Contracts
 {
     public interface ISpendService
     {
+        Task<List<Spend>> GetAll();
+        Task<int> SaveItemAsync(Spend item);
         //IEnumerable<Contact> GetAllContacts();
 
         //Task<IEnumerable<Contact>> GetContactsAsync();

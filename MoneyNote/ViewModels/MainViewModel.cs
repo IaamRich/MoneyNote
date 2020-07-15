@@ -21,11 +21,14 @@ namespace MoneyNote
         public ReactiveCommand<Unit, Unit> AddSpend { get; set; }
         public ReactiveCommand<Unit, Unit> DeleteSpend { get; set; }
         public ReactiveCommand<Unit, Unit> UpdateSpend { get; set; }
+        public ReactiveCommand<Unit, Unit> AddSalary { get; set; }
         //Used Services
         private static SpendService spendService;
+        private static MoneyService moneyService;
         //UI variables
         private string SpendDescription { get; set; }
-        public int SpendValue { get; set; }
+        public string SpendValue { get; set; }
+        public decimal CurrentBill { get; set; }
         //List Variables
         private SourceList<Spend> _spends = new SourceList<Spend>();
         private ReadOnlyObservableCollection<Spend> _spendingList;
@@ -37,6 +40,7 @@ namespace MoneyNote
         public MainViewModel(IScreen hostScreen = null)
         {
             spendService = new SpendService();
+            moneyService = new MoneyService();
             //Filling MainPage List
             GetData();
             HostScreen = hostScreen ?? Locator.Current.GetService<IScreen>();
@@ -45,6 +49,8 @@ namespace MoneyNote
                 () => HostScreen.Router.Navigate.Execute(new DummyViewModel()).Select(_ => Unit.Default));
             //Reactive Command
             AddSpend = ReactiveCommand.Create(() => { OnAdd(); });
+            //Add Salary Command
+            AddSalary = ReactiveCommand.Create(() => { OnAddSalary(); });
         }
         private async void GetData()
         {
@@ -55,9 +61,10 @@ namespace MoneyNote
                 data.Reverse();
                 _spends.AddRange(data);
                 _spends.Connect().Bind(out _spendingList).Subscribe();
+                CurrentBill = moneyService.GetCurrentBill().Result.MyCahsMoney;
             });
         }
-        public async void OnAdd()
+        private async void OnAdd()
         {
             try
             {
@@ -65,14 +72,16 @@ namespace MoneyNote
 
                 Spend item = new Spend
                 {
-                    Amount = SpendValue,
-                    WhereText = SpendDescription
+                    Amount = int.Parse(SpendValue),
+                    WhereText = SpendDescription,
+                    TransactionDate = DateTime.Now
                 };
                 await Task.Run(async () =>
                 {
                     await spendService.SaveItemAsync(item);
+                    await moneyService.UpdateAllMoneyAsync(new AllMoney { MyCahsMoney = CurrentBill - item.Amount });
                     _spends.Clear();
-
+                    SpendValue = "";
                     GetData();
                 });
             }
@@ -80,6 +89,15 @@ namespace MoneyNote
             {
                 Console.WriteLine("========== ERRORHERE =============:" + ex + "=========== ENDERROR==================");
             }
+        }
+        private async void OnAddSalary()
+        {
+            CurrentBill = decimal.Parse(await App.Current.MainPage.DisplayPromptAsync("Write description:", "You can skip this..."));
+            AllMoney item = new AllMoney
+            {
+                MyCahsMoney = CurrentBill
+            };
+            await moneyService.UpdateAllMoneyAsync(item);
         }
     }
 }

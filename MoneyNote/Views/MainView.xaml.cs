@@ -9,7 +9,6 @@ namespace MoneyNote
         public MainView()
         {
             InitializeComponent();
-            //ViewModel = new MainViewModel();
         }
         protected override void OnAppearing()
         {
