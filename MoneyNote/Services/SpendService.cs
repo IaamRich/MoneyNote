@@ -8,11 +8,23 @@ namespace MoneyNote.Services
     {
         public async Task CreateTable()
         {
-            await App.Connection.CreateTableAsync<Spend>();
+            await App.Database.CreateTableAsync<Spend>();
         }
         public async Task<List<Spend>> GetAll()
         {
-            return await App.Connection.Table<Spend>().ToListAsync().ConfigureAwait(false);
+            return await App.Database.Table<Spend>().ToListAsync().ConfigureAwait(false);
+        }
+        public async Task<int> SaveItemAsync(Spend item)
+        {
+            if (item.Id != 0)
+            {
+                await App.Database.UpdateAsync(item);
+                return item.Id;
+            }
+            else
+            {
+                return await App.Database.InsertAsync(item);
+            }
         }
         //public async Task<List<AllMoney>> GetItemsAsync()
         //{
@@ -27,17 +39,6 @@ namespace MoneyNote.Services
         //{
         //    return await database.DeleteAsync(item);
         //}
-        //public async Task<int> SaveItemAsync(AllMoney item)
-        //{
-        //    //if (item.Id != 0)
-        //    //{
-        //    await database.UpdateAsync(item);
-        //    return item.Id;
-        //    //}
-        //    //else
-        //    //{
-        //    //    return await database.InsertAsync(item);
-        //    //}
-        //}
+
     }
 }

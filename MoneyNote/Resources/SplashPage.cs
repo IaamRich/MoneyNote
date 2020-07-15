@@ -24,7 +24,7 @@ namespace MoneyNote.Resources
             this.BackgroundColor = Color.FromHex("#bedb39");
             this.Content = sub;
         }
-        protected override async void OnAppearing()
+        protected override void OnAppearing()
         {
             base.OnAppearing();
 

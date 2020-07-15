@@ -14,42 +14,12 @@ namespace MoneyNote
 {
     public partial class App : Application
     {
-        public const string DATABASE_NAME = "money.db";
-        //public static MoneyService database;
+        public static SQLiteAsyncConnection Database;
 
-        //public static MoneyService Database
-        //{
-        //    get
-        //    {
-        //        if (database == null)
-        //        {
-        //            database = new MoneyService(
-        //                Path.Combine(
-        //                    Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DATABASE_NAME));
-        //        }
-        //        return database;
-        //    }
-        //}
-        public static SQLiteAsyncConnection Connection;
-
-        //public static SQLiteAsyncConnection Database
-        //{
-        //    get
-        //    {
-        //        if (database == null)
-        //        {
-        //            database = new SQLiteAsyncConnection(
-        //                Path.Combine(
-        //                    Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DATABASE_NAME));
-        //        }
-        //        return database;
-        //    }
-        //}
         public App()
         {
             InitializeComponent();
-            Connection = DependencyService.Get<ISQLiteDb>().GetConnection();
-            //_ = App.Database.CreateTable();
+            Database = DependencyService.Get<ISQLiteDb>().GetConnection();
             MainPage = new NavigationPage(new SplashPage());
             //var bootstrapper = new AppBootstrapper();
             //MainPage = new MasterView(bootstrapper.CreateMasterViewModel());

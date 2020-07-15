@@ -51,24 +51,25 @@
                                 x:Name="entrySpend"
                                 FontSize="Medium"
                                 Keyboard="Numeric"
-                                Placeholder="{Binding Strings[amount]}" />
+                                Placeholder="{Binding Strings[amount]}"
+                                Text="{Binding SpendValue}" />
                         </Frame>
                         <StackLayout Orientation="Horizontal">
                             <Button
                                 BackgroundColor="{StaticResource MainGreen}"
-                                Clicked="OnDelete"
+                                Command="{Binding DeleteSpend}"
                                 CornerRadius="10"
                                 Text="{Binding Strings[delete]}"
                                 TextColor="White" />
                             <Button
                                 BackgroundColor="{StaticResource MainGreen}"
-                                Clicked="OnUpdate"
+                                Command="{Binding UpdateSpend}"
                                 CornerRadius="10"
                                 Text="{Binding Strings[update]}"
                                 TextColor="White" />
                             <Button
                                 BackgroundColor="{StaticResource MainGreen}"
-                                Clicked="OnAdd"
+                                Command="{Binding AddSpend}"
                                 CornerRadius="10"
                                 HorizontalOptions="FillAndExpand"
                                 Text="{Binding Strings[commit]}"

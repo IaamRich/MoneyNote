@@ -1,11 +1,10 @@
-﻿using I18NPortable;
+﻿using System.Collections.ObjectModel;
+using System.Windows.Input;
+using I18NPortable;
 using MoneyNote.Models;
 using MoneyNote.Resources.Images;
 using ReactiveUI;
 using Splat;
-using System.Collections.ObjectModel;
-using System.Threading.Tasks;
-using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace MoneyNote
@@ -20,7 +19,7 @@ namespace MoneyNote
         {
             HostScreen = screen ?? Locator.Current.GetService<IScreen>();
             LanguageImage = ImageSource.FromResource(ImageResources.english_language);
-            _ = GetLanguages();
+            GetLanguages();
             ResetAll = ReactiveCommand.Create(() =>
             {
                 ResetAllMethod();
@@ -49,7 +48,7 @@ namespace MoneyNote
             Application.Current.MainPage.DisplayAlert("Method", "ResetAll is done", "Cancel", "ok");
         }
 
-        private async Task GetLanguages()
+        private void GetLanguages()
         {
             LanguagesList = new ObservableCollection<Language>()
             {
@@ -64,7 +63,7 @@ namespace MoneyNote
         }
 
 
-        private async void ImageCommandFunc(object sender)
+        private void ImageCommandFunc(object sender)
         {
             switch ((int)sender)
             {
