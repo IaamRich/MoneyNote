@@ -3,6 +3,7 @@ using System.Windows.Input;
 using I18NPortable;
 using MoneyNote.Models;
 using MoneyNote.Resources.Images;
+using MoneyNote.Services;
 using ReactiveUI;
 using Splat;
 using Xamarin.Forms;
@@ -11,15 +12,31 @@ namespace MoneyNote
 {
     public class SettingsViewModel : ReactiveObject, IRoutableViewModel
     {
-        //private ObservableAsPropertyHelper<char> _currentLetter;
+        //Used Services
+        private static MoneyService moneyService;
+        private static SpendService spendService;
+        //Language List
         public ObservableCollection<Language> LanguagesList { get; set; }
         public ImageSource LanguageImage { get; set; }
+        //Commands
+        public ICommand ResetAll { get; set; }
+        public ICommand ImageCommand { get; set; }
+        public ICommand GoAccount { get; }
+        public ICommand OffAds { get; set; }
+        //Variables for normal functionality of the page
         public II18N Strings => I18N.Current;
+        public string UrlPathSegment => Strings["menu_settings"];
+        public IScreen HostScreen { get; }
         public SettingsViewModel(IScreen screen = null)
         {
+            //main
             HostScreen = screen ?? Locator.Current.GetService<IScreen>();
+            spendService = new SpendService();
+            moneyService = new MoneyService();
+            //get language
             LanguageImage = ImageSource.FromResource(ImageResources.english_language);
             GetLanguages();
+            //commands
             ResetAll = ReactiveCommand.Create(() =>
             {
                 ResetAllMethod();
@@ -33,21 +50,13 @@ namespace MoneyNote
             {
                 return HostScreen.Router.Navigate.Execute(new AccountViewModel("From Settings"));
             });
-
         }
-
-        public string UrlPathSegment => Strings["menu_settings"];
-        public ICommand ResetAll { get; set; }
-        public ICommand ImageCommand { get; set; }
-        public ICommand GoAccount { get; }
-        public ICommand OffAds { get; set; }
-        public IScreen HostScreen { get; }
-
-        private void ResetAllMethod()
+        private async void ResetAllMethod()
         {
-            Application.Current.MainPage.DisplayAlert("Method", "ResetAll is done", "Cancel", "ok");
+            await moneyService.DeleteIAll();
+            await spendService.DeleteIAll();
+            await Application.Current.MainPage.DisplayAlert("Method", "ResetAll is done", "Cancel", "ok");
         }
-
         private void GetLanguages()
         {
             LanguagesList = new ObservableCollection<Language>()
@@ -61,8 +70,6 @@ namespace MoneyNote
                 new Language { Id = 6, Sign = "zh-CN", Name = "Chinese", Image = "zh.png" }
             };
         }
-
-
         private void ImageCommandFunc(object sender)
         {
             switch ((int)sender)

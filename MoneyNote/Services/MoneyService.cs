@@ -15,9 +15,11 @@ namespace MoneyNote.Services
         }
         public async Task UpdateAllMoneyAsync(AllMoney item)
         {
-            // var result = 
             await App.Database.UpdateAsync(item);
-            //return result;
+        }
+        public async Task DeleteIAll()
+        {
+            await App.Database.DeleteAsync(new AllMoney());
         }
         //SQLiteAsyncConnection database;
 
@@ -39,10 +41,7 @@ namespace MoneyNote.Services
         //{
         //    return await database.GetAsync<AllMoney>(id);
         //}
-        //public async Task<int> DeleteItemAsync(AllMoney item)
-        //{
-        //    return await database.DeleteAsync(item);
-        //}
+
         //public async Task<int> SaveItemAsync(AllMoney item)
         //{
         //    //if (item.Id != 0)

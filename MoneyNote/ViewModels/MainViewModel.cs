@@ -92,7 +92,8 @@ namespace MoneyNote
         }
         private async void OnAddSalary()
         {
-            CurrentBill = decimal.Parse(await App.Current.MainPage.DisplayPromptAsync("Write description:", "You can skip this..."));
+            var Amount = decimal.Parse(await App.Current.MainPage.DisplayPromptAsync("Write description:", "You can skip this..."));
+            CurrentBill += Amount;
             AllMoney item = new AllMoney
             {
                 MyCahsMoney = CurrentBill

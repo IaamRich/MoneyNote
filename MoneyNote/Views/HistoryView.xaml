@@ -15,7 +15,7 @@
                 FontSize="Title"
                 HorizontalOptions="Center"
                 Text="{Binding Strings[last_notes]}" />
-            <ListView x:Name="historyListView" HasUnevenRows="True">
+            <ListView x:Name="historyListView" ItemsSource="{Binding SpendingList}" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

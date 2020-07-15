@@ -27,6 +27,10 @@ namespace MoneyNote.Services
                 return await App.Database.InsertAsync(item);
             }
         }
+        public async Task DeleteIAll()
+        {
+            await App.Database.DeleteAsync(new Spend());
+        }
         //public async Task<List<AllMoney>> GetItemsAsync()
         //{
         //    return await database.Table<AllMoney>().ToListAsync();
@@ -36,10 +40,7 @@ namespace MoneyNote.Services
         //{
         //    return await database.GetAsync<AllMoney>(id);
         //}
-        //public async Task<int> DeleteItemAsync(AllMoney item)
-        //{
-        //    return await database.DeleteAsync(item);
-        //}
+
 
     }
 }

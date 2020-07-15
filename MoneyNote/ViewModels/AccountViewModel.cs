@@ -44,7 +44,7 @@ namespace MoneyNote
                     MyCash = decimal.Parse(summ);
 
                     var cash = new AllMoney { MyCahsMoney = System.Int32.Parse(summ) };
-
+                    moneyService.UpdateAllMoneyAsync(cash);
                 }
             });
             MyCardCommand = ReactiveCommand.Create(async () =>
