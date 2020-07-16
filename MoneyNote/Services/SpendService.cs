@@ -29,7 +29,7 @@ namespace MoneyNote.Services
         }
         public async Task DeleteIAll()
         {
-            await App.Database.DeleteAsync(new Spend());
+            await App.Database.DeleteAllAsync<Spend>();
         }
         //public async Task<List<AllMoney>> GetItemsAsync()
         //{

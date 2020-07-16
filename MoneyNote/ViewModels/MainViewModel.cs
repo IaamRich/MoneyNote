@@ -52,17 +52,18 @@ namespace MoneyNote
             //Add Salary Command
             AddSalary = ReactiveCommand.Create(() => { OnAddSalary(); });
         }
-        private async void GetData()
+        private void GetData()
         {
             List<Spend> data = new List<Spend>();
-            await Task.Run(() =>
-            {
-                data = spendService.GetAll().Result;
-                data.Reverse();
-                _spends.AddRange(data);
-                _spends.Connect().Bind(out _spendingList).Subscribe();
-                CurrentBill = moneyService.GetCurrentBill().Result.MyCahsMoney;
-            });
+            //await Task.Run(() =>
+            //{
+            data = spendService.GetAll().Result;
+            data.Reverse();
+            _spends.AddRange(data);
+            _spends.Connect().Bind(out _spendingList).Subscribe();
+            var bill = moneyService.GetCurrentBill().Result?.MyCahsMoney;
+            CurrentBill = (decimal)(bill == null ? 0 : bill);
+            //});
         }
         private async void OnAdd()
         {

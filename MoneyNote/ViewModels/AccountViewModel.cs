@@ -44,7 +44,7 @@ namespace MoneyNote
                     MyCash = decimal.Parse(summ);
 
                     var cash = new AllMoney { MyCahsMoney = System.Int32.Parse(summ) };
-                    moneyService.UpdateAllMoneyAsync(cash);
+                    await moneyService.UpdateAllMoneyAsync(cash);
                 }
             });
             MyCardCommand = ReactiveCommand.Create(async () =>
@@ -105,7 +105,8 @@ namespace MoneyNote
 
         private void GetData()
         {
-            MyCash = moneyService.GetCurrentBill().Result.MyCahsMoney;
+            decimal? myCash = moneyService.GetCurrentBill().Result.MyCahsMoney;
+            MyCash = (decimal)(myCash == null ? 0 : myCash);
             MyCard = "9972599";
             MyCurrent = "9991629";
             MyIncome = "9998769";

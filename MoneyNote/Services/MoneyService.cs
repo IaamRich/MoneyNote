@@ -11,7 +11,8 @@ namespace MoneyNote.Services
         }
         public async Task<AllMoney> GetCurrentBill()
         {
-            return await App.Database.Table<AllMoney>().FirstOrDefaultAsync().ConfigureAwait(false);//.ToListAsync().ConfigureAwait(false);
+            var result = await App.Database.Table<AllMoney>().FirstOrDefaultAsync().ConfigureAwait(false);//.ToListAsync().ConfigureAwait(false);
+            return result;
         }
         public async Task UpdateAllMoneyAsync(AllMoney item)
         {
@@ -19,7 +20,7 @@ namespace MoneyNote.Services
         }
         public async Task DeleteIAll()
         {
-            await App.Database.DeleteAsync(new AllMoney());
+            await App.Database.DeleteAllAsync<AllMoney>();
         }
         //SQLiteAsyncConnection database;
 
