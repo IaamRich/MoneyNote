@@ -13,7 +13,8 @@ namespace MoneyNote.Services
         }
         public async Task<List<Spend>> GetAll()
         {
-            return await App.Database.Table<Spend>().ToListAsync().ConfigureAwait(false);
+            var result = await App.Database.Table<Spend>().ToListAsync().ConfigureAwait(false);
+            return result;
         }
         public async Task<int> SaveItemAsync(Spend item)
         {

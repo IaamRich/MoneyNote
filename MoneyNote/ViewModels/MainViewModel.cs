@@ -61,8 +61,7 @@ namespace MoneyNote
             data.Reverse();
             _spends.AddRange(data);
             _spends.Connect().Bind(out _spendingList).Subscribe();
-            var bill = moneyService.GetCurrentBill().Result?.MyCahsMoney;
-            CurrentBill = (decimal)(bill == null ? 0 : bill);
+            CurrentBill = moneyService.GetCurrentBill().Result.MyCahsMoney;
             //});
         }
         private async void OnAdd()

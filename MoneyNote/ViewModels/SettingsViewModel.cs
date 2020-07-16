@@ -54,7 +54,7 @@ namespace MoneyNote
         private async void ResetAllMethod()
         {
             await moneyService.DeleteIAll();
-            await spendService.DeleteIAll();
+            //await spendService.DeleteIAll();
             await Application.Current.MainPage.DisplayAlert("Method", "ResetAll is done", "Cancel", "ok");
         }
         private void GetLanguages()

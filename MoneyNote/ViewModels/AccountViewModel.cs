@@ -105,7 +105,7 @@ namespace MoneyNote
 
         private void GetData()
         {
-            decimal? myCash = moneyService.GetCurrentBill().Result.MyCahsMoney;
+            var myCash = moneyService.GetCurrentBill().Result?.MyCahsMoney;
             MyCash = (decimal)(myCash == null ? 0 : myCash);
             MyCard = "9972599";
             MyCurrent = "9991629";

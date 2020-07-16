@@ -11,8 +11,13 @@ namespace MoneyNote.Services
         }
         public async Task<AllMoney> GetCurrentBill()
         {
-            var result = await App.Database.Table<AllMoney>().FirstOrDefaultAsync().ConfigureAwait(false);//.ToListAsync().ConfigureAwait(false);
-            return result;
+            var table = await App.Database.Table<AllMoney>().FirstOrDefaultAsync().ConfigureAwait(false);//.ToListAsync().ConfigureAwait(false);
+            var result = new AllMoney();
+            if (table == null)
+            {
+                return result;
+            }
+            else return await App.Database.GetAsync<AllMoney>(0);
         }
         public async Task UpdateAllMoneyAsync(AllMoney item)
         {
