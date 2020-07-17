@@ -7,6 +7,7 @@ namespace MoneyNote.Models
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
+        [MaxLength(7)]
         public decimal MyCahsMoney { get; set; }
         public decimal MyCardMoney { get; set; }
         public decimal AllTimeOutlay { get; set; }
