@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reactive;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using DynamicData;
 using I18NPortable;
 using MoneyNote.Models;
@@ -17,11 +18,11 @@ namespace MoneyNote
     public class MainViewModel : ReactiveObject, IRoutableViewModel
     {
         //Commands
-        public ReactiveCommand<Unit, Unit> NavigateToDummyPage { get; set; }
-        public ReactiveCommand<Unit, Unit> AddSpend { get; set; }
-        public ReactiveCommand<Unit, Unit> DeleteSpend { get; set; }
-        public ReactiveCommand<Unit, Unit> UpdateSpend { get; set; }
-        public ReactiveCommand<Unit, Unit> AddSalary { get; set; }
+        public ICommand NavigateToDummyPage { get; set; }
+        public ICommand AddSpend { get; set; }
+        public ICommand DeleteSpend { get; set; }
+        public ICommand UpdateSpend { get; set; }
+        public ICommand AddSalary { get; set; }
         //Used Services
         private static SpendService spendService;
         private static MoneyService moneyService;

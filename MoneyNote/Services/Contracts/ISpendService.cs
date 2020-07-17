@@ -8,7 +8,7 @@ namespace MoneyNote.Services.Contracts
     {
         Task<List<Spend>> GetAll();
         Task<int> SaveItemAsync(Spend item);
-        Task DeleteIAll();
+        Task DeleteAll();
         //IEnumerable<Contact> GetAllContacts();
 
         //Task<IEnumerable<Contact>> GetContactsAsync();

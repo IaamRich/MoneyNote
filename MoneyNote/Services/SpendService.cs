@@ -28,7 +28,7 @@ namespace MoneyNote.Services
                 return await App.Database.InsertAsync(item);
             }
         }
-        public async Task DeleteIAll()
+        public async Task DeleteAll()
         {
             await App.Database.DeleteAllAsync<Spend>();
         }
