@@ -8,7 +8,7 @@
     <Color x:Key="ButtonText">#ffffff</Color>
     <Color x:Key="MainGreen">#738d72</Color>
     <Color x:Key="AboutBackGround">#dbd6c3</Color>
-    <Color x:Key="ListBackColor">#dbd6c3</Color>
+    <Color x:Key="ListBackColor">#e8e8e0</Color>
     <Color x:Key="BoldLabel">#000000</Color>
     <Color x:Key="Links">#00a8d5</Color>
 

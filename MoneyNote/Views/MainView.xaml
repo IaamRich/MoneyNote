@@ -13,12 +13,15 @@
             Text="+" />
     </ContentPage.ToolbarItems>
     <StackLayout Margin="0" Spacing="0">
-        <Grid>
+        <Grid Margin="10,5,10,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <Label HorizontalOptions="Center" Text="{Binding Strings[app_name]}" />
+            <Label
+                FontSize="Title"
+                HorizontalOptions="Center"
+                Text="{Binding Strings[app_name]}" />
             <Image
                 Margin="0,30,0,0"
                 Aspect="AspectFit"
@@ -26,20 +29,30 @@
                 Source="logo.png"
                 VerticalOptions="Start" />
         </Grid>
-        <StackLayout>
-            <StackLayout Grid.Column="0" Orientation="Horizontal">
-                <Label Text="{Binding Strings[current]}" />
-                <Label Text="{Binding CurrentBill}" />
+        <StackLayout Margin="10,5,10,0" Orientation="Horizontal">
+            <StackLayout Grid.Column="0" Orientation="Vertical">
+                <Label Text="{Binding Strings[current_cash]}" />
+                <Label Text="{Binding CurrentCash}" />
             </StackLayout>
             <StackLayout
                 Grid.Column="1"
-                HorizontalOptions="End"
-                Orientation="Horizontal">
-                <Label HorizontalOptions="EndAndExpand" Text="{Binding Strings[saving]}" />
-                <Label HorizontalOptions="EndAndExpand" Text="999999" />
+                HorizontalOptions="EndAndExpand"
+                Orientation="Vertical">
+                <Label HorizontalOptions="EndAndExpand" Text="{Binding Strings[current_card]}" />
+                <Label HorizontalOptions="EndAndExpand" Text="{Binding CurrentCard}" />
             </StackLayout>
         </StackLayout>
-
+        <StackLayout
+            Grid.Column="1"
+            HorizontalOptions="Center"
+            Orientation="Vertical">
+            <Label HorizontalOptions="Center" Text="{Binding Strings[current]}" />
+            <Label
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="{Binding CurrentBill}"
+                TextColor="{StaticResource MainGreen}" />
+        </StackLayout>
 
 
 
@@ -47,20 +60,16 @@
         <StackLayout VerticalOptions="CenterAndExpand">
             <Frame Margin="10,0">
                 <StackLayout>
-                    <Label
-                        FontSize="Title"
-                        HorizontalOptions="Center"
-                        Text="{Binding Strings[enter_spent_amount]}" />
                     <Frame>
                         <Entry
                             x:Name="entrySpend"
                             FontSize="Medium"
                             Keyboard="Numeric"
-                            Placeholder="{Binding Strings[amount]}"
+                            Placeholder="{Binding Strings[enter_spent_amount]}"
                             Text="{Binding SpendValue}" />
                     </Frame>
                     <StackLayout Orientation="Horizontal">
-                        <Button
+                        <!--<Button
                             BackgroundColor="{StaticResource MainGreen}"
                             Command="{Binding DeleteSpend}"
                             CornerRadius="10"
@@ -71,7 +80,7 @@
                             Command="{Binding UpdateSpend}"
                             CornerRadius="10"
                             Text="{Binding Strings[update]}"
-                            TextColor="White" />
+                            TextColor="White" />-->
                         <Button
                             BackgroundColor="{StaticResource MainGreen}"
                             Command="{Binding AddSpend}"

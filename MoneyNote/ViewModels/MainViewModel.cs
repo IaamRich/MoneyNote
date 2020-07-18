@@ -30,6 +30,8 @@ namespace MoneyNote
         private string SpendDescription { get; set; }
         public string SpendValue { get; set; }
         public decimal CurrentBill { get; set; }
+        public decimal CurrentCash { get; set; }
+        public decimal CurrentCard { get; set; }
         //List Variables
         private SourceList<Spend> _spends = new SourceList<Spend>();
         private ReadOnlyObservableCollection<Spend> _spendingList;
@@ -63,6 +65,8 @@ namespace MoneyNote
             _spends.AddRange(data);
             _spends.Connect().Bind(out _spendingList).Subscribe();
             CurrentBill = moneyService.GetCurrentBill().Result.MyCahsMoney;
+            CurrentCard = 99934573;
+            CurrentCash = 3526162;
             //});
         }
         private async void OnAdd()

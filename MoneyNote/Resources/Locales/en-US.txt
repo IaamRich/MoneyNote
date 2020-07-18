@@ -1,7 +1,8 @@
 ﻿/* Main Page */
 main_title = Main
-current = Current bill
-saving = Saving:
+current_cash = My Cash:
+current_card = My Card:
+current = Current bill:
 enter_spent_amount = Enter spent amount:
 last_spent_money = Last spent money:
 
