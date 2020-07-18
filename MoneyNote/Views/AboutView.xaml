@@ -57,9 +57,9 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="{Binding Strings[images_by]}" />
+                                <Span Text="{Binding Strings[thanks_by]}" />
                                 <Span Text=" " />
-                                <Span FontAttributes="Bold" Text="{Binding Strings[imaginator_name]}" />
+                                <Span FontAttributes="Bold" Text="{Binding Strings[thankful_name]}" />
                                 <Span Text="." />
                             </FormattedString.Spans>
                         </FormattedString>
@@ -75,6 +75,20 @@
                             </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="{Binding Strings[environment]}" />
+                                <Span Text=" " />
+                                <Span Text="{Binding Strings[company_name]}" TextColor="{StaticResource Links}" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding VisitCompanySite}" />
+                    </Label.GestureRecognizers>
                 </Label>
                 <Button
                     Margin="0,10,0,0"

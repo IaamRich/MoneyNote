@@ -35,8 +35,8 @@ terms_text = 1. This page (together with the documents referred to on it) tells 
 /* About Page */
 creator_name = Vladimir Curaciov
 supporter_name = Feodor Songurov
-imaginator_name = Alexandr Sergeevich
-images_by = Images by:
+thankful_name = Alexandr Turcan
+thanks_by = Thanks by:
 created_by = Created by:
 supported_by = Supported by:
 about_platforms = Platforms available:
@@ -44,11 +44,13 @@ platforms_available = iOS, Android.
 learn_more = Learn more
 about_footer = © Sapec Software. All Rights Reserved. 2020
 about_version = 1.0
+environment = Environment by: 
+company_name = Sapec Software
 
 /* Common */
 master = Master
-app_name_camel = MoneyNote
-app_name = Money Note
+app_name_camel = MoneyNotique
+app_name = MoneyNotique
 delete = Delete
 save = Save
 cancel = Cancel
