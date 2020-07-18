@@ -8,6 +8,11 @@
     x:TypeArguments="local:TermsViewModel">
     <ScrollView Margin="0,0,0,5">
         <StackLayout>
+            <Label
+                Margin="5,30"
+                FontSize="Title"
+                HorizontalOptions="Center"
+                Text="{Binding Strings[terms_main]}" />
             <Frame>
                 <StackLayout>
                     <Label FontAttributes="Bold" Text="Term 1" />

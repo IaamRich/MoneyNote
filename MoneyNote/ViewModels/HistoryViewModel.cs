@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using DynamicData;
 using I18NPortable;
 using MoneyNote.Models;
@@ -22,6 +23,12 @@ namespace MoneyNote
         private SourceList<Spend> _spends = new SourceList<Spend>();
         private ReadOnlyObservableCollection<Spend> _spendingList;
         public ReadOnlyObservableCollection<Spend> SpendingList => _spendingList;
+        //Commands
+        public ICommand ChangeNotes { get; set; }
+        public bool IsChangeNotesVisible { get; set; }
+        public ICommand ChangeNotesView { get; set; }
+        public bool IsChangeNotesViewVisible { get; set; }
+
         public HistoryViewModel()
         {
             spendService = new SpendService();
@@ -37,6 +44,8 @@ namespace MoneyNote
                 _spends.AddRange(data);
                 _spends.Connect().Bind(out _spendingList).Subscribe();
             });
+            ChangeNotes = ReactiveCommand.Create(() => { IsChangeNotesVisible = !IsChangeNotesVisible; });
+            ChangeNotesView = ReactiveCommand.Create(() => { IsChangeNotesViewVisible = !IsChangeNotesViewVisible; });
         }
     }
 }

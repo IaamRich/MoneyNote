@@ -18,6 +18,10 @@ month_saving = This month savings:
 all_saving = All time savings:
 
 /* History Page */
+all = All
+income = Income
+outlay = Outlay
+history_savings = Savings
 last_notes = Last Notes:
 history_spent = Spent:
 history_description = Description:
@@ -31,6 +35,7 @@ set_every_places = Set each Money Notes
 dis_add = Turn off Ads
 
 /* Terms Page */
+terms_main = MoneyNotique's Terms
 terms_text = 1. This page (together with the documents referred to on it) tells you the terms of use (the 'Terms of Use') on which you may make use of our 'goop city guides' application for mobile devices (the 'App'). Please read these Terms of Use carefully before you download, install or use the App. By downloading, installing or using the App, you indicate that you accept these Terms of Use and that you agree to abide by them. Your download, installation or use of the App constitutes your acceptance of these Terms of Use which takes effect on the date on which you download, install or use the App. If you do not agree with these Terms of Use, you should cease downloading, installing or using the App immediately.
 
 /* About Page */

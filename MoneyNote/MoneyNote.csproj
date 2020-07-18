@@ -99,4 +99,8 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\AdditionalViews\" />
+  </ItemGroup>
 </Project>
