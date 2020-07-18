@@ -26,11 +26,13 @@ namespace MoneyNote
         //Commands
         public ICommand ChangeNotes { get; set; }
         public bool IsChangeNotesVisible { get; set; }
-        public ICommand ChangeNotesView { get; set; }
-        public bool IsChangeNotesViewVisible { get; set; }
+        public ICommand ChangeNotesLook { get; set; }
+        public bool IsChangeNotesLookVisible { get; set; }
 
         public HistoryViewModel()
         {
+            IsChangeNotesVisible = false;
+            IsChangeNotesLookVisible = false;
             spendService = new SpendService();
             GetData();
         }
@@ -44,8 +46,11 @@ namespace MoneyNote
                 _spends.AddRange(data);
                 _spends.Connect().Bind(out _spendingList).Subscribe();
             });
-            ChangeNotes = ReactiveCommand.Create(() => { IsChangeNotesVisible = !IsChangeNotesVisible; });
-            ChangeNotesView = ReactiveCommand.Create(() => { IsChangeNotesViewVisible = !IsChangeNotesViewVisible; });
+            ChangeNotes = ReactiveCommand.Create(() =>
+            {
+                IsChangeNotesVisible = !IsChangeNotesVisible; IsChangeNotesLookVisible = false;
+            });
+            ChangeNotesLook = ReactiveCommand.Create(() => { IsChangeNotesLookVisible = !IsChangeNotesLookVisible; IsChangeNotesVisible = false; });
         }
     }
 }

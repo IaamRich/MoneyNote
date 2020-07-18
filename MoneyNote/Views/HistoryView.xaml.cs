@@ -15,9 +15,6 @@ namespace MoneyNote
             base.OnAppearing();
         }
 
-        private void TapGestureRecognizer_Tapped(object sender, System.EventArgs e)
-        {
-            changeNotes.IsVisible = false;
-        }
+
     }
 }
