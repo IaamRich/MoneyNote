@@ -6,7 +6,7 @@ using Xamarin.Forms.Platform.Android;
 
 namespace MoneyNote.Droid
 {
-    [Activity(Label = "MoneyNote",
+    [Activity(Label = "MoneyNotique",
         Icon = "@mipmap/ic_launcher",
         Theme = "@style/MainTheme",
         MainLauncher = true,
