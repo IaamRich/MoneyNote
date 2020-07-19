@@ -1,5 +1,4 @@
-﻿using MoneyNote.Services;
-//using MoneyNote.Views;
+﻿//using MoneyNote.Views;
 using ReactiveUI;
 using Splat;
 
@@ -22,7 +21,9 @@ namespace MoneyNote
 
         private void RegisterServices()
         {
-            Splat.Locator.CurrentMutable.Register(() => new StaticContactsService(), typeof(IContactServices));
+            //Splat.Locator.CurrentMutable.Register(() => new MoneyService(), typeof(IMoneyService));
+            //Splat.Locator.CurrentMutable.Register(() => new SettingsService(), typeof(ISettingsService));
+            //Splat.Locator.CurrentMutable.Register(() => new SpendService(), typeof(ISpendService));
         }
         public MasterViewModel CreateMasterViewModel()
         {

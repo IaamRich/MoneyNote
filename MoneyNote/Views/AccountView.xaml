@@ -10,104 +10,115 @@
     <ContentPage.Content>
         <Grid BackgroundColor="{StaticResource ListBackColor}">
             <Grid.RowDefinitions>
-                <RowDefinition Height="40*" />
-                <RowDefinition Height="30*" />
-                <RowDefinition Height="30*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Frame
-                Grid.Row="0"
-                Margin="10,5,10,0"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="FillAndExpand">
-                <StackLayout Spacing="0">
-                    <Label
-                        Margin="0,0,0,5"
-                        FontAttributes="Bold"
-                        FontSize="Small"
-                        HorizontalOptions="Center"
-                        Text="{Binding Strings[my_current]}"
-                        VerticalOptions="Start" />
-                    <controls:AccountSwitchFrame
-                        Command="{Binding MyCashCommand}"
-                        HorizontalOptions="FillAndExpand"
-                        Money="{Binding MyCash, Mode=TwoWay}"
-                        MoneyColor="Blue"
-                        Text="{Binding Strings[my_cash]}"
-                        VerticalOptions="FillAndExpand" />
-                    <controls:AccountSwitchFrame
-                        Command="{Binding MyCardCommand}"
-                        HorizontalOptions="FillAndExpand"
-                        Money="{Binding MyCard, Mode=TwoWay}"
-                        MoneyColor="Blue"
-                        Text="{Binding Strings[my_card]}"
-                        VerticalOptions="FillAndExpand" />
-                    <controls:AccountSwitchFrame
-                        Command="{Binding MyCurrentCommand}"
-                        HorizontalOptions="FillAndExpand"
-                        Money="{Binding MyCurrent, Mode=TwoWay}"
-                        MoneyColor="Blue"
-                        Text="{Binding Strings[my_current]}"
-                        VerticalOptions="FillAndExpand" />
-                </StackLayout>
-            </Frame>
-            <Frame
-                Grid.Row="1"
-                Margin="10,0"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="FillAndExpand">
-                <StackLayout Spacing="0">
-                    <Label
-                        Margin="0,0,0,5"
-                        FontAttributes="Bold"
-                        FontSize="Small"
-                        HorizontalOptions="Center"
-                        Text="{Binding Strings[income_outlay]}"
-                        VerticalOptions="Start" />
-                    <controls:AccountSwitchFrame
-                        Command="{Binding MyIncomeCommand}"
-                        HorizontalOptions="FillAndExpand"
-                        Money="{Binding MyIncome, Mode=TwoWay}"
-                        MoneyColor="Green"
-                        Text="{Binding Strings[month_income]}"
-                        VerticalOptions="FillAndExpand" />
-                    <controls:AccountSwitchFrame
-                        Command="{Binding MyOutlayCommand}"
-                        HorizontalOptions="FillAndExpand"
-                        Money="{Binding MyOutlay, Mode=TwoWay}"
-                        MoneyColor="Red"
-                        Text="{Binding Strings[month_outlay]}"
-                        VerticalOptions="FillAndExpand" />
-                </StackLayout>
-            </Frame>
-            <Frame
-                Grid.Row="2"
-                Margin="10,0,10,5"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="FillAndExpand">
-                <StackLayout Spacing="0">
-                    <Label
-                        Margin="0,0,0,5"
-                        FontAttributes="Bold"
-                        FontSize="Small"
-                        HorizontalOptions="Center"
-                        Text="{Binding Strings[savings]}"
-                        VerticalOptions="Start" />
-                    <controls:AccountSwitchFrame
-                        Command="{Binding MySavingsCommand}"
-                        HorizontalOptions="FillAndExpand"
-                        Money="{Binding MySavings, Mode=TwoWay}"
-                        MoneyColor="Blue"
-                        Text="{Binding Strings[month_saving]}"
-                        VerticalOptions="FillAndExpand" />
-                    <controls:AccountSwitchFrame
-                        Command="{Binding MyAllSavingsCommand}"
-                        HorizontalOptions="FillAndExpand"
-                        Money="{Binding MyAllSavings, Mode=TwoWay}"
-                        MoneyColor="Blue"
-                        Text="{Binding Strings[all_saving]}"
-                        VerticalOptions="FillAndExpand" />
-                </StackLayout>
-            </Frame>
+            <Label
+                Margin="5,30"
+                FontSize="Title"
+                HorizontalOptions="Center"
+                Text="My Money" />
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*" />
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="3*" />
+                </Grid.RowDefinitions>
+                <Frame
+                    Grid.Row="0"
+                    Margin="10,5,10,0"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <StackLayout Spacing="0">
+                        <Label
+                            Margin="0,0,0,5"
+                            FontAttributes="Bold"
+                            FontSize="Small"
+                            HorizontalOptions="Center"
+                            Text="{Binding Strings[my_current]}"
+                            VerticalOptions="Start" />
+                        <controls:AccountSwitchFrame
+                            Command="{Binding MyCashCommand}"
+                            HorizontalOptions="FillAndExpand"
+                            Money="{Binding MyCash, Mode=TwoWay}"
+                            MoneyColor="Blue"
+                            Text="{Binding Strings[my_cash]}"
+                            VerticalOptions="FillAndExpand" />
+                        <controls:AccountSwitchFrame
+                            Command="{Binding MyCardCommand}"
+                            HorizontalOptions="FillAndExpand"
+                            Money="{Binding MyCard, Mode=TwoWay}"
+                            MoneyColor="Blue"
+                            Text="{Binding Strings[my_card]}"
+                            VerticalOptions="FillAndExpand" />
+                        <controls:AccountSwitchFrame
+                            Command="{Binding MyCurrentCommand}"
+                            HorizontalOptions="FillAndExpand"
+                            Money="{Binding MyCurrent, Mode=TwoWay}"
+                            MoneyColor="Blue"
+                            Text="{Binding Strings[my_current]}"
+                            VerticalOptions="FillAndExpand" />
+                    </StackLayout>
+                </Frame>
+                <Frame
+                    Grid.Row="1"
+                    Margin="10,0"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <StackLayout Spacing="0">
+                        <Label
+                            Margin="0,0,0,5"
+                            FontAttributes="Bold"
+                            FontSize="Small"
+                            HorizontalOptions="Center"
+                            Text="{Binding Strings[income_outlay]}"
+                            VerticalOptions="Start" />
+                        <controls:AccountSwitchFrame
+                            Command="{Binding MyIncomeCommand}"
+                            HorizontalOptions="FillAndExpand"
+                            Money="{Binding MyIncome, Mode=TwoWay}"
+                            MoneyColor="Green"
+                            Text="{Binding Strings[month_income]}"
+                            VerticalOptions="FillAndExpand" />
+                        <controls:AccountSwitchFrame
+                            Command="{Binding MyOutlayCommand}"
+                            HorizontalOptions="FillAndExpand"
+                            Money="{Binding MyOutlay, Mode=TwoWay}"
+                            MoneyColor="Red"
+                            Text="{Binding Strings[month_outlay]}"
+                            VerticalOptions="FillAndExpand" />
+                    </StackLayout>
+                </Frame>
+                <Frame
+                    Grid.Row="2"
+                    Margin="10,0,10,5"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <StackLayout Spacing="0">
+                        <Label
+                            Margin="0,0,0,5"
+                            FontAttributes="Bold"
+                            FontSize="Small"
+                            HorizontalOptions="Center"
+                            Text="{Binding Strings[savings]}"
+                            VerticalOptions="Start" />
+                        <controls:AccountSwitchFrame
+                            Command="{Binding MySavingsCommand}"
+                            HorizontalOptions="FillAndExpand"
+                            Money="{Binding MySavings, Mode=TwoWay}"
+                            MoneyColor="Blue"
+                            Text="{Binding Strings[month_saving]}"
+                            VerticalOptions="FillAndExpand" />
+                        <controls:AccountSwitchFrame
+                            Command="{Binding MyAllSavingsCommand}"
+                            HorizontalOptions="FillAndExpand"
+                            Money="{Binding MyAllSavings, Mode=TwoWay}"
+                            MoneyColor="Blue"
+                            Text="{Binding Strings[all_saving]}"
+                            VerticalOptions="FillAndExpand" />
+                    </StackLayout>
+                </Frame>
+            </Grid>
         </Grid>
     </ContentPage.Content>
 </rxui:ReactiveContentPage>

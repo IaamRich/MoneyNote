@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using I18NPortable;
 using MoneyNote.Models;
@@ -15,6 +16,7 @@ namespace MoneyNote
         //Used Services
         private static MoneyService moneyService;
         private static SpendService spendService;
+        private static SettingsService settingsService;
         //Language List
         public ObservableCollection<Language> LanguagesList { get; set; }
         public ImageSource LanguageImage { get; set; }
@@ -33,6 +35,7 @@ namespace MoneyNote
             HostScreen = screen ?? Locator.Current.GetService<IScreen>();
             spendService = new SpendService();
             moneyService = new MoneyService();
+            settingsService = new SettingsService();
             //get language
             LanguageImage = ImageSource.FromResource(ImageResources.english_language);
             GetLanguages();
@@ -69,10 +72,8 @@ namespace MoneyNote
                 new Language { Id = 5, Sign = "fr-FR", Name = "French", Image = "fr.png" },
                 new Language { Id = 6, Sign = "zh-CN", Name = "Chinese", Image = "zh.png" }
             };
-        }
-        private void ImageCommandFunc(object sender)
-        {
-            switch ((int)sender)
+            var current = settingsService.GetCurrentLanguage().Result.CurrentLanguage;
+            switch (current)
             {
                 case 1:
                     LanguageImage = ImageSource.FromResource(ImageResources.russian_language);
@@ -96,6 +97,47 @@ namespace MoneyNote
                     LanguageImage = ImageSource.FromResource(ImageResources.english_language);
                     break;
             }
+        }
+        private async void ImageCommandFunc(object sender)
+        {
+
+            await Task.Run(async () =>
+            {
+                var settings = new Settings();
+                switch ((int)sender)
+                {
+                    case 1:
+                        LanguageImage = ImageSource.FromResource(ImageResources.russian_language);
+                        settings.CurrentLanguage = 1;
+                        break;
+                    case 2:
+                        LanguageImage = ImageSource.FromResource(ImageResources.romanian_language);
+                        settings.CurrentLanguage = 2;
+                        break;
+                    case 3:
+                        LanguageImage = ImageSource.FromResource(ImageResources.italian_language);
+                        settings.CurrentLanguage = 3;
+                        break;
+                    case 4:
+                        LanguageImage = ImageSource.FromResource(ImageResources.german_language);
+                        settings.CurrentLanguage = 4;
+                        break;
+                    case 5:
+                        LanguageImage = ImageSource.FromResource(ImageResources.french_language);
+                        settings.CurrentLanguage = 5;
+                        break;
+                    case 6:
+                        LanguageImage = ImageSource.FromResource(ImageResources.chinese_language);
+                        settings.CurrentLanguage = 6;
+                        break;
+                    default:
+                        LanguageImage = ImageSource.FromResource(ImageResources.english_language);
+                        settings.CurrentLanguage = 0;
+                        break;
+                }
+                await settingsService.UpdateAllSettingsAsync(settings);
+
+            });
         }
     }
 }
