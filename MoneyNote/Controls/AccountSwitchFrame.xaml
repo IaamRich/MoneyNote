@@ -13,7 +13,7 @@
         Padding="0">
         <StackLayout
             Padding="10,0"
-            BackgroundColor="{StaticResource ListBackColor}"
+            BackgroundColor="{StaticResource BackgroundWhite}"
             Orientation="Horizontal">
             <Label
                 x:Name="label"

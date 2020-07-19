@@ -11,70 +11,71 @@
         <ToolbarItem Command="{Binding ChangeNotes}" IconImageSource="change_notes.png" />
         <ToolbarItem Command="{Binding ChangeNotesLook}" IconImageSource="change_notes_view.png" />
     </ContentPage.ToolbarItems>
-    <Grid>
-        <StackLayout
-            Margin="10,0"
-            Spacing="0"
-            VerticalOptions="FillAndExpand">
+    <Grid BackgroundColor="{StaticResource ListBackColor}">
+        <StackLayout Margin="10,0" Spacing="0">
             <Label
+                Margin="0,30"
                 FontSize="Title"
                 HorizontalOptions="Center"
                 Text="{Binding Strings[last_notes]}" />
-            <ListView
-                x:Name="historyListView"
-                HasUnevenRows="True"
-                ItemsSource="{Binding SpendingList}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout
-                                Margin="0,5"
-                                Orientation="Vertical"
-                                Spacing="0">
-                                <StackLayout Orientation="Horizontal">
-                                    <Label
-                                        FontAttributes="Bold"
-                                        FontSize="Micro"
-                                        Text="{Binding Path=BindingContext.Strings[history_spent], Source={x:Reference historyListView}}"
-                                        VerticalOptions="EndAndExpand" />
-                                    <Label
-                                        FontAttributes="Bold"
-                                        FontSize="Small"
-                                        Text="{Binding Amount}"
-                                        TextColor="{StaticResource BoldLabel}"
-                                        VerticalTextAlignment="End" />
-                                    <Label
-                                        FontAttributes="Bold"
-                                        FontSize="Micro"
-                                        Text="{Binding Path=BindingContext.Strings[history_description], Source={x:Reference historyListView}}"
-                                        VerticalOptions="EndAndExpand" />
-                                    <Label
-                                        FontAttributes="Bold"
-                                        FontSize="Small"
-                                        Text="{Binding WhereText}"
-                                        TextColor="{StaticResource BoldLabel}"
-                                        VerticalTextAlignment="End" />
-                                </StackLayout>
-                                <StackLayout Orientation="Horizontal">
-                                    <Label
-                                        FontAttributes="Bold"
-                                        FontSize="Micro"
-                                        Text="{Binding Path=BindingContext.Strings[history_transaction_date], Source={x:Reference historyListView}}" />
-                                    <Label
-                                        FontAttributes="Bold"
-                                        FontSize="Micro"
-                                        Text="{Binding TransactionDate}"
-                                        TextColor="{StaticResource BoldLabel}" />
+            <Frame Padding="10">
+                <ListView
+                    x:Name="historyListView"
+                    BackgroundColor="{StaticResource BackgroundWhite}"
+                    HasUnevenRows="True"
+                    ItemsSource="{Binding SpendingList}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout
+                                    Margin="0,5"
+                                    Orientation="Vertical"
+                                    Spacing="0">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontSize="Micro"
+                                            Text="{Binding Path=BindingContext.Strings[history_spent], Source={x:Reference historyListView}}"
+                                            VerticalOptions="EndAndExpand" />
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontSize="Small"
+                                            Text="{Binding Amount}"
+                                            TextColor="{StaticResource BoldLabel}"
+                                            VerticalTextAlignment="End" />
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontSize="Micro"
+                                            Text="{Binding Path=BindingContext.Strings[history_description], Source={x:Reference historyListView}}"
+                                            VerticalOptions="EndAndExpand" />
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontSize="Small"
+                                            Text="{Binding WhereText}"
+                                            TextColor="{StaticResource BoldLabel}"
+                                            VerticalTextAlignment="End" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontSize="Micro"
+                                            Text="{Binding Path=BindingContext.Strings[history_transaction_date], Source={x:Reference historyListView}}" />
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontSize="Micro"
+                                            Text="{Binding TransactionDate}"
+                                            TextColor="{StaticResource BoldLabel}" />
+                                    </StackLayout>
+
                                 </StackLayout>
 
-                            </StackLayout>
-
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Frame>
         </StackLayout>
         <controls:HistoryChangeNotesView />
-        <controls:HistoryChangeNotesLookView  />
+        <controls:HistoryChangeNotesLookView />
     </Grid>
 </rxui:ReactiveContentPage>

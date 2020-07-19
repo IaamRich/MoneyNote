@@ -6,8 +6,8 @@
     xmlns:local="clr-namespace:MoneyNote"
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
     x:TypeArguments="local:TermsViewModel">
-    <ScrollView Margin="0,0,0,5">
-        <StackLayout>
+    <ScrollView BackgroundColor="{StaticResource ListBackColor}">
+        <StackLayout Margin="10,0">
             <Label
                 Margin="5,30"
                 FontSize="Title"

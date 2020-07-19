@@ -6,6 +6,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <Color x:Key="ButtonText">#ffffff</Color>
+    <Color x:Key="BackgroundWhite">#ffffff</Color>
     <Color x:Key="MainGreen">#738d72</Color>
     <Color x:Key="AboutBackGround">#dbd6c3</Color>
     <Color x:Key="ListBackColor">#e8e8e0</Color>

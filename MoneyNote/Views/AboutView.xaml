@@ -6,12 +6,13 @@
     xmlns:local="clr-namespace:MoneyNote"
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
     x:TypeArguments="local:AboutViewModel">
-    <StackLayout>
+    <StackLayout BackgroundColor="{StaticResource ListBackColor}">
 
-        <Frame HasShadow="True">
+        <Frame Margin="10,5,10,0" HasShadow="True">
             <StackLayout Spacing="10">
                 <Image
                     HeightRequest="64"
+                    HorizontalOptions="Start"
                     Source="logo.png"
                     VerticalOptions="Center" />
                 <Label FontSize="22">

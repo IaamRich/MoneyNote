@@ -12,7 +12,10 @@
             IconImageSource="plus.png"
             Text="+" />
     </ContentPage.ToolbarItems>
-    <StackLayout Margin="0" Spacing="0">
+    <StackLayout
+        Margin="0"
+        BackgroundColor="{StaticResource ListBackColor}"
+        Spacing="0">
         <Grid Margin="10,5,10,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -29,13 +32,17 @@
                 Source="logo.png"
                 VerticalOptions="Start" />
         </Grid>
-        <StackLayout Margin="10,5,10,0" Orientation="Horizontal">
-            <StackLayout Grid.Column="0" Orientation="Vertical">
+        <StackLayout Margin="10,0" Orientation="Horizontal">
+            <StackLayout
+                Grid.Column="0"
+                Margin="10,0"
+                Orientation="Vertical">
                 <Label Text="{Binding Strings[current_cash]}" />
                 <Label Text="{Binding CurrentCash}" />
             </StackLayout>
             <StackLayout
                 Grid.Column="1"
+                Margin="10,0"
                 HorizontalOptions="EndAndExpand"
                 Orientation="Vertical">
                 <Label HorizontalOptions="EndAndExpand" Text="{Binding Strings[current_card]}" />
@@ -53,12 +60,8 @@
                 Text="{Binding CurrentBill}"
                 TextColor="{StaticResource MainGreen}" />
         </StackLayout>
-
-
-
-
-        <StackLayout VerticalOptions="CenterAndExpand">
-            <Frame Margin="10,0">
+        <StackLayout Margin="10,0" VerticalOptions="CenterAndExpand">
+            <Frame>
                 <StackLayout>
                     <Frame>
                         <Entry
@@ -69,18 +72,6 @@
                             Text="{Binding SpendValue}" />
                     </Frame>
                     <StackLayout Orientation="Horizontal">
-                        <!--<Button
-                            BackgroundColor="{StaticResource MainGreen}"
-                            Command="{Binding DeleteSpend}"
-                            CornerRadius="10"
-                            Text="{Binding Strings[delete]}"
-                            TextColor="White" />
-                        <Button
-                            BackgroundColor="{StaticResource MainGreen}"
-                            Command="{Binding UpdateSpend}"
-                            CornerRadius="10"
-                            Text="{Binding Strings[update]}"
-                            TextColor="White" />-->
                         <Button
                             BackgroundColor="{StaticResource MainGreen}"
                             Command="{Binding AddSpend}"
@@ -92,13 +83,12 @@
 
                 </StackLayout>
             </Frame>
-            <Frame Margin="10,0" Padding="8">
+            <Frame Padding="10">
                 <StackLayout>
                     <Label HorizontalOptions="CenterAndExpand" Text="{Binding Strings[last_spent_money]}" />
                     <ListView
                         x:Name="spendingListView"
-                        Margin="10,0"
-                        BackgroundColor="{StaticResource ListBackColor}"
+                        BackgroundColor="{StaticResource BackgroundWhite}"
                         ItemsSource="{Binding SpendingList}">
                         <ListView.ItemTemplate>
                             <DataTemplate>
@@ -119,7 +109,7 @@
 
 
         <StackLayout
-            Margin="10,20"
+            Margin="10"
             HorizontalOptions="EndAndExpand"
             Orientation="Horizontal"
             VerticalOptions="EndAndExpand">

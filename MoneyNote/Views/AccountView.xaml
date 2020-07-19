@@ -8,7 +8,7 @@
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
     x:TypeArguments="local:AccountViewModel">
     <ContentPage.Content>
-        <Grid>
+        <Grid BackgroundColor="{StaticResource ListBackColor}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="40*" />
                 <RowDefinition Height="30*" />
@@ -16,6 +16,7 @@
             </Grid.RowDefinitions>
             <Frame
                 Grid.Row="0"
+                Margin="10,5,10,0"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand">
                 <StackLayout Spacing="0">
@@ -51,6 +52,7 @@
             </Frame>
             <Frame
                 Grid.Row="1"
+                Margin="10,0"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand">
                 <StackLayout Spacing="0">
@@ -79,6 +81,7 @@
             </Frame>
             <Frame
                 Grid.Row="2"
+                Margin="10,0,10,5"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand">
                 <StackLayout Spacing="0">

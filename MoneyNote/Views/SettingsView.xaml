@@ -9,7 +9,7 @@
     x:Name="this"
     x:TypeArguments="local:SettingsViewModel">
     <ContentPage.Content>
-        <Grid>
+        <Grid BackgroundColor="{StaticResource ListBackColor}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
@@ -18,22 +18,11 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
+
             <!--  1  -->
             <Frame
                 Grid.Row="0"
                 Margin="10,5,10,0"
-                HorizontalOptions="FillAndExpand">
-                <StackLayout>
-                    <Button
-                        Command="{Binding ResetAll}"
-                        Text="{Binding Strings[reset_all]}"
-                        VerticalOptions="FillAndExpand" />
-                </StackLayout>
-            </Frame>
-            <!--  2  -->
-            <Frame
-                Grid.Row="1"
-                Margin="10,0"
                 HorizontalOptions="FillAndExpand">
                 <StackLayout Orientation="Horizontal" Spacing="0">
                     <Label
@@ -43,9 +32,9 @@
                     <CheckBox HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
                 </StackLayout>
             </Frame>
-            <!--  3  -->
+            <!--  2  -->
             <Frame
-                Grid.Row="2"
+                Grid.Row="1"
                 Margin="10,0"
                 HorizontalOptions="FillAndExpand">
                 <StackLayout
@@ -94,6 +83,18 @@
                             </BindableLayout.ItemTemplate>
                         </StackLayout>
                     </ScrollView>
+                </StackLayout>
+            </Frame>
+            <!--  3  -->
+            <Frame
+                Grid.Row="2"
+                Margin="10,0"
+                HorizontalOptions="FillAndExpand">
+                <StackLayout>
+                    <Button
+                        Command="{Binding ResetAll}"
+                        Text="{Binding Strings[reset_all]}"
+                        VerticalOptions="FillAndExpand" />
                 </StackLayout>
             </Frame>
             <!--  4  -->
