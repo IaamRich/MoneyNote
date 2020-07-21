@@ -1,32 +1,33 @@
-﻿using System.Threading.Tasks;
-using MoneyNote.Models;
-using MoneyNote.Services.Contracts;
+﻿using MoneyNote.Services.Contracts;
+using Plugin.Settings;
 
 namespace MoneyNote.Services
 {
     public class SettingsService : ISettingsService
     {
-        public SettingsService()
+        public int GetCurrentLanguage()
         {
-            App.Database.CreateTableAsync<Settings>();
+            return CrossSettings.Current.GetValueOrDefault("CurrentLanguage", 0);
         }
-        public async Task<Settings> GetCurrentLanguage()
+        public void SetCurrentLanguage(int langId)
         {
-            //    var table = await .ConfigureAwait(true);
-            var table = await App.Database.Table<Settings>().FirstOrDefaultAsync().ConfigureAwait(false);//.ToListAsync().ConfigureAwait(false);
-            if (table == null)
-            {
-                return new Settings();
-            }
-            else return table;
+            CrossSettings.Current.AddOrUpdateValue("CurrentLanguage", langId);
         }
-        public async Task UpdateAllSettingsAsync(Settings item)
+        public bool GetSoundsSettings()
         {
-            await App.Database.UpdateAsync(item);
+            return CrossSettings.Current.GetValueOrDefault("IsSoundsOn", true);
         }
-        public async Task DeleteAll()
+        public void SetSoundsSettings(bool isSoundsOn)
         {
-            await App.Database.UpdateAsync(new Settings());
+            CrossSettings.Current.AddOrUpdateValue("IsSoundsOn", isSoundsOn);
+        }
+        public bool GetAdsSetings()
+        {
+            return CrossSettings.Current.GetValueOrDefault("IsHideAds", false);
+        }
+        public void SetAdsSetings(bool IsAdsOn)
+        {
+            CrossSettings.Current.AddOrUpdateValue("IsHideAds", IsAdsOn);
         }
     }
 }

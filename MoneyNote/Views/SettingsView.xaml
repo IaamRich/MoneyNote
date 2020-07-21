@@ -35,16 +35,31 @@
                     Margin="10,5,10,0"
                     HorizontalOptions="FillAndExpand">
                     <Grid>
-                        <StackLayout
-                            Grid.Row="0"
-                            Orientation="Horizontal"
-                            Spacing="0">
+                        <!--  Sounds  -->
+                        <Grid Grid.Row="0" ColumnSpacing="0">
                             <Label
                                 FontSize="Title"
                                 Text="{Binding Strings[sounds]}"
                                 VerticalOptions="Center" />
-                            <CheckBox HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" />
-                        </StackLayout>
+                            <Image
+                                Margin="0"
+                                HorizontalOptions="EndAndExpand"
+                                Source="selected.png"
+                                VerticalOptions="FillAndExpand">
+                                <Image.Triggers>
+                                    <DataTrigger
+                                        Binding="{Binding Sounds}"
+                                        TargetType="Image"
+                                        Value="False">
+                                        <Setter Property="Source" Value="unselected.png" />
+                                    </DataTrigger>
+                                </Image.Triggers>
+                            </Image>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SoundsCommand}" />
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                        <!--  Language  -->
                         <StackLayout
                             x:Name="chooseLanguageStack"
                             Grid.Row="1"

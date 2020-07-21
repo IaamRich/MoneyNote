@@ -1,12 +1,12 @@
-﻿using System.Threading.Tasks;
-using MoneyNote.Models;
-
-namespace MoneyNote.Services.Contracts
+﻿namespace MoneyNote.Services.Contracts
 {
     public interface ISettingsService
     {
-        Task<Settings> GetCurrentLanguage();
-        Task UpdateAllSettingsAsync(Settings item);
-        Task DeleteAll();
+        int GetCurrentLanguage();
+        void SetCurrentLanguage(int langId);
+        bool GetSoundsSettings();
+        void SetSoundsSettings(bool langId);
+        bool GetAdsSetings();
+        void SetAdsSetings(bool IsAdsOn);
     }
 }

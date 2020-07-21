@@ -1,5 +1,4 @@
-﻿using System.Windows.Input;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace MoneyNote.Models
 {
@@ -9,6 +8,5 @@ namespace MoneyNote.Models
         public string Sign { get; set; }
         public string Name { get; set; }
         public ImageSource Image { get; set; }
-        public ICommand Command { get; set; }
     }
 }
