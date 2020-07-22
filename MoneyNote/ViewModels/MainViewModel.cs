@@ -64,7 +64,7 @@ namespace MoneyNote
             data.Reverse();
             _spends.AddRange(data);
             _spends.Connect().Bind(out _spendingList).Subscribe();
-            CurrentBill = moneyService.GetCurrentBill().Result.MyCahsMoney;
+            CurrentBill = CurrentCard + CurrentCash;
             CurrentCard = 99934573;
             CurrentCash = 3526162;
             //});
@@ -84,7 +84,7 @@ namespace MoneyNote
                 await Task.Run(async () =>
                 {
                     await spendService.SaveItemAsync(item);
-                    await moneyService.UpdateAllMoneyAsync(new AllMoney { MyCahsMoney = CurrentBill - item.Amount });
+                    //await moneyService.UpdateAllMoneyAsync(new AllMoney { MyCahsMoney = CurrentBill - item.Amount });
                     _spends.Clear();
                     SpendValue = "";
                     GetData();
@@ -103,7 +103,7 @@ namespace MoneyNote
             {
                 MyCahsMoney = CurrentBill
             };
-            await moneyService.UpdateAllMoneyAsync(item);
+            //await moneyService.UpdateAllMoneyAsync(item);
         }
     }
 }

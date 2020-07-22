@@ -64,7 +64,7 @@ namespace MoneyNote
         }
         private async void ResetAllMethod()
         {
-            await moneyService.DeleteAll();
+            moneyService.DeleteAllMoneyNotes();
             await spendService.DeleteAll();
             await Application.Current.MainPage.DisplayAlert("Method", "ResetAll is done", "Cancel", "ok");
         }

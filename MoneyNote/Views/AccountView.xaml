@@ -21,7 +21,7 @@
             <Grid Grid.Row="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="4*" />
-                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="5*" />
                     <RowDefinition Height="3*" />
                 </Grid.RowDefinitions>
                 <Frame
@@ -81,11 +81,25 @@
                             Text="{Binding Strings[month_income]}"
                             VerticalOptions="FillAndExpand" />
                         <controls:AccountSwitchFrame
+                            Command="{Binding MyAllIncomeCommand}"
+                            HorizontalOptions="FillAndExpand"
+                            Money="{Binding MyAllIncome, Mode=TwoWay}"
+                            MoneyColor="Green"
+                            Text="{Binding Strings[all_income]}"
+                            VerticalOptions="FillAndExpand" />
+                        <controls:AccountSwitchFrame
                             Command="{Binding MyOutlayCommand}"
                             HorizontalOptions="FillAndExpand"
                             Money="{Binding MyOutlay, Mode=TwoWay}"
                             MoneyColor="Red"
                             Text="{Binding Strings[month_outlay]}"
+                            VerticalOptions="FillAndExpand" />
+                        <controls:AccountSwitchFrame
+                            Command="{Binding MyAllOutlayCommand}"
+                            HorizontalOptions="FillAndExpand"
+                            Money="{Binding MyAllOutlay, Mode=TwoWay}"
+                            MoneyColor="Red"
+                            Text="{Binding Strings[all_outlay]}"
                             VerticalOptions="FillAndExpand" />
                     </StackLayout>
                 </Frame>

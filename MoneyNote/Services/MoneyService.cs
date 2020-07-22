@@ -1,69 +1,85 @@
-﻿using System.Threading.Tasks;
-using MoneyNote.Models;
+﻿using Plugin.Settings;
 
 namespace MoneyNote.Services
 {
     public class MoneyService
     {
-        public MoneyService()
+        public decimal GetCurrentCash()
         {
-            App.Database.CreateTableAsync<AllMoney>();
+            return CrossSettings.Current.GetValueOrDefault("CurrentCash", 0);
         }
-        public async Task<AllMoney> GetCurrentBill()
+        public void SetCurrentCash(decimal value)
         {
-            var table = await App.Database.Table<AllMoney>().FirstOrDefaultAsync().ConfigureAwait(false);//.ToListAsync().ConfigureAwait(false);
-            if (table == null)
-            {
-                return new AllMoney();
-            }
-            else return table;
+            CrossSettings.Current.AddOrUpdateValue("CurrentCash", value);
         }
-        public async Task UpdateAllMoneyAsync(AllMoney item)
+        public decimal GetCurrentCard()
         {
-            await App.Database.UpdateAsync(item);
+            return CrossSettings.Current.GetValueOrDefault("CurrentCard", 0);
         }
-        public async Task DeleteAll()
+        public void SetCurrentCard(decimal value)
         {
-            await App.Database.UpdateAsync(new AllMoney());
+            CrossSettings.Current.AddOrUpdateValue("CurrentCard", value);
         }
-        //SQLiteAsyncConnection database;
-
-        //public MoneyService(string databasePath)
-        //{
-        //    database = new SQLiteAsyncConnection(databasePath);
-        //}
-
-        //public async Task CreateTable()
-        //{
-        //    await database.CreateTableAsync<AllMoney>();
-        //}
-        //public async Task<List<AllMoney>> GetItemsAsync()
-        //{
-        //    return await database.Table<AllMoney>().ToListAsync();
-
-        //}
-        //public async Task<AllMoney> GetItemAsync(int id)
-        //{
-        //    return await database.GetAsync<AllMoney>(id);
-        //}
-
-        //public async Task<int> SaveItemAsync(AllMoney item)
-        //{
-        //    //if (item.Id != 0)
-        //    //{
-        //    await database.UpdateAsync(item);
-        //    return item.Id;
-        //    //}
-        //    //else
-        //    //{
-        //    //    return await database.InsertAsync(item);
-        //    //}
-        //}
-        ////public async Task SaveItemAsync(AllMoney item)
-        ////{
-
-        ////    await database.UpdateAsync(item);
-
-        ////}
+        public decimal GetAllOutlay()
+        {
+            return CrossSettings.Current.GetValueOrDefault("AllOutlay", 0);
+        }
+        public void SetAllOutlay(decimal value)
+        {
+            CrossSettings.Current.AddOrUpdateValue("AllOutlay", value);
+        }
+        public decimal GetAllIncome()
+        {
+            return CrossSettings.Current.GetValueOrDefault("AllIncome", 0);
+        }
+        public void SetAllIncome(decimal value)
+        {
+            CrossSettings.Current.AddOrUpdateValue("AllIncome", value);
+        }
+        public decimal GetAllSavings()
+        {
+            return CrossSettings.Current.GetValueOrDefault("AllSavings", 0);
+        }
+        public void SetAllSavings(decimal value)
+        {
+            CrossSettings.Current.AddOrUpdateValue("AllSavings", value);
+        }
+        //uneditable
+        public decimal GetCurrentIncome()
+        {
+            return CrossSettings.Current.GetValueOrDefault("CurrentIncome", 0);
+        }
+        public void SetCurrentIncome(decimal value)
+        {
+            CrossSettings.Current.AddOrUpdateValue("CurrentIncome", value);
+        }
+        public decimal GetCurrentOutlay()
+        {
+            return CrossSettings.Current.GetValueOrDefault("CurrentOutlay", 0);
+        }
+        public void SetCurrentOutlay(decimal value)
+        {
+            CrossSettings.Current.AddOrUpdateValue("CurrentOutlay", value);
+        }
+        public decimal GetCurrentSavings()
+        {
+            return CrossSettings.Current.GetValueOrDefault("CurrentSavings", 0);
+        }
+        public void SetCurrentSavings(decimal value)
+        {
+            CrossSettings.Current.AddOrUpdateValue("CurrentSavings", value);
+        }
+        //deleting
+        public void DeleteAllMoneyNotes()
+        {
+            CrossSettings.Current.AddOrUpdateValue("CurrentSavings", 0);
+            CrossSettings.Current.AddOrUpdateValue("CurrentOutlay", 0);
+            CrossSettings.Current.AddOrUpdateValue("CurrentIncome", 0);
+            CrossSettings.Current.AddOrUpdateValue("AllSavings", 0);
+            CrossSettings.Current.AddOrUpdateValue("AllIncome", 0);
+            CrossSettings.Current.AddOrUpdateValue("AllOutlay", 0);
+            CrossSettings.Current.AddOrUpdateValue("CurrentCard", 0);
+            CrossSettings.Current.AddOrUpdateValue("CurrentCash", 0);
+        }
     }
 }

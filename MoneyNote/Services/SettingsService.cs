@@ -21,6 +21,7 @@ namespace MoneyNote.Services
         {
             CrossSettings.Current.AddOrUpdateValue("IsSoundsOn", isSoundsOn);
         }
+        //In progress
         public bool GetAdsSetings()
         {
             return CrossSettings.Current.GetValueOrDefault("IsHideAds", false);
