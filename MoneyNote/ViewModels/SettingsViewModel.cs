@@ -46,6 +46,7 @@ namespace MoneyNote
             GetLanguages();
             Sounds = settingsService.GetSoundsSettings();
             AreaCash = settingsService.GetDefaultSpendingAreaSettings() == 0 ? true : false;
+            AreaCard = !AreaCash;
             //commands
             SoundsCommand = ReactiveCommand.Create(() =>
             {
@@ -55,6 +56,7 @@ namespace MoneyNote
             AreaByDefaultCommand = ReactiveCommand.Create(() =>
             {
                 AreaCash = !AreaCash;
+                AreaCard = !AreaCard;
                 if (AreaCash) settingsService.SetDefaultSpendingAreaSettings(0);
                 else settingsService.SetDefaultSpendingAreaSettings(1);
 

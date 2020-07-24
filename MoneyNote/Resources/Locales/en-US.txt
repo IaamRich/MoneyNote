@@ -36,7 +36,7 @@ history_transaction_date = Note date:
 /* Settings Page */
 reset_all = Reset all to default
 sounds = Sounds
-area_from_where = By default spending area
+area_from_where = By default spending area:
 choose_language = Choose Language
 set_every_places = Set each Money Notes
 dis_add = Turn off Ads
@@ -76,6 +76,8 @@ amount = Amount
 commit = Commit
 main = Main
 menu = Menu
+card = Card
+cash = Cash
 
 /* Menu */
 menu_main = Main

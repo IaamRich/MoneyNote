@@ -52,28 +52,75 @@
                             </Grid.GestureRecognizers>
                         </Grid>
                         <!--  From Where By Default  -->
-                        <Grid Grid.Row="1" ColumnSpacing="0">
+                        <Grid
+                            Grid.Row="1"
+                            ColumnSpacing="0"
+                            RowSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="3*" />
+                                <RowDefinition Height="7*" />
+                            </Grid.RowDefinitions>
+                            <!--  text Area  -->
                             <Label
-                                FontSize="Title"
+                                Grid.ColumnSpan="2"
+                                FontSize="Small"
+                                HorizontalOptions="CenterAndExpand"
                                 Text="{Binding Strings[area_from_where]}"
                                 VerticalOptions="Center" />
-                            <Image
-                                Margin="0"
-                                HorizontalOptions="EndAndExpand"
-                                Source="selected.png"
-                                VerticalOptions="FillAndExpand">
-                                <Image.Triggers>
-                                    <DataTrigger
-                                        Binding="{Binding AreaCash}"
-                                        TargetType="Image"
-                                        Value="False">
-                                        <Setter Property="Source" Value="unselected.png" />
-                                    </DataTrigger>
-                                </Image.Triggers>
-                            </Image>
-                            <Grid.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding AreaByDefaultCommand}" />
-                            </Grid.GestureRecognizers>
+                            <!--  cash  -->
+                            <Grid Grid.Row="1" Grid.Column="0">
+                                <Label
+                                    FontSize="Micro"
+                                    HorizontalOptions="EndAndExpand"
+                                    Text="{Binding Strings[cash]}"
+                                    VerticalOptions="Center" />
+                                <Image
+                                    x:Name="cashToggleImage"
+                                    Grid.Column="1"
+                                    Margin="0"
+                                    HorizontalOptions="EndAndExpand"
+                                    Source="selected.png"
+                                    VerticalOptions="FillAndExpand">
+                                    <Image.Triggers>
+                                        <DataTrigger
+                                            Binding="{Binding AreaCash}"
+                                            TargetType="Image"
+                                            Value="False">
+                                            <Setter Property="Source" Value="unselected.png" />
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding AreaByDefaultCommand}" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
+                            <!--  card  -->
+                            <Grid Grid.Row="1" Grid.Column="1">
+                                <Label
+                                    FontSize="Micro"
+                                    HorizontalOptions="EndAndExpand"
+                                    Text="{Binding Strings[card]}"
+                                    VerticalOptions="Center" />
+                                <Image
+                                    x:Name="cardToggleImage"
+                                    Grid.Column="1"
+                                    Margin="0"
+                                    HorizontalOptions="EndAndExpand"
+                                    Source="selected.png"
+                                    VerticalOptions="FillAndExpand">
+                                    <Image.Triggers>
+                                        <DataTrigger
+                                            Binding="{Binding AreaCard}"
+                                            TargetType="Image"
+                                            Value="False">
+                                            <Setter Property="Source" Value="unselected.png" />
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding AreaByDefaultCommand}" />
+                                </Grid.GestureRecognizers>
+                            </Grid>
                         </Grid>
                         <!--  Language  -->
                         <StackLayout
