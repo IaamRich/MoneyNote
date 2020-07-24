@@ -34,6 +34,8 @@ namespace MoneyNote
         public decimal CurrentBill { get; set; }
         public decimal CurrentCash { get; set; }
         public decimal CurrentCard { get; set; }
+        public bool IsCash { get; set; }
+        public bool IsCard { get; set; }
         //List Variables
         private SourceList<Spend> _spends = new SourceList<Spend>();
         private ReadOnlyObservableCollection<Spend> _spendingList;
@@ -46,6 +48,8 @@ namespace MoneyNote
         {
             spendService = new SpendService();
             moneyService = new MoneyService();
+            IsCash = true;
+            IsCard = false;
             GetData();
             HostScreen = hostScreen ?? Locator.Current.GetService<IScreen>();
             //Reactive Example to navigate
@@ -67,36 +71,35 @@ namespace MoneyNote
 
         private async void OnAdd()
         {
-            try
+            await PopupNavigation.Instance.PushAsync(new CommitPopupView(OnAddFunc), true);
+        }
+        private async void OnAddFunc()
+        {
+            SpendDescription = CrossSettings.Current.GetValueOrDefault("CommitMessage", "");
+            Spend item = new Spend
             {
-
-                await PopupNavigation.Instance.PushAsync(new CommitPopupView(), true);
-            }
-            catch (Exception)
+                Amount = int.Parse(SpendValue),
+                WhereText = SpendDescription,
+                TransactionDate = DateTime.Now
+            };
+            await Task.Run(async () =>
             {
-
-                throw;
-            }
-            finally
-            {
-                SpendDescription = CrossSettings.Current.GetValueOrDefault("CommitMessage", "");
-                Spend item = new Spend
+                await spendService.SaveItemAsync(item);
+                switch (CrossSettings.Current.GetValueOrDefault("CurrentCommitMoneyFrom", 0))
                 {
-                    Amount = int.Parse(SpendValue),
-                    WhereText = SpendDescription,
-                    TransactionDate = DateTime.Now
-                };
-                await Task.Run(async () =>
-                {
-                    await spendService.SaveItemAsync(item);
-                    _spends.Clear();
-                    SpendValue = "";
-                    GetData();
-                });
-            }
-            //SpendDescription = await App.Current.MainPage.DisplayPromptAsync("Write description:", "You can skip this...");
-
-
+                    case 0:
+                        CurrentCash -= item.Amount;
+                        moneyService.SetCurrentCash(CurrentCash);
+                        break;
+                    case 1:
+                        CurrentCard -= item.Amount;
+                        moneyService.SetCurrentCard(CurrentCard);
+                        break;
+                }
+                _spends.Clear();
+                SpendValue = "";
+                GetData();
+            });
         }
         private async void OnAddSalary()
         {

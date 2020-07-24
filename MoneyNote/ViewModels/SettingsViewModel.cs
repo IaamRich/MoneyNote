@@ -21,6 +21,8 @@ namespace MoneyNote
         public ImageSource LanguageImage { get; set; }
         //Properties 
         public bool Sounds { get; set; }
+        public bool AreaCash { get; set; }
+        public bool AreaCard { get; set; }
         public int CurrentLang { get; set; }
         //Commands
         public ICommand ResetAll { get; set; }
@@ -28,6 +30,7 @@ namespace MoneyNote
         public ICommand GoAccount { get; }
         public ICommand OffAds { get; set; }
         public ICommand SoundsCommand { get; set; }
+        public ICommand AreaByDefaultCommand { get; set; }
         //Variables for normal functionality of the page
         public II18N Strings => I18N.Current;
         public string UrlPathSegment => Strings["menu_settings"];
@@ -42,11 +45,19 @@ namespace MoneyNote
             //get language
             GetLanguages();
             Sounds = settingsService.GetSoundsSettings();
+            AreaCash = settingsService.GetDefaultSpendingAreaSettings() == 0 ? true : false;
             //commands
             SoundsCommand = ReactiveCommand.Create(() =>
             {
                 Sounds = !Sounds;
                 settingsService.SetSoundsSettings(Sounds);
+            });
+            AreaByDefaultCommand = ReactiveCommand.Create(() =>
+            {
+                AreaCash = !AreaCash;
+                if (AreaCash) settingsService.SetDefaultSpendingAreaSettings(0);
+                else settingsService.SetDefaultSpendingAreaSettings(1);
+
             });
             ResetAll = ReactiveCommand.Create(() =>
             {

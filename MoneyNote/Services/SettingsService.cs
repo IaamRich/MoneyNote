@@ -21,6 +21,14 @@ namespace MoneyNote.Services
         {
             CrossSettings.Current.AddOrUpdateValue("IsSoundsOn", isSoundsOn);
         }
+        public int GetDefaultSpendingAreaSettings()
+        {
+            return CrossSettings.Current.GetValueOrDefault("IdSpendFromWhere", 0);
+        }
+        public void SetDefaultSpendingAreaSettings(int idSpendFromWhere)
+        {
+            CrossSettings.Current.AddOrUpdateValue("IdSpendFromWhere", idSpendFromWhere);
+        }
         //In progress
         public bool GetAdsSetings()
         {

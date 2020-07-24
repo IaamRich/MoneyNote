@@ -20,18 +20,10 @@
                 HorizontalOptions="Center"
                 Text="Settings" />
             <Grid Grid.Row="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-
                 <!--  1  -->
                 <Frame
                     Grid.Row="0"
-                    Grid.RowSpan="2"
+                    Grid.RowSpan="3"
                     Margin="10,5,10,0"
                     HorizontalOptions="FillAndExpand">
                     <Grid>
@@ -59,10 +51,34 @@
                                 <TapGestureRecognizer Command="{Binding SoundsCommand}" />
                             </Grid.GestureRecognizers>
                         </Grid>
+                        <!--  From Where By Default  -->
+                        <Grid Grid.Row="1" ColumnSpacing="0">
+                            <Label
+                                FontSize="Title"
+                                Text="{Binding Strings[area_from_where]}"
+                                VerticalOptions="Center" />
+                            <Image
+                                Margin="0"
+                                HorizontalOptions="EndAndExpand"
+                                Source="selected.png"
+                                VerticalOptions="FillAndExpand">
+                                <Image.Triggers>
+                                    <DataTrigger
+                                        Binding="{Binding AreaCash}"
+                                        TargetType="Image"
+                                        Value="False">
+                                        <Setter Property="Source" Value="unselected.png" />
+                                    </DataTrigger>
+                                </Image.Triggers>
+                            </Image>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AreaByDefaultCommand}" />
+                            </Grid.GestureRecognizers>
+                        </Grid>
                         <!--  Language  -->
                         <StackLayout
                             x:Name="chooseLanguageStack"
-                            Grid.Row="1"
+                            Grid.Row="2"
                             HorizontalOptions="FillAndExpand"
                             Orientation="Horizontal">
                             <Label
@@ -112,7 +128,7 @@
                 </Frame>
                 <!--  3  -->
                 <Frame
-                    Grid.Row="2"
+                    Grid.Row="3"
                     Margin="10,0"
                     HorizontalOptions="FillAndExpand">
                     <StackLayout>
@@ -125,7 +141,7 @@
                 </Frame>
                 <!--  4  -->
                 <Frame
-                    Grid.Row="3"
+                    Grid.Row="4"
                     Margin="10,0"
                     HorizontalOptions="FillAndExpand">
                     <StackLayout>
@@ -138,7 +154,7 @@
                 </Frame>
                 <!--  5  -->
                 <Frame
-                    Grid.Row="4"
+                    Grid.Row="5"
                     Margin="10,0,10,5"
                     HorizontalOptions="FillAndExpand">
                     <StackLayout>

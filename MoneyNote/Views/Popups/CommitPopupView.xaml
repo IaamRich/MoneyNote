@@ -31,8 +31,26 @@
             x:Name="entry"
             Placeholder="Enter Spent Amount"
             PlaceholderColor="Gray" />
-        <Switch x:Name="cashSwitch" />
-        <Switch x:Name="cardSwitch" />
+        <Switch x:Name="cashSwitch">
+            <Switch.Triggers>
+                <DataTrigger
+                    Binding="{Binding Source={x:Reference cardSwitch}, Path=IsToggled}"
+                    TargetType="Switch"
+                    Value="True">
+                    <Setter Property="IsToggled" Value="False" />
+                </DataTrigger>
+            </Switch.Triggers>
+        </Switch>
+        <Switch x:Name="cardSwitch">
+            <Switch.Triggers>
+                <DataTrigger
+                    Binding="{Binding Source={x:Reference cashSwitch}, Path=IsToggled}"
+                    TargetType="Switch"
+                    Value="True">
+                    <Setter Property="IsToggled" Value="False" />
+                </DataTrigger>
+            </Switch.Triggers>
+        </Switch>
         <Button Clicked="Button_Clicked" Text="Close" />
     </StackLayout>
 </popups:PopupPage>
