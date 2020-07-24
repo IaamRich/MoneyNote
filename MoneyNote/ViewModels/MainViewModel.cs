@@ -9,7 +9,10 @@ using DynamicData;
 using I18NPortable;
 using MoneyNote.Models;
 using MoneyNote.Services;
+using MoneyNote.Views.Popups;
+using Plugin.Settings;
 using ReactiveUI;
+using Rg.Plugins.Popup.Services;
 using Splat;
 
 namespace MoneyNote
@@ -26,7 +29,7 @@ namespace MoneyNote
         private static SpendService spendService;
         private static MoneyService moneyService;
         //UI variables
-        private string SpendDescription { get; set; }
+        public string SpendDescription { get; set; }
         public string SpendValue { get; set; }
         public decimal CurrentBill { get; set; }
         public decimal CurrentCash { get; set; }
@@ -43,15 +46,12 @@ namespace MoneyNote
         {
             spendService = new SpendService();
             moneyService = new MoneyService();
-            //Filling MainPage List
             GetData();
             HostScreen = hostScreen ?? Locator.Current.GetService<IScreen>();
             //Reactive Example to navigate
             NavigateToDummyPage = ReactiveCommand
                 .CreateFromObservable(() => HostScreen.Router.Navigate.Execute(new DummyViewModel()).Select(_ => Unit.Default));
-            //Reactive Command
             AddSpend = ReactiveCommand.Create(() => { OnAdd(); });
-            //Add Salary Command
             AddSalary = ReactiveCommand.Create(() => { OnAddSalary(); });
         }
         private void GetData()
@@ -63,26 +63,40 @@ namespace MoneyNote
             CurrentCard = moneyService.GetCurrentCard();
             CurrentCash = moneyService.GetCurrentCash();
             CurrentBill = CurrentCard + CurrentCash;
-
-            //});
         }
+
         private async void OnAdd()
         {
-            SpendDescription = await App.Current.MainPage.DisplayPromptAsync("Write description:", "You can skip this...");
+            try
+            {
 
-            Spend item = new Spend
+                await PopupNavigation.Instance.PushAsync(new CommitPopupView(), true);
+            }
+            catch (Exception)
             {
-                Amount = int.Parse(SpendValue),
-                WhereText = SpendDescription,
-                TransactionDate = DateTime.Now
-            };
-            await Task.Run(async () =>
+
+                throw;
+            }
+            finally
             {
-                await spendService.SaveItemAsync(item);
-                _spends.Clear();
-                SpendValue = "";
-                GetData();
-            });
+                SpendDescription = CrossSettings.Current.GetValueOrDefault("CommitMessage", "");
+                Spend item = new Spend
+                {
+                    Amount = int.Parse(SpendValue),
+                    WhereText = SpendDescription,
+                    TransactionDate = DateTime.Now
+                };
+                await Task.Run(async () =>
+                {
+                    await spendService.SaveItemAsync(item);
+                    _spends.Clear();
+                    SpendValue = "";
+                    GetData();
+                });
+            }
+            //SpendDescription = await App.Current.MainPage.DisplayPromptAsync("Write description:", "You can skip this...");
+
+
         }
         private async void OnAddSalary()
         {

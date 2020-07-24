@@ -46,10 +46,11 @@
     <PackageReference Include="ReactiveUI" Version="11.4.1" />
     <PackageReference Include="ReactiveUI.Validation" Version="1.4.15" />
     <PackageReference Include="ReactiveUI.XamForms" Version="10.0.1" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.3" />
     <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.1.1" />
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
     <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.991250" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.1179" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
   </ItemGroup>
 
@@ -59,6 +60,9 @@
     </Compile>
     <Compile Update="Styles\ButtonStyles.xaml.cs">
       <DependentUpon>ButtonStyles.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Popups\CommitPopupView.xaml.cs">
+      <DependentUpon>CommitPopupView.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\TermsView.xaml.cs">
       <DependentUpon>TermsView.xaml</DependentUpon>
@@ -88,6 +92,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Controls\HistoryChangeNotesView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Popups\CommitPopupView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
