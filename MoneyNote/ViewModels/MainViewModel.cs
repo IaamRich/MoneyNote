@@ -30,6 +30,8 @@ namespace MoneyNote
         private static MoneyService moneyService;
         //UI variables
         public string SpendDescription { get; set; }
+        public string AddMoneyDescription { get; set; }
+        public decimal AddMoneyValue { get; set; }
         public string SpendValue { get; set; }
         public decimal CurrentBill { get; set; }
         public decimal CurrentCash { get; set; }
@@ -103,12 +105,37 @@ namespace MoneyNote
         }
         private async void OnAddSalary()
         {
-            var Amount = decimal.Parse(await App.Current.MainPage.DisplayPromptAsync("Write description:", "You can skip this..."));
-            CurrentBill += Amount;
-            AllMoney item = new AllMoney
+            await PopupNavigation.Instance.PushAsync(new AddMoneyPopupView(OnAddSalaryFunc), true);
+
+        }
+        private async void OnAddSalaryFunc()
+        {
+            AddMoneyDescription = CrossSettings.Current.GetValueOrDefault("AddMoneyMessage", "");
+            AddMoneyValue = CrossSettings.Current.GetValueOrDefault("AddMoneyValue", 0.0m);
+            Save item = new Save
             {
-                MyCahsMoney = CurrentBill
+                Amount = AddMoneyValue,
+                Description = AddMoneyDescription,
+                TransactionDate = DateTime.Now
             };
+            await Task.Run(() =>
+            {
+                //await saveService.SaveItemAsync(item);
+                switch (CrossSettings.Current.GetValueOrDefault("CurrentAddedMoneyTo", 0))
+                {
+                    case 0:
+                        CurrentCash += item.Amount;
+                        moneyService.SetCurrentCash(CurrentCash);
+                        break;
+                    case 1:
+                        CurrentCard += item.Amount;
+                        moneyService.SetCurrentCard(CurrentCard);
+                        break;
+                }
+                //clearing and getting
+                _spends.Clear();
+                GetData();
+            });
         }
     }
 }

@@ -7,6 +7,8 @@ enter_spent_amount = Enter spent amount:
 last_spent_money = Last spent money:
 from_card = from Card
 from_cash = from Cash
+to_cash = to Cash
+to_card = to Card
 
 /* Account Page */
 my_cash = My cash money:

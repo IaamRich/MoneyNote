@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<popups:PopupPage
+    x:Class="MoneyNote.Views.Popups.AddMoneyPopupView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:popups="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    mc:Ignorable="d">
+    <popups:PopupPage.Animation>
+        <animations:ScaleAnimation
+            x:Name="animation"
+            DurationIn="200"
+            DurationOut="800"
+            HasBackgroundAnimation="True"
+            PositionIn="Top"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.4" />
+        <!--
+            EasingIn="SignOut"
+            EasingOut="SignIn"
+        -->
+    </popups:PopupPage.Animation>
+    <Frame HorizontalOptions="Center" VerticalOptions="Start">
+        <StackLayout
+            BackgroundColor="White"
+            HorizontalOptions="Center"
+            Orientation="Vertical"
+            VerticalOptions="Center">
+            <ImageButton
+                BackgroundColor="Transparent"
+                Clicked="Cancel_Button_Clicked"
+                HeightRequest="20"
+                HorizontalOptions="End"
+                Source="close.png"
+                VerticalOptions="Start"
+                WidthRequest="20" />
+            <Entry
+                x:Name="entry"
+                Keyboard="Numeric"
+                Placeholder="Enter Add Amount"
+                PlaceholderColor="Gray" />
+            <Entry
+                x:Name="entryDescription"
+                Placeholder="Enter/Miss Description..."
+                PlaceholderColor="Gray" />
+            <StackLayout Orientation="Horizontal" Spacing="0">
+                <Label FontSize="Micro" Text="{Binding Strings[to_cash]}" />
+                <Switch x:Name="cashSwitch" HorizontalOptions="EndAndExpand">
+                    <Switch.Triggers>
+                        <DataTrigger
+                            Binding="{Binding Source={x:Reference cardSwitch}, Path=IsToggled}"
+                            TargetType="Switch"
+                            Value="True">
+                            <Setter Property="IsToggled" Value="False" />
+                        </DataTrigger>
+                    </Switch.Triggers>
+                </Switch>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="0">
+                <Label FontSize="Micro" Text="{Binding Strings[to_card]}" />
+                <Switch x:Name="cardSwitch" HorizontalOptions="EndAndExpand">
+                    <Switch.Triggers>
+                        <DataTrigger
+                            Binding="{Binding Source={x:Reference cashSwitch}, Path=IsToggled}"
+                            TargetType="Switch"
+                            Value="True">
+                            <Setter Property="IsToggled" Value="False" />
+                        </DataTrigger>
+                    </Switch.Triggers>
+                </Switch>
+            </StackLayout>
+            <Button Clicked="Button_Clicked" Text="{Binding Strings[save]}" />
+        </StackLayout>
+    </Frame>
+</popups:PopupPage>
