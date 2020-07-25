@@ -10,47 +10,64 @@
     mc:Ignorable="d">
     <popups:PopupPage.Animation>
         <animations:ScaleAnimation
-            DurationIn="400"
-            DurationOut="300"
+            x:Name="animation"
+            DurationIn="200"
+            DurationOut="800"
             HasBackgroundAnimation="True"
-            PositionIn="Center"
-            PositionOut="Center"
+            PositionIn="Bottom"
+            PositionOut="Top"
             ScaleIn="1.2"
-            ScaleOut="0.8" />
+            ScaleOut="0.4" />
         <!--
             EasingIn="SignOut"
             EasingOut="SignIn"
         -->
     </popups:PopupPage.Animation>
-    <StackLayout
-        BackgroundColor="White"
-        HorizontalOptions="Center"
-        Orientation="Vertical"
-        VerticalOptions="Center">
-        <Entry
-            x:Name="entry"
-            Placeholder="Enter Spent Amount"
-            PlaceholderColor="Gray" />
-        <Switch x:Name="cashSwitch">
-            <Switch.Triggers>
-                <DataTrigger
-                    Binding="{Binding Source={x:Reference cardSwitch}, Path=IsToggled}"
-                    TargetType="Switch"
-                    Value="True">
-                    <Setter Property="IsToggled" Value="False" />
-                </DataTrigger>
-            </Switch.Triggers>
-        </Switch>
-        <Switch x:Name="cardSwitch">
-            <Switch.Triggers>
-                <DataTrigger
-                    Binding="{Binding Source={x:Reference cashSwitch}, Path=IsToggled}"
-                    TargetType="Switch"
-                    Value="True">
-                    <Setter Property="IsToggled" Value="False" />
-                </DataTrigger>
-            </Switch.Triggers>
-        </Switch>
-        <Button Clicked="Button_Clicked" Text="Close" />
-    </StackLayout>
+    <Frame HorizontalOptions="Center" VerticalOptions="Center">
+        <StackLayout
+            BackgroundColor="White"
+            HorizontalOptions="Center"
+            Orientation="Vertical"
+            VerticalOptions="Center">
+            <ImageButton
+                BackgroundColor="Transparent"
+                Clicked="Cancel_Button_Clicked"
+                HeightRequest="20"
+                HorizontalOptions="End"
+                Source="close.png"
+                VerticalOptions="Start"
+                WidthRequest="20" />
+            <Entry
+                x:Name="entry"
+                Placeholder="Enter/Miss Description..."
+                PlaceholderColor="Gray" />
+            <StackLayout Orientation="Horizontal" Spacing="0">
+                <Label FontSize="Micro" Text="{Binding Strings[from_cash]}" />
+                <Switch x:Name="cashSwitch" HorizontalOptions="EndAndExpand">
+                    <Switch.Triggers>
+                        <DataTrigger
+                            Binding="{Binding Source={x:Reference cardSwitch}, Path=IsToggled}"
+                            TargetType="Switch"
+                            Value="True">
+                            <Setter Property="IsToggled" Value="False" />
+                        </DataTrigger>
+                    </Switch.Triggers>
+                </Switch>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="0">
+                <Label FontSize="Micro" Text="{Binding Strings[from_card]}" />
+                <Switch x:Name="cardSwitch" HorizontalOptions="EndAndExpand">
+                    <Switch.Triggers>
+                        <DataTrigger
+                            Binding="{Binding Source={x:Reference cashSwitch}, Path=IsToggled}"
+                            TargetType="Switch"
+                            Value="True">
+                            <Setter Property="IsToggled" Value="False" />
+                        </DataTrigger>
+                    </Switch.Triggers>
+                </Switch>
+            </StackLayout>
+            <Button Clicked="Button_Clicked" Text="{Binding Strings[save]}" />
+        </StackLayout>
+    </Frame>
 </popups:PopupPage>

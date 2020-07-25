@@ -5,6 +5,8 @@ current_card = My Card:
 current = Current bill:
 enter_spent_amount = Enter spent amount:
 last_spent_money = Last spent money:
+from_card = from Card
+from_cash = from Cash
 
 /* Account Page */
 my_cash = My cash money:
@@ -48,7 +50,7 @@ terms_text = 1. This page (together with the documents referred to on it) tells 
 /* About Page */
 creator_name = Vladimir Curaciov
 supporter_name = Feodor Songurov
-thankful_name = Alexandr Turcan
+thankful_name = Alexandr Tsurcan
 thanks_by = Thanks by:
 created_by = Created by:
 supported_by = Supported by:
