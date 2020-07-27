@@ -61,25 +61,25 @@
                 TextColor="{StaticResource MainGreen}" />
         </StackLayout>
         <StackLayout Margin="10,0" VerticalOptions="CenterAndExpand">
-            <Frame>
+            <Frame HorizontalOptions="FillAndExpand">
                 <StackLayout>
-                    <Frame>
-                        <Entry
-                            x:Name="entrySpend"
-                            FontSize="Medium"
-                            Keyboard="Numeric"
-                            Placeholder="{Binding Strings[enter_spent_amount]}"
-                            Text="{Binding SpendValue}" />
-                    </Frame>
-                    <StackLayout Orientation="Horizontal">
-                        <Button
-                            BackgroundColor="{StaticResource MainGreen}"
-                            Command="{Binding AddSpend}"
-                            CornerRadius="10"
-                            HorizontalOptions="FillAndExpand"
-                            Text="{Binding Strings[commit]}"
-                            TextColor="White" />
-                    </StackLayout>
+                    <Entry
+                        x:Name="entrySpend"
+                        FontSize="Large"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Keyboard="Numeric"
+                        Placeholder="{Binding Strings[enter_spent_amount]}"
+                        PlaceholderColor="{StaticResource AboutBackGround}"
+                        Text="{Binding SpendValue}"
+                        TextColor="{StaticResource PopupButton}" />
+                    <Button
+                        BackgroundColor="{StaticResource MainGreen}"
+                        Command="{Binding AddSpend}"
+                        CornerRadius="10"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="{Binding Strings[commit]}"
+                        TextColor="White" />
 
                 </StackLayout>
             </Frame>
@@ -95,8 +95,11 @@
                                 <ViewCell>
                                     <ViewCell.View>
                                         <StackLayout Orientation="Horizontal">
-                                            <Label FontSize="Medium" Text="{Binding Amount}" />
                                             <Label FontSize="Medium" Text="{Binding WhereText}" />
+                                            <Label
+                                                FontSize="Medium"
+                                                HorizontalOptions="EndAndExpand"
+                                                Text="{Binding Amount}" />
                                         </StackLayout>
                                     </ViewCell.View>
                                 </ViewCell>

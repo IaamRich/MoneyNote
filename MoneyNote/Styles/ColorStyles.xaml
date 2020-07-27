@@ -9,9 +9,10 @@
     <Color x:Key="BackgroundWhite">#ffffff</Color>
     <Color x:Key="MainGreen">#738d72</Color>
     <Color x:Key="AboutBackGround">#dbd6c3</Color>
+    <Color x:Key="PopupButton">#6d6a61</Color>
     <Color x:Key="ListBackColor">#e8e8e0</Color>
     <Color x:Key="BoldLabel">#000000</Color>
     <Color x:Key="Links">#00a8d5</Color>
-
+    <Color x:Key="Experimental">#6a917e</Color>
 
 </ResourceDictionary>

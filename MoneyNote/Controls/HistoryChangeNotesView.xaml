@@ -10,7 +10,7 @@
     <Frame
         x:Name="changeNotes"
         Padding="0"
-        BackgroundColor="{StaticResource AboutBackGround}"
+        BackgroundColor="{StaticResource PopupButton}"
         CornerRadius="0"
         HasShadow="True"
         HeightRequest="200"

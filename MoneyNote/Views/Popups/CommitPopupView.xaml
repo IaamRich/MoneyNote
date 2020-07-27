@@ -67,7 +67,10 @@
                     </Switch.Triggers>
                 </Switch>
             </StackLayout>
-            <Button Clicked="Button_Clicked" Text="{Binding Strings[save]}" />
+            <Button
+                BackgroundColor="{StaticResource PopupButton}"
+                Clicked="Button_Clicked"
+                Text="{Binding Strings[save]}" />
         </StackLayout>
     </Frame>
 </popups:PopupPage>
