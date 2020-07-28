@@ -6,7 +6,7 @@ using System.Windows.Input;
 using DynamicData;
 using I18NPortable;
 using MoneyNote.Models;
-using MoneyNote.Services;
+using MoneyNote.Services.Contracts;
 using ReactiveUI;
 
 namespace MoneyNote
@@ -14,7 +14,7 @@ namespace MoneyNote
     public class HistoryViewModel : ReactiveObject, IRoutableViewModel
     {
         //Used Services
-        private static SpendService spendService;
+        private ISpendService _spendService;
         //Variables for normal functionality of the page
         public string UrlPathSegment => Strings["menu_history"];
         public IScreen HostScreen { get; }
@@ -29,11 +29,11 @@ namespace MoneyNote
         public ICommand ChangeNotesLook { get; set; }
         public bool IsChangeNotesLookVisible { get; set; }
 
-        public HistoryViewModel()
+        public HistoryViewModel(ISpendService spendService, IScreen screen = null)
         {
             IsChangeNotesVisible = false;
             IsChangeNotesLookVisible = false;
-            spendService = new SpendService();
+            _spendService = spendService;
             GetData();
         }
         private async void GetData()
@@ -41,7 +41,7 @@ namespace MoneyNote
             var data = new List<Spend>();
             await Task.Run(() =>
             {
-                data = spendService.GetAll().Result;
+                data = _spendService.GetAll().Result;
                 data.Reverse();
                 _spends.AddRange(data);
                 _spends.Connect().Bind(out _spendingList).Subscribe();

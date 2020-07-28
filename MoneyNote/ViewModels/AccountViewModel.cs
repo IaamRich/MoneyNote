@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
 using I18NPortable;
-using MoneyNote.Services;
+using MoneyNote.Services.Contracts;
 using ReactiveUI;
 using Splat;
 using Xamarin.Forms;
@@ -10,9 +10,12 @@ namespace MoneyNote
     public class AccountViewModel : ReactiveObject, IRoutableViewModel
     {
 
-        private static MoneyService moneyService;
+        private static IMoneyService _moneyService;
         public II18N Strings => I18N.Current;
         public string UrlPathSegment => Strings["menu_account"];
+        private string _message;
+        private string message;
+
         public IScreen HostScreen { get; }
         public ICommand MyCashCommand { get; set; }
         public ICommand MyCardCommand { get; set; }
@@ -31,11 +34,12 @@ namespace MoneyNote
         public decimal MyAllOutlay { get; set; }
         public decimal MySavings { get; set; }
         public decimal MyAllSavings { get; set; }
-        public AccountViewModel(string message = null, IScreen screen = null)
+        public AccountViewModel(IMoneyService moneyService, string message = null, IScreen screen = null)
         {
+            _message = message;
             HostScreen = screen ?? Locator.Current.GetService<IScreen>();
-            if (!string.IsNullOrEmpty(message)) ShowMessage(message);
-            moneyService = new MoneyService();
+            if (!string.IsNullOrEmpty(_message)) Application.Current.MainPage.DisplayAlert("Message", message, "", "ok"); ;
+            _moneyService = moneyService;
 
             GetData();
             MyCashCommand = ReactiveCommand.Create(async () =>
@@ -45,7 +49,7 @@ namespace MoneyNote
                 {
                     var oldcash = MyCash;
                     MyCash = decimal.Parse(summ);
-                    moneyService.SetCurrentCash(MyCash);
+                    _moneyService.SetCurrentCash(MyCash);
                     MyCurrent = MyCurrent - oldcash + MyCash;
                 }
             });
@@ -56,7 +60,7 @@ namespace MoneyNote
                 {
                     var oldcard = MyCard;
                     MyCard = decimal.Parse(summ);
-                    moneyService.SetCurrentCard(MyCard);
+                    _moneyService.SetCurrentCard(MyCard);
                     MyCurrent = MyCurrent - oldcard + MyCard;
                 }
             });
@@ -66,7 +70,7 @@ namespace MoneyNote
                 if (!string.IsNullOrEmpty(summ))
                 {
                     MyAllIncome = decimal.Parse(summ);
-                    moneyService.SetAllIncome(MyAllIncome);
+                    _moneyService.SetAllIncome(MyAllIncome);
                 }
             });
             MyAllOutlayCommand = ReactiveCommand.Create(async () =>
@@ -75,7 +79,7 @@ namespace MoneyNote
                 if (!string.IsNullOrEmpty(summ))
                 {
                     MyAllOutlay = decimal.Parse(summ);
-                    moneyService.SetAllOutlay(MyAllOutlay);
+                    _moneyService.SetAllOutlay(MyAllOutlay);
                 }
             });
             MyAllSavingsCommand = ReactiveCommand.Create(async () =>
@@ -84,7 +88,7 @@ namespace MoneyNote
                 if (!string.IsNullOrEmpty(summ))
                 {
                     MyAllSavings = decimal.Parse(summ);
-                    moneyService.SetAllSavings(MyAllSavings);
+                    _moneyService.SetAllSavings(MyAllSavings);
                 }
             });
             MyIncomeCommand = ReactiveCommand.Create(async () =>
@@ -93,7 +97,7 @@ namespace MoneyNote
                 if (!string.IsNullOrEmpty(summ))
                 {
                     MyIncome = decimal.Parse(summ);
-                    moneyService.SetAllIncome(MyIncome);
+                    _moneyService.SetAllIncome(MyIncome);
                 }
             });
             MyOutlayCommand = ReactiveCommand.Create(async () =>
@@ -102,7 +106,7 @@ namespace MoneyNote
                 if (!string.IsNullOrEmpty(summ))
                 {
                     MyOutlay = decimal.Parse(summ);
-                    moneyService.SetAllOutlay(MyOutlay);
+                    _moneyService.SetAllOutlay(MyOutlay);
                 }
             });
             MySavingsCommand = ReactiveCommand.Create(async () =>
@@ -111,27 +115,22 @@ namespace MoneyNote
                 if (!string.IsNullOrEmpty(summ))
                 {
                     MySavings = decimal.Parse(summ);
-                    moneyService.SetAllSavings(MyAllSavings);
+                    _moneyService.SetAllSavings(MyAllSavings);
                 }
             });
         }
 
         private void GetData()
         {
-            MyCash = moneyService.GetCurrentCash();
-            MyCard = moneyService.GetCurrentCard();
+            MyCash = _moneyService.GetCurrentCash();
+            MyCard = _moneyService.GetCurrentCard();
             MyCurrent = MyCash + MyCard;
-            MyIncome = moneyService.GetCurrentIncome();
-            MyAllIncome = moneyService.GetAllIncome();
-            MyOutlay = moneyService.GetCurrentOutlay();
-            MyAllOutlay = moneyService.GetAllOutlay();
-            MySavings = moneyService.GetCurrentSavings();
-            MyAllSavings = moneyService.GetAllSavings();
-        }
-
-        private void ShowMessage(string message)
-        {
-            Application.Current.MainPage.DisplayAlert("Message", message, "", "ok");
+            MyIncome = _moneyService.GetCurrentIncome();
+            MyAllIncome = _moneyService.GetAllIncome();
+            MyOutlay = _moneyService.GetCurrentOutlay();
+            MyAllOutlay = _moneyService.GetAllOutlay();
+            MySavings = _moneyService.GetCurrentSavings();
+            MyAllSavings = _moneyService.GetAllSavings();
         }
     }
 }
