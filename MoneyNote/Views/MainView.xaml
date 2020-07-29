@@ -16,37 +16,41 @@
         Margin="0"
         BackgroundColor="{StaticResource ListBackColor}"
         Spacing="0">
-        <Grid Margin="10,5,10,0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <Label
-                FontSize="Title"
-                HorizontalOptions="Center"
-                Text="{Binding Strings[app_name]}" />
-            <Image
-                Margin="0,30,0,0"
-                Aspect="AspectFit"
-                HeightRequest="100"
-                Source="logo.png"
-                VerticalOptions="Start" />
-        </Grid>
-        <StackLayout Margin="10,0" Orientation="Horizontal">
+
+        <StackLayout Orientation="Horizontal" Spacing="0">
+            <Grid Margin="10,5,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Label FontSize="Title" Text="{Binding Strings[app_name]}" />
+                <Image
+                    Margin="0,30,0,0"
+                    Aspect="AspectFit"
+                    HeightRequest="100"
+                    Source="logo.png"
+                    VerticalOptions="Start" />
+            </Grid>
             <StackLayout
-                Grid.Column="0"
-                Margin="10,0"
-                Orientation="Vertical">
-                <Label Text="{Binding Strings[current_cash]}" />
-                <Label Text="{Binding CurrentCash}" />
-            </StackLayout>
-            <StackLayout
-                Grid.Column="1"
-                Margin="10,0"
+                Margin="5,40,5,5"
                 HorizontalOptions="EndAndExpand"
                 Orientation="Vertical">
-                <Label HorizontalOptions="EndAndExpand" Text="{Binding Strings[current_card]}" />
-                <Label HorizontalOptions="EndAndExpand" Text="{Binding CurrentCard}" />
+                <StackLayout
+                    Grid.Column="0"
+                    Margin="10,0"
+                    HorizontalOptions="EndAndExpand"
+                    Orientation="Vertical">
+                    <Label HorizontalOptions="EndAndExpand" Text="{Binding Strings[current_cash]}" />
+                    <Label HorizontalOptions="EndAndExpand" Text="{Binding CurrentCash}" />
+                </StackLayout>
+                <StackLayout
+                    Grid.Column="1"
+                    Margin="10,0"
+                    HorizontalOptions="EndAndExpand"
+                    Orientation="Vertical">
+                    <Label HorizontalOptions="EndAndExpand" Text="{Binding Strings[current_card]}" />
+                    <Label HorizontalOptions="EndAndExpand" Text="{Binding CurrentCard}" />
+                </StackLayout>
             </StackLayout>
         </StackLayout>
         <StackLayout
