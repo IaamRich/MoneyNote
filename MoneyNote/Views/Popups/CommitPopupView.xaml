@@ -23,54 +23,69 @@
             EasingOut="SignIn"
         -->
     </popups:PopupPage.Animation>
+
     <Frame HorizontalOptions="Center" VerticalOptions="Center">
-        <StackLayout
-            BackgroundColor="White"
-            HorizontalOptions="Center"
-            Orientation="Vertical"
-            VerticalOptions="Center">
-            <ImageButton
-                BackgroundColor="Transparent"
-                Clicked="Cancel_Button_Clicked"
-                HeightRequest="20"
-                HorizontalOptions="End"
-                Source="close.png"
-                VerticalOptions="Start"
-                WidthRequest="20" />
-            <Entry
-                x:Name="entry"
-                Placeholder="Enter/Miss Description..."
-                PlaceholderColor="Gray" />
-            <StackLayout Orientation="Horizontal" Spacing="0">
-                <Label FontSize="Micro" Text="{Binding Strings[from_cash]}" />
-                <Switch x:Name="cashSwitch" HorizontalOptions="EndAndExpand">
-                    <Switch.Triggers>
-                        <DataTrigger
-                            Binding="{Binding Source={x:Reference cardSwitch}, Path=IsToggled}"
-                            TargetType="Switch"
-                            Value="True">
-                            <Setter Property="IsToggled" Value="False" />
-                        </DataTrigger>
-                    </Switch.Triggers>
-                </Switch>
+        <RelativeLayout>
+            <Image IsVisible="False" Source="right_image_hand.png" />
+            <StackLayout x:Name="this" Orientation="Vertical">
+                <ImageButton
+                    BackgroundColor="Transparent"
+                    Clicked="Cancel_Button_Clicked"
+                    HeightRequest="20"
+                    HorizontalOptions="End"
+                    Source="close.png"
+                    VerticalOptions="Start"
+                    WidthRequest="20" />
+                <Entry
+                    x:Name="entry"
+                    Placeholder="Enter/Miss Description..."
+                    PlaceholderColor="Gray" />
+                <StackLayout Orientation="Horizontal" Spacing="0">
+                    <Label FontSize="Micro" Text="{Binding Strings[from_cash]}" />
+                    <Switch x:Name="cashSwitch" HorizontalOptions="EndAndExpand">
+                        <Switch.Triggers>
+                            <DataTrigger
+                                Binding="{Binding Source={x:Reference cardSwitch}, Path=IsToggled}"
+                                TargetType="Switch"
+                                Value="True">
+                                <Setter Property="IsToggled" Value="False" />
+                            </DataTrigger>
+                        </Switch.Triggers>
+                    </Switch>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="0">
+                    <Label FontSize="Micro" Text="{Binding Strings[from_card]}" />
+                    <Switch x:Name="cardSwitch" HorizontalOptions="EndAndExpand">
+                        <Switch.Triggers>
+                            <DataTrigger
+                                Binding="{Binding Source={x:Reference cashSwitch}, Path=IsToggled}"
+                                TargetType="Switch"
+                                Value="True">
+                                <Setter Property="IsToggled" Value="False" />
+                            </DataTrigger>
+                        </Switch.Triggers>
+                    </Switch>
+                </StackLayout>
+                <Button
+                    BackgroundColor="{StaticResource PopupButton}"
+                    Clicked="Button_Clicked"
+                    Text="{Binding Strings[save]}" />
             </StackLayout>
-            <StackLayout Orientation="Horizontal" Spacing="0">
-                <Label FontSize="Micro" Text="{Binding Strings[from_card]}" />
-                <Switch x:Name="cardSwitch" HorizontalOptions="EndAndExpand">
-                    <Switch.Triggers>
-                        <DataTrigger
-                            Binding="{Binding Source={x:Reference cashSwitch}, Path=IsToggled}"
-                            TargetType="Switch"
-                            Value="True">
-                            <Setter Property="IsToggled" Value="False" />
-                        </DataTrigger>
-                    </Switch.Triggers>
-                </Switch>
-            </StackLayout>
-            <Button
-                BackgroundColor="{StaticResource PopupButton}"
-                Clicked="Button_Clicked"
-                Text="{Binding Strings[save]}" />
-        </StackLayout>
+
+            <Image
+                HeightRequest="50"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,
+                                                                  ElementName=this,
+                                                                  Property=Width,
+                                                                  Factor=0.5,
+                                                                  Constant=-50}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+                                                                  ElementName=this,
+                                                                  Property=Height,
+                                                                  Factor=0.5,
+                                                                  Constant=-50}"
+                Source="left_image_hand.png"
+                WidthRequest="50" />
+        </RelativeLayout>
     </Frame>
 </popups:PopupPage>

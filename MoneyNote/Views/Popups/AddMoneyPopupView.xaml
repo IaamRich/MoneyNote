@@ -78,4 +78,5 @@
                 Text="{Binding Strings[save]}" />
         </StackLayout>
     </Frame>
+
 </popups:PopupPage>
