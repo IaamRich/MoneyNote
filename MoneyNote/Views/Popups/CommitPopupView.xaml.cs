@@ -3,6 +3,7 @@ using System;
 using Plugin.Settings;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
+using SkiaSharp.Views.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace MoneyNote.Views.Popups
@@ -52,6 +53,9 @@ namespace MoneyNote.Views.Popups
             animation.DurationOut = 200;
             animation.ScaleOut = 1;
             return base.OnBackgroundClicked();
+        }
+        private void CanvasView_PaintSurface(object sender, SKPaintSurfaceEventArgs e)
+        {
         }
     }
 }

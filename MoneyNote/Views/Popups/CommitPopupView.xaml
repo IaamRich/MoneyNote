@@ -24,9 +24,13 @@
         -->
     </popups:PopupPage.Animation>
 
-    <Frame HorizontalOptions="Center" VerticalOptions="Center">
-        <RelativeLayout>
-            <Image IsVisible="False" Source="right_image_hand.png" />
+    <Grid ColumnSpacing="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Frame Grid.Column="1" VerticalOptions="Center">
             <StackLayout x:Name="this" Orientation="Vertical">
                 <ImageButton
                     BackgroundColor="Transparent"
@@ -71,21 +75,22 @@
                     Clicked="Button_Clicked"
                     Text="{Binding Strings[save]}" />
             </StackLayout>
-
-            <Image
-                HeightRequest="50"
-                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,
-                                                                  ElementName=this,
-                                                                  Property=Width,
-                                                                  Factor=0.5,
-                                                                  Constant=-50}"
-                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
-                                                                  ElementName=this,
-                                                                  Property=Height,
-                                                                  Factor=0.5,
-                                                                  Constant=-50}"
-                Source="left_image_hand.png"
-                WidthRequest="50" />
-        </RelativeLayout>
-    </Frame>
+        </Frame>
+        <Image
+            Grid.Column="1"
+            Margin="-25,0,0,0"
+            HeightRequest="50"
+            HorizontalOptions="Start"
+            Source="left_image_hand.png"
+            VerticalOptions="Center"
+            WidthRequest="50" />
+        <Image
+            Grid.Column="1"
+            Margin="0,0,-25,0"
+            HeightRequest="50"
+            HorizontalOptions="End"
+            Source="right_image_hand.png"
+            VerticalOptions="Center"
+            WidthRequest="50" />
+    </Grid>
 </popups:PopupPage>
