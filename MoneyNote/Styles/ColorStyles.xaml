@@ -13,6 +13,5 @@
     <Color x:Key="ListBackColor">#e8e8e0</Color>
     <Color x:Key="BoldLabel">#000000</Color>
     <Color x:Key="Links">#00a8d5</Color>
-    <Color x:Key="Experimental">#6a917e</Color>
-
+    <Color x:Key="RedAlert">#ec7788</Color>
 </ResourceDictionary>

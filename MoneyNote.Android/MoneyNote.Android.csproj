@@ -265,5 +265,25 @@
       <Link>Resources\drawable\right_image_hand.png</Link>
     </AndroidResource>
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\..\..\..\Downloads\up_image_hand.png">
+      <Link>Resources\drawable\up_image_hand.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\..\..\..\Downloads\down_image_hand.png">
+      <Link>Resources\drawable\down_image_hand.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\alert.png">
+      <Link>Resources\drawable\alert.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\alert_notique.png">
+      <Link>Resources\drawable\alert_notique.png</Link>
+    </AndroidResource>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

@@ -11,72 +11,99 @@
     <popups:PopupPage.Animation>
         <animations:ScaleAnimation
             x:Name="animation"
-            DurationIn="200"
+            DurationIn="500"
             DurationOut="800"
             HasBackgroundAnimation="True"
             PositionIn="Top"
             PositionOut="Center"
             ScaleIn="1.2"
             ScaleOut="0.4" />
-        <!--
-            EasingIn="SignOut"
-            EasingOut="SignIn"
-        -->
     </popups:PopupPage.Animation>
-    <Frame HorizontalOptions="Center" VerticalOptions="Start">
-        <StackLayout
-            BackgroundColor="White"
+    <Grid ColumnSpacing="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Frame
+            Grid.Column="1"
             HorizontalOptions="Center"
-            Orientation="Vertical"
-            VerticalOptions="Center">
-            <ImageButton
-                BackgroundColor="Transparent"
-                Clicked="Cancel_Button_Clicked"
-                HeightRequest="20"
-                HorizontalOptions="End"
-                Source="close.png"
-                VerticalOptions="Start"
-                WidthRequest="20" />
-            <Entry
-                x:Name="entry"
-                Keyboard="Numeric"
-                Placeholder="Enter Add Amount"
-                PlaceholderColor="Gray" />
-            <Entry
-                x:Name="entryDescription"
-                Placeholder="Enter/Miss Description..."
-                PlaceholderColor="Gray" />
-            <StackLayout Orientation="Horizontal" Spacing="0">
-                <Label FontSize="Micro" Text="{Binding Strings[to_cash]}" />
-                <Switch x:Name="cashSwitch" HorizontalOptions="EndAndExpand">
-                    <Switch.Triggers>
-                        <DataTrigger
-                            Binding="{Binding Source={x:Reference cardSwitch}, Path=IsToggled}"
-                            TargetType="Switch"
-                            Value="True">
-                            <Setter Property="IsToggled" Value="False" />
-                        </DataTrigger>
-                    </Switch.Triggers>
-                </Switch>
+            VerticalOptions="Start">
+            <StackLayout
+                BackgroundColor="White"
+                HorizontalOptions="Center"
+                Orientation="Vertical"
+                VerticalOptions="Center">
+                <ImageButton
+                    BackgroundColor="Transparent"
+                    Clicked="Cancel_Button_Clicked"
+                    HeightRequest="20"
+                    HorizontalOptions="End"
+                    Source="close.png"
+                    VerticalOptions="Start"
+                    WidthRequest="20" />
+                <Entry
+                    x:Name="entry"
+                    Keyboard="Numeric"
+                    Placeholder="Enter Add Amount"
+                    PlaceholderColor="Gray" />
+                <Entry
+                    x:Name="entryDescription"
+                    Placeholder="Enter/Miss Description..."
+                    PlaceholderColor="Gray" />
+                <StackLayout Orientation="Horizontal" Spacing="0">
+                    <Label FontSize="Micro" Text="{Binding Strings[to_cash]}" />
+                    <Switch x:Name="cashSwitch" HorizontalOptions="EndAndExpand">
+                        <Switch.Triggers>
+                            <DataTrigger
+                                Binding="{Binding Source={x:Reference cardSwitch}, Path=IsToggled}"
+                                TargetType="Switch"
+                                Value="True">
+                                <Setter Property="IsToggled" Value="False" />
+                            </DataTrigger>
+                        </Switch.Triggers>
+                    </Switch>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="0">
+                    <Label FontSize="Micro" Text="{Binding Strings[to_card]}" />
+                    <Switch x:Name="cardSwitch" HorizontalOptions="EndAndExpand">
+                        <Switch.Triggers>
+                            <DataTrigger
+                                Binding="{Binding Source={x:Reference cashSwitch}, Path=IsToggled}"
+                                TargetType="Switch"
+                                Value="True">
+                                <Setter Property="IsToggled" Value="False" />
+                            </DataTrigger>
+                        </Switch.Triggers>
+                    </Switch>
+                </StackLayout>
+                <Button
+                    BackgroundColor="{StaticResource PopupButton}"
+                    Clicked="Button_Clicked"
+                    Text="{Binding Strings[save]}" />
             </StackLayout>
-            <StackLayout Orientation="Horizontal" Spacing="0">
-                <Label FontSize="Micro" Text="{Binding Strings[to_card]}" />
-                <Switch x:Name="cardSwitch" HorizontalOptions="EndAndExpand">
-                    <Switch.Triggers>
-                        <DataTrigger
-                            Binding="{Binding Source={x:Reference cashSwitch}, Path=IsToggled}"
-                            TargetType="Switch"
-                            Value="True">
-                            <Setter Property="IsToggled" Value="False" />
-                        </DataTrigger>
-                    </Switch.Triggers>
-                </Switch>
-            </StackLayout>
-            <Button
-                BackgroundColor="{StaticResource PopupButton}"
-                Clicked="Button_Clicked"
-                Text="{Binding Strings[save]}" />
-        </StackLayout>
-    </Frame>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="PlugForGridGesture" />
+            </Frame.GestureRecognizers>
+        </Frame>
+
+        <Image
+            x:Name="downHand"
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="0,-25,0,0"
+            Aspect="AspectFit"
+            HorizontalOptions="Center"
+            Source="down_image_hand.png"
+            VerticalOptions="Start"
+            WidthRequest="50" />
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="Cancel_Button_Clicked" />
+        </Grid.GestureRecognizers>
+    </Grid>
 
 </popups:PopupPage>

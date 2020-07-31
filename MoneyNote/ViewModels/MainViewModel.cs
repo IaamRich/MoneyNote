@@ -73,14 +73,22 @@ namespace MoneyNote
 
         private async void OnAdd()
         {
-            await PopupNavigation.Instance.PushAsync(new CommitPopupView(OnAddFunc), true);
+            if (String.IsNullOrWhiteSpace(SpendValue) || SpendValue[0] == '.' || SpendValue[0] == '0')
+            {
+                if (SpendValue[0] == '0')
+                {
+                    await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value_zero"]), true);
+                }
+                else await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
+            }
+            else await PopupNavigation.Instance.PushAsync(new CommitPopupView(OnAddFunc), true);
         }
         private async void OnAddFunc()
         {
             SpendDescription = CrossSettings.Current.GetValueOrDefault("CommitMessage", "");
             Spend item = new Spend
             {
-                Amount = int.Parse(SpendValue),
+                Amount = decimal.Parse(SpendValue),
                 WhereText = SpendDescription,
                 TransactionDate = DateTime.Now
             };
