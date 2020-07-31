@@ -110,65 +110,10 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\logo.png">
-      <Link>Resources\drawable\logo.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\MoneyNote\MoneyNote.csproj">
       <Project>{E9828FCA-0A09-4A2B-A6DD-7A7C3C59E090}</Project>
       <Name>MoneyNote</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\hamburger.png">
-      <Link>Resources\drawable\hamburger.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\xamarin_logo.png">
-      <Link>Resources\drawable\xamarin_logo.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\about.png">
-      <Link>Resources\drawable\about.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\history.png">
-      <Link>Resources\drawable\history.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\main.png">
-      <Link>Resources\drawable\main.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\settings.png">
-      <Link>Resources\drawable\settings.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\terms.png">
-      <Link>Resources\drawable\terms.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\account.png">
-      <Link>Resources\drawable\account.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\hamburger_white.png">
-      <Link>Resources\drawable\hamburger_white.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\splash.png">
-      <Link>Resources\drawable\splash.png</Link>
-    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
@@ -186,43 +131,28 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\md.png">
-      <Link>Resources\drawable\md.png</Link>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\about.png">
+      <Link>Resources\drawable\about.png</Link>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\ru.png">
-      <Link>Resources\drawable\ru.png</Link>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\account.png">
+      <Link>Resources\drawable\account.png</Link>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\fr.png">
-      <Link>Resources\drawable\fr.png</Link>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\alert.png">
+      <Link>Resources\drawable\alert.png</Link>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\it.png">
-      <Link>Resources\drawable\it.png</Link>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\alert_notique.png">
+      <Link>Resources\drawable\alert_notique.png</Link>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\de.png">
-      <Link>Resources\drawable\de.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\zh.png">
-      <Link>Resources\drawable\zh.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\en.png">
-      <Link>Resources\drawable\en.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\plus.png">
-      <Link>Resources\drawable\plus.png</Link>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\back.png">
+      <Link>Resources\drawable\back.png</Link>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
@@ -236,23 +166,48 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\selected.png">
-      <Link>Resources\drawable\selected.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\unselected.png">
-      <Link>Resources\drawable\unselected.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\back.png">
-      <Link>Resources\drawable\back.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="..\MoneyNote\Resources\Images\close.png">
       <Link>Resources\drawable\close.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\de.png">
+      <Link>Resources\drawable\de.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\down_image_hand.png">
+      <Link>Resources\drawable\down_image_hand.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\en.png">
+      <Link>Resources\drawable\en.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\fr.png">
+      <Link>Resources\drawable\fr.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\hamburger.png">
+      <Link>Resources\drawable\hamburger.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\hamburger_white.png">
+      <Link>Resources\drawable\hamburger_white.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\history.png">
+      <Link>Resources\drawable\history.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\it.png">
+      <Link>Resources\drawable\it.png</Link>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
@@ -261,28 +216,78 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\logo.png">
+      <Link>Resources\drawable\logo.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\Logo2.png">
+      <Link>Resources\drawable\Logo2.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\main.png">
+      <Link>Resources\drawable\main.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\md.png">
+      <Link>Resources\drawable\md.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\plus.png">
+      <Link>Resources\drawable\plus.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
     <AndroidResource Include="..\MoneyNote\Resources\Images\right_image_hand.png">
       <Link>Resources\drawable\right_image_hand.png</Link>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="..\..\..\..\Downloads\up_image_hand.png">
+    <AndroidResource Include="..\MoneyNote\Resources\Images\ru.png">
+      <Link>Resources\drawable\ru.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\selected.png">
+      <Link>Resources\drawable\selected.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\settings.png">
+      <Link>Resources\drawable\settings.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\splash.png">
+      <Link>Resources\drawable\splash.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\terms.png">
+      <Link>Resources\drawable\terms.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\unselected.png">
+      <Link>Resources\drawable\unselected.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\up_image_hand.png">
       <Link>Resources\drawable\up_image_hand.png</Link>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="..\..\..\..\Downloads\down_image_hand.png">
-      <Link>Resources\drawable\down_image_hand.png</Link>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\xamarin_logo.png">
+      <Link>Resources\drawable\xamarin_logo.png</Link>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\alert.png">
-      <Link>Resources\drawable\alert.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\alert_notique.png">
-      <Link>Resources\drawable\alert_notique.png</Link>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\zh.png">
+      <Link>Resources\drawable\zh.png</Link>
     </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

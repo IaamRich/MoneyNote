@@ -73,14 +73,15 @@ namespace MoneyNote
 
         private async void OnAdd()
         {
-            if (String.IsNullOrWhiteSpace(SpendValue) || SpendValue[0] == '.' || SpendValue[0] == '0')
+            if (String.IsNullOrEmpty(SpendValue))
             {
-                if (SpendValue[0] == '0')
-                {
-                    await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value_zero"]), true);
-                }
-                else await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
+                await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
             }
+            else if (SpendValue[0] == '0')
+            {
+                await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value_zero"]), true);
+            }
+            else if (SpendValue[0] == '.') await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
             else await PopupNavigation.Instance.PushAsync(new CommitPopupView(OnAddFunc), true);
         }
         private async void OnAddFunc()
