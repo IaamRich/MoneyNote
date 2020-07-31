@@ -19,7 +19,7 @@
                         <RowDefinition Height="56" />
                     </Grid.RowDefinitions>
                     <BoxView Grid.ColumnSpan="2" BackgroundColor="{StaticResource MainGreen}" />
-                    <Grid Grid.Column="0" Padding="5,10">
+                    <Grid Grid.Column="0" ColumnSpacing="20">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="30" />
                             <ColumnDefinition Width="*" />

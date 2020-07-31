@@ -1,8 +1,9 @@
-﻿using Plugin.Settings;
+﻿using MoneyNote.Services.Contracts;
+using Plugin.Settings;
 
 namespace MoneyNote.Services
 {
-    public class MoneyService
+    public class MoneyService : IMoneyService
     {
         public decimal GetCurrentCash()
         {

@@ -1,4 +1,5 @@
 ﻿//using MoneyNote.Views;
+using MoneyNote.Services;
 using ReactiveUI;
 using Splat;
 
@@ -54,10 +55,10 @@ namespace MoneyNote
         {
             // Here, we use contracts to distinguish which routable view model we want to instantiate.
             // This helps us avoid a manual cast to IRoutableViewModel when calling Router.Navigate.Execute(...)
-            Locator.CurrentMutable.Register(() => new MainViewModel(), typeof(IRoutableViewModel), typeof(MainViewModel).FullName);
-            Locator.CurrentMutable.Register(() => new AccountViewModel(), typeof(IRoutableViewModel), typeof(AccountViewModel).FullName);
-            Locator.CurrentMutable.Register(() => new SettingsViewModel(), typeof(IRoutableViewModel), typeof(SettingsViewModel).FullName);
-            Locator.CurrentMutable.Register(() => new HistoryViewModel(), typeof(IRoutableViewModel), typeof(HistoryViewModel).FullName);
+            Locator.CurrentMutable.Register(() => new MainViewModel(new SpendService(), new MoneyService()), typeof(IRoutableViewModel), typeof(MainViewModel).FullName);
+            Locator.CurrentMutable.Register(() => new AccountViewModel(new MoneyService()), typeof(IRoutableViewModel), typeof(AccountViewModel).FullName);
+            Locator.CurrentMutable.Register(() => new SettingsViewModel(new SpendService(), new MoneyService(), new SettingsService()), typeof(IRoutableViewModel), typeof(SettingsViewModel).FullName);
+            Locator.CurrentMutable.Register(() => new HistoryViewModel(new SpendService()), typeof(IRoutableViewModel), typeof(HistoryViewModel).FullName);
             Locator.CurrentMutable.Register(() => new TermsViewModel(), typeof(IRoutableViewModel), typeof(TermsViewModel).FullName);
             Locator.CurrentMutable.Register(() => new AboutViewModel(), typeof(IRoutableViewModel), typeof(AboutViewModel).FullName);
         }

@@ -22,6 +22,8 @@ all_outlay = All Outlay:
 savings = Savings:
 month_saving = This month savings:
 all_saving = All time savings:
+title_current_savings = Change Current Savings Manually:
+alert_current_savings = Be carrefull, this function will delete current savings record
 
 /* History Page */
 all = All
@@ -91,3 +93,7 @@ menu_history = History
 menu_terms = Terms
 menu_about = About
 menu_footer = © Sapec Software 2020
+
+/* Alerts */
+alert_no_value = Enter some value!
+alert_no_value_zero = First digit must not be zero!

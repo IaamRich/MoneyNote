@@ -4,6 +4,7 @@ using I18NPortable;
 using MoneyNote.Models;
 using MoneyNote.Resources.Images;
 using MoneyNote.Services;
+using MoneyNote.Services.Contracts;
 using ReactiveUI;
 using Splat;
 using Xamarin.Forms;
@@ -13,9 +14,9 @@ namespace MoneyNote
     public class SettingsViewModel : ReactiveObject, IRoutableViewModel
     {
         //Used Services
-        private static MoneyService moneyService;
-        private static SpendService spendService;
-        private static SettingsService settingsService;
+        private static IMoneyService _moneyService;
+        private static ISpendService _spendService;
+        private static ISettingsService _settingsService;
         //Language List
         public ObservableCollection<Language> LanguagesList { get; set; }
         public ImageSource LanguageImage { get; set; }
@@ -35,30 +36,30 @@ namespace MoneyNote
         public II18N Strings => I18N.Current;
         public string UrlPathSegment => Strings["menu_settings"];
         public IScreen HostScreen { get; }
-        public SettingsViewModel(IScreen screen = null)
+        public SettingsViewModel(ISpendService spendService, IMoneyService moneyService, ISettingsService settingsService, IScreen screen = null)
         {
             //main
             HostScreen = screen ?? Locator.Current.GetService<IScreen>();
-            spendService = new SpendService();
-            moneyService = new MoneyService();
-            settingsService = new SettingsService();
+            _spendService = spendService;
+            _moneyService = moneyService;
+            _settingsService = settingsService;
             //get language
             GetLanguages();
-            Sounds = settingsService.GetSoundsSettings();
-            AreaCash = settingsService.GetDefaultSpendingAreaSettings() == 0 ? true : false;
+            Sounds = _settingsService.GetSoundsSettings();
+            AreaCash = _settingsService.GetDefaultSpendingAreaSettings() == 0 ? true : false;
             AreaCard = !AreaCash;
             //commands
             SoundsCommand = ReactiveCommand.Create(() =>
             {
                 Sounds = !Sounds;
-                settingsService.SetSoundsSettings(Sounds);
+                _settingsService.SetSoundsSettings(Sounds);
             });
             AreaByDefaultCommand = ReactiveCommand.Create(() =>
             {
                 AreaCash = !AreaCash;
                 AreaCard = !AreaCard;
-                if (AreaCash) settingsService.SetDefaultSpendingAreaSettings(0);
-                else settingsService.SetDefaultSpendingAreaSettings(1);
+                if (AreaCash) _settingsService.SetDefaultSpendingAreaSettings(0);
+                else _settingsService.SetDefaultSpendingAreaSettings(1);
 
             });
             ResetAll = ReactiveCommand.Create(() =>
@@ -72,13 +73,13 @@ namespace MoneyNote
             ImageCommand = new Command(ImageCommandFunc);
             GoAccount = ReactiveCommand.CreateFromObservable(() =>
             {
-                return HostScreen.Router.Navigate.Execute(new AccountViewModel("From Settings"));
+                return HostScreen.Router.Navigate.Execute(new AccountViewModel(new MoneyService(), message: "From Settings"));
             });
         }
         private async void ResetAllMethod()
         {
-            moneyService.DeleteAllMoneyNotes();
-            await spendService.DeleteAll();
+            _moneyService.DeleteAllMoneyNotes();
+            await _spendService.DeleteAll();
             await Application.Current.MainPage.DisplayAlert("Method", "ResetAll is done", "Cancel", "ok");
         }
         private void GetLanguages()
@@ -94,7 +95,7 @@ namespace MoneyNote
                 new Language { Id = 6, Sign = "zh-CN", Name = "Chinese", Image = "zh.png" }
             };
 
-            CurrentLang = settingsService.GetCurrentLanguage();
+            CurrentLang = _settingsService.GetCurrentLanguage();
             switch (CurrentLang)
             {
                 case 1:
@@ -153,7 +154,7 @@ namespace MoneyNote
                     CurrentLang = 0;
                     break;
             }
-            settingsService.SetCurrentLanguage(CurrentLang);
+            _settingsService.SetCurrentLanguage(CurrentLang);
         }
     }
 }

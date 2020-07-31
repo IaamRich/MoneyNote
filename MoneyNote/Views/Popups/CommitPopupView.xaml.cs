@@ -3,6 +3,7 @@ using System;
 using Plugin.Settings;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
+using SkiaSharp.Views.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace MoneyNote.Views.Popups
@@ -11,9 +12,11 @@ namespace MoneyNote.Views.Popups
     public partial class CommitPopupView : PopupPage
     {
         public Action ActionAfter { get; set; }
+        public bool IsCancelPressed { get; set; }
         public CommitPopupView(Action act)
         {
             InitializeComponent();
+            downHand.IsVisible = false;
             switch (CrossSettings.Current.GetValueOrDefault("IdSpendFromWhere", 0))
             {
                 case 1:
@@ -25,33 +28,79 @@ namespace MoneyNote.Views.Popups
             }
             ActionAfter = act;
         }
-
         private void Button_Clicked(object sender, System.EventArgs e)
         {
-            var result = entry.Text;
-            if (String.IsNullOrWhiteSpace(entry.Text)) result = "Missed";
-            CrossSettings.Current.AddOrUpdateValue("CommitMessage", result);
-            CrossSettings.Current.AddOrUpdateValue("CurrentCommitMoneyFrom", FuncMoneyFrom());
+            if (!IsCancelPressed)
+            {
+                var result = entry.Text;
+                if (String.IsNullOrWhiteSpace(entry.Text)) result = "Missed";
+                CrossSettings.Current.AddOrUpdateValue("CommitMessage", result);
+                CrossSettings.Current.AddOrUpdateValue("CurrentCommitMoneyFrom", FuncMoneyFrom());
 
-            PopupNavigation.Instance.PopAsync(true);
-            ActionAfter?.Invoke();
+                PopupNavigation.Instance.PopAsync(true);
+                ActionAfter?.Invoke();
+            }
+
         }
-
         private int FuncMoneyFrom()
         {
             if (cashSwitch.IsToggled) return 0; else return 1;
         }
         private void Cancel_Button_Clicked(object sender, System.EventArgs e)
         {
+            IsCancelPressed = true;
+            downHand.IsVisible = true;
+            leftHand.IsVisible = false;
+            rightHand.IsVisible = false;
             OnBackgroundClicked();
             PopupNavigation.Instance.PopAsync(true);
         }
+        private void CanvasView_PaintSurface(object sender, SKPaintSurfaceEventArgs e)
+        {
+        }
+        // Invoked when background is clicked
         protected override bool OnBackgroundClicked()
         {
+            IsCancelPressed = true;
+            downHand.IsVisible = true;
             animation.PositionOut = Rg.Plugins.Popup.Enums.MoveAnimationOptions.Bottom;
-            animation.DurationOut = 200;
+            //animation.DurationOut = 200;
             animation.ScaleOut = 1;
             return base.OnBackgroundClicked();
+        }
+        // Invoked before an animation disappearing
+        protected override void OnDisappearingAnimationBegin()
+        {
+            base.OnDisappearingAnimationBegin();
+            if (!IsCancelPressed)
+            {
+                leftHand.IsVisible = true;
+                rightHand.IsVisible = true;
+            }
+        }
+        // Invoked after an animation disappearing
+        protected override void OnDisappearingAnimationEnd()
+        {
+            base.OnDisappearingAnimationEnd();
+            leftHand.IsVisible = false;
+            rightHand.IsVisible = false;
+        }
+        // Invoked before an animation appearing
+        protected override void OnAppearingAnimationBegin()
+        {
+            base.OnAppearingAnimationBegin();
+            upHand.IsVisible = true;
+
+        }
+        // Invoked after an animation appearing
+        protected override void OnAppearingAnimationEnd()
+        {
+            base.OnAppearingAnimationEnd();
+            upHand.IsVisible = false;
+        }
+        private void PlugForGridGesture(object sender, EventArgs e)
+        {
+            //dont delete this method for unclosing popup when it tapped on empty space
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <popups:PopupPage
-    x:Class="MoneyNote.Views.Popups.AddMoneyPopupView"
+    x:Class="MoneyNote.Views.Popups.AccountChangePopupView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
@@ -12,12 +12,12 @@
         <animations:ScaleAnimation
             x:Name="animation"
             DurationIn="500"
-            DurationOut="800"
+            DurationOut="1000"
             HasBackgroundAnimation="True"
-            PositionIn="Top"
-            PositionOut="Center"
-            ScaleIn="1.2"
-            ScaleOut="0.1" />
+            PositionIn="Bottom"
+            PositionOut="Top"
+            ScaleIn="3"
+            ScaleOut="0.3" />
     </popups:PopupPage.Animation>
     <Grid ColumnSpacing="0">
         <Grid.ColumnDefinitions>
@@ -26,75 +26,53 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Frame
+            Grid.Row="1"
             Grid.Column="1"
-            HorizontalOptions="Center"
-            VerticalOptions="Start">
-            <StackLayout
-                BackgroundColor="White"
-                HorizontalOptions="Center"
-                Orientation="Vertical"
-                VerticalOptions="Center">
+            VerticalOptions="Center">
+            <StackLayout x:Name="this" Orientation="Vertical">
+
                 <ImageButton
+                    Aspect="AspectFit"
                     BackgroundColor="Transparent"
                     Clicked="Cancel_Button_Clicked"
                     HeightRequest="20"
                     HorizontalOptions="End"
                     Source="close.png"
-                    VerticalOptions="Start"
-                    WidthRequest="20" />
+                    VerticalOptions="Start" />
+                <Image
+                    Aspect="AspectFit"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    Source="alert.png" />
+                <Label
+                    x:Name="title"
+                    FontSize="Body"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center" />
+                <Label x:Name="alertMessage" FontSize="Small" />
                 <Entry
                     x:Name="entry"
+                    HorizontalOptions="Center"
                     HorizontalTextAlignment="Center"
                     Keyboard="Numeric"
-                    Placeholder="Enter Add Amount"
-                    PlaceholderColor="Gray" />
-                <Entry
-                    x:Name="entryDescription"
-                    Placeholder="Enter/Miss Description..."
-                    PlaceholderColor="Gray" />
-                <StackLayout Orientation="Horizontal" Spacing="0">
-                    <Label FontSize="Micro" Text="{Binding Strings[to_cash]}" />
-                    <Switch x:Name="cashSwitch" HorizontalOptions="EndAndExpand">
-                        <Switch.Triggers>
-                            <DataTrigger
-                                Binding="{Binding Source={x:Reference cardSwitch}, Path=IsToggled}"
-                                TargetType="Switch"
-                                Value="True">
-                                <Setter Property="IsToggled" Value="False" />
-                            </DataTrigger>
-                        </Switch.Triggers>
-                    </Switch>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal" Spacing="0">
-                    <Label FontSize="Micro" Text="{Binding Strings[to_card]}" />
-                    <Switch x:Name="cardSwitch" HorizontalOptions="EndAndExpand">
-                        <Switch.Triggers>
-                            <DataTrigger
-                                Binding="{Binding Source={x:Reference cashSwitch}, Path=IsToggled}"
-                                TargetType="Switch"
-                                Value="True">
-                                <Setter Property="IsToggled" Value="False" />
-                            </DataTrigger>
-                        </Switch.Triggers>
-                    </Switch>
-                </StackLayout>
+                    Placeholder="Enter Value" />
                 <Button
-                    BackgroundColor="{StaticResource PopupButton}"
+                    Grid.Row="3"
                     Clicked="Button_Clicked"
-                    Text="{Binding Strings[save]}" />
+                    Text="Save" />
             </StackLayout>
             <Frame.GestureRecognizers>
                 <TapGestureRecognizer Tapped="PlugForGridGesture" />
             </Frame.GestureRecognizers>
         </Frame>
-
         <Image
             x:Name="leftHand"
-            Grid.Row="0"
+            Grid.Row="1"
             Grid.Column="1"
             Margin="-25,0,0,0"
             HeightRequest="50"
@@ -105,7 +83,7 @@
             WidthRequest="50" />
         <Image
             x:Name="rightHand"
-            Grid.Row="0"
+            Grid.Row="1"
             Grid.Column="1"
             Margin="0,0,-25,0"
             HeightRequest="50"
@@ -115,18 +93,30 @@
             VerticalOptions="Center"
             WidthRequest="50" />
         <Image
+            x:Name="upHand"
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="0,0,0,-25"
+            HeightRequest="50"
+            HorizontalOptions="Center"
+            IsVisible="False"
+            Source="up_image_hand.png"
+            VerticalOptions="End"
+            WidthRequest="50" />
+        <Image
             x:Name="downHand"
-            Grid.Row="1"
+            Grid.Row="2"
             Grid.Column="1"
             Margin="0,-25,0,0"
-            Aspect="AspectFit"
+            HeightRequest="50"
             HorizontalOptions="Center"
+            IsVisible="False"
             Source="down_image_hand.png"
             VerticalOptions="Start"
             WidthRequest="50" />
+
         <Grid.GestureRecognizers>
             <TapGestureRecognizer Tapped="Cancel_Button_Clicked" />
         </Grid.GestureRecognizers>
     </Grid>
-
 </popups:PopupPage>

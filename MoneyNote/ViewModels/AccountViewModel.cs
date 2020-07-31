@@ -1,7 +1,11 @@
-﻿using System.Windows.Input;
+﻿using System;
+using System.Windows.Input;
 using I18NPortable;
-using MoneyNote.Services;
+using MoneyNote.Services.Contracts;
+using MoneyNote.Views.Popups;
+using Plugin.Settings;
 using ReactiveUI;
+using Rg.Plugins.Popup.Services;
 using Splat;
 using Xamarin.Forms;
 
@@ -10,9 +14,12 @@ namespace MoneyNote
     public class AccountViewModel : ReactiveObject, IRoutableViewModel
     {
 
-        private static MoneyService moneyService;
+        private static IMoneyService _moneyService;
         public II18N Strings => I18N.Current;
         public string UrlPathSegment => Strings["menu_account"];
+        private string _message;
+        private string message;
+
         public IScreen HostScreen { get; }
         public ICommand MyCashCommand { get; set; }
         public ICommand MyCardCommand { get; set; }
@@ -31,107 +38,125 @@ namespace MoneyNote
         public decimal MyAllOutlay { get; set; }
         public decimal MySavings { get; set; }
         public decimal MyAllSavings { get; set; }
-        public AccountViewModel(string message = null, IScreen screen = null)
+        public AccountViewModel(IMoneyService moneyService, string message = null, IScreen screen = null)
         {
+            _message = message;
             HostScreen = screen ?? Locator.Current.GetService<IScreen>();
-            if (!string.IsNullOrEmpty(message)) ShowMessage(message);
-            moneyService = new MoneyService();
+            if (!string.IsNullOrEmpty(_message)) Application.Current.MainPage.DisplayAlert("Message", message, "", "ok"); ;
+            _moneyService = moneyService;
 
             GetData();
             MyCashCommand = ReactiveCommand.Create(async () =>
             {
                 string summ = await Application.Current.MainPage.DisplayPromptAsync("Change My Cash Manually:", "Be carrefull, this function will delete current cash record");
-                if (!string.IsNullOrEmpty(summ))
+                if (CheckStringForValue(summ))
                 {
                     var oldcash = MyCash;
                     MyCash = decimal.Parse(summ);
-                    moneyService.SetCurrentCash(MyCash);
+                    _moneyService.SetCurrentCash(MyCash);
                     MyCurrent = MyCurrent - oldcash + MyCash;
                 }
             });
             MyCardCommand = ReactiveCommand.Create(async () =>
             {
                 string summ = await Application.Current.MainPage.DisplayPromptAsync("Change My Card Manually:", "Be carrefull, this function will delete current card record");
-                if (!string.IsNullOrEmpty(summ))
+                if (CheckStringForValue(summ))
                 {
                     var oldcard = MyCard;
                     MyCard = decimal.Parse(summ);
-                    moneyService.SetCurrentCard(MyCard);
+                    _moneyService.SetCurrentCard(MyCard);
                     MyCurrent = MyCurrent - oldcard + MyCard;
                 }
             });
             MyAllIncomeCommand = ReactiveCommand.Create(async () =>
             {
-                string summ = await Application.Current.MainPage.DisplayPromptAsync("Change My Income Manually:", "Be carrefull, this function will delete current income record");
-                if (!string.IsNullOrEmpty(summ))
+                string summ = await Application.Current.MainPage.DisplayPromptAsync("Change My All Income Manually:", "Be carrefull, this function will delete all income record");
+                if (CheckStringForValue(summ))
                 {
                     MyAllIncome = decimal.Parse(summ);
-                    moneyService.SetAllIncome(MyAllIncome);
+                    _moneyService.SetAllIncome(MyAllIncome);
                 }
             });
             MyAllOutlayCommand = ReactiveCommand.Create(async () =>
             {
-                string summ = await Application.Current.MainPage.DisplayPromptAsync("Change My Outlay Manually:", "Be carrefull, this function will delete current outlay record");
-                if (!string.IsNullOrEmpty(summ))
+                string summ = await Application.Current.MainPage.DisplayPromptAsync("Change My All Outlay Manually:", "Be carrefull, this function will delete all outlay record");
+                if (CheckStringForValue(summ))
                 {
                     MyAllOutlay = decimal.Parse(summ);
-                    moneyService.SetAllOutlay(MyAllOutlay);
+                    _moneyService.SetAllOutlay(MyAllOutlay);
                 }
             });
             MyAllSavingsCommand = ReactiveCommand.Create(async () =>
             {
-                string summ = await Application.Current.MainPage.DisplayPromptAsync("Change All Savings Manually:", "Be carrefull, this function will delete current all savings record");
-                if (!string.IsNullOrEmpty(summ))
+                string summ = await Application.Current.MainPage.DisplayPromptAsync("Change All Savings Manually:", "Be carrefull, this function will delete all savings record");
+                if (CheckStringForValue(summ))
                 {
                     MyAllSavings = decimal.Parse(summ);
-                    moneyService.SetAllSavings(MyAllSavings);
+                    _moneyService.SetAllSavings(MyAllSavings);
                 }
             });
             MyIncomeCommand = ReactiveCommand.Create(async () =>
             {
-                string summ = await Application.Current.MainPage.DisplayPromptAsync("Change My Income Manually:", "Be carrefull, this function will delete current income record");
-                if (!string.IsNullOrEmpty(summ))
+                string summ = await Application.Current.MainPage.DisplayPromptAsync("Change My Current Income Manually:", "Be carrefull, this function will delete current income record");
+                if (CheckStringForValue(summ))
                 {
                     MyIncome = decimal.Parse(summ);
-                    moneyService.SetAllIncome(MyIncome);
+                    _moneyService.SetCurrentIncome(MyIncome);
                 }
             });
             MyOutlayCommand = ReactiveCommand.Create(async () =>
             {
-                string summ = await Application.Current.MainPage.DisplayPromptAsync("Change My Outlay Manually:", "Be carrefull, this function will delete current outlay record");
-                if (!string.IsNullOrEmpty(summ))
+                string summ = await Application.Current.MainPage.DisplayPromptAsync("Change My Current Outlay Manually:", "Be carrefull, this function will delete current outlay record");
+                if (CheckStringForValue(summ))
                 {
                     MyOutlay = decimal.Parse(summ);
-                    moneyService.SetAllOutlay(MyOutlay);
+                    _moneyService.SetCurrentOutlay(MyOutlay);
                 }
             });
             MySavingsCommand = ReactiveCommand.Create(async () =>
             {
-                string summ = await Application.Current.MainPage.DisplayPromptAsync("Change All Savings Manually:", "Be carrefull, this function will delete current all savings record");
-                if (!string.IsNullOrEmpty(summ))
-                {
-                    MySavings = decimal.Parse(summ);
-                    moneyService.SetAllSavings(MyAllSavings);
-                }
+                await PopupNavigation.Instance.PushAsync(new AccountChangePopupView(OnMySavingsFunc, Strings["title_current_savings"], Strings["alert_current_savings"]), true);
             });
         }
-
+        private async void OnMySavingsFunc()
+        {
+            var result = CrossSettings.Current.GetValueOrDefault("CurrentAccountPopupValue", "");
+            if (CheckStringForValue(result))
+            {
+                MySavings = decimal.Parse(result);
+                _moneyService.SetCurrentSavings(MySavings);
+            }
+        }
         private void GetData()
         {
-            MyCash = moneyService.GetCurrentCash();
-            MyCard = moneyService.GetCurrentCard();
+            MyCash = _moneyService.GetCurrentCash();
+            MyCard = _moneyService.GetCurrentCard();
             MyCurrent = MyCash + MyCard;
-            MyIncome = moneyService.GetCurrentIncome();
-            MyAllIncome = moneyService.GetAllIncome();
-            MyOutlay = moneyService.GetCurrentOutlay();
-            MyAllOutlay = moneyService.GetAllOutlay();
-            MySavings = moneyService.GetCurrentSavings();
-            MyAllSavings = moneyService.GetAllSavings();
+            MyIncome = _moneyService.GetCurrentIncome();
+            MyAllIncome = _moneyService.GetAllIncome();
+            MyOutlay = _moneyService.GetCurrentOutlay();
+            MyAllOutlay = _moneyService.GetAllOutlay();
+            MySavings = _moneyService.GetCurrentSavings();
+            MyAllSavings = _moneyService.GetAllSavings();
         }
-
-        private void ShowMessage(string message)
+        private bool CheckStringForValue(string str)
         {
-            Application.Current.MainPage.DisplayAlert("Message", message, "", "ok");
+            if (String.IsNullOrEmpty(str))
+            {
+                PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
+                return false;
+            }
+            else if (str[0] == '0')
+            {
+                PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value_zero"]), true);
+                return false;
+            }
+            else if (str[0] == '.')
+            {
+                PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
+                return false;
+            }
+            return true;
         }
     }
 }

@@ -1,12 +1,23 @@
-﻿using System.Threading.Tasks;
-using MoneyNote.Models;
-
-namespace MoneyNote.Services.Contracts
+﻿namespace MoneyNote.Services.Contracts
 {
     public interface IMoneyService
     {
-        Task<AllMoney> GetCurrentBill();
-        Task UpdateAllMoneyAsync(AllMoney item);
-        Task DeleteAll();
+        decimal GetCurrentCash();
+        void SetCurrentCash(decimal value);
+        decimal GetCurrentCard();
+        void SetCurrentCard(decimal value);
+        decimal GetAllOutlay();
+        void SetAllOutlay(decimal value);
+        decimal GetAllIncome();
+        void SetAllIncome(decimal value);
+        decimal GetAllSavings();
+        void SetAllSavings(decimal value);
+        decimal GetCurrentIncome();
+        void SetCurrentIncome(decimal value);
+        decimal GetCurrentOutlay();
+        void SetCurrentOutlay(decimal value);
+        decimal GetCurrentSavings();
+        void SetCurrentSavings(decimal value);
+        void DeleteAllMoneyNotes();
     }
 }

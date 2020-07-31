@@ -8,7 +8,7 @@ using System.Windows.Input;
 using DynamicData;
 using I18NPortable;
 using MoneyNote.Models;
-using MoneyNote.Services;
+using MoneyNote.Services.Contracts;
 using MoneyNote.Views.Popups;
 using Plugin.Settings;
 using ReactiveUI;
@@ -26,8 +26,8 @@ namespace MoneyNote
         public ICommand UpdateSpend { get; set; }
         public ICommand AddSalary { get; set; }
         //Used Services
-        private static SpendService spendService;
-        private static MoneyService moneyService;
+        private static ISpendService _spendService;
+        private static IMoneyService _moneyService;
         //UI variables
         public string SpendDescription { get; set; }
         public string AddMoneyDescription { get; set; }
@@ -46,10 +46,10 @@ namespace MoneyNote
         public string UrlPathSegment => Strings["menu_main"];
         public IScreen HostScreen { get; }
         public II18N Strings => I18N.Current;
-        public MainViewModel(IScreen hostScreen = null)
+        public MainViewModel(ISpendService spendService, IMoneyService moneyService, IScreen hostScreen = null)
         {
-            spendService = new SpendService();
-            moneyService = new MoneyService();
+            _spendService = spendService;
+            _moneyService = moneyService;
             IsCash = true;
             IsCard = false;
             GetData();
@@ -62,40 +62,49 @@ namespace MoneyNote
         }
         private void GetData()
         {
-            var data = spendService.GetAll().Result;
+            var data = _spendService.GetAll().Result;
             data.Reverse();
             _spends.AddRange(data);
             _spends.Connect().Bind(out _spendingList).Subscribe();
-            CurrentCard = moneyService.GetCurrentCard();
-            CurrentCash = moneyService.GetCurrentCash();
+            CurrentCard = _moneyService.GetCurrentCard();
+            CurrentCash = _moneyService.GetCurrentCash();
             CurrentBill = CurrentCard + CurrentCash;
         }
 
         private async void OnAdd()
         {
-            await PopupNavigation.Instance.PushAsync(new CommitPopupView(OnAddFunc), true);
+            if (String.IsNullOrEmpty(SpendValue))
+            {
+                await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
+            }
+            else if (SpendValue[0] == '0')
+            {
+                await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value_zero"]), true);
+            }
+            else if (SpendValue[0] == '.') await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
+            else await PopupNavigation.Instance.PushAsync(new CommitPopupView(OnAddFunc), true);
         }
         private async void OnAddFunc()
         {
             SpendDescription = CrossSettings.Current.GetValueOrDefault("CommitMessage", "");
             Spend item = new Spend
             {
-                Amount = int.Parse(SpendValue),
+                Amount = decimal.Parse(SpendValue),
                 WhereText = SpendDescription,
                 TransactionDate = DateTime.Now
             };
             await Task.Run(async () =>
             {
-                await spendService.SaveItemAsync(item);
+                await _spendService.SaveItemAsync(item);
                 switch (CrossSettings.Current.GetValueOrDefault("CurrentCommitMoneyFrom", 0))
                 {
                     case 0:
                         CurrentCash -= item.Amount;
-                        moneyService.SetCurrentCash(CurrentCash);
+                        _moneyService.SetCurrentCash(CurrentCash);
                         break;
                     case 1:
                         CurrentCard -= item.Amount;
-                        moneyService.SetCurrentCard(CurrentCard);
+                        _moneyService.SetCurrentCard(CurrentCard);
                         break;
                 }
                 _spends.Clear();
@@ -125,11 +134,11 @@ namespace MoneyNote
                 {
                     case 0:
                         CurrentCash += item.Amount;
-                        moneyService.SetCurrentCash(CurrentCash);
+                        _moneyService.SetCurrentCash(CurrentCash);
                         break;
                     case 1:
                         CurrentCard += item.Amount;
-                        moneyService.SetCurrentCard(CurrentCard);
+                        _moneyService.SetCurrentCard(CurrentCard);
                         break;
                 }
                 //clearing and getting
