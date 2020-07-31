@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<popups:PopupPage
+    x:Class="MoneyNote.Views.Popups.AccountChangePopupView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:popups="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    mc:Ignorable="d">
+    <popups:PopupPage.Animation>
+        <animations:ScaleAnimation
+            x:Name="animation"
+            DurationIn="500"
+            DurationOut="1000"
+            HasBackgroundAnimation="True"
+            PositionIn="Bottom"
+            PositionOut="Top"
+            ScaleIn="3"
+            ScaleOut="0.3" />
+    </popups:PopupPage.Animation>
+    <Grid ColumnSpacing="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Frame
+            Grid.Row="1"
+            Grid.Column="1"
+            VerticalOptions="Center">
+            <StackLayout x:Name="this" Orientation="Vertical">
+
+                <ImageButton
+                    Aspect="AspectFit"
+                    BackgroundColor="Transparent"
+                    Clicked="Cancel_Button_Clicked"
+                    HeightRequest="20"
+                    HorizontalOptions="End"
+                    Source="close.png"
+                    VerticalOptions="Start" />
+                <Image
+                    Aspect="AspectFit"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    Source="alert.png" />
+                <Label
+                    x:Name="title"
+                    FontSize="Body"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center" />
+                <Label x:Name="alertMessage" FontSize="Small" />
+                <Entry
+                    x:Name="entry"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Keyboard="Numeric"
+                    Placeholder="Enter Value" />
+                <Button
+                    Grid.Row="3"
+                    Clicked="Button_Clicked"
+                    Text="Save" />
+            </StackLayout>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="PlugForGridGesture" />
+            </Frame.GestureRecognizers>
+        </Frame>
+        <Image
+            x:Name="leftHand"
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="-25,0,0,0"
+            HeightRequest="50"
+            HorizontalOptions="Start"
+            IsVisible="False"
+            Source="left_image_hand.png"
+            VerticalOptions="Center"
+            WidthRequest="50" />
+        <Image
+            x:Name="rightHand"
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="0,0,-25,0"
+            HeightRequest="50"
+            HorizontalOptions="End"
+            IsVisible="False"
+            Source="right_image_hand.png"
+            VerticalOptions="Center"
+            WidthRequest="50" />
+        <Image
+            x:Name="upHand"
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="0,0,0,-25"
+            HeightRequest="50"
+            HorizontalOptions="Center"
+            IsVisible="False"
+            Source="up_image_hand.png"
+            VerticalOptions="End"
+            WidthRequest="50" />
+        <Image
+            x:Name="downHand"
+            Grid.Row="2"
+            Grid.Column="1"
+            Margin="0,-25,0,0"
+            HeightRequest="50"
+            HorizontalOptions="Center"
+            IsVisible="False"
+            Source="down_image_hand.png"
+            VerticalOptions="Start"
+            WidthRequest="50" />
+
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="Cancel_Button_Clicked" />
+        </Grid.GestureRecognizers>
+    </Grid>
+</popups:PopupPage>

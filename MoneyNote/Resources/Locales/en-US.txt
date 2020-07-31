@@ -22,6 +22,8 @@ all_outlay = All Outlay:
 savings = Savings:
 month_saving = This month savings:
 all_saving = All time savings:
+title_current_savings = Change Current Savings Manually:
+alert_current_savings = Be carrefull, this function will delete current savings record
 
 /* History Page */
 all = All
