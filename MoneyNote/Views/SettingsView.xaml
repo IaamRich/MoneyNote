@@ -9,17 +9,17 @@
     x:Name="this"
     x:TypeArguments="local:SettingsViewModel">
     <Grid BackgroundColor="{StaticResource ListBackColor}" RowSpacing="0">
-        <Grid.RowDefinitions Margin="0,5,0,0">
+        <Grid.RowDefinitions>
             <RowDefinition Height="120" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Image
-            Margin="0,0,0,-5"
+            Margin="0,0,0,-10"
             HeightRequest="80"
             HorizontalOptions="Center"
             Source="settings_header.png"
             VerticalOptions="End" />
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" Margin="0,5,0,0">
             <!--  1  -->
             <Frame
                 Grid.Row="0"

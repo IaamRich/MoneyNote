@@ -21,7 +21,7 @@
                     Source="steps.png"
                     VerticalOptions="End" />
             </Grid>
-            <StackLayout Grid.Row="1" Margin="10,5,10,0">
+            <StackLayout Grid.Row="1" Margin="10,5">
 
                 <Frame CornerRadius="10">
                     <StackLayout>
