@@ -41,7 +41,6 @@ namespace MoneyNote
             Locator.CurrentMutable.Register(() => new MasterCell(), typeof(IViewFor<MasterCellViewModel>));
 
             // Detail pages
-            Locator.CurrentMutable.Register(() => new DummyPage(), typeof(IViewFor<DummyViewModel>));
             Locator.CurrentMutable.Register(() => new MainView(), typeof(IViewFor<MainViewModel>));
             Locator.CurrentMutable.Register(() => new AccountView(), typeof(IViewFor<AccountViewModel>));
             Locator.CurrentMutable.Register(() => new SettingsView(), typeof(IViewFor<SettingsViewModel>));

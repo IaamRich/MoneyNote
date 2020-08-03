@@ -221,11 +221,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\Logo2.png">
-      <Link>Resources\drawable\Logo2.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="..\MoneyNote\Resources\Images\main.png">
       <Link>Resources\drawable\main.png</Link>
     </AndroidResource>
@@ -288,6 +283,31 @@
   <ItemGroup>
     <AndroidResource Include="..\MoneyNote\Resources\Images\zh.png">
       <Link>Resources\drawable\zh.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\account_header.png">
+      <Link>Resources\drawable\account_header.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\steps.png">
+      <Link>Resources\drawable\steps.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\arrow_right.png">
+      <Link>Resources\drawable\arrow_right.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\settings_header.png">
+      <Link>Resources\drawable\settings_header.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\history_header.png">
+      <Link>Resources\drawable\history_header.png</Link>
     </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

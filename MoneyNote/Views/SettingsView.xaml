@@ -8,39 +8,83 @@
     xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
     x:Name="this"
     x:TypeArguments="local:SettingsViewModel">
-    <ContentPage.Content>
-        <Grid BackgroundColor="{StaticResource ListBackColor}">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Label
-                Margin="5,30"
-                FontSize="Title"
-                HorizontalOptions="Center"
-                Text="Settings" />
-            <Grid Grid.Row="1">
-                <!--  1  -->
-                <Frame
-                    Grid.Row="0"
-                    Grid.RowSpan="3"
-                    Margin="10,5,10,0"
-                    HorizontalOptions="FillAndExpand">
-                    <Grid>
-                        <!--  Sounds  -->
-                        <Grid Grid.Row="0" ColumnSpacing="0">
+    <Grid BackgroundColor="{StaticResource ListBackColor}" RowSpacing="0">
+        <Grid.RowDefinitions Margin="0,5,0,0">
+            <RowDefinition Height="120" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Image
+            Margin="0,0,0,-5"
+            HeightRequest="80"
+            HorizontalOptions="Center"
+            Source="settings_header.png"
+            VerticalOptions="End" />
+        <Grid Grid.Row="1">
+            <!--  1  -->
+            <Frame
+                Grid.Row="0"
+                Grid.RowSpan="3"
+                Margin="10,5,10,0"
+                CornerRadius="10"
+                HorizontalOptions="FillAndExpand">
+                <Grid>
+                    <!--  Sounds  -->
+                    <Grid Grid.Row="0" ColumnSpacing="0">
+                        <Label
+                            FontSize="Title"
+                            Text="{Binding Strings[sounds]}"
+                            VerticalOptions="Center" />
+                        <Image
+                            Margin="0"
+                            HorizontalOptions="EndAndExpand"
+                            Source="selected.png"
+                            VerticalOptions="FillAndExpand">
+                            <Image.Triggers>
+                                <DataTrigger
+                                    Binding="{Binding Sounds}"
+                                    TargetType="Image"
+                                    Value="False">
+                                    <Setter Property="Source" Value="unselected.png" />
+                                </DataTrigger>
+                            </Image.Triggers>
+                        </Image>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SoundsCommand}" />
+                        </Grid.GestureRecognizers>
+                    </Grid>
+                    <!--  From Where By Default  -->
+                    <Grid
+                        Grid.Row="1"
+                        ColumnSpacing="0"
+                        RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="3*" />
+                            <RowDefinition Height="7*" />
+                        </Grid.RowDefinitions>
+                        <!--  text Area  -->
+                        <Label
+                            Grid.ColumnSpan="2"
+                            FontSize="Small"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{Binding Strings[area_from_where]}"
+                            VerticalOptions="Center" />
+                        <!--  cash  -->
+                        <Grid Grid.Row="1" Grid.Column="0">
                             <Label
-                                FontSize="Title"
-                                Text="{Binding Strings[sounds]}"
+                                FontSize="Micro"
+                                HorizontalOptions="EndAndExpand"
+                                Text="{Binding Strings[cash]}"
                                 VerticalOptions="Center" />
                             <Image
+                                x:Name="cashToggleImage"
+                                Grid.Column="1"
                                 Margin="0"
                                 HorizontalOptions="EndAndExpand"
                                 Source="selected.png"
                                 VerticalOptions="FillAndExpand">
                                 <Image.Triggers>
                                     <DataTrigger
-                                        Binding="{Binding Sounds}"
+                                        Binding="{Binding AreaCash}"
                                         TargetType="Image"
                                         Value="False">
                                         <Setter Property="Source" Value="unselected.png" />
@@ -48,172 +92,131 @@
                                 </Image.Triggers>
                             </Image>
                             <Grid.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding SoundsCommand}" />
+                                <TapGestureRecognizer Command="{Binding AreaByDefaultCommand}" />
                             </Grid.GestureRecognizers>
                         </Grid>
-                        <!--  From Where By Default  -->
-                        <Grid
-                            Grid.Row="1"
-                            ColumnSpacing="0"
-                            RowSpacing="0">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="3*" />
-                                <RowDefinition Height="7*" />
-                            </Grid.RowDefinitions>
-                            <!--  text Area  -->
+                        <!--  card  -->
+                        <Grid Grid.Row="1" Grid.Column="1">
                             <Label
-                                Grid.ColumnSpan="2"
-                                FontSize="Small"
-                                HorizontalOptions="CenterAndExpand"
-                                Text="{Binding Strings[area_from_where]}"
-                                VerticalOptions="Center" />
-                            <!--  cash  -->
-                            <Grid Grid.Row="1" Grid.Column="0">
-                                <Label
-                                    FontSize="Micro"
-                                    HorizontalOptions="EndAndExpand"
-                                    Text="{Binding Strings[cash]}"
-                                    VerticalOptions="Center" />
-                                <Image
-                                    x:Name="cashToggleImage"
-                                    Grid.Column="1"
-                                    Margin="0"
-                                    HorizontalOptions="EndAndExpand"
-                                    Source="selected.png"
-                                    VerticalOptions="FillAndExpand">
-                                    <Image.Triggers>
-                                        <DataTrigger
-                                            Binding="{Binding AreaCash}"
-                                            TargetType="Image"
-                                            Value="False">
-                                            <Setter Property="Source" Value="unselected.png" />
-                                        </DataTrigger>
-                                    </Image.Triggers>
-                                </Image>
-                                <Grid.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding AreaByDefaultCommand}" />
-                                </Grid.GestureRecognizers>
-                            </Grid>
-                            <!--  card  -->
-                            <Grid Grid.Row="1" Grid.Column="1">
-                                <Label
-                                    FontSize="Micro"
-                                    HorizontalOptions="EndAndExpand"
-                                    Text="{Binding Strings[card]}"
-                                    VerticalOptions="Center" />
-                                <Image
-                                    x:Name="cardToggleImage"
-                                    Grid.Column="1"
-                                    Margin="0"
-                                    HorizontalOptions="EndAndExpand"
-                                    Source="selected.png"
-                                    VerticalOptions="FillAndExpand">
-                                    <Image.Triggers>
-                                        <DataTrigger
-                                            Binding="{Binding AreaCard}"
-                                            TargetType="Image"
-                                            Value="False">
-                                            <Setter Property="Source" Value="unselected.png" />
-                                        </DataTrigger>
-                                    </Image.Triggers>
-                                </Image>
-                                <Grid.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding AreaByDefaultCommand}" />
-                                </Grid.GestureRecognizers>
-                            </Grid>
-                        </Grid>
-                        <!--  Language  -->
-                        <StackLayout
-                            x:Name="chooseLanguageStack"
-                            Grid.Row="2"
-                            HorizontalOptions="FillAndExpand"
-                            Orientation="Horizontal">
-                            <Label
-                                x:Name="languageLabel"
-                                FontSize="Title"
-                                HorizontalOptions="Start"
-                                Text="{Binding Strings[choose_language]}"
-                                VerticalOptions="CenterAndExpand">
-                                <Label.GestureRecognizers>
-                                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="iconLanguage_Clicked" />
-                                </Label.GestureRecognizers>
-                            </Label>
-                            <!--  Language Collection  -->
-                            <ImageButton
-                                x:Name="iconLanguage"
-                                Aspect="AspectFit"
-                                Clicked="iconLanguage_Clicked"
+                                FontSize="Micro"
                                 HorizontalOptions="EndAndExpand"
-                                Source="{Binding LanguageImage}"
-                                VerticalOptions="FillAndExpand" />
-                            <ScrollView
-                                x:Name="CollectionsList"
-                                Padding="0,0,0,3"
-                                HorizontalOptions="FillAndExpand"
-                                IsVisible="False"
-                                Orientation="Horizontal"
+                                Text="{Binding Strings[card]}"
+                                VerticalOptions="Center" />
+                            <Image
+                                x:Name="cardToggleImage"
+                                Grid.Column="1"
+                                Margin="0"
+                                HorizontalOptions="EndAndExpand"
+                                Source="selected.png"
                                 VerticalOptions="FillAndExpand">
-                                <StackLayout
-                                    x:Name="bindingStack"
-                                    BindableLayout.ItemsSource="{Binding LanguagesList}"
-                                    Orientation="Horizontal">
-                                    <BindableLayout.ItemTemplate>
-                                        <DataTemplate>
-                                            <ImageButton
-                                                x:Name="img11"
-                                                Aspect="AspectFit"
-                                                Clicked="iconLanguage_Clicked"
-                                                Command="{Binding Path=BindingContext.ImageCommand, Source={x:Reference bindingStack}}"
-                                                CommandParameter="{Binding Id}"
-                                                Source="{Binding Image}" />
-                                        </DataTemplate>
-                                    </BindableLayout.ItemTemplate>
-                                </StackLayout>
-                            </ScrollView>
-                        </StackLayout>
+                                <Image.Triggers>
+                                    <DataTrigger
+                                        Binding="{Binding AreaCard}"
+                                        TargetType="Image"
+                                        Value="False">
+                                        <Setter Property="Source" Value="unselected.png" />
+                                    </DataTrigger>
+                                </Image.Triggers>
+                            </Image>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AreaByDefaultCommand}" />
+                            </Grid.GestureRecognizers>
+                        </Grid>
                     </Grid>
-                </Frame>
-                <!--  3  -->
-                <Frame
-                    Grid.Row="3"
-                    Margin="10,0"
-                    HorizontalOptions="FillAndExpand">
-                    <StackLayout>
-                        <Label Text="Reset all Money Notes into database of this app." VerticalOptions="Start" />
-                        <Button
-                            Command="{Binding ResetAll}"
-                            Text="{Binding Strings[reset_all]}"
-                            VerticalOptions="EndAndExpand" />
+                    <!--  Language  -->
+                    <StackLayout
+                        x:Name="chooseLanguageStack"
+                        Grid.Row="2"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal">
+                        <Label
+                            x:Name="languageLabel"
+                            FontSize="Title"
+                            HorizontalOptions="Start"
+                            Text="{Binding Strings[choose_language]}"
+                            VerticalOptions="CenterAndExpand">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="iconLanguage_Clicked" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <!--  Language Collection  -->
+                        <ImageButton
+                            x:Name="iconLanguage"
+                            Aspect="AspectFit"
+                            Clicked="iconLanguage_Clicked"
+                            HorizontalOptions="EndAndExpand"
+                            Source="{Binding LanguageImage}"
+                            VerticalOptions="FillAndExpand" />
+                        <ScrollView
+                            x:Name="CollectionsList"
+                            Padding="0,0,0,3"
+                            HorizontalOptions="FillAndExpand"
+                            IsVisible="False"
+                            Orientation="Horizontal"
+                            VerticalOptions="FillAndExpand">
+                            <StackLayout
+                                x:Name="bindingStack"
+                                BindableLayout.ItemsSource="{Binding LanguagesList}"
+                                Orientation="Horizontal">
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate>
+                                        <ImageButton
+                                            x:Name="img11"
+                                            Aspect="AspectFit"
+                                            Clicked="iconLanguage_Clicked"
+                                            Command="{Binding Path=BindingContext.ImageCommand, Source={x:Reference bindingStack}}"
+                                            CommandParameter="{Binding Id}"
+                                            Source="{Binding Image}" />
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </StackLayout>
+                        </ScrollView>
                     </StackLayout>
-                </Frame>
-                <!--  4  -->
-                <Frame
-                    Grid.Row="4"
-                    Margin="10,0"
-                    HorizontalOptions="FillAndExpand">
-                    <StackLayout>
-                        <Label Text="Into Account Page you can set each notes manually." VerticalOptions="Start" />
-                        <Button
-                            Command="{Binding GoAccount}"
-                            Text="{Binding Strings[set_every_places]}"
-                            VerticalOptions="EndAndExpand" />
-                    </StackLayout>
-                </Frame>
-                <!--  5  -->
-                <Frame
-                    Grid.Row="5"
-                    Margin="10,0,10,5"
-                    HorizontalOptions="FillAndExpand">
-                    <StackLayout>
-                        <Label Text="To disable ads you can pay ~ $1" VerticalOptions="Start" />
-                        <Button
-                            Command="{Binding OffAds}"
-                            Text="{Binding Strings[dis_add]}"
-                            VerticalOptions="EndAndExpand" />
-                    </StackLayout>
-                </Frame>
-            </Grid>
-
+                </Grid>
+            </Frame>
+            <!--  2  -->
+            <Frame
+                Grid.Row="3"
+                Margin="10,0"
+                CornerRadius="10"
+                HorizontalOptions="FillAndExpand">
+                <StackLayout>
+                    <Label Text="Reset all Money Notes into database of this app." VerticalOptions="Start" />
+                    <Button
+                        Command="{Binding ResetAll}"
+                        Text="{Binding Strings[reset_all]}"
+                        VerticalOptions="EndAndExpand" />
+                </StackLayout>
+            </Frame>
+            <!--  3  -->
+            <Frame
+                Grid.Row="4"
+                Margin="10,0"
+                CornerRadius="10"
+                HorizontalOptions="FillAndExpand">
+                <StackLayout>
+                    <Label Text="Into Account Page you can set each notes manually." VerticalOptions="Start" />
+                    <Button
+                        Command="{Binding GoAccount}"
+                        Text="{Binding Strings[set_every_places]}"
+                        VerticalOptions="EndAndExpand" />
+                </StackLayout>
+            </Frame>
+            <!--  4  -->
+            <Frame
+                Grid.Row="5"
+                Margin="10,0,10,5"
+                CornerRadius="10"
+                HorizontalOptions="FillAndExpand">
+                <StackLayout>
+                    <Label Text="To disable ads you can pay ~ $1" VerticalOptions="Start" />
+                    <Button
+                        Command="{Binding OffAds}"
+                        Text="{Binding Strings[dis_add]}"
+                        VerticalOptions="EndAndExpand" />
+                </StackLayout>
+            </Frame>
         </Grid>
-    </ContentPage.Content>
+
+    </Grid>
 </rxui:ReactiveContentPage>

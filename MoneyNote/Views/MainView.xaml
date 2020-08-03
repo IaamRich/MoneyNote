@@ -18,18 +18,26 @@
         Spacing="0">
 
         <StackLayout Orientation="Horizontal" Spacing="0">
-            <Grid Margin="10,5,0,0">
+            <Grid Margin="10,5,0,0" HorizontalOptions="Start">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Label FontSize="Title" Text="{Binding Strings[app_name]}" />
                 <Image
-                    Margin="0,30,0,0"
+                    Grid.Row="1"
                     Aspect="AspectFit"
-                    HeightRequest="100"
+                    HeightRequest="80"
+                    HorizontalOptions="Center"
                     Source="logo.png"
                     VerticalOptions="Start" />
+                <Image
+                    Grid.Row="1"
+                    Margin="-520,0,0,0"
+                    HeightRequest="12"
+                    HorizontalOptions="Center"
+                    Source="steps.png"
+                    VerticalOptions="End" />
             </Grid>
             <StackLayout
                 Margin="5,40,5,5"
@@ -65,7 +73,7 @@
                 TextColor="{StaticResource MainGreen}" />
         </StackLayout>
         <StackLayout Margin="10,0" VerticalOptions="CenterAndExpand">
-            <Frame HorizontalOptions="FillAndExpand">
+            <Frame CornerRadius="10" HorizontalOptions="FillAndExpand">
                 <StackLayout>
                     <Entry
                         x:Name="entrySpend"
@@ -87,7 +95,7 @@
 
                 </StackLayout>
             </Frame>
-            <Frame Padding="10">
+            <Frame CornerRadius="10">
                 <StackLayout>
                     <Label HorizontalOptions="CenterAndExpand" Text="{Binding Strings[last_spent_money]}" />
                     <ListView

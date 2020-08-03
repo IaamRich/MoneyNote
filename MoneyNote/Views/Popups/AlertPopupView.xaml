@@ -33,7 +33,7 @@
             Padding="0"
             BackgroundColor="{StaticResource AboutBackGround}"
             BorderColor="{StaticResource PopupButton}"
-            CornerRadius="5"
+            CornerRadius="10"
             HorizontalOptions="Start"
             VerticalOptions="Start">
             <StackLayout Margin="20,0,0,0" Orientation="Vertical">
