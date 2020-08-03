@@ -12,15 +12,24 @@
         <ToolbarItem Command="{Binding ChangeNotesLook}" IconImageSource="change_notes_view.png" />
     </ContentPage.ToolbarItems>
     <Grid BackgroundColor="{StaticResource ListBackColor}">
-        <StackLayout Margin="10,0" Spacing="0">
-            <Label
-                Margin="0,30"
-                FontSize="Title"
+        <Grid Margin="10,10,10,0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Image
+                HeightRequest="90"
                 HorizontalOptions="Center"
-                Text="{Binding Strings[last_notes]}" />
-            <Frame Padding="10">
+                Source="history_header.png"
+                VerticalOptions="End" />
+            <Frame
+                Grid.Row="1"
+                Margin="0,0,0,-10"
+                Padding="10"
+                CornerRadius="10">
                 <ListView
                     x:Name="historyListView"
+                    Margin="0,0,0,10"
                     BackgroundColor="{StaticResource BackgroundWhite}"
                     HasUnevenRows="True"
                     ItemsSource="{Binding SpendingList}">
@@ -74,7 +83,7 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </Frame>
-        </StackLayout>
+        </Grid>
         <controls:HistoryChangeNotesView />
         <controls:HistoryChangeNotesLookView />
     </Grid>

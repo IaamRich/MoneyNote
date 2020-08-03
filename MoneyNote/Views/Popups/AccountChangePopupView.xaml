@@ -33,6 +33,7 @@
         <Frame
             Grid.Row="1"
             Grid.Column="1"
+            CornerRadius="10"
             VerticalOptions="Center">
             <StackLayout x:Name="this" Orientation="Vertical">
 

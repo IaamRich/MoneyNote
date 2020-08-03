@@ -8,27 +8,64 @@
     x:TypeArguments="local:AboutViewModel">
     <StackLayout BackgroundColor="{StaticResource ListBackColor}">
 
-        <Frame Margin="10,5,10,0" HasShadow="True">
+        <Grid HeightRequest="120">
+            <Label Margin="10,5,10,0" FontSize="Title">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="{Binding Strings[app_name]}" />
+                            <Span Text=" " />
+                            <Span ForegroundColor="{StaticResource MainGreen}" Text="{Binding Strings[about_version]}" />
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Image
+                x:Name="arrow"
+                Margin="0,20,40,0"
+                HeightRequest="40"
+                HorizontalOptions="End"
+                Source="arrow_right.png"
+                VerticalOptions="Center" />
+            <ScrollView
+                x:Name="scroll"
+                Padding="25,0,15,0"
+                HeightRequest="85"
+                Orientation="Horizontal"
+                Scrolled="scroll_Scrolled"
+                VerticalOptions="End">
+                <Grid
+                    Padding="0,0,0,5"
+                    ColumnSpacing="0"
+                    HorizontalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Image
+                        Grid.Column="0"
+                        Margin="0,0,-30,0"
+                        Aspect="AspectFit"
+                        HeightRequest="12"
+                        HorizontalOptions="FillAndExpand"
+                        Source="steps.png"
+                        VerticalOptions="End" />
+                    <Image
+                        Grid.Column="1"
+                        Aspect="AspectFit"
+                        HorizontalOptions="FillAndExpand"
+                        Source="logo.png"
+                        VerticalOptions="End" />
+                </Grid>
+            </ScrollView>
+        </Grid>
+        <Frame
+            Margin="10,5,10,0"
+            CornerRadius="10"
+            HasShadow="True">
             <StackLayout Spacing="10">
-                <Image
-                    HeightRequest="64"
-                    HorizontalOptions="Start"
-                    Source="logo.png"
-                    VerticalOptions="Center" />
-                <Label FontSize="22">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span
-                                    FontAttributes="Bold"
-                                    FontSize="22"
-                                    Text="{Binding Strings[app_name]}" />
-                                <Span Text=" " />
-                                <Span ForegroundColor="{StaticResource MainGreen}" Text="{Binding Strings[about_version]}" />
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
+
+
 
                 <Label>
                     <Label.FormattedText>
