@@ -45,7 +45,7 @@ namespace MoneyNote.Views.Popups
                 {
                     var moneyValue = decimal.Parse(entry.Text);
                     var result = entryDescription.Text;
-                    if (String.IsNullOrWhiteSpace(entry.Text)) result = "Missed";
+                    if (String.IsNullOrWhiteSpace(entry.Text)) result = Strings["missed"];
                     CrossSettings.Current.AddOrUpdateValue("AddMoneyValue", moneyValue);
                     CrossSettings.Current.AddOrUpdateValue("AddMoneyMessage", result);
                     CrossSettings.Current.AddOrUpdateValue("CurrentAddedMoneyTo", FuncMoneyFrom());

@@ -1,5 +1,6 @@
 ﻿
 using System;
+using I18NPortable;
 using Plugin.Settings;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
@@ -11,6 +12,7 @@ namespace MoneyNote.Views.Popups
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CommitPopupView : PopupPage
     {
+        public II18N Strings => I18N.Current;
         public Action ActionAfter { get; set; }
         public bool IsCancelPressed { get; set; }
         public CommitPopupView(Action act)
@@ -33,7 +35,7 @@ namespace MoneyNote.Views.Popups
             if (!IsCancelPressed)
             {
                 var result = entry.Text;
-                if (String.IsNullOrWhiteSpace(entry.Text)) result = "Missed";
+                if (String.IsNullOrWhiteSpace(entry.Text)) result = Strings["missed"];
                 CrossSettings.Current.AddOrUpdateValue("CommitMessage", result);
                 CrossSettings.Current.AddOrUpdateValue("CurrentCommitMoneyFrom", FuncMoneyFrom());
 

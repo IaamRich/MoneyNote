@@ -25,7 +25,6 @@
             <Frame
                 Grid.Row="1"
                 Margin="0,0,0,-10"
-                Padding="10"
                 CornerRadius="10">
                 <ListView
                     x:Name="historyListView"

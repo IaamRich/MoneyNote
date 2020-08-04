@@ -9,6 +9,7 @@ from_card = from Card
 from_cash = from Cash
 to_cash = to Cash
 to_card = to Card
+missed = Not specified
 
 /* Account Page */
 my_cash = My cash money:
