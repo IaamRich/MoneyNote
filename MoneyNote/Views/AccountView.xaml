@@ -8,6 +8,7 @@
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
     x:TypeArguments="local:AccountViewModel">
     <ContentPage.Content>
+        <!--<ScrollView></ScrollView>-->
         <Grid BackgroundColor="{StaticResource ListBackColor}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="120" />
@@ -26,13 +27,7 @@
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="FillAndExpand">
                     <StackLayout Spacing="0">
-                        <Label
-                            Margin="0,0,0,5"
-                            FontAttributes="Bold"
-                            FontSize="Small"
-                            HorizontalOptions="Center"
-                            Text="{Binding Strings[my_current]}"
-                            VerticalOptions="Start" />
+
                         <controls:AccountSwitchFrame
                             Command="{Binding MyCashCommand}"
                             HorizontalOptions="FillAndExpand"
@@ -132,10 +127,17 @@
                 </Frame>
             </Grid>
             <Image
-                Margin="0,0,0,-20"
+                Margin="0,0,30,-20"
                 Aspect="AspectFit"
                 HeightRequest="60"
+                HorizontalOptions="End"
                 Source="account_header.png"
+                VerticalOptions="End" />
+            <Label
+                Margin="30,0,0,0"
+                FontSize="Large"
+                HorizontalOptions="Start"
+                Text="{Binding Strings[my_current]}"
                 VerticalOptions="End" />
         </Grid>
     </ContentPage.Content>
