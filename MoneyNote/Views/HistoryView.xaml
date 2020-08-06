@@ -12,14 +12,23 @@
         <ToolbarItem Command="{Binding ChangeNotesLook}" IconImageSource="change_notes_view.png" />
     </ContentPage.ToolbarItems>
     <Grid BackgroundColor="{StaticResource ListBackColor}">
+        <Image Source="header_back.png" VerticalOptions="Start" />
         <Grid Margin="10,10,10,0" RowSpacing="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="120" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
+            <Label
+                Margin="30,0,0,10"
+                FontSize="Medium"
+                HorizontalOptions="Start"
+                Text="Last Transactions"
+                TextColor="White"
+                VerticalOptions="End" />
             <Image
+                Margin="0,0,30,0"
                 HeightRequest="90"
-                HorizontalOptions="Center"
+                HorizontalOptions="End"
                 Source="history_header.png"
                 VerticalOptions="End" />
             <Frame

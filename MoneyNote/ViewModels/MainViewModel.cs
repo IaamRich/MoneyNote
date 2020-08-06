@@ -25,6 +25,7 @@ namespace MoneyNote
         public ICommand DeleteSpend { get; set; }
         public ICommand UpdateSpend { get; set; }
         public ICommand AddSalary { get; set; }
+        public ReactiveCommand<Unit, Unit> SelectRecord { get; set; }
         //Used Services
         private static ISpendService _spendService;
         private static IMoneyService _moneyService;
@@ -57,6 +58,7 @@ namespace MoneyNote
             //Reactive Example to navigate
             NavigateToDummyPage = ReactiveCommand
                 .CreateFromObservable(() => HostScreen.Router.Navigate.Execute(new DummyViewModel()).Select(_ => Unit.Default));
+            //SelectRecord = ReactiveCommand.Create();
             AddSpend = ReactiveCommand.Create(() => { OnAdd(); });
             AddSalary = ReactiveCommand.Create(() => { OnAddSalary(); });
         }

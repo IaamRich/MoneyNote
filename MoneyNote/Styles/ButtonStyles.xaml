@@ -13,6 +13,7 @@
 
 
     <Style TargetType="Button">
+        <Setter Property="HeightRequest" Value="50" />
         <Setter Property="FontSize" Value="Body" />
         <Setter Property="BackgroundColor" Value="{StaticResource MainGreen}" />
         <Setter Property="CornerRadius" Value="10" />

@@ -73,6 +73,9 @@
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.7.335</Version>
     </PackageReference>
+    <PackageReference Include="TouchView">
+      <Version>4.1.78</Version>
+    </PackageReference>
     <PackageReference Include="Xam.Plugins.Settings">
       <Version>3.1.1</Version>
     </PackageReference>
@@ -313,6 +316,11 @@
   <ItemGroup>
     <AndroidResource Include="..\MoneyNote\Resources\Images\button.png">
       <Link>Resources\drawable\button.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\header_back.png">
+      <Link>Resources\drawable\header_back.png</Link>
     </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

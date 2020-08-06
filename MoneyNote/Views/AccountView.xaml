@@ -7,10 +7,9 @@
     xmlns:local="clr-namespace:MoneyNote"
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
     x:TypeArguments="local:AccountViewModel">
-    <ContentPage.Content>
-        <!--<ScrollView></ScrollView>-->
-        <StackLayout BackgroundColor="{StaticResource ListBackColor}">
-
+    <Grid BackgroundColor="{StaticResource ListBackColor}">
+        <Image Source="header_back.png" VerticalOptions="Start" />
+        <StackLayout>
             <Grid RowSpacing="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="130" />
@@ -21,6 +20,7 @@
                     FontSize="Large"
                     HorizontalOptions="Start"
                     Text="{Binding Strings[my_current]}"
+                    TextColor="White"
                     VerticalOptions="End" />
                 <Frame
                     Grid.Row="1"
@@ -135,5 +135,5 @@
             </Frame>
 
         </StackLayout>
-    </ContentPage.Content>
+    </Grid>
 </rxui:ReactiveContentPage>

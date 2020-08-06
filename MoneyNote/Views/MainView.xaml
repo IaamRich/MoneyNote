@@ -3,8 +3,9 @@
     x:Class="MoneyNote.MainView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MoneyNote"
+    xmlns:local="clr-namespace:MoneyNote;assembly=MoneyNote"
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
+    xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
     x:TypeArguments="local:MainViewModel">
     <ContentPage.ToolbarItems>
         <ToolbarItem
@@ -12,124 +13,156 @@
             IconImageSource="plus.png"
             Text="+" />
     </ContentPage.ToolbarItems>
-    <StackLayout
-        Margin="0"
-        BackgroundColor="{StaticResource ListBackColor}"
-        Spacing="0">
+    <Grid BackgroundColor="{StaticResource ListBackColor}">
+        <Image Source="header_back.png" VerticalOptions="Start" />
+        <StackLayout Margin="0" Spacing="0">
 
-        <StackLayout Orientation="Horizontal" Spacing="0">
-            <Grid Margin="10,5,0,0" HorizontalOptions="Start">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Label FontSize="Title" Text="{Binding Strings[app_name]}" />
-                <Image
-                    Grid.Row="1"
-                    Aspect="AspectFit"
-                    HeightRequest="80"
-                    HorizontalOptions="Center"
-                    Source="logo.png"
-                    VerticalOptions="Start" />
-                <Image
-                    Grid.Row="1"
-                    Margin="-520,0,0,0"
-                    HeightRequest="12"
-                    HorizontalOptions="Center"
-                    Source="steps.png"
-                    VerticalOptions="End" />
-            </Grid>
-            <StackLayout
-                Margin="5,40,5,5"
-                HorizontalOptions="EndAndExpand"
-                Orientation="Vertical">
+            <StackLayout Orientation="Horizontal" Spacing="0">
+                <Grid Margin="10,5,0,0" HorizontalOptions="Start">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label
+                        FontSize="Title"
+                        Text="{Binding Strings[app_name]}"
+                        TextColor="White" />
+                    <Image
+                        Grid.Row="1"
+                        Aspect="AspectFit"
+                        HeightRequest="80"
+                        HorizontalOptions="Center"
+                        Source="logo.png"
+                        VerticalOptions="Start" />
+                    <Image
+                        Grid.Row="1"
+                        Margin="-520,0,0,0"
+                        HeightRequest="12"
+                        HorizontalOptions="Center"
+                        Source="steps.png"
+                        VerticalOptions="End" />
+                </Grid>
                 <StackLayout
-                    Grid.Column="0"
-                    Margin="10,0"
+                    Margin="5,40,5,5"
                     HorizontalOptions="EndAndExpand"
                     Orientation="Vertical">
-                    <Label HorizontalOptions="EndAndExpand" Text="{Binding Strings[current_cash]}" />
-                    <Label HorizontalOptions="EndAndExpand" Text="{Binding CurrentCash}" />
-                </StackLayout>
-                <StackLayout
-                    Grid.Column="1"
-                    Margin="10,0"
-                    HorizontalOptions="EndAndExpand"
-                    Orientation="Vertical">
-                    <Label HorizontalOptions="EndAndExpand" Text="{Binding Strings[current_card]}" />
-                    <Label HorizontalOptions="EndAndExpand" Text="{Binding CurrentCard}" />
+                    <StackLayout
+                        Grid.Column="0"
+                        Margin="10,0"
+                        HorizontalOptions="EndAndExpand"
+                        Orientation="Vertical">
+                        <Label HorizontalOptions="EndAndExpand" Text="{Binding Strings[current_cash]}" />
+                        <Label
+                            HorizontalOptions="EndAndExpand"
+                            Text="{Binding CurrentCash}"
+                            TextColor="White" />
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Column="1"
+                        Margin="10,0"
+                        HorizontalOptions="EndAndExpand"
+                        Orientation="Vertical">
+                        <Label HorizontalOptions="EndAndExpand" Text="{Binding Strings[current_card]}" />
+                        <Label
+                            HorizontalOptions="EndAndExpand"
+                            Text="{Binding CurrentCard}"
+                            TextColor="White" />
+                    </StackLayout>
                 </StackLayout>
             </StackLayout>
-        </StackLayout>
-        <StackLayout
-            Grid.Column="1"
-            HorizontalOptions="Center"
-            Orientation="Vertical">
-            <Label HorizontalOptions="Center" Text="{Binding Strings[current]}" />
-            <Label
-                FontSize="Large"
+            <StackLayout
+                Grid.Column="1"
                 HorizontalOptions="Center"
-                Text="{Binding CurrentBill}"
-                TextColor="{StaticResource MainGreen}" />
-        </StackLayout>
-        <StackLayout Margin="10,0" VerticalOptions="CenterAndExpand">
-            <Frame CornerRadius="10" HorizontalOptions="FillAndExpand">
-                <StackLayout>
-                    <Entry
-                        x:Name="entrySpend"
-                        FontSize="Large"
-                        HorizontalOptions="Center"
-                        HorizontalTextAlignment="Center"
-                        Keyboard="Numeric"
-                        Placeholder="{Binding Strings[enter_spent_amount]}"
-                        PlaceholderColor="{StaticResource AboutBackGround}"
-                        Text="{Binding SpendValue}"
-                        TextColor="{StaticResource PopupButton}" />
-                    <Button
-                        BackgroundColor="{StaticResource MainGreen}"
-                        Command="{Binding AddSpend}"
-                        CornerRadius="10"
-                        HorizontalOptions="CenterAndExpand"
-                        Text="{Binding Strings[commit]}"
-                        TextColor="White" />
+                Orientation="Vertical">
+                <Label HorizontalOptions="Center" Text="{Binding Strings[current]}" />
+                <Label
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                    Text="{Binding CurrentBill}"
+                    TextColor="{StaticResource MainGreen}" />
+            </StackLayout>
+            <StackLayout Margin="10,0">
+                <Frame BackgroundColor="White" HorizontalOptions="Center">
+                    <StackLayout>
+                        <Entry
+                            x:Name="entrySpend"
+                            FontSize="Large"
+                            HorizontalOptions="Center"
+                            HorizontalTextAlignment="Center"
+                            Keyboard="Numeric"
+                            Placeholder="{Binding Strings[enter_spent_amount]}"
+                            PlaceholderColor="{StaticResource AboutBackGround}"
+                            Text="{Binding SpendValue}"
+                            TextColor="{StaticResource PopupButton}"
+                            VerticalOptions="Center" />
+                        <Grid
+                            Margin="5"
+                            touch:TouchEff.Command="{Binding AddSpend}"
+                            touch:TouchEff.PressedBackgroundColor="{StaticResource MainGreen}"
+                            touch:TouchEff.PressedScale="0.9"
+                            HeightRequest="100"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center">
+                            <Image
+                                Margin="-5"
+                                BackgroundColor="Transparent"
+                                HeightRequest="100"
+                                HorizontalOptions="Center"
+                                Source="button.png" />
+                            <Label
+                                FontAttributes="Bold"
+                                HeightRequest="100"
+                                HorizontalOptions="Center"
+                                Text="{Binding Strings[commit]}"
+                                TextColor="{StaticResource PopupButton}"
+                                VerticalOptions="Center"
+                                VerticalTextAlignment="Center" />
+                        </Grid>
 
-                </StackLayout>
-            </Frame>
-            <Frame CornerRadius="10">
-                <StackLayout>
-                    <Label HorizontalOptions="CenterAndExpand" Text="{Binding Strings[last_spent_money]}" />
-                    <ListView
-                        x:Name="spendingListView"
-                        BackgroundColor="{StaticResource BackgroundWhite}"
-                        ItemsSource="{Binding SpendingList}">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-                                    <ViewCell.View>
-                                        <StackLayout Orientation="Horizontal">
-                                            <Label FontSize="Medium" Text="{Binding WhereText}" />
-                                            <Label
-                                                FontSize="Medium"
-                                                HorizontalOptions="EndAndExpand"
-                                                Text="{Binding Amount}" />
-                                        </StackLayout>
-                                    </ViewCell.View>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </StackLayout>
-            </Frame>
-        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="{StaticResource ListBackColor}" CornerRadius="3">
+                    <StackLayout>
+                        <Label
+                            FontSize="Medium"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="{Binding Strings[last_spent_money]}"
+                            TextColor="{StaticResource PopupButton}" />
+                        <CollectionView x:Name="spendingListView" ItemsSource="{Binding SpendingList}">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout
+                                        touch:TouchEff.Command="{Binding Source={x:Reference spendingListView}, Path=BindingContext.SelectRecord}"
+                                        touch:TouchEff.CommandParameter="{Binding .}"
+                                        touch:TouchEff.PressedAnimationDuration="500"
+                                        touch:TouchEff.PressedBackgroundColor="White"
+                                        touch:TouchEff.PressedScale="0.9"
+                                        touch:TouchEff.PressedTranslationX="5"
+                                        touch:TouchEff.PressedTranslationY="5"
+                                        touch:TouchEff.RegularAnimationDuration="500"
+                                        Orientation="Horizontal">
+                                        <Label FontSize="Small" Text="{Binding WhereText}" />
+                                        <Label
+                                            FontSize="Medium"
+                                            HorizontalOptions="EndAndExpand"
+                                            Text="{Binding Amount}" />
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
 
 
-        <StackLayout
-            Margin="10"
-            HorizontalOptions="EndAndExpand"
-            Orientation="Horizontal"
-            VerticalOptions="EndAndExpand">
-            <Label Text="{Binding Strings[share]}" />
-            <Label Margin="10,0" Text="{Binding Strings[vote]}" />
+            <StackLayout
+                Margin="10"
+                HorizontalOptions="EndAndExpand"
+                Orientation="Horizontal"
+                VerticalOptions="EndAndExpand">
+                <Label Text="{Binding Strings[share]}" />
+                <Label Margin="10,0" Text="{Binding Strings[vote]}" />
+            </StackLayout>
         </StackLayout>
-    </StackLayout>
+    </Grid>
 </rxui:ReactiveContentPage>
