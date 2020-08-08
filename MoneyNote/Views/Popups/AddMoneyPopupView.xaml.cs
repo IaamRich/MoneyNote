@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using I18NPortable;
 using Plugin.Settings;
 using Rg.Plugins.Popup.Pages;
@@ -32,27 +33,33 @@ namespace MoneyNote.Views.Popups
         {
             if (!IsCancelPressed)
             {
-                if (String.IsNullOrEmpty(entry.Text))
+                System.Threading.ThreadPool.QueueUserWorkItem(async _ =>
                 {
-                    PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
-                }
-                else if (entry.Text[0] == '0')
-                {
-                    PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value_zero"]), true);
-                }
-                else if (entry.Text[0] == '.') PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
-                else
-                {
-                    var moneyValue = decimal.Parse(entry.Text);
-                    var result = entryDescription.Text;
-                    if (String.IsNullOrWhiteSpace(entry.Text)) result = Strings["missed"];
-                    CrossSettings.Current.AddOrUpdateValue("AddMoneyValue", moneyValue);
-                    CrossSettings.Current.AddOrUpdateValue("AddMoneyMessage", result);
-                    CrossSettings.Current.AddOrUpdateValue("CurrentAddedMoneyTo", FuncMoneyFrom());
+                    await Task.Run(() =>
+                    {
+                        if (String.IsNullOrEmpty(entry.Text))
+                        {
+                            PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
+                        }
+                        else if (entry.Text[0] == '0')
+                        {
+                            PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value_zero"]), true);
+                        }
+                        else if (entry.Text[0] == '.') PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
+                        else
+                        {
+                            var moneyValue = decimal.Parse(entry.Text);
+                            var result = entryDescription.Text;
+                            if (String.IsNullOrWhiteSpace(entry.Text)) result = Strings["missed"];
+                            CrossSettings.Current.AddOrUpdateValue("AddMoneyValue", moneyValue);
+                            CrossSettings.Current.AddOrUpdateValue("AddMoneyMessage", result);
+                            CrossSettings.Current.AddOrUpdateValue("CurrentAddedMoneyTo", FuncMoneyFrom());
 
-                    PopupNavigation.Instance.PopAsync(true);
-                    ActionAfter?.Invoke();
-                }
+                            PopupNavigation.Instance.PopAsync(true);
+                            ActionAfter?.Invoke();
+                        }
+                    });
+                });
             }
         }
         private int FuncMoneyFrom()
@@ -64,6 +71,7 @@ namespace MoneyNote.Views.Popups
             IsCancelPressed = true;
             downHand.IsVisible = true;
             OnBackgroundClicked();
+            animation.DurationOut = 300;
             PopupNavigation.Instance.PopAsync(true);
         }
         protected override bool OnBackgroundClicked()
