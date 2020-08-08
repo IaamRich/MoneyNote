@@ -45,7 +45,7 @@ namespace MoneyNote
             Locator.CurrentMutable.Register(() => new AccountView(), typeof(IViewFor<AccountViewModel>));
             Locator.CurrentMutable.Register(() => new SettingsView(), typeof(IViewFor<SettingsViewModel>));
             Locator.CurrentMutable.Register(() => new HistoryView(), typeof(IViewFor<HistoryViewModel>));
-            Locator.CurrentMutable.Register(() => new TermsView(), typeof(IViewFor<TermsViewModel>));
+            //Locator.CurrentMutable.Register(() => new TermsView(), typeof(IViewFor<TermsViewModel>));
             Locator.CurrentMutable.Register(() => new AboutView(), typeof(IViewFor<AboutViewModel>));
 
             //Locator.CurrentMutable.RegisterViewsForViewModels(Assembly.GetExecutingAssembly());
@@ -58,7 +58,7 @@ namespace MoneyNote
             Locator.CurrentMutable.Register(() => new AccountViewModel(new MoneyService()), typeof(IRoutableViewModel), typeof(AccountViewModel).FullName);
             Locator.CurrentMutable.Register(() => new SettingsViewModel(new SpendService(), new MoneyService(), new SettingsService()), typeof(IRoutableViewModel), typeof(SettingsViewModel).FullName);
             Locator.CurrentMutable.Register(() => new HistoryViewModel(new SpendService()), typeof(IRoutableViewModel), typeof(HistoryViewModel).FullName);
-            Locator.CurrentMutable.Register(() => new TermsViewModel(), typeof(IRoutableViewModel), typeof(TermsViewModel).FullName);
+            //Locator.CurrentMutable.Register(() => new TermsViewModel(), typeof(IRoutableViewModel), typeof(TermsViewModel).FullName);
             Locator.CurrentMutable.Register(() => new AboutViewModel(), typeof(IRoutableViewModel), typeof(AboutViewModel).FullName);
         }
         //public Page CreateMainPage()

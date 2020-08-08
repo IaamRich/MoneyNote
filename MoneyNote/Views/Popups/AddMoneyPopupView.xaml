@@ -4,6 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    xmlns:controls="clr-namespace:MoneyNote.Controls"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:popups="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
@@ -11,8 +12,8 @@
     <popups:PopupPage.Animation>
         <animations:ScaleAnimation
             x:Name="animation"
-            DurationIn="500"
-            DurationOut="800"
+            DurationIn="800"
+            DurationOut="1000"
             HasBackgroundAnimation="True"
             PositionIn="Top"
             PositionOut="Center"
@@ -31,6 +32,7 @@
         </Grid.RowDefinitions>
         <Frame
             Grid.Column="1"
+            Padding="0"
             CornerRadius="10"
             HorizontalOptions="Center"
             VerticalOptions="Start">
@@ -47,17 +49,28 @@
                     Source="close.png"
                     VerticalOptions="Start"
                     WidthRequest="20" />
-                <Entry
-                    x:Name="entry"
-                    HorizontalTextAlignment="Center"
-                    Keyboard="Numeric"
-                    Placeholder="Enter Add Amount"
-                    PlaceholderColor="Gray" />
-                <Entry
-                    x:Name="entryDescription"
-                    Placeholder="Enter/Miss Description..."
-                    PlaceholderColor="Gray" />
-                <StackLayout Orientation="Horizontal" Spacing="0">
+                <Frame Margin="10,1" Padding="0">
+                    <controls:CustomEntry
+                        x:Name="entry"
+                        HorizontalTextAlignment="Center"
+                        Keyboard="Numeric"
+                        Placeholder="Enter Add Amount"
+                        PlaceholderColor="{StaticResource AboutBackGround}"
+                        ReturnType="Next"
+                        TextColor="{StaticResource PopupButton}" />
+                </Frame>
+                <Frame Margin="10,1" Padding="0">
+                    <controls:CustomEntry
+                        x:Name="entryDescription"
+                        ClearButtonVisibility="WhileEditing"
+                        Placeholder="Enter/Miss Description..."
+                        PlaceholderColor="{StaticResource AboutBackGround}"
+                        TextColor="{StaticResource PopupButton}" />
+                </Frame>
+                <StackLayout
+                    Margin="10,0"
+                    Orientation="Horizontal"
+                    Spacing="0">
                     <Label FontSize="Micro" Text="{Binding Strings[to_cash]}" />
                     <Switch x:Name="cashSwitch" HorizontalOptions="EndAndExpand">
                         <Switch.Triggers>
@@ -67,10 +80,19 @@
                                 Value="True">
                                 <Setter Property="IsToggled" Value="False" />
                             </DataTrigger>
+                            <DataTrigger
+                                Binding="{Binding Source={x:Reference cardSwitch}, Path=IsToggled}"
+                                TargetType="Switch"
+                                Value="False">
+                                <Setter Property="IsToggled" Value="True" />
+                            </DataTrigger>
                         </Switch.Triggers>
                     </Switch>
                 </StackLayout>
-                <StackLayout Orientation="Horizontal" Spacing="0">
+                <StackLayout
+                    Margin="10,0"
+                    Orientation="Horizontal"
+                    Spacing="0">
                     <Label FontSize="Micro" Text="{Binding Strings[to_card]}" />
                     <Switch x:Name="cardSwitch" HorizontalOptions="EndAndExpand">
                         <Switch.Triggers>
@@ -80,12 +102,19 @@
                                 Value="True">
                                 <Setter Property="IsToggled" Value="False" />
                             </DataTrigger>
+                            <DataTrigger
+                                Binding="{Binding Source={x:Reference cashSwitch}, Path=IsToggled}"
+                                TargetType="Switch"
+                                Value="False">
+                                <Setter Property="IsToggled" Value="True" />
+                            </DataTrigger>
                         </Switch.Triggers>
                     </Switch>
                 </StackLayout>
                 <Button
                     BackgroundColor="{StaticResource PopupButton}"
                     Clicked="Button_Clicked"
+                    CornerRadius="0"
                     Text="{Binding Strings[save]}" />
             </StackLayout>
             <Frame.GestureRecognizers>

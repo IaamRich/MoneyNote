@@ -3,143 +3,130 @@
     x:Class="MoneyNote.AboutView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MoneyNote.Controls"
     xmlns:local="clr-namespace:MoneyNote"
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
     x:TypeArguments="local:AboutViewModel">
-    <StackLayout BackgroundColor="{StaticResource ListBackColor}">
-
-        <Grid HeightRequest="120">
-            <Label Margin="10,5,10,0" FontSize="Title">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <FormattedString.Spans>
-                            <Span Text="{Binding Strings[app_name]}" />
-                            <Span Text=" " />
-                            <Span ForegroundColor="{StaticResource MainGreen}" Text="{Binding Strings[about_version]}" />
-                        </FormattedString.Spans>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Image
-                x:Name="arrow"
-                Margin="0,20,40,0"
-                HeightRequest="40"
-                HorizontalOptions="End"
-                Source="arrow_right.png"
-                VerticalOptions="Center" />
-            <ScrollView
-                x:Name="scroll"
-                Padding="25,0,15,0"
-                HeightRequest="85"
-                Orientation="Horizontal"
-                Scrolled="scroll_Scrolled"
-                VerticalOptions="End">
-                <Grid
-                    Padding="0,0,0,5"
-                    ColumnSpacing="0"
-                    HorizontalOptions="FillAndExpand">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
-                    <Image
-                        Grid.Column="0"
-                        Margin="0,0,-30,0"
-                        Aspect="AspectFit"
-                        HeightRequest="12"
-                        HorizontalOptions="FillAndExpand"
-                        Source="steps.png"
-                        VerticalOptions="End" />
-                    <Image
-                        Grid.Column="1"
-                        Aspect="AspectFit"
-                        HorizontalOptions="FillAndExpand"
-                        Source="logo.png"
-                        VerticalOptions="End" />
+    <Grid BackgroundColor="{StaticResource ListBackColor}">
+        <Image Source="header_back.png" VerticalOptions="Start" />
+        <ScrollView>
+            <StackLayout Spacing="5">
+                <Grid HeightRequest="125">
+                    <Label
+                        Margin="30,0,0,0"
+                        FontSize="Title"
+                        VerticalOptions="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="{Binding Strings[app_name]}" TextColor="White" />
+                                    <Span Text=" " />
+                                    <Span ForegroundColor="{StaticResource AboutBackGround}" Text="{Binding Strings[about_version]}" />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <controls:AboutHeaderScroll />
                 </Grid>
-            </ScrollView>
-        </Grid>
-        <Frame
-            Margin="10,5,10,0"
-            CornerRadius="10"
-            HasShadow="True">
-            <StackLayout Spacing="10">
+                <Frame
+                    Margin="10,0"
+                    CornerRadius="10"
+                    HasShadow="True">
+                    <StackLayout Spacing="10">
+                        <Label HorizontalTextAlignment="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="{Binding Strings[created_by]}" />
+                                        <Span Text=" " />
+                                        <Span FontAttributes="Bold" Text="{Binding Strings[creator_name]}" />
+                                        <Span Text="." />
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label HorizontalTextAlignment="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="{Binding Strings[supported_by]}" />
+                                        <Span Text=" " />
+                                        <Span FontAttributes="Bold" Text="{Binding Strings[supporter_name]}" />
+                                        <Span Text="." />
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label HorizontalTextAlignment="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="{Binding Strings[about_platforms]}" />
+                                        <Span Text=" " />
+                                        <Span FontAttributes="Bold" Text="{Binding Strings[platforms_available]}" />
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label HorizontalTextAlignment="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="{Binding Strings[environment]}" />
+                                        <Span Text=" " />
+                                        <Span Text="{Binding Strings[company_name]}" TextColor="{StaticResource Links}" />
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding VisitCompanySite}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Grid HeightRequest="50">
+                            <ImageButton
+                                BackgroundColor="Transparent"
+                                Command="{Binding OpenWebCommand}"
+                                Source="button.png" />
+                            <Label
+                                FontSize="Body"
+                                HorizontalOptions="Center"
+                                Text="{Binding Strings[learn_more]}"
+                                VerticalOptions="Center" />
+                        </Grid>
 
-
-
-                <Label>
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="{Binding Strings[created_by]}" />
-                                <Span Text=" " />
-                                <Span FontAttributes="Bold" Text="{Binding Strings[creator_name]}" />
-                                <Span Text="." />
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Label>
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="{Binding Strings[supported_by]}" />
-                                <Span Text=" " />
-                                <Span FontAttributes="Bold" Text="{Binding Strings[supporter_name]}" />
-                                <Span Text="." />
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Label>
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="{Binding Strings[thanks_by]}" />
-                                <Span Text=" " />
-                                <Span FontAttributes="Bold" Text="{Binding Strings[thankful_name]}" />
-                                <Span Text="." />
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Label>
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="{Binding Strings[about_platforms]}" />
-                                <Span Text=" " />
-                                <Span FontAttributes="Bold" Text="{Binding Strings[platforms_available]}" />
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Label>
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="{Binding Strings[environment]}" />
-                                <Span Text=" " />
-                                <Span Text="{Binding Strings[company_name]}" TextColor="{StaticResource Links}" />
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding VisitCompanySite}" />
-                    </Label.GestureRecognizers>
-                </Label>
-                <Button
-                    Margin="0,10,0,0"
-                    Command="{Binding OpenWebCommand}"
-                    Text="{Binding Strings[learn_more]}" />
+                    </StackLayout>
+                </Frame>
+                <Label
+                    Margin="30,10,0,10"
+                    FontSize="Large"
+                    HorizontalOptions="Start"
+                    Text="Terms"
+                    VerticalOptions="Center" />
+                <Frame Margin="10,0" CornerRadius="10">
+                    <StackLayout>
+                        <Label FontAttributes="Bold" Text="Term 1" />
+                        <Label Text="{Binding Strings[terms_text]}" />
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="10,0" CornerRadius="10">
+                    <StackLayout>
+                        <Label FontAttributes="Bold" Text="Term 2" />
+                        <Label Text="{Binding Strings[terms_text]}" />
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="10,0" CornerRadius="10">
+                    <StackLayout>
+                        <Label FontAttributes="Bold" Text="Term 3" />
+                        <Label Text="{Binding Strings[terms_text]}" />
+                    </StackLayout>
+                </Frame>
+                <Label
+                    Margin="0,10"
+                    FontSize="Micro"
+                    HorizontalOptions="Center"
+                    Text="{Binding Strings[about_footer]}"
+                    VerticalOptions="EndAndExpand" />
             </StackLayout>
-        </Frame>
-
-        <Label
-            Margin="0,10"
-            FontSize="Micro"
-            HorizontalOptions="Center"
-            Text="{Binding Strings[about_footer]}"
-            VerticalOptions="EndAndExpand" />
-    </StackLayout>
+        </ScrollView>
+    </Grid>
 </rxui:ReactiveContentPage>

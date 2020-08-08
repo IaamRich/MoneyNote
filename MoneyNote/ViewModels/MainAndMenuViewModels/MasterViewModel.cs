@@ -1,10 +1,10 @@
-﻿using I18NPortable;
-using ReactiveUI;
-using Splat;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reactive;
 using System.Reactive.Linq;
+using I18NPortable;
+using ReactiveUI;
+using Splat;
 
 
 namespace MoneyNote
@@ -50,7 +50,7 @@ namespace MoneyNote
                 new MasterCellViewModel { Title = Strings["menu_account"], IconSource = "account.png", TargetType = typeof(AccountViewModel) },
                 new MasterCellViewModel { Title = Strings["menu_settings"], IconSource = "settings.png", TargetType = typeof(SettingsViewModel) },
                 new MasterCellViewModel { Title = Strings["menu_history"], IconSource = "history.png", TargetType = typeof(HistoryViewModel) },
-                new MasterCellViewModel { Title = Strings["menu_terms"], IconSource = "terms.png", TargetType = typeof(TermsViewModel) },
+                //new MasterCellViewModel { Title = Strings["menu_terms"], IconSource = "terms.png", TargetType = typeof(TermsViewModel) },
                 new MasterCellViewModel { Title = Strings["menu_about"], IconSource = "about.png", TargetType = typeof(AboutViewModel) },
             };
         }
