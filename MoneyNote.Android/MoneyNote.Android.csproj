@@ -79,11 +79,8 @@
     <PackageReference Include="Xam.Plugins.Settings">
       <Version>3.1.1</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.7.0.1179" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
-    <PackageReference Include="XF.Material">
-      <Version>1.6.5</Version>
-    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -325,6 +322,16 @@
   <ItemGroup>
     <AndroidResource Include="..\MoneyNote\Resources\Images\header_back.png">
       <Link>Resources\drawable\header_back.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\alert_white.png">
+      <Link>Resources\drawable\alert_white.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\close_white.png">
+      <Link>Resources\drawable\close_white.png</Link>
     </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

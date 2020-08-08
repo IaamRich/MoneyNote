@@ -21,6 +21,7 @@ namespace MoneyNote
             InitializeComponent();
             Database = DependencyService.Get<ISQLiteDb>().GetConnection();
             MainPage = new NavigationPage(new SplashPage());
+            XF.Material.Forms.Material.Init(this);
             //var bootstrapper = new AppBootstrapper();
             //MainPage = new MasterView(bootstrapper.CreateMasterViewModel());
         }

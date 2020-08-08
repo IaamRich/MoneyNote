@@ -31,12 +31,13 @@
         <Frame
             Margin="-20,20,0,0"
             Padding="0"
-            BackgroundColor="{StaticResource AboutBackGround}"
-            BorderColor="{StaticResource PopupButton}"
+            BackgroundColor="{StaticResource BackgroundWhite}"
+            BorderColor="{StaticResource BoldLabel}"
             CornerRadius="10"
             HorizontalOptions="Start"
             VerticalOptions="Start">
             <StackLayout Margin="20,0,0,0" Orientation="Vertical">
+
                 <ImageButton
                     Aspect="AspectFit"
                     BackgroundColor="Transparent"
@@ -44,9 +45,17 @@
                     HeightRequest="20"
                     HorizontalOptions="End"
                     Source="close.png" />
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="Title"
+                    HorizontalOptions="Center"
+                    Text="Alert"
+                    TextColor="{StaticResource RedAlert}"
+                    VerticalOptions="Center" />
+
                 <Image
                     Aspect="AspectFit"
-                    HeightRequest="100"
+                    HeightRequest="50"
                     HorizontalOptions="Center"
                     Source="alert.png" />
                 <Label

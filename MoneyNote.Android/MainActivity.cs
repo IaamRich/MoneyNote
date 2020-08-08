@@ -28,7 +28,9 @@ namespace MoneyNote.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
             TouchEffectPreserver.Preserve();
+            //XF.Material.Droid.Material.Init(this, savedInstanceState);
             //Forms.SetFlags("SwipeView_Experimental"); //SwipeView Cell
+
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
