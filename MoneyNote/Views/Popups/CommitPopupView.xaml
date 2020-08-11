@@ -52,6 +52,12 @@
                     Source="close.png"
                     VerticalOptions="Start" />
                 <Frame Margin="10,1" Padding="0">
+                    <Button
+                        BackgroundColor="Transparent"
+                        Text="Choose Category"
+                        TextColor="{StaticResource MainGreen}" />
+                </Frame>
+                <Frame Margin="10,1" Padding="0">
                     <controls:CustomEntry
                         x:Name="entry"
                         ClearButtonVisibility="WhileEditing"

@@ -130,10 +130,13 @@
                     </StackLayout>
                 </Frame>
 
-                <Frame BackgroundColor="{StaticResource ListBackColor}" CornerRadius="3">
+                <Frame
+                    Padding="0"
+                    BackgroundColor="{StaticResource ListBackColor}"
+                    CornerRadius="3">
                     <StackLayout>
                         <Label
-                            FontSize="Medium"
+                            FontSize="Small"
                             HorizontalOptions="CenterAndExpand"
                             Text="{Binding Strings[last_spent_money]}"
                             TextColor="{StaticResource PopupButton}" />
@@ -141,6 +144,7 @@
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
                                     <StackLayout
+                                        Padding="10,0"
                                         touch:TouchEff.Command="{Binding Source={x:Reference spendingListView}, Path=BindingContext.SelectRecord}"
                                         touch:TouchEff.CommandParameter="{Binding .}"
                                         touch:TouchEff.PressedAnimationDuration="500"
@@ -149,12 +153,22 @@
                                         touch:TouchEff.PressedTranslationX="5"
                                         touch:TouchEff.PressedTranslationY="5"
                                         touch:TouchEff.RegularAnimationDuration="500"
+                                        HeightRequest="40"
                                         Orientation="Horizontal">
-                                        <Label FontSize="Small" Text="{Binding WhereText}" />
+                                        <Image
+                                            Aspect="AspectFit"
+                                            HorizontalOptions="Start"
+                                            Source="selected" />
+                                        <Label
+                                            FontSize="Micro"
+                                            HorizontalOptions="Start"
+                                            Text="{Binding WhereText}"
+                                            VerticalOptions="Center" />
                                         <Label
                                             FontSize="Medium"
                                             HorizontalOptions="EndAndExpand"
-                                            Text="{Binding Amount}" />
+                                            Text="{Binding Amount}"
+                                            VerticalOptions="Center" />
                                     </StackLayout>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
