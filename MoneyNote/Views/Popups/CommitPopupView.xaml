@@ -37,6 +37,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Frame
+            x:Name="originalPanel"
             Grid.Row="1"
             Grid.Column="1"
             Padding="0"
@@ -53,7 +54,9 @@
                     VerticalOptions="Start" />
                 <Frame Margin="10,1" Padding="0">
                     <Button
+                        x:Name="categoryButton"
                         BackgroundColor="Transparent"
+                        Clicked="CategoryButton_Clicked"
                         Text="Choose Category"
                         TextColor="{StaticResource MainGreen}" />
                 </Frame>
@@ -114,6 +117,34 @@
                     Clicked="Button_Clicked"
                     CornerRadius="0"
                     Text="{Binding Strings[save]}" />
+            </StackLayout>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="PlugForGridGesture" />
+            </Frame.GestureRecognizers>
+        </Frame>
+        <Frame
+            x:Name="categoryPanel"
+            Grid.Row="1"
+            Grid.Column="1"
+            Padding="0"
+            CornerRadius="10"
+            IsVisible="False"
+            VerticalOptions="Center">
+            <StackLayout Orientation="Vertical">
+                <ImageButton
+                    Aspect="AspectFit"
+                    BackgroundColor="Transparent"
+                    Clicked="Cancel_Button_Clicked"
+                    HeightRequest="20"
+                    HorizontalOptions="End"
+                    Source="close.png"
+                    VerticalOptions="Start" />
+                <StackLayout
+                    x:Name="bindableCategoryList"
+                    HeightRequest="200"
+                    Orientation="Vertical"
+                    Spacing="0">
+                </StackLayout>
             </StackLayout>
             <Frame.GestureRecognizers>
                 <TapGestureRecognizer Tapped="PlugForGridGesture" />

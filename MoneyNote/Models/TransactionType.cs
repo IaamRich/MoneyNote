@@ -6,10 +6,10 @@
         Bar,
         Transport,
         Business,
-        Salary,
         Network,
         Entertainment,
         Gift,
+        Salary,
         Earnings,
         Other
     }

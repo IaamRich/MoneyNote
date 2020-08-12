@@ -98,3 +98,15 @@ menu_footer = © Sapec Software 2020
 /* Alerts */
 alert_no_value = Enter some value!
 alert_no_value_zero = First digit must not be zero!
+
+/* Category Types*/
+type_market = Market/Shop
+type_bar = Restaurant/Catering
+type_transport = Transport
+type_business = Business/Deals
+type_network = Network
+type_entertainment = Entertainment
+type_gift = Gift
+type_salary = Salary
+type_earnings = Earnings/Hobby
+type_other = Other
