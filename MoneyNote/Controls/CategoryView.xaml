@@ -3,9 +3,24 @@
     x:Class="MoneyNote.Controls.CategoryView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <Label x:Name="label">
-        <Label.GestureRecognizers>
-            <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped" />
-        </Label.GestureRecognizers>
-    </Label>
+    <Frame
+        x:Name="frame"
+        Margin="3"
+        Padding="0">
+        <Grid
+            ColumnDefinitions="50, 150"
+            HorizontalOptions="Center"
+            RowDefinitions="50">
+            <Image x:Name="image" />
+            <Label
+                x:Name="label"
+                Grid.Column="1"
+                TextColor="{StaticResource PopupButton}"
+                VerticalOptions="Center" />
+
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_OnTapped" />
+            </Grid.GestureRecognizers>
+        </Grid>
+    </Frame>
 </ContentView>

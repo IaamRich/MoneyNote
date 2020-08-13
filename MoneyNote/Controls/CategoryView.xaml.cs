@@ -28,6 +28,7 @@ namespace MoneyNote.Controls
         {
             InitializeComponent();
             label.Text = category.Name;
+            image.Source = category.Image;
             Category = category;
         }
 
@@ -47,14 +48,17 @@ namespace MoneyNote.Controls
         {
             base.OnPropertyChanged(propertyName);
 
-            //if (propertyName == IsSelectedProperty.PropertyName)
-            //    Image.Source = IsSelected ? ic_toggle_right : ic_toggle_left;
+            if (propertyName == IsSelectedProperty.PropertyName)
+            {
+                frame.BackgroundColor = IsSelected ? (Color)Application.Current.Resources["AboutBackGround"] : (Color)Application.Current.Resources["BackgroundWhite"];
+                label.TextColor = IsSelected ? (Color)Application.Current.Resources["MainGreen"] : (Color)Application.Current.Resources["PopupButton"];
+            }
         }
 
         private void TapGestureRecognizer_OnTapped(object sender, EventArgs e)
         {
             Category.IsSelected = !Category.IsSelected;
-            label.TextColor = Category.IsSelected ? Color.Red : Color.Black;
+            //label.TextColor = Category.IsSelected ? Color.Red : Color.Gray;
 
             OnCategorySelected?.Invoke(Category);
         }

@@ -45,13 +45,13 @@
                     HeightRequest="20"
                     HorizontalOptions="End"
                     Source="close.png" />
-                <Label
+                <!--<Label
                     FontAttributes="Bold"
                     FontSize="Title"
                     HorizontalOptions="Center"
                     Text="Alert"
                     TextColor="{StaticResource RedAlert}"
-                    VerticalOptions="Center" />
+                    VerticalOptions="Center" />-->
 
                 <Image
                     Aspect="AspectFit"

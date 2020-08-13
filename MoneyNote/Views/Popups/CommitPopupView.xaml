@@ -139,12 +139,20 @@
                     HorizontalOptions="End"
                     Source="close.png"
                     VerticalOptions="Start" />
-                <StackLayout
-                    x:Name="bindableCategoryList"
-                    HeightRequest="200"
-                    Orientation="Vertical"
-                    Spacing="0">
-                </StackLayout>
+                <Label
+                    HeightRequest="30"
+                    FontSize="Subtitle"
+                    HorizontalOptions="Center"
+                    Text="Choose Category:" />
+                <ScrollView
+                    Margin="0"
+                    Padding="0"
+                    Orientation="Vertical">
+                    <StackLayout
+                        x:Name="bindableCategoryList"
+                        Orientation="Vertical"
+                        Spacing="0" />
+                </ScrollView>
             </StackLayout>
             <Frame.GestureRecognizers>
                 <TapGestureRecognizer Tapped="PlugForGridGesture" />
