@@ -18,6 +18,7 @@
         <Image Source="header_back.png" VerticalOptions="Start" />
         <StackLayout Margin="0" Spacing="0">
 
+            <!--  HEADER  -->
             <StackLayout Orientation="Horizontal" Spacing="0">
                 <Grid Margin="10,5,0,0" HorizontalOptions="Start">
                     <Grid.RowDefinitions>
@@ -82,12 +83,14 @@
                     Text="{Binding CurrentBill}"
                     TextColor="{StaticResource MainGreen}" />
             </StackLayout>
+            <!--  ENTRY WITH BUTTON  -->
             <StackLayout Margin="10,0">
                 <Frame
+                    Padding="0"
                     BackgroundColor="White"
                     CornerRadius="10"
                     HorizontalOptions="Center">
-                    <StackLayout>
+                    <StackLayout Padding="15">
                         <Frame Margin="3,1" Padding="0">
                             <controls:CustomEntry
                                 x:Name="entrySpend"
@@ -108,7 +111,8 @@
                             Margin="5"
                             touch:TouchEff.Command="{Binding AddSpend}"
                             touch:TouchEff.PressedBackgroundColor="{StaticResource MainGreen}"
-                            touch:TouchEff.PressedScale="0.9"
+                            touch:TouchEff.PressedScale="1.2"
+                            touch:TouchEff.RegularAnimationDuration="100"
                             HeightRequest="100"
                             HorizontalOptions="Center"
                             VerticalOptions="Center">
@@ -129,7 +133,7 @@
                         </Grid>
                     </StackLayout>
                 </Frame>
-
+                <!--  LIST  -->
                 <Frame
                     Padding="0"
                     BackgroundColor="{StaticResource ListBackColor}"
@@ -147,8 +151,8 @@
                                         Padding="10,0"
                                         touch:TouchEff.Command="{Binding Source={x:Reference spendingListView}, Path=BindingContext.SelectRecord}"
                                         touch:TouchEff.CommandParameter="{Binding .}"
-                                        touch:TouchEff.PressedAnimationDuration="500"
-                                        touch:TouchEff.PressedBackgroundColor="White"
+                                        touch:TouchEff.PressedAnimationDuration="200"
+                                        touch:TouchEff.PressedBackgroundColor="Green"
                                         touch:TouchEff.PressedScale="0.9"
                                         touch:TouchEff.PressedTranslationX="5"
                                         touch:TouchEff.PressedTranslationY="5"
@@ -179,12 +183,24 @@
 
 
             <StackLayout
-                Margin="10"
+                Margin="5"
                 HorizontalOptions="EndAndExpand"
                 Orientation="Horizontal"
+                Spacing="10"
                 VerticalOptions="EndAndExpand">
-                <Label Text="{Binding Strings[share]}" />
-                <Label Margin="10,0" Text="{Binding Strings[vote]}" />
+
+                <Image
+                    touch:TouchEff.PressedScale="2"
+                    touch:TouchEff.RegularAnimationDuration="200"
+                    HeightRequest="30"
+                    Source="share.png"
+                    WidthRequest="30" />
+                <Image
+                    touch:TouchEff.PressedScale="2"
+                    touch:TouchEff.RegularAnimationDuration="200"
+                    HeightRequest="30"
+                    Source="star.png"
+                    WidthRequest="30" />
             </StackLayout>
         </StackLayout>
     </Grid>

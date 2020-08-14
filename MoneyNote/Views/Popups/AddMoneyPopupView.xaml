@@ -31,6 +31,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Frame
+            x:Name="originalPanel"
             Grid.Column="1"
             Padding="0"
             CornerRadius="10"
@@ -49,6 +50,14 @@
                     Source="close.png"
                     VerticalOptions="Start"
                     WidthRequest="20" />
+                <Frame Margin="10,1" Padding="0">
+                    <Button
+                        x:Name="categoryButton"
+                        BackgroundColor="Transparent"
+                        Clicked="CategoryButton_Clicked"
+                        Text="Choose Category"
+                        TextColor="{StaticResource MainGreen}" />
+                </Frame>
                 <Frame Margin="10,1" Padding="0">
                     <controls:CustomEntry
                         x:Name="entry"
@@ -121,7 +130,41 @@
                 <TapGestureRecognizer Tapped="PlugForGridGesture" />
             </Frame.GestureRecognizers>
         </Frame>
-
+        <Frame
+            x:Name="categoryPanel"
+            Grid.Column="1"
+            Padding="0"
+            CornerRadius="10"
+            IsVisible="False"
+            VerticalOptions="Center">
+            <StackLayout Orientation="Vertical">
+                <ImageButton
+                    Aspect="AspectFit"
+                    BackgroundColor="Transparent"
+                    Clicked="Cancel_Button_Clicked"
+                    HeightRequest="20"
+                    HorizontalOptions="End"
+                    Source="close.png"
+                    VerticalOptions="Start" />
+                <Label
+                    FontSize="Subtitle"
+                    HeightRequest="30"
+                    HorizontalOptions="Center"
+                    Text="Choose Category:" />
+                <ScrollView
+                    Margin="0"
+                    Padding="0"
+                    Orientation="Vertical">
+                    <StackLayout
+                        x:Name="bindableCategoryList"
+                        Orientation="Vertical"
+                        Spacing="0" />
+                </ScrollView>
+            </StackLayout>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="PlugForGridGesture" />
+            </Frame.GestureRecognizers>
+        </Frame>
         <Image
             x:Name="leftHand"
             Grid.Row="0"
@@ -149,8 +192,9 @@
             Grid.Row="1"
             Grid.Column="1"
             Margin="0,-25,0,0"
-            Aspect="AspectFit"
+            HeightRequest="50"
             HorizontalOptions="Center"
+            IsVisible="false"
             Source="down_image_hand.png"
             VerticalOptions="Start"
             WidthRequest="50" />

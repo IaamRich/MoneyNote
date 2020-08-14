@@ -8,6 +8,7 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:popups="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
     mc:Ignorable="d">
     <popups:PopupPage.Animation>
         <animations:ScaleAnimation
@@ -140,8 +141,8 @@
                     Source="close.png"
                     VerticalOptions="Start" />
                 <Label
-                    HeightRequest="30"
                     FontSize="Subtitle"
+                    HeightRequest="30"
                     HorizontalOptions="Center"
                     Text="Choose Category:" />
                 <ScrollView

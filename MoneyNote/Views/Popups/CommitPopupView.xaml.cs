@@ -18,11 +18,11 @@ namespace MoneyNote.Views.Popups
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CommitPopupView : PopupPage
     {
+        private ObservableCollection<Category> CategoryList;
+        private List<Category> CatList = new List<Category>();
         public II18N Strings => I18N.Current;
         public Action ActionAfter { get; set; }
         public bool IsCancelPressed { get; set; }
-        private ObservableCollection<Category> CategoryList;
-        private List<Category> CatList = new List<Category>();
         public CommitPopupView(Action act)
         {
             InitializeComponent();
@@ -47,11 +47,11 @@ namespace MoneyNote.Views.Popups
 
             foreach (var view1 in CatList.Select(el => new CategoryView(el)))
             {
-                view1.OnCategorySelected += OnTherapySelected;
+                view1.OnCategorySelected += OnCategorySelected;
                 bindableCategoryList.Children.Add(view1);
             }
         }
-        private void OnTherapySelected(Category e)
+        private void OnCategorySelected(Category e)
         {
             bindableCategoryList.Children.Cast<CategoryView>().ForEach(x => x.IsSelected = false);
 
@@ -111,8 +111,7 @@ namespace MoneyNote.Views.Popups
                 new Category { Id = 2, Type = TransactionType.Transport, Name = Strings["type_transport"], Image = "transport.png", IsSelected = false},
                 new Category { Id = 3, Type = TransactionType.Business, Name = Strings["type_business"], Image = "business.png", IsSelected = false},
                 new Category { Id = 4, Type = TransactionType.Network, Name = Strings["type_network"], Image = "network_products.png", IsSelected = false},
-                new Category { Id = 5, Type = TransactionType.Entertainment, Name = Strings["type_entertainment"], Image = "entertainment.png", IsSelected = false},
-                new Category { Id = 6, Type = TransactionType.Gift, Name = Strings["type_gift"], Image = "gift.png", IsSelected = false},
+                new Category { Id = 5, Type = TransactionType.Entertainment, Name = Strings["type_entertainment"], Image = "entertainment.png", IsSelected = false}
             };
         }
         #region Settings/Animations
