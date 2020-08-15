@@ -47,6 +47,7 @@
             Grid.Column="1"
             Padding="0"
             CornerRadius="10"
+            IsVisible="{Binding IsOriginalVisible, Mode=TwoWay}"
             VerticalOptions="Center">
             <StackLayout x:Name="this" Orientation="Vertical">
                 <ImageButton
@@ -57,12 +58,16 @@
                     HorizontalOptions="End"
                     Source="close.png"
                     VerticalOptions="Start" />
-                <Frame Margin="10,1" Padding="0">
+                <Frame
+                    Margin="10,1"
+                    Padding="0"
+                    touch:TouchEff.Command="{Binding CategoryButtonCommand}"
+                    touch:TouchEff.PressedScale="1.2"
+                    touch:TouchEff.RegularAnimationDuration="100">
                     <Button
                         x:Name="categoryButton"
                         BackgroundColor="Transparent"
-                        Clicked="CategoryButton_Clicked"
-                        Text="Choose Category"
+                        Text="{Binding ChooseButtonText}"
                         TextColor="{StaticResource MainGreen}" />
                 </Frame>
                 <Frame Margin="10,1" Padding="0">
@@ -121,7 +126,7 @@
                     BackgroundColor="{StaticResource PopupButton}"
                     Clicked="Button_Clicked"
                     CornerRadius="0"
-                    Text="{Binding Path=TestText, Source={x:Reference viewModel}}" />
+                    Text="{Binding Strings[save]}" />
             </StackLayout>
             <Frame.GestureRecognizers>
                 <TapGestureRecognizer Tapped="PlugForGridGesture" />
@@ -133,7 +138,7 @@
             Grid.Column="1"
             Padding="0"
             CornerRadius="10"
-            IsVisible="False"
+            IsVisible="{Binding IsCategoriesVisible, Mode=TwoWay}"
             VerticalOptions="Center">
             <StackLayout Orientation="Vertical">
                 <ImageButton
@@ -148,14 +153,15 @@
                     FontSize="Subtitle"
                     HeightRequest="30"
                     HorizontalOptions="Center"
-                    Text="Choose Category:" />
+                    Text="{Binding Strings[choose_category]}"
+                    TextColor="Black" />
                 <ScrollView
                     Margin="0"
                     Padding="0"
                     Orientation="Vertical">
                     <StackLayout
                         x:Name="bindableCategoryList"
-                        BindableLayout.ItemsSource="{Binding Path=CategoryList, Source={x:Reference viewModel}}"
+                        BindableLayout.ItemsSource="{Binding CategoryList, Mode=TwoWay}"
                         Orientation="Vertical"
                         Spacing="0">
                         <BindableLayout.ItemTemplate>
@@ -163,7 +169,11 @@
                                 <Frame
                                     x:Name="frame"
                                     Margin="3"
-                                    Padding="0">
+                                    Padding="0"
+                                    touch:TouchEff.Command="{Binding Path=SwitchCategoryCommand, Source={x:Reference viewModel}}"
+                                    touch:TouchEff.CommandParameter="{Binding Id}"
+                                    touch:TouchEff.PressedScale="1.2"
+                                    touch:TouchEff.RegularAnimationDuration="100">
                                     <Grid
                                         ColumnDefinitions="50, 150"
                                         HorizontalOptions="Center"
@@ -174,17 +184,31 @@
                                             Grid.Column="1"
                                             Text="{Binding Name}"
                                             TextColor="{StaticResource PopupButton}"
-                                            VerticalOptions="Center" />
+                                            VerticalOptions="Center">
+                                            <Label.Triggers>
+                                                <DataTrigger
+                                                    Binding="{Binding IsSelected}"
+                                                    TargetType="Label"
+                                                    Value="True">
+                                                    <Setter Property="TextColor" Value="{StaticResource MainGreen}" />
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                        </Label>
                                     </Grid>
+                                    <Frame.Triggers>
+                                        <DataTrigger
+                                            Binding="{Binding IsSelected}"
+                                            TargetType="Frame"
+                                            Value="True">
+                                            <Setter Property="BackgroundColor" Value="{StaticResource AboutBackGround}" />
+                                        </DataTrigger>
+                                    </Frame.Triggers>
                                 </Frame>
                             </DataTemplate>
                         </BindableLayout.ItemTemplate>
                     </StackLayout>
                 </ScrollView>
             </StackLayout>
-            <Frame.GestureRecognizers>
-                <TapGestureRecognizer Tapped="PlugForGridGesture" />
-            </Frame.GestureRecognizers>
         </Frame>
         <Image
             x:Name="leftHand"

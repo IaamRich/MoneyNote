@@ -110,3 +110,6 @@ type_gift = Gift
 type_salary = Salary
 type_earnings = Earnings/Hobby
 type_other = Other
+
+/* Popups */
+choose_category = Choose Category:

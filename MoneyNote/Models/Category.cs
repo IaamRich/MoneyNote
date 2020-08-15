@@ -1,6 +1,8 @@
-﻿namespace MoneyNote.Models
+﻿using ReactiveUI;
+
+namespace MoneyNote.Models
 {
-    public class Category
+    public class Category : ReactiveObject
     {
         public int Id { get; set; }
         public string Name { get; set; }
