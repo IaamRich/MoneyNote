@@ -35,8 +35,13 @@ namespace MoneyNote.Views.Popups
             {
                 System.Threading.ThreadPool.QueueUserWorkItem(async _ =>
                 {
-                    await Task.Run(() =>
+                    await Task.Run(async () =>
                     {
+                        if (categoryButton.Text == Strings["choose_category"])
+                        {
+                            await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_need_category"]), true);
+                            return;
+                        }
                         if (String.IsNullOrEmpty(entry.Text))
                         {
                             PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);

@@ -98,6 +98,7 @@ menu_footer = © Sapec Software 2020
 /* Alerts */
 alert_no_value = Enter some value!
 alert_no_value_zero = First digit must not be zero!
+alert_need_category = Please choose a category.
 
 /* Category Types*/
 type_market = Market/Shop

@@ -51,6 +51,7 @@
             VerticalOptions="Center">
             <StackLayout x:Name="this" Orientation="Vertical">
                 <ImageButton
+                    Margin="0,5,5,0"
                     Aspect="AspectFit"
                     BackgroundColor="Transparent"
                     Clicked="Cancel_Button_Clicked"
@@ -136,11 +137,11 @@
             x:Name="categoryPanel"
             Grid.Row="1"
             Grid.Column="1"
-            Padding="0"
+            Padding="5"
             CornerRadius="10"
             IsVisible="{Binding IsCategoriesVisible, Mode=TwoWay}"
             VerticalOptions="Center">
-            <StackLayout Orientation="Vertical">
+            <StackLayout Margin="2" Orientation="Vertical">
                 <ImageButton
                     Aspect="AspectFit"
                     BackgroundColor="Transparent"

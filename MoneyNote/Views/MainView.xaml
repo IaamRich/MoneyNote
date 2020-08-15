@@ -53,7 +53,10 @@
                         Margin="10,0"
                         HorizontalOptions="EndAndExpand"
                         Orientation="Vertical">
-                        <Label HorizontalOptions="EndAndExpand" Text="{Binding Strings[current_cash]}" />
+                        <Label
+                            HorizontalOptions="EndAndExpand"
+                            Text="{Binding Strings[current_cash]}"
+                            TextColor="Black" />
                         <Label
                             HorizontalOptions="EndAndExpand"
                             Text="{Binding CurrentCash}"
@@ -64,7 +67,10 @@
                         Margin="10,0"
                         HorizontalOptions="EndAndExpand"
                         Orientation="Vertical">
-                        <Label HorizontalOptions="EndAndExpand" Text="{Binding Strings[current_card]}" />
+                        <Label
+                            HorizontalOptions="EndAndExpand"
+                            Text="{Binding Strings[current_card]}"
+                            TextColor="Black" />
                         <Label
                             HorizontalOptions="EndAndExpand"
                             Text="{Binding CurrentCard}"
@@ -76,7 +82,11 @@
                 Grid.Column="1"
                 HorizontalOptions="Center"
                 Orientation="Vertical">
-                <Label HorizontalOptions="Center" Text="{Binding Strings[current]}" />
+                <Label
+                    FontSize="Subtitle"
+                    HorizontalOptions="Center"
+                    Text="{Binding Strings[current]}"
+                    TextColor="Black" />
                 <Label
                     FontSize="Large"
                     HorizontalOptions="Center"
@@ -91,7 +101,7 @@
                     CornerRadius="10"
                     HorizontalOptions="Center">
                     <StackLayout Padding="0" Spacing="0">
-                        <Frame Margin="15" Padding="0">
+                        <Frame Margin="10" Padding="0">
                             <controls:CustomEntry
                                 x:Name="entrySpend"
                                 FontSize="Large"
@@ -118,51 +128,62 @@
                     </StackLayout>
                 </Frame>
                 <!--  LIST  -->
-                <Frame
-                    Padding="0"
-                    BackgroundColor="{StaticResource ListBackColor}"
-                    CornerRadius="3">
-                    <StackLayout>
-                        <Label
-                            FontSize="Small"
-                            HorizontalOptions="CenterAndExpand"
-                            Text="{Binding Strings[last_spent_money]}"
-                            TextColor="{StaticResource PopupButton}" />
-                        <CollectionView x:Name="spendingListView" ItemsSource="{Binding SpendingList}">
+                <StackLayout Padding="0">
+                    <Label
+                        Margin="0,5,0,0"
+                        FontSize="Subtitle"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Last Transactions:"
+                        TextColor="Black" />
+                    <Frame
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="White"
+                        CornerRadius="10">
+                        <CollectionView
+                            x:Name="spendingListView"
+                            Margin="0,10"
+                            ItemsSource="{Binding SpendingList}">
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
-                                    <StackLayout
-                                        Padding="10,0"
-                                        touch:TouchEff.Command="{Binding Source={x:Reference spendingListView}, Path=BindingContext.SelectRecord}"
-                                        touch:TouchEff.CommandParameter="{Binding .}"
-                                        touch:TouchEff.PressedAnimationDuration="200"
-                                        touch:TouchEff.PressedBackgroundColor="Green"
-                                        touch:TouchEff.PressedScale="0.9"
-                                        touch:TouchEff.PressedTranslationX="5"
-                                        touch:TouchEff.PressedTranslationY="5"
-                                        touch:TouchEff.RegularAnimationDuration="500"
-                                        HeightRequest="40"
-                                        Orientation="Horizontal">
-                                        <Image
-                                            Aspect="AspectFit"
-                                            HorizontalOptions="Start"
-                                            Source="selected" />
-                                        <Label
-                                            FontSize="Micro"
-                                            HorizontalOptions="Start"
-                                            Text="{Binding WhereText}"
-                                            VerticalOptions="Center" />
-                                        <Label
-                                            FontSize="Medium"
-                                            HorizontalOptions="EndAndExpand"
-                                            Text="{Binding Amount}"
-                                            VerticalOptions="Center" />
-                                    </StackLayout>
+                                    <Frame Padding="0" BackgroundColor="Transparent">
+                                        <Frame
+                                            Margin="10,2"
+                                            Padding="0"
+                                            touch:TouchEff.Command="{Binding Source={x:Reference spendingListView}, Path=BindingContext.SelectRecord}"
+                                            touch:TouchEff.CommandParameter="{Binding .}"
+                                            touch:TouchEff.PressedAnimationDuration="200"
+                                            touch:TouchEff.PressedScale="1.1"
+                                            touch:TouchEff.PressedTranslationX="5"
+                                            touch:TouchEff.PressedTranslationY="5"
+                                            touch:TouchEff.RegularAnimationDuration="200"
+                                            BackgroundColor="White">
+                                            <StackLayout
+                                                Padding="10,0"
+                                                HeightRequest="50"
+                                                Orientation="Horizontal">
+                                                <Image
+                                                    Aspect="AspectFit"
+                                                    HorizontalOptions="Start"
+                                                    Source="selected" />
+                                                <Label
+                                                    FontSize="Micro"
+                                                    HorizontalOptions="Start"
+                                                    Text="{Binding WhereText}"
+                                                    VerticalOptions="Center" />
+                                                <Label
+                                                    FontSize="Medium"
+                                                    HorizontalOptions="EndAndExpand"
+                                                    Text="{Binding Amount}"
+                                                    VerticalOptions="Center" />
+                                            </StackLayout>
+                                        </Frame>
+                                    </Frame>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
                         </CollectionView>
-                    </StackLayout>
-                </Frame>
+                    </Frame>
+                </StackLayout>
             </StackLayout>
 
 

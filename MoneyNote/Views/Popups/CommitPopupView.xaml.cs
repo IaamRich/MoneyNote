@@ -30,10 +30,15 @@ namespace MoneyNote.Views.Popups
             }
             ActionAfter = act;
         }
-        private void Button_Clicked(object sender, System.EventArgs e)
+        private async void Button_Clicked(object sender, System.EventArgs e)
         {
             if (!IsCancelPressed)
             {
+                if (categoryButton.Text == Strings["choose_category"])
+                {
+                    await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_need_category"]), true);
+                    return;
+                }
                 var result = entry.Text;
                 if (String.IsNullOrWhiteSpace(entry.Text)) result = Strings["missed"];
                 CrossSettings.Current.AddOrUpdateValue("CommitMessage", result);
