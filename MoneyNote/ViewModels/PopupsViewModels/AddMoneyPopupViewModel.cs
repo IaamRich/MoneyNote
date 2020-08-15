@@ -7,7 +7,7 @@ using ReactiveUI;
 
 namespace MoneyNote.ViewModels.PopupsViewModels
 {
-    public class CommitPopupViewModel : ReactiveObject
+    public class AddMoneyPopupViewModel : ReactiveObject
     {
         #region Variables
         public II18N Strings => I18N.Current;
@@ -18,7 +18,7 @@ namespace MoneyNote.ViewModels.PopupsViewModels
         public ICommand SwitchCategoryCommand { get; set; }
         public ICommand CategoryButtonCommand { get; set; }
         #endregion
-        public CommitPopupViewModel()
+        public AddMoneyPopupViewModel()
         {
             ChooseButtonText = Strings["choose_category"];
             IsOriginalVisible = true;
@@ -41,16 +41,14 @@ namespace MoneyNote.ViewModels.PopupsViewModels
                 IsOriginalVisible = false;
             });
         }
-        private void GetCategories()
+        public void GetCategories()
         {
             CategoryList = new ObservableCollection<Category>
             {
-                new Category { Id = 0, Type = TransactionType.Market, Name = Strings["type_market"], Image = "market_shop.png", IsSelected = false},
-                new Category { Id = 1, Type = TransactionType.Bar, Name = Strings["type_bar"], Image = "restaurant_bar_bistro.png", IsSelected = false},
-                new Category { Id = 2, Type = TransactionType.Transport, Name = Strings["type_transport"], Image = "transport.png", IsSelected = false},
-                new Category { Id = 3, Type = TransactionType.Business, Name = Strings["type_business"], Image = "business.png", IsSelected = false},
-                new Category { Id = 4, Type = TransactionType.Network, Name = Strings["type_network"], Image = "network_products.png", IsSelected = false},
-                new Category { Id = 5, Type = TransactionType.Entertainment, Name = Strings["type_entertainment"], Image = "entertainment.png", IsSelected = false}
+                new Category { Id = 0, Type = TransactionType.Salary, Name = Strings["type_salary"], Image = "salary.png", IsSelected = false},
+                new Category { Id = 1, Type = TransactionType.Earnings, Name = Strings["type_earnings"], Image = "additional_earnings.png", IsSelected = false},
+                new Category { Id = 2, Type = TransactionType.Gift, Name = Strings["type_gift"], Image = "gift.png", IsSelected = false},
+                new Category { Id = 3, Type = TransactionType.Other, Name = Strings["type_other"], Image = "other.png", IsSelected = false}
             };
         }
     }

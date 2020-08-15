@@ -90,8 +90,8 @@
                     BackgroundColor="White"
                     CornerRadius="10"
                     HorizontalOptions="Center">
-                    <StackLayout Padding="15">
-                        <Frame Margin="3,1" Padding="0">
+                    <StackLayout Padding="0" Spacing="0">
+                        <Frame Margin="15" Padding="0">
                             <controls:CustomEntry
                                 x:Name="entrySpend"
                                 FontSize="Large"
@@ -106,31 +106,15 @@
                                 TextColor="{StaticResource PopupButton}"
                                 VerticalOptions="Center" />
                         </Frame>
-
-                        <Grid
-                            Margin="5"
-                            touch:TouchEff.Command="{Binding AddSpend}"
-                            touch:TouchEff.PressedBackgroundColor="{StaticResource MainGreen}"
-                            touch:TouchEff.PressedScale="1.2"
-                            touch:TouchEff.RegularAnimationDuration="100"
-                            HeightRequest="100"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center">
-                            <Image
-                                Margin="-5"
-                                BackgroundColor="Transparent"
-                                HeightRequest="100"
-                                HorizontalOptions="Center"
-                                Source="button.png" />
-                            <Label
-                                FontAttributes="Bold"
-                                HeightRequest="100"
-                                HorizontalOptions="Center"
-                                Text="{Binding Strings[commit]}"
-                                TextColor="{StaticResource PopupButton}"
-                                VerticalOptions="Center"
-                                VerticalTextAlignment="Center" />
-                        </Grid>
+                        <Button
+                            BackgroundColor="{StaticResource MainGreen}"
+                            Command="{Binding AddSpend}"
+                            CornerRadius="0"
+                            HeightRequest="50"
+                            HorizontalOptions="FillAndExpand"
+                            Text="{Binding Strings[commit]}"
+                            TextColor="White"
+                            VerticalOptions="Center" />
                     </StackLayout>
                 </Frame>
                 <!--  LIST  -->

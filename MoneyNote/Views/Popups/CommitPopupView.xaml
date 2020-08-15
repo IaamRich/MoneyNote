@@ -209,6 +209,9 @@
                     </StackLayout>
                 </ScrollView>
             </StackLayout>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="PlugForGridGesture" />
+            </Frame.GestureRecognizers>
         </Frame>
         <Image
             x:Name="leftHand"

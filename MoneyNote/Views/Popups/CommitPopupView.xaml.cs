@@ -12,8 +12,6 @@ namespace MoneyNote.Views.Popups
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CommitPopupView : PopupPage
     {
-        //private ObservableCollection<Category> CategoryList;
-        //private List<Category> CatList = new List<Category>();
         public II18N Strings => I18N.Current;
         public Action ActionAfter { get; set; }
         public bool IsCancelPressed { get; set; }
@@ -31,38 +29,7 @@ namespace MoneyNote.Views.Popups
                     break;
             }
             ActionAfter = act;
-            //CategoryList = new ObservableCollection<Category>();
-            //foreach (var item in GetCategories())
-            //{
-            //    CategoryList.Add(item);
-            //    //CatList.Add(item);
-            //}
-            //BindingContext = new CommitPopupViewModel();
-            //foreach (var view1 in CatList.Select(el => new CategoryView(el)))
-            //{
-            //    view1.OnCategorySelected += OnCategorySelected;
-            //    bindableCategoryList.Children.Add(view1);
-            //}
         }
-        //private void OnCategorySelected(Category e)
-        //{
-        //    bindableCategoryList.Children.Cast<CategoryView>().ForEach(x => x.IsSelected = false);
-
-        //    foreach (var item in CatList.Where(item => e.Name != item.Name)) item.IsSelected = false;
-
-        //    var element = CatList.FirstOrDefault(it => it.Name == e.Name);
-
-        //    if (element != null)
-        //        element.IsSelected = e.IsSelected;
-
-        //    if (element != null)
-        //        bindableCategoryList.Children.Cast<CategoryView>().FirstOrDefault(x => x.Category.Name == e.Name)
-        //                .IsSelected =
-        //            element.IsSelected;
-        //    categoryPanel.IsVisible = false;
-        //    originalPanel.IsVisible = true;
-        //    categoryButton.Text = e.Name;
-        //}
         private void Button_Clicked(object sender, System.EventArgs e)
         {
             if (!IsCancelPressed)
@@ -90,23 +57,7 @@ namespace MoneyNote.Views.Popups
             OnBackgroundClicked();
             PopupNavigation.Instance.PopAsync(true);
         }
-        private void CategoryButton_Clicked(object sender, EventArgs e)
-        {
-            categoryPanel.IsVisible = true;
-            originalPanel.IsVisible = false;
-        }
-        //public List<Category> GetCategories()
-        //{
-        //    return new List<Category>
-        //    {
-        //        new Category { Id = 0, Type = TransactionType.Market, Name = Strings["type_market"], Image = "market_shop.png", IsSelected = false},
-        //        new Category { Id = 1, Type = TransactionType.Bar, Name = Strings["type_bar"], Image = "restaurant_bar_bistro.png", IsSelected = false},
-        //        new Category { Id = 2, Type = TransactionType.Transport, Name = Strings["type_transport"], Image = "transport.png", IsSelected = false},
-        //        new Category { Id = 3, Type = TransactionType.Business, Name = Strings["type_business"], Image = "business.png", IsSelected = false},
-        //        new Category { Id = 4, Type = TransactionType.Network, Name = Strings["type_network"], Image = "network_products.png", IsSelected = false},
-        //        new Category { Id = 5, Type = TransactionType.Entertainment, Name = Strings["type_entertainment"], Image = "entertainment.png", IsSelected = false}
-        //    };
-        //}
+
         #region Settings/Animations
         private void CanvasView_PaintSurface(object sender, SKPaintSurfaceEventArgs e)
         {
@@ -117,7 +68,6 @@ namespace MoneyNote.Views.Popups
             IsCancelPressed = true;
             downHand.IsVisible = true;
             animation.PositionOut = Rg.Plugins.Popup.Enums.MoveAnimationOptions.Bottom;
-            //animation.DurationOut = 200;
             animation.ScaleOut = 1;
             return base.OnBackgroundClicked();
         }
