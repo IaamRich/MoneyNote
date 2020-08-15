@@ -1,16 +1,10 @@
 ﻿
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
 using I18NPortable;
-using MoneyNote.Controls;
-using MoneyNote.Models;
 using Plugin.Settings;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using SkiaSharp.Views.Forms;
-using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
 namespace MoneyNote.Views.Popups
@@ -21,8 +15,6 @@ namespace MoneyNote.Views.Popups
         public II18N Strings => I18N.Current;
         public Action ActionAfter { get; set; }
         public bool IsCancelPressed { get; set; }
-        private ObservableCollection<Category> CategoryList;
-        private List<Category> CatList = new List<Category>();
         public CommitPopupView(Action act)
         {
             InitializeComponent();
@@ -37,43 +29,16 @@ namespace MoneyNote.Views.Popups
                     break;
             }
             ActionAfter = act;
-            CategoryList = new ObservableCollection<Category>();
-            foreach (var item in GetCategories())
-            {
-                CategoryList.Add(item);
-                CatList.Add(item);
-            }
-
-
-            foreach (var view1 in CatList.Select(el => new CategoryView(el)))
-            {
-                view1.OnCategorySelected += OnTherapySelected;
-                bindableCategoryList.Children.Add(view1);
-            }
         }
-        private void OnTherapySelected(Category e)
-        {
-            bindableCategoryList.Children.Cast<CategoryView>().ForEach(x => x.IsSelected = false);
-
-            foreach (var item in CatList.Where(item => e.Name != item.Name)) item.IsSelected = false;
-
-            var element = CatList.FirstOrDefault(it => it.Name == e.Name);
-
-            if (element != null)
-                element.IsSelected = e.IsSelected;
-
-            if (element != null)
-                bindableCategoryList.Children.Cast<CategoryView>().FirstOrDefault(x => x.Category.Name == e.Name)
-                        .IsSelected =
-                    element.IsSelected;
-            categoryPanel.IsVisible = false;
-            originalPanel.IsVisible = true;
-            categoryButton.Text = e.Name;
-        }
-        private void Button_Clicked(object sender, System.EventArgs e)
+        private async void Button_Clicked(object sender, System.EventArgs e)
         {
             if (!IsCancelPressed)
             {
+                if (categoryButton.Text == Strings["choose_category"])
+                {
+                    await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_need_category"]), true);
+                    return;
+                }
                 var result = entry.Text;
                 if (String.IsNullOrWhiteSpace(entry.Text)) result = Strings["missed"];
                 CrossSettings.Current.AddOrUpdateValue("CommitMessage", result);
@@ -97,24 +62,7 @@ namespace MoneyNote.Views.Popups
             OnBackgroundClicked();
             PopupNavigation.Instance.PopAsync(true);
         }
-        private void CategoryButton_Clicked(object sender, EventArgs e)
-        {
-            categoryPanel.IsVisible = true;
-            originalPanel.IsVisible = false;
-        }
-        public List<Category> GetCategories()
-        {
-            return new List<Category>
-            {
-                new Category { Id = 0, Type = TransactionType.Market, Name = Strings["type_market"], Image = "market_shop.png", IsSelected = false},
-                new Category { Id = 1, Type = TransactionType.Bar, Name = Strings["type_bar"], Image = "restaurant_bar_bistro.png", IsSelected = false},
-                new Category { Id = 2, Type = TransactionType.Transport, Name = Strings["type_transport"], Image = "transport.png", IsSelected = false},
-                new Category { Id = 3, Type = TransactionType.Business, Name = Strings["type_business"], Image = "business.png", IsSelected = false},
-                new Category { Id = 4, Type = TransactionType.Network, Name = Strings["type_network"], Image = "network_products.png", IsSelected = false},
-                new Category { Id = 5, Type = TransactionType.Entertainment, Name = Strings["type_entertainment"], Image = "entertainment.png", IsSelected = false},
-                new Category { Id = 6, Type = TransactionType.Gift, Name = Strings["type_gift"], Image = "gift.png", IsSelected = false},
-            };
-        }
+
         #region Settings/Animations
         private void CanvasView_PaintSurface(object sender, SKPaintSurfaceEventArgs e)
         {
@@ -125,7 +73,6 @@ namespace MoneyNote.Views.Popups
             IsCancelPressed = true;
             downHand.IsVisible = true;
             animation.PositionOut = Rg.Plugins.Popup.Enums.MoveAnimationOptions.Bottom;
-            //animation.DurationOut = 200;
             animation.ScaleOut = 1;
             return base.OnBackgroundClicked();
         }

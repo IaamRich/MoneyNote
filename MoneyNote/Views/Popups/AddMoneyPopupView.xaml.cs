@@ -35,8 +35,13 @@ namespace MoneyNote.Views.Popups
             {
                 System.Threading.ThreadPool.QueueUserWorkItem(async _ =>
                 {
-                    await Task.Run(() =>
+                    await Task.Run(async () =>
                     {
+                        if (categoryButton.Text == Strings["choose_category"])
+                        {
+                            await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_need_category"]), true);
+                            return;
+                        }
                         if (String.IsNullOrEmpty(entry.Text))
                         {
                             PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
@@ -70,16 +75,21 @@ namespace MoneyNote.Views.Popups
         {
             IsCancelPressed = true;
             downHand.IsVisible = true;
+            leftHand.IsVisible = false;
+            rightHand.IsVisible = false;
             OnBackgroundClicked();
-            animation.DurationOut = 300;
             PopupNavigation.Instance.PopAsync(true);
         }
+
+        #region Settings/Animations
+        // Invoked when background is clicked
         protected override bool OnBackgroundClicked()
         {
             animation.PositionOut = Rg.Plugins.Popup.Enums.MoveAnimationOptions.Top;
             animation.ScaleOut = 1;
             return base.OnBackgroundClicked();
         }
+        // Invoked before an animation disappearing
         protected override void OnDisappearingAnimationBegin()
         {
             base.OnDisappearingAnimationBegin();
@@ -94,7 +104,8 @@ namespace MoneyNote.Views.Popups
         protected override void OnDisappearingAnimationEnd()
         {
             base.OnDisappearingAnimationEnd();
-            downHand.IsVisible = false;
+            leftHand.IsVisible = false;
+            rightHand.IsVisible = false;
         }
         // Invoked before an animation appearing
         protected override void OnAppearingAnimationBegin()
@@ -113,5 +124,6 @@ namespace MoneyNote.Views.Popups
         {
             //dont delete this method for unclosing popup when it tapped on empty space
         }
+        #endregion
     }
 }
