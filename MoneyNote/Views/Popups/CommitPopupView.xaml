@@ -9,7 +9,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:popups="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
     xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
+    xmlns:viewModels="clr-namespace:MoneyNote.ViewModels.PopupsViewModels"
     mc:Ignorable="d">
+    <popups:PopupPage.BindingContext>
+        <viewModels:CommitPopupViewModel x:Name="viewModel" />
+    </popups:PopupPage.BindingContext>
     <popups:PopupPage.Animation>
         <animations:ScaleAnimation
             x:Name="animation"
@@ -117,7 +121,7 @@
                     BackgroundColor="{StaticResource PopupButton}"
                     Clicked="Button_Clicked"
                     CornerRadius="0"
-                    Text="{Binding Strings[save]}" />
+                    Text="{Binding Path=TestText, Source={x:Reference viewModel}}" />
             </StackLayout>
             <Frame.GestureRecognizers>
                 <TapGestureRecognizer Tapped="PlugForGridGesture" />
@@ -151,8 +155,31 @@
                     Orientation="Vertical">
                     <StackLayout
                         x:Name="bindableCategoryList"
+                        BindableLayout.ItemsSource="{Binding Path=CategoryList, Source={x:Reference viewModel}}"
                         Orientation="Vertical"
-                        Spacing="0" />
+                        Spacing="0">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <Frame
+                                    x:Name="frame"
+                                    Margin="3"
+                                    Padding="0">
+                                    <Grid
+                                        ColumnDefinitions="50, 150"
+                                        HorizontalOptions="Center"
+                                        RowDefinitions="50">
+                                        <Image x:Name="image" Source="{Binding Image}" />
+                                        <Label
+                                            x:Name="label"
+                                            Grid.Column="1"
+                                            Text="{Binding Name}"
+                                            TextColor="{StaticResource PopupButton}"
+                                            VerticalOptions="Center" />
+                                    </Grid>
+                                </Frame>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
                 </ScrollView>
             </StackLayout>
             <Frame.GestureRecognizers>
