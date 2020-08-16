@@ -80,7 +80,6 @@ namespace MoneyNote.Views.Popups
             OnBackgroundClicked();
             PopupNavigation.Instance.PopAsync(true);
         }
-
         #region Settings/Animations
         // Invoked when background is clicked
         protected override bool OnBackgroundClicked()

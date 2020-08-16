@@ -7,11 +7,12 @@ namespace MoneyNote.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Image { get; set; }
-        public TransactionType Type { get; set; }
+        public CategoryType Type { get; set; }
         public bool IsSelected { get; set; }
     }
-    public enum TransactionType
+    public enum CategoryType : int
     {
+        None,
         Market,
         Bar,
         Transport,

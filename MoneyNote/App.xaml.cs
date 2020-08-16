@@ -5,21 +5,17 @@ using I18NPortable;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
-using MoneyNote.Persistence;
 using MoneyNote.Resources;
-using SQLite;
 using Xamarin.Forms;
 
 namespace MoneyNote
 {
     public partial class App : Application
     {
-        public static SQLiteAsyncConnection Database;
 
         public App()
         {
             InitializeComponent();
-            Database = DependencyService.Get<ISQLiteDb>().GetConnection();
             MainPage = new NavigationPage(new SplashPage());
             XF.Material.Forms.Material.Init(this);
             //var bootstrapper = new AppBootstrapper();

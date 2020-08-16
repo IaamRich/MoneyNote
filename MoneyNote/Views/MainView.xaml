@@ -141,16 +141,16 @@
                         BackgroundColor="White"
                         CornerRadius="10">
                         <CollectionView
-                            x:Name="spendingListView"
+                            x:Name="lastTransactions"
                             Margin="0,10"
-                            ItemsSource="{Binding SpendingList}">
+                            ItemsSource="{Binding LastTransactionsList}">
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
                                     <Frame Padding="0" BackgroundColor="Transparent">
                                         <Frame
                                             Margin="10,2"
                                             Padding="0"
-                                            touch:TouchEff.Command="{Binding Source={x:Reference spendingListView}, Path=BindingContext.SelectRecord}"
+                                            touch:TouchEff.Command="{Binding Source={x:Reference lastTransactions}, Path=BindingContext.SelectRecord}"
                                             touch:TouchEff.CommandParameter="{Binding .}"
                                             touch:TouchEff.PressedAnimationDuration="200"
                                             touch:TouchEff.PressedScale="1.1"

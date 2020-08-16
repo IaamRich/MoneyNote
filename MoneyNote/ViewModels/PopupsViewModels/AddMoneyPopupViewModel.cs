@@ -45,10 +45,10 @@ namespace MoneyNote.ViewModels.PopupsViewModels
         {
             CategoryList = new ObservableCollection<Category>
             {
-                new Category { Id = 0, Type = TransactionType.Salary, Name = Strings["type_salary"], Image = "salary.png", IsSelected = false},
-                new Category { Id = 1, Type = TransactionType.Earnings, Name = Strings["type_earnings"], Image = "additional_earnings.png", IsSelected = false},
-                new Category { Id = 2, Type = TransactionType.Gift, Name = Strings["type_gift"], Image = "gift.png", IsSelected = false},
-                new Category { Id = 3, Type = TransactionType.Other, Name = Strings["type_other"], Image = "other.png", IsSelected = false}
+                new Category { Id = 0, Type = CategoryType.Salary, Name = Strings["type_salary"], Image = "salary.png", IsSelected = false},
+                new Category { Id = 1, Type = CategoryType.Earnings, Name = Strings["type_earnings"], Image = "additional_earnings.png", IsSelected = false},
+                new Category { Id = 2, Type = CategoryType.Gift, Name = Strings["type_gift"], Image = "gift.png", IsSelected = false},
+                new Category { Id = 3, Type = CategoryType.Other, Name = Strings["type_other"], Image = "other.png", IsSelected = false}
             };
         }
     }
