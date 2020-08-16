@@ -112,7 +112,7 @@
                                 PlaceholderColor="{StaticResource AboutBackGround}"
                                 ReturnCommand="{Binding AddSpend}"
                                 ReturnType="Go"
-                                Text="{Binding SpendValue}"
+                                Text="{Binding SpendValue, Mode=TwoWay}"
                                 TextColor="{StaticResource PopupButton}"
                                 VerticalOptions="Center" />
                         </Frame>
@@ -169,12 +169,12 @@
                                                 <Label
                                                     FontSize="Micro"
                                                     HorizontalOptions="Start"
-                                                    Text="{Binding WhereText}"
+                                                    Text="{Binding Note}"
                                                     VerticalOptions="Center" />
                                                 <Label
                                                     FontSize="Medium"
                                                     HorizontalOptions="EndAndExpand"
-                                                    Text="{Binding Amount}"
+                                                    Text="{Binding Value}"
                                                     VerticalOptions="Center" />
                                             </StackLayout>
                                         </Frame>
