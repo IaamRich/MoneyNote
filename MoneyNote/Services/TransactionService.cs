@@ -19,14 +19,18 @@ namespace MoneyNote.Services
         {
             var dto = Settings.TransactionData;
             var answer = new List<Transaction>();
-            for (int i = 0; i < count; i++)
+            if (dto != null)
             {
-                answer.Add(dto.FirstOrDefault(x => x.Id == i));
+                for (int i = 0; i < count; i++)
+                {
+                    answer.Add(dto.FirstOrDefault(x => x.Id == i));
+                }
             }
             return Task.FromResult(answer);
         }
         public Task<bool> Create(Transaction item)
         {
+            if (Settings.TransactionData == null) Settings.TransactionData = new List<Transaction>();
             var all = Settings.TransactionData;
             all.Add(item);
             Settings.TransactionData = all;

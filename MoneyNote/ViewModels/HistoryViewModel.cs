@@ -50,7 +50,10 @@ namespace MoneyNote
             {
                 data = _transactionService.GetAll().Result;
                 data.Reverse();
-                lastID = data.First().Id;
+                if (data.Count != 0 || data != null)
+                {
+                    lastID = data.First().Id;
+                }
                 TransactionsList = new ObservableCollection<Transaction>();
                 data.ForEach(x => TransactionsList.Add(x));
             });

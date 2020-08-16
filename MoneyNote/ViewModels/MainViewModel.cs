@@ -77,7 +77,10 @@ namespace MoneyNote
         {
             var data = _transactionService.GetAll(20).Result;
             data.Reverse();
-            lastID = data.First().Id;
+            if (data.Count != 0)
+            {
+                lastID = data.First().Id;
+            }
             LastTransactionsList = new ObservableCollection<Transaction>();
             data.ForEach(x => LastTransactionsList.Add(x));
         }
@@ -107,24 +110,39 @@ namespace MoneyNote
                 Type = TransactionType.Spend,
                 Category = SelectedCategory
             };
-            await Task.Run(async () =>
+            await _transactionService.Create(item);
+            switch (CrossSettings.Current.GetValueOrDefault("CurrentCommitMoneyFrom", 0))
             {
-                await _transactionService.Create(item);
-                switch (CrossSettings.Current.GetValueOrDefault("CurrentCommitMoneyFrom", 0))
-                {
-                    case 0:
-                        CurrentCash -= item.Value;
-                        _moneyService.SetCurrentCash(CurrentCash);
-                        break;
-                    case 1:
-                        CurrentCard -= item.Value;
-                        _moneyService.SetCurrentCard(CurrentCard);
-                        break;
-                }
-                LastTransactionsList.Clear();
-                SpendValue = "";
-                GetData();
-            });
+                case 0:
+                    CurrentCash -= item.Value;
+                    _moneyService.SetCurrentCash(CurrentCash);
+                    break;
+                case 1:
+                    CurrentCard -= item.Value;
+                    _moneyService.SetCurrentCard(CurrentCard);
+                    break;
+            }
+            LastTransactionsList.Clear();
+            SpendValue = "";
+            GetData();
+            //await Task.Run(async () =>
+            //{
+            //    await _transactionService.Create(item);
+            //    switch (CrossSettings.Current.GetValueOrDefault("CurrentCommitMoneyFrom", 0))
+            //    {
+            //        case 0:
+            //            CurrentCash -= item.Value;
+            //            _moneyService.SetCurrentCash(CurrentCash);
+            //            break;
+            //        case 1:
+            //            CurrentCard -= item.Value;
+            //            _moneyService.SetCurrentCard(CurrentCard);
+            //            break;
+            //    }
+            //    LastTransactionsList.Clear();
+            //    SpendValue = "";
+            //    GetData();
+            //});
         }
         private async void OnAddSalary()
         {
