@@ -165,7 +165,7 @@
                                                 <Image
                                                     Aspect="AspectFit"
                                                     HorizontalOptions="Start"
-                                                    Source="selected" />
+                                                    Source="{Binding Category.Image}" />
                                                 <Label
                                                     FontSize="Micro"
                                                     HorizontalOptions="Start"

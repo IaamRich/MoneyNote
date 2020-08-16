@@ -3,7 +3,7 @@ using I18NPortable;
 
 namespace MoneyNote.Models
 {
-    public class Categories
+    public static class Categories
     {
         public static II18N Strings => I18N.Current;
         public static List<Category> GetAll(int minId, int maxId)

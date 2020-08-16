@@ -15,8 +15,8 @@ namespace MoneyNote
     {
         //Used Services
         private static IMoneyService _moneyService;
-        private static ISpendService _spendService;
         private static ISettingsService _settingsService;
+        private static ITransactionService _transactionService;
         //Language List
         public ObservableCollection<Language> LanguagesList { get; set; }
         public ImageSource LanguageImage { get; set; }
@@ -36,11 +36,11 @@ namespace MoneyNote
         public II18N Strings => I18N.Current;
         public string UrlPathSegment => Strings["menu_settings"];
         public IScreen HostScreen { get; }
-        public SettingsViewModel(ISpendService spendService, IMoneyService moneyService, ISettingsService settingsService, IScreen screen = null)
+        public SettingsViewModel(ITransactionService transactionService, IMoneyService moneyService, ISettingsService settingsService, IScreen screen = null)
         {
             //main
             HostScreen = screen ?? Locator.Current.GetService<IScreen>();
-            _spendService = spendService;
+            _transactionService = transactionService;
             _moneyService = moneyService;
             _settingsService = settingsService;
             //get language
@@ -79,7 +79,7 @@ namespace MoneyNote
         private async void ResetAllMethod()
         {
             _moneyService.DeleteAllMoneyNotes();
-            await _spendService.DeleteAll();
+            //await _spendService.DeleteAll();
             await Application.Current.MainPage.DisplayAlert("Method", "ResetAll is done", "Cancel", "ok");
         }
         private void GetLanguages()

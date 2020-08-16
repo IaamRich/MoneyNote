@@ -44,7 +44,7 @@ namespace MoneyNote.ViewModels.PopupsViewModels
         private void GetCategories()
         {
             CategoryList = new ObservableCollection<Category>();
-            Categories.GetAll(0, 5).ForEach(x => CategoryList.Add(x));
+
         }
     }
 }

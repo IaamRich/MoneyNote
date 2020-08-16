@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using MoneyNote.Models;
 using Newtonsoft.Json;
 using Plugin.Settings;
 using Plugin.Settings.Abstractions;
@@ -8,22 +10,15 @@ namespace MoneyNote.Helpers
 {
     public static class Settings
     {
-        //private const string LoginInfoKey = "login_info";
-        //private const string UserInfoKey = "user_info";
-        private static readonly string SettingsDefault = string.Empty;
+        private const string TransactionDataKey = "transaction_data";
+        //private static readonly string SettingsDefault = string.Empty;
         private static ISettings AppSettings => CrossSettings.Current;
 
-        //public static LoginInfo LoginInfo
-        //{
-        //    get => AppSettings.GetJsonValueOrDefault(LoginInfoKey, default(LoginInfo));
-        //    set => AppSettings.AddOrUpdateJsonValue(LoginInfoKey, value);
-        //}
-
-        //public static UserInfo UserInfo
-        //{
-        //    get => AppSettings.GetJsonValueOrDefault(UserInfoKey, default(UserInfo));
-        //    set => AppSettings.AddOrUpdateJsonValue(UserInfoKey, value);
-        //}
+        public static List<Transaction> TransactionData
+        {
+            get => AppSettings.GetJsonValueOrDefault(TransactionDataKey, default(List<Transaction>));
+            set => AppSettings.AddOrUpdateJsonValue(TransactionDataKey, value);
+        }
 
         public static T GetJsonValueOrDefault<T>(this ISettings self, string key, T defaultValue = default)
         {
