@@ -29,7 +29,7 @@ namespace MoneyNote
         private static ITransactionService _transactionService;
         private static IMoneyService _moneyService;
         //UI variables
-        public CategoryType SelectedCategory { get; set; }
+        public Category SelectedCategory { get; set; }
         public string SpendDescription { get; set; }
         public string AddMoneyDescription { get; set; }
         public decimal AddMoneyValue { get; set; }
@@ -105,7 +105,7 @@ namespace MoneyNote
                 Note = SpendDescription,
                 Date = DateTime.Now,
                 Type = TransactionType.Spend,
-                CategoryType = SelectedCategory
+                Category = SelectedCategory
             };
             await Task.Run(async () =>
             {
@@ -143,7 +143,7 @@ namespace MoneyNote
                 Note = AddMoneyDescription,
                 Date = DateTime.Now,
                 Type = TransactionType.Save,
-                CategoryType = SelectedCategory
+                Category = SelectedCategory
             };
             await Task.Run(() =>
             {
@@ -164,16 +164,16 @@ namespace MoneyNote
                 GetData();
             });
         }
-        private CategoryType UnwrapCategoryType(int id)
+        private Category UnwrapCategoryType(int id)
         {
-            foreach (var item in (CategoryType[])Enum.GetValues(typeof(CategoryType)))
+            foreach (var item in Categories.GetAll(0, 9))
             {
-                if ((int)item == id)
+                if (item.Id == id)
                 {
                     return item;
                 }
             }
-            return CategoryType.None;
+            return new Category();
         }
         #endregion
     }

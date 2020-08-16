@@ -43,15 +43,8 @@ namespace MoneyNote.ViewModels.PopupsViewModels
         }
         private void GetCategories()
         {
-            CategoryList = new ObservableCollection<Category>
-            {
-                new Category { Id = 0, Type = CategoryType.Market, Name = Strings["type_market"], Image = "market_shop.png", IsSelected = false},
-                new Category { Id = 1, Type = CategoryType.Bar, Name = Strings["type_bar"], Image = "restaurant_bar_bistro.png", IsSelected = false},
-                new Category { Id = 2, Type = CategoryType.Transport, Name = Strings["type_transport"], Image = "transport.png", IsSelected = false},
-                new Category { Id = 3, Type = CategoryType.Business, Name = Strings["type_business"], Image = "business.png", IsSelected = false},
-                new Category { Id = 4, Type = CategoryType.Network, Name = Strings["type_network"], Image = "network_products.png", IsSelected = false},
-                new Category { Id = 5, Type = CategoryType.Entertainment, Name = Strings["type_entertainment"], Image = "entertainment.png", IsSelected = false}
-            };
+            CategoryList = new ObservableCollection<Category>();
+            Categories.GetAll(0, 5).ForEach(x => CategoryList.Add(x));
         }
     }
 }
