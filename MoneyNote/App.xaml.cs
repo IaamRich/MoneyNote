@@ -5,26 +5,26 @@ using I18NPortable;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
-using MoneyNote.Persistence;
 using MoneyNote.Resources;
-using SQLite;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using Xamarin.Forms;
 
 namespace MoneyNote
 {
     public partial class App : Application
     {
-        public static SQLiteAsyncConnection Database;
 
         public App()
         {
             InitializeComponent();
-            Database = DependencyService.Get<ISQLiteDb>().GetConnection();
             MainPage = new NavigationPage(new SplashPage());
             XF.Material.Forms.Material.Init(this);
             //var bootstrapper = new AppBootstrapper();
             //MainPage = new MasterView(bootstrapper.CreateMasterViewModel());
         }
+
+        [Obsolete]
         protected override void OnStart()
         {
             AppCenter.Start("android=f38a5d72-667c-4eeb-8a2c-1c534ccd9b3e;" +
@@ -41,6 +41,12 @@ namespace MoneyNote
                 .Init(GetType().GetTypeInfo().Assembly); // assembly where locales live
 
             Crashes.SentErrorReport += (sender, e) => { Console.WriteLine(e); };
+            JsonConvert.DefaultSettings = (() =>
+            {
+                var settings = new JsonSerializerSettings();
+                settings.Converters.Add(new StringEnumConverter { CamelCaseText = true });
+                return settings;
+            });
         }
 
         protected override void OnSleep()

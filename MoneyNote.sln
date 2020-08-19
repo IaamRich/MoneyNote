@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyNote.Android", "MoneyN
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyNote.iOS", "MoneyNote.iOS\MoneyNote.iOS.csproj", "{C0AC3F90-61A6-46B2-8FB2-D40488D0CD1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyNote", "MoneyNote\MoneyNote.csproj", "{918F9B8C-D867-4E89-8CFB-62A99B4541DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneyNote", "MoneyNote\MoneyNote.csproj", "{918F9B8C-D867-4E89-8CFB-62A99B4541DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -3,9 +3,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reactive;
 using System.Reactive.Linq;
-using System.Threading.Tasks;
 using System.Windows.Input;
-using DynamicData;
 using I18NPortable;
 using MoneyNote.Models;
 using MoneyNote.Services.Contracts;
@@ -27,9 +25,10 @@ namespace MoneyNote
         public ICommand AddSalary { get; set; }
         public ReactiveCommand<Unit, Unit> SelectRecord { get; set; }
         //Used Services
-        private static ISpendService _spendService;
+        private static ITransactionService _transactionService;
         private static IMoneyService _moneyService;
         //UI variables
+        public Category SelectedCategory { get; set; }
         public string SpendDescription { get; set; }
         public string AddMoneyDescription { get; set; }
         public decimal AddMoneyValue { get; set; }
@@ -40,40 +39,50 @@ namespace MoneyNote
         public bool IsCash { get; set; }
         public bool IsCard { get; set; }
         //List Variables
-        private SourceList<Spend> _spends = new SourceList<Spend>();
-        private ReadOnlyObservableCollection<Spend> _spendingList;
-        public ReadOnlyObservableCollection<Spend> SpendingList => _spendingList;
-        //Variables for normal functionality of the page
+        private int lastID = 0;
+        public ObservableCollection<Transaction> LastTransactionsList { get; set; }
+        //Main Variables
         public string UrlPathSegment => Strings["menu_main"];
         public IScreen HostScreen { get; }
         public II18N Strings => I18N.Current;
-        public MainViewModel(ISpendService spendService, IMoneyService moneyService, IScreen hostScreen = null)
+        public MainViewModel(ITransactionService transactionService, IMoneyService moneyService, IScreen hostScreen = null)
         {
-            _spendService = spendService;
+            HostScreen = hostScreen ?? Locator.Current.GetService<IScreen>();
+            _transactionService = transactionService;
             _moneyService = moneyService;
             IsCash = true;
             IsCard = false;
+            CreateCommands();
             GetData();
-            HostScreen = hostScreen ?? Locator.Current.GetService<IScreen>();
+        }
+        #region Methods
+        private void CreateCommands()
+        {
             //Reactive Example to navigate
             NavigateToDummyPage = ReactiveCommand
                 .CreateFromObservable(() => HostScreen.Router.Navigate.Execute(new DummyViewModel()).Select(_ => Unit.Default));
             //SelectRecord = ReactiveCommand.Create();
-            AddSpend = ReactiveCommand.Create(() => { OnAdd(); });
+            AddSpend = ReactiveCommand.Create(() => { OnSpend(); });
             AddSalary = ReactiveCommand.Create(() => { OnAddSalary(); });
         }
         private void GetData()
         {
-            var data = _spendService.GetAll().Result;
-            data.Reverse();
-            _spends.AddRange(data);
-            _spends.Connect().Bind(out _spendingList).Subscribe();
+            GetLastTransactions();
             CurrentCard = _moneyService.GetCurrentCard();
             CurrentCash = _moneyService.GetCurrentCash();
             CurrentBill = CurrentCard + CurrentCash;
         }
-
-        private async void OnAdd()
+        private void GetLastTransactions()
+        {
+            var data = _transactionService.GetAll(20).Result;
+            if (data.Count != 0)
+            {
+                lastID = data.First().Id;
+            }
+            LastTransactionsList = new ObservableCollection<Transaction>();
+            data.ForEach(x => LastTransactionsList.Add(x));
+        }
+        private async void OnSpend()
         {
             if (String.IsNullOrEmpty(SpendValue))
             {
@@ -84,35 +93,36 @@ namespace MoneyNote
                 await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value_zero"]), true);
             }
             else if (SpendValue[0] == '.') await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
-            else await PopupNavigation.Instance.PushAsync(new CommitPopupView(OnAddFunc), true);
+            else await PopupNavigation.Instance.PushAsync(new CommitPopupView(OnSpendFunc), true);
         }
-        private async void OnAddFunc()
+        private async void OnSpendFunc()
         {
             SpendDescription = CrossSettings.Current.GetValueOrDefault("CommitMessage", "");
-            Spend item = new Spend
+            SelectedCategory = UnwrapCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedCategory", 0));
+            var item = new Transaction
             {
-                Amount = decimal.Parse(SpendValue),
-                WhereText = SpendDescription,
-                TransactionDate = DateTime.Now
+                Id = lastID + 1,
+                Value = decimal.Parse(SpendValue),
+                Note = SpendDescription,
+                Date = DateTime.Now,
+                Type = TransactionType.Spend,
+                Category = SelectedCategory
             };
-            await Task.Run(async () =>
+            await _transactionService.Create(item);
+            switch (CrossSettings.Current.GetValueOrDefault("CurrentCommitMoneyFrom", 0))
             {
-                await _spendService.SaveItemAsync(item);
-                switch (CrossSettings.Current.GetValueOrDefault("CurrentCommitMoneyFrom", 0))
-                {
-                    case 0:
-                        CurrentCash -= item.Amount;
-                        _moneyService.SetCurrentCash(CurrentCash);
-                        break;
-                    case 1:
-                        CurrentCard -= item.Amount;
-                        _moneyService.SetCurrentCard(CurrentCard);
-                        break;
-                }
-                _spends.Clear();
-                SpendValue = "";
-                GetData();
-            });
+                case 0:
+                    CurrentCash -= item.Value;
+                    _moneyService.SetCurrentCash(CurrentCash);
+                    break;
+                case 1:
+                    CurrentCard -= item.Value;
+                    _moneyService.SetCurrentCard(CurrentCard);
+                    break;
+            }
+            LastTransactionsList.Clear();
+            SpendValue = "";
+            GetData();
         }
         private async void OnAddSalary()
         {
@@ -123,30 +133,42 @@ namespace MoneyNote
         {
             AddMoneyDescription = CrossSettings.Current.GetValueOrDefault("AddMoneyMessage", "");
             AddMoneyValue = CrossSettings.Current.GetValueOrDefault("AddMoneyValue", 0.0m);
-            Save item = new Save
+            SelectedCategory = UnwrapCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedCategory", 0));
+            var item = new Transaction
             {
-                Amount = AddMoneyValue,
-                Description = AddMoneyDescription,
-                TransactionDate = DateTime.Now
+                Id = lastID + 1,
+                Value = AddMoneyValue,
+                Note = AddMoneyDescription,
+                Date = DateTime.Now,
+                Type = TransactionType.Save,
+                Category = SelectedCategory
             };
-            await Task.Run(() =>
+            await _transactionService.Create(item);
+            switch (CrossSettings.Current.GetValueOrDefault("CurrentAddedMoneyTo", 0))
             {
-                //await saveService.SaveItemAsync(item);
-                switch (CrossSettings.Current.GetValueOrDefault("CurrentAddedMoneyTo", 0))
-                {
-                    case 0:
-                        CurrentCash += item.Amount;
-                        _moneyService.SetCurrentCash(CurrentCash);
-                        break;
-                    case 1:
-                        CurrentCard += item.Amount;
-                        _moneyService.SetCurrentCard(CurrentCard);
-                        break;
-                }
-                //clearing and getting
-                _spends.Clear();
-                GetData();
-            });
+                case 0:
+                    CurrentCash += item.Value;
+                    _moneyService.SetCurrentCash(CurrentCash);
+                    break;
+                case 1:
+                    CurrentCard += item.Value;
+                    _moneyService.SetCurrentCard(CurrentCard);
+                    break;
+            }
+            LastTransactionsList.Clear();
+            GetData();
         }
+        private Category UnwrapCategoryType(int id)
+        {
+            foreach (var item in Categories.GetAll(0, 9))
+            {
+                if (item.Id == id)
+                {
+                    return item;
+                }
+            }
+            return new Category();
+        }
+        #endregion
     }
 }

@@ -67,7 +67,6 @@
     <Compile Include="Renderer\CustomEntryRenderer.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
-    <Compile Include="Persistence\SQLiteDb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -126,9 +125,6 @@
   <ItemGroup>
     <PackageReference Include="Rg.Plugins.Popup">
       <Version>2.0.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="sqlite-net-pcl">
-      <Version>1.7.335</Version>
     </PackageReference>
     <PackageReference Include="TouchView">
       <Version>4.1.78</Version>
