@@ -3,6 +3,7 @@ using System.Linq;
 using System.Windows.Input;
 using I18NPortable;
 using MoneyNote.Models;
+using Plugin.Settings;
 using ReactiveUI;
 
 namespace MoneyNote.ViewModels.PopupsViewModels
@@ -32,6 +33,7 @@ namespace MoneyNote.ViewModels.PopupsViewModels
                 CategoryList.ToList().ForEach(x => x.IsSelected = false);
                 CategoryList.ToList().FirstOrDefault(x => x.Id == parameter).IsSelected = true;
                 ChooseButtonText = CategoryList.ToList().FirstOrDefault(x => x.Id == parameter).Name;
+                CrossSettings.Current.AddOrUpdateValue("SelectedCategory", parameter);
                 IsCategoriesVisible = false;
                 IsOriginalVisible = true;
             });

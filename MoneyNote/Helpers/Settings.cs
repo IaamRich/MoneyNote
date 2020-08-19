@@ -39,9 +39,7 @@ namespace MoneyNote.Helpers
 
         public static void AddOrUpdateJsonValue(this ISettings self, string key, object value)
         {
-            //var json = JsonConvert.SerializeObject(value);
-
-            var json = JsonConvert.SerializeObject(value, Formatting.Indented, new Newtonsoft.Json.Converters.StringEnumConverter());
+            var json = JsonConvert.SerializeObject(value);
             self.AddOrUpdateValue(key, json);
         }
     }

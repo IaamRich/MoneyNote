@@ -3,7 +3,6 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reactive;
 using System.Reactive.Linq;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using I18NPortable;
 using MoneyNote.Models;
@@ -76,7 +75,6 @@ namespace MoneyNote
         private void GetLastTransactions()
         {
             var data = _transactionService.GetAll(20).Result;
-            data.Reverse();
             if (data.Count != 0)
             {
                 lastID = data.First().Id;
@@ -125,24 +123,6 @@ namespace MoneyNote
             LastTransactionsList.Clear();
             SpendValue = "";
             GetData();
-            //await Task.Run(async () =>
-            //{
-            //    await _transactionService.Create(item);
-            //    switch (CrossSettings.Current.GetValueOrDefault("CurrentCommitMoneyFrom", 0))
-            //    {
-            //        case 0:
-            //            CurrentCash -= item.Value;
-            //            _moneyService.SetCurrentCash(CurrentCash);
-            //            break;
-            //        case 1:
-            //            CurrentCard -= item.Value;
-            //            _moneyService.SetCurrentCard(CurrentCard);
-            //            break;
-            //    }
-            //    LastTransactionsList.Clear();
-            //    SpendValue = "";
-            //    GetData();
-            //});
         }
         private async void OnAddSalary()
         {
@@ -163,24 +143,20 @@ namespace MoneyNote
                 Type = TransactionType.Save,
                 Category = SelectedCategory
             };
-            await Task.Run(() =>
+            await _transactionService.Create(item);
+            switch (CrossSettings.Current.GetValueOrDefault("CurrentAddedMoneyTo", 0))
             {
-                //await saveService.SaveItemAsync(item);
-                switch (CrossSettings.Current.GetValueOrDefault("CurrentAddedMoneyTo", 0))
-                {
-                    case 0:
-                        CurrentCash += item.Value;
-                        _moneyService.SetCurrentCash(CurrentCash);
-                        break;
-                    case 1:
-                        CurrentCard += item.Value;
-                        _moneyService.SetCurrentCard(CurrentCard);
-                        break;
-                }
-                //clearing and getting
-                LastTransactionsList.Clear();
-                GetData();
-            });
+                case 0:
+                    CurrentCash += item.Value;
+                    _moneyService.SetCurrentCash(CurrentCash);
+                    break;
+                case 1:
+                    CurrentCard += item.Value;
+                    _moneyService.SetCurrentCard(CurrentCard);
+                    break;
+            }
+            LastTransactionsList.Clear();
+            GetData();
         }
         private Category UnwrapCategoryType(int id)
         {

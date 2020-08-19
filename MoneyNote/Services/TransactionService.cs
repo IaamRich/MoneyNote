@@ -22,6 +22,7 @@ namespace MoneyNote.Services
             var answer = new List<Transaction>();
             if (dto != null)
             {
+                dto.Reverse();
                 if (dto.Count < count)
                 {
                     foreach (var item in dto)
