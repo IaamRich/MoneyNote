@@ -6,7 +6,7 @@ namespace MoneyNote.Models
         public int Id { get; set; }
         public TransactionType Type { get; set; }
         public decimal Value { get; set; }
-        public Category Category { get; set; }
+        public CategoryDto Category { get; set; }
         public string Note { get; set; }
         public DateTime Date { get; set; }
     }

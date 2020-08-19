@@ -28,7 +28,7 @@ namespace MoneyNote
         private static ITransactionService _transactionService;
         private static IMoneyService _moneyService;
         //UI variables
-        public Category SelectedCategory { get; set; }
+        public CategoryDto SelectedCategory { get; set; }
         public string SpendDescription { get; set; }
         public string AddMoneyDescription { get; set; }
         public decimal AddMoneyValue { get; set; }
@@ -158,7 +158,7 @@ namespace MoneyNote
             LastTransactionsList.Clear();
             GetData();
         }
-        private Category UnwrapCategoryType(int id)
+        private CategoryDto UnwrapCategoryType(int id)
         {
             foreach (var item in Categories.GetAll(0, 9))
             {
@@ -167,7 +167,7 @@ namespace MoneyNote
                     return item;
                 }
             }
-            return new Category();
+            return new CategoryDto();
         }
         #endregion
     }
