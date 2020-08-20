@@ -98,7 +98,7 @@ namespace MoneyNote
         private async void OnSpendFunc()
         {
             SpendDescription = CrossSettings.Current.GetValueOrDefault("CommitMessage", "");
-            SelectedCategory = UnwrapCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedCategory", 0));
+            SelectedCategory = UnwrapSpendingCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedSpendingCategory", 0));
             var item = new Transaction
             {
                 Id = lastID + 1,
@@ -133,7 +133,7 @@ namespace MoneyNote
         {
             AddMoneyDescription = CrossSettings.Current.GetValueOrDefault("AddMoneyMessage", "");
             AddMoneyValue = CrossSettings.Current.GetValueOrDefault("AddMoneyValue", 0.0m);
-            SelectedCategory = UnwrapCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedCategory", 0));
+            SelectedCategory = UnwrapAddingCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedAddingCategory", 0));
             var item = new Transaction
             {
                 Id = lastID + 1,
@@ -158,9 +158,20 @@ namespace MoneyNote
             LastTransactionsList.Clear();
             GetData();
         }
-        private CategoryDto UnwrapCategoryType(int id)
+        private CategoryDto UnwrapAddingCategoryType(int id)
         {
-            foreach (var item in Categories.GetAll(0, 9))
+            foreach (var item in Categories.GetAllAddingCategories())
+            {
+                if (item.Id == id)
+                {
+                    return item;
+                }
+            }
+            return new CategoryDto();
+        }
+        private CategoryDto UnwrapSpendingCategoryType(int id)
+        {
+            foreach (var item in Categories.GetAllSpendingCategories())
             {
                 if (item.Id == id)
                 {

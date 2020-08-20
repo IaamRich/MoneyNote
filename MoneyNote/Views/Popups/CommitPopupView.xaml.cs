@@ -1,6 +1,7 @@
 ﻿
 using System;
 using I18NPortable;
+using MoneyNote.Models;
 using Plugin.Settings;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
@@ -40,7 +41,11 @@ namespace MoneyNote.Views.Popups
                     return;
                 }
                 var result = entry.Text;
-                if (String.IsNullOrWhiteSpace(entry.Text)) result = Strings["missed"];
+                if (String.IsNullOrWhiteSpace(entry.Text))
+                {
+                    var type = UnwrapSpendingCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedSpendingCategory", 0));
+                    result = type.Type.ToString() + " " + Strings["missed"];
+                }
                 CrossSettings.Current.AddOrUpdateValue("CommitMessage", result);
                 CrossSettings.Current.AddOrUpdateValue("CurrentCommitMoneyFrom", FuncMoneyFrom());
 
@@ -61,6 +66,17 @@ namespace MoneyNote.Views.Popups
             rightHand.IsVisible = false;
             OnBackgroundClicked();
             PopupNavigation.Instance.PopAsync(true);
+        }
+        private CategoryDto UnwrapSpendingCategoryType(int id)
+        {
+            foreach (var item in Categories.GetAllSpendingCategories())
+            {
+                if (item.Id == id)
+                {
+                    return item;
+                }
+            }
+            return new CategoryDto();
         }
 
         #region Settings/Animations

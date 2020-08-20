@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using MoneyNote.Dtos;
 using MoneyNote.Helpers;
@@ -31,10 +30,13 @@ namespace MoneyNote.Services
                     }
                 }
                 else
-                    for (int i = 0; i < count; i++)
+                {
+                    int x = count;
+                    foreach (var item in dto)
                     {
-                        answer.Add(dto.FirstOrDefault(x => x.Id == i));
+                        if (--x >= 0) answer.Add(item);
                     }
+                }
             }
 
             return Task.FromResult(answer);

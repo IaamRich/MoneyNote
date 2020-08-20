@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using I18NPortable;
+using MoneyNote.Models;
 using Plugin.Settings;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
@@ -55,7 +56,11 @@ namespace MoneyNote.Views.Popups
                         {
                             var moneyValue = decimal.Parse(entry.Text);
                             var result = entryDescription.Text;
-                            if (String.IsNullOrWhiteSpace(entry.Text)) result = Strings["missed"];
+                            if (String.IsNullOrWhiteSpace(entryDescription.Text))
+                            {
+                                var type = UnwrapAddingCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedAddingCategory", 0));
+                                result = type.Type.ToString() + " " + Strings["missed"];
+                            }
                             CrossSettings.Current.AddOrUpdateValue("AddMoneyValue", moneyValue);
                             CrossSettings.Current.AddOrUpdateValue("AddMoneyMessage", result);
                             CrossSettings.Current.AddOrUpdateValue("CurrentAddedMoneyTo", FuncMoneyFrom());
@@ -80,6 +85,18 @@ namespace MoneyNote.Views.Popups
             OnBackgroundClicked();
             PopupNavigation.Instance.PopAsync(true);
         }
+        private CategoryDto UnwrapAddingCategoryType(int id)
+        {
+            foreach (var item in Categories.GetAllAddingCategories())
+            {
+                if (item.Id == id)
+                {
+                    return item;
+                }
+            }
+            return new CategoryDto();
+        }
+
         #region Settings/Animations
         // Invoked when background is clicked
         protected override bool OnBackgroundClicked()

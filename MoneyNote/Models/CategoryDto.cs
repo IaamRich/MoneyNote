@@ -20,14 +20,14 @@
     {
         None,
         Market,
-        Bar,
+        Restaurant,
         Transport,
         Business,
         Network,
         Entertainment,
-        Gift,
         Salary,
         Earnings,
+        Gift,
         Other
     }
 }

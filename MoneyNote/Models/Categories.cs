@@ -11,7 +11,7 @@ namespace MoneyNote.Models
             return new List<CategoryDto>
             {
                 new CategoryDto { Id = 0, Type = CategoryType.Market, Name = Strings["type_market"], Image = "market_shop.png"},
-                new CategoryDto { Id = 1, Type = CategoryType.Bar, Name = Strings["type_bar"], Image = "restaurant_bar_bistro.png"},
+                new CategoryDto { Id = 1, Type = CategoryType.Restaurant, Name = Strings["type_bar"], Image = "restaurant_bar_bistro.png"},
                 new CategoryDto { Id = 2, Type = CategoryType.Transport, Name = Strings["type_transport"], Image = "transport.png"},
                 new CategoryDto { Id = 3, Type = CategoryType.Business, Name = Strings["type_business"], Image = "business.png"},
                 new CategoryDto { Id = 4, Type = CategoryType.Network, Name = Strings["type_network"], Image = "network_products.png"},
