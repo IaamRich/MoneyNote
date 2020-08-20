@@ -9,6 +9,8 @@ namespace MoneyNote.Models
         public CategoryDto Category { get; set; }
         public string Note { get; set; }
         public DateTime Date { get; set; }
+        public char MathSymbol { get; set; }
+        public bool Utility { get; set; }
     }
     public enum TransactionType
     {

@@ -106,7 +106,8 @@ namespace MoneyNote
                 Note = SpendDescription,
                 Date = DateTime.Now,
                 Type = TransactionType.Spend,
-                Category = SelectedCategory
+                Category = SelectedCategory,
+                MathSymbol = '-'
             };
             await _transactionService.Create(item);
             switch (CrossSettings.Current.GetValueOrDefault("CurrentCommitMoneyFrom", 0))
@@ -141,7 +142,8 @@ namespace MoneyNote
                 Note = AddMoneyDescription,
                 Date = DateTime.Now,
                 Type = TransactionType.Save,
-                Category = SelectedCategory
+                Category = SelectedCategory,
+                MathSymbol = '+'
             };
             await _transactionService.Create(item);
             switch (CrossSettings.Current.GetValueOrDefault("CurrentAddedMoneyTo", 0))

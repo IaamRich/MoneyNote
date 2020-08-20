@@ -158,25 +158,44 @@
                                             touch:TouchEff.PressedTranslationY="5"
                                             touch:TouchEff.RegularAnimationDuration="200"
                                             BackgroundColor="White">
-                                            <StackLayout
-                                                Padding="10,0"
-                                                HeightRequest="50"
-                                                Orientation="Horizontal">
+                                            <Grid
+                                                Padding="5,0,10,0"
+                                                ColumnDefinitions="Auto,*,Auto"
+                                                HeightRequest="50">
                                                 <Image
                                                     Aspect="AspectFit"
                                                     HorizontalOptions="Start"
                                                     Source="{Binding Category.Image}" />
                                                 <Label
+                                                    Grid.Column="1"
                                                     FontSize="Micro"
                                                     HorizontalOptions="Start"
+                                                    HorizontalTextAlignment="Start"
                                                     Text="{Binding Note}"
                                                     VerticalOptions="Center" />
                                                 <Label
+                                                    Grid.Column="2"
                                                     FontSize="Medium"
-                                                    HorizontalOptions="EndAndExpand"
-                                                    Text="{Binding Value}"
-                                                    VerticalOptions="Center" />
-                                            </StackLayout>
+                                                    HorizontalOptions="End"
+                                                    TextColor="{StaticResource RedAlert}"
+                                                    VerticalOptions="Center">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="{Binding MathSymbol}" />
+                                                            <Span Text=" " />
+                                                            <Span Text="{Binding Value}" />
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                    <Label.Triggers>
+                                                        <DataTrigger
+                                                            Binding="{Binding MathSymbol}"
+                                                            TargetType="Label"
+                                                            Value="+">
+                                                            <Setter Property="TextColor" Value="{StaticResource MainGreen}" />
+                                                        </DataTrigger>
+                                                    </Label.Triggers>
+                                                </Label>
+                                            </Grid>
                                         </Frame>
                                     </Frame>
                                 </DataTemplate>
