@@ -216,7 +216,7 @@
                     CornerRadius="10"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="EndAndExpand">
-                    <Grid RowDefinitions="50,50">
+                    <Grid RowDefinitions="50,50,50">
                         <StackLayout Grid.Row="0" Orientation="Horizontal">
                             <Label
                                 FontSize="Medium"
@@ -278,6 +278,30 @@
                                     VerticalTextAlignment="Center" />
                             </Grid>
                         </StackLayout>
+                        <Grid Grid.Row="2" ColumnSpacing="0">
+                            <Label
+                                FontSize="Medium"
+                                Text="IS Minus Allowed?"
+                                VerticalOptions="Center" />
+                            <Image
+                                Margin="0"
+                                Aspect="AspectFit"
+                                HorizontalOptions="EndAndExpand"
+                                Source="selected.png"
+                                VerticalOptions="FillAndExpand">
+                                <Image.Triggers>
+                                    <DataTrigger
+                                        Binding="{Binding IsMinus}"
+                                        TargetType="Image"
+                                        Value="False">
+                                        <Setter Property="Source" Value="unselected.png" />
+                                    </DataTrigger>
+                                </Image.Triggers>
+                            </Image>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding IsMinusCommand}" />
+                            </Grid.GestureRecognizers>
+                        </Grid>
                     </Grid>
                 </Frame>
                 <!--  3  -->

@@ -38,6 +38,7 @@ namespace MoneyNote
         public decimal CurrentCard { get; set; }
         public bool IsCash { get; set; }
         public bool IsCard { get; set; }
+        public bool IsMinusAllowed { get; set; }
         //List Variables
         private int lastID = 0;
         public ObservableCollection<Transaction> LastTransactionsList { get; set; }
@@ -52,6 +53,7 @@ namespace MoneyNote
             _moneyService = moneyService;
             IsCash = true;
             IsCard = false;
+            IsMinusAllowed = CrossSettings.Current.GetValueOrDefault("IsMinusAllowed", false);
             CreateCommands();
             GetData();
         }
@@ -113,10 +115,20 @@ namespace MoneyNote
             switch (CrossSettings.Current.GetValueOrDefault("CurrentCommitMoneyFrom", 0))
             {
                 case 0:
+                    if (item.Value > CurrentCash && !IsMinusAllowed)
+                    {
+                        await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_cash"]), true);
+                        return;
+                    }
                     CurrentCash -= item.Value;
                     _moneyService.SetCurrentCash(CurrentCash);
                     break;
                 case 1:
+                    if (item.Value > CurrentCard && !IsMinusAllowed)
+                    {
+                        await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_card"]), true);
+                        return;
+                    }
                     CurrentCard -= item.Value;
                     _moneyService.SetCurrentCard(CurrentCard);
                     break;

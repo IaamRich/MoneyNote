@@ -99,6 +99,8 @@ menu_footer = © Sapec Software 2020
 alert_no_value = Enter some value!
 alert_no_value_zero = First digit must not be zero!
 alert_need_category = Please choose a category.
+alert_no_cash = There is no such amount in Cash!
+alert_no_card = There is no such amount on Card!
 
 /* Category Types*/
 type_market = Market/Shop
