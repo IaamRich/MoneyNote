@@ -17,6 +17,7 @@ namespace MoneyNote.Models
         None,
         Save,
         Spend,
-        Add
+        Add,
+        Bank
     }
 }

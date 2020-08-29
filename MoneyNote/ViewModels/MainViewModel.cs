@@ -23,6 +23,7 @@ namespace MoneyNote
         public ICommand DeleteSpend { get; set; }
         public ICommand UpdateSpend { get; set; }
         public ICommand AddSalary { get; set; }
+        public ICommand BankCommand { get; set; }
         public ReactiveCommand<Unit, Unit> SelectRecord { get; set; }
         //Used Services
         private static ITransactionService _transactionService;
@@ -32,7 +33,9 @@ namespace MoneyNote
         public bool IsCreditVisible { get; set; }
         public string SpendDescription { get; set; }
         public string AddMoneyDescription { get; set; }
+        public string CreditDescription { get; set; }
         public decimal AddMoneyValue { get; set; }
+        public decimal CreditValue { get; set; }
         public string SpendValue { get; set; }
         public decimal CurrentBill { get; set; }
         public decimal CurrentCash { get; set; }
@@ -64,6 +67,7 @@ namespace MoneyNote
             //SelectRecord = ReactiveCommand.Create();
             AddSpend = ReactiveCommand.Create(() => { OnSpend(); });
             AddSalary = ReactiveCommand.Create(() => { OnAddSalary(); });
+            BankCommand = ReactiveCommand.Create(() => { OnBankCommand(); });
         }
         private void GetData()
         {
@@ -175,7 +179,7 @@ namespace MoneyNote
                 Value = AddMoneyValue,
                 Note = AddMoneyDescription,
                 Date = DateTime.Now,
-                Type = TransactionType.Save,
+                Type = TransactionType.Add,
                 Category = SelectedCategory,
                 MathSymbol = '+'
             };
@@ -189,6 +193,44 @@ namespace MoneyNote
                 case 1:
                     CurrentCard += item.Value;
                     _moneyService.SetCurrentCard(CurrentCard);
+                    break;
+            }
+            LastTransactionsList.Clear();
+            GetData();
+        }
+        private async void OnBankCommand()
+        {
+            await PopupNavigation.Instance.PushAsync(new BankTransactionsPopupView(OnBankFunc), true);
+        }
+        private async void OnBankFunc()
+        {
+            CreditDescription = CrossSettings.Current.GetValueOrDefault("CreditMessage", "");
+            CreditValue = CrossSettings.Current.GetValueOrDefault("CreditValue", 0.0m);
+            SelectedCategory = UnwrapAddingCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedBankCategory", 0));
+            var item = new Transaction
+            {
+                Id = lastID + 1,
+                Value = CreditValue,
+                Note = CreditDescription,
+                Date = DateTime.Now,
+                Type = TransactionType.Bank,
+                Category = SelectedCategory,
+                MathSymbol = '+'
+            };
+            await _transactionService.Create(item);
+            switch (CrossSettings.Current.GetValueOrDefault("CurrentAddedMoneyTo", 0))
+            {
+                case 0:
+                    CurrentCash += item.Value;
+                    CurrentCredit += item.Value;
+                    _moneyService.SetCurrentCash(CurrentCash);
+                    _moneyService.SetCurrentCredit(CurrentCredit);
+                    break;
+                case 1:
+                    CurrentCard += item.Value;
+                    CurrentCredit += item.Value;
+                    _moneyService.SetCurrentCard(CurrentCard);
+                    _moneyService.SetCurrentCredit(CurrentCredit);
                     break;
             }
             LastTransactionsList.Clear();
