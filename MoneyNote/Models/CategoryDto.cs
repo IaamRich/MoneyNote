@@ -27,9 +27,11 @@ namespace MoneyNote.Models
         Business,
         Network,
         Entertainment,
+        Lend,
         Salary,
         Earnings,
         Gift,
+        Repay,
         Other
     }
 }

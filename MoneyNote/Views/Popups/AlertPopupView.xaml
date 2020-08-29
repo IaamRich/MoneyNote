@@ -65,6 +65,7 @@
                     Margin="10,0,10,10"
                     FontSize="Body"
                     HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"
                     TextColor="{StaticResource RedAlert}"
                     VerticalOptions="Center" />
             </StackLayout>

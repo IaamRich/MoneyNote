@@ -13570,6 +13570,2757 @@ namespace MoneyNote.Droid
 			global::Xamarin.Forms.Platform.Resource.Styleable.View_paddingEnd = global::MoneyNote.Droid.Resource.Styleable.View_paddingEnd;
 			global::Xamarin.Forms.Platform.Resource.Styleable.View_paddingStart = global::MoneyNote.Droid.Resource.Styleable.View_paddingStart;
 			global::Xamarin.Forms.Platform.Resource.Styleable.View_theme = global::MoneyNote.Droid.Resource.Styleable.View_theme;
+			global::XF.Material.Resource.Animation.abc_fade_in = global::MoneyNote.Droid.Resource.Animation.abc_fade_in;
+			global::XF.Material.Resource.Animation.abc_fade_out = global::MoneyNote.Droid.Resource.Animation.abc_fade_out;
+			global::XF.Material.Resource.Animation.abc_grow_fade_in_from_bottom = global::MoneyNote.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::XF.Material.Resource.Animation.abc_popup_enter = global::MoneyNote.Droid.Resource.Animation.abc_popup_enter;
+			global::XF.Material.Resource.Animation.abc_popup_exit = global::MoneyNote.Droid.Resource.Animation.abc_popup_exit;
+			global::XF.Material.Resource.Animation.abc_shrink_fade_out_from_bottom = global::MoneyNote.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::XF.Material.Resource.Animation.abc_slide_in_bottom = global::MoneyNote.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::XF.Material.Resource.Animation.abc_slide_in_top = global::MoneyNote.Droid.Resource.Animation.abc_slide_in_top;
+			global::XF.Material.Resource.Animation.abc_slide_out_bottom = global::MoneyNote.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::XF.Material.Resource.Animation.abc_slide_out_top = global::MoneyNote.Droid.Resource.Animation.abc_slide_out_top;
+			global::XF.Material.Resource.Animation.abc_tooltip_enter = global::MoneyNote.Droid.Resource.Animation.abc_tooltip_enter;
+			global::XF.Material.Resource.Animation.abc_tooltip_exit = global::MoneyNote.Droid.Resource.Animation.abc_tooltip_exit;
+			global::XF.Material.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation = global::MoneyNote.Droid.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation;
+			global::XF.Material.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation = global::MoneyNote.Droid.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation;
+			global::XF.Material.Resource.Animation.btn_checkbox_to_checked_icon_null_animation = global::MoneyNote.Droid.Resource.Animation.btn_checkbox_to_checked_icon_null_animation;
+			global::XF.Material.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation = global::MoneyNote.Droid.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation;
+			global::XF.Material.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation = global::MoneyNote.Droid.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation;
+			global::XF.Material.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation = global::MoneyNote.Droid.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation;
+			global::XF.Material.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation = global::MoneyNote.Droid.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation;
+			global::XF.Material.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation = global::MoneyNote.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation;
+			global::XF.Material.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation = global::MoneyNote.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation;
+			global::XF.Material.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation = global::MoneyNote.Droid.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation;
+			global::XF.Material.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation = global::MoneyNote.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation;
+			global::XF.Material.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation = global::MoneyNote.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation;
+			global::XF.Material.Resource.Animation.design_bottom_sheet_slide_in = global::MoneyNote.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::XF.Material.Resource.Animation.design_bottom_sheet_slide_out = global::MoneyNote.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::XF.Material.Resource.Animation.design_snackbar_in = global::MoneyNote.Droid.Resource.Animation.design_snackbar_in;
+			global::XF.Material.Resource.Animation.design_snackbar_out = global::MoneyNote.Droid.Resource.Animation.design_snackbar_out;
+			global::XF.Material.Resource.Animation.EnterFromLeft = global::MoneyNote.Droid.Resource.Animation.EnterFromLeft;
+			global::XF.Material.Resource.Animation.EnterFromRight = global::MoneyNote.Droid.Resource.Animation.EnterFromRight;
+			global::XF.Material.Resource.Animation.ExitToLeft = global::MoneyNote.Droid.Resource.Animation.ExitToLeft;
+			global::XF.Material.Resource.Animation.ExitToRight = global::MoneyNote.Droid.Resource.Animation.ExitToRight;
+			global::XF.Material.Resource.Animator.design_appbar_state_list_animator = global::MoneyNote.Droid.Resource.Animator.design_appbar_state_list_animator;
+			global::XF.Material.Resource.Animator.design_fab_hide_motion_spec = global::MoneyNote.Droid.Resource.Animator.design_fab_hide_motion_spec;
+			global::XF.Material.Resource.Animator.design_fab_show_motion_spec = global::MoneyNote.Droid.Resource.Animator.design_fab_show_motion_spec;
+			global::XF.Material.Resource.Animator.material_button_state_list_anim = global::MoneyNote.Droid.Resource.Animator.material_button_state_list_anim;
+			global::XF.Material.Resource.Animator.mtrl_btn_state_list_anim = global::MoneyNote.Droid.Resource.Animator.mtrl_btn_state_list_anim;
+			global::XF.Material.Resource.Animator.mtrl_btn_unelevated_state_list_anim = global::MoneyNote.Droid.Resource.Animator.mtrl_btn_unelevated_state_list_anim;
+			global::XF.Material.Resource.Animator.mtrl_chip_state_list_anim = global::MoneyNote.Droid.Resource.Animator.mtrl_chip_state_list_anim;
+			global::XF.Material.Resource.Animator.mtrl_fab_hide_motion_spec = global::MoneyNote.Droid.Resource.Animator.mtrl_fab_hide_motion_spec;
+			global::XF.Material.Resource.Animator.mtrl_fab_show_motion_spec = global::MoneyNote.Droid.Resource.Animator.mtrl_fab_show_motion_spec;
+			global::XF.Material.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec = global::MoneyNote.Droid.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec;
+			global::XF.Material.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec = global::MoneyNote.Droid.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec;
+			global::XF.Material.Resource.Attribute.actionBarDivider = global::MoneyNote.Droid.Resource.Attribute.actionBarDivider;
+			global::XF.Material.Resource.Attribute.actionBarItemBackground = global::MoneyNote.Droid.Resource.Attribute.actionBarItemBackground;
+			global::XF.Material.Resource.Attribute.actionBarPopupTheme = global::MoneyNote.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::XF.Material.Resource.Attribute.actionBarSize = global::MoneyNote.Droid.Resource.Attribute.actionBarSize;
+			global::XF.Material.Resource.Attribute.actionBarSplitStyle = global::MoneyNote.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::XF.Material.Resource.Attribute.actionBarStyle = global::MoneyNote.Droid.Resource.Attribute.actionBarStyle;
+			global::XF.Material.Resource.Attribute.actionBarTabBarStyle = global::MoneyNote.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::XF.Material.Resource.Attribute.actionBarTabStyle = global::MoneyNote.Droid.Resource.Attribute.actionBarTabStyle;
+			global::XF.Material.Resource.Attribute.actionBarTabTextStyle = global::MoneyNote.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::XF.Material.Resource.Attribute.actionBarTheme = global::MoneyNote.Droid.Resource.Attribute.actionBarTheme;
+			global::XF.Material.Resource.Attribute.actionBarWidgetTheme = global::MoneyNote.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::XF.Material.Resource.Attribute.actionButtonStyle = global::MoneyNote.Droid.Resource.Attribute.actionButtonStyle;
+			global::XF.Material.Resource.Attribute.actionDropDownStyle = global::MoneyNote.Droid.Resource.Attribute.actionDropDownStyle;
+			global::XF.Material.Resource.Attribute.actionLayout = global::MoneyNote.Droid.Resource.Attribute.actionLayout;
+			global::XF.Material.Resource.Attribute.actionMenuTextAppearance = global::MoneyNote.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::XF.Material.Resource.Attribute.actionMenuTextColor = global::MoneyNote.Droid.Resource.Attribute.actionMenuTextColor;
+			global::XF.Material.Resource.Attribute.actionModeBackground = global::MoneyNote.Droid.Resource.Attribute.actionModeBackground;
+			global::XF.Material.Resource.Attribute.actionModeCloseButtonStyle = global::MoneyNote.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::XF.Material.Resource.Attribute.actionModeCloseDrawable = global::MoneyNote.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::XF.Material.Resource.Attribute.actionModeCopyDrawable = global::MoneyNote.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::XF.Material.Resource.Attribute.actionModeCutDrawable = global::MoneyNote.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::XF.Material.Resource.Attribute.actionModeFindDrawable = global::MoneyNote.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::XF.Material.Resource.Attribute.actionModePasteDrawable = global::MoneyNote.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::XF.Material.Resource.Attribute.actionModePopupWindowStyle = global::MoneyNote.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::XF.Material.Resource.Attribute.actionModeSelectAllDrawable = global::MoneyNote.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::XF.Material.Resource.Attribute.actionModeShareDrawable = global::MoneyNote.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::XF.Material.Resource.Attribute.actionModeSplitBackground = global::MoneyNote.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::XF.Material.Resource.Attribute.actionModeStyle = global::MoneyNote.Droid.Resource.Attribute.actionModeStyle;
+			global::XF.Material.Resource.Attribute.actionModeWebSearchDrawable = global::MoneyNote.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::XF.Material.Resource.Attribute.actionOverflowButtonStyle = global::MoneyNote.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::XF.Material.Resource.Attribute.actionOverflowMenuStyle = global::MoneyNote.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::XF.Material.Resource.Attribute.actionProviderClass = global::MoneyNote.Droid.Resource.Attribute.actionProviderClass;
+			global::XF.Material.Resource.Attribute.actionViewClass = global::MoneyNote.Droid.Resource.Attribute.actionViewClass;
+			global::XF.Material.Resource.Attribute.activityChooserViewStyle = global::MoneyNote.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::XF.Material.Resource.Attribute.alertDialogButtonGroupStyle = global::MoneyNote.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::XF.Material.Resource.Attribute.alertDialogCenterButtons = global::MoneyNote.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::XF.Material.Resource.Attribute.alertDialogStyle = global::MoneyNote.Droid.Resource.Attribute.alertDialogStyle;
+			global::XF.Material.Resource.Attribute.alertDialogTheme = global::MoneyNote.Droid.Resource.Attribute.alertDialogTheme;
+			global::XF.Material.Resource.Attribute.allowStacking = global::MoneyNote.Droid.Resource.Attribute.allowStacking;
+			global::XF.Material.Resource.Attribute.alpha = global::MoneyNote.Droid.Resource.Attribute.alpha;
+			global::XF.Material.Resource.Attribute.alphabeticModifiers = global::MoneyNote.Droid.Resource.Attribute.alphabeticModifiers;
+			global::XF.Material.Resource.Attribute.arrowHeadLength = global::MoneyNote.Droid.Resource.Attribute.arrowHeadLength;
+			global::XF.Material.Resource.Attribute.arrowShaftLength = global::MoneyNote.Droid.Resource.Attribute.arrowShaftLength;
+			global::XF.Material.Resource.Attribute.autoCompleteTextViewStyle = global::MoneyNote.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::XF.Material.Resource.Attribute.autoSizeMaxTextSize = global::MoneyNote.Droid.Resource.Attribute.autoSizeMaxTextSize;
+			global::XF.Material.Resource.Attribute.autoSizeMinTextSize = global::MoneyNote.Droid.Resource.Attribute.autoSizeMinTextSize;
+			global::XF.Material.Resource.Attribute.autoSizePresetSizes = global::MoneyNote.Droid.Resource.Attribute.autoSizePresetSizes;
+			global::XF.Material.Resource.Attribute.autoSizeStepGranularity = global::MoneyNote.Droid.Resource.Attribute.autoSizeStepGranularity;
+			global::XF.Material.Resource.Attribute.autoSizeTextType = global::MoneyNote.Droid.Resource.Attribute.autoSizeTextType;
+			global::XF.Material.Resource.Attribute.background = global::MoneyNote.Droid.Resource.Attribute.background;
+			global::XF.Material.Resource.Attribute.backgroundSplit = global::MoneyNote.Droid.Resource.Attribute.backgroundSplit;
+			global::XF.Material.Resource.Attribute.backgroundStacked = global::MoneyNote.Droid.Resource.Attribute.backgroundStacked;
+			global::XF.Material.Resource.Attribute.backgroundTint = global::MoneyNote.Droid.Resource.Attribute.backgroundTint;
+			global::XF.Material.Resource.Attribute.backgroundTintMode = global::MoneyNote.Droid.Resource.Attribute.backgroundTintMode;
+			global::XF.Material.Resource.Attribute.barLength = global::MoneyNote.Droid.Resource.Attribute.barLength;
+			global::XF.Material.Resource.Attribute.behavior_autoHide = global::MoneyNote.Droid.Resource.Attribute.behavior_autoHide;
+			global::XF.Material.Resource.Attribute.behavior_fitToContents = global::MoneyNote.Droid.Resource.Attribute.behavior_fitToContents;
+			global::XF.Material.Resource.Attribute.behavior_hideable = global::MoneyNote.Droid.Resource.Attribute.behavior_hideable;
+			global::XF.Material.Resource.Attribute.behavior_overlapTop = global::MoneyNote.Droid.Resource.Attribute.behavior_overlapTop;
+			global::XF.Material.Resource.Attribute.behavior_peekHeight = global::MoneyNote.Droid.Resource.Attribute.behavior_peekHeight;
+			global::XF.Material.Resource.Attribute.behavior_skipCollapsed = global::MoneyNote.Droid.Resource.Attribute.behavior_skipCollapsed;
+			global::XF.Material.Resource.Attribute.borderlessButtonStyle = global::MoneyNote.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::XF.Material.Resource.Attribute.borderWidth = global::MoneyNote.Droid.Resource.Attribute.borderWidth;
+			global::XF.Material.Resource.Attribute.bottomAppBarStyle = global::MoneyNote.Droid.Resource.Attribute.bottomAppBarStyle;
+			global::XF.Material.Resource.Attribute.bottomNavigationStyle = global::MoneyNote.Droid.Resource.Attribute.bottomNavigationStyle;
+			global::XF.Material.Resource.Attribute.bottomSheetDialogTheme = global::MoneyNote.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::XF.Material.Resource.Attribute.bottomSheetStyle = global::MoneyNote.Droid.Resource.Attribute.bottomSheetStyle;
+			global::XF.Material.Resource.Attribute.boxBackgroundColor = global::MoneyNote.Droid.Resource.Attribute.boxBackgroundColor;
+			global::XF.Material.Resource.Attribute.boxBackgroundMode = global::MoneyNote.Droid.Resource.Attribute.boxBackgroundMode;
+			global::XF.Material.Resource.Attribute.boxCollapsedPaddingTop = global::MoneyNote.Droid.Resource.Attribute.boxCollapsedPaddingTop;
+			global::XF.Material.Resource.Attribute.boxCornerRadiusBottomEnd = global::MoneyNote.Droid.Resource.Attribute.boxCornerRadiusBottomEnd;
+			global::XF.Material.Resource.Attribute.boxCornerRadiusBottomStart = global::MoneyNote.Droid.Resource.Attribute.boxCornerRadiusBottomStart;
+			global::XF.Material.Resource.Attribute.boxCornerRadiusTopEnd = global::MoneyNote.Droid.Resource.Attribute.boxCornerRadiusTopEnd;
+			global::XF.Material.Resource.Attribute.boxCornerRadiusTopStart = global::MoneyNote.Droid.Resource.Attribute.boxCornerRadiusTopStart;
+			global::XF.Material.Resource.Attribute.boxStrokeColor = global::MoneyNote.Droid.Resource.Attribute.boxStrokeColor;
+			global::XF.Material.Resource.Attribute.boxStrokeWidth = global::MoneyNote.Droid.Resource.Attribute.boxStrokeWidth;
+			global::XF.Material.Resource.Attribute.buttonBarButtonStyle = global::MoneyNote.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::XF.Material.Resource.Attribute.buttonBarNegativeButtonStyle = global::MoneyNote.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::XF.Material.Resource.Attribute.buttonBarNeutralButtonStyle = global::MoneyNote.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::XF.Material.Resource.Attribute.buttonBarPositiveButtonStyle = global::MoneyNote.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::XF.Material.Resource.Attribute.buttonBarStyle = global::MoneyNote.Droid.Resource.Attribute.buttonBarStyle;
+			global::XF.Material.Resource.Attribute.buttonCompat = global::MoneyNote.Droid.Resource.Attribute.buttonCompat;
+			global::XF.Material.Resource.Attribute.buttonGravity = global::MoneyNote.Droid.Resource.Attribute.buttonGravity;
+			global::XF.Material.Resource.Attribute.buttonIconDimen = global::MoneyNote.Droid.Resource.Attribute.buttonIconDimen;
+			global::XF.Material.Resource.Attribute.buttonPanelSideLayout = global::MoneyNote.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::XF.Material.Resource.Attribute.buttonStyle = global::MoneyNote.Droid.Resource.Attribute.buttonStyle;
+			global::XF.Material.Resource.Attribute.buttonStyleSmall = global::MoneyNote.Droid.Resource.Attribute.buttonStyleSmall;
+			global::XF.Material.Resource.Attribute.buttonTint = global::MoneyNote.Droid.Resource.Attribute.buttonTint;
+			global::XF.Material.Resource.Attribute.buttonTintMode = global::MoneyNote.Droid.Resource.Attribute.buttonTintMode;
+			global::XF.Material.Resource.Attribute.cardBackgroundColor = global::MoneyNote.Droid.Resource.Attribute.cardBackgroundColor;
+			global::XF.Material.Resource.Attribute.cardCornerRadius = global::MoneyNote.Droid.Resource.Attribute.cardCornerRadius;
+			global::XF.Material.Resource.Attribute.cardElevation = global::MoneyNote.Droid.Resource.Attribute.cardElevation;
+			global::XF.Material.Resource.Attribute.cardMaxElevation = global::MoneyNote.Droid.Resource.Attribute.cardMaxElevation;
+			global::XF.Material.Resource.Attribute.cardPreventCornerOverlap = global::MoneyNote.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::XF.Material.Resource.Attribute.cardUseCompatPadding = global::MoneyNote.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::XF.Material.Resource.Attribute.cardViewStyle = global::MoneyNote.Droid.Resource.Attribute.cardViewStyle;
+			global::XF.Material.Resource.Attribute.checkboxStyle = global::MoneyNote.Droid.Resource.Attribute.checkboxStyle;
+			global::XF.Material.Resource.Attribute.checkedChip = global::MoneyNote.Droid.Resource.Attribute.checkedChip;
+			global::XF.Material.Resource.Attribute.checkedIcon = global::MoneyNote.Droid.Resource.Attribute.checkedIcon;
+			global::XF.Material.Resource.Attribute.checkedIconEnabled = global::MoneyNote.Droid.Resource.Attribute.checkedIconEnabled;
+			global::XF.Material.Resource.Attribute.checkedIconVisible = global::MoneyNote.Droid.Resource.Attribute.checkedIconVisible;
+			global::XF.Material.Resource.Attribute.checkedTextViewStyle = global::MoneyNote.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::XF.Material.Resource.Attribute.chipBackgroundColor = global::MoneyNote.Droid.Resource.Attribute.chipBackgroundColor;
+			global::XF.Material.Resource.Attribute.chipCornerRadius = global::MoneyNote.Droid.Resource.Attribute.chipCornerRadius;
+			global::XF.Material.Resource.Attribute.chipEndPadding = global::MoneyNote.Droid.Resource.Attribute.chipEndPadding;
+			global::XF.Material.Resource.Attribute.chipGroupStyle = global::MoneyNote.Droid.Resource.Attribute.chipGroupStyle;
+			global::XF.Material.Resource.Attribute.chipIcon = global::MoneyNote.Droid.Resource.Attribute.chipIcon;
+			global::XF.Material.Resource.Attribute.chipIconEnabled = global::MoneyNote.Droid.Resource.Attribute.chipIconEnabled;
+			global::XF.Material.Resource.Attribute.chipIconSize = global::MoneyNote.Droid.Resource.Attribute.chipIconSize;
+			global::XF.Material.Resource.Attribute.chipIconTint = global::MoneyNote.Droid.Resource.Attribute.chipIconTint;
+			global::XF.Material.Resource.Attribute.chipIconVisible = global::MoneyNote.Droid.Resource.Attribute.chipIconVisible;
+			global::XF.Material.Resource.Attribute.chipMinHeight = global::MoneyNote.Droid.Resource.Attribute.chipMinHeight;
+			global::XF.Material.Resource.Attribute.chipSpacing = global::MoneyNote.Droid.Resource.Attribute.chipSpacing;
+			global::XF.Material.Resource.Attribute.chipSpacingHorizontal = global::MoneyNote.Droid.Resource.Attribute.chipSpacingHorizontal;
+			global::XF.Material.Resource.Attribute.chipSpacingVertical = global::MoneyNote.Droid.Resource.Attribute.chipSpacingVertical;
+			global::XF.Material.Resource.Attribute.chipStandaloneStyle = global::MoneyNote.Droid.Resource.Attribute.chipStandaloneStyle;
+			global::XF.Material.Resource.Attribute.chipStartPadding = global::MoneyNote.Droid.Resource.Attribute.chipStartPadding;
+			global::XF.Material.Resource.Attribute.chipStrokeColor = global::MoneyNote.Droid.Resource.Attribute.chipStrokeColor;
+			global::XF.Material.Resource.Attribute.chipStrokeWidth = global::MoneyNote.Droid.Resource.Attribute.chipStrokeWidth;
+			global::XF.Material.Resource.Attribute.chipStyle = global::MoneyNote.Droid.Resource.Attribute.chipStyle;
+			global::XF.Material.Resource.Attribute.closeIcon = global::MoneyNote.Droid.Resource.Attribute.closeIcon;
+			global::XF.Material.Resource.Attribute.closeIconEnabled = global::MoneyNote.Droid.Resource.Attribute.closeIconEnabled;
+			global::XF.Material.Resource.Attribute.closeIconEndPadding = global::MoneyNote.Droid.Resource.Attribute.closeIconEndPadding;
+			global::XF.Material.Resource.Attribute.closeIconSize = global::MoneyNote.Droid.Resource.Attribute.closeIconSize;
+			global::XF.Material.Resource.Attribute.closeIconStartPadding = global::MoneyNote.Droid.Resource.Attribute.closeIconStartPadding;
+			global::XF.Material.Resource.Attribute.closeIconTint = global::MoneyNote.Droid.Resource.Attribute.closeIconTint;
+			global::XF.Material.Resource.Attribute.closeIconVisible = global::MoneyNote.Droid.Resource.Attribute.closeIconVisible;
+			global::XF.Material.Resource.Attribute.closeItemLayout = global::MoneyNote.Droid.Resource.Attribute.closeItemLayout;
+			global::XF.Material.Resource.Attribute.collapseContentDescription = global::MoneyNote.Droid.Resource.Attribute.collapseContentDescription;
+			global::XF.Material.Resource.Attribute.collapsedTitleGravity = global::MoneyNote.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::XF.Material.Resource.Attribute.collapsedTitleTextAppearance = global::MoneyNote.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::XF.Material.Resource.Attribute.collapseIcon = global::MoneyNote.Droid.Resource.Attribute.collapseIcon;
+			global::XF.Material.Resource.Attribute.color = global::MoneyNote.Droid.Resource.Attribute.color;
+			global::XF.Material.Resource.Attribute.colorAccent = global::MoneyNote.Droid.Resource.Attribute.colorAccent;
+			global::XF.Material.Resource.Attribute.colorBackgroundFloating = global::MoneyNote.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::XF.Material.Resource.Attribute.colorButtonNormal = global::MoneyNote.Droid.Resource.Attribute.colorButtonNormal;
+			global::XF.Material.Resource.Attribute.colorControlActivated = global::MoneyNote.Droid.Resource.Attribute.colorControlActivated;
+			global::XF.Material.Resource.Attribute.colorControlHighlight = global::MoneyNote.Droid.Resource.Attribute.colorControlHighlight;
+			global::XF.Material.Resource.Attribute.colorControlNormal = global::MoneyNote.Droid.Resource.Attribute.colorControlNormal;
+			global::XF.Material.Resource.Attribute.colorError = global::MoneyNote.Droid.Resource.Attribute.colorError;
+			global::XF.Material.Resource.Attribute.colorPrimary = global::MoneyNote.Droid.Resource.Attribute.colorPrimary;
+			global::XF.Material.Resource.Attribute.colorPrimaryDark = global::MoneyNote.Droid.Resource.Attribute.colorPrimaryDark;
+			global::XF.Material.Resource.Attribute.colorSecondary = global::MoneyNote.Droid.Resource.Attribute.colorSecondary;
+			global::XF.Material.Resource.Attribute.colorSwitchThumbNormal = global::MoneyNote.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::XF.Material.Resource.Attribute.commitIcon = global::MoneyNote.Droid.Resource.Attribute.commitIcon;
+			global::XF.Material.Resource.Attribute.contentDescription = global::MoneyNote.Droid.Resource.Attribute.contentDescription;
+			global::XF.Material.Resource.Attribute.contentInsetEnd = global::MoneyNote.Droid.Resource.Attribute.contentInsetEnd;
+			global::XF.Material.Resource.Attribute.contentInsetEndWithActions = global::MoneyNote.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::XF.Material.Resource.Attribute.contentInsetLeft = global::MoneyNote.Droid.Resource.Attribute.contentInsetLeft;
+			global::XF.Material.Resource.Attribute.contentInsetRight = global::MoneyNote.Droid.Resource.Attribute.contentInsetRight;
+			global::XF.Material.Resource.Attribute.contentInsetStart = global::MoneyNote.Droid.Resource.Attribute.contentInsetStart;
+			global::XF.Material.Resource.Attribute.contentInsetStartWithNavigation = global::MoneyNote.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::XF.Material.Resource.Attribute.contentPadding = global::MoneyNote.Droid.Resource.Attribute.contentPadding;
+			global::XF.Material.Resource.Attribute.contentPaddingBottom = global::MoneyNote.Droid.Resource.Attribute.contentPaddingBottom;
+			global::XF.Material.Resource.Attribute.contentPaddingLeft = global::MoneyNote.Droid.Resource.Attribute.contentPaddingLeft;
+			global::XF.Material.Resource.Attribute.contentPaddingRight = global::MoneyNote.Droid.Resource.Attribute.contentPaddingRight;
+			global::XF.Material.Resource.Attribute.contentPaddingTop = global::MoneyNote.Droid.Resource.Attribute.contentPaddingTop;
+			global::XF.Material.Resource.Attribute.contentScrim = global::MoneyNote.Droid.Resource.Attribute.contentScrim;
+			global::XF.Material.Resource.Attribute.controlBackground = global::MoneyNote.Droid.Resource.Attribute.controlBackground;
+			global::XF.Material.Resource.Attribute.coordinatorLayoutStyle = global::MoneyNote.Droid.Resource.Attribute.coordinatorLayoutStyle;
+			global::XF.Material.Resource.Attribute.cornerRadius = global::MoneyNote.Droid.Resource.Attribute.cornerRadius;
+			global::XF.Material.Resource.Attribute.counterEnabled = global::MoneyNote.Droid.Resource.Attribute.counterEnabled;
+			global::XF.Material.Resource.Attribute.counterMaxLength = global::MoneyNote.Droid.Resource.Attribute.counterMaxLength;
+			global::XF.Material.Resource.Attribute.counterOverflowTextAppearance = global::MoneyNote.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::XF.Material.Resource.Attribute.counterTextAppearance = global::MoneyNote.Droid.Resource.Attribute.counterTextAppearance;
+			global::XF.Material.Resource.Attribute.customNavigationLayout = global::MoneyNote.Droid.Resource.Attribute.customNavigationLayout;
+			global::XF.Material.Resource.Attribute.defaultQueryHint = global::MoneyNote.Droid.Resource.Attribute.defaultQueryHint;
+			global::XF.Material.Resource.Attribute.dialogCornerRadius = global::MoneyNote.Droid.Resource.Attribute.dialogCornerRadius;
+			global::XF.Material.Resource.Attribute.dialogPreferredPadding = global::MoneyNote.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::XF.Material.Resource.Attribute.dialogTheme = global::MoneyNote.Droid.Resource.Attribute.dialogTheme;
+			global::XF.Material.Resource.Attribute.displayOptions = global::MoneyNote.Droid.Resource.Attribute.displayOptions;
+			global::XF.Material.Resource.Attribute.divider = global::MoneyNote.Droid.Resource.Attribute.divider;
+			global::XF.Material.Resource.Attribute.dividerHorizontal = global::MoneyNote.Droid.Resource.Attribute.dividerHorizontal;
+			global::XF.Material.Resource.Attribute.dividerPadding = global::MoneyNote.Droid.Resource.Attribute.dividerPadding;
+			global::XF.Material.Resource.Attribute.dividerVertical = global::MoneyNote.Droid.Resource.Attribute.dividerVertical;
+			global::XF.Material.Resource.Attribute.drawableBottomCompat = global::MoneyNote.Droid.Resource.Attribute.drawableBottomCompat;
+			global::XF.Material.Resource.Attribute.drawableEndCompat = global::MoneyNote.Droid.Resource.Attribute.drawableEndCompat;
+			global::XF.Material.Resource.Attribute.drawableLeftCompat = global::MoneyNote.Droid.Resource.Attribute.drawableLeftCompat;
+			global::XF.Material.Resource.Attribute.drawableRightCompat = global::MoneyNote.Droid.Resource.Attribute.drawableRightCompat;
+			global::XF.Material.Resource.Attribute.drawableSize = global::MoneyNote.Droid.Resource.Attribute.drawableSize;
+			global::XF.Material.Resource.Attribute.drawableStartCompat = global::MoneyNote.Droid.Resource.Attribute.drawableStartCompat;
+			global::XF.Material.Resource.Attribute.drawableTint = global::MoneyNote.Droid.Resource.Attribute.drawableTint;
+			global::XF.Material.Resource.Attribute.drawableTintMode = global::MoneyNote.Droid.Resource.Attribute.drawableTintMode;
+			global::XF.Material.Resource.Attribute.drawableTopCompat = global::MoneyNote.Droid.Resource.Attribute.drawableTopCompat;
+			global::XF.Material.Resource.Attribute.drawerArrowStyle = global::MoneyNote.Droid.Resource.Attribute.drawerArrowStyle;
+			global::XF.Material.Resource.Attribute.dropdownListPreferredItemHeight = global::MoneyNote.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::XF.Material.Resource.Attribute.dropDownListViewStyle = global::MoneyNote.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::XF.Material.Resource.Attribute.editTextBackground = global::MoneyNote.Droid.Resource.Attribute.editTextBackground;
+			global::XF.Material.Resource.Attribute.editTextColor = global::MoneyNote.Droid.Resource.Attribute.editTextColor;
+			global::XF.Material.Resource.Attribute.editTextStyle = global::MoneyNote.Droid.Resource.Attribute.editTextStyle;
+			global::XF.Material.Resource.Attribute.elevation = global::MoneyNote.Droid.Resource.Attribute.elevation;
+			global::XF.Material.Resource.Attribute.enforceMaterialTheme = global::MoneyNote.Droid.Resource.Attribute.enforceMaterialTheme;
+			global::XF.Material.Resource.Attribute.enforceTextAppearance = global::MoneyNote.Droid.Resource.Attribute.enforceTextAppearance;
+			global::XF.Material.Resource.Attribute.errorEnabled = global::MoneyNote.Droid.Resource.Attribute.errorEnabled;
+			global::XF.Material.Resource.Attribute.errorTextAppearance = global::MoneyNote.Droid.Resource.Attribute.errorTextAppearance;
+			global::XF.Material.Resource.Attribute.expandActivityOverflowButtonDrawable = global::MoneyNote.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::XF.Material.Resource.Attribute.expanded = global::MoneyNote.Droid.Resource.Attribute.expanded;
+			global::XF.Material.Resource.Attribute.expandedTitleGravity = global::MoneyNote.Droid.Resource.Attribute.expandedTitleGravity;
+			global::XF.Material.Resource.Attribute.expandedTitleMargin = global::MoneyNote.Droid.Resource.Attribute.expandedTitleMargin;
+			global::XF.Material.Resource.Attribute.expandedTitleMarginBottom = global::MoneyNote.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::XF.Material.Resource.Attribute.expandedTitleMarginEnd = global::MoneyNote.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::XF.Material.Resource.Attribute.expandedTitleMarginStart = global::MoneyNote.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::XF.Material.Resource.Attribute.expandedTitleMarginTop = global::MoneyNote.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::XF.Material.Resource.Attribute.expandedTitleTextAppearance = global::MoneyNote.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::XF.Material.Resource.Attribute.fabAlignmentMode = global::MoneyNote.Droid.Resource.Attribute.fabAlignmentMode;
+			global::XF.Material.Resource.Attribute.fabCradleMargin = global::MoneyNote.Droid.Resource.Attribute.fabCradleMargin;
+			global::XF.Material.Resource.Attribute.fabCradleRoundedCornerRadius = global::MoneyNote.Droid.Resource.Attribute.fabCradleRoundedCornerRadius;
+			global::XF.Material.Resource.Attribute.fabCradleVerticalOffset = global::MoneyNote.Droid.Resource.Attribute.fabCradleVerticalOffset;
+			global::XF.Material.Resource.Attribute.fabCustomSize = global::MoneyNote.Droid.Resource.Attribute.fabCustomSize;
+			global::XF.Material.Resource.Attribute.fabSize = global::MoneyNote.Droid.Resource.Attribute.fabSize;
+			global::XF.Material.Resource.Attribute.fastScrollEnabled = global::MoneyNote.Droid.Resource.Attribute.fastScrollEnabled;
+			global::XF.Material.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::MoneyNote.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::XF.Material.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::MoneyNote.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::XF.Material.Resource.Attribute.fastScrollVerticalThumbDrawable = global::MoneyNote.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::XF.Material.Resource.Attribute.fastScrollVerticalTrackDrawable = global::MoneyNote.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable;
+			global::XF.Material.Resource.Attribute.firstBaselineToTopHeight = global::MoneyNote.Droid.Resource.Attribute.firstBaselineToTopHeight;
+			global::XF.Material.Resource.Attribute.floatingActionButtonStyle = global::MoneyNote.Droid.Resource.Attribute.floatingActionButtonStyle;
+			global::XF.Material.Resource.Attribute.font = global::MoneyNote.Droid.Resource.Attribute.font;
+			global::XF.Material.Resource.Attribute.fontFamily = global::MoneyNote.Droid.Resource.Attribute.fontFamily;
+			global::XF.Material.Resource.Attribute.fontProviderAuthority = global::MoneyNote.Droid.Resource.Attribute.fontProviderAuthority;
+			global::XF.Material.Resource.Attribute.fontProviderCerts = global::MoneyNote.Droid.Resource.Attribute.fontProviderCerts;
+			global::XF.Material.Resource.Attribute.fontProviderFetchStrategy = global::MoneyNote.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::XF.Material.Resource.Attribute.fontProviderFetchTimeout = global::MoneyNote.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::XF.Material.Resource.Attribute.fontProviderPackage = global::MoneyNote.Droid.Resource.Attribute.fontProviderPackage;
+			global::XF.Material.Resource.Attribute.fontProviderQuery = global::MoneyNote.Droid.Resource.Attribute.fontProviderQuery;
+			global::XF.Material.Resource.Attribute.fontStyle = global::MoneyNote.Droid.Resource.Attribute.fontStyle;
+			global::XF.Material.Resource.Attribute.fontVariationSettings = global::MoneyNote.Droid.Resource.Attribute.fontVariationSettings;
+			global::XF.Material.Resource.Attribute.fontWeight = global::MoneyNote.Droid.Resource.Attribute.fontWeight;
+			global::XF.Material.Resource.Attribute.foregroundInsidePadding = global::MoneyNote.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::XF.Material.Resource.Attribute.gapBetweenBars = global::MoneyNote.Droid.Resource.Attribute.gapBetweenBars;
+			global::XF.Material.Resource.Attribute.goIcon = global::MoneyNote.Droid.Resource.Attribute.goIcon;
+			global::XF.Material.Resource.Attribute.headerLayout = global::MoneyNote.Droid.Resource.Attribute.headerLayout;
+			global::XF.Material.Resource.Attribute.height = global::MoneyNote.Droid.Resource.Attribute.height;
+			global::XF.Material.Resource.Attribute.helperText = global::MoneyNote.Droid.Resource.Attribute.helperText;
+			global::XF.Material.Resource.Attribute.helperTextEnabled = global::MoneyNote.Droid.Resource.Attribute.helperTextEnabled;
+			global::XF.Material.Resource.Attribute.helperTextTextAppearance = global::MoneyNote.Droid.Resource.Attribute.helperTextTextAppearance;
+			global::XF.Material.Resource.Attribute.hideMotionSpec = global::MoneyNote.Droid.Resource.Attribute.hideMotionSpec;
+			global::XF.Material.Resource.Attribute.hideOnContentScroll = global::MoneyNote.Droid.Resource.Attribute.hideOnContentScroll;
+			global::XF.Material.Resource.Attribute.hideOnScroll = global::MoneyNote.Droid.Resource.Attribute.hideOnScroll;
+			global::XF.Material.Resource.Attribute.hintAnimationEnabled = global::MoneyNote.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::XF.Material.Resource.Attribute.hintEnabled = global::MoneyNote.Droid.Resource.Attribute.hintEnabled;
+			global::XF.Material.Resource.Attribute.hintTextAppearance = global::MoneyNote.Droid.Resource.Attribute.hintTextAppearance;
+			global::XF.Material.Resource.Attribute.homeAsUpIndicator = global::MoneyNote.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::XF.Material.Resource.Attribute.homeLayout = global::MoneyNote.Droid.Resource.Attribute.homeLayout;
+			global::XF.Material.Resource.Attribute.hoveredFocusedTranslationZ = global::MoneyNote.Droid.Resource.Attribute.hoveredFocusedTranslationZ;
+			global::XF.Material.Resource.Attribute.icon = global::MoneyNote.Droid.Resource.Attribute.icon;
+			global::XF.Material.Resource.Attribute.iconEndPadding = global::MoneyNote.Droid.Resource.Attribute.iconEndPadding;
+			global::XF.Material.Resource.Attribute.iconGravity = global::MoneyNote.Droid.Resource.Attribute.iconGravity;
+			global::XF.Material.Resource.Attribute.iconifiedByDefault = global::MoneyNote.Droid.Resource.Attribute.iconifiedByDefault;
+			global::XF.Material.Resource.Attribute.iconPadding = global::MoneyNote.Droid.Resource.Attribute.iconPadding;
+			global::XF.Material.Resource.Attribute.iconSize = global::MoneyNote.Droid.Resource.Attribute.iconSize;
+			global::XF.Material.Resource.Attribute.iconStartPadding = global::MoneyNote.Droid.Resource.Attribute.iconStartPadding;
+			global::XF.Material.Resource.Attribute.iconTint = global::MoneyNote.Droid.Resource.Attribute.iconTint;
+			global::XF.Material.Resource.Attribute.iconTintMode = global::MoneyNote.Droid.Resource.Attribute.iconTintMode;
+			global::XF.Material.Resource.Attribute.imageButtonStyle = global::MoneyNote.Droid.Resource.Attribute.imageButtonStyle;
+			global::XF.Material.Resource.Attribute.indeterminateProgressStyle = global::MoneyNote.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::XF.Material.Resource.Attribute.initialActivityCount = global::MoneyNote.Droid.Resource.Attribute.initialActivityCount;
+			global::XF.Material.Resource.Attribute.insetForeground = global::MoneyNote.Droid.Resource.Attribute.insetForeground;
+			global::XF.Material.Resource.Attribute.isLightTheme = global::MoneyNote.Droid.Resource.Attribute.isLightTheme;
+			global::XF.Material.Resource.Attribute.itemBackground = global::MoneyNote.Droid.Resource.Attribute.itemBackground;
+			global::XF.Material.Resource.Attribute.itemHorizontalPadding = global::MoneyNote.Droid.Resource.Attribute.itemHorizontalPadding;
+			global::XF.Material.Resource.Attribute.itemHorizontalTranslationEnabled = global::MoneyNote.Droid.Resource.Attribute.itemHorizontalTranslationEnabled;
+			global::XF.Material.Resource.Attribute.itemIconPadding = global::MoneyNote.Droid.Resource.Attribute.itemIconPadding;
+			global::XF.Material.Resource.Attribute.itemIconSize = global::MoneyNote.Droid.Resource.Attribute.itemIconSize;
+			global::XF.Material.Resource.Attribute.itemIconTint = global::MoneyNote.Droid.Resource.Attribute.itemIconTint;
+			global::XF.Material.Resource.Attribute.itemPadding = global::MoneyNote.Droid.Resource.Attribute.itemPadding;
+			global::XF.Material.Resource.Attribute.itemSpacing = global::MoneyNote.Droid.Resource.Attribute.itemSpacing;
+			global::XF.Material.Resource.Attribute.itemTextAppearance = global::MoneyNote.Droid.Resource.Attribute.itemTextAppearance;
+			global::XF.Material.Resource.Attribute.itemTextAppearanceActive = global::MoneyNote.Droid.Resource.Attribute.itemTextAppearanceActive;
+			global::XF.Material.Resource.Attribute.itemTextAppearanceInactive = global::MoneyNote.Droid.Resource.Attribute.itemTextAppearanceInactive;
+			global::XF.Material.Resource.Attribute.itemTextColor = global::MoneyNote.Droid.Resource.Attribute.itemTextColor;
+			global::XF.Material.Resource.Attribute.keylines = global::MoneyNote.Droid.Resource.Attribute.keylines;
+			global::XF.Material.Resource.Attribute.labelVisibilityMode = global::MoneyNote.Droid.Resource.Attribute.labelVisibilityMode;
+			global::XF.Material.Resource.Attribute.lastBaselineToBottomHeight = global::MoneyNote.Droid.Resource.Attribute.lastBaselineToBottomHeight;
+			global::XF.Material.Resource.Attribute.layout = global::MoneyNote.Droid.Resource.Attribute.layout;
+			global::XF.Material.Resource.Attribute.layoutManager = global::MoneyNote.Droid.Resource.Attribute.layoutManager;
+			global::XF.Material.Resource.Attribute.layout_anchor = global::MoneyNote.Droid.Resource.Attribute.layout_anchor;
+			global::XF.Material.Resource.Attribute.layout_anchorGravity = global::MoneyNote.Droid.Resource.Attribute.layout_anchorGravity;
+			global::XF.Material.Resource.Attribute.layout_behavior = global::MoneyNote.Droid.Resource.Attribute.layout_behavior;
+			global::XF.Material.Resource.Attribute.layout_collapseMode = global::MoneyNote.Droid.Resource.Attribute.layout_collapseMode;
+			global::XF.Material.Resource.Attribute.layout_collapseParallaxMultiplier = global::MoneyNote.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::XF.Material.Resource.Attribute.layout_dodgeInsetEdges = global::MoneyNote.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::XF.Material.Resource.Attribute.layout_insetEdge = global::MoneyNote.Droid.Resource.Attribute.layout_insetEdge;
+			global::XF.Material.Resource.Attribute.layout_keyline = global::MoneyNote.Droid.Resource.Attribute.layout_keyline;
+			global::XF.Material.Resource.Attribute.layout_scrollFlags = global::MoneyNote.Droid.Resource.Attribute.layout_scrollFlags;
+			global::XF.Material.Resource.Attribute.layout_scrollInterpolator = global::MoneyNote.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::XF.Material.Resource.Attribute.liftOnScroll = global::MoneyNote.Droid.Resource.Attribute.liftOnScroll;
+			global::XF.Material.Resource.Attribute.lineHeight = global::MoneyNote.Droid.Resource.Attribute.lineHeight;
+			global::XF.Material.Resource.Attribute.lineSpacing = global::MoneyNote.Droid.Resource.Attribute.lineSpacing;
+			global::XF.Material.Resource.Attribute.listChoiceBackgroundIndicator = global::MoneyNote.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::XF.Material.Resource.Attribute.listChoiceIndicatorMultipleAnimated = global::MoneyNote.Droid.Resource.Attribute.listChoiceIndicatorMultipleAnimated;
+			global::XF.Material.Resource.Attribute.listChoiceIndicatorSingleAnimated = global::MoneyNote.Droid.Resource.Attribute.listChoiceIndicatorSingleAnimated;
+			global::XF.Material.Resource.Attribute.listDividerAlertDialog = global::MoneyNote.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::XF.Material.Resource.Attribute.listItemLayout = global::MoneyNote.Droid.Resource.Attribute.listItemLayout;
+			global::XF.Material.Resource.Attribute.listLayout = global::MoneyNote.Droid.Resource.Attribute.listLayout;
+			global::XF.Material.Resource.Attribute.listMenuViewStyle = global::MoneyNote.Droid.Resource.Attribute.listMenuViewStyle;
+			global::XF.Material.Resource.Attribute.listPopupWindowStyle = global::MoneyNote.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::XF.Material.Resource.Attribute.listPreferredItemHeight = global::MoneyNote.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::XF.Material.Resource.Attribute.listPreferredItemHeightLarge = global::MoneyNote.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::XF.Material.Resource.Attribute.listPreferredItemHeightSmall = global::MoneyNote.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::XF.Material.Resource.Attribute.listPreferredItemPaddingEnd = global::MoneyNote.Droid.Resource.Attribute.listPreferredItemPaddingEnd;
+			global::XF.Material.Resource.Attribute.listPreferredItemPaddingLeft = global::MoneyNote.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::XF.Material.Resource.Attribute.listPreferredItemPaddingRight = global::MoneyNote.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::XF.Material.Resource.Attribute.listPreferredItemPaddingStart = global::MoneyNote.Droid.Resource.Attribute.listPreferredItemPaddingStart;
+			global::XF.Material.Resource.Attribute.logo = global::MoneyNote.Droid.Resource.Attribute.logo;
+			global::XF.Material.Resource.Attribute.logoDescription = global::MoneyNote.Droid.Resource.Attribute.logoDescription;
+			global::XF.Material.Resource.Attribute.lottieAnimationViewStyle = global::MoneyNote.Droid.Resource.Attribute.lottieAnimationViewStyle;
+			global::XF.Material.Resource.Attribute.lottie_autoPlay = global::MoneyNote.Droid.Resource.Attribute.lottie_autoPlay;
+			global::XF.Material.Resource.Attribute.lottie_cacheComposition = global::MoneyNote.Droid.Resource.Attribute.lottie_cacheComposition;
+			global::XF.Material.Resource.Attribute.lottie_colorFilter = global::MoneyNote.Droid.Resource.Attribute.lottie_colorFilter;
+			global::XF.Material.Resource.Attribute.lottie_enableMergePathsForKitKatAndAbove = global::MoneyNote.Droid.Resource.Attribute.lottie_enableMergePathsForKitKatAndAbove;
+			global::XF.Material.Resource.Attribute.lottie_fallbackRes = global::MoneyNote.Droid.Resource.Attribute.lottie_fallbackRes;
+			global::XF.Material.Resource.Attribute.lottie_fileName = global::MoneyNote.Droid.Resource.Attribute.lottie_fileName;
+			global::XF.Material.Resource.Attribute.lottie_imageAssetsFolder = global::MoneyNote.Droid.Resource.Attribute.lottie_imageAssetsFolder;
+			global::XF.Material.Resource.Attribute.lottie_loop = global::MoneyNote.Droid.Resource.Attribute.lottie_loop;
+			global::XF.Material.Resource.Attribute.lottie_progress = global::MoneyNote.Droid.Resource.Attribute.lottie_progress;
+			global::XF.Material.Resource.Attribute.lottie_rawRes = global::MoneyNote.Droid.Resource.Attribute.lottie_rawRes;
+			global::XF.Material.Resource.Attribute.lottie_renderMode = global::MoneyNote.Droid.Resource.Attribute.lottie_renderMode;
+			global::XF.Material.Resource.Attribute.lottie_repeatCount = global::MoneyNote.Droid.Resource.Attribute.lottie_repeatCount;
+			global::XF.Material.Resource.Attribute.lottie_repeatMode = global::MoneyNote.Droid.Resource.Attribute.lottie_repeatMode;
+			global::XF.Material.Resource.Attribute.lottie_scale = global::MoneyNote.Droid.Resource.Attribute.lottie_scale;
+			global::XF.Material.Resource.Attribute.lottie_speed = global::MoneyNote.Droid.Resource.Attribute.lottie_speed;
+			global::XF.Material.Resource.Attribute.lottie_url = global::MoneyNote.Droid.Resource.Attribute.lottie_url;
+			global::XF.Material.Resource.Attribute.materialButtonStyle = global::MoneyNote.Droid.Resource.Attribute.materialButtonStyle;
+			global::XF.Material.Resource.Attribute.materialCardViewStyle = global::MoneyNote.Droid.Resource.Attribute.materialCardViewStyle;
+			global::XF.Material.Resource.Attribute.maxActionInlineWidth = global::MoneyNote.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::XF.Material.Resource.Attribute.maxButtonHeight = global::MoneyNote.Droid.Resource.Attribute.maxButtonHeight;
+			global::XF.Material.Resource.Attribute.maxImageSize = global::MoneyNote.Droid.Resource.Attribute.maxImageSize;
+			global::XF.Material.Resource.Attribute.measureWithLargestChild = global::MoneyNote.Droid.Resource.Attribute.measureWithLargestChild;
+			global::XF.Material.Resource.Attribute.menu = global::MoneyNote.Droid.Resource.Attribute.menu;
+			global::XF.Material.Resource.Attribute.multiChoiceItemLayout = global::MoneyNote.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::XF.Material.Resource.Attribute.navigationContentDescription = global::MoneyNote.Droid.Resource.Attribute.navigationContentDescription;
+			global::XF.Material.Resource.Attribute.navigationIcon = global::MoneyNote.Droid.Resource.Attribute.navigationIcon;
+			global::XF.Material.Resource.Attribute.navigationMode = global::MoneyNote.Droid.Resource.Attribute.navigationMode;
+			global::XF.Material.Resource.Attribute.navigationViewStyle = global::MoneyNote.Droid.Resource.Attribute.navigationViewStyle;
+			global::XF.Material.Resource.Attribute.numericModifiers = global::MoneyNote.Droid.Resource.Attribute.numericModifiers;
+			global::XF.Material.Resource.Attribute.overlapAnchor = global::MoneyNote.Droid.Resource.Attribute.overlapAnchor;
+			global::XF.Material.Resource.Attribute.paddingBottomNoButtons = global::MoneyNote.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::XF.Material.Resource.Attribute.paddingEnd = global::MoneyNote.Droid.Resource.Attribute.paddingEnd;
+			global::XF.Material.Resource.Attribute.paddingStart = global::MoneyNote.Droid.Resource.Attribute.paddingStart;
+			global::XF.Material.Resource.Attribute.paddingTopNoTitle = global::MoneyNote.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::XF.Material.Resource.Attribute.panelBackground = global::MoneyNote.Droid.Resource.Attribute.panelBackground;
+			global::XF.Material.Resource.Attribute.panelMenuListTheme = global::MoneyNote.Droid.Resource.Attribute.panelMenuListTheme;
+			global::XF.Material.Resource.Attribute.panelMenuListWidth = global::MoneyNote.Droid.Resource.Attribute.panelMenuListWidth;
+			global::XF.Material.Resource.Attribute.passwordToggleContentDescription = global::MoneyNote.Droid.Resource.Attribute.passwordToggleContentDescription;
+			global::XF.Material.Resource.Attribute.passwordToggleDrawable = global::MoneyNote.Droid.Resource.Attribute.passwordToggleDrawable;
+			global::XF.Material.Resource.Attribute.passwordToggleEnabled = global::MoneyNote.Droid.Resource.Attribute.passwordToggleEnabled;
+			global::XF.Material.Resource.Attribute.passwordToggleTint = global::MoneyNote.Droid.Resource.Attribute.passwordToggleTint;
+			global::XF.Material.Resource.Attribute.passwordToggleTintMode = global::MoneyNote.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::XF.Material.Resource.Attribute.popupMenuStyle = global::MoneyNote.Droid.Resource.Attribute.popupMenuStyle;
+			global::XF.Material.Resource.Attribute.popupTheme = global::MoneyNote.Droid.Resource.Attribute.popupTheme;
+			global::XF.Material.Resource.Attribute.popupWindowStyle = global::MoneyNote.Droid.Resource.Attribute.popupWindowStyle;
+			global::XF.Material.Resource.Attribute.preserveIconSpacing = global::MoneyNote.Droid.Resource.Attribute.preserveIconSpacing;
+			global::XF.Material.Resource.Attribute.pressedTranslationZ = global::MoneyNote.Droid.Resource.Attribute.pressedTranslationZ;
+			global::XF.Material.Resource.Attribute.progressBarPadding = global::MoneyNote.Droid.Resource.Attribute.progressBarPadding;
+			global::XF.Material.Resource.Attribute.progressBarStyle = global::MoneyNote.Droid.Resource.Attribute.progressBarStyle;
+			global::XF.Material.Resource.Attribute.queryBackground = global::MoneyNote.Droid.Resource.Attribute.queryBackground;
+			global::XF.Material.Resource.Attribute.queryHint = global::MoneyNote.Droid.Resource.Attribute.queryHint;
+			global::XF.Material.Resource.Attribute.radioButtonStyle = global::MoneyNote.Droid.Resource.Attribute.radioButtonStyle;
+			global::XF.Material.Resource.Attribute.ratingBarStyle = global::MoneyNote.Droid.Resource.Attribute.ratingBarStyle;
+			global::XF.Material.Resource.Attribute.ratingBarStyleIndicator = global::MoneyNote.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::XF.Material.Resource.Attribute.ratingBarStyleSmall = global::MoneyNote.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::XF.Material.Resource.Attribute.recyclerViewStyle = global::MoneyNote.Droid.Resource.Attribute.recyclerViewStyle;
+			global::XF.Material.Resource.Attribute.reverseLayout = global::MoneyNote.Droid.Resource.Attribute.reverseLayout;
+			global::XF.Material.Resource.Attribute.rippleColor = global::MoneyNote.Droid.Resource.Attribute.rippleColor;
+			global::XF.Material.Resource.Attribute.scrimAnimationDuration = global::MoneyNote.Droid.Resource.Attribute.scrimAnimationDuration;
+			global::XF.Material.Resource.Attribute.scrimBackground = global::MoneyNote.Droid.Resource.Attribute.scrimBackground;
+			global::XF.Material.Resource.Attribute.scrimVisibleHeightTrigger = global::MoneyNote.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::XF.Material.Resource.Attribute.searchHintIcon = global::MoneyNote.Droid.Resource.Attribute.searchHintIcon;
+			global::XF.Material.Resource.Attribute.searchIcon = global::MoneyNote.Droid.Resource.Attribute.searchIcon;
+			global::XF.Material.Resource.Attribute.searchViewStyle = global::MoneyNote.Droid.Resource.Attribute.searchViewStyle;
+			global::XF.Material.Resource.Attribute.seekBarStyle = global::MoneyNote.Droid.Resource.Attribute.seekBarStyle;
+			global::XF.Material.Resource.Attribute.selectableItemBackground = global::MoneyNote.Droid.Resource.Attribute.selectableItemBackground;
+			global::XF.Material.Resource.Attribute.selectableItemBackgroundBorderless = global::MoneyNote.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::XF.Material.Resource.Attribute.showAsAction = global::MoneyNote.Droid.Resource.Attribute.showAsAction;
+			global::XF.Material.Resource.Attribute.showDividers = global::MoneyNote.Droid.Resource.Attribute.showDividers;
+			global::XF.Material.Resource.Attribute.showMotionSpec = global::MoneyNote.Droid.Resource.Attribute.showMotionSpec;
+			global::XF.Material.Resource.Attribute.showText = global::MoneyNote.Droid.Resource.Attribute.showText;
+			global::XF.Material.Resource.Attribute.showTitle = global::MoneyNote.Droid.Resource.Attribute.showTitle;
+			global::XF.Material.Resource.Attribute.singleChoiceItemLayout = global::MoneyNote.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::XF.Material.Resource.Attribute.singleLine = global::MoneyNote.Droid.Resource.Attribute.singleLine;
+			global::XF.Material.Resource.Attribute.singleSelection = global::MoneyNote.Droid.Resource.Attribute.singleSelection;
+			global::XF.Material.Resource.Attribute.snackbarButtonStyle = global::MoneyNote.Droid.Resource.Attribute.snackbarButtonStyle;
+			global::XF.Material.Resource.Attribute.snackbarStyle = global::MoneyNote.Droid.Resource.Attribute.snackbarStyle;
+			global::XF.Material.Resource.Attribute.spanCount = global::MoneyNote.Droid.Resource.Attribute.spanCount;
+			global::XF.Material.Resource.Attribute.spinBars = global::MoneyNote.Droid.Resource.Attribute.spinBars;
+			global::XF.Material.Resource.Attribute.spinnerDropDownItemStyle = global::MoneyNote.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::XF.Material.Resource.Attribute.spinnerStyle = global::MoneyNote.Droid.Resource.Attribute.spinnerStyle;
+			global::XF.Material.Resource.Attribute.splitTrack = global::MoneyNote.Droid.Resource.Attribute.splitTrack;
+			global::XF.Material.Resource.Attribute.srcCompat = global::MoneyNote.Droid.Resource.Attribute.srcCompat;
+			global::XF.Material.Resource.Attribute.stackFromEnd = global::MoneyNote.Droid.Resource.Attribute.stackFromEnd;
+			global::XF.Material.Resource.Attribute.state_above_anchor = global::MoneyNote.Droid.Resource.Attribute.state_above_anchor;
+			global::XF.Material.Resource.Attribute.state_collapsed = global::MoneyNote.Droid.Resource.Attribute.state_collapsed;
+			global::XF.Material.Resource.Attribute.state_collapsible = global::MoneyNote.Droid.Resource.Attribute.state_collapsible;
+			global::XF.Material.Resource.Attribute.state_liftable = global::MoneyNote.Droid.Resource.Attribute.state_liftable;
+			global::XF.Material.Resource.Attribute.state_lifted = global::MoneyNote.Droid.Resource.Attribute.state_lifted;
+			global::XF.Material.Resource.Attribute.statusBarBackground = global::MoneyNote.Droid.Resource.Attribute.statusBarBackground;
+			global::XF.Material.Resource.Attribute.statusBarScrim = global::MoneyNote.Droid.Resource.Attribute.statusBarScrim;
+			global::XF.Material.Resource.Attribute.strokeColor = global::MoneyNote.Droid.Resource.Attribute.strokeColor;
+			global::XF.Material.Resource.Attribute.strokeWidth = global::MoneyNote.Droid.Resource.Attribute.strokeWidth;
+			global::XF.Material.Resource.Attribute.subMenuArrow = global::MoneyNote.Droid.Resource.Attribute.subMenuArrow;
+			global::XF.Material.Resource.Attribute.submitBackground = global::MoneyNote.Droid.Resource.Attribute.submitBackground;
+			global::XF.Material.Resource.Attribute.subtitle = global::MoneyNote.Droid.Resource.Attribute.subtitle;
+			global::XF.Material.Resource.Attribute.subtitleTextAppearance = global::MoneyNote.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::XF.Material.Resource.Attribute.subtitleTextColor = global::MoneyNote.Droid.Resource.Attribute.subtitleTextColor;
+			global::XF.Material.Resource.Attribute.subtitleTextStyle = global::MoneyNote.Droid.Resource.Attribute.subtitleTextStyle;
+			global::XF.Material.Resource.Attribute.suggestionRowLayout = global::MoneyNote.Droid.Resource.Attribute.suggestionRowLayout;
+			global::XF.Material.Resource.Attribute.switchMinWidth = global::MoneyNote.Droid.Resource.Attribute.switchMinWidth;
+			global::XF.Material.Resource.Attribute.switchPadding = global::MoneyNote.Droid.Resource.Attribute.switchPadding;
+			global::XF.Material.Resource.Attribute.switchStyle = global::MoneyNote.Droid.Resource.Attribute.switchStyle;
+			global::XF.Material.Resource.Attribute.switchTextAppearance = global::MoneyNote.Droid.Resource.Attribute.switchTextAppearance;
+			global::XF.Material.Resource.Attribute.tabBackground = global::MoneyNote.Droid.Resource.Attribute.tabBackground;
+			global::XF.Material.Resource.Attribute.tabContentStart = global::MoneyNote.Droid.Resource.Attribute.tabContentStart;
+			global::XF.Material.Resource.Attribute.tabGravity = global::MoneyNote.Droid.Resource.Attribute.tabGravity;
+			global::XF.Material.Resource.Attribute.tabIconTint = global::MoneyNote.Droid.Resource.Attribute.tabIconTint;
+			global::XF.Material.Resource.Attribute.tabIconTintMode = global::MoneyNote.Droid.Resource.Attribute.tabIconTintMode;
+			global::XF.Material.Resource.Attribute.tabIndicator = global::MoneyNote.Droid.Resource.Attribute.tabIndicator;
+			global::XF.Material.Resource.Attribute.tabIndicatorAnimationDuration = global::MoneyNote.Droid.Resource.Attribute.tabIndicatorAnimationDuration;
+			global::XF.Material.Resource.Attribute.tabIndicatorColor = global::MoneyNote.Droid.Resource.Attribute.tabIndicatorColor;
+			global::XF.Material.Resource.Attribute.tabIndicatorFullWidth = global::MoneyNote.Droid.Resource.Attribute.tabIndicatorFullWidth;
+			global::XF.Material.Resource.Attribute.tabIndicatorGravity = global::MoneyNote.Droid.Resource.Attribute.tabIndicatorGravity;
+			global::XF.Material.Resource.Attribute.tabIndicatorHeight = global::MoneyNote.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::XF.Material.Resource.Attribute.tabInlineLabel = global::MoneyNote.Droid.Resource.Attribute.tabInlineLabel;
+			global::XF.Material.Resource.Attribute.tabMaxWidth = global::MoneyNote.Droid.Resource.Attribute.tabMaxWidth;
+			global::XF.Material.Resource.Attribute.tabMinWidth = global::MoneyNote.Droid.Resource.Attribute.tabMinWidth;
+			global::XF.Material.Resource.Attribute.tabMode = global::MoneyNote.Droid.Resource.Attribute.tabMode;
+			global::XF.Material.Resource.Attribute.tabPadding = global::MoneyNote.Droid.Resource.Attribute.tabPadding;
+			global::XF.Material.Resource.Attribute.tabPaddingBottom = global::MoneyNote.Droid.Resource.Attribute.tabPaddingBottom;
+			global::XF.Material.Resource.Attribute.tabPaddingEnd = global::MoneyNote.Droid.Resource.Attribute.tabPaddingEnd;
+			global::XF.Material.Resource.Attribute.tabPaddingStart = global::MoneyNote.Droid.Resource.Attribute.tabPaddingStart;
+			global::XF.Material.Resource.Attribute.tabPaddingTop = global::MoneyNote.Droid.Resource.Attribute.tabPaddingTop;
+			global::XF.Material.Resource.Attribute.tabRippleColor = global::MoneyNote.Droid.Resource.Attribute.tabRippleColor;
+			global::XF.Material.Resource.Attribute.tabSelectedTextColor = global::MoneyNote.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::XF.Material.Resource.Attribute.tabStyle = global::MoneyNote.Droid.Resource.Attribute.tabStyle;
+			global::XF.Material.Resource.Attribute.tabTextAppearance = global::MoneyNote.Droid.Resource.Attribute.tabTextAppearance;
+			global::XF.Material.Resource.Attribute.tabTextColor = global::MoneyNote.Droid.Resource.Attribute.tabTextColor;
+			global::XF.Material.Resource.Attribute.tabUnboundedRipple = global::MoneyNote.Droid.Resource.Attribute.tabUnboundedRipple;
+			global::XF.Material.Resource.Attribute.textAllCaps = global::MoneyNote.Droid.Resource.Attribute.textAllCaps;
+			global::XF.Material.Resource.Attribute.textAppearanceBody1 = global::MoneyNote.Droid.Resource.Attribute.textAppearanceBody1;
+			global::XF.Material.Resource.Attribute.textAppearanceBody2 = global::MoneyNote.Droid.Resource.Attribute.textAppearanceBody2;
+			global::XF.Material.Resource.Attribute.textAppearanceButton = global::MoneyNote.Droid.Resource.Attribute.textAppearanceButton;
+			global::XF.Material.Resource.Attribute.textAppearanceCaption = global::MoneyNote.Droid.Resource.Attribute.textAppearanceCaption;
+			global::XF.Material.Resource.Attribute.textAppearanceHeadline1 = global::MoneyNote.Droid.Resource.Attribute.textAppearanceHeadline1;
+			global::XF.Material.Resource.Attribute.textAppearanceHeadline2 = global::MoneyNote.Droid.Resource.Attribute.textAppearanceHeadline2;
+			global::XF.Material.Resource.Attribute.textAppearanceHeadline3 = global::MoneyNote.Droid.Resource.Attribute.textAppearanceHeadline3;
+			global::XF.Material.Resource.Attribute.textAppearanceHeadline4 = global::MoneyNote.Droid.Resource.Attribute.textAppearanceHeadline4;
+			global::XF.Material.Resource.Attribute.textAppearanceHeadline5 = global::MoneyNote.Droid.Resource.Attribute.textAppearanceHeadline5;
+			global::XF.Material.Resource.Attribute.textAppearanceHeadline6 = global::MoneyNote.Droid.Resource.Attribute.textAppearanceHeadline6;
+			global::XF.Material.Resource.Attribute.textAppearanceLargePopupMenu = global::MoneyNote.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::XF.Material.Resource.Attribute.textAppearanceListItem = global::MoneyNote.Droid.Resource.Attribute.textAppearanceListItem;
+			global::XF.Material.Resource.Attribute.textAppearanceListItemSecondary = global::MoneyNote.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::XF.Material.Resource.Attribute.textAppearanceListItemSmall = global::MoneyNote.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::XF.Material.Resource.Attribute.textAppearanceOverline = global::MoneyNote.Droid.Resource.Attribute.textAppearanceOverline;
+			global::XF.Material.Resource.Attribute.textAppearancePopupMenuHeader = global::MoneyNote.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::XF.Material.Resource.Attribute.textAppearanceSearchResultSubtitle = global::MoneyNote.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::XF.Material.Resource.Attribute.textAppearanceSearchResultTitle = global::MoneyNote.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::XF.Material.Resource.Attribute.textAppearanceSmallPopupMenu = global::MoneyNote.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::XF.Material.Resource.Attribute.textAppearanceSubtitle1 = global::MoneyNote.Droid.Resource.Attribute.textAppearanceSubtitle1;
+			global::XF.Material.Resource.Attribute.textAppearanceSubtitle2 = global::MoneyNote.Droid.Resource.Attribute.textAppearanceSubtitle2;
+			global::XF.Material.Resource.Attribute.textColorAlertDialogListItem = global::MoneyNote.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::XF.Material.Resource.Attribute.textColorSearchUrl = global::MoneyNote.Droid.Resource.Attribute.textColorSearchUrl;
+			global::XF.Material.Resource.Attribute.textEndPadding = global::MoneyNote.Droid.Resource.Attribute.textEndPadding;
+			global::XF.Material.Resource.Attribute.textInputStyle = global::MoneyNote.Droid.Resource.Attribute.textInputStyle;
+			global::XF.Material.Resource.Attribute.textLocale = global::MoneyNote.Droid.Resource.Attribute.textLocale;
+			global::XF.Material.Resource.Attribute.textStartPadding = global::MoneyNote.Droid.Resource.Attribute.textStartPadding;
+			global::XF.Material.Resource.Attribute.theme = global::MoneyNote.Droid.Resource.Attribute.theme;
+			global::XF.Material.Resource.Attribute.thickness = global::MoneyNote.Droid.Resource.Attribute.thickness;
+			global::XF.Material.Resource.Attribute.thumbTextPadding = global::MoneyNote.Droid.Resource.Attribute.thumbTextPadding;
+			global::XF.Material.Resource.Attribute.thumbTint = global::MoneyNote.Droid.Resource.Attribute.thumbTint;
+			global::XF.Material.Resource.Attribute.thumbTintMode = global::MoneyNote.Droid.Resource.Attribute.thumbTintMode;
+			global::XF.Material.Resource.Attribute.tickMark = global::MoneyNote.Droid.Resource.Attribute.tickMark;
+			global::XF.Material.Resource.Attribute.tickMarkTint = global::MoneyNote.Droid.Resource.Attribute.tickMarkTint;
+			global::XF.Material.Resource.Attribute.tickMarkTintMode = global::MoneyNote.Droid.Resource.Attribute.tickMarkTintMode;
+			global::XF.Material.Resource.Attribute.tint = global::MoneyNote.Droid.Resource.Attribute.tint;
+			global::XF.Material.Resource.Attribute.tintMode = global::MoneyNote.Droid.Resource.Attribute.tintMode;
+			global::XF.Material.Resource.Attribute.title = global::MoneyNote.Droid.Resource.Attribute.title;
+			global::XF.Material.Resource.Attribute.titleEnabled = global::MoneyNote.Droid.Resource.Attribute.titleEnabled;
+			global::XF.Material.Resource.Attribute.titleMargin = global::MoneyNote.Droid.Resource.Attribute.titleMargin;
+			global::XF.Material.Resource.Attribute.titleMarginBottom = global::MoneyNote.Droid.Resource.Attribute.titleMarginBottom;
+			global::XF.Material.Resource.Attribute.titleMarginEnd = global::MoneyNote.Droid.Resource.Attribute.titleMarginEnd;
+			global::XF.Material.Resource.Attribute.titleMargins = global::MoneyNote.Droid.Resource.Attribute.titleMargins;
+			global::XF.Material.Resource.Attribute.titleMarginStart = global::MoneyNote.Droid.Resource.Attribute.titleMarginStart;
+			global::XF.Material.Resource.Attribute.titleMarginTop = global::MoneyNote.Droid.Resource.Attribute.titleMarginTop;
+			global::XF.Material.Resource.Attribute.titleTextAppearance = global::MoneyNote.Droid.Resource.Attribute.titleTextAppearance;
+			global::XF.Material.Resource.Attribute.titleTextColor = global::MoneyNote.Droid.Resource.Attribute.titleTextColor;
+			global::XF.Material.Resource.Attribute.titleTextStyle = global::MoneyNote.Droid.Resource.Attribute.titleTextStyle;
+			global::XF.Material.Resource.Attribute.toolbarId = global::MoneyNote.Droid.Resource.Attribute.toolbarId;
+			global::XF.Material.Resource.Attribute.toolbarNavigationButtonStyle = global::MoneyNote.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::XF.Material.Resource.Attribute.toolbarStyle = global::MoneyNote.Droid.Resource.Attribute.toolbarStyle;
+			global::XF.Material.Resource.Attribute.tooltipForegroundColor = global::MoneyNote.Droid.Resource.Attribute.tooltipForegroundColor;
+			global::XF.Material.Resource.Attribute.tooltipFrameBackground = global::MoneyNote.Droid.Resource.Attribute.tooltipFrameBackground;
+			global::XF.Material.Resource.Attribute.tooltipText = global::MoneyNote.Droid.Resource.Attribute.tooltipText;
+			global::XF.Material.Resource.Attribute.track = global::MoneyNote.Droid.Resource.Attribute.track;
+			global::XF.Material.Resource.Attribute.trackTint = global::MoneyNote.Droid.Resource.Attribute.trackTint;
+			global::XF.Material.Resource.Attribute.trackTintMode = global::MoneyNote.Droid.Resource.Attribute.trackTintMode;
+			global::XF.Material.Resource.Attribute.ttcIndex = global::MoneyNote.Droid.Resource.Attribute.ttcIndex;
+			global::XF.Material.Resource.Attribute.useCompatPadding = global::MoneyNote.Droid.Resource.Attribute.useCompatPadding;
+			global::XF.Material.Resource.Attribute.viewInflaterClass = global::MoneyNote.Droid.Resource.Attribute.viewInflaterClass;
+			global::XF.Material.Resource.Attribute.voiceIcon = global::MoneyNote.Droid.Resource.Attribute.voiceIcon;
+			global::XF.Material.Resource.Attribute.windowActionBar = global::MoneyNote.Droid.Resource.Attribute.windowActionBar;
+			global::XF.Material.Resource.Attribute.windowActionBarOverlay = global::MoneyNote.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::XF.Material.Resource.Attribute.windowActionModeOverlay = global::MoneyNote.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::XF.Material.Resource.Attribute.windowFixedHeightMajor = global::MoneyNote.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::XF.Material.Resource.Attribute.windowFixedHeightMinor = global::MoneyNote.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::XF.Material.Resource.Attribute.windowFixedWidthMajor = global::MoneyNote.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::XF.Material.Resource.Attribute.windowFixedWidthMinor = global::MoneyNote.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::XF.Material.Resource.Attribute.windowMinWidthMajor = global::MoneyNote.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::XF.Material.Resource.Attribute.windowMinWidthMinor = global::MoneyNote.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::XF.Material.Resource.Attribute.windowNoTitle = global::MoneyNote.Droid.Resource.Attribute.windowNoTitle;
+			global::XF.Material.Resource.Boolean.abc_action_bar_embed_tabs = global::MoneyNote.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::XF.Material.Resource.Boolean.abc_allow_stacked_button_bar = global::MoneyNote.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::XF.Material.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::MoneyNote.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::XF.Material.Resource.Boolean.mtrl_btn_textappearance_all_caps = global::MoneyNote.Droid.Resource.Boolean.mtrl_btn_textappearance_all_caps;
+			global::XF.Material.Resource.Color.abc_background_cache_hint_selector_material_dark = global::MoneyNote.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::XF.Material.Resource.Color.abc_background_cache_hint_selector_material_light = global::MoneyNote.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::XF.Material.Resource.Color.abc_btn_colored_borderless_text_material = global::MoneyNote.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::XF.Material.Resource.Color.abc_btn_colored_text_material = global::MoneyNote.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::XF.Material.Resource.Color.abc_color_highlight_material = global::MoneyNote.Droid.Resource.Color.abc_color_highlight_material;
+			global::XF.Material.Resource.Color.abc_hint_foreground_material_dark = global::MoneyNote.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::XF.Material.Resource.Color.abc_hint_foreground_material_light = global::MoneyNote.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::XF.Material.Resource.Color.abc_primary_text_disable_only_material_dark = global::MoneyNote.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::XF.Material.Resource.Color.abc_primary_text_disable_only_material_light = global::MoneyNote.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::XF.Material.Resource.Color.abc_primary_text_material_dark = global::MoneyNote.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::XF.Material.Resource.Color.abc_primary_text_material_light = global::MoneyNote.Droid.Resource.Color.abc_primary_text_material_light;
+			global::XF.Material.Resource.Color.abc_search_url_text = global::MoneyNote.Droid.Resource.Color.abc_search_url_text;
+			global::XF.Material.Resource.Color.abc_search_url_text_normal = global::MoneyNote.Droid.Resource.Color.abc_search_url_text_normal;
+			global::XF.Material.Resource.Color.abc_search_url_text_pressed = global::MoneyNote.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::XF.Material.Resource.Color.abc_search_url_text_selected = global::MoneyNote.Droid.Resource.Color.abc_search_url_text_selected;
+			global::XF.Material.Resource.Color.abc_secondary_text_material_dark = global::MoneyNote.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::XF.Material.Resource.Color.abc_secondary_text_material_light = global::MoneyNote.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::XF.Material.Resource.Color.abc_tint_btn_checkable = global::MoneyNote.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::XF.Material.Resource.Color.abc_tint_default = global::MoneyNote.Droid.Resource.Color.abc_tint_default;
+			global::XF.Material.Resource.Color.abc_tint_edittext = global::MoneyNote.Droid.Resource.Color.abc_tint_edittext;
+			global::XF.Material.Resource.Color.abc_tint_seek_thumb = global::MoneyNote.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::XF.Material.Resource.Color.abc_tint_spinner = global::MoneyNote.Droid.Resource.Color.abc_tint_spinner;
+			global::XF.Material.Resource.Color.abc_tint_switch_track = global::MoneyNote.Droid.Resource.Color.abc_tint_switch_track;
+			global::XF.Material.Resource.Color.accent_material_dark = global::MoneyNote.Droid.Resource.Color.accent_material_dark;
+			global::XF.Material.Resource.Color.accent_material_light = global::MoneyNote.Droid.Resource.Color.accent_material_light;
+			global::XF.Material.Resource.Color.background_floating_material_dark = global::MoneyNote.Droid.Resource.Color.background_floating_material_dark;
+			global::XF.Material.Resource.Color.background_floating_material_light = global::MoneyNote.Droid.Resource.Color.background_floating_material_light;
+			global::XF.Material.Resource.Color.background_material_dark = global::MoneyNote.Droid.Resource.Color.background_material_dark;
+			global::XF.Material.Resource.Color.background_material_light = global::MoneyNote.Droid.Resource.Color.background_material_light;
+			global::XF.Material.Resource.Color.bright_foreground_disabled_material_dark = global::MoneyNote.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::XF.Material.Resource.Color.bright_foreground_disabled_material_light = global::MoneyNote.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::XF.Material.Resource.Color.bright_foreground_inverse_material_dark = global::MoneyNote.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::XF.Material.Resource.Color.bright_foreground_inverse_material_light = global::MoneyNote.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::XF.Material.Resource.Color.bright_foreground_material_dark = global::MoneyNote.Droid.Resource.Color.bright_foreground_material_dark;
+			global::XF.Material.Resource.Color.bright_foreground_material_light = global::MoneyNote.Droid.Resource.Color.bright_foreground_material_light;
+			global::XF.Material.Resource.Color.browser_actions_bg_grey = global::MoneyNote.Droid.Resource.Color.browser_actions_bg_grey;
+			global::XF.Material.Resource.Color.browser_actions_divider_color = global::MoneyNote.Droid.Resource.Color.browser_actions_divider_color;
+			global::XF.Material.Resource.Color.browser_actions_text_color = global::MoneyNote.Droid.Resource.Color.browser_actions_text_color;
+			global::XF.Material.Resource.Color.browser_actions_title_color = global::MoneyNote.Droid.Resource.Color.browser_actions_title_color;
+			global::XF.Material.Resource.Color.button_material_dark = global::MoneyNote.Droid.Resource.Color.button_material_dark;
+			global::XF.Material.Resource.Color.button_material_light = global::MoneyNote.Droid.Resource.Color.button_material_light;
+			global::XF.Material.Resource.Color.cardview_dark_background = global::MoneyNote.Droid.Resource.Color.cardview_dark_background;
+			global::XF.Material.Resource.Color.cardview_light_background = global::MoneyNote.Droid.Resource.Color.cardview_light_background;
+			global::XF.Material.Resource.Color.cardview_shadow_end_color = global::MoneyNote.Droid.Resource.Color.cardview_shadow_end_color;
+			global::XF.Material.Resource.Color.cardview_shadow_start_color = global::MoneyNote.Droid.Resource.Color.cardview_shadow_start_color;
+			global::XF.Material.Resource.Color.design_bottom_navigation_shadow_color = global::MoneyNote.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::XF.Material.Resource.Color.design_default_color_primary = global::MoneyNote.Droid.Resource.Color.design_default_color_primary;
+			global::XF.Material.Resource.Color.design_default_color_primary_dark = global::MoneyNote.Droid.Resource.Color.design_default_color_primary_dark;
+			global::XF.Material.Resource.Color.design_error = global::MoneyNote.Droid.Resource.Color.design_error;
+			global::XF.Material.Resource.Color.design_fab_shadow_end_color = global::MoneyNote.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::XF.Material.Resource.Color.design_fab_shadow_mid_color = global::MoneyNote.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::XF.Material.Resource.Color.design_fab_shadow_start_color = global::MoneyNote.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::XF.Material.Resource.Color.design_fab_stroke_end_inner_color = global::MoneyNote.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::XF.Material.Resource.Color.design_fab_stroke_end_outer_color = global::MoneyNote.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::XF.Material.Resource.Color.design_fab_stroke_top_inner_color = global::MoneyNote.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::XF.Material.Resource.Color.design_fab_stroke_top_outer_color = global::MoneyNote.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::XF.Material.Resource.Color.design_snackbar_background_color = global::MoneyNote.Droid.Resource.Color.design_snackbar_background_color;
+			global::XF.Material.Resource.Color.design_tint_password_toggle = global::MoneyNote.Droid.Resource.Color.design_tint_password_toggle;
+			global::XF.Material.Resource.Color.dim_foreground_disabled_material_dark = global::MoneyNote.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::XF.Material.Resource.Color.dim_foreground_disabled_material_light = global::MoneyNote.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::XF.Material.Resource.Color.dim_foreground_material_dark = global::MoneyNote.Droid.Resource.Color.dim_foreground_material_dark;
+			global::XF.Material.Resource.Color.dim_foreground_material_light = global::MoneyNote.Droid.Resource.Color.dim_foreground_material_light;
+			global::XF.Material.Resource.Color.error_color_material_dark = global::MoneyNote.Droid.Resource.Color.error_color_material_dark;
+			global::XF.Material.Resource.Color.error_color_material_light = global::MoneyNote.Droid.Resource.Color.error_color_material_light;
+			global::XF.Material.Resource.Color.foreground_material_dark = global::MoneyNote.Droid.Resource.Color.foreground_material_dark;
+			global::XF.Material.Resource.Color.foreground_material_light = global::MoneyNote.Droid.Resource.Color.foreground_material_light;
+			global::XF.Material.Resource.Color.highlighted_text_material_dark = global::MoneyNote.Droid.Resource.Color.highlighted_text_material_dark;
+			global::XF.Material.Resource.Color.highlighted_text_material_light = global::MoneyNote.Droid.Resource.Color.highlighted_text_material_light;
+			global::XF.Material.Resource.Color.material_blue_grey_800 = global::MoneyNote.Droid.Resource.Color.material_blue_grey_800;
+			global::XF.Material.Resource.Color.material_blue_grey_900 = global::MoneyNote.Droid.Resource.Color.material_blue_grey_900;
+			global::XF.Material.Resource.Color.material_blue_grey_950 = global::MoneyNote.Droid.Resource.Color.material_blue_grey_950;
+			global::XF.Material.Resource.Color.material_deep_teal_200 = global::MoneyNote.Droid.Resource.Color.material_deep_teal_200;
+			global::XF.Material.Resource.Color.material_deep_teal_500 = global::MoneyNote.Droid.Resource.Color.material_deep_teal_500;
+			global::XF.Material.Resource.Color.material_grey_100 = global::MoneyNote.Droid.Resource.Color.material_grey_100;
+			global::XF.Material.Resource.Color.material_grey_300 = global::MoneyNote.Droid.Resource.Color.material_grey_300;
+			global::XF.Material.Resource.Color.material_grey_50 = global::MoneyNote.Droid.Resource.Color.material_grey_50;
+			global::XF.Material.Resource.Color.material_grey_600 = global::MoneyNote.Droid.Resource.Color.material_grey_600;
+			global::XF.Material.Resource.Color.material_grey_800 = global::MoneyNote.Droid.Resource.Color.material_grey_800;
+			global::XF.Material.Resource.Color.material_grey_850 = global::MoneyNote.Droid.Resource.Color.material_grey_850;
+			global::XF.Material.Resource.Color.material_grey_900 = global::MoneyNote.Droid.Resource.Color.material_grey_900;
+			global::XF.Material.Resource.Color.mtrl_bottom_nav_colored_item_tint = global::MoneyNote.Droid.Resource.Color.mtrl_bottom_nav_colored_item_tint;
+			global::XF.Material.Resource.Color.mtrl_bottom_nav_item_tint = global::MoneyNote.Droid.Resource.Color.mtrl_bottom_nav_item_tint;
+			global::XF.Material.Resource.Color.mtrl_btn_bg_color_disabled = global::MoneyNote.Droid.Resource.Color.mtrl_btn_bg_color_disabled;
+			global::XF.Material.Resource.Color.mtrl_btn_bg_color_selector = global::MoneyNote.Droid.Resource.Color.mtrl_btn_bg_color_selector;
+			global::XF.Material.Resource.Color.mtrl_btn_ripple_color = global::MoneyNote.Droid.Resource.Color.mtrl_btn_ripple_color;
+			global::XF.Material.Resource.Color.mtrl_btn_stroke_color_selector = global::MoneyNote.Droid.Resource.Color.mtrl_btn_stroke_color_selector;
+			global::XF.Material.Resource.Color.mtrl_btn_text_btn_ripple_color = global::MoneyNote.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color;
+			global::XF.Material.Resource.Color.mtrl_btn_text_color_disabled = global::MoneyNote.Droid.Resource.Color.mtrl_btn_text_color_disabled;
+			global::XF.Material.Resource.Color.mtrl_btn_text_color_selector = global::MoneyNote.Droid.Resource.Color.mtrl_btn_text_color_selector;
+			global::XF.Material.Resource.Color.mtrl_btn_transparent_bg_color = global::MoneyNote.Droid.Resource.Color.mtrl_btn_transparent_bg_color;
+			global::XF.Material.Resource.Color.mtrl_chip_background_color = global::MoneyNote.Droid.Resource.Color.mtrl_chip_background_color;
+			global::XF.Material.Resource.Color.mtrl_chip_close_icon_tint = global::MoneyNote.Droid.Resource.Color.mtrl_chip_close_icon_tint;
+			global::XF.Material.Resource.Color.mtrl_chip_ripple_color = global::MoneyNote.Droid.Resource.Color.mtrl_chip_ripple_color;
+			global::XF.Material.Resource.Color.mtrl_chip_text_color = global::MoneyNote.Droid.Resource.Color.mtrl_chip_text_color;
+			global::XF.Material.Resource.Color.mtrl_fab_ripple_color = global::MoneyNote.Droid.Resource.Color.mtrl_fab_ripple_color;
+			global::XF.Material.Resource.Color.mtrl_scrim_color = global::MoneyNote.Droid.Resource.Color.mtrl_scrim_color;
+			global::XF.Material.Resource.Color.mtrl_tabs_colored_ripple_color = global::MoneyNote.Droid.Resource.Color.mtrl_tabs_colored_ripple_color;
+			global::XF.Material.Resource.Color.mtrl_tabs_icon_color_selector = global::MoneyNote.Droid.Resource.Color.mtrl_tabs_icon_color_selector;
+			global::XF.Material.Resource.Color.mtrl_tabs_icon_color_selector_colored = global::MoneyNote.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored;
+			global::XF.Material.Resource.Color.mtrl_tabs_legacy_text_color_selector = global::MoneyNote.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector;
+			global::XF.Material.Resource.Color.mtrl_tabs_ripple_color = global::MoneyNote.Droid.Resource.Color.mtrl_tabs_ripple_color;
+			global::XF.Material.Resource.Color.mtrl_textinput_default_box_stroke_color = global::MoneyNote.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color;
+			global::XF.Material.Resource.Color.mtrl_textinput_disabled_color = global::MoneyNote.Droid.Resource.Color.mtrl_textinput_disabled_color;
+			global::XF.Material.Resource.Color.mtrl_textinput_filled_box_default_background_color = global::MoneyNote.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color;
+			global::XF.Material.Resource.Color.mtrl_textinput_hovered_box_stroke_color = global::MoneyNote.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color;
+			global::XF.Material.Resource.Color.mtrl_text_btn_text_color_selector = global::MoneyNote.Droid.Resource.Color.mtrl_text_btn_text_color_selector;
+			global::XF.Material.Resource.Color.notification_action_color_filter = global::MoneyNote.Droid.Resource.Color.notification_action_color_filter;
+			global::XF.Material.Resource.Color.notification_icon_bg_color = global::MoneyNote.Droid.Resource.Color.notification_icon_bg_color;
+			global::XF.Material.Resource.Color.notification_material_background_media_default_color = global::MoneyNote.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::XF.Material.Resource.Color.primary_dark_material_dark = global::MoneyNote.Droid.Resource.Color.primary_dark_material_dark;
+			global::XF.Material.Resource.Color.primary_dark_material_light = global::MoneyNote.Droid.Resource.Color.primary_dark_material_light;
+			global::XF.Material.Resource.Color.primary_material_dark = global::MoneyNote.Droid.Resource.Color.primary_material_dark;
+			global::XF.Material.Resource.Color.primary_material_light = global::MoneyNote.Droid.Resource.Color.primary_material_light;
+			global::XF.Material.Resource.Color.primary_text_default_material_dark = global::MoneyNote.Droid.Resource.Color.primary_text_default_material_dark;
+			global::XF.Material.Resource.Color.primary_text_default_material_light = global::MoneyNote.Droid.Resource.Color.primary_text_default_material_light;
+			global::XF.Material.Resource.Color.primary_text_disabled_material_dark = global::MoneyNote.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::XF.Material.Resource.Color.primary_text_disabled_material_light = global::MoneyNote.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::XF.Material.Resource.Color.ripple_material_dark = global::MoneyNote.Droid.Resource.Color.ripple_material_dark;
+			global::XF.Material.Resource.Color.ripple_material_light = global::MoneyNote.Droid.Resource.Color.ripple_material_light;
+			global::XF.Material.Resource.Color.secondary_text_default_material_dark = global::MoneyNote.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::XF.Material.Resource.Color.secondary_text_default_material_light = global::MoneyNote.Droid.Resource.Color.secondary_text_default_material_light;
+			global::XF.Material.Resource.Color.secondary_text_disabled_material_dark = global::MoneyNote.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::XF.Material.Resource.Color.secondary_text_disabled_material_light = global::MoneyNote.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::XF.Material.Resource.Color.switch_thumb_disabled_material_dark = global::MoneyNote.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::XF.Material.Resource.Color.switch_thumb_disabled_material_light = global::MoneyNote.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::XF.Material.Resource.Color.switch_thumb_material_dark = global::MoneyNote.Droid.Resource.Color.switch_thumb_material_dark;
+			global::XF.Material.Resource.Color.switch_thumb_material_light = global::MoneyNote.Droid.Resource.Color.switch_thumb_material_light;
+			global::XF.Material.Resource.Color.switch_thumb_normal_material_dark = global::MoneyNote.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::XF.Material.Resource.Color.switch_thumb_normal_material_light = global::MoneyNote.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::XF.Material.Resource.Color.tooltip_background_dark = global::MoneyNote.Droid.Resource.Color.tooltip_background_dark;
+			global::XF.Material.Resource.Color.tooltip_background_light = global::MoneyNote.Droid.Resource.Color.tooltip_background_light;
+			global::XF.Material.Resource.Dimension.abc_action_bar_content_inset_material = global::MoneyNote.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::XF.Material.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::MoneyNote.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::XF.Material.Resource.Dimension.abc_action_bar_default_height_material = global::MoneyNote.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::XF.Material.Resource.Dimension.abc_action_bar_default_padding_end_material = global::MoneyNote.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::XF.Material.Resource.Dimension.abc_action_bar_default_padding_start_material = global::MoneyNote.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::XF.Material.Resource.Dimension.abc_action_bar_elevation_material = global::MoneyNote.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::XF.Material.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::MoneyNote.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::XF.Material.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::MoneyNote.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::XF.Material.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::MoneyNote.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::XF.Material.Resource.Dimension.abc_action_bar_stacked_max_height = global::MoneyNote.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::XF.Material.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::MoneyNote.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::XF.Material.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::MoneyNote.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::XF.Material.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::MoneyNote.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::XF.Material.Resource.Dimension.abc_action_button_min_height_material = global::MoneyNote.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::XF.Material.Resource.Dimension.abc_action_button_min_width_material = global::MoneyNote.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::XF.Material.Resource.Dimension.abc_action_button_min_width_overflow_material = global::MoneyNote.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::XF.Material.Resource.Dimension.abc_alert_dialog_button_bar_height = global::MoneyNote.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::XF.Material.Resource.Dimension.abc_alert_dialog_button_dimen = global::MoneyNote.Droid.Resource.Dimension.abc_alert_dialog_button_dimen;
+			global::XF.Material.Resource.Dimension.abc_button_inset_horizontal_material = global::MoneyNote.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::XF.Material.Resource.Dimension.abc_button_inset_vertical_material = global::MoneyNote.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::XF.Material.Resource.Dimension.abc_button_padding_horizontal_material = global::MoneyNote.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::XF.Material.Resource.Dimension.abc_button_padding_vertical_material = global::MoneyNote.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::XF.Material.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::MoneyNote.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::XF.Material.Resource.Dimension.abc_config_prefDialogWidth = global::MoneyNote.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::XF.Material.Resource.Dimension.abc_control_corner_material = global::MoneyNote.Droid.Resource.Dimension.abc_control_corner_material;
+			global::XF.Material.Resource.Dimension.abc_control_inset_material = global::MoneyNote.Droid.Resource.Dimension.abc_control_inset_material;
+			global::XF.Material.Resource.Dimension.abc_control_padding_material = global::MoneyNote.Droid.Resource.Dimension.abc_control_padding_material;
+			global::XF.Material.Resource.Dimension.abc_dialog_corner_radius_material = global::MoneyNote.Droid.Resource.Dimension.abc_dialog_corner_radius_material;
+			global::XF.Material.Resource.Dimension.abc_dialog_fixed_height_major = global::MoneyNote.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::XF.Material.Resource.Dimension.abc_dialog_fixed_height_minor = global::MoneyNote.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::XF.Material.Resource.Dimension.abc_dialog_fixed_width_major = global::MoneyNote.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::XF.Material.Resource.Dimension.abc_dialog_fixed_width_minor = global::MoneyNote.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::XF.Material.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::MoneyNote.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::XF.Material.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::MoneyNote.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::XF.Material.Resource.Dimension.abc_dialog_min_width_major = global::MoneyNote.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::XF.Material.Resource.Dimension.abc_dialog_min_width_minor = global::MoneyNote.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::XF.Material.Resource.Dimension.abc_dialog_padding_material = global::MoneyNote.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::XF.Material.Resource.Dimension.abc_dialog_padding_top_material = global::MoneyNote.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::XF.Material.Resource.Dimension.abc_dialog_title_divider_material = global::MoneyNote.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::XF.Material.Resource.Dimension.abc_disabled_alpha_material_dark = global::MoneyNote.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::XF.Material.Resource.Dimension.abc_disabled_alpha_material_light = global::MoneyNote.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::XF.Material.Resource.Dimension.abc_dropdownitem_icon_width = global::MoneyNote.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::XF.Material.Resource.Dimension.abc_dropdownitem_text_padding_left = global::MoneyNote.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::XF.Material.Resource.Dimension.abc_dropdownitem_text_padding_right = global::MoneyNote.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::XF.Material.Resource.Dimension.abc_edit_text_inset_bottom_material = global::MoneyNote.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::XF.Material.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::MoneyNote.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::XF.Material.Resource.Dimension.abc_edit_text_inset_top_material = global::MoneyNote.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::XF.Material.Resource.Dimension.abc_floating_window_z = global::MoneyNote.Droid.Resource.Dimension.abc_floating_window_z;
+			global::XF.Material.Resource.Dimension.abc_list_item_height_large_material = global::MoneyNote.Droid.Resource.Dimension.abc_list_item_height_large_material;
+			global::XF.Material.Resource.Dimension.abc_list_item_height_material = global::MoneyNote.Droid.Resource.Dimension.abc_list_item_height_material;
+			global::XF.Material.Resource.Dimension.abc_list_item_height_small_material = global::MoneyNote.Droid.Resource.Dimension.abc_list_item_height_small_material;
+			global::XF.Material.Resource.Dimension.abc_list_item_padding_horizontal_material = global::MoneyNote.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::XF.Material.Resource.Dimension.abc_panel_menu_list_width = global::MoneyNote.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::XF.Material.Resource.Dimension.abc_progress_bar_height_material = global::MoneyNote.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::XF.Material.Resource.Dimension.abc_search_view_preferred_height = global::MoneyNote.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::XF.Material.Resource.Dimension.abc_search_view_preferred_width = global::MoneyNote.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::XF.Material.Resource.Dimension.abc_seekbar_track_background_height_material = global::MoneyNote.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::XF.Material.Resource.Dimension.abc_seekbar_track_progress_height_material = global::MoneyNote.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::XF.Material.Resource.Dimension.abc_select_dialog_padding_start_material = global::MoneyNote.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::XF.Material.Resource.Dimension.abc_switch_padding = global::MoneyNote.Droid.Resource.Dimension.abc_switch_padding;
+			global::XF.Material.Resource.Dimension.abc_text_size_body_1_material = global::MoneyNote.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::XF.Material.Resource.Dimension.abc_text_size_body_2_material = global::MoneyNote.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::XF.Material.Resource.Dimension.abc_text_size_button_material = global::MoneyNote.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::XF.Material.Resource.Dimension.abc_text_size_caption_material = global::MoneyNote.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::XF.Material.Resource.Dimension.abc_text_size_display_1_material = global::MoneyNote.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::XF.Material.Resource.Dimension.abc_text_size_display_2_material = global::MoneyNote.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::XF.Material.Resource.Dimension.abc_text_size_display_3_material = global::MoneyNote.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::XF.Material.Resource.Dimension.abc_text_size_display_4_material = global::MoneyNote.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::XF.Material.Resource.Dimension.abc_text_size_headline_material = global::MoneyNote.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::XF.Material.Resource.Dimension.abc_text_size_large_material = global::MoneyNote.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::XF.Material.Resource.Dimension.abc_text_size_medium_material = global::MoneyNote.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::XF.Material.Resource.Dimension.abc_text_size_menu_header_material = global::MoneyNote.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::XF.Material.Resource.Dimension.abc_text_size_menu_material = global::MoneyNote.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::XF.Material.Resource.Dimension.abc_text_size_small_material = global::MoneyNote.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::XF.Material.Resource.Dimension.abc_text_size_subhead_material = global::MoneyNote.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::XF.Material.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::MoneyNote.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::XF.Material.Resource.Dimension.abc_text_size_title_material = global::MoneyNote.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::XF.Material.Resource.Dimension.abc_text_size_title_material_toolbar = global::MoneyNote.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::XF.Material.Resource.Dimension.browser_actions_context_menu_max_width = global::MoneyNote.Droid.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::XF.Material.Resource.Dimension.browser_actions_context_menu_min_padding = global::MoneyNote.Droid.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::XF.Material.Resource.Dimension.cardview_compat_inset_shadow = global::MoneyNote.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::XF.Material.Resource.Dimension.cardview_default_elevation = global::MoneyNote.Droid.Resource.Dimension.cardview_default_elevation;
+			global::XF.Material.Resource.Dimension.cardview_default_radius = global::MoneyNote.Droid.Resource.Dimension.cardview_default_radius;
+			global::XF.Material.Resource.Dimension.compat_button_inset_horizontal_material = global::MoneyNote.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::XF.Material.Resource.Dimension.compat_button_inset_vertical_material = global::MoneyNote.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::XF.Material.Resource.Dimension.compat_button_padding_horizontal_material = global::MoneyNote.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::XF.Material.Resource.Dimension.compat_button_padding_vertical_material = global::MoneyNote.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::XF.Material.Resource.Dimension.compat_control_corner_material = global::MoneyNote.Droid.Resource.Dimension.compat_control_corner_material;
+			global::XF.Material.Resource.Dimension.compat_notification_large_icon_max_height = global::MoneyNote.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::XF.Material.Resource.Dimension.compat_notification_large_icon_max_width = global::MoneyNote.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::XF.Material.Resource.Dimension.design_appbar_elevation = global::MoneyNote.Droid.Resource.Dimension.design_appbar_elevation;
+			global::XF.Material.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::MoneyNote.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::XF.Material.Resource.Dimension.design_bottom_navigation_active_item_min_width = global::MoneyNote.Droid.Resource.Dimension.design_bottom_navigation_active_item_min_width;
+			global::XF.Material.Resource.Dimension.design_bottom_navigation_active_text_size = global::MoneyNote.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::XF.Material.Resource.Dimension.design_bottom_navigation_elevation = global::MoneyNote.Droid.Resource.Dimension.design_bottom_navigation_elevation;
+			global::XF.Material.Resource.Dimension.design_bottom_navigation_height = global::MoneyNote.Droid.Resource.Dimension.design_bottom_navigation_height;
+			global::XF.Material.Resource.Dimension.design_bottom_navigation_icon_size = global::MoneyNote.Droid.Resource.Dimension.design_bottom_navigation_icon_size;
+			global::XF.Material.Resource.Dimension.design_bottom_navigation_item_max_width = global::MoneyNote.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::XF.Material.Resource.Dimension.design_bottom_navigation_item_min_width = global::MoneyNote.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::XF.Material.Resource.Dimension.design_bottom_navigation_margin = global::MoneyNote.Droid.Resource.Dimension.design_bottom_navigation_margin;
+			global::XF.Material.Resource.Dimension.design_bottom_navigation_shadow_height = global::MoneyNote.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::XF.Material.Resource.Dimension.design_bottom_navigation_text_size = global::MoneyNote.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::XF.Material.Resource.Dimension.design_bottom_sheet_modal_elevation = global::MoneyNote.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::XF.Material.Resource.Dimension.design_bottom_sheet_peek_height_min = global::MoneyNote.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::XF.Material.Resource.Dimension.design_fab_border_width = global::MoneyNote.Droid.Resource.Dimension.design_fab_border_width;
+			global::XF.Material.Resource.Dimension.design_fab_elevation = global::MoneyNote.Droid.Resource.Dimension.design_fab_elevation;
+			global::XF.Material.Resource.Dimension.design_fab_image_size = global::MoneyNote.Droid.Resource.Dimension.design_fab_image_size;
+			global::XF.Material.Resource.Dimension.design_fab_size_mini = global::MoneyNote.Droid.Resource.Dimension.design_fab_size_mini;
+			global::XF.Material.Resource.Dimension.design_fab_size_normal = global::MoneyNote.Droid.Resource.Dimension.design_fab_size_normal;
+			global::XF.Material.Resource.Dimension.design_fab_translation_z_hovered_focused = global::MoneyNote.Droid.Resource.Dimension.design_fab_translation_z_hovered_focused;
+			global::XF.Material.Resource.Dimension.design_fab_translation_z_pressed = global::MoneyNote.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::XF.Material.Resource.Dimension.design_navigation_elevation = global::MoneyNote.Droid.Resource.Dimension.design_navigation_elevation;
+			global::XF.Material.Resource.Dimension.design_navigation_icon_padding = global::MoneyNote.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::XF.Material.Resource.Dimension.design_navigation_icon_size = global::MoneyNote.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::XF.Material.Resource.Dimension.design_navigation_item_horizontal_padding = global::MoneyNote.Droid.Resource.Dimension.design_navigation_item_horizontal_padding;
+			global::XF.Material.Resource.Dimension.design_navigation_item_icon_padding = global::MoneyNote.Droid.Resource.Dimension.design_navigation_item_icon_padding;
+			global::XF.Material.Resource.Dimension.design_navigation_max_width = global::MoneyNote.Droid.Resource.Dimension.design_navigation_max_width;
+			global::XF.Material.Resource.Dimension.design_navigation_padding_bottom = global::MoneyNote.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::XF.Material.Resource.Dimension.design_navigation_separator_vertical_padding = global::MoneyNote.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::XF.Material.Resource.Dimension.design_snackbar_action_inline_max_width = global::MoneyNote.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::XF.Material.Resource.Dimension.design_snackbar_background_corner_radius = global::MoneyNote.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::XF.Material.Resource.Dimension.design_snackbar_elevation = global::MoneyNote.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::XF.Material.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::MoneyNote.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::XF.Material.Resource.Dimension.design_snackbar_max_width = global::MoneyNote.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::XF.Material.Resource.Dimension.design_snackbar_min_width = global::MoneyNote.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::XF.Material.Resource.Dimension.design_snackbar_padding_horizontal = global::MoneyNote.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::XF.Material.Resource.Dimension.design_snackbar_padding_vertical = global::MoneyNote.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::XF.Material.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::MoneyNote.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::XF.Material.Resource.Dimension.design_snackbar_text_size = global::MoneyNote.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::XF.Material.Resource.Dimension.design_tab_max_width = global::MoneyNote.Droid.Resource.Dimension.design_tab_max_width;
+			global::XF.Material.Resource.Dimension.design_tab_scrollable_min_width = global::MoneyNote.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::XF.Material.Resource.Dimension.design_tab_text_size = global::MoneyNote.Droid.Resource.Dimension.design_tab_text_size;
+			global::XF.Material.Resource.Dimension.design_tab_text_size_2line = global::MoneyNote.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::XF.Material.Resource.Dimension.design_textinput_caption_translate_y = global::MoneyNote.Droid.Resource.Dimension.design_textinput_caption_translate_y;
+			global::XF.Material.Resource.Dimension.disabled_alpha_material_dark = global::MoneyNote.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::XF.Material.Resource.Dimension.disabled_alpha_material_light = global::MoneyNote.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::XF.Material.Resource.Dimension.fastscroll_default_thickness = global::MoneyNote.Droid.Resource.Dimension.fastscroll_default_thickness;
+			global::XF.Material.Resource.Dimension.fastscroll_margin = global::MoneyNote.Droid.Resource.Dimension.fastscroll_margin;
+			global::XF.Material.Resource.Dimension.fastscroll_minimum_range = global::MoneyNote.Droid.Resource.Dimension.fastscroll_minimum_range;
+			global::XF.Material.Resource.Dimension.highlight_alpha_material_colored = global::MoneyNote.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::XF.Material.Resource.Dimension.highlight_alpha_material_dark = global::MoneyNote.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::XF.Material.Resource.Dimension.highlight_alpha_material_light = global::MoneyNote.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::XF.Material.Resource.Dimension.hint_alpha_material_dark = global::MoneyNote.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::XF.Material.Resource.Dimension.hint_alpha_material_light = global::MoneyNote.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::XF.Material.Resource.Dimension.hint_pressed_alpha_material_dark = global::MoneyNote.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::XF.Material.Resource.Dimension.hint_pressed_alpha_material_light = global::MoneyNote.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::XF.Material.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::MoneyNote.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::XF.Material.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::MoneyNote.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::XF.Material.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::MoneyNote.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::XF.Material.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode = global::MoneyNote.Droid.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode;
+			global::XF.Material.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin = global::MoneyNote.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin;
+			global::XF.Material.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius = global::MoneyNote.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius;
+			global::XF.Material.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset = global::MoneyNote.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset;
+			global::XF.Material.Resource.Dimension.mtrl_bottomappbar_height = global::MoneyNote.Droid.Resource.Dimension.mtrl_bottomappbar_height;
+			global::XF.Material.Resource.Dimension.mtrl_btn_additional_padding_end_for_icon = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_additional_padding_end_for_icon;
+			global::XF.Material.Resource.Dimension.mtrl_btn_additional_padding_start_for_icon = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_additional_padding_start_for_icon;
+			global::XF.Material.Resource.Dimension.mtrl_btn_corner_radius = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_corner_radius;
+			global::XF.Material.Resource.Dimension.mtrl_btn_dialog_btn_min_width = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_dialog_btn_min_width;
+			global::XF.Material.Resource.Dimension.mtrl_btn_disabled_elevation = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_disabled_elevation;
+			global::XF.Material.Resource.Dimension.mtrl_btn_disabled_z = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_disabled_z;
+			global::XF.Material.Resource.Dimension.mtrl_btn_elevation = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_elevation;
+			global::XF.Material.Resource.Dimension.mtrl_btn_focused_z = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_focused_z;
+			global::XF.Material.Resource.Dimension.mtrl_btn_hovered_z = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_hovered_z;
+			global::XF.Material.Resource.Dimension.mtrl_btn_icon_btn_padding_left = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_icon_btn_padding_left;
+			global::XF.Material.Resource.Dimension.mtrl_btn_icon_padding = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_icon_padding;
+			global::XF.Material.Resource.Dimension.mtrl_btn_inset = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_inset;
+			global::XF.Material.Resource.Dimension.mtrl_btn_letter_spacing = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_letter_spacing;
+			global::XF.Material.Resource.Dimension.mtrl_btn_padding_bottom = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_padding_bottom;
+			global::XF.Material.Resource.Dimension.mtrl_btn_padding_left = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_padding_left;
+			global::XF.Material.Resource.Dimension.mtrl_btn_padding_left_with_icon = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_padding_left_with_icon;
+			global::XF.Material.Resource.Dimension.mtrl_btn_padding_right = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_padding_right;
+			global::XF.Material.Resource.Dimension.mtrl_btn_padding_top = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_padding_top;
+			global::XF.Material.Resource.Dimension.mtrl_btn_pressed_z = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_pressed_z;
+			global::XF.Material.Resource.Dimension.mtrl_btn_stroke_size = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_stroke_size;
+			global::XF.Material.Resource.Dimension.mtrl_btn_text_btn_icon_padding = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_text_btn_icon_padding;
+			global::XF.Material.Resource.Dimension.mtrl_btn_text_btn_padding_left = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_left;
+			global::XF.Material.Resource.Dimension.mtrl_btn_text_btn_padding_right = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_right;
+			global::XF.Material.Resource.Dimension.mtrl_btn_text_padding_left = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_text_padding_left;
+			global::XF.Material.Resource.Dimension.mtrl_btn_text_padding_right = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_text_padding_right;
+			global::XF.Material.Resource.Dimension.mtrl_btn_text_size = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_text_size;
+			global::XF.Material.Resource.Dimension.mtrl_btn_z = global::MoneyNote.Droid.Resource.Dimension.mtrl_btn_z;
+			global::XF.Material.Resource.Dimension.mtrl_card_elevation = global::MoneyNote.Droid.Resource.Dimension.mtrl_card_elevation;
+			global::XF.Material.Resource.Dimension.mtrl_card_spacing = global::MoneyNote.Droid.Resource.Dimension.mtrl_card_spacing;
+			global::XF.Material.Resource.Dimension.mtrl_chip_pressed_translation_z = global::MoneyNote.Droid.Resource.Dimension.mtrl_chip_pressed_translation_z;
+			global::XF.Material.Resource.Dimension.mtrl_chip_text_size = global::MoneyNote.Droid.Resource.Dimension.mtrl_chip_text_size;
+			global::XF.Material.Resource.Dimension.mtrl_fab_elevation = global::MoneyNote.Droid.Resource.Dimension.mtrl_fab_elevation;
+			global::XF.Material.Resource.Dimension.mtrl_fab_translation_z_hovered_focused = global::MoneyNote.Droid.Resource.Dimension.mtrl_fab_translation_z_hovered_focused;
+			global::XF.Material.Resource.Dimension.mtrl_fab_translation_z_pressed = global::MoneyNote.Droid.Resource.Dimension.mtrl_fab_translation_z_pressed;
+			global::XF.Material.Resource.Dimension.mtrl_navigation_elevation = global::MoneyNote.Droid.Resource.Dimension.mtrl_navigation_elevation;
+			global::XF.Material.Resource.Dimension.mtrl_navigation_item_horizontal_padding = global::MoneyNote.Droid.Resource.Dimension.mtrl_navigation_item_horizontal_padding;
+			global::XF.Material.Resource.Dimension.mtrl_navigation_item_icon_padding = global::MoneyNote.Droid.Resource.Dimension.mtrl_navigation_item_icon_padding;
+			global::XF.Material.Resource.Dimension.mtrl_snackbar_background_corner_radius = global::MoneyNote.Droid.Resource.Dimension.mtrl_snackbar_background_corner_radius;
+			global::XF.Material.Resource.Dimension.mtrl_snackbar_margin = global::MoneyNote.Droid.Resource.Dimension.mtrl_snackbar_margin;
+			global::XF.Material.Resource.Dimension.mtrl_textinput_box_bottom_offset = global::MoneyNote.Droid.Resource.Dimension.mtrl_textinput_box_bottom_offset;
+			global::XF.Material.Resource.Dimension.mtrl_textinput_box_corner_radius_medium = global::MoneyNote.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_medium;
+			global::XF.Material.Resource.Dimension.mtrl_textinput_box_corner_radius_small = global::MoneyNote.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_small;
+			global::XF.Material.Resource.Dimension.mtrl_textinput_box_label_cutout_padding = global::MoneyNote.Droid.Resource.Dimension.mtrl_textinput_box_label_cutout_padding;
+			global::XF.Material.Resource.Dimension.mtrl_textinput_box_padding_end = global::MoneyNote.Droid.Resource.Dimension.mtrl_textinput_box_padding_end;
+			global::XF.Material.Resource.Dimension.mtrl_textinput_box_stroke_width_default = global::MoneyNote.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_default;
+			global::XF.Material.Resource.Dimension.mtrl_textinput_box_stroke_width_focused = global::MoneyNote.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_focused;
+			global::XF.Material.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding = global::MoneyNote.Droid.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding;
+			global::XF.Material.Resource.Dimension.mtrl_toolbar_default_height = global::MoneyNote.Droid.Resource.Dimension.mtrl_toolbar_default_height;
+			global::XF.Material.Resource.Dimension.notification_action_icon_size = global::MoneyNote.Droid.Resource.Dimension.notification_action_icon_size;
+			global::XF.Material.Resource.Dimension.notification_action_text_size = global::MoneyNote.Droid.Resource.Dimension.notification_action_text_size;
+			global::XF.Material.Resource.Dimension.notification_big_circle_margin = global::MoneyNote.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::XF.Material.Resource.Dimension.notification_content_margin_start = global::MoneyNote.Droid.Resource.Dimension.notification_content_margin_start;
+			global::XF.Material.Resource.Dimension.notification_large_icon_height = global::MoneyNote.Droid.Resource.Dimension.notification_large_icon_height;
+			global::XF.Material.Resource.Dimension.notification_large_icon_width = global::MoneyNote.Droid.Resource.Dimension.notification_large_icon_width;
+			global::XF.Material.Resource.Dimension.notification_main_column_padding_top = global::MoneyNote.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::XF.Material.Resource.Dimension.notification_media_narrow_margin = global::MoneyNote.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::XF.Material.Resource.Dimension.notification_right_icon_size = global::MoneyNote.Droid.Resource.Dimension.notification_right_icon_size;
+			global::XF.Material.Resource.Dimension.notification_right_side_padding_top = global::MoneyNote.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::XF.Material.Resource.Dimension.notification_small_icon_background_padding = global::MoneyNote.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::XF.Material.Resource.Dimension.notification_small_icon_size_as_large = global::MoneyNote.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::XF.Material.Resource.Dimension.notification_subtext_size = global::MoneyNote.Droid.Resource.Dimension.notification_subtext_size;
+			global::XF.Material.Resource.Dimension.notification_top_pad = global::MoneyNote.Droid.Resource.Dimension.notification_top_pad;
+			global::XF.Material.Resource.Dimension.notification_top_pad_large_text = global::MoneyNote.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::XF.Material.Resource.Dimension.subtitle_corner_radius = global::MoneyNote.Droid.Resource.Dimension.subtitle_corner_radius;
+			global::XF.Material.Resource.Dimension.subtitle_outline_width = global::MoneyNote.Droid.Resource.Dimension.subtitle_outline_width;
+			global::XF.Material.Resource.Dimension.subtitle_shadow_offset = global::MoneyNote.Droid.Resource.Dimension.subtitle_shadow_offset;
+			global::XF.Material.Resource.Dimension.subtitle_shadow_radius = global::MoneyNote.Droid.Resource.Dimension.subtitle_shadow_radius;
+			global::XF.Material.Resource.Dimension.tooltip_corner_radius = global::MoneyNote.Droid.Resource.Dimension.tooltip_corner_radius;
+			global::XF.Material.Resource.Dimension.tooltip_horizontal_padding = global::MoneyNote.Droid.Resource.Dimension.tooltip_horizontal_padding;
+			global::XF.Material.Resource.Dimension.tooltip_margin = global::MoneyNote.Droid.Resource.Dimension.tooltip_margin;
+			global::XF.Material.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::MoneyNote.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::XF.Material.Resource.Dimension.tooltip_precise_anchor_threshold = global::MoneyNote.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::XF.Material.Resource.Dimension.tooltip_vertical_padding = global::MoneyNote.Droid.Resource.Dimension.tooltip_vertical_padding;
+			global::XF.Material.Resource.Dimension.tooltip_y_offset_non_touch = global::MoneyNote.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::XF.Material.Resource.Dimension.tooltip_y_offset_touch = global::MoneyNote.Droid.Resource.Dimension.tooltip_y_offset_touch;
+			global::XF.Material.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::MoneyNote.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::XF.Material.Resource.Drawable.abc_action_bar_item_background_material = global::MoneyNote.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::XF.Material.Resource.Drawable.abc_btn_borderless_material = global::MoneyNote.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::XF.Material.Resource.Drawable.abc_btn_check_material = global::MoneyNote.Droid.Resource.Drawable.abc_btn_check_material;
+			global::XF.Material.Resource.Drawable.abc_btn_check_material_anim = global::MoneyNote.Droid.Resource.Drawable.abc_btn_check_material_anim;
+			global::XF.Material.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::MoneyNote.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::XF.Material.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::MoneyNote.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::XF.Material.Resource.Drawable.abc_btn_colored_material = global::MoneyNote.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::XF.Material.Resource.Drawable.abc_btn_default_mtrl_shape = global::MoneyNote.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::XF.Material.Resource.Drawable.abc_btn_radio_material = global::MoneyNote.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::XF.Material.Resource.Drawable.abc_btn_radio_material_anim = global::MoneyNote.Droid.Resource.Drawable.abc_btn_radio_material_anim;
+			global::XF.Material.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::MoneyNote.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::XF.Material.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::MoneyNote.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::XF.Material.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::MoneyNote.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::XF.Material.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::MoneyNote.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::XF.Material.Resource.Drawable.abc_cab_background_internal_bg = global::MoneyNote.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::XF.Material.Resource.Drawable.abc_cab_background_top_material = global::MoneyNote.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::XF.Material.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::MoneyNote.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::XF.Material.Resource.Drawable.abc_control_background_material = global::MoneyNote.Droid.Resource.Drawable.abc_control_background_material;
+			global::XF.Material.Resource.Drawable.abc_dialog_material_background = global::MoneyNote.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::XF.Material.Resource.Drawable.abc_edit_text_material = global::MoneyNote.Droid.Resource.Drawable.abc_edit_text_material;
+			global::XF.Material.Resource.Drawable.abc_ic_ab_back_material = global::MoneyNote.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::XF.Material.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::MoneyNote.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::XF.Material.Resource.Drawable.abc_ic_clear_material = global::MoneyNote.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::XF.Material.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::MoneyNote.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::XF.Material.Resource.Drawable.abc_ic_go_search_api_material = global::MoneyNote.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::XF.Material.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::MoneyNote.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::XF.Material.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::MoneyNote.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::XF.Material.Resource.Drawable.abc_ic_menu_overflow_material = global::MoneyNote.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::XF.Material.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::MoneyNote.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::XF.Material.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::MoneyNote.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::XF.Material.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::MoneyNote.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::XF.Material.Resource.Drawable.abc_ic_search_api_material = global::MoneyNote.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::XF.Material.Resource.Drawable.abc_ic_star_black_16dp = global::MoneyNote.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::XF.Material.Resource.Drawable.abc_ic_star_black_36dp = global::MoneyNote.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::XF.Material.Resource.Drawable.abc_ic_star_black_48dp = global::MoneyNote.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::XF.Material.Resource.Drawable.abc_ic_star_half_black_16dp = global::MoneyNote.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::XF.Material.Resource.Drawable.abc_ic_star_half_black_36dp = global::MoneyNote.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::XF.Material.Resource.Drawable.abc_ic_star_half_black_48dp = global::MoneyNote.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::XF.Material.Resource.Drawable.abc_ic_voice_search_api_material = global::MoneyNote.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::XF.Material.Resource.Drawable.abc_item_background_holo_dark = global::MoneyNote.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::XF.Material.Resource.Drawable.abc_item_background_holo_light = global::MoneyNote.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::XF.Material.Resource.Drawable.abc_list_divider_material = global::MoneyNote.Droid.Resource.Drawable.abc_list_divider_material;
+			global::XF.Material.Resource.Drawable.abc_list_divider_mtrl_alpha = global::MoneyNote.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::XF.Material.Resource.Drawable.abc_list_focused_holo = global::MoneyNote.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::XF.Material.Resource.Drawable.abc_list_longpressed_holo = global::MoneyNote.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::XF.Material.Resource.Drawable.abc_list_pressed_holo_dark = global::MoneyNote.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::XF.Material.Resource.Drawable.abc_list_pressed_holo_light = global::MoneyNote.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::XF.Material.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::MoneyNote.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::XF.Material.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::MoneyNote.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::XF.Material.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::MoneyNote.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::XF.Material.Resource.Drawable.abc_list_selector_disabled_holo_light = global::MoneyNote.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::XF.Material.Resource.Drawable.abc_list_selector_holo_dark = global::MoneyNote.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::XF.Material.Resource.Drawable.abc_list_selector_holo_light = global::MoneyNote.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::XF.Material.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::MoneyNote.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::XF.Material.Resource.Drawable.abc_popup_background_mtrl_mult = global::MoneyNote.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::XF.Material.Resource.Drawable.abc_ratingbar_indicator_material = global::MoneyNote.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::XF.Material.Resource.Drawable.abc_ratingbar_material = global::MoneyNote.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::XF.Material.Resource.Drawable.abc_ratingbar_small_material = global::MoneyNote.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::XF.Material.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::MoneyNote.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::XF.Material.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::MoneyNote.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::XF.Material.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::MoneyNote.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::XF.Material.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::MoneyNote.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::XF.Material.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::MoneyNote.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::XF.Material.Resource.Drawable.abc_seekbar_thumb_material = global::MoneyNote.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::XF.Material.Resource.Drawable.abc_seekbar_tick_mark_material = global::MoneyNote.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::XF.Material.Resource.Drawable.abc_seekbar_track_material = global::MoneyNote.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::XF.Material.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::MoneyNote.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::XF.Material.Resource.Drawable.abc_spinner_textfield_background_material = global::MoneyNote.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::XF.Material.Resource.Drawable.abc_switch_thumb_material = global::MoneyNote.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::XF.Material.Resource.Drawable.abc_switch_track_mtrl_alpha = global::MoneyNote.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::XF.Material.Resource.Drawable.abc_tab_indicator_material = global::MoneyNote.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::XF.Material.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::MoneyNote.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::XF.Material.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::MoneyNote.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::XF.Material.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::MoneyNote.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::XF.Material.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::MoneyNote.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::XF.Material.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::MoneyNote.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::XF.Material.Resource.Drawable.abc_textfield_search_material = global::MoneyNote.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::XF.Material.Resource.Drawable.abc_text_cursor_material = global::MoneyNote.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::XF.Material.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::MoneyNote.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::XF.Material.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::MoneyNote.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::XF.Material.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::MoneyNote.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::XF.Material.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::MoneyNote.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::XF.Material.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::MoneyNote.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::XF.Material.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::MoneyNote.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::XF.Material.Resource.Drawable.abc_vector_test = global::MoneyNote.Droid.Resource.Drawable.abc_vector_test;
+			global::XF.Material.Resource.Drawable.avd_hide_password = global::MoneyNote.Droid.Resource.Drawable.avd_hide_password;
+			global::XF.Material.Resource.Drawable.avd_show_password = global::MoneyNote.Droid.Resource.Drawable.avd_show_password;
+			global::XF.Material.Resource.Drawable.btn_checkbox_checked_mtrl = global::MoneyNote.Droid.Resource.Drawable.btn_checkbox_checked_mtrl;
+			global::XF.Material.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation = global::MoneyNote.Droid.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation;
+			global::XF.Material.Resource.Drawable.btn_checkbox_unchecked_mtrl = global::MoneyNote.Droid.Resource.Drawable.btn_checkbox_unchecked_mtrl;
+			global::XF.Material.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation = global::MoneyNote.Droid.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation;
+			global::XF.Material.Resource.Drawable.btn_radio_off_mtrl = global::MoneyNote.Droid.Resource.Drawable.btn_radio_off_mtrl;
+			global::XF.Material.Resource.Drawable.btn_radio_off_to_on_mtrl_animation = global::MoneyNote.Droid.Resource.Drawable.btn_radio_off_to_on_mtrl_animation;
+			global::XF.Material.Resource.Drawable.btn_radio_on_mtrl = global::MoneyNote.Droid.Resource.Drawable.btn_radio_on_mtrl;
+			global::XF.Material.Resource.Drawable.btn_radio_on_to_off_mtrl_animation = global::MoneyNote.Droid.Resource.Drawable.btn_radio_on_to_off_mtrl_animation;
+			global::XF.Material.Resource.Drawable.design_bottom_navigation_item_background = global::MoneyNote.Droid.Resource.Drawable.design_bottom_navigation_item_background;
+			global::XF.Material.Resource.Drawable.design_fab_background = global::MoneyNote.Droid.Resource.Drawable.design_fab_background;
+			global::XF.Material.Resource.Drawable.design_ic_visibility = global::MoneyNote.Droid.Resource.Drawable.design_ic_visibility;
+			global::XF.Material.Resource.Drawable.design_ic_visibility_off = global::MoneyNote.Droid.Resource.Drawable.design_ic_visibility_off;
+			global::XF.Material.Resource.Drawable.design_password_eye = global::MoneyNote.Droid.Resource.Drawable.design_password_eye;
+			global::XF.Material.Resource.Drawable.design_snackbar_background = global::MoneyNote.Droid.Resource.Drawable.design_snackbar_background;
+			global::XF.Material.Resource.Drawable.drawable_ripple = global::MoneyNote.Droid.Resource.Drawable.drawable_ripple;
+			global::XF.Material.Resource.Drawable.drawable_ripple_image = global::MoneyNote.Droid.Resource.Drawable.drawable_ripple_image;
+			global::XF.Material.Resource.Drawable.drawable_ripple_outlined = global::MoneyNote.Droid.Resource.Drawable.drawable_ripple_outlined;
+			global::XF.Material.Resource.Drawable.drawable_ripple_outlined_with_icon = global::MoneyNote.Droid.Resource.Drawable.drawable_ripple_outlined_with_icon;
+			global::XF.Material.Resource.Drawable.drawable_ripple_text = global::MoneyNote.Droid.Resource.Drawable.drawable_ripple_text;
+			global::XF.Material.Resource.Drawable.drawable_ripple_with_icon = global::MoneyNote.Droid.Resource.Drawable.drawable_ripple_with_icon;
+			global::XF.Material.Resource.Drawable.drawable_selector = global::MoneyNote.Droid.Resource.Drawable.drawable_selector;
+			global::XF.Material.Resource.Drawable.drawable_shape = global::MoneyNote.Droid.Resource.Drawable.drawable_shape;
+			global::XF.Material.Resource.Drawable.drawable_shape_text = global::MoneyNote.Droid.Resource.Drawable.drawable_shape_text;
+			global::XF.Material.Resource.Drawable.drawable_shape_with_icon = global::MoneyNote.Droid.Resource.Drawable.drawable_shape_with_icon;
+			global::XF.Material.Resource.Drawable.ic_mtrl_chip_checked_black = global::MoneyNote.Droid.Resource.Drawable.ic_mtrl_chip_checked_black;
+			global::XF.Material.Resource.Drawable.ic_mtrl_chip_checked_circle = global::MoneyNote.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle;
+			global::XF.Material.Resource.Drawable.ic_mtrl_chip_close_circle = global::MoneyNote.Droid.Resource.Drawable.ic_mtrl_chip_close_circle;
+			global::XF.Material.Resource.Drawable.mtrl_snackbar_background = global::MoneyNote.Droid.Resource.Drawable.mtrl_snackbar_background;
+			global::XF.Material.Resource.Drawable.mtrl_tabs_default_indicator = global::MoneyNote.Droid.Resource.Drawable.mtrl_tabs_default_indicator;
+			global::XF.Material.Resource.Drawable.navigation_empty_icon = global::MoneyNote.Droid.Resource.Drawable.navigation_empty_icon;
+			global::XF.Material.Resource.Drawable.notification_action_background = global::MoneyNote.Droid.Resource.Drawable.notification_action_background;
+			global::XF.Material.Resource.Drawable.notification_bg = global::MoneyNote.Droid.Resource.Drawable.notification_bg;
+			global::XF.Material.Resource.Drawable.notification_bg_low = global::MoneyNote.Droid.Resource.Drawable.notification_bg_low;
+			global::XF.Material.Resource.Drawable.notification_bg_low_normal = global::MoneyNote.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::XF.Material.Resource.Drawable.notification_bg_low_pressed = global::MoneyNote.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::XF.Material.Resource.Drawable.notification_bg_normal = global::MoneyNote.Droid.Resource.Drawable.notification_bg_normal;
+			global::XF.Material.Resource.Drawable.notification_bg_normal_pressed = global::MoneyNote.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::XF.Material.Resource.Drawable.notification_icon_background = global::MoneyNote.Droid.Resource.Drawable.notification_icon_background;
+			global::XF.Material.Resource.Drawable.notification_template_icon_bg = global::MoneyNote.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::XF.Material.Resource.Drawable.notification_template_icon_low_bg = global::MoneyNote.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::XF.Material.Resource.Drawable.notification_tile_bg = global::MoneyNote.Droid.Resource.Drawable.notification_tile_bg;
+			global::XF.Material.Resource.Drawable.notify_panel_notification_icon_bg = global::MoneyNote.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::XF.Material.Resource.Drawable.tooltip_frame_dark = global::MoneyNote.Droid.Resource.Drawable.tooltip_frame_dark;
+			global::XF.Material.Resource.Drawable.tooltip_frame_light = global::MoneyNote.Droid.Resource.Drawable.tooltip_frame_light;
+			global::XF.Material.Resource.Drawable.xf_arrow_dropdown = global::MoneyNote.Droid.Resource.Drawable.xf_arrow_dropdown;
+			global::XF.Material.Resource.Drawable.xf_check = global::MoneyNote.Droid.Resource.Drawable.xf_check;
+			global::XF.Material.Resource.Drawable.xf_checkbox_selected = global::MoneyNote.Droid.Resource.Drawable.xf_checkbox_selected;
+			global::XF.Material.Resource.Drawable.xf_checkbox_unselected = global::MoneyNote.Droid.Resource.Drawable.xf_checkbox_unselected;
+			global::XF.Material.Resource.Drawable.xf_clear = global::MoneyNote.Droid.Resource.Drawable.xf_clear;
+			global::XF.Material.Resource.Drawable.xf_error = global::MoneyNote.Droid.Resource.Drawable.xf_error;
+			global::XF.Material.Resource.Drawable.xf_radio_button_selected = global::MoneyNote.Droid.Resource.Drawable.xf_radio_button_selected;
+			global::XF.Material.Resource.Drawable.xf_radio_button_unselected = global::MoneyNote.Droid.Resource.Drawable.xf_radio_button_unselected;
+			global::XF.Material.Resource.Id.accessibility_action_clickable_span = global::MoneyNote.Droid.Resource.Id.accessibility_action_clickable_span;
+			global::XF.Material.Resource.Id.accessibility_custom_action_0 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_0;
+			global::XF.Material.Resource.Id.accessibility_custom_action_1 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_1;
+			global::XF.Material.Resource.Id.accessibility_custom_action_10 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_10;
+			global::XF.Material.Resource.Id.accessibility_custom_action_11 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_11;
+			global::XF.Material.Resource.Id.accessibility_custom_action_12 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_12;
+			global::XF.Material.Resource.Id.accessibility_custom_action_13 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_13;
+			global::XF.Material.Resource.Id.accessibility_custom_action_14 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_14;
+			global::XF.Material.Resource.Id.accessibility_custom_action_15 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_15;
+			global::XF.Material.Resource.Id.accessibility_custom_action_16 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_16;
+			global::XF.Material.Resource.Id.accessibility_custom_action_17 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_17;
+			global::XF.Material.Resource.Id.accessibility_custom_action_18 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_18;
+			global::XF.Material.Resource.Id.accessibility_custom_action_19 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_19;
+			global::XF.Material.Resource.Id.accessibility_custom_action_2 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_2;
+			global::XF.Material.Resource.Id.accessibility_custom_action_20 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_20;
+			global::XF.Material.Resource.Id.accessibility_custom_action_21 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_21;
+			global::XF.Material.Resource.Id.accessibility_custom_action_22 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_22;
+			global::XF.Material.Resource.Id.accessibility_custom_action_23 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_23;
+			global::XF.Material.Resource.Id.accessibility_custom_action_24 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_24;
+			global::XF.Material.Resource.Id.accessibility_custom_action_25 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_25;
+			global::XF.Material.Resource.Id.accessibility_custom_action_26 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_26;
+			global::XF.Material.Resource.Id.accessibility_custom_action_27 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_27;
+			global::XF.Material.Resource.Id.accessibility_custom_action_28 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_28;
+			global::XF.Material.Resource.Id.accessibility_custom_action_29 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_29;
+			global::XF.Material.Resource.Id.accessibility_custom_action_3 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_3;
+			global::XF.Material.Resource.Id.accessibility_custom_action_30 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_30;
+			global::XF.Material.Resource.Id.accessibility_custom_action_31 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_31;
+			global::XF.Material.Resource.Id.accessibility_custom_action_4 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_4;
+			global::XF.Material.Resource.Id.accessibility_custom_action_5 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_5;
+			global::XF.Material.Resource.Id.accessibility_custom_action_6 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_6;
+			global::XF.Material.Resource.Id.accessibility_custom_action_7 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_7;
+			global::XF.Material.Resource.Id.accessibility_custom_action_8 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_8;
+			global::XF.Material.Resource.Id.accessibility_custom_action_9 = global::MoneyNote.Droid.Resource.Id.accessibility_custom_action_9;
+			global::XF.Material.Resource.Id.action0 = global::MoneyNote.Droid.Resource.Id.action0;
+			global::XF.Material.Resource.Id.actions = global::MoneyNote.Droid.Resource.Id.actions;
+			global::XF.Material.Resource.Id.action_bar = global::MoneyNote.Droid.Resource.Id.action_bar;
+			global::XF.Material.Resource.Id.action_bar_activity_content = global::MoneyNote.Droid.Resource.Id.action_bar_activity_content;
+			global::XF.Material.Resource.Id.action_bar_container = global::MoneyNote.Droid.Resource.Id.action_bar_container;
+			global::XF.Material.Resource.Id.action_bar_root = global::MoneyNote.Droid.Resource.Id.action_bar_root;
+			global::XF.Material.Resource.Id.action_bar_spinner = global::MoneyNote.Droid.Resource.Id.action_bar_spinner;
+			global::XF.Material.Resource.Id.action_bar_subtitle = global::MoneyNote.Droid.Resource.Id.action_bar_subtitle;
+			global::XF.Material.Resource.Id.action_bar_title = global::MoneyNote.Droid.Resource.Id.action_bar_title;
+			global::XF.Material.Resource.Id.action_container = global::MoneyNote.Droid.Resource.Id.action_container;
+			global::XF.Material.Resource.Id.action_context_bar = global::MoneyNote.Droid.Resource.Id.action_context_bar;
+			global::XF.Material.Resource.Id.action_divider = global::MoneyNote.Droid.Resource.Id.action_divider;
+			global::XF.Material.Resource.Id.action_image = global::MoneyNote.Droid.Resource.Id.action_image;
+			global::XF.Material.Resource.Id.action_menu_divider = global::MoneyNote.Droid.Resource.Id.action_menu_divider;
+			global::XF.Material.Resource.Id.action_menu_presenter = global::MoneyNote.Droid.Resource.Id.action_menu_presenter;
+			global::XF.Material.Resource.Id.action_mode_bar = global::MoneyNote.Droid.Resource.Id.action_mode_bar;
+			global::XF.Material.Resource.Id.action_mode_bar_stub = global::MoneyNote.Droid.Resource.Id.action_mode_bar_stub;
+			global::XF.Material.Resource.Id.action_mode_close_button = global::MoneyNote.Droid.Resource.Id.action_mode_close_button;
+			global::XF.Material.Resource.Id.action_text = global::MoneyNote.Droid.Resource.Id.action_text;
+			global::XF.Material.Resource.Id.activity_chooser_view_content = global::MoneyNote.Droid.Resource.Id.activity_chooser_view_content;
+			global::XF.Material.Resource.Id.add = global::MoneyNote.Droid.Resource.Id.add;
+			global::XF.Material.Resource.Id.alertTitle = global::MoneyNote.Droid.Resource.Id.alertTitle;
+			global::XF.Material.Resource.Id.all = global::MoneyNote.Droid.Resource.Id.all;
+			global::XF.Material.Resource.Id.ALT = global::MoneyNote.Droid.Resource.Id.ALT;
+			global::XF.Material.Resource.Id.always = global::MoneyNote.Droid.Resource.Id.always;
+			global::XF.Material.Resource.Id.async = global::MoneyNote.Droid.Resource.Id.async;
+			global::XF.Material.Resource.Id.auto = global::MoneyNote.Droid.Resource.Id.auto;
+			global::XF.Material.Resource.Id.automatic = global::MoneyNote.Droid.Resource.Id.automatic;
+			global::XF.Material.Resource.Id.beginning = global::MoneyNote.Droid.Resource.Id.beginning;
+			global::XF.Material.Resource.Id.blocking = global::MoneyNote.Droid.Resource.Id.blocking;
+			global::XF.Material.Resource.Id.bottom = global::MoneyNote.Droid.Resource.Id.bottom;
+			global::XF.Material.Resource.Id.bottomtab_navarea = global::MoneyNote.Droid.Resource.Id.bottomtab_navarea;
+			global::XF.Material.Resource.Id.bottomtab_tabbar = global::MoneyNote.Droid.Resource.Id.bottomtab_tabbar;
+			global::XF.Material.Resource.Id.browser_actions_header_text = global::MoneyNote.Droid.Resource.Id.browser_actions_header_text;
+			global::XF.Material.Resource.Id.browser_actions_menu_items = global::MoneyNote.Droid.Resource.Id.browser_actions_menu_items;
+			global::XF.Material.Resource.Id.browser_actions_menu_item_icon = global::MoneyNote.Droid.Resource.Id.browser_actions_menu_item_icon;
+			global::XF.Material.Resource.Id.browser_actions_menu_item_text = global::MoneyNote.Droid.Resource.Id.browser_actions_menu_item_text;
+			global::XF.Material.Resource.Id.browser_actions_menu_view = global::MoneyNote.Droid.Resource.Id.browser_actions_menu_view;
+			global::XF.Material.Resource.Id.buttonPanel = global::MoneyNote.Droid.Resource.Id.buttonPanel;
+			global::XF.Material.Resource.Id.cancel_action = global::MoneyNote.Droid.Resource.Id.cancel_action;
+			global::XF.Material.Resource.Id.center = global::MoneyNote.Droid.Resource.Id.center;
+			global::XF.Material.Resource.Id.center_horizontal = global::MoneyNote.Droid.Resource.Id.center_horizontal;
+			global::XF.Material.Resource.Id.center_vertical = global::MoneyNote.Droid.Resource.Id.center_vertical;
+			global::XF.Material.Resource.Id.checkbox = global::MoneyNote.Droid.Resource.Id.checkbox;
+			global::XF.Material.Resource.Id.@checked = global::MoneyNote.Droid.Resource.Id.@checked;
+			global::XF.Material.Resource.Id.chronometer = global::MoneyNote.Droid.Resource.Id.chronometer;
+			global::XF.Material.Resource.Id.clip_horizontal = global::MoneyNote.Droid.Resource.Id.clip_horizontal;
+			global::XF.Material.Resource.Id.clip_vertical = global::MoneyNote.Droid.Resource.Id.clip_vertical;
+			global::XF.Material.Resource.Id.collapseActionView = global::MoneyNote.Droid.Resource.Id.collapseActionView;
+			global::XF.Material.Resource.Id.container = global::MoneyNote.Droid.Resource.Id.container;
+			global::XF.Material.Resource.Id.content = global::MoneyNote.Droid.Resource.Id.content;
+			global::XF.Material.Resource.Id.contentPanel = global::MoneyNote.Droid.Resource.Id.contentPanel;
+			global::XF.Material.Resource.Id.coordinator = global::MoneyNote.Droid.Resource.Id.coordinator;
+			global::XF.Material.Resource.Id.CTRL = global::MoneyNote.Droid.Resource.Id.CTRL;
+			global::XF.Material.Resource.Id.custom = global::MoneyNote.Droid.Resource.Id.custom;
+			global::XF.Material.Resource.Id.customPanel = global::MoneyNote.Droid.Resource.Id.customPanel;
+			global::XF.Material.Resource.Id.decor_content_parent = global::MoneyNote.Droid.Resource.Id.decor_content_parent;
+			global::XF.Material.Resource.Id.default_activity_button = global::MoneyNote.Droid.Resource.Id.default_activity_button;
+			global::XF.Material.Resource.Id.design_bottom_sheet = global::MoneyNote.Droid.Resource.Id.design_bottom_sheet;
+			global::XF.Material.Resource.Id.design_menu_item_action_area = global::MoneyNote.Droid.Resource.Id.design_menu_item_action_area;
+			global::XF.Material.Resource.Id.design_menu_item_action_area_stub = global::MoneyNote.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::XF.Material.Resource.Id.design_menu_item_text = global::MoneyNote.Droid.Resource.Id.design_menu_item_text;
+			global::XF.Material.Resource.Id.design_navigation_view = global::MoneyNote.Droid.Resource.Id.design_navigation_view;
+			global::XF.Material.Resource.Id.dialog_button = global::MoneyNote.Droid.Resource.Id.dialog_button;
+			global::XF.Material.Resource.Id.disableHome = global::MoneyNote.Droid.Resource.Id.disableHome;
+			global::XF.Material.Resource.Id.edit_query = global::MoneyNote.Droid.Resource.Id.edit_query;
+			global::XF.Material.Resource.Id.end = global::MoneyNote.Droid.Resource.Id.end;
+			global::XF.Material.Resource.Id.end_padder = global::MoneyNote.Droid.Resource.Id.end_padder;
+			global::XF.Material.Resource.Id.enterAlways = global::MoneyNote.Droid.Resource.Id.enterAlways;
+			global::XF.Material.Resource.Id.enterAlwaysCollapsed = global::MoneyNote.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::XF.Material.Resource.Id.exitUntilCollapsed = global::MoneyNote.Droid.Resource.Id.exitUntilCollapsed;
+			global::XF.Material.Resource.Id.expanded_menu = global::MoneyNote.Droid.Resource.Id.expanded_menu;
+			global::XF.Material.Resource.Id.expand_activities_button = global::MoneyNote.Droid.Resource.Id.expand_activities_button;
+			global::XF.Material.Resource.Id.fill = global::MoneyNote.Droid.Resource.Id.fill;
+			global::XF.Material.Resource.Id.filled = global::MoneyNote.Droid.Resource.Id.filled;
+			global::XF.Material.Resource.Id.fill_horizontal = global::MoneyNote.Droid.Resource.Id.fill_horizontal;
+			global::XF.Material.Resource.Id.fill_vertical = global::MoneyNote.Droid.Resource.Id.fill_vertical;
+			global::XF.Material.Resource.Id.@fixed = global::MoneyNote.Droid.Resource.Id.@fixed;
+			global::XF.Material.Resource.Id.flyoutcontent_appbar = global::MoneyNote.Droid.Resource.Id.flyoutcontent_appbar;
+			global::XF.Material.Resource.Id.flyoutcontent_recycler = global::MoneyNote.Droid.Resource.Id.flyoutcontent_recycler;
+			global::XF.Material.Resource.Id.forever = global::MoneyNote.Droid.Resource.Id.forever;
+			global::XF.Material.Resource.Id.FUNCTION = global::MoneyNote.Droid.Resource.Id.FUNCTION;
+			global::XF.Material.Resource.Id.ghost_view = global::MoneyNote.Droid.Resource.Id.ghost_view;
+			global::XF.Material.Resource.Id.ghost_view_holder = global::MoneyNote.Droid.Resource.Id.ghost_view_holder;
+			global::XF.Material.Resource.Id.group_divider = global::MoneyNote.Droid.Resource.Id.group_divider;
+			global::XF.Material.Resource.Id.hardware = global::MoneyNote.Droid.Resource.Id.hardware;
+			global::XF.Material.Resource.Id.home = global::MoneyNote.Droid.Resource.Id.home;
+			global::XF.Material.Resource.Id.homeAsUp = global::MoneyNote.Droid.Resource.Id.homeAsUp;
+			global::XF.Material.Resource.Id.icon = global::MoneyNote.Droid.Resource.Id.icon;
+			global::XF.Material.Resource.Id.icon_group = global::MoneyNote.Droid.Resource.Id.icon_group;
+			global::XF.Material.Resource.Id.ifRoom = global::MoneyNote.Droid.Resource.Id.ifRoom;
+			global::XF.Material.Resource.Id.image = global::MoneyNote.Droid.Resource.Id.image;
+			global::XF.Material.Resource.Id.info = global::MoneyNote.Droid.Resource.Id.info;
+			global::XF.Material.Resource.Id.inset_drawable = global::MoneyNote.Droid.Resource.Id.inset_drawable;
+			global::XF.Material.Resource.Id.italic = global::MoneyNote.Droid.Resource.Id.italic;
+			global::XF.Material.Resource.Id.item_touch_helper_previous_elevation = global::MoneyNote.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::XF.Material.Resource.Id.labeled = global::MoneyNote.Droid.Resource.Id.labeled;
+			global::XF.Material.Resource.Id.largeLabel = global::MoneyNote.Droid.Resource.Id.largeLabel;
+			global::XF.Material.Resource.Id.left = global::MoneyNote.Droid.Resource.Id.left;
+			global::XF.Material.Resource.Id.line1 = global::MoneyNote.Droid.Resource.Id.line1;
+			global::XF.Material.Resource.Id.line3 = global::MoneyNote.Droid.Resource.Id.line3;
+			global::XF.Material.Resource.Id.listMode = global::MoneyNote.Droid.Resource.Id.listMode;
+			global::XF.Material.Resource.Id.list_item = global::MoneyNote.Droid.Resource.Id.list_item;
+			global::XF.Material.Resource.Id.lottie_layer_name = global::MoneyNote.Droid.Resource.Id.lottie_layer_name;
+			global::XF.Material.Resource.Id.main_appbar = global::MoneyNote.Droid.Resource.Id.main_appbar;
+			global::XF.Material.Resource.Id.main_tablayout = global::MoneyNote.Droid.Resource.Id.main_tablayout;
+			global::XF.Material.Resource.Id.main_toolbar = global::MoneyNote.Droid.Resource.Id.main_toolbar;
+			global::XF.Material.Resource.Id.main_viewpager = global::MoneyNote.Droid.Resource.Id.main_viewpager;
+			global::XF.Material.Resource.Id.masked = global::MoneyNote.Droid.Resource.Id.masked;
+			global::XF.Material.Resource.Id.media_actions = global::MoneyNote.Droid.Resource.Id.media_actions;
+			global::XF.Material.Resource.Id.message = global::MoneyNote.Droid.Resource.Id.message;
+			global::XF.Material.Resource.Id.META = global::MoneyNote.Droid.Resource.Id.META;
+			global::XF.Material.Resource.Id.middle = global::MoneyNote.Droid.Resource.Id.middle;
+			global::XF.Material.Resource.Id.mini = global::MoneyNote.Droid.Resource.Id.mini;
+			global::XF.Material.Resource.Id.mtrl_child_content_container = global::MoneyNote.Droid.Resource.Id.mtrl_child_content_container;
+			global::XF.Material.Resource.Id.mtrl_internal_children_alpha_tag = global::MoneyNote.Droid.Resource.Id.mtrl_internal_children_alpha_tag;
+			global::XF.Material.Resource.Id.multiply = global::MoneyNote.Droid.Resource.Id.multiply;
+			global::XF.Material.Resource.Id.navigation_header_container = global::MoneyNote.Droid.Resource.Id.navigation_header_container;
+			global::XF.Material.Resource.Id.never = global::MoneyNote.Droid.Resource.Id.never;
+			global::XF.Material.Resource.Id.none = global::MoneyNote.Droid.Resource.Id.none;
+			global::XF.Material.Resource.Id.normal = global::MoneyNote.Droid.Resource.Id.normal;
+			global::XF.Material.Resource.Id.notification_background = global::MoneyNote.Droid.Resource.Id.notification_background;
+			global::XF.Material.Resource.Id.notification_main_column = global::MoneyNote.Droid.Resource.Id.notification_main_column;
+			global::XF.Material.Resource.Id.notification_main_column_container = global::MoneyNote.Droid.Resource.Id.notification_main_column_container;
+			global::XF.Material.Resource.Id.off = global::MoneyNote.Droid.Resource.Id.off;
+			global::XF.Material.Resource.Id.on = global::MoneyNote.Droid.Resource.Id.on;
+			global::XF.Material.Resource.Id.outline = global::MoneyNote.Droid.Resource.Id.outline;
+			global::XF.Material.Resource.Id.parallax = global::MoneyNote.Droid.Resource.Id.parallax;
+			global::XF.Material.Resource.Id.parentPanel = global::MoneyNote.Droid.Resource.Id.parentPanel;
+			global::XF.Material.Resource.Id.parent_matrix = global::MoneyNote.Droid.Resource.Id.parent_matrix;
+			global::XF.Material.Resource.Id.pin = global::MoneyNote.Droid.Resource.Id.pin;
+			global::XF.Material.Resource.Id.progress_circular = global::MoneyNote.Droid.Resource.Id.progress_circular;
+			global::XF.Material.Resource.Id.progress_horizontal = global::MoneyNote.Droid.Resource.Id.progress_horizontal;
+			global::XF.Material.Resource.Id.radio = global::MoneyNote.Droid.Resource.Id.radio;
+			global::XF.Material.Resource.Id.restart = global::MoneyNote.Droid.Resource.Id.restart;
+			global::XF.Material.Resource.Id.reverse = global::MoneyNote.Droid.Resource.Id.reverse;
+			global::XF.Material.Resource.Id.right = global::MoneyNote.Droid.Resource.Id.right;
+			global::XF.Material.Resource.Id.right_icon = global::MoneyNote.Droid.Resource.Id.right_icon;
+			global::XF.Material.Resource.Id.right_side = global::MoneyNote.Droid.Resource.Id.right_side;
+			global::XF.Material.Resource.Id.save_non_transition_alpha = global::MoneyNote.Droid.Resource.Id.save_non_transition_alpha;
+			global::XF.Material.Resource.Id.save_overlay_view = global::MoneyNote.Droid.Resource.Id.save_overlay_view;
+			global::XF.Material.Resource.Id.screen = global::MoneyNote.Droid.Resource.Id.screen;
+			global::XF.Material.Resource.Id.scroll = global::MoneyNote.Droid.Resource.Id.scroll;
+			global::XF.Material.Resource.Id.scrollable = global::MoneyNote.Droid.Resource.Id.scrollable;
+			global::XF.Material.Resource.Id.scrollIndicatorDown = global::MoneyNote.Droid.Resource.Id.scrollIndicatorDown;
+			global::XF.Material.Resource.Id.scrollIndicatorUp = global::MoneyNote.Droid.Resource.Id.scrollIndicatorUp;
+			global::XF.Material.Resource.Id.scrollView = global::MoneyNote.Droid.Resource.Id.scrollView;
+			global::XF.Material.Resource.Id.search_badge = global::MoneyNote.Droid.Resource.Id.search_badge;
+			global::XF.Material.Resource.Id.search_bar = global::MoneyNote.Droid.Resource.Id.search_bar;
+			global::XF.Material.Resource.Id.search_button = global::MoneyNote.Droid.Resource.Id.search_button;
+			global::XF.Material.Resource.Id.search_close_btn = global::MoneyNote.Droid.Resource.Id.search_close_btn;
+			global::XF.Material.Resource.Id.search_edit_frame = global::MoneyNote.Droid.Resource.Id.search_edit_frame;
+			global::XF.Material.Resource.Id.search_go_btn = global::MoneyNote.Droid.Resource.Id.search_go_btn;
+			global::XF.Material.Resource.Id.search_mag_icon = global::MoneyNote.Droid.Resource.Id.search_mag_icon;
+			global::XF.Material.Resource.Id.search_plate = global::MoneyNote.Droid.Resource.Id.search_plate;
+			global::XF.Material.Resource.Id.search_src_text = global::MoneyNote.Droid.Resource.Id.search_src_text;
+			global::XF.Material.Resource.Id.search_voice_btn = global::MoneyNote.Droid.Resource.Id.search_voice_btn;
+			global::XF.Material.Resource.Id.selected = global::MoneyNote.Droid.Resource.Id.selected;
+			global::XF.Material.Resource.Id.select_dialog_listview = global::MoneyNote.Droid.Resource.Id.select_dialog_listview;
+			global::XF.Material.Resource.Id.shellcontent_appbar = global::MoneyNote.Droid.Resource.Id.shellcontent_appbar;
+			global::XF.Material.Resource.Id.shellcontent_toolbar = global::MoneyNote.Droid.Resource.Id.shellcontent_toolbar;
+			global::XF.Material.Resource.Id.SHIFT = global::MoneyNote.Droid.Resource.Id.SHIFT;
+			global::XF.Material.Resource.Id.shortcut = global::MoneyNote.Droid.Resource.Id.shortcut;
+			global::XF.Material.Resource.Id.showCustom = global::MoneyNote.Droid.Resource.Id.showCustom;
+			global::XF.Material.Resource.Id.showHome = global::MoneyNote.Droid.Resource.Id.showHome;
+			global::XF.Material.Resource.Id.showTitle = global::MoneyNote.Droid.Resource.Id.showTitle;
+			global::XF.Material.Resource.Id.sliding_tabs = global::MoneyNote.Droid.Resource.Id.sliding_tabs;
+			global::XF.Material.Resource.Id.smallLabel = global::MoneyNote.Droid.Resource.Id.smallLabel;
+			global::XF.Material.Resource.Id.snackbar_action = global::MoneyNote.Droid.Resource.Id.snackbar_action;
+			global::XF.Material.Resource.Id.snackbar_text = global::MoneyNote.Droid.Resource.Id.snackbar_text;
+			global::XF.Material.Resource.Id.snap = global::MoneyNote.Droid.Resource.Id.snap;
+			global::XF.Material.Resource.Id.snapMargins = global::MoneyNote.Droid.Resource.Id.snapMargins;
+			global::XF.Material.Resource.Id.software = global::MoneyNote.Droid.Resource.Id.software;
+			global::XF.Material.Resource.Id.spacer = global::MoneyNote.Droid.Resource.Id.spacer;
+			global::XF.Material.Resource.Id.split_action_bar = global::MoneyNote.Droid.Resource.Id.split_action_bar;
+			global::XF.Material.Resource.Id.src_atop = global::MoneyNote.Droid.Resource.Id.src_atop;
+			global::XF.Material.Resource.Id.src_in = global::MoneyNote.Droid.Resource.Id.src_in;
+			global::XF.Material.Resource.Id.src_over = global::MoneyNote.Droid.Resource.Id.src_over;
+			global::XF.Material.Resource.Id.start = global::MoneyNote.Droid.Resource.Id.start;
+			global::XF.Material.Resource.Id.status_bar_latest_event_content = global::MoneyNote.Droid.Resource.Id.status_bar_latest_event_content;
+			global::XF.Material.Resource.Id.stretch = global::MoneyNote.Droid.Resource.Id.stretch;
+			global::XF.Material.Resource.Id.submenuarrow = global::MoneyNote.Droid.Resource.Id.submenuarrow;
+			global::XF.Material.Resource.Id.submit_area = global::MoneyNote.Droid.Resource.Id.submit_area;
+			global::XF.Material.Resource.Id.SYM = global::MoneyNote.Droid.Resource.Id.SYM;
+			global::XF.Material.Resource.Id.tabMode = global::MoneyNote.Droid.Resource.Id.tabMode;
+			global::XF.Material.Resource.Id.tag_accessibility_actions = global::MoneyNote.Droid.Resource.Id.tag_accessibility_actions;
+			global::XF.Material.Resource.Id.tag_accessibility_clickable_spans = global::MoneyNote.Droid.Resource.Id.tag_accessibility_clickable_spans;
+			global::XF.Material.Resource.Id.tag_accessibility_heading = global::MoneyNote.Droid.Resource.Id.tag_accessibility_heading;
+			global::XF.Material.Resource.Id.tag_accessibility_pane_title = global::MoneyNote.Droid.Resource.Id.tag_accessibility_pane_title;
+			global::XF.Material.Resource.Id.tag_screen_reader_focusable = global::MoneyNote.Droid.Resource.Id.tag_screen_reader_focusable;
+			global::XF.Material.Resource.Id.tag_transition_group = global::MoneyNote.Droid.Resource.Id.tag_transition_group;
+			global::XF.Material.Resource.Id.tag_unhandled_key_event_manager = global::MoneyNote.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::XF.Material.Resource.Id.tag_unhandled_key_listeners = global::MoneyNote.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::XF.Material.Resource.Id.text = global::MoneyNote.Droid.Resource.Id.text;
+			global::XF.Material.Resource.Id.text2 = global::MoneyNote.Droid.Resource.Id.text2;
+			global::XF.Material.Resource.Id.textinput_counter = global::MoneyNote.Droid.Resource.Id.textinput_counter;
+			global::XF.Material.Resource.Id.textinput_error = global::MoneyNote.Droid.Resource.Id.textinput_error;
+			global::XF.Material.Resource.Id.textinput_helper_text = global::MoneyNote.Droid.Resource.Id.textinput_helper_text;
+			global::XF.Material.Resource.Id.textSpacerNoButtons = global::MoneyNote.Droid.Resource.Id.textSpacerNoButtons;
+			global::XF.Material.Resource.Id.textSpacerNoTitle = global::MoneyNote.Droid.Resource.Id.textSpacerNoTitle;
+			global::XF.Material.Resource.Id.textStart = global::MoneyNote.Droid.Resource.Id.textStart;
+			global::XF.Material.Resource.Id.text_input_password_toggle = global::MoneyNote.Droid.Resource.Id.text_input_password_toggle;
+			global::XF.Material.Resource.Id.time = global::MoneyNote.Droid.Resource.Id.time;
+			global::XF.Material.Resource.Id.title = global::MoneyNote.Droid.Resource.Id.title;
+			global::XF.Material.Resource.Id.titleDividerNoCustom = global::MoneyNote.Droid.Resource.Id.titleDividerNoCustom;
+			global::XF.Material.Resource.Id.title_template = global::MoneyNote.Droid.Resource.Id.title_template;
+			global::XF.Material.Resource.Id.toolbar = global::MoneyNote.Droid.Resource.Id.toolbar;
+			global::XF.Material.Resource.Id.top = global::MoneyNote.Droid.Resource.Id.top;
+			global::XF.Material.Resource.Id.topPanel = global::MoneyNote.Droid.Resource.Id.topPanel;
+			global::XF.Material.Resource.Id.touch_outside = global::MoneyNote.Droid.Resource.Id.touch_outside;
+			global::XF.Material.Resource.Id.transition_current_scene = global::MoneyNote.Droid.Resource.Id.transition_current_scene;
+			global::XF.Material.Resource.Id.transition_layout_save = global::MoneyNote.Droid.Resource.Id.transition_layout_save;
+			global::XF.Material.Resource.Id.transition_position = global::MoneyNote.Droid.Resource.Id.transition_position;
+			global::XF.Material.Resource.Id.transition_scene_layoutid_cache = global::MoneyNote.Droid.Resource.Id.transition_scene_layoutid_cache;
+			global::XF.Material.Resource.Id.transition_transform = global::MoneyNote.Droid.Resource.Id.transition_transform;
+			global::XF.Material.Resource.Id.@unchecked = global::MoneyNote.Droid.Resource.Id.@unchecked;
+			global::XF.Material.Resource.Id.uniform = global::MoneyNote.Droid.Resource.Id.uniform;
+			global::XF.Material.Resource.Id.unlabeled = global::MoneyNote.Droid.Resource.Id.unlabeled;
+			global::XF.Material.Resource.Id.up = global::MoneyNote.Droid.Resource.Id.up;
+			global::XF.Material.Resource.Id.useLogo = global::MoneyNote.Droid.Resource.Id.useLogo;
+			global::XF.Material.Resource.Id.view_offset_helper = global::MoneyNote.Droid.Resource.Id.view_offset_helper;
+			global::XF.Material.Resource.Id.visible = global::MoneyNote.Droid.Resource.Id.visible;
+			global::XF.Material.Resource.Id.withText = global::MoneyNote.Droid.Resource.Id.withText;
+			global::XF.Material.Resource.Id.wrap_content = global::MoneyNote.Droid.Resource.Id.wrap_content;
+			global::XF.Material.Resource.Integer.abc_config_activityDefaultDur = global::MoneyNote.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::XF.Material.Resource.Integer.abc_config_activityShortDur = global::MoneyNote.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::XF.Material.Resource.Integer.app_bar_elevation_anim_duration = global::MoneyNote.Droid.Resource.Integer.app_bar_elevation_anim_duration;
+			global::XF.Material.Resource.Integer.bottom_sheet_slide_duration = global::MoneyNote.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::XF.Material.Resource.Integer.cancel_button_image_alpha = global::MoneyNote.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::XF.Material.Resource.Integer.config_tooltipAnimTime = global::MoneyNote.Droid.Resource.Integer.config_tooltipAnimTime;
+			global::XF.Material.Resource.Integer.design_snackbar_text_max_lines = global::MoneyNote.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::XF.Material.Resource.Integer.design_tab_indicator_anim_duration_ms = global::MoneyNote.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms;
+			global::XF.Material.Resource.Integer.hide_password_duration = global::MoneyNote.Droid.Resource.Integer.hide_password_duration;
+			global::XF.Material.Resource.Integer.mtrl_btn_anim_delay_ms = global::MoneyNote.Droid.Resource.Integer.mtrl_btn_anim_delay_ms;
+			global::XF.Material.Resource.Integer.mtrl_btn_anim_duration_ms = global::MoneyNote.Droid.Resource.Integer.mtrl_btn_anim_duration_ms;
+			global::XF.Material.Resource.Integer.mtrl_chip_anim_duration = global::MoneyNote.Droid.Resource.Integer.mtrl_chip_anim_duration;
+			global::XF.Material.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::MoneyNote.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
+			global::XF.Material.Resource.Integer.show_password_duration = global::MoneyNote.Droid.Resource.Integer.show_password_duration;
+			global::XF.Material.Resource.Integer.status_bar_notification_info_maxnum = global::MoneyNote.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::XF.Material.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0 = global::MoneyNote.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0;
+			global::XF.Material.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1 = global::MoneyNote.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1;
+			global::XF.Material.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0 = global::MoneyNote.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0;
+			global::XF.Material.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1 = global::MoneyNote.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1;
+			global::XF.Material.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0 = global::MoneyNote.Droid.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0;
+			global::XF.Material.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0 = global::MoneyNote.Droid.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0;
+			global::XF.Material.Resource.Interpolator.fast_out_slow_in = global::MoneyNote.Droid.Resource.Interpolator.fast_out_slow_in;
+			global::XF.Material.Resource.Interpolator.mtrl_fast_out_linear_in = global::MoneyNote.Droid.Resource.Interpolator.mtrl_fast_out_linear_in;
+			global::XF.Material.Resource.Interpolator.mtrl_fast_out_slow_in = global::MoneyNote.Droid.Resource.Interpolator.mtrl_fast_out_slow_in;
+			global::XF.Material.Resource.Interpolator.mtrl_linear = global::MoneyNote.Droid.Resource.Interpolator.mtrl_linear;
+			global::XF.Material.Resource.Interpolator.mtrl_linear_out_slow_in = global::MoneyNote.Droid.Resource.Interpolator.mtrl_linear_out_slow_in;
+			global::XF.Material.Resource.Layout.abc_action_bar_title_item = global::MoneyNote.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::XF.Material.Resource.Layout.abc_action_bar_up_container = global::MoneyNote.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::XF.Material.Resource.Layout.abc_action_menu_item_layout = global::MoneyNote.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::XF.Material.Resource.Layout.abc_action_menu_layout = global::MoneyNote.Droid.Resource.Layout.abc_action_menu_layout;
+			global::XF.Material.Resource.Layout.abc_action_mode_bar = global::MoneyNote.Droid.Resource.Layout.abc_action_mode_bar;
+			global::XF.Material.Resource.Layout.abc_action_mode_close_item_material = global::MoneyNote.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::XF.Material.Resource.Layout.abc_activity_chooser_view = global::MoneyNote.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::XF.Material.Resource.Layout.abc_activity_chooser_view_list_item = global::MoneyNote.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::XF.Material.Resource.Layout.abc_alert_dialog_button_bar_material = global::MoneyNote.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::XF.Material.Resource.Layout.abc_alert_dialog_material = global::MoneyNote.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::XF.Material.Resource.Layout.abc_alert_dialog_title_material = global::MoneyNote.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::XF.Material.Resource.Layout.abc_cascading_menu_item_layout = global::MoneyNote.Droid.Resource.Layout.abc_cascading_menu_item_layout;
+			global::XF.Material.Resource.Layout.abc_dialog_title_material = global::MoneyNote.Droid.Resource.Layout.abc_dialog_title_material;
+			global::XF.Material.Resource.Layout.abc_expanded_menu_layout = global::MoneyNote.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::XF.Material.Resource.Layout.abc_list_menu_item_checkbox = global::MoneyNote.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::XF.Material.Resource.Layout.abc_list_menu_item_icon = global::MoneyNote.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::XF.Material.Resource.Layout.abc_list_menu_item_layout = global::MoneyNote.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::XF.Material.Resource.Layout.abc_list_menu_item_radio = global::MoneyNote.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::XF.Material.Resource.Layout.abc_popup_menu_header_item_layout = global::MoneyNote.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::XF.Material.Resource.Layout.abc_popup_menu_item_layout = global::MoneyNote.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::XF.Material.Resource.Layout.abc_screen_content_include = global::MoneyNote.Droid.Resource.Layout.abc_screen_content_include;
+			global::XF.Material.Resource.Layout.abc_screen_simple = global::MoneyNote.Droid.Resource.Layout.abc_screen_simple;
+			global::XF.Material.Resource.Layout.abc_screen_simple_overlay_action_mode = global::MoneyNote.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::XF.Material.Resource.Layout.abc_screen_toolbar = global::MoneyNote.Droid.Resource.Layout.abc_screen_toolbar;
+			global::XF.Material.Resource.Layout.abc_search_dropdown_item_icons_2line = global::MoneyNote.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::XF.Material.Resource.Layout.abc_search_view = global::MoneyNote.Droid.Resource.Layout.abc_search_view;
+			global::XF.Material.Resource.Layout.abc_select_dialog_material = global::MoneyNote.Droid.Resource.Layout.abc_select_dialog_material;
+			global::XF.Material.Resource.Layout.abc_tooltip = global::MoneyNote.Droid.Resource.Layout.abc_tooltip;
+			global::XF.Material.Resource.Layout.BottomTabLayout = global::MoneyNote.Droid.Resource.Layout.BottomTabLayout;
+			global::XF.Material.Resource.Layout.browser_actions_context_menu_page = global::MoneyNote.Droid.Resource.Layout.browser_actions_context_menu_page;
+			global::XF.Material.Resource.Layout.browser_actions_context_menu_row = global::MoneyNote.Droid.Resource.Layout.browser_actions_context_menu_row;
+			global::XF.Material.Resource.Layout.custom_dialog = global::MoneyNote.Droid.Resource.Layout.custom_dialog;
+			global::XF.Material.Resource.Layout.design_bottom_navigation_item = global::MoneyNote.Droid.Resource.Layout.design_bottom_navigation_item;
+			global::XF.Material.Resource.Layout.design_bottom_sheet_dialog = global::MoneyNote.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::XF.Material.Resource.Layout.design_layout_snackbar = global::MoneyNote.Droid.Resource.Layout.design_layout_snackbar;
+			global::XF.Material.Resource.Layout.design_layout_snackbar_include = global::MoneyNote.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::XF.Material.Resource.Layout.design_layout_tab_icon = global::MoneyNote.Droid.Resource.Layout.design_layout_tab_icon;
+			global::XF.Material.Resource.Layout.design_layout_tab_text = global::MoneyNote.Droid.Resource.Layout.design_layout_tab_text;
+			global::XF.Material.Resource.Layout.design_menu_item_action_area = global::MoneyNote.Droid.Resource.Layout.design_menu_item_action_area;
+			global::XF.Material.Resource.Layout.design_navigation_item = global::MoneyNote.Droid.Resource.Layout.design_navigation_item;
+			global::XF.Material.Resource.Layout.design_navigation_item_header = global::MoneyNote.Droid.Resource.Layout.design_navigation_item_header;
+			global::XF.Material.Resource.Layout.design_navigation_item_separator = global::MoneyNote.Droid.Resource.Layout.design_navigation_item_separator;
+			global::XF.Material.Resource.Layout.design_navigation_item_subheader = global::MoneyNote.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::XF.Material.Resource.Layout.design_navigation_menu = global::MoneyNote.Droid.Resource.Layout.design_navigation_menu;
+			global::XF.Material.Resource.Layout.design_navigation_menu_item = global::MoneyNote.Droid.Resource.Layout.design_navigation_menu_item;
+			global::XF.Material.Resource.Layout.design_text_input_password_icon = global::MoneyNote.Droid.Resource.Layout.design_text_input_password_icon;
+			global::XF.Material.Resource.Layout.FallbackTabbarDoNotUse = global::MoneyNote.Droid.Resource.Layout.FallbackTabbarDoNotUse;
+			global::XF.Material.Resource.Layout.FallbackToolbarDoNotUse = global::MoneyNote.Droid.Resource.Layout.FallbackToolbarDoNotUse;
+			global::XF.Material.Resource.Layout.FlyoutContent = global::MoneyNote.Droid.Resource.Layout.FlyoutContent;
+			global::XF.Material.Resource.Layout.mtrl_layout_snackbar = global::MoneyNote.Droid.Resource.Layout.mtrl_layout_snackbar;
+			global::XF.Material.Resource.Layout.mtrl_layout_snackbar_include = global::MoneyNote.Droid.Resource.Layout.mtrl_layout_snackbar_include;
+			global::XF.Material.Resource.Layout.notification_action = global::MoneyNote.Droid.Resource.Layout.notification_action;
+			global::XF.Material.Resource.Layout.notification_action_tombstone = global::MoneyNote.Droid.Resource.Layout.notification_action_tombstone;
+			global::XF.Material.Resource.Layout.notification_media_action = global::MoneyNote.Droid.Resource.Layout.notification_media_action;
+			global::XF.Material.Resource.Layout.notification_media_cancel_action = global::MoneyNote.Droid.Resource.Layout.notification_media_cancel_action;
+			global::XF.Material.Resource.Layout.notification_template_big_media = global::MoneyNote.Droid.Resource.Layout.notification_template_big_media;
+			global::XF.Material.Resource.Layout.notification_template_big_media_custom = global::MoneyNote.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::XF.Material.Resource.Layout.notification_template_big_media_narrow = global::MoneyNote.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::XF.Material.Resource.Layout.notification_template_big_media_narrow_custom = global::MoneyNote.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::XF.Material.Resource.Layout.notification_template_custom_big = global::MoneyNote.Droid.Resource.Layout.notification_template_custom_big;
+			global::XF.Material.Resource.Layout.notification_template_icon_group = global::MoneyNote.Droid.Resource.Layout.notification_template_icon_group;
+			global::XF.Material.Resource.Layout.notification_template_lines_media = global::MoneyNote.Droid.Resource.Layout.notification_template_lines_media;
+			global::XF.Material.Resource.Layout.notification_template_media = global::MoneyNote.Droid.Resource.Layout.notification_template_media;
+			global::XF.Material.Resource.Layout.notification_template_media_custom = global::MoneyNote.Droid.Resource.Layout.notification_template_media_custom;
+			global::XF.Material.Resource.Layout.notification_template_part_chronometer = global::MoneyNote.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::XF.Material.Resource.Layout.notification_template_part_time = global::MoneyNote.Droid.Resource.Layout.notification_template_part_time;
+			global::XF.Material.Resource.Layout.RootLayout = global::MoneyNote.Droid.Resource.Layout.RootLayout;
+			global::XF.Material.Resource.Layout.select_dialog_item_material = global::MoneyNote.Droid.Resource.Layout.select_dialog_item_material;
+			global::XF.Material.Resource.Layout.select_dialog_multichoice_material = global::MoneyNote.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::XF.Material.Resource.Layout.select_dialog_singlechoice_material = global::MoneyNote.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::XF.Material.Resource.Layout.ShellContent = global::MoneyNote.Droid.Resource.Layout.ShellContent;
+			global::XF.Material.Resource.Layout.support_simple_spinner_dropdown_item = global::MoneyNote.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::XF.Material.Resource.Layout.Tabbar = global::MoneyNote.Droid.Resource.Layout.Tabbar;
+			global::XF.Material.Resource.Layout.Toolbar = global::MoneyNote.Droid.Resource.Layout.Toolbar;
+			global::XF.Material.Resource.Raw.loading_animation = global::MoneyNote.Droid.Resource.Raw.loading_animation;
+			global::XF.Material.Resource.String.abc_action_bar_home_description = global::MoneyNote.Droid.Resource.String.abc_action_bar_home_description;
+			global::XF.Material.Resource.String.abc_action_bar_up_description = global::MoneyNote.Droid.Resource.String.abc_action_bar_up_description;
+			global::XF.Material.Resource.String.abc_action_menu_overflow_description = global::MoneyNote.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::XF.Material.Resource.String.abc_action_mode_done = global::MoneyNote.Droid.Resource.String.abc_action_mode_done;
+			global::XF.Material.Resource.String.abc_activitychooserview_choose_application = global::MoneyNote.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::XF.Material.Resource.String.abc_activity_chooser_view_see_all = global::MoneyNote.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::XF.Material.Resource.String.abc_capital_off = global::MoneyNote.Droid.Resource.String.abc_capital_off;
+			global::XF.Material.Resource.String.abc_capital_on = global::MoneyNote.Droid.Resource.String.abc_capital_on;
+			global::XF.Material.Resource.String.abc_menu_alt_shortcut_label = global::MoneyNote.Droid.Resource.String.abc_menu_alt_shortcut_label;
+			global::XF.Material.Resource.String.abc_menu_ctrl_shortcut_label = global::MoneyNote.Droid.Resource.String.abc_menu_ctrl_shortcut_label;
+			global::XF.Material.Resource.String.abc_menu_delete_shortcut_label = global::MoneyNote.Droid.Resource.String.abc_menu_delete_shortcut_label;
+			global::XF.Material.Resource.String.abc_menu_enter_shortcut_label = global::MoneyNote.Droid.Resource.String.abc_menu_enter_shortcut_label;
+			global::XF.Material.Resource.String.abc_menu_function_shortcut_label = global::MoneyNote.Droid.Resource.String.abc_menu_function_shortcut_label;
+			global::XF.Material.Resource.String.abc_menu_meta_shortcut_label = global::MoneyNote.Droid.Resource.String.abc_menu_meta_shortcut_label;
+			global::XF.Material.Resource.String.abc_menu_shift_shortcut_label = global::MoneyNote.Droid.Resource.String.abc_menu_shift_shortcut_label;
+			global::XF.Material.Resource.String.abc_menu_space_shortcut_label = global::MoneyNote.Droid.Resource.String.abc_menu_space_shortcut_label;
+			global::XF.Material.Resource.String.abc_menu_sym_shortcut_label = global::MoneyNote.Droid.Resource.String.abc_menu_sym_shortcut_label;
+			global::XF.Material.Resource.String.abc_prepend_shortcut_label = global::MoneyNote.Droid.Resource.String.abc_prepend_shortcut_label;
+			global::XF.Material.Resource.String.abc_searchview_description_clear = global::MoneyNote.Droid.Resource.String.abc_searchview_description_clear;
+			global::XF.Material.Resource.String.abc_searchview_description_query = global::MoneyNote.Droid.Resource.String.abc_searchview_description_query;
+			global::XF.Material.Resource.String.abc_searchview_description_search = global::MoneyNote.Droid.Resource.String.abc_searchview_description_search;
+			global::XF.Material.Resource.String.abc_searchview_description_submit = global::MoneyNote.Droid.Resource.String.abc_searchview_description_submit;
+			global::XF.Material.Resource.String.abc_searchview_description_voice = global::MoneyNote.Droid.Resource.String.abc_searchview_description_voice;
+			global::XF.Material.Resource.String.abc_search_hint = global::MoneyNote.Droid.Resource.String.abc_search_hint;
+			global::XF.Material.Resource.String.abc_shareactionprovider_share_with = global::MoneyNote.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::XF.Material.Resource.String.abc_shareactionprovider_share_with_application = global::MoneyNote.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::XF.Material.Resource.String.abc_toolbar_collapse_description = global::MoneyNote.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::XF.Material.Resource.String.appbar_scrolling_view_behavior = global::MoneyNote.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::XF.Material.Resource.String.app_name = global::MoneyNote.Droid.Resource.String.app_name;
+			global::XF.Material.Resource.String.bottom_sheet_behavior = global::MoneyNote.Droid.Resource.String.bottom_sheet_behavior;
+			global::XF.Material.Resource.String.character_counter_content_description = global::MoneyNote.Droid.Resource.String.character_counter_content_description;
+			global::XF.Material.Resource.String.character_counter_pattern = global::MoneyNote.Droid.Resource.String.character_counter_pattern;
+			global::XF.Material.Resource.String.fab_transformation_scrim_behavior = global::MoneyNote.Droid.Resource.String.fab_transformation_scrim_behavior;
+			global::XF.Material.Resource.String.fab_transformation_sheet_behavior = global::MoneyNote.Droid.Resource.String.fab_transformation_sheet_behavior;
+			global::XF.Material.Resource.String.hello = global::MoneyNote.Droid.Resource.String.hello;
+			global::XF.Material.Resource.String.hide_bottom_view_on_scroll_behavior = global::MoneyNote.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
+			global::XF.Material.Resource.String.mtrl_chip_close_icon_content_description = global::MoneyNote.Droid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::XF.Material.Resource.String.password_toggle_content_description = global::MoneyNote.Droid.Resource.String.password_toggle_content_description;
+			global::XF.Material.Resource.String.path_password_eye = global::MoneyNote.Droid.Resource.String.path_password_eye;
+			global::XF.Material.Resource.String.path_password_eye_mask_strike_through = global::MoneyNote.Droid.Resource.String.path_password_eye_mask_strike_through;
+			global::XF.Material.Resource.String.path_password_eye_mask_visible = global::MoneyNote.Droid.Resource.String.path_password_eye_mask_visible;
+			global::XF.Material.Resource.String.path_password_strike_through = global::MoneyNote.Droid.Resource.String.path_password_strike_through;
+			global::XF.Material.Resource.String.search_menu_title = global::MoneyNote.Droid.Resource.String.search_menu_title;
+			global::XF.Material.Resource.String.status_bar_notification_info_overflow = global::MoneyNote.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::XF.Material.Resource.Style.AlertDialog_AppCompat = global::MoneyNote.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::XF.Material.Resource.Style.AlertDialog_AppCompat_Light = global::MoneyNote.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::XF.Material.Resource.Style.Animation_AppCompat_Dialog = global::MoneyNote.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::XF.Material.Resource.Style.Animation_AppCompat_DropDownUp = global::MoneyNote.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::XF.Material.Resource.Style.Animation_AppCompat_Tooltip = global::MoneyNote.Droid.Resource.Style.Animation_AppCompat_Tooltip;
+			global::XF.Material.Resource.Style.Animation_Design_BottomSheetDialog = global::MoneyNote.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::XF.Material.Resource.Style.Base_AlertDialog_AppCompat = global::MoneyNote.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::XF.Material.Resource.Style.Base_AlertDialog_AppCompat_Light = global::MoneyNote.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::XF.Material.Resource.Style.Base_Animation_AppCompat_Dialog = global::MoneyNote.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::XF.Material.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::MoneyNote.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::XF.Material.Resource.Style.Base_Animation_AppCompat_Tooltip = global::MoneyNote.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::XF.Material.Resource.Style.Base_CardView = global::MoneyNote.Droid.Resource.Style.Base_CardView;
+			global::XF.Material.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::MoneyNote.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::XF.Material.Resource.Style.Base_DialogWindowTitle_AppCompat = global::MoneyNote.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Button = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Large = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Small = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Title = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::XF.Material.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::XF.Material.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::XF.Material.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::XF.Material.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::MoneyNote.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::XF.Material.Resource.Style.Base_ThemeOverlay_AppCompat = global::MoneyNote.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::XF.Material.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::MoneyNote.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::XF.Material.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::MoneyNote.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::XF.Material.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::MoneyNote.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::XF.Material.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::MoneyNote.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::XF.Material.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::MoneyNote.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::XF.Material.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::MoneyNote.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::XF.Material.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog = global::MoneyNote.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog;
+			global::XF.Material.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert = global::MoneyNote.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::XF.Material.Resource.Style.Base_Theme_AppCompat = global::MoneyNote.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::XF.Material.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::MoneyNote.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::XF.Material.Resource.Style.Base_Theme_AppCompat_Dialog = global::MoneyNote.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::XF.Material.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::MoneyNote.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::XF.Material.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::MoneyNote.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::XF.Material.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::MoneyNote.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::XF.Material.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::MoneyNote.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::XF.Material.Resource.Style.Base_Theme_AppCompat_Light = global::MoneyNote.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::XF.Material.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::MoneyNote.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::XF.Material.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::MoneyNote.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::XF.Material.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::MoneyNote.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::XF.Material.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::MoneyNote.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::XF.Material.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::MoneyNote.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::XF.Material.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::MoneyNote.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::XF.Material.Resource.Style.Base_Theme_MaterialComponents = global::MoneyNote.Droid.Resource.Style.Base_Theme_MaterialComponents;
+			global::XF.Material.Resource.Style.Base_Theme_MaterialComponents_Bridge = global::MoneyNote.Droid.Resource.Style.Base_Theme_MaterialComponents_Bridge;
+			global::XF.Material.Resource.Style.Base_Theme_MaterialComponents_CompactMenu = global::MoneyNote.Droid.Resource.Style.Base_Theme_MaterialComponents_CompactMenu;
+			global::XF.Material.Resource.Style.Base_Theme_MaterialComponents_Dialog = global::MoneyNote.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog;
+			global::XF.Material.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge = global::MoneyNote.Droid.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge;
+			global::XF.Material.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert = global::MoneyNote.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert;
+			global::XF.Material.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize = global::MoneyNote.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize;
+			global::XF.Material.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth = global::MoneyNote.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth;
+			global::XF.Material.Resource.Style.Base_Theme_MaterialComponents_Light = global::MoneyNote.Droid.Resource.Style.Base_Theme_MaterialComponents_Light;
+			global::XF.Material.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge = global::MoneyNote.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge;
+			global::XF.Material.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar = global::MoneyNote.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar;
+			global::XF.Material.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::MoneyNote.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::XF.Material.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog = global::MoneyNote.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog;
+			global::XF.Material.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge = global::MoneyNote.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::XF.Material.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert = global::MoneyNote.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert;
+			global::XF.Material.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize = global::MoneyNote.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize;
+			global::XF.Material.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth = global::MoneyNote.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::XF.Material.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog = global::MoneyNote.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog;
+			global::XF.Material.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert = global::MoneyNote.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::XF.Material.Resource.Style.Base_V14_Theme_MaterialComponents = global::MoneyNote.Droid.Resource.Style.Base_V14_Theme_MaterialComponents;
+			global::XF.Material.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge = global::MoneyNote.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge;
+			global::XF.Material.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog = global::MoneyNote.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog;
+			global::XF.Material.Resource.Style.Base_V14_Theme_MaterialComponents_Light = global::MoneyNote.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light;
+			global::XF.Material.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge = global::MoneyNote.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge;
+			global::XF.Material.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::MoneyNote.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::XF.Material.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog = global::MoneyNote.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog;
+			global::XF.Material.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::MoneyNote.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::XF.Material.Resource.Style.Base_V21_Theme_AppCompat = global::MoneyNote.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::XF.Material.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::MoneyNote.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::XF.Material.Resource.Style.Base_V21_Theme_AppCompat_Light = global::MoneyNote.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::XF.Material.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::MoneyNote.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::XF.Material.Resource.Style.Base_V22_Theme_AppCompat = global::MoneyNote.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::XF.Material.Resource.Style.Base_V22_Theme_AppCompat_Light = global::MoneyNote.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::XF.Material.Resource.Style.Base_V23_Theme_AppCompat = global::MoneyNote.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::XF.Material.Resource.Style.Base_V23_Theme_AppCompat_Light = global::MoneyNote.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::XF.Material.Resource.Style.Base_V26_Theme_AppCompat = global::MoneyNote.Droid.Resource.Style.Base_V26_Theme_AppCompat;
+			global::XF.Material.Resource.Style.Base_V26_Theme_AppCompat_Light = global::MoneyNote.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::XF.Material.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::MoneyNote.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::XF.Material.Resource.Style.Base_V28_Theme_AppCompat = global::MoneyNote.Droid.Resource.Style.Base_V28_Theme_AppCompat;
+			global::XF.Material.Resource.Style.Base_V28_Theme_AppCompat_Light = global::MoneyNote.Droid.Resource.Style.Base_V28_Theme_AppCompat_Light;
+			global::XF.Material.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::MoneyNote.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::XF.Material.Resource.Style.Base_V7_Theme_AppCompat = global::MoneyNote.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::XF.Material.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::MoneyNote.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::XF.Material.Resource.Style.Base_V7_Theme_AppCompat_Light = global::MoneyNote.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::XF.Material.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::MoneyNote.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::XF.Material.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::MoneyNote.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::XF.Material.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::MoneyNote.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::XF.Material.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::MoneyNote.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_ActionBar = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_ActionButton = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_ActionMode = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_Button = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_Button_Small = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_EditText = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_ImageButton = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_ListView = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_RatingBar = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_SearchView = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_SeekBar = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_Spinner = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_TextView = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_TextView;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_Toolbar = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::XF.Material.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::MoneyNote.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::XF.Material.Resource.Style.Base_Widget_Design_TabLayout = global::MoneyNote.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::XF.Material.Resource.Style.Base_Widget_MaterialComponents_Chip = global::MoneyNote.Droid.Resource.Style.Base_Widget_MaterialComponents_Chip;
+			global::XF.Material.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText = global::MoneyNote.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText;
+			global::XF.Material.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout = global::MoneyNote.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout;
+			global::XF.Material.Resource.Style.CardView = global::MoneyNote.Droid.Resource.Style.CardView;
+			global::XF.Material.Resource.Style.CardView_Dark = global::MoneyNote.Droid.Resource.Style.CardView_Dark;
+			global::XF.Material.Resource.Style.CardView_Light = global::MoneyNote.Droid.Resource.Style.CardView_Light;
+			global::XF.Material.Resource.Style.Platform_AppCompat = global::MoneyNote.Droid.Resource.Style.Platform_AppCompat;
+			global::XF.Material.Resource.Style.Platform_AppCompat_Light = global::MoneyNote.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::XF.Material.Resource.Style.Platform_MaterialComponents = global::MoneyNote.Droid.Resource.Style.Platform_MaterialComponents;
+			global::XF.Material.Resource.Style.Platform_MaterialComponents_Dialog = global::MoneyNote.Droid.Resource.Style.Platform_MaterialComponents_Dialog;
+			global::XF.Material.Resource.Style.Platform_MaterialComponents_Light = global::MoneyNote.Droid.Resource.Style.Platform_MaterialComponents_Light;
+			global::XF.Material.Resource.Style.Platform_MaterialComponents_Light_Dialog = global::MoneyNote.Droid.Resource.Style.Platform_MaterialComponents_Light_Dialog;
+			global::XF.Material.Resource.Style.Platform_ThemeOverlay_AppCompat = global::MoneyNote.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::XF.Material.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::MoneyNote.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::XF.Material.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::MoneyNote.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::XF.Material.Resource.Style.Platform_V21_AppCompat = global::MoneyNote.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::XF.Material.Resource.Style.Platform_V21_AppCompat_Light = global::MoneyNote.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::XF.Material.Resource.Style.Platform_V25_AppCompat = global::MoneyNote.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::XF.Material.Resource.Style.Platform_V25_AppCompat_Light = global::MoneyNote.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::XF.Material.Resource.Style.Platform_Widget_AppCompat_Spinner = global::MoneyNote.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::XF.Material.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::MoneyNote.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::XF.Material.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::MoneyNote.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::XF.Material.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::MoneyNote.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::XF.Material.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::MoneyNote.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::XF.Material.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::MoneyNote.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::XF.Material.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = global::MoneyNote.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut;
+			global::XF.Material.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = global::MoneyNote.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow;
+			global::XF.Material.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::MoneyNote.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::XF.Material.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = global::MoneyNote.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title;
+			global::XF.Material.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::MoneyNote.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::XF.Material.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::MoneyNote.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::XF.Material.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::MoneyNote.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::XF.Material.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::MoneyNote.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::XF.Material.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::MoneyNote.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::XF.Material.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::MoneyNote.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::XF.Material.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::MoneyNote.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::XF.Material.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::MoneyNote.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Body1 = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Body2 = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Button = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Caption = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Display1 = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Display2 = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Display3 = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Display4 = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Headline = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Inverse = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Large = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Medium = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Menu = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Small = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Subhead = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Title = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Tooltip = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::XF.Material.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::MoneyNote.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::XF.Material.Resource.Style.TextAppearance_Compat_Notification = global::MoneyNote.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::XF.Material.Resource.Style.TextAppearance_Compat_Notification_Info = global::MoneyNote.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::XF.Material.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::MoneyNote.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::XF.Material.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::MoneyNote.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::XF.Material.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::MoneyNote.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::XF.Material.Resource.Style.TextAppearance_Compat_Notification_Media = global::MoneyNote.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::XF.Material.Resource.Style.TextAppearance_Compat_Notification_Time = global::MoneyNote.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::XF.Material.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::MoneyNote.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::XF.Material.Resource.Style.TextAppearance_Compat_Notification_Title = global::MoneyNote.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::XF.Material.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::MoneyNote.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::XF.Material.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::MoneyNote.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::XF.Material.Resource.Style.TextAppearance_Design_Counter = global::MoneyNote.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::XF.Material.Resource.Style.TextAppearance_Design_Counter_Overflow = global::MoneyNote.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::XF.Material.Resource.Style.TextAppearance_Design_Error = global::MoneyNote.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::XF.Material.Resource.Style.TextAppearance_Design_HelperText = global::MoneyNote.Droid.Resource.Style.TextAppearance_Design_HelperText;
+			global::XF.Material.Resource.Style.TextAppearance_Design_Hint = global::MoneyNote.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::XF.Material.Resource.Style.TextAppearance_Design_Snackbar_Message = global::MoneyNote.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::XF.Material.Resource.Style.TextAppearance_Design_Tab = global::MoneyNote.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::XF.Material.Resource.Style.TextAppearance_MaterialComponents_Body1 = global::MoneyNote.Droid.Resource.Style.TextAppearance_MaterialComponents_Body1;
+			global::XF.Material.Resource.Style.TextAppearance_MaterialComponents_Body2 = global::MoneyNote.Droid.Resource.Style.TextAppearance_MaterialComponents_Body2;
+			global::XF.Material.Resource.Style.TextAppearance_MaterialComponents_Button = global::MoneyNote.Droid.Resource.Style.TextAppearance_MaterialComponents_Button;
+			global::XF.Material.Resource.Style.TextAppearance_MaterialComponents_Caption = global::MoneyNote.Droid.Resource.Style.TextAppearance_MaterialComponents_Caption;
+			global::XF.Material.Resource.Style.TextAppearance_MaterialComponents_Chip = global::MoneyNote.Droid.Resource.Style.TextAppearance_MaterialComponents_Chip;
+			global::XF.Material.Resource.Style.TextAppearance_MaterialComponents_Headline1 = global::MoneyNote.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline1;
+			global::XF.Material.Resource.Style.TextAppearance_MaterialComponents_Headline2 = global::MoneyNote.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline2;
+			global::XF.Material.Resource.Style.TextAppearance_MaterialComponents_Headline3 = global::MoneyNote.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline3;
+			global::XF.Material.Resource.Style.TextAppearance_MaterialComponents_Headline4 = global::MoneyNote.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline4;
+			global::XF.Material.Resource.Style.TextAppearance_MaterialComponents_Headline5 = global::MoneyNote.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline5;
+			global::XF.Material.Resource.Style.TextAppearance_MaterialComponents_Headline6 = global::MoneyNote.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline6;
+			global::XF.Material.Resource.Style.TextAppearance_MaterialComponents_Overline = global::MoneyNote.Droid.Resource.Style.TextAppearance_MaterialComponents_Overline;
+			global::XF.Material.Resource.Style.TextAppearance_MaterialComponents_Subtitle1 = global::MoneyNote.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle1;
+			global::XF.Material.Resource.Style.TextAppearance_MaterialComponents_Subtitle2 = global::MoneyNote.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle2;
+			global::XF.Material.Resource.Style.TextAppearance_MaterialComponents_Tab = global::MoneyNote.Droid.Resource.Style.TextAppearance_MaterialComponents_Tab;
+			global::XF.Material.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::MoneyNote.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::XF.Material.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::MoneyNote.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::XF.Material.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::MoneyNote.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::XF.Material.Resource.Style.ThemeOverlay_AppCompat = global::MoneyNote.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::XF.Material.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::MoneyNote.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::XF.Material.Resource.Style.ThemeOverlay_AppCompat_Dark = global::MoneyNote.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::XF.Material.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::MoneyNote.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::XF.Material.Resource.Style.ThemeOverlay_AppCompat_DayNight = global::MoneyNote.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight;
+			global::XF.Material.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar = global::MoneyNote.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar;
+			global::XF.Material.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::MoneyNote.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::XF.Material.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::MoneyNote.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::XF.Material.Resource.Style.ThemeOverlay_AppCompat_Light = global::MoneyNote.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::XF.Material.Resource.Style.ThemeOverlay_MaterialComponents = global::MoneyNote.Droid.Resource.Style.ThemeOverlay_MaterialComponents;
+			global::XF.Material.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar = global::MoneyNote.Droid.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar;
+			global::XF.Material.Resource.Style.ThemeOverlay_MaterialComponents_Dark = global::MoneyNote.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark;
+			global::XF.Material.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar = global::MoneyNote.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar;
+			global::XF.Material.Resource.Style.ThemeOverlay_MaterialComponents_Dialog = global::MoneyNote.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog;
+			global::XF.Material.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert = global::MoneyNote.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::XF.Material.Resource.Style.ThemeOverlay_MaterialComponents_Light = global::MoneyNote.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light;
+			global::XF.Material.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText = global::MoneyNote.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText;
+			global::XF.Material.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = global::MoneyNote.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox;
+			global::XF.Material.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = global::MoneyNote.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::XF.Material.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = global::MoneyNote.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::XF.Material.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::MoneyNote.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::XF.Material.Resource.Style.Theme_AppCompat = global::MoneyNote.Droid.Resource.Style.Theme_AppCompat;
+			global::XF.Material.Resource.Style.Theme_AppCompat_CompactMenu = global::MoneyNote.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::XF.Material.Resource.Style.Theme_AppCompat_DayNight = global::MoneyNote.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::XF.Material.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::MoneyNote.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::XF.Material.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::MoneyNote.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::XF.Material.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::MoneyNote.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::XF.Material.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::MoneyNote.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::XF.Material.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::MoneyNote.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::XF.Material.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::MoneyNote.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::XF.Material.Resource.Style.Theme_AppCompat_Dialog = global::MoneyNote.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::XF.Material.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::MoneyNote.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::XF.Material.Resource.Style.Theme_AppCompat_Dialog_Alert = global::MoneyNote.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::XF.Material.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::MoneyNote.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::XF.Material.Resource.Style.Theme_AppCompat_Light = global::MoneyNote.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::XF.Material.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::MoneyNote.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::XF.Material.Resource.Style.Theme_AppCompat_Light_Dialog = global::MoneyNote.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::XF.Material.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::MoneyNote.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::XF.Material.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::MoneyNote.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::XF.Material.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::MoneyNote.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::XF.Material.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::MoneyNote.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::XF.Material.Resource.Style.Theme_AppCompat_NoActionBar = global::MoneyNote.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::XF.Material.Resource.Style.Theme_Design = global::MoneyNote.Droid.Resource.Style.Theme_Design;
+			global::XF.Material.Resource.Style.Theme_Design_BottomSheetDialog = global::MoneyNote.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::XF.Material.Resource.Style.Theme_Design_Light = global::MoneyNote.Droid.Resource.Style.Theme_Design_Light;
+			global::XF.Material.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::MoneyNote.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::XF.Material.Resource.Style.Theme_Design_Light_NoActionBar = global::MoneyNote.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::XF.Material.Resource.Style.Theme_Design_NoActionBar = global::MoneyNote.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::XF.Material.Resource.Style.Theme_MaterialComponents = global::MoneyNote.Droid.Resource.Style.Theme_MaterialComponents;
+			global::XF.Material.Resource.Style.Theme_MaterialComponents_BottomSheetDialog = global::MoneyNote.Droid.Resource.Style.Theme_MaterialComponents_BottomSheetDialog;
+			global::XF.Material.Resource.Style.Theme_MaterialComponents_Bridge = global::MoneyNote.Droid.Resource.Style.Theme_MaterialComponents_Bridge;
+			global::XF.Material.Resource.Style.Theme_MaterialComponents_CompactMenu = global::MoneyNote.Droid.Resource.Style.Theme_MaterialComponents_CompactMenu;
+			global::XF.Material.Resource.Style.Theme_MaterialComponents_Dialog = global::MoneyNote.Droid.Resource.Style.Theme_MaterialComponents_Dialog;
+			global::XF.Material.Resource.Style.Theme_MaterialComponents_DialogWhenLarge = global::MoneyNote.Droid.Resource.Style.Theme_MaterialComponents_DialogWhenLarge;
+			global::XF.Material.Resource.Style.Theme_MaterialComponents_Dialog_Alert = global::MoneyNote.Droid.Resource.Style.Theme_MaterialComponents_Dialog_Alert;
+			global::XF.Material.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth = global::MoneyNote.Droid.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth;
+			global::XF.Material.Resource.Style.Theme_MaterialComponents_Light = global::MoneyNote.Droid.Resource.Style.Theme_MaterialComponents_Light;
+			global::XF.Material.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog = global::MoneyNote.Droid.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog;
+			global::XF.Material.Resource.Style.Theme_MaterialComponents_Light_Bridge = global::MoneyNote.Droid.Resource.Style.Theme_MaterialComponents_Light_Bridge;
+			global::XF.Material.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar = global::MoneyNote.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar;
+			global::XF.Material.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::MoneyNote.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::XF.Material.Resource.Style.Theme_MaterialComponents_Light_Dialog = global::MoneyNote.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog;
+			global::XF.Material.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge = global::MoneyNote.Droid.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::XF.Material.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert = global::MoneyNote.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert;
+			global::XF.Material.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth = global::MoneyNote.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::XF.Material.Resource.Style.Theme_MaterialComponents_Light_NoActionBar = global::MoneyNote.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar;
+			global::XF.Material.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge = global::MoneyNote.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge;
+			global::XF.Material.Resource.Style.Theme_MaterialComponents_NoActionBar = global::MoneyNote.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar;
+			global::XF.Material.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge = global::MoneyNote.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge;
+			global::XF.Material.Resource.Style.Widget_AppCompat_ActionBar = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::XF.Material.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::XF.Material.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::XF.Material.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::XF.Material.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::XF.Material.Resource.Style.Widget_AppCompat_ActionButton = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::XF.Material.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::XF.Material.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::XF.Material.Resource.Style.Widget_AppCompat_ActionMode = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::XF.Material.Resource.Style.Widget_AppCompat_ActivityChooserView = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::XF.Material.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Button = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::XF.Material.Resource.Style.Widget_AppCompat_ButtonBar = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::XF.Material.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Button_Borderless = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Button_Colored = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Button_Small = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::XF.Material.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::XF.Material.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::XF.Material.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::XF.Material.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::XF.Material.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::XF.Material.Resource.Style.Widget_AppCompat_EditText = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::XF.Material.Resource.Style.Widget_AppCompat_ImageButton = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Light_ActionBar = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Light_ActionButton = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Light_SearchView = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::XF.Material.Resource.Style.Widget_AppCompat_ListMenuView = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::XF.Material.Resource.Style.Widget_AppCompat_ListPopupWindow = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::XF.Material.Resource.Style.Widget_AppCompat_ListView = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::XF.Material.Resource.Style.Widget_AppCompat_ListView_DropDown = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::XF.Material.Resource.Style.Widget_AppCompat_ListView_Menu = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::XF.Material.Resource.Style.Widget_AppCompat_PopupMenu = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::XF.Material.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::XF.Material.Resource.Style.Widget_AppCompat_PopupWindow = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::XF.Material.Resource.Style.Widget_AppCompat_ProgressBar = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::XF.Material.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::XF.Material.Resource.Style.Widget_AppCompat_RatingBar = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::XF.Material.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::XF.Material.Resource.Style.Widget_AppCompat_RatingBar_Small = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::XF.Material.Resource.Style.Widget_AppCompat_SearchView = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::XF.Material.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::XF.Material.Resource.Style.Widget_AppCompat_SeekBar = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::XF.Material.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Spinner = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::XF.Material.Resource.Style.Widget_AppCompat_TextView = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_TextView;
+			global::XF.Material.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Toolbar = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::XF.Material.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::MoneyNote.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::XF.Material.Resource.Style.Widget_Compat_NotificationActionContainer = global::MoneyNote.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::XF.Material.Resource.Style.Widget_Compat_NotificationActionText = global::MoneyNote.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::XF.Material.Resource.Style.Widget_Design_AppBarLayout = global::MoneyNote.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::XF.Material.Resource.Style.Widget_Design_BottomNavigationView = global::MoneyNote.Droid.Resource.Style.Widget_Design_BottomNavigationView;
+			global::XF.Material.Resource.Style.Widget_Design_BottomSheet_Modal = global::MoneyNote.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::XF.Material.Resource.Style.Widget_Design_CollapsingToolbar = global::MoneyNote.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::XF.Material.Resource.Style.Widget_Design_FloatingActionButton = global::MoneyNote.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::XF.Material.Resource.Style.Widget_Design_NavigationView = global::MoneyNote.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::XF.Material.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::MoneyNote.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::XF.Material.Resource.Style.Widget_Design_Snackbar = global::MoneyNote.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::XF.Material.Resource.Style.Widget_Design_TabLayout = global::MoneyNote.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::XF.Material.Resource.Style.Widget_Design_TextInputLayout = global::MoneyNote.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_BottomAppBar = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_BottomNavigationView = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_Button = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_Button;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_Button_Icon = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_Button_Icon;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_Button_TextButton = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_CardView = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_CardView;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_ChipGroup = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_ChipGroup;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_Chip_Action = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_Chip_Action;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_Chip_Choice = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_Chip_Choice;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_Chip_Entry = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_Chip_Entry;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_Chip_Filter = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_Chip_Filter;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_FloatingActionButton = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_FloatingActionButton;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_NavigationView = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_NavigationView;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_Snackbar = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_Snackbar;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_TabLayout = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_TabLayout;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_TabLayout_Colored = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_TabLayout_Colored;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
+			global::XF.Material.Resource.Style.Widget_MaterialComponents_Toolbar = global::MoneyNote.Droid.Resource.Style.Widget_MaterialComponents_Toolbar;
+			global::XF.Material.Resource.Style.Widget_Support_CoordinatorLayout = global::MoneyNote.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::XF.Material.Resource.Styleable.ActionBar = global::MoneyNote.Droid.Resource.Styleable.ActionBar;
+			global::XF.Material.Resource.Styleable.ActionBarLayout = global::MoneyNote.Droid.Resource.Styleable.ActionBarLayout;
+			global::XF.Material.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::MoneyNote.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::XF.Material.Resource.Styleable.ActionBar_background = global::MoneyNote.Droid.Resource.Styleable.ActionBar_background;
+			global::XF.Material.Resource.Styleable.ActionBar_backgroundSplit = global::MoneyNote.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::XF.Material.Resource.Styleable.ActionBar_backgroundStacked = global::MoneyNote.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::XF.Material.Resource.Styleable.ActionBar_contentInsetEnd = global::MoneyNote.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::XF.Material.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::MoneyNote.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::XF.Material.Resource.Styleable.ActionBar_contentInsetLeft = global::MoneyNote.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::XF.Material.Resource.Styleable.ActionBar_contentInsetRight = global::MoneyNote.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::XF.Material.Resource.Styleable.ActionBar_contentInsetStart = global::MoneyNote.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::XF.Material.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::MoneyNote.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::XF.Material.Resource.Styleable.ActionBar_customNavigationLayout = global::MoneyNote.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::XF.Material.Resource.Styleable.ActionBar_displayOptions = global::MoneyNote.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::XF.Material.Resource.Styleable.ActionBar_divider = global::MoneyNote.Droid.Resource.Styleable.ActionBar_divider;
+			global::XF.Material.Resource.Styleable.ActionBar_elevation = global::MoneyNote.Droid.Resource.Styleable.ActionBar_elevation;
+			global::XF.Material.Resource.Styleable.ActionBar_height = global::MoneyNote.Droid.Resource.Styleable.ActionBar_height;
+			global::XF.Material.Resource.Styleable.ActionBar_hideOnContentScroll = global::MoneyNote.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::XF.Material.Resource.Styleable.ActionBar_homeAsUpIndicator = global::MoneyNote.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::XF.Material.Resource.Styleable.ActionBar_homeLayout = global::MoneyNote.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::XF.Material.Resource.Styleable.ActionBar_icon = global::MoneyNote.Droid.Resource.Styleable.ActionBar_icon;
+			global::XF.Material.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::MoneyNote.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::XF.Material.Resource.Styleable.ActionBar_itemPadding = global::MoneyNote.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::XF.Material.Resource.Styleable.ActionBar_logo = global::MoneyNote.Droid.Resource.Styleable.ActionBar_logo;
+			global::XF.Material.Resource.Styleable.ActionBar_navigationMode = global::MoneyNote.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::XF.Material.Resource.Styleable.ActionBar_popupTheme = global::MoneyNote.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::XF.Material.Resource.Styleable.ActionBar_progressBarPadding = global::MoneyNote.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::XF.Material.Resource.Styleable.ActionBar_progressBarStyle = global::MoneyNote.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::XF.Material.Resource.Styleable.ActionBar_subtitle = global::MoneyNote.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::XF.Material.Resource.Styleable.ActionBar_subtitleTextStyle = global::MoneyNote.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::XF.Material.Resource.Styleable.ActionBar_title = global::MoneyNote.Droid.Resource.Styleable.ActionBar_title;
+			global::XF.Material.Resource.Styleable.ActionBar_titleTextStyle = global::MoneyNote.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::XF.Material.Resource.Styleable.ActionMenuItemView = global::MoneyNote.Droid.Resource.Styleable.ActionMenuItemView;
+			global::XF.Material.Resource.Styleable.ActionMenuItemView_android_minWidth = global::MoneyNote.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::XF.Material.Resource.Styleable.ActionMenuView = global::MoneyNote.Droid.Resource.Styleable.ActionMenuView;
+			global::XF.Material.Resource.Styleable.ActionMode = global::MoneyNote.Droid.Resource.Styleable.ActionMode;
+			global::XF.Material.Resource.Styleable.ActionMode_background = global::MoneyNote.Droid.Resource.Styleable.ActionMode_background;
+			global::XF.Material.Resource.Styleable.ActionMode_backgroundSplit = global::MoneyNote.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::XF.Material.Resource.Styleable.ActionMode_closeItemLayout = global::MoneyNote.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::XF.Material.Resource.Styleable.ActionMode_height = global::MoneyNote.Droid.Resource.Styleable.ActionMode_height;
+			global::XF.Material.Resource.Styleable.ActionMode_subtitleTextStyle = global::MoneyNote.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::XF.Material.Resource.Styleable.ActionMode_titleTextStyle = global::MoneyNote.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::XF.Material.Resource.Styleable.ActivityChooserView = global::MoneyNote.Droid.Resource.Styleable.ActivityChooserView;
+			global::XF.Material.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::MoneyNote.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::XF.Material.Resource.Styleable.ActivityChooserView_initialActivityCount = global::MoneyNote.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::XF.Material.Resource.Styleable.AlertDialog = global::MoneyNote.Droid.Resource.Styleable.AlertDialog;
+			global::XF.Material.Resource.Styleable.AlertDialog_android_layout = global::MoneyNote.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::XF.Material.Resource.Styleable.AlertDialog_buttonIconDimen = global::MoneyNote.Droid.Resource.Styleable.AlertDialog_buttonIconDimen;
+			global::XF.Material.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::MoneyNote.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::XF.Material.Resource.Styleable.AlertDialog_listItemLayout = global::MoneyNote.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::XF.Material.Resource.Styleable.AlertDialog_listLayout = global::MoneyNote.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::XF.Material.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::MoneyNote.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::XF.Material.Resource.Styleable.AlertDialog_showTitle = global::MoneyNote.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::XF.Material.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::MoneyNote.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::XF.Material.Resource.Styleable.AnimatedStateListDrawableCompat = global::MoneyNote.Droid.Resource.Styleable.AnimatedStateListDrawableCompat;
+			global::XF.Material.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize = global::MoneyNote.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize;
+			global::XF.Material.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither = global::MoneyNote.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither;
+			global::XF.Material.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration = global::MoneyNote.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration;
+			global::XF.Material.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration = global::MoneyNote.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration;
+			global::XF.Material.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding = global::MoneyNote.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding;
+			global::XF.Material.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible = global::MoneyNote.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible;
+			global::XF.Material.Resource.Styleable.AnimatedStateListDrawableItem = global::MoneyNote.Droid.Resource.Styleable.AnimatedStateListDrawableItem;
+			global::XF.Material.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable = global::MoneyNote.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable;
+			global::XF.Material.Resource.Styleable.AnimatedStateListDrawableItem_android_id = global::MoneyNote.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_id;
+			global::XF.Material.Resource.Styleable.AnimatedStateListDrawableTransition = global::MoneyNote.Droid.Resource.Styleable.AnimatedStateListDrawableTransition;
+			global::XF.Material.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable = global::MoneyNote.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable;
+			global::XF.Material.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId = global::MoneyNote.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId;
+			global::XF.Material.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible = global::MoneyNote.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible;
+			global::XF.Material.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId = global::MoneyNote.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId;
+			global::XF.Material.Resource.Styleable.AppBarLayout = global::MoneyNote.Droid.Resource.Styleable.AppBarLayout;
+			global::XF.Material.Resource.Styleable.AppBarLayoutStates = global::MoneyNote.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::XF.Material.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::MoneyNote.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::XF.Material.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::MoneyNote.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::XF.Material.Resource.Styleable.AppBarLayoutStates_state_liftable = global::MoneyNote.Droid.Resource.Styleable.AppBarLayoutStates_state_liftable;
+			global::XF.Material.Resource.Styleable.AppBarLayoutStates_state_lifted = global::MoneyNote.Droid.Resource.Styleable.AppBarLayoutStates_state_lifted;
+			global::XF.Material.Resource.Styleable.AppBarLayout_android_background = global::MoneyNote.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::XF.Material.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::MoneyNote.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
+			global::XF.Material.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::MoneyNote.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
+			global::XF.Material.Resource.Styleable.AppBarLayout_elevation = global::MoneyNote.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::XF.Material.Resource.Styleable.AppBarLayout_expanded = global::MoneyNote.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::XF.Material.Resource.Styleable.AppBarLayout_Layout = global::MoneyNote.Droid.Resource.Styleable.AppBarLayout_Layout;
+			global::XF.Material.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::MoneyNote.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::XF.Material.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::MoneyNote.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::XF.Material.Resource.Styleable.AppBarLayout_liftOnScroll = global::MoneyNote.Droid.Resource.Styleable.AppBarLayout_liftOnScroll;
+			global::XF.Material.Resource.Styleable.AppCompatImageView = global::MoneyNote.Droid.Resource.Styleable.AppCompatImageView;
+			global::XF.Material.Resource.Styleable.AppCompatImageView_android_src = global::MoneyNote.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::XF.Material.Resource.Styleable.AppCompatImageView_srcCompat = global::MoneyNote.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::XF.Material.Resource.Styleable.AppCompatImageView_tint = global::MoneyNote.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::XF.Material.Resource.Styleable.AppCompatImageView_tintMode = global::MoneyNote.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::XF.Material.Resource.Styleable.AppCompatSeekBar = global::MoneyNote.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::XF.Material.Resource.Styleable.AppCompatSeekBar_android_thumb = global::MoneyNote.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::XF.Material.Resource.Styleable.AppCompatSeekBar_tickMark = global::MoneyNote.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::XF.Material.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::MoneyNote.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::XF.Material.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::MoneyNote.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::XF.Material.Resource.Styleable.AppCompatTextHelper = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::XF.Material.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::XF.Material.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::XF.Material.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::XF.Material.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::XF.Material.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::XF.Material.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::XF.Material.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::XF.Material.Resource.Styleable.AppCompatTextView = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextView;
+			global::XF.Material.Resource.Styleable.AppCompatTextView_android_textAppearance = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::XF.Material.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::XF.Material.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::XF.Material.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::XF.Material.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::XF.Material.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::XF.Material.Resource.Styleable.AppCompatTextView_drawableBottomCompat = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextView_drawableBottomCompat;
+			global::XF.Material.Resource.Styleable.AppCompatTextView_drawableEndCompat = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextView_drawableEndCompat;
+			global::XF.Material.Resource.Styleable.AppCompatTextView_drawableLeftCompat = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextView_drawableLeftCompat;
+			global::XF.Material.Resource.Styleable.AppCompatTextView_drawableRightCompat = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextView_drawableRightCompat;
+			global::XF.Material.Resource.Styleable.AppCompatTextView_drawableStartCompat = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextView_drawableStartCompat;
+			global::XF.Material.Resource.Styleable.AppCompatTextView_drawableTint = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextView_drawableTint;
+			global::XF.Material.Resource.Styleable.AppCompatTextView_drawableTintMode = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextView_drawableTintMode;
+			global::XF.Material.Resource.Styleable.AppCompatTextView_drawableTopCompat = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextView_drawableTopCompat;
+			global::XF.Material.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
+			global::XF.Material.Resource.Styleable.AppCompatTextView_fontFamily = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::XF.Material.Resource.Styleable.AppCompatTextView_fontVariationSettings = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextView_fontVariationSettings;
+			global::XF.Material.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
+			global::XF.Material.Resource.Styleable.AppCompatTextView_lineHeight = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
+			global::XF.Material.Resource.Styleable.AppCompatTextView_textAllCaps = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::XF.Material.Resource.Styleable.AppCompatTextView_textLocale = global::MoneyNote.Droid.Resource.Styleable.AppCompatTextView_textLocale;
+			global::XF.Material.Resource.Styleable.AppCompatTheme = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionBarDivider = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionBarSize = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionBarStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionBarTheme = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionModeBackground = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionModeStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_buttonStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_checkboxStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_colorAccent = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_colorControlActivated = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_colorControlNormal = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_colorError = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_colorError;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_colorPrimary = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_controlBackground = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_dialogCornerRadius = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_dialogCornerRadius;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_dialogTheme = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_dividerVertical = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_editTextBackground = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_editTextColor = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_editTextStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_panelBackground = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_searchViewStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_seekBarStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_spinnerStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_switchStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_toolbarStyle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_viewInflaterClass = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_viewInflaterClass;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_windowActionBar = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::XF.Material.Resource.Styleable.AppCompatTheme_windowNoTitle = global::MoneyNote.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::XF.Material.Resource.Styleable.BottomAppBar = global::MoneyNote.Droid.Resource.Styleable.BottomAppBar;
+			global::XF.Material.Resource.Styleable.BottomAppBar_backgroundTint = global::MoneyNote.Droid.Resource.Styleable.BottomAppBar_backgroundTint;
+			global::XF.Material.Resource.Styleable.BottomAppBar_fabAlignmentMode = global::MoneyNote.Droid.Resource.Styleable.BottomAppBar_fabAlignmentMode;
+			global::XF.Material.Resource.Styleable.BottomAppBar_fabCradleMargin = global::MoneyNote.Droid.Resource.Styleable.BottomAppBar_fabCradleMargin;
+			global::XF.Material.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius = global::MoneyNote.Droid.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius;
+			global::XF.Material.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset = global::MoneyNote.Droid.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset;
+			global::XF.Material.Resource.Styleable.BottomAppBar_hideOnScroll = global::MoneyNote.Droid.Resource.Styleable.BottomAppBar_hideOnScroll;
+			global::XF.Material.Resource.Styleable.BottomNavigationView = global::MoneyNote.Droid.Resource.Styleable.BottomNavigationView;
+			global::XF.Material.Resource.Styleable.BottomNavigationView_elevation = global::MoneyNote.Droid.Resource.Styleable.BottomNavigationView_elevation;
+			global::XF.Material.Resource.Styleable.BottomNavigationView_itemBackground = global::MoneyNote.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::XF.Material.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled = global::MoneyNote.Droid.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled;
+			global::XF.Material.Resource.Styleable.BottomNavigationView_itemIconSize = global::MoneyNote.Droid.Resource.Styleable.BottomNavigationView_itemIconSize;
+			global::XF.Material.Resource.Styleable.BottomNavigationView_itemIconTint = global::MoneyNote.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::XF.Material.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive = global::MoneyNote.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive;
+			global::XF.Material.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive = global::MoneyNote.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive;
+			global::XF.Material.Resource.Styleable.BottomNavigationView_itemTextColor = global::MoneyNote.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::XF.Material.Resource.Styleable.BottomNavigationView_labelVisibilityMode = global::MoneyNote.Droid.Resource.Styleable.BottomNavigationView_labelVisibilityMode;
+			global::XF.Material.Resource.Styleable.BottomNavigationView_menu = global::MoneyNote.Droid.Resource.Styleable.BottomNavigationView_menu;
+			global::XF.Material.Resource.Styleable.BottomSheetBehavior_Layout = global::MoneyNote.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::XF.Material.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents = global::MoneyNote.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents;
+			global::XF.Material.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::MoneyNote.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::XF.Material.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::MoneyNote.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::XF.Material.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::MoneyNote.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::XF.Material.Resource.Styleable.ButtonBarLayout = global::MoneyNote.Droid.Resource.Styleable.ButtonBarLayout;
+			global::XF.Material.Resource.Styleable.ButtonBarLayout_allowStacking = global::MoneyNote.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::XF.Material.Resource.Styleable.CardView = global::MoneyNote.Droid.Resource.Styleable.CardView;
+			global::XF.Material.Resource.Styleable.CardView_android_minHeight = global::MoneyNote.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::XF.Material.Resource.Styleable.CardView_android_minWidth = global::MoneyNote.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::XF.Material.Resource.Styleable.CardView_cardBackgroundColor = global::MoneyNote.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::XF.Material.Resource.Styleable.CardView_cardCornerRadius = global::MoneyNote.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::XF.Material.Resource.Styleable.CardView_cardElevation = global::MoneyNote.Droid.Resource.Styleable.CardView_cardElevation;
+			global::XF.Material.Resource.Styleable.CardView_cardMaxElevation = global::MoneyNote.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::XF.Material.Resource.Styleable.CardView_cardPreventCornerOverlap = global::MoneyNote.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::XF.Material.Resource.Styleable.CardView_cardUseCompatPadding = global::MoneyNote.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::XF.Material.Resource.Styleable.CardView_contentPadding = global::MoneyNote.Droid.Resource.Styleable.CardView_contentPadding;
+			global::XF.Material.Resource.Styleable.CardView_contentPaddingBottom = global::MoneyNote.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::XF.Material.Resource.Styleable.CardView_contentPaddingLeft = global::MoneyNote.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::XF.Material.Resource.Styleable.CardView_contentPaddingRight = global::MoneyNote.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::XF.Material.Resource.Styleable.CardView_contentPaddingTop = global::MoneyNote.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::XF.Material.Resource.Styleable.Chip = global::MoneyNote.Droid.Resource.Styleable.Chip;
+			global::XF.Material.Resource.Styleable.ChipGroup = global::MoneyNote.Droid.Resource.Styleable.ChipGroup;
+			global::XF.Material.Resource.Styleable.ChipGroup_checkedChip = global::MoneyNote.Droid.Resource.Styleable.ChipGroup_checkedChip;
+			global::XF.Material.Resource.Styleable.ChipGroup_chipSpacing = global::MoneyNote.Droid.Resource.Styleable.ChipGroup_chipSpacing;
+			global::XF.Material.Resource.Styleable.ChipGroup_chipSpacingHorizontal = global::MoneyNote.Droid.Resource.Styleable.ChipGroup_chipSpacingHorizontal;
+			global::XF.Material.Resource.Styleable.ChipGroup_chipSpacingVertical = global::MoneyNote.Droid.Resource.Styleable.ChipGroup_chipSpacingVertical;
+			global::XF.Material.Resource.Styleable.ChipGroup_singleLine = global::MoneyNote.Droid.Resource.Styleable.ChipGroup_singleLine;
+			global::XF.Material.Resource.Styleable.ChipGroup_singleSelection = global::MoneyNote.Droid.Resource.Styleable.ChipGroup_singleSelection;
+			global::XF.Material.Resource.Styleable.Chip_android_checkable = global::MoneyNote.Droid.Resource.Styleable.Chip_android_checkable;
+			global::XF.Material.Resource.Styleable.Chip_android_ellipsize = global::MoneyNote.Droid.Resource.Styleable.Chip_android_ellipsize;
+			global::XF.Material.Resource.Styleable.Chip_android_maxWidth = global::MoneyNote.Droid.Resource.Styleable.Chip_android_maxWidth;
+			global::XF.Material.Resource.Styleable.Chip_android_text = global::MoneyNote.Droid.Resource.Styleable.Chip_android_text;
+			global::XF.Material.Resource.Styleable.Chip_android_textAppearance = global::MoneyNote.Droid.Resource.Styleable.Chip_android_textAppearance;
+			global::XF.Material.Resource.Styleable.Chip_checkedIcon = global::MoneyNote.Droid.Resource.Styleable.Chip_checkedIcon;
+			global::XF.Material.Resource.Styleable.Chip_checkedIconEnabled = global::MoneyNote.Droid.Resource.Styleable.Chip_checkedIconEnabled;
+			global::XF.Material.Resource.Styleable.Chip_checkedIconVisible = global::MoneyNote.Droid.Resource.Styleable.Chip_checkedIconVisible;
+			global::XF.Material.Resource.Styleable.Chip_chipBackgroundColor = global::MoneyNote.Droid.Resource.Styleable.Chip_chipBackgroundColor;
+			global::XF.Material.Resource.Styleable.Chip_chipCornerRadius = global::MoneyNote.Droid.Resource.Styleable.Chip_chipCornerRadius;
+			global::XF.Material.Resource.Styleable.Chip_chipEndPadding = global::MoneyNote.Droid.Resource.Styleable.Chip_chipEndPadding;
+			global::XF.Material.Resource.Styleable.Chip_chipIcon = global::MoneyNote.Droid.Resource.Styleable.Chip_chipIcon;
+			global::XF.Material.Resource.Styleable.Chip_chipIconEnabled = global::MoneyNote.Droid.Resource.Styleable.Chip_chipIconEnabled;
+			global::XF.Material.Resource.Styleable.Chip_chipIconSize = global::MoneyNote.Droid.Resource.Styleable.Chip_chipIconSize;
+			global::XF.Material.Resource.Styleable.Chip_chipIconTint = global::MoneyNote.Droid.Resource.Styleable.Chip_chipIconTint;
+			global::XF.Material.Resource.Styleable.Chip_chipIconVisible = global::MoneyNote.Droid.Resource.Styleable.Chip_chipIconVisible;
+			global::XF.Material.Resource.Styleable.Chip_chipMinHeight = global::MoneyNote.Droid.Resource.Styleable.Chip_chipMinHeight;
+			global::XF.Material.Resource.Styleable.Chip_chipStartPadding = global::MoneyNote.Droid.Resource.Styleable.Chip_chipStartPadding;
+			global::XF.Material.Resource.Styleable.Chip_chipStrokeColor = global::MoneyNote.Droid.Resource.Styleable.Chip_chipStrokeColor;
+			global::XF.Material.Resource.Styleable.Chip_chipStrokeWidth = global::MoneyNote.Droid.Resource.Styleable.Chip_chipStrokeWidth;
+			global::XF.Material.Resource.Styleable.Chip_closeIcon = global::MoneyNote.Droid.Resource.Styleable.Chip_closeIcon;
+			global::XF.Material.Resource.Styleable.Chip_closeIconEnabled = global::MoneyNote.Droid.Resource.Styleable.Chip_closeIconEnabled;
+			global::XF.Material.Resource.Styleable.Chip_closeIconEndPadding = global::MoneyNote.Droid.Resource.Styleable.Chip_closeIconEndPadding;
+			global::XF.Material.Resource.Styleable.Chip_closeIconSize = global::MoneyNote.Droid.Resource.Styleable.Chip_closeIconSize;
+			global::XF.Material.Resource.Styleable.Chip_closeIconStartPadding = global::MoneyNote.Droid.Resource.Styleable.Chip_closeIconStartPadding;
+			global::XF.Material.Resource.Styleable.Chip_closeIconTint = global::MoneyNote.Droid.Resource.Styleable.Chip_closeIconTint;
+			global::XF.Material.Resource.Styleable.Chip_closeIconVisible = global::MoneyNote.Droid.Resource.Styleable.Chip_closeIconVisible;
+			global::XF.Material.Resource.Styleable.Chip_hideMotionSpec = global::MoneyNote.Droid.Resource.Styleable.Chip_hideMotionSpec;
+			global::XF.Material.Resource.Styleable.Chip_iconEndPadding = global::MoneyNote.Droid.Resource.Styleable.Chip_iconEndPadding;
+			global::XF.Material.Resource.Styleable.Chip_iconStartPadding = global::MoneyNote.Droid.Resource.Styleable.Chip_iconStartPadding;
+			global::XF.Material.Resource.Styleable.Chip_rippleColor = global::MoneyNote.Droid.Resource.Styleable.Chip_rippleColor;
+			global::XF.Material.Resource.Styleable.Chip_showMotionSpec = global::MoneyNote.Droid.Resource.Styleable.Chip_showMotionSpec;
+			global::XF.Material.Resource.Styleable.Chip_textEndPadding = global::MoneyNote.Droid.Resource.Styleable.Chip_textEndPadding;
+			global::XF.Material.Resource.Styleable.Chip_textStartPadding = global::MoneyNote.Droid.Resource.Styleable.Chip_textStartPadding;
+			global::XF.Material.Resource.Styleable.CollapsingToolbarLayout = global::MoneyNote.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::XF.Material.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::MoneyNote.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::XF.Material.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::MoneyNote.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::XF.Material.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::MoneyNote.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::XF.Material.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::MoneyNote.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::XF.Material.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::MoneyNote.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::XF.Material.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::MoneyNote.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::XF.Material.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::MoneyNote.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::XF.Material.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::MoneyNote.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::XF.Material.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::MoneyNote.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::XF.Material.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::MoneyNote.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::XF.Material.Resource.Styleable.CollapsingToolbarLayout_Layout = global::MoneyNote.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::XF.Material.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::MoneyNote.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::XF.Material.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::MoneyNote.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::XF.Material.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::MoneyNote.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::XF.Material.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::MoneyNote.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::XF.Material.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::MoneyNote.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::XF.Material.Resource.Styleable.CollapsingToolbarLayout_title = global::MoneyNote.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::XF.Material.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::MoneyNote.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::XF.Material.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::MoneyNote.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::XF.Material.Resource.Styleable.ColorStateListItem = global::MoneyNote.Droid.Resource.Styleable.ColorStateListItem;
+			global::XF.Material.Resource.Styleable.ColorStateListItem_alpha = global::MoneyNote.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::XF.Material.Resource.Styleable.ColorStateListItem_android_alpha = global::MoneyNote.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::XF.Material.Resource.Styleable.ColorStateListItem_android_color = global::MoneyNote.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::XF.Material.Resource.Styleable.CompoundButton = global::MoneyNote.Droid.Resource.Styleable.CompoundButton;
+			global::XF.Material.Resource.Styleable.CompoundButton_android_button = global::MoneyNote.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::XF.Material.Resource.Styleable.CompoundButton_buttonCompat = global::MoneyNote.Droid.Resource.Styleable.CompoundButton_buttonCompat;
+			global::XF.Material.Resource.Styleable.CompoundButton_buttonTint = global::MoneyNote.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::XF.Material.Resource.Styleable.CompoundButton_buttonTintMode = global::MoneyNote.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::XF.Material.Resource.Styleable.CoordinatorLayout = global::MoneyNote.Droid.Resource.Styleable.CoordinatorLayout;
+			global::XF.Material.Resource.Styleable.CoordinatorLayout_keylines = global::MoneyNote.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::XF.Material.Resource.Styleable.CoordinatorLayout_Layout = global::MoneyNote.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::XF.Material.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::MoneyNote.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::XF.Material.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::MoneyNote.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::XF.Material.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::MoneyNote.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::XF.Material.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::MoneyNote.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::XF.Material.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::MoneyNote.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::XF.Material.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::MoneyNote.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::XF.Material.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::MoneyNote.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::XF.Material.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::MoneyNote.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::XF.Material.Resource.Styleable.DesignTheme = global::MoneyNote.Droid.Resource.Styleable.DesignTheme;
+			global::XF.Material.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::MoneyNote.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
+			global::XF.Material.Resource.Styleable.DesignTheme_bottomSheetStyle = global::MoneyNote.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
+			global::XF.Material.Resource.Styleable.DrawerArrowToggle = global::MoneyNote.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::XF.Material.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::MoneyNote.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::XF.Material.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::MoneyNote.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::XF.Material.Resource.Styleable.DrawerArrowToggle_barLength = global::MoneyNote.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::XF.Material.Resource.Styleable.DrawerArrowToggle_color = global::MoneyNote.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::XF.Material.Resource.Styleable.DrawerArrowToggle_drawableSize = global::MoneyNote.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::XF.Material.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::MoneyNote.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::XF.Material.Resource.Styleable.DrawerArrowToggle_spinBars = global::MoneyNote.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::XF.Material.Resource.Styleable.DrawerArrowToggle_thickness = global::MoneyNote.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::XF.Material.Resource.Styleable.FloatingActionButton = global::MoneyNote.Droid.Resource.Styleable.FloatingActionButton;
+			global::XF.Material.Resource.Styleable.FloatingActionButton_backgroundTint = global::MoneyNote.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::XF.Material.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::MoneyNote.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::XF.Material.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::MoneyNote.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::XF.Material.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::MoneyNote.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::XF.Material.Resource.Styleable.FloatingActionButton_borderWidth = global::MoneyNote.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::XF.Material.Resource.Styleable.FloatingActionButton_elevation = global::MoneyNote.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::XF.Material.Resource.Styleable.FloatingActionButton_fabCustomSize = global::MoneyNote.Droid.Resource.Styleable.FloatingActionButton_fabCustomSize;
+			global::XF.Material.Resource.Styleable.FloatingActionButton_fabSize = global::MoneyNote.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::XF.Material.Resource.Styleable.FloatingActionButton_hideMotionSpec = global::MoneyNote.Droid.Resource.Styleable.FloatingActionButton_hideMotionSpec;
+			global::XF.Material.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ = global::MoneyNote.Droid.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ;
+			global::XF.Material.Resource.Styleable.FloatingActionButton_maxImageSize = global::MoneyNote.Droid.Resource.Styleable.FloatingActionButton_maxImageSize;
+			global::XF.Material.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::MoneyNote.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::XF.Material.Resource.Styleable.FloatingActionButton_rippleColor = global::MoneyNote.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::XF.Material.Resource.Styleable.FloatingActionButton_showMotionSpec = global::MoneyNote.Droid.Resource.Styleable.FloatingActionButton_showMotionSpec;
+			global::XF.Material.Resource.Styleable.FloatingActionButton_useCompatPadding = global::MoneyNote.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::XF.Material.Resource.Styleable.FlowLayout = global::MoneyNote.Droid.Resource.Styleable.FlowLayout;
+			global::XF.Material.Resource.Styleable.FlowLayout_itemSpacing = global::MoneyNote.Droid.Resource.Styleable.FlowLayout_itemSpacing;
+			global::XF.Material.Resource.Styleable.FlowLayout_lineSpacing = global::MoneyNote.Droid.Resource.Styleable.FlowLayout_lineSpacing;
+			global::XF.Material.Resource.Styleable.FontFamily = global::MoneyNote.Droid.Resource.Styleable.FontFamily;
+			global::XF.Material.Resource.Styleable.FontFamilyFont = global::MoneyNote.Droid.Resource.Styleable.FontFamilyFont;
+			global::XF.Material.Resource.Styleable.FontFamilyFont_android_font = global::MoneyNote.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::XF.Material.Resource.Styleable.FontFamilyFont_android_fontStyle = global::MoneyNote.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::XF.Material.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::MoneyNote.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::XF.Material.Resource.Styleable.FontFamilyFont_android_fontWeight = global::MoneyNote.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::XF.Material.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::MoneyNote.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::XF.Material.Resource.Styleable.FontFamilyFont_font = global::MoneyNote.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::XF.Material.Resource.Styleable.FontFamilyFont_fontStyle = global::MoneyNote.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::XF.Material.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::MoneyNote.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::XF.Material.Resource.Styleable.FontFamilyFont_fontWeight = global::MoneyNote.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::XF.Material.Resource.Styleable.FontFamilyFont_ttcIndex = global::MoneyNote.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::XF.Material.Resource.Styleable.FontFamily_fontProviderAuthority = global::MoneyNote.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::XF.Material.Resource.Styleable.FontFamily_fontProviderCerts = global::MoneyNote.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::XF.Material.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::MoneyNote.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::XF.Material.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::MoneyNote.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::XF.Material.Resource.Styleable.FontFamily_fontProviderPackage = global::MoneyNote.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::XF.Material.Resource.Styleable.FontFamily_fontProviderQuery = global::MoneyNote.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::XF.Material.Resource.Styleable.ForegroundLinearLayout = global::MoneyNote.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::XF.Material.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::MoneyNote.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::XF.Material.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::MoneyNote.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::XF.Material.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::MoneyNote.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::XF.Material.Resource.Styleable.GradientColor = global::MoneyNote.Droid.Resource.Styleable.GradientColor;
+			global::XF.Material.Resource.Styleable.GradientColorItem = global::MoneyNote.Droid.Resource.Styleable.GradientColorItem;
+			global::XF.Material.Resource.Styleable.GradientColorItem_android_color = global::MoneyNote.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::XF.Material.Resource.Styleable.GradientColorItem_android_offset = global::MoneyNote.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::XF.Material.Resource.Styleable.GradientColor_android_centerColor = global::MoneyNote.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::XF.Material.Resource.Styleable.GradientColor_android_centerX = global::MoneyNote.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::XF.Material.Resource.Styleable.GradientColor_android_centerY = global::MoneyNote.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::XF.Material.Resource.Styleable.GradientColor_android_endColor = global::MoneyNote.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::XF.Material.Resource.Styleable.GradientColor_android_endX = global::MoneyNote.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::XF.Material.Resource.Styleable.GradientColor_android_endY = global::MoneyNote.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::XF.Material.Resource.Styleable.GradientColor_android_gradientRadius = global::MoneyNote.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::XF.Material.Resource.Styleable.GradientColor_android_startColor = global::MoneyNote.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::XF.Material.Resource.Styleable.GradientColor_android_startX = global::MoneyNote.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::XF.Material.Resource.Styleable.GradientColor_android_startY = global::MoneyNote.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::XF.Material.Resource.Styleable.GradientColor_android_tileMode = global::MoneyNote.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::XF.Material.Resource.Styleable.GradientColor_android_type = global::MoneyNote.Droid.Resource.Styleable.GradientColor_android_type;
+			global::XF.Material.Resource.Styleable.LinearLayoutCompat = global::MoneyNote.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::XF.Material.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::MoneyNote.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::XF.Material.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::MoneyNote.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::XF.Material.Resource.Styleable.LinearLayoutCompat_android_gravity = global::MoneyNote.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::XF.Material.Resource.Styleable.LinearLayoutCompat_android_orientation = global::MoneyNote.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::XF.Material.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::MoneyNote.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::XF.Material.Resource.Styleable.LinearLayoutCompat_divider = global::MoneyNote.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::XF.Material.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::MoneyNote.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::XF.Material.Resource.Styleable.LinearLayoutCompat_Layout = global::MoneyNote.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::XF.Material.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::MoneyNote.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::XF.Material.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::MoneyNote.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::XF.Material.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::MoneyNote.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::XF.Material.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::MoneyNote.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::XF.Material.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::MoneyNote.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::XF.Material.Resource.Styleable.LinearLayoutCompat_showDividers = global::MoneyNote.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::XF.Material.Resource.Styleable.ListPopupWindow = global::MoneyNote.Droid.Resource.Styleable.ListPopupWindow;
+			global::XF.Material.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::MoneyNote.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::XF.Material.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::MoneyNote.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::XF.Material.Resource.Styleable.LottieAnimationView = global::MoneyNote.Droid.Resource.Styleable.LottieAnimationView;
+			global::XF.Material.Resource.Styleable.LottieAnimationView_lottie_autoPlay = global::MoneyNote.Droid.Resource.Styleable.LottieAnimationView_lottie_autoPlay;
+			global::XF.Material.Resource.Styleable.LottieAnimationView_lottie_cacheComposition = global::MoneyNote.Droid.Resource.Styleable.LottieAnimationView_lottie_cacheComposition;
+			global::XF.Material.Resource.Styleable.LottieAnimationView_lottie_colorFilter = global::MoneyNote.Droid.Resource.Styleable.LottieAnimationView_lottie_colorFilter;
+			global::XF.Material.Resource.Styleable.LottieAnimationView_lottie_enableMergePathsForKitKatAndAbove = global::MoneyNote.Droid.Resource.Styleable.LottieAnimationView_lottie_enableMergePathsForKitKatAndAbove;
+			global::XF.Material.Resource.Styleable.LottieAnimationView_lottie_fallbackRes = global::MoneyNote.Droid.Resource.Styleable.LottieAnimationView_lottie_fallbackRes;
+			global::XF.Material.Resource.Styleable.LottieAnimationView_lottie_fileName = global::MoneyNote.Droid.Resource.Styleable.LottieAnimationView_lottie_fileName;
+			global::XF.Material.Resource.Styleable.LottieAnimationView_lottie_imageAssetsFolder = global::MoneyNote.Droid.Resource.Styleable.LottieAnimationView_lottie_imageAssetsFolder;
+			global::XF.Material.Resource.Styleable.LottieAnimationView_lottie_loop = global::MoneyNote.Droid.Resource.Styleable.LottieAnimationView_lottie_loop;
+			global::XF.Material.Resource.Styleable.LottieAnimationView_lottie_progress = global::MoneyNote.Droid.Resource.Styleable.LottieAnimationView_lottie_progress;
+			global::XF.Material.Resource.Styleable.LottieAnimationView_lottie_rawRes = global::MoneyNote.Droid.Resource.Styleable.LottieAnimationView_lottie_rawRes;
+			global::XF.Material.Resource.Styleable.LottieAnimationView_lottie_renderMode = global::MoneyNote.Droid.Resource.Styleable.LottieAnimationView_lottie_renderMode;
+			global::XF.Material.Resource.Styleable.LottieAnimationView_lottie_repeatCount = global::MoneyNote.Droid.Resource.Styleable.LottieAnimationView_lottie_repeatCount;
+			global::XF.Material.Resource.Styleable.LottieAnimationView_lottie_repeatMode = global::MoneyNote.Droid.Resource.Styleable.LottieAnimationView_lottie_repeatMode;
+			global::XF.Material.Resource.Styleable.LottieAnimationView_lottie_scale = global::MoneyNote.Droid.Resource.Styleable.LottieAnimationView_lottie_scale;
+			global::XF.Material.Resource.Styleable.LottieAnimationView_lottie_speed = global::MoneyNote.Droid.Resource.Styleable.LottieAnimationView_lottie_speed;
+			global::XF.Material.Resource.Styleable.LottieAnimationView_lottie_url = global::MoneyNote.Droid.Resource.Styleable.LottieAnimationView_lottie_url;
+			global::XF.Material.Resource.Styleable.MaterialButton = global::MoneyNote.Droid.Resource.Styleable.MaterialButton;
+			global::XF.Material.Resource.Styleable.MaterialButton_android_insetBottom = global::MoneyNote.Droid.Resource.Styleable.MaterialButton_android_insetBottom;
+			global::XF.Material.Resource.Styleable.MaterialButton_android_insetLeft = global::MoneyNote.Droid.Resource.Styleable.MaterialButton_android_insetLeft;
+			global::XF.Material.Resource.Styleable.MaterialButton_android_insetRight = global::MoneyNote.Droid.Resource.Styleable.MaterialButton_android_insetRight;
+			global::XF.Material.Resource.Styleable.MaterialButton_android_insetTop = global::MoneyNote.Droid.Resource.Styleable.MaterialButton_android_insetTop;
+			global::XF.Material.Resource.Styleable.MaterialButton_backgroundTint = global::MoneyNote.Droid.Resource.Styleable.MaterialButton_backgroundTint;
+			global::XF.Material.Resource.Styleable.MaterialButton_backgroundTintMode = global::MoneyNote.Droid.Resource.Styleable.MaterialButton_backgroundTintMode;
+			global::XF.Material.Resource.Styleable.MaterialButton_cornerRadius = global::MoneyNote.Droid.Resource.Styleable.MaterialButton_cornerRadius;
+			global::XF.Material.Resource.Styleable.MaterialButton_icon = global::MoneyNote.Droid.Resource.Styleable.MaterialButton_icon;
+			global::XF.Material.Resource.Styleable.MaterialButton_iconGravity = global::MoneyNote.Droid.Resource.Styleable.MaterialButton_iconGravity;
+			global::XF.Material.Resource.Styleable.MaterialButton_iconPadding = global::MoneyNote.Droid.Resource.Styleable.MaterialButton_iconPadding;
+			global::XF.Material.Resource.Styleable.MaterialButton_iconSize = global::MoneyNote.Droid.Resource.Styleable.MaterialButton_iconSize;
+			global::XF.Material.Resource.Styleable.MaterialButton_iconTint = global::MoneyNote.Droid.Resource.Styleable.MaterialButton_iconTint;
+			global::XF.Material.Resource.Styleable.MaterialButton_iconTintMode = global::MoneyNote.Droid.Resource.Styleable.MaterialButton_iconTintMode;
+			global::XF.Material.Resource.Styleable.MaterialButton_rippleColor = global::MoneyNote.Droid.Resource.Styleable.MaterialButton_rippleColor;
+			global::XF.Material.Resource.Styleable.MaterialButton_strokeColor = global::MoneyNote.Droid.Resource.Styleable.MaterialButton_strokeColor;
+			global::XF.Material.Resource.Styleable.MaterialButton_strokeWidth = global::MoneyNote.Droid.Resource.Styleable.MaterialButton_strokeWidth;
+			global::XF.Material.Resource.Styleable.MaterialCardView = global::MoneyNote.Droid.Resource.Styleable.MaterialCardView;
+			global::XF.Material.Resource.Styleable.MaterialCardView_strokeColor = global::MoneyNote.Droid.Resource.Styleable.MaterialCardView_strokeColor;
+			global::XF.Material.Resource.Styleable.MaterialCardView_strokeWidth = global::MoneyNote.Droid.Resource.Styleable.MaterialCardView_strokeWidth;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_bottomSheetDialogTheme = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetDialogTheme;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_bottomSheetStyle = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetStyle;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_chipGroupStyle = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_chipGroupStyle;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_chipStandaloneStyle = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_chipStandaloneStyle;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_chipStyle = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_chipStyle;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_colorAccent = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_colorAccent;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_colorBackgroundFloating = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_colorBackgroundFloating;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_colorPrimary = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimary;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_colorPrimaryDark = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimaryDark;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_colorSecondary = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_colorSecondary;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_editTextStyle = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_editTextStyle;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_floatingActionButtonStyle = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_floatingActionButtonStyle;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_materialButtonStyle = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_materialButtonStyle;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_materialCardViewStyle = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_materialCardViewStyle;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_navigationViewStyle = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_navigationViewStyle;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_scrimBackground = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_scrimBackground;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_snackbarButtonStyle = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_snackbarButtonStyle;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_tabStyle = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_tabStyle;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody1 = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody1;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody2 = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody2;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_textAppearanceButton = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceButton;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_textAppearanceCaption = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceCaption;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline1 = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline1;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline2 = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline2;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline3 = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline3;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline4 = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline4;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline5 = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline5;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline6 = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline6;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_textAppearanceOverline = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceOverline;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle1 = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle1;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle2 = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle2;
+			global::XF.Material.Resource.Styleable.MaterialComponentsTheme_textInputStyle = global::MoneyNote.Droid.Resource.Styleable.MaterialComponentsTheme_textInputStyle;
+			global::XF.Material.Resource.Styleable.MenuGroup = global::MoneyNote.Droid.Resource.Styleable.MenuGroup;
+			global::XF.Material.Resource.Styleable.MenuGroup_android_checkableBehavior = global::MoneyNote.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::XF.Material.Resource.Styleable.MenuGroup_android_enabled = global::MoneyNote.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::XF.Material.Resource.Styleable.MenuGroup_android_id = global::MoneyNote.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::XF.Material.Resource.Styleable.MenuGroup_android_menuCategory = global::MoneyNote.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::XF.Material.Resource.Styleable.MenuGroup_android_orderInCategory = global::MoneyNote.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::XF.Material.Resource.Styleable.MenuGroup_android_visible = global::MoneyNote.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::XF.Material.Resource.Styleable.MenuItem = global::MoneyNote.Droid.Resource.Styleable.MenuItem;
+			global::XF.Material.Resource.Styleable.MenuItem_actionLayout = global::MoneyNote.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::XF.Material.Resource.Styleable.MenuItem_actionProviderClass = global::MoneyNote.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::XF.Material.Resource.Styleable.MenuItem_actionViewClass = global::MoneyNote.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::XF.Material.Resource.Styleable.MenuItem_alphabeticModifiers = global::MoneyNote.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::XF.Material.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::MoneyNote.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::XF.Material.Resource.Styleable.MenuItem_android_checkable = global::MoneyNote.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::XF.Material.Resource.Styleable.MenuItem_android_checked = global::MoneyNote.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::XF.Material.Resource.Styleable.MenuItem_android_enabled = global::MoneyNote.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::XF.Material.Resource.Styleable.MenuItem_android_icon = global::MoneyNote.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::XF.Material.Resource.Styleable.MenuItem_android_id = global::MoneyNote.Droid.Resource.Styleable.MenuItem_android_id;
+			global::XF.Material.Resource.Styleable.MenuItem_android_menuCategory = global::MoneyNote.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::XF.Material.Resource.Styleable.MenuItem_android_numericShortcut = global::MoneyNote.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::XF.Material.Resource.Styleable.MenuItem_android_onClick = global::MoneyNote.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::XF.Material.Resource.Styleable.MenuItem_android_orderInCategory = global::MoneyNote.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::XF.Material.Resource.Styleable.MenuItem_android_title = global::MoneyNote.Droid.Resource.Styleable.MenuItem_android_title;
+			global::XF.Material.Resource.Styleable.MenuItem_android_titleCondensed = global::MoneyNote.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::XF.Material.Resource.Styleable.MenuItem_android_visible = global::MoneyNote.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::XF.Material.Resource.Styleable.MenuItem_contentDescription = global::MoneyNote.Droid.Resource.Styleable.MenuItem_contentDescription;
+			global::XF.Material.Resource.Styleable.MenuItem_iconTint = global::MoneyNote.Droid.Resource.Styleable.MenuItem_iconTint;
+			global::XF.Material.Resource.Styleable.MenuItem_iconTintMode = global::MoneyNote.Droid.Resource.Styleable.MenuItem_iconTintMode;
+			global::XF.Material.Resource.Styleable.MenuItem_numericModifiers = global::MoneyNote.Droid.Resource.Styleable.MenuItem_numericModifiers;
+			global::XF.Material.Resource.Styleable.MenuItem_showAsAction = global::MoneyNote.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::XF.Material.Resource.Styleable.MenuItem_tooltipText = global::MoneyNote.Droid.Resource.Styleable.MenuItem_tooltipText;
+			global::XF.Material.Resource.Styleable.MenuView = global::MoneyNote.Droid.Resource.Styleable.MenuView;
+			global::XF.Material.Resource.Styleable.MenuView_android_headerBackground = global::MoneyNote.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::XF.Material.Resource.Styleable.MenuView_android_horizontalDivider = global::MoneyNote.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::XF.Material.Resource.Styleable.MenuView_android_itemBackground = global::MoneyNote.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::XF.Material.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::MoneyNote.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::XF.Material.Resource.Styleable.MenuView_android_itemTextAppearance = global::MoneyNote.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::XF.Material.Resource.Styleable.MenuView_android_verticalDivider = global::MoneyNote.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::XF.Material.Resource.Styleable.MenuView_android_windowAnimationStyle = global::MoneyNote.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::XF.Material.Resource.Styleable.MenuView_preserveIconSpacing = global::MoneyNote.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::XF.Material.Resource.Styleable.MenuView_subMenuArrow = global::MoneyNote.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::XF.Material.Resource.Styleable.NavigationView = global::MoneyNote.Droid.Resource.Styleable.NavigationView;
+			global::XF.Material.Resource.Styleable.NavigationView_android_background = global::MoneyNote.Droid.Resource.Styleable.NavigationView_android_background;
+			global::XF.Material.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::MoneyNote.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::XF.Material.Resource.Styleable.NavigationView_android_maxWidth = global::MoneyNote.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::XF.Material.Resource.Styleable.NavigationView_elevation = global::MoneyNote.Droid.Resource.Styleable.NavigationView_elevation;
+			global::XF.Material.Resource.Styleable.NavigationView_headerLayout = global::MoneyNote.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::XF.Material.Resource.Styleable.NavigationView_itemBackground = global::MoneyNote.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::XF.Material.Resource.Styleable.NavigationView_itemHorizontalPadding = global::MoneyNote.Droid.Resource.Styleable.NavigationView_itemHorizontalPadding;
+			global::XF.Material.Resource.Styleable.NavigationView_itemIconPadding = global::MoneyNote.Droid.Resource.Styleable.NavigationView_itemIconPadding;
+			global::XF.Material.Resource.Styleable.NavigationView_itemIconTint = global::MoneyNote.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::XF.Material.Resource.Styleable.NavigationView_itemTextAppearance = global::MoneyNote.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::XF.Material.Resource.Styleable.NavigationView_itemTextColor = global::MoneyNote.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::XF.Material.Resource.Styleable.NavigationView_menu = global::MoneyNote.Droid.Resource.Styleable.NavigationView_menu;
+			global::XF.Material.Resource.Styleable.PopupWindow = global::MoneyNote.Droid.Resource.Styleable.PopupWindow;
+			global::XF.Material.Resource.Styleable.PopupWindowBackgroundState = global::MoneyNote.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::XF.Material.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::MoneyNote.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::XF.Material.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::MoneyNote.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::XF.Material.Resource.Styleable.PopupWindow_android_popupBackground = global::MoneyNote.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::XF.Material.Resource.Styleable.PopupWindow_overlapAnchor = global::MoneyNote.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::XF.Material.Resource.Styleable.RecycleListView = global::MoneyNote.Droid.Resource.Styleable.RecycleListView;
+			global::XF.Material.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::MoneyNote.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::XF.Material.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::MoneyNote.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::XF.Material.Resource.Styleable.RecyclerView = global::MoneyNote.Droid.Resource.Styleable.RecyclerView;
+			global::XF.Material.Resource.Styleable.RecyclerView_android_clipToPadding = global::MoneyNote.Droid.Resource.Styleable.RecyclerView_android_clipToPadding;
+			global::XF.Material.Resource.Styleable.RecyclerView_android_descendantFocusability = global::MoneyNote.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::XF.Material.Resource.Styleable.RecyclerView_android_orientation = global::MoneyNote.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::XF.Material.Resource.Styleable.RecyclerView_fastScrollEnabled = global::MoneyNote.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::XF.Material.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::MoneyNote.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::XF.Material.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::MoneyNote.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::XF.Material.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::MoneyNote.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::XF.Material.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::MoneyNote.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::XF.Material.Resource.Styleable.RecyclerView_layoutManager = global::MoneyNote.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::XF.Material.Resource.Styleable.RecyclerView_reverseLayout = global::MoneyNote.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::XF.Material.Resource.Styleable.RecyclerView_spanCount = global::MoneyNote.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::XF.Material.Resource.Styleable.RecyclerView_stackFromEnd = global::MoneyNote.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::XF.Material.Resource.Styleable.ScrimInsetsFrameLayout = global::MoneyNote.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::XF.Material.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::MoneyNote.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::XF.Material.Resource.Styleable.ScrollingViewBehavior_Layout = global::MoneyNote.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::XF.Material.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::MoneyNote.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::XF.Material.Resource.Styleable.SearchView = global::MoneyNote.Droid.Resource.Styleable.SearchView;
+			global::XF.Material.Resource.Styleable.SearchView_android_focusable = global::MoneyNote.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::XF.Material.Resource.Styleable.SearchView_android_imeOptions = global::MoneyNote.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::XF.Material.Resource.Styleable.SearchView_android_inputType = global::MoneyNote.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::XF.Material.Resource.Styleable.SearchView_android_maxWidth = global::MoneyNote.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::XF.Material.Resource.Styleable.SearchView_closeIcon = global::MoneyNote.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::XF.Material.Resource.Styleable.SearchView_commitIcon = global::MoneyNote.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::XF.Material.Resource.Styleable.SearchView_defaultQueryHint = global::MoneyNote.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::XF.Material.Resource.Styleable.SearchView_goIcon = global::MoneyNote.Droid.Resource.Styleable.SearchView_goIcon;
+			global::XF.Material.Resource.Styleable.SearchView_iconifiedByDefault = global::MoneyNote.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::XF.Material.Resource.Styleable.SearchView_layout = global::MoneyNote.Droid.Resource.Styleable.SearchView_layout;
+			global::XF.Material.Resource.Styleable.SearchView_queryBackground = global::MoneyNote.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::XF.Material.Resource.Styleable.SearchView_queryHint = global::MoneyNote.Droid.Resource.Styleable.SearchView_queryHint;
+			global::XF.Material.Resource.Styleable.SearchView_searchHintIcon = global::MoneyNote.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::XF.Material.Resource.Styleable.SearchView_searchIcon = global::MoneyNote.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::XF.Material.Resource.Styleable.SearchView_submitBackground = global::MoneyNote.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::XF.Material.Resource.Styleable.SearchView_suggestionRowLayout = global::MoneyNote.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::XF.Material.Resource.Styleable.SearchView_voiceIcon = global::MoneyNote.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::XF.Material.Resource.Styleable.Snackbar = global::MoneyNote.Droid.Resource.Styleable.Snackbar;
+			global::XF.Material.Resource.Styleable.SnackbarLayout = global::MoneyNote.Droid.Resource.Styleable.SnackbarLayout;
+			global::XF.Material.Resource.Styleable.SnackbarLayout_android_maxWidth = global::MoneyNote.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::XF.Material.Resource.Styleable.SnackbarLayout_elevation = global::MoneyNote.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::XF.Material.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::MoneyNote.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::XF.Material.Resource.Styleable.Snackbar_snackbarButtonStyle = global::MoneyNote.Droid.Resource.Styleable.Snackbar_snackbarButtonStyle;
+			global::XF.Material.Resource.Styleable.Snackbar_snackbarStyle = global::MoneyNote.Droid.Resource.Styleable.Snackbar_snackbarStyle;
+			global::XF.Material.Resource.Styleable.Spinner = global::MoneyNote.Droid.Resource.Styleable.Spinner;
+			global::XF.Material.Resource.Styleable.Spinner_android_dropDownWidth = global::MoneyNote.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::XF.Material.Resource.Styleable.Spinner_android_entries = global::MoneyNote.Droid.Resource.Styleable.Spinner_android_entries;
+			global::XF.Material.Resource.Styleable.Spinner_android_popupBackground = global::MoneyNote.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::XF.Material.Resource.Styleable.Spinner_android_prompt = global::MoneyNote.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::XF.Material.Resource.Styleable.Spinner_popupTheme = global::MoneyNote.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::XF.Material.Resource.Styleable.StateListDrawable = global::MoneyNote.Droid.Resource.Styleable.StateListDrawable;
+			global::XF.Material.Resource.Styleable.StateListDrawableItem = global::MoneyNote.Droid.Resource.Styleable.StateListDrawableItem;
+			global::XF.Material.Resource.Styleable.StateListDrawableItem_android_drawable = global::MoneyNote.Droid.Resource.Styleable.StateListDrawableItem_android_drawable;
+			global::XF.Material.Resource.Styleable.StateListDrawable_android_constantSize = global::MoneyNote.Droid.Resource.Styleable.StateListDrawable_android_constantSize;
+			global::XF.Material.Resource.Styleable.StateListDrawable_android_dither = global::MoneyNote.Droid.Resource.Styleable.StateListDrawable_android_dither;
+			global::XF.Material.Resource.Styleable.StateListDrawable_android_enterFadeDuration = global::MoneyNote.Droid.Resource.Styleable.StateListDrawable_android_enterFadeDuration;
+			global::XF.Material.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::MoneyNote.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
+			global::XF.Material.Resource.Styleable.StateListDrawable_android_variablePadding = global::MoneyNote.Droid.Resource.Styleable.StateListDrawable_android_variablePadding;
+			global::XF.Material.Resource.Styleable.StateListDrawable_android_visible = global::MoneyNote.Droid.Resource.Styleable.StateListDrawable_android_visible;
+			global::XF.Material.Resource.Styleable.SwitchCompat = global::MoneyNote.Droid.Resource.Styleable.SwitchCompat;
+			global::XF.Material.Resource.Styleable.SwitchCompat_android_textOff = global::MoneyNote.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::XF.Material.Resource.Styleable.SwitchCompat_android_textOn = global::MoneyNote.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::XF.Material.Resource.Styleable.SwitchCompat_android_thumb = global::MoneyNote.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::XF.Material.Resource.Styleable.SwitchCompat_showText = global::MoneyNote.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::XF.Material.Resource.Styleable.SwitchCompat_splitTrack = global::MoneyNote.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::XF.Material.Resource.Styleable.SwitchCompat_switchMinWidth = global::MoneyNote.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::XF.Material.Resource.Styleable.SwitchCompat_switchPadding = global::MoneyNote.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::XF.Material.Resource.Styleable.SwitchCompat_switchTextAppearance = global::MoneyNote.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::XF.Material.Resource.Styleable.SwitchCompat_thumbTextPadding = global::MoneyNote.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::XF.Material.Resource.Styleable.SwitchCompat_thumbTint = global::MoneyNote.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::XF.Material.Resource.Styleable.SwitchCompat_thumbTintMode = global::MoneyNote.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::XF.Material.Resource.Styleable.SwitchCompat_track = global::MoneyNote.Droid.Resource.Styleable.SwitchCompat_track;
+			global::XF.Material.Resource.Styleable.SwitchCompat_trackTint = global::MoneyNote.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::XF.Material.Resource.Styleable.SwitchCompat_trackTintMode = global::MoneyNote.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::XF.Material.Resource.Styleable.TabItem = global::MoneyNote.Droid.Resource.Styleable.TabItem;
+			global::XF.Material.Resource.Styleable.TabItem_android_icon = global::MoneyNote.Droid.Resource.Styleable.TabItem_android_icon;
+			global::XF.Material.Resource.Styleable.TabItem_android_layout = global::MoneyNote.Droid.Resource.Styleable.TabItem_android_layout;
+			global::XF.Material.Resource.Styleable.TabItem_android_text = global::MoneyNote.Droid.Resource.Styleable.TabItem_android_text;
+			global::XF.Material.Resource.Styleable.TabLayout = global::MoneyNote.Droid.Resource.Styleable.TabLayout;
+			global::XF.Material.Resource.Styleable.TabLayout_tabBackground = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::XF.Material.Resource.Styleable.TabLayout_tabContentStart = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::XF.Material.Resource.Styleable.TabLayout_tabGravity = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::XF.Material.Resource.Styleable.TabLayout_tabIconTint = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabIconTint;
+			global::XF.Material.Resource.Styleable.TabLayout_tabIconTintMode = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabIconTintMode;
+			global::XF.Material.Resource.Styleable.TabLayout_tabIndicator = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabIndicator;
+			global::XF.Material.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration;
+			global::XF.Material.Resource.Styleable.TabLayout_tabIndicatorColor = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::XF.Material.Resource.Styleable.TabLayout_tabIndicatorFullWidth = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabIndicatorFullWidth;
+			global::XF.Material.Resource.Styleable.TabLayout_tabIndicatorGravity = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabIndicatorGravity;
+			global::XF.Material.Resource.Styleable.TabLayout_tabIndicatorHeight = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::XF.Material.Resource.Styleable.TabLayout_tabInlineLabel = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabInlineLabel;
+			global::XF.Material.Resource.Styleable.TabLayout_tabMaxWidth = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::XF.Material.Resource.Styleable.TabLayout_tabMinWidth = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::XF.Material.Resource.Styleable.TabLayout_tabMode = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::XF.Material.Resource.Styleable.TabLayout_tabPadding = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::XF.Material.Resource.Styleable.TabLayout_tabPaddingBottom = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::XF.Material.Resource.Styleable.TabLayout_tabPaddingEnd = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::XF.Material.Resource.Styleable.TabLayout_tabPaddingStart = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::XF.Material.Resource.Styleable.TabLayout_tabPaddingTop = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::XF.Material.Resource.Styleable.TabLayout_tabRippleColor = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabRippleColor;
+			global::XF.Material.Resource.Styleable.TabLayout_tabSelectedTextColor = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::XF.Material.Resource.Styleable.TabLayout_tabTextAppearance = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::XF.Material.Resource.Styleable.TabLayout_tabTextColor = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::XF.Material.Resource.Styleable.TabLayout_tabUnboundedRipple = global::MoneyNote.Droid.Resource.Styleable.TabLayout_tabUnboundedRipple;
+			global::XF.Material.Resource.Styleable.TextAppearance = global::MoneyNote.Droid.Resource.Styleable.TextAppearance;
+			global::XF.Material.Resource.Styleable.TextAppearance_android_fontFamily = global::MoneyNote.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::XF.Material.Resource.Styleable.TextAppearance_android_shadowColor = global::MoneyNote.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::XF.Material.Resource.Styleable.TextAppearance_android_shadowDx = global::MoneyNote.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::XF.Material.Resource.Styleable.TextAppearance_android_shadowDy = global::MoneyNote.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::XF.Material.Resource.Styleable.TextAppearance_android_shadowRadius = global::MoneyNote.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::XF.Material.Resource.Styleable.TextAppearance_android_textColor = global::MoneyNote.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::XF.Material.Resource.Styleable.TextAppearance_android_textColorHint = global::MoneyNote.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::XF.Material.Resource.Styleable.TextAppearance_android_textColorLink = global::MoneyNote.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::XF.Material.Resource.Styleable.TextAppearance_android_textFontWeight = global::MoneyNote.Droid.Resource.Styleable.TextAppearance_android_textFontWeight;
+			global::XF.Material.Resource.Styleable.TextAppearance_android_textSize = global::MoneyNote.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::XF.Material.Resource.Styleable.TextAppearance_android_textStyle = global::MoneyNote.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::XF.Material.Resource.Styleable.TextAppearance_android_typeface = global::MoneyNote.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::XF.Material.Resource.Styleable.TextAppearance_fontFamily = global::MoneyNote.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::XF.Material.Resource.Styleable.TextAppearance_fontVariationSettings = global::MoneyNote.Droid.Resource.Styleable.TextAppearance_fontVariationSettings;
+			global::XF.Material.Resource.Styleable.TextAppearance_textAllCaps = global::MoneyNote.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::XF.Material.Resource.Styleable.TextAppearance_textLocale = global::MoneyNote.Droid.Resource.Styleable.TextAppearance_textLocale;
+			global::XF.Material.Resource.Styleable.TextInputLayout = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout;
+			global::XF.Material.Resource.Styleable.TextInputLayout_android_hint = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::XF.Material.Resource.Styleable.TextInputLayout_android_textColorHint = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::XF.Material.Resource.Styleable.TextInputLayout_boxBackgroundColor = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_boxBackgroundColor;
+			global::XF.Material.Resource.Styleable.TextInputLayout_boxBackgroundMode = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_boxBackgroundMode;
+			global::XF.Material.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop;
+			global::XF.Material.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd;
+			global::XF.Material.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart;
+			global::XF.Material.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd;
+			global::XF.Material.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart;
+			global::XF.Material.Resource.Styleable.TextInputLayout_boxStrokeColor = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_boxStrokeColor;
+			global::XF.Material.Resource.Styleable.TextInputLayout_boxStrokeWidth = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_boxStrokeWidth;
+			global::XF.Material.Resource.Styleable.TextInputLayout_counterEnabled = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::XF.Material.Resource.Styleable.TextInputLayout_counterMaxLength = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::XF.Material.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::XF.Material.Resource.Styleable.TextInputLayout_counterTextAppearance = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::XF.Material.Resource.Styleable.TextInputLayout_errorEnabled = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::XF.Material.Resource.Styleable.TextInputLayout_errorTextAppearance = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::XF.Material.Resource.Styleable.TextInputLayout_helperText = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_helperText;
+			global::XF.Material.Resource.Styleable.TextInputLayout_helperTextEnabled = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_helperTextEnabled;
+			global::XF.Material.Resource.Styleable.TextInputLayout_helperTextTextAppearance = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_helperTextTextAppearance;
+			global::XF.Material.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::XF.Material.Resource.Styleable.TextInputLayout_hintEnabled = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::XF.Material.Resource.Styleable.TextInputLayout_hintTextAppearance = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::XF.Material.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::XF.Material.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::XF.Material.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::XF.Material.Resource.Styleable.TextInputLayout_passwordToggleTint = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::XF.Material.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::MoneyNote.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::XF.Material.Resource.Styleable.ThemeEnforcement = global::MoneyNote.Droid.Resource.Styleable.ThemeEnforcement;
+			global::XF.Material.Resource.Styleable.ThemeEnforcement_android_textAppearance = global::MoneyNote.Droid.Resource.Styleable.ThemeEnforcement_android_textAppearance;
+			global::XF.Material.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme = global::MoneyNote.Droid.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme;
+			global::XF.Material.Resource.Styleable.ThemeEnforcement_enforceTextAppearance = global::MoneyNote.Droid.Resource.Styleable.ThemeEnforcement_enforceTextAppearance;
+			global::XF.Material.Resource.Styleable.Toolbar = global::MoneyNote.Droid.Resource.Styleable.Toolbar;
+			global::XF.Material.Resource.Styleable.Toolbar_android_gravity = global::MoneyNote.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::XF.Material.Resource.Styleable.Toolbar_android_minHeight = global::MoneyNote.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::XF.Material.Resource.Styleable.Toolbar_buttonGravity = global::MoneyNote.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::XF.Material.Resource.Styleable.Toolbar_collapseContentDescription = global::MoneyNote.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::XF.Material.Resource.Styleable.Toolbar_collapseIcon = global::MoneyNote.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::XF.Material.Resource.Styleable.Toolbar_contentInsetEnd = global::MoneyNote.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::XF.Material.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::MoneyNote.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::XF.Material.Resource.Styleable.Toolbar_contentInsetLeft = global::MoneyNote.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::XF.Material.Resource.Styleable.Toolbar_contentInsetRight = global::MoneyNote.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::XF.Material.Resource.Styleable.Toolbar_contentInsetStart = global::MoneyNote.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::XF.Material.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::MoneyNote.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::XF.Material.Resource.Styleable.Toolbar_logo = global::MoneyNote.Droid.Resource.Styleable.Toolbar_logo;
+			global::XF.Material.Resource.Styleable.Toolbar_logoDescription = global::MoneyNote.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::XF.Material.Resource.Styleable.Toolbar_maxButtonHeight = global::MoneyNote.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::XF.Material.Resource.Styleable.Toolbar_menu = global::MoneyNote.Droid.Resource.Styleable.Toolbar_menu;
+			global::XF.Material.Resource.Styleable.Toolbar_navigationContentDescription = global::MoneyNote.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::XF.Material.Resource.Styleable.Toolbar_navigationIcon = global::MoneyNote.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::XF.Material.Resource.Styleable.Toolbar_popupTheme = global::MoneyNote.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::XF.Material.Resource.Styleable.Toolbar_subtitle = global::MoneyNote.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::XF.Material.Resource.Styleable.Toolbar_subtitleTextAppearance = global::MoneyNote.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::XF.Material.Resource.Styleable.Toolbar_subtitleTextColor = global::MoneyNote.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::XF.Material.Resource.Styleable.Toolbar_title = global::MoneyNote.Droid.Resource.Styleable.Toolbar_title;
+			global::XF.Material.Resource.Styleable.Toolbar_titleMargin = global::MoneyNote.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::XF.Material.Resource.Styleable.Toolbar_titleMarginBottom = global::MoneyNote.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::XF.Material.Resource.Styleable.Toolbar_titleMarginEnd = global::MoneyNote.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::XF.Material.Resource.Styleable.Toolbar_titleMargins = global::MoneyNote.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::XF.Material.Resource.Styleable.Toolbar_titleMarginStart = global::MoneyNote.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::XF.Material.Resource.Styleable.Toolbar_titleMarginTop = global::MoneyNote.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::XF.Material.Resource.Styleable.Toolbar_titleTextAppearance = global::MoneyNote.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::XF.Material.Resource.Styleable.Toolbar_titleTextColor = global::MoneyNote.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::XF.Material.Resource.Styleable.View = global::MoneyNote.Droid.Resource.Styleable.View;
+			global::XF.Material.Resource.Styleable.ViewBackgroundHelper = global::MoneyNote.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::XF.Material.Resource.Styleable.ViewBackgroundHelper_android_background = global::MoneyNote.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::XF.Material.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::MoneyNote.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::XF.Material.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::MoneyNote.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::XF.Material.Resource.Styleable.ViewStubCompat = global::MoneyNote.Droid.Resource.Styleable.ViewStubCompat;
+			global::XF.Material.Resource.Styleable.ViewStubCompat_android_id = global::MoneyNote.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::XF.Material.Resource.Styleable.ViewStubCompat_android_inflatedId = global::MoneyNote.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::XF.Material.Resource.Styleable.ViewStubCompat_android_layout = global::MoneyNote.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::XF.Material.Resource.Styleable.View_android_focusable = global::MoneyNote.Droid.Resource.Styleable.View_android_focusable;
+			global::XF.Material.Resource.Styleable.View_android_theme = global::MoneyNote.Droid.Resource.Styleable.View_android_theme;
+			global::XF.Material.Resource.Styleable.View_paddingEnd = global::MoneyNote.Droid.Resource.Styleable.View_paddingEnd;
+			global::XF.Material.Resource.Styleable.View_paddingStart = global::MoneyNote.Droid.Resource.Styleable.View_paddingStart;
+			global::XF.Material.Resource.Styleable.View_theme = global::MoneyNote.Droid.Resource.Styleable.View_theme;
+			global::XF.Material.Resource.Xml.xamarin_essentials_fileprovider_file_paths = global::MoneyNote.Droid.Resource.Xml.xamarin_essentials_fileprovider_file_paths;
 		}
 		
 		public partial class Animation
@@ -13715,25 +16466,28 @@ namespace MoneyNote.Droid
 			public const int design_fab_show_motion_spec = 2130837506;
 			
 			// aapt resource value: 0x7F020003
-			public const int mtrl_btn_state_list_anim = 2130837507;
+			public const int material_button_state_list_anim = 2130837507;
 			
 			// aapt resource value: 0x7F020004
-			public const int mtrl_btn_unelevated_state_list_anim = 2130837508;
+			public const int mtrl_btn_state_list_anim = 2130837508;
 			
 			// aapt resource value: 0x7F020005
-			public const int mtrl_chip_state_list_anim = 2130837509;
+			public const int mtrl_btn_unelevated_state_list_anim = 2130837509;
 			
 			// aapt resource value: 0x7F020006
-			public const int mtrl_fab_hide_motion_spec = 2130837510;
+			public const int mtrl_chip_state_list_anim = 2130837510;
 			
 			// aapt resource value: 0x7F020007
-			public const int mtrl_fab_show_motion_spec = 2130837511;
+			public const int mtrl_fab_hide_motion_spec = 2130837511;
 			
 			// aapt resource value: 0x7F020008
-			public const int mtrl_fab_transformation_sheet_collapse_spec = 2130837512;
+			public const int mtrl_fab_show_motion_spec = 2130837512;
 			
 			// aapt resource value: 0x7F020009
-			public const int mtrl_fab_transformation_sheet_expand_spec = 2130837513;
+			public const int mtrl_fab_transformation_sheet_collapse_spec = 2130837513;
+			
+			// aapt resource value: 0x7F02000A
+			public const int mtrl_fab_transformation_sheet_expand_spec = 2130837514;
 			
 			static Animator()
 			{
@@ -16209,214 +18963,229 @@ namespace MoneyNote.Droid
 			public const int mtrl_bottomappbar_height = 2131099801;
 			
 			// aapt resource value: 0x7F06009A
-			public const int mtrl_btn_corner_radius = 2131099802;
+			public const int mtrl_btn_additional_padding_end_for_icon = 2131099802;
 			
 			// aapt resource value: 0x7F06009B
-			public const int mtrl_btn_dialog_btn_min_width = 2131099803;
+			public const int mtrl_btn_additional_padding_start_for_icon = 2131099803;
 			
 			// aapt resource value: 0x7F06009C
-			public const int mtrl_btn_disabled_elevation = 2131099804;
+			public const int mtrl_btn_corner_radius = 2131099804;
 			
 			// aapt resource value: 0x7F06009D
-			public const int mtrl_btn_disabled_z = 2131099805;
+			public const int mtrl_btn_dialog_btn_min_width = 2131099805;
 			
 			// aapt resource value: 0x7F06009E
-			public const int mtrl_btn_elevation = 2131099806;
+			public const int mtrl_btn_disabled_elevation = 2131099806;
 			
 			// aapt resource value: 0x7F06009F
-			public const int mtrl_btn_focused_z = 2131099807;
+			public const int mtrl_btn_disabled_z = 2131099807;
 			
 			// aapt resource value: 0x7F0600A0
-			public const int mtrl_btn_hovered_z = 2131099808;
+			public const int mtrl_btn_elevation = 2131099808;
 			
 			// aapt resource value: 0x7F0600A1
-			public const int mtrl_btn_icon_btn_padding_left = 2131099809;
+			public const int mtrl_btn_focused_z = 2131099809;
 			
 			// aapt resource value: 0x7F0600A2
-			public const int mtrl_btn_icon_padding = 2131099810;
+			public const int mtrl_btn_hovered_z = 2131099810;
 			
 			// aapt resource value: 0x7F0600A3
-			public const int mtrl_btn_inset = 2131099811;
+			public const int mtrl_btn_icon_btn_padding_left = 2131099811;
 			
 			// aapt resource value: 0x7F0600A4
-			public const int mtrl_btn_letter_spacing = 2131099812;
+			public const int mtrl_btn_icon_padding = 2131099812;
 			
 			// aapt resource value: 0x7F0600A5
-			public const int mtrl_btn_padding_bottom = 2131099813;
+			public const int mtrl_btn_inset = 2131099813;
 			
 			// aapt resource value: 0x7F0600A6
-			public const int mtrl_btn_padding_left = 2131099814;
+			public const int mtrl_btn_letter_spacing = 2131099814;
 			
 			// aapt resource value: 0x7F0600A7
-			public const int mtrl_btn_padding_right = 2131099815;
+			public const int mtrl_btn_padding_bottom = 2131099815;
 			
 			// aapt resource value: 0x7F0600A8
-			public const int mtrl_btn_padding_top = 2131099816;
+			public const int mtrl_btn_padding_left = 2131099816;
 			
 			// aapt resource value: 0x7F0600A9
-			public const int mtrl_btn_pressed_z = 2131099817;
+			public const int mtrl_btn_padding_left_with_icon = 2131099817;
 			
 			// aapt resource value: 0x7F0600AA
-			public const int mtrl_btn_stroke_size = 2131099818;
+			public const int mtrl_btn_padding_right = 2131099818;
 			
 			// aapt resource value: 0x7F0600AB
-			public const int mtrl_btn_text_btn_icon_padding = 2131099819;
+			public const int mtrl_btn_padding_top = 2131099819;
 			
 			// aapt resource value: 0x7F0600AC
-			public const int mtrl_btn_text_btn_padding_left = 2131099820;
+			public const int mtrl_btn_pressed_z = 2131099820;
 			
 			// aapt resource value: 0x7F0600AD
-			public const int mtrl_btn_text_btn_padding_right = 2131099821;
+			public const int mtrl_btn_stroke_size = 2131099821;
 			
 			// aapt resource value: 0x7F0600AE
-			public const int mtrl_btn_text_size = 2131099822;
+			public const int mtrl_btn_text_btn_icon_padding = 2131099822;
 			
 			// aapt resource value: 0x7F0600AF
-			public const int mtrl_btn_z = 2131099823;
+			public const int mtrl_btn_text_btn_padding_left = 2131099823;
 			
 			// aapt resource value: 0x7F0600B0
-			public const int mtrl_card_elevation = 2131099824;
+			public const int mtrl_btn_text_btn_padding_right = 2131099824;
 			
 			// aapt resource value: 0x7F0600B1
-			public const int mtrl_card_spacing = 2131099825;
+			public const int mtrl_btn_text_padding_left = 2131099825;
 			
 			// aapt resource value: 0x7F0600B2
-			public const int mtrl_chip_pressed_translation_z = 2131099826;
+			public const int mtrl_btn_text_padding_right = 2131099826;
 			
 			// aapt resource value: 0x7F0600B3
-			public const int mtrl_chip_text_size = 2131099827;
+			public const int mtrl_btn_text_size = 2131099827;
 			
 			// aapt resource value: 0x7F0600B4
-			public const int mtrl_fab_elevation = 2131099828;
+			public const int mtrl_btn_z = 2131099828;
 			
 			// aapt resource value: 0x7F0600B5
-			public const int mtrl_fab_translation_z_hovered_focused = 2131099829;
+			public const int mtrl_card_elevation = 2131099829;
 			
 			// aapt resource value: 0x7F0600B6
-			public const int mtrl_fab_translation_z_pressed = 2131099830;
+			public const int mtrl_card_spacing = 2131099830;
 			
 			// aapt resource value: 0x7F0600B7
-			public const int mtrl_navigation_elevation = 2131099831;
+			public const int mtrl_chip_pressed_translation_z = 2131099831;
 			
 			// aapt resource value: 0x7F0600B8
-			public const int mtrl_navigation_item_horizontal_padding = 2131099832;
+			public const int mtrl_chip_text_size = 2131099832;
 			
 			// aapt resource value: 0x7F0600B9
-			public const int mtrl_navigation_item_icon_padding = 2131099833;
+			public const int mtrl_fab_elevation = 2131099833;
 			
 			// aapt resource value: 0x7F0600BA
-			public const int mtrl_snackbar_background_corner_radius = 2131099834;
+			public const int mtrl_fab_translation_z_hovered_focused = 2131099834;
 			
 			// aapt resource value: 0x7F0600BB
-			public const int mtrl_snackbar_margin = 2131099835;
+			public const int mtrl_fab_translation_z_pressed = 2131099835;
 			
 			// aapt resource value: 0x7F0600BC
-			public const int mtrl_textinput_box_bottom_offset = 2131099836;
+			public const int mtrl_navigation_elevation = 2131099836;
 			
 			// aapt resource value: 0x7F0600BD
-			public const int mtrl_textinput_box_corner_radius_medium = 2131099837;
+			public const int mtrl_navigation_item_horizontal_padding = 2131099837;
 			
 			// aapt resource value: 0x7F0600BE
-			public const int mtrl_textinput_box_corner_radius_small = 2131099838;
+			public const int mtrl_navigation_item_icon_padding = 2131099838;
 			
 			// aapt resource value: 0x7F0600BF
-			public const int mtrl_textinput_box_label_cutout_padding = 2131099839;
+			public const int mtrl_snackbar_background_corner_radius = 2131099839;
 			
 			// aapt resource value: 0x7F0600C0
-			public const int mtrl_textinput_box_padding_end = 2131099840;
+			public const int mtrl_snackbar_margin = 2131099840;
 			
 			// aapt resource value: 0x7F0600C1
-			public const int mtrl_textinput_box_stroke_width_default = 2131099841;
+			public const int mtrl_textinput_box_bottom_offset = 2131099841;
 			
 			// aapt resource value: 0x7F0600C2
-			public const int mtrl_textinput_box_stroke_width_focused = 2131099842;
+			public const int mtrl_textinput_box_corner_radius_medium = 2131099842;
 			
 			// aapt resource value: 0x7F0600C3
-			public const int mtrl_textinput_outline_box_expanded_padding = 2131099843;
+			public const int mtrl_textinput_box_corner_radius_small = 2131099843;
 			
 			// aapt resource value: 0x7F0600C4
-			public const int mtrl_toolbar_default_height = 2131099844;
+			public const int mtrl_textinput_box_label_cutout_padding = 2131099844;
 			
 			// aapt resource value: 0x7F0600C5
-			public const int notification_action_icon_size = 2131099845;
+			public const int mtrl_textinput_box_padding_end = 2131099845;
 			
 			// aapt resource value: 0x7F0600C6
-			public const int notification_action_text_size = 2131099846;
+			public const int mtrl_textinput_box_stroke_width_default = 2131099846;
 			
 			// aapt resource value: 0x7F0600C7
-			public const int notification_big_circle_margin = 2131099847;
+			public const int mtrl_textinput_box_stroke_width_focused = 2131099847;
 			
 			// aapt resource value: 0x7F0600C8
-			public const int notification_content_margin_start = 2131099848;
+			public const int mtrl_textinput_outline_box_expanded_padding = 2131099848;
 			
 			// aapt resource value: 0x7F0600C9
-			public const int notification_large_icon_height = 2131099849;
+			public const int mtrl_toolbar_default_height = 2131099849;
 			
 			// aapt resource value: 0x7F0600CA
-			public const int notification_large_icon_width = 2131099850;
+			public const int notification_action_icon_size = 2131099850;
 			
 			// aapt resource value: 0x7F0600CB
-			public const int notification_main_column_padding_top = 2131099851;
+			public const int notification_action_text_size = 2131099851;
 			
 			// aapt resource value: 0x7F0600CC
-			public const int notification_media_narrow_margin = 2131099852;
+			public const int notification_big_circle_margin = 2131099852;
 			
 			// aapt resource value: 0x7F0600CD
-			public const int notification_right_icon_size = 2131099853;
+			public const int notification_content_margin_start = 2131099853;
 			
 			// aapt resource value: 0x7F0600CE
-			public const int notification_right_side_padding_top = 2131099854;
+			public const int notification_large_icon_height = 2131099854;
 			
 			// aapt resource value: 0x7F0600CF
-			public const int notification_small_icon_background_padding = 2131099855;
+			public const int notification_large_icon_width = 2131099855;
 			
 			// aapt resource value: 0x7F0600D0
-			public const int notification_small_icon_size_as_large = 2131099856;
+			public const int notification_main_column_padding_top = 2131099856;
 			
 			// aapt resource value: 0x7F0600D1
-			public const int notification_subtext_size = 2131099857;
+			public const int notification_media_narrow_margin = 2131099857;
 			
 			// aapt resource value: 0x7F0600D2
-			public const int notification_top_pad = 2131099858;
+			public const int notification_right_icon_size = 2131099858;
 			
 			// aapt resource value: 0x7F0600D3
-			public const int notification_top_pad_large_text = 2131099859;
+			public const int notification_right_side_padding_top = 2131099859;
 			
 			// aapt resource value: 0x7F0600D4
-			public const int subtitle_corner_radius = 2131099860;
+			public const int notification_small_icon_background_padding = 2131099860;
 			
 			// aapt resource value: 0x7F0600D5
-			public const int subtitle_outline_width = 2131099861;
+			public const int notification_small_icon_size_as_large = 2131099861;
 			
 			// aapt resource value: 0x7F0600D6
-			public const int subtitle_shadow_offset = 2131099862;
+			public const int notification_subtext_size = 2131099862;
 			
 			// aapt resource value: 0x7F0600D7
-			public const int subtitle_shadow_radius = 2131099863;
+			public const int notification_top_pad = 2131099863;
 			
 			// aapt resource value: 0x7F0600D8
-			public const int tooltip_corner_radius = 2131099864;
+			public const int notification_top_pad_large_text = 2131099864;
 			
 			// aapt resource value: 0x7F0600D9
-			public const int tooltip_horizontal_padding = 2131099865;
+			public const int subtitle_corner_radius = 2131099865;
 			
 			// aapt resource value: 0x7F0600DA
-			public const int tooltip_margin = 2131099866;
+			public const int subtitle_outline_width = 2131099866;
 			
 			// aapt resource value: 0x7F0600DB
-			public const int tooltip_precise_anchor_extra_offset = 2131099867;
+			public const int subtitle_shadow_offset = 2131099867;
 			
 			// aapt resource value: 0x7F0600DC
-			public const int tooltip_precise_anchor_threshold = 2131099868;
+			public const int subtitle_shadow_radius = 2131099868;
 			
 			// aapt resource value: 0x7F0600DD
-			public const int tooltip_vertical_padding = 2131099869;
+			public const int tooltip_corner_radius = 2131099869;
 			
 			// aapt resource value: 0x7F0600DE
-			public const int tooltip_y_offset_non_touch = 2131099870;
+			public const int tooltip_horizontal_padding = 2131099870;
 			
 			// aapt resource value: 0x7F0600DF
-			public const int tooltip_y_offset_touch = 2131099871;
+			public const int tooltip_margin = 2131099871;
+			
+			// aapt resource value: 0x7F0600E0
+			public const int tooltip_precise_anchor_extra_offset = 2131099872;
+			
+			// aapt resource value: 0x7F0600E1
+			public const int tooltip_precise_anchor_threshold = 2131099873;
+			
+			// aapt resource value: 0x7F0600E2
+			public const int tooltip_vertical_padding = 2131099874;
+			
+			// aapt resource value: 0x7F0600E3
+			public const int tooltip_y_offset_non_touch = 2131099875;
+			
+			// aapt resource value: 0x7F0600E4
+			public const int tooltip_y_offset_touch = 2131099876;
 			
 			static Dimension()
 			{
@@ -16723,235 +19492,298 @@ namespace MoneyNote.Droid
 			public const int back = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int btn_checkbox_checked_mtrl = 2131165287;
+			public const int bank = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int btn_checkbox_checked_to_unchecked_mtrl_animation = 2131165288;
+			public const int btn_checkbox_checked_mtrl = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int btn_checkbox_unchecked_mtrl = 2131165289;
+			public const int btn_checkbox_checked_to_unchecked_mtrl_animation = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int btn_checkbox_unchecked_to_checked_mtrl_animation = 2131165290;
+			public const int btn_checkbox_unchecked_mtrl = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int btn_radio_off_mtrl = 2131165291;
+			public const int btn_checkbox_unchecked_to_checked_mtrl_animation = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int btn_radio_off_to_on_mtrl_animation = 2131165292;
+			public const int btn_radio_off_mtrl = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int btn_radio_on_mtrl = 2131165293;
+			public const int btn_radio_off_to_on_mtrl_animation = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int btn_radio_on_to_off_mtrl_animation = 2131165294;
+			public const int btn_radio_on_mtrl = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int business = 2131165295;
+			public const int btn_radio_on_to_off_mtrl_animation = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int button = 2131165296;
+			public const int business = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int change_notes = 2131165297;
+			public const int button = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int change_notes_view = 2131165298;
+			public const int change_notes = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int close = 2131165299;
+			public const int change_notes_view = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int close_white = 2131165300;
+			public const int close = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int de = 2131165301;
+			public const int close_white = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int design_bottom_navigation_item_background = 2131165302;
+			public const int de = 2131165302;
 			
 			// aapt resource value: 0x7F070077
-			public const int design_fab_background = 2131165303;
+			public const int design_bottom_navigation_item_background = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int design_ic_visibility = 2131165304;
+			public const int design_fab_background = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int design_ic_visibility_off = 2131165305;
+			public const int design_ic_visibility = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
-			public const int design_password_eye = 2131165306;
+			public const int design_ic_visibility_off = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int design_snackbar_background = 2131165307;
+			public const int design_password_eye = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int down_image_hand = 2131165308;
+			public const int design_snackbar_background = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int en = 2131165309;
+			public const int down_image_hand = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int entertainment = 2131165310;
+			public const int drawable_ripple = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int fr = 2131165311;
+			public const int drawable_ripple_image = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int gift = 2131165312;
+			public const int drawable_ripple_outlined = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int hamburger = 2131165313;
+			public const int drawable_ripple_outlined_with_icon = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int hamburger_white = 2131165314;
+			public const int drawable_ripple_text = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int header_back = 2131165315;
+			public const int drawable_ripple_with_icon = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int history = 2131165316;
+			public const int drawable_selector = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int history_header = 2131165317;
+			public const int drawable_shape = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int ic_mtrl_chip_checked_black = 2131165318;
+			public const int drawable_shape_text = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int ic_mtrl_chip_checked_circle = 2131165319;
+			public const int drawable_shape_with_icon = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int ic_mtrl_chip_close_circle = 2131165320;
+			public const int en = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int it = 2131165321;
+			public const int entertainment = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int left_image_hand = 2131165322;
+			public const int fr = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int logo = 2131165323;
+			public const int gift = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int main = 2131165324;
+			public const int hamburger = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int market_shop = 2131165325;
+			public const int hamburger_white = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int md = 2131165326;
+			public const int header_back = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int mtrl_snackbar_background = 2131165327;
+			public const int history = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int mtrl_tabs_default_indicator = 2131165328;
+			public const int history_header = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int navigation_empty_icon = 2131165329;
+			public const int ic_mtrl_chip_checked_black = 2131165329;
 			
 			// aapt resource value: 0x7F070092
-			public const int network_products = 2131165330;
+			public const int ic_mtrl_chip_checked_circle = 2131165330;
 			
 			// aapt resource value: 0x7F070093
-			public const int notification_action_background = 2131165331;
+			public const int ic_mtrl_chip_close_circle = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int notification_bg = 2131165332;
+			public const int it = 2131165332;
 			
 			// aapt resource value: 0x7F070095
-			public const int notification_bg_low = 2131165333;
+			public const int left_image_hand = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int notification_bg_low_normal = 2131165334;
+			public const int logo = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int notification_bg_low_pressed = 2131165335;
+			public const int main = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int notification_bg_normal = 2131165336;
+			public const int market_shop = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int notification_bg_normal_pressed = 2131165337;
+			public const int md = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int notification_icon_background = 2131165338;
+			public const int mtrl_snackbar_background = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int notification_template_icon_bg = 2131165339;
+			public const int mtrl_tabs_default_indicator = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int notification_template_icon_low_bg = 2131165340;
+			public const int navigation_empty_icon = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int notification_tile_bg = 2131165341;
+			public const int network_products = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int notify_panel_notification_icon_bg = 2131165342;
+			public const int notification_action_background = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int other = 2131165343;
+			public const int notification_bg = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int plus = 2131165344;
+			public const int notification_bg_low = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int restaurant_bar_bistro = 2131165345;
+			public const int notification_bg_low_normal = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int right_image_hand = 2131165346;
+			public const int notification_bg_low_pressed = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int ru = 2131165347;
+			public const int notification_bg_normal = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int salary = 2131165348;
+			public const int notification_bg_normal_pressed = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int selected = 2131165349;
+			public const int notification_icon_background = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int settings = 2131165350;
+			public const int notification_template_icon_bg = 2131165350;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int settings_header = 2131165351;
+			public const int notification_template_icon_low_bg = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int share = 2131165352;
+			public const int notification_tile_bg = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int splash = 2131165353;
+			public const int notify_panel_notification_icon_bg = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int star = 2131165354;
+			public const int other = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int steps = 2131165355;
+			public const int plus = 2131165355;
 			
 			// aapt resource value: 0x7F0700AC
-			public const int terms = 2131165356;
+			public const int repay_credit = 2131165356;
 			
 			// aapt resource value: 0x7F0700AD
-			public const int tooltip_frame_dark = 2131165357;
+			public const int restaurant_bar_bistro = 2131165357;
 			
 			// aapt resource value: 0x7F0700AE
-			public const int tooltip_frame_light = 2131165358;
+			public const int right_image_hand = 2131165358;
 			
 			// aapt resource value: 0x7F0700AF
-			public const int transport = 2131165359;
+			public const int ru = 2131165359;
 			
 			// aapt resource value: 0x7F0700B0
-			public const int unselected = 2131165360;
+			public const int salary = 2131165360;
 			
 			// aapt resource value: 0x7F0700B1
-			public const int up_image_hand = 2131165361;
+			public const int selected = 2131165361;
 			
 			// aapt resource value: 0x7F0700B2
-			public const int xamarin_logo = 2131165362;
+			public const int settings = 2131165362;
 			
 			// aapt resource value: 0x7F0700B3
-			public const int zh = 2131165363;
+			public const int settings_header = 2131165363;
+			
+			// aapt resource value: 0x7F0700B4
+			public const int share = 2131165364;
+			
+			// aapt resource value: 0x7F0700B5
+			public const int splash = 2131165365;
+			
+			// aapt resource value: 0x7F0700B6
+			public const int star = 2131165366;
+			
+			// aapt resource value: 0x7F0700B7
+			public const int steps = 2131165367;
+			
+			// aapt resource value: 0x7F0700B8
+			public const int take_credit = 2131165368;
+			
+			// aapt resource value: 0x7F0700B9
+			public const int terms = 2131165369;
+			
+			// aapt resource value: 0x7F0700BA
+			public const int tooltip_frame_dark = 2131165370;
+			
+			// aapt resource value: 0x7F0700BB
+			public const int tooltip_frame_light = 2131165371;
+			
+			// aapt resource value: 0x7F0700BC
+			public const int transport = 2131165372;
+			
+			// aapt resource value: 0x7F0700BD
+			public const int unselected = 2131165373;
+			
+			// aapt resource value: 0x7F0700BE
+			public const int up_image_hand = 2131165374;
+			
+			// aapt resource value: 0x7F0700BF
+			public const int xamarin_logo = 2131165375;
+			
+			// aapt resource value: 0x7F0700C0
+			public const int xf_arrow_dropdown = 2131165376;
+			
+			// aapt resource value: 0x7F0700C1
+			public const int xf_check = 2131165377;
+			
+			// aapt resource value: 0x7F0700C2
+			public const int xf_checkbox_selected = 2131165378;
+			
+			// aapt resource value: 0x7F0700C3
+			public const int xf_checkbox_unselected = 2131165379;
+			
+			// aapt resource value: 0x7F0700C4
+			public const int xf_clear = 2131165380;
+			
+			// aapt resource value: 0x7F0700C5
+			public const int xf_error = 2131165381;
+			
+			// aapt resource value: 0x7F0700C6
+			public const int xf_radio_button_selected = 2131165382;
+			
+			// aapt resource value: 0x7F0700C7
+			public const int xf_radio_button_unselected = 2131165383;
+			
+			// aapt resource value: 0x7F0700C8
+			public const int zh = 2131165384;
 			
 			static Drawable()
 			{
@@ -17348,400 +20180,403 @@ namespace MoneyNote.Droid
 			public const int info = 2131230849;
 			
 			// aapt resource value: 0x7F080082
-			public const int italic = 2131230850;
+			public const int inset_drawable = 2131230850;
 			
 			// aapt resource value: 0x7F080083
-			public const int item_touch_helper_previous_elevation = 2131230851;
+			public const int italic = 2131230851;
 			
 			// aapt resource value: 0x7F080084
-			public const int labeled = 2131230852;
+			public const int item_touch_helper_previous_elevation = 2131230852;
 			
 			// aapt resource value: 0x7F080085
-			public const int largeLabel = 2131230853;
+			public const int labeled = 2131230853;
 			
 			// aapt resource value: 0x7F080086
-			public const int left = 2131230854;
+			public const int largeLabel = 2131230854;
 			
 			// aapt resource value: 0x7F080087
-			public const int line1 = 2131230855;
+			public const int left = 2131230855;
 			
 			// aapt resource value: 0x7F080088
-			public const int line3 = 2131230856;
+			public const int line1 = 2131230856;
 			
 			// aapt resource value: 0x7F080089
-			public const int listMode = 2131230857;
+			public const int line3 = 2131230857;
 			
 			// aapt resource value: 0x7F08008A
-			public const int list_item = 2131230858;
+			public const int listMode = 2131230858;
 			
 			// aapt resource value: 0x7F08008B
-			public const int lottie_layer_name = 2131230859;
+			public const int list_item = 2131230859;
 			
 			// aapt resource value: 0x7F08008C
-			public const int main_appbar = 2131230860;
+			public const int lottie_layer_name = 2131230860;
 			
 			// aapt resource value: 0x7F08008D
-			public const int main_tablayout = 2131230861;
+			public const int main_appbar = 2131230861;
 			
 			// aapt resource value: 0x7F08008E
-			public const int main_toolbar = 2131230862;
+			public const int main_tablayout = 2131230862;
 			
 			// aapt resource value: 0x7F08008F
-			public const int main_viewpager = 2131230863;
+			public const int main_toolbar = 2131230863;
 			
 			// aapt resource value: 0x7F080090
-			public const int masked = 2131230864;
+			public const int main_viewpager = 2131230864;
 			
 			// aapt resource value: 0x7F080091
-			public const int media_actions = 2131230865;
+			public const int masked = 2131230865;
 			
 			// aapt resource value: 0x7F080092
-			public const int message = 2131230866;
+			public const int media_actions = 2131230866;
+			
+			// aapt resource value: 0x7F080093
+			public const int message = 2131230867;
 			
 			// aapt resource value: 0x7F080003
 			public const int META = 2131230723;
 			
-			// aapt resource value: 0x7F080093
-			public const int middle = 2131230867;
-			
 			// aapt resource value: 0x7F080094
-			public const int mini = 2131230868;
+			public const int middle = 2131230868;
 			
 			// aapt resource value: 0x7F080095
-			public const int mtrl_child_content_container = 2131230869;
+			public const int mini = 2131230869;
 			
 			// aapt resource value: 0x7F080096
-			public const int mtrl_internal_children_alpha_tag = 2131230870;
+			public const int mtrl_child_content_container = 2131230870;
 			
 			// aapt resource value: 0x7F080097
-			public const int multiply = 2131230871;
+			public const int mtrl_internal_children_alpha_tag = 2131230871;
 			
 			// aapt resource value: 0x7F080098
-			public const int navigation_header_container = 2131230872;
+			public const int multiply = 2131230872;
 			
 			// aapt resource value: 0x7F080099
-			public const int never = 2131230873;
+			public const int navigation_header_container = 2131230873;
 			
 			// aapt resource value: 0x7F08009A
-			public const int none = 2131230874;
+			public const int never = 2131230874;
 			
 			// aapt resource value: 0x7F08009B
-			public const int normal = 2131230875;
+			public const int none = 2131230875;
 			
 			// aapt resource value: 0x7F08009C
-			public const int notification_background = 2131230876;
+			public const int normal = 2131230876;
 			
 			// aapt resource value: 0x7F08009D
-			public const int notification_main_column = 2131230877;
+			public const int notification_background = 2131230877;
 			
 			// aapt resource value: 0x7F08009E
-			public const int notification_main_column_container = 2131230878;
+			public const int notification_main_column = 2131230878;
 			
 			// aapt resource value: 0x7F08009F
-			public const int off = 2131230879;
+			public const int notification_main_column_container = 2131230879;
 			
 			// aapt resource value: 0x7F0800A0
-			public const int on = 2131230880;
+			public const int off = 2131230880;
 			
 			// aapt resource value: 0x7F0800A1
-			public const int outline = 2131230881;
+			public const int on = 2131230881;
 			
 			// aapt resource value: 0x7F0800A2
-			public const int parallax = 2131230882;
+			public const int outline = 2131230882;
 			
 			// aapt resource value: 0x7F0800A3
-			public const int parentPanel = 2131230883;
+			public const int parallax = 2131230883;
 			
 			// aapt resource value: 0x7F0800A4
-			public const int parent_matrix = 2131230884;
+			public const int parentPanel = 2131230884;
 			
 			// aapt resource value: 0x7F0800A5
-			public const int pin = 2131230885;
+			public const int parent_matrix = 2131230885;
 			
 			// aapt resource value: 0x7F0800A6
-			public const int progress_circular = 2131230886;
+			public const int pin = 2131230886;
 			
 			// aapt resource value: 0x7F0800A7
-			public const int progress_horizontal = 2131230887;
+			public const int progress_circular = 2131230887;
 			
 			// aapt resource value: 0x7F0800A8
-			public const int radio = 2131230888;
+			public const int progress_horizontal = 2131230888;
 			
 			// aapt resource value: 0x7F0800A9
-			public const int restart = 2131230889;
+			public const int radio = 2131230889;
 			
 			// aapt resource value: 0x7F0800AA
-			public const int reverse = 2131230890;
+			public const int restart = 2131230890;
 			
 			// aapt resource value: 0x7F0800AB
-			public const int right = 2131230891;
+			public const int reverse = 2131230891;
 			
 			// aapt resource value: 0x7F0800AC
-			public const int right_icon = 2131230892;
+			public const int right = 2131230892;
 			
 			// aapt resource value: 0x7F0800AD
-			public const int right_side = 2131230893;
+			public const int right_icon = 2131230893;
 			
 			// aapt resource value: 0x7F0800AE
-			public const int save_non_transition_alpha = 2131230894;
+			public const int right_side = 2131230894;
 			
 			// aapt resource value: 0x7F0800AF
-			public const int save_overlay_view = 2131230895;
+			public const int save_non_transition_alpha = 2131230895;
 			
 			// aapt resource value: 0x7F0800B0
-			public const int screen = 2131230896;
+			public const int save_overlay_view = 2131230896;
 			
 			// aapt resource value: 0x7F0800B1
-			public const int scroll = 2131230897;
-			
-			// aapt resource value: 0x7F0800B5
-			public const int scrollable = 2131230901;
+			public const int screen = 2131230897;
 			
 			// aapt resource value: 0x7F0800B2
-			public const int scrollIndicatorDown = 2131230898;
-			
-			// aapt resource value: 0x7F0800B3
-			public const int scrollIndicatorUp = 2131230899;
-			
-			// aapt resource value: 0x7F0800B4
-			public const int scrollView = 2131230900;
+			public const int scroll = 2131230898;
 			
 			// aapt resource value: 0x7F0800B6
-			public const int search_badge = 2131230902;
+			public const int scrollable = 2131230902;
+			
+			// aapt resource value: 0x7F0800B3
+			public const int scrollIndicatorDown = 2131230899;
+			
+			// aapt resource value: 0x7F0800B4
+			public const int scrollIndicatorUp = 2131230900;
+			
+			// aapt resource value: 0x7F0800B5
+			public const int scrollView = 2131230901;
 			
 			// aapt resource value: 0x7F0800B7
-			public const int search_bar = 2131230903;
+			public const int search_badge = 2131230903;
 			
 			// aapt resource value: 0x7F0800B8
-			public const int search_button = 2131230904;
+			public const int search_bar = 2131230904;
 			
 			// aapt resource value: 0x7F0800B9
-			public const int search_close_btn = 2131230905;
+			public const int search_button = 2131230905;
 			
 			// aapt resource value: 0x7F0800BA
-			public const int search_edit_frame = 2131230906;
+			public const int search_close_btn = 2131230906;
 			
 			// aapt resource value: 0x7F0800BB
-			public const int search_go_btn = 2131230907;
+			public const int search_edit_frame = 2131230907;
 			
 			// aapt resource value: 0x7F0800BC
-			public const int search_mag_icon = 2131230908;
+			public const int search_go_btn = 2131230908;
 			
 			// aapt resource value: 0x7F0800BD
-			public const int search_plate = 2131230909;
+			public const int search_mag_icon = 2131230909;
 			
 			// aapt resource value: 0x7F0800BE
-			public const int search_src_text = 2131230910;
+			public const int search_plate = 2131230910;
 			
 			// aapt resource value: 0x7F0800BF
-			public const int search_voice_btn = 2131230911;
-			
-			// aapt resource value: 0x7F0800C1
-			public const int selected = 2131230913;
+			public const int search_src_text = 2131230911;
 			
 			// aapt resource value: 0x7F0800C0
-			public const int select_dialog_listview = 2131230912;
+			public const int search_voice_btn = 2131230912;
 			
 			// aapt resource value: 0x7F0800C2
-			public const int shellcontent_appbar = 2131230914;
+			public const int selected = 2131230914;
+			
+			// aapt resource value: 0x7F0800C1
+			public const int select_dialog_listview = 2131230913;
 			
 			// aapt resource value: 0x7F0800C3
-			public const int shellcontent_toolbar = 2131230915;
+			public const int shellcontent_appbar = 2131230915;
+			
+			// aapt resource value: 0x7F0800C4
+			public const int shellcontent_toolbar = 2131230916;
 			
 			// aapt resource value: 0x7F080004
 			public const int SHIFT = 2131230724;
 			
-			// aapt resource value: 0x7F0800C4
-			public const int shortcut = 2131230916;
-			
 			// aapt resource value: 0x7F0800C5
-			public const int showCustom = 2131230917;
+			public const int shortcut = 2131230917;
 			
 			// aapt resource value: 0x7F0800C6
-			public const int showHome = 2131230918;
+			public const int showCustom = 2131230918;
 			
 			// aapt resource value: 0x7F0800C7
-			public const int showTitle = 2131230919;
+			public const int showHome = 2131230919;
 			
 			// aapt resource value: 0x7F0800C8
-			public const int sliding_tabs = 2131230920;
+			public const int showTitle = 2131230920;
 			
 			// aapt resource value: 0x7F0800C9
-			public const int smallLabel = 2131230921;
+			public const int sliding_tabs = 2131230921;
 			
 			// aapt resource value: 0x7F0800CA
-			public const int snackbar_action = 2131230922;
+			public const int smallLabel = 2131230922;
 			
 			// aapt resource value: 0x7F0800CB
-			public const int snackbar_text = 2131230923;
+			public const int snackbar_action = 2131230923;
 			
 			// aapt resource value: 0x7F0800CC
-			public const int snap = 2131230924;
+			public const int snackbar_text = 2131230924;
 			
 			// aapt resource value: 0x7F0800CD
-			public const int snapMargins = 2131230925;
+			public const int snap = 2131230925;
 			
 			// aapt resource value: 0x7F0800CE
-			public const int software = 2131230926;
+			public const int snapMargins = 2131230926;
 			
 			// aapt resource value: 0x7F0800CF
-			public const int spacer = 2131230927;
+			public const int software = 2131230927;
 			
 			// aapt resource value: 0x7F0800D0
-			public const int split_action_bar = 2131230928;
+			public const int spacer = 2131230928;
 			
 			// aapt resource value: 0x7F0800D1
-			public const int src_atop = 2131230929;
+			public const int split_action_bar = 2131230929;
 			
 			// aapt resource value: 0x7F0800D2
-			public const int src_in = 2131230930;
+			public const int src_atop = 2131230930;
 			
 			// aapt resource value: 0x7F0800D3
-			public const int src_over = 2131230931;
+			public const int src_in = 2131230931;
 			
 			// aapt resource value: 0x7F0800D4
-			public const int start = 2131230932;
+			public const int src_over = 2131230932;
 			
 			// aapt resource value: 0x7F0800D5
-			public const int status_bar_latest_event_content = 2131230933;
+			public const int start = 2131230933;
 			
 			// aapt resource value: 0x7F0800D6
-			public const int stretch = 2131230934;
+			public const int status_bar_latest_event_content = 2131230934;
 			
 			// aapt resource value: 0x7F0800D7
-			public const int submenuarrow = 2131230935;
+			public const int stretch = 2131230935;
 			
 			// aapt resource value: 0x7F0800D8
-			public const int submit_area = 2131230936;
+			public const int submenuarrow = 2131230936;
+			
+			// aapt resource value: 0x7F0800D9
+			public const int submit_area = 2131230937;
 			
 			// aapt resource value: 0x7F080005
 			public const int SYM = 2131230725;
 			
-			// aapt resource value: 0x7F0800D9
-			public const int tabMode = 2131230937;
-			
 			// aapt resource value: 0x7F0800DA
-			public const int tag_accessibility_actions = 2131230938;
+			public const int tabMode = 2131230938;
 			
 			// aapt resource value: 0x7F0800DB
-			public const int tag_accessibility_clickable_spans = 2131230939;
+			public const int tag_accessibility_actions = 2131230939;
 			
 			// aapt resource value: 0x7F0800DC
-			public const int tag_accessibility_heading = 2131230940;
+			public const int tag_accessibility_clickable_spans = 2131230940;
 			
 			// aapt resource value: 0x7F0800DD
-			public const int tag_accessibility_pane_title = 2131230941;
+			public const int tag_accessibility_heading = 2131230941;
 			
 			// aapt resource value: 0x7F0800DE
-			public const int tag_screen_reader_focusable = 2131230942;
+			public const int tag_accessibility_pane_title = 2131230942;
 			
 			// aapt resource value: 0x7F0800DF
-			public const int tag_transition_group = 2131230943;
+			public const int tag_screen_reader_focusable = 2131230943;
 			
 			// aapt resource value: 0x7F0800E0
-			public const int tag_unhandled_key_event_manager = 2131230944;
+			public const int tag_transition_group = 2131230944;
 			
 			// aapt resource value: 0x7F0800E1
-			public const int tag_unhandled_key_listeners = 2131230945;
+			public const int tag_unhandled_key_event_manager = 2131230945;
 			
 			// aapt resource value: 0x7F0800E2
-			public const int text = 2131230946;
+			public const int tag_unhandled_key_listeners = 2131230946;
 			
 			// aapt resource value: 0x7F0800E3
-			public const int text2 = 2131230947;
-			
-			// aapt resource value: 0x7F0800E8
-			public const int textinput_counter = 2131230952;
-			
-			// aapt resource value: 0x7F0800E9
-			public const int textinput_error = 2131230953;
-			
-			// aapt resource value: 0x7F0800EA
-			public const int textinput_helper_text = 2131230954;
+			public const int text = 2131230947;
 			
 			// aapt resource value: 0x7F0800E4
-			public const int textSpacerNoButtons = 2131230948;
+			public const int text2 = 2131230948;
 			
-			// aapt resource value: 0x7F0800E5
-			public const int textSpacerNoTitle = 2131230949;
+			// aapt resource value: 0x7F0800E9
+			public const int textinput_counter = 2131230953;
 			
-			// aapt resource value: 0x7F0800E6
-			public const int textStart = 2131230950;
-			
-			// aapt resource value: 0x7F0800E7
-			public const int text_input_password_toggle = 2131230951;
+			// aapt resource value: 0x7F0800EA
+			public const int textinput_error = 2131230954;
 			
 			// aapt resource value: 0x7F0800EB
-			public const int time = 2131230955;
+			public const int textinput_helper_text = 2131230955;
+			
+			// aapt resource value: 0x7F0800E5
+			public const int textSpacerNoButtons = 2131230949;
+			
+			// aapt resource value: 0x7F0800E6
+			public const int textSpacerNoTitle = 2131230950;
+			
+			// aapt resource value: 0x7F0800E7
+			public const int textStart = 2131230951;
+			
+			// aapt resource value: 0x7F0800E8
+			public const int text_input_password_toggle = 2131230952;
 			
 			// aapt resource value: 0x7F0800EC
-			public const int title = 2131230956;
+			public const int time = 2131230956;
 			
 			// aapt resource value: 0x7F0800ED
-			public const int titleDividerNoCustom = 2131230957;
+			public const int title = 2131230957;
 			
 			// aapt resource value: 0x7F0800EE
-			public const int title_template = 2131230958;
+			public const int titleDividerNoCustom = 2131230958;
 			
 			// aapt resource value: 0x7F0800EF
-			public const int toolbar = 2131230959;
+			public const int title_template = 2131230959;
 			
 			// aapt resource value: 0x7F0800F0
-			public const int top = 2131230960;
+			public const int toolbar = 2131230960;
 			
 			// aapt resource value: 0x7F0800F1
-			public const int topPanel = 2131230961;
+			public const int top = 2131230961;
 			
 			// aapt resource value: 0x7F0800F2
-			public const int touch_outside = 2131230962;
+			public const int topPanel = 2131230962;
 			
 			// aapt resource value: 0x7F0800F3
-			public const int transition_current_scene = 2131230963;
+			public const int touch_outside = 2131230963;
 			
 			// aapt resource value: 0x7F0800F4
-			public const int transition_layout_save = 2131230964;
+			public const int transition_current_scene = 2131230964;
 			
 			// aapt resource value: 0x7F0800F5
-			public const int transition_position = 2131230965;
+			public const int transition_layout_save = 2131230965;
 			
 			// aapt resource value: 0x7F0800F6
-			public const int transition_scene_layoutid_cache = 2131230966;
+			public const int transition_position = 2131230966;
 			
 			// aapt resource value: 0x7F0800F7
-			public const int transition_transform = 2131230967;
+			public const int transition_scene_layoutid_cache = 2131230967;
 			
 			// aapt resource value: 0x7F0800F8
-			public const int @unchecked = 2131230968;
+			public const int transition_transform = 2131230968;
 			
 			// aapt resource value: 0x7F0800F9
-			public const int uniform = 2131230969;
+			public const int @unchecked = 2131230969;
 			
 			// aapt resource value: 0x7F0800FA
-			public const int unlabeled = 2131230970;
+			public const int uniform = 2131230970;
 			
 			// aapt resource value: 0x7F0800FB
-			public const int up = 2131230971;
+			public const int unlabeled = 2131230971;
 			
 			// aapt resource value: 0x7F0800FC
-			public const int useLogo = 2131230972;
+			public const int up = 2131230972;
 			
 			// aapt resource value: 0x7F0800FD
-			public const int view_offset_helper = 2131230973;
+			public const int useLogo = 2131230973;
 			
 			// aapt resource value: 0x7F0800FE
-			public const int view_tree_lifecycle_owner = 2131230974;
+			public const int view_offset_helper = 2131230974;
 			
 			// aapt resource value: 0x7F0800FF
-			public const int visible = 2131230975;
+			public const int view_tree_lifecycle_owner = 2131230975;
 			
 			// aapt resource value: 0x7F080100
-			public const int visible_removing_fragment_view_tag = 2131230976;
+			public const int visible = 2131230976;
 			
 			// aapt resource value: 0x7F080101
-			public const int withText = 2131230977;
+			public const int visible_removing_fragment_view_tag = 2131230977;
 			
 			// aapt resource value: 0x7F080102
-			public const int wrap_content = 2131230978;
+			public const int withText = 2131230978;
+			
+			// aapt resource value: 0x7F080103
+			public const int wrap_content = 2131230979;
 			
 			static Id()
 			{
@@ -18117,140 +20952,162 @@ namespace MoneyNote.Droid
 			}
 		}
 		
-		public partial class String
+		public partial class Raw
 		{
 			
 			// aapt resource value: 0x7F0D0000
-			public const int abc_action_bar_home_description = 2131558400;
+			public const int loading_animation = 2131558400;
 			
-			// aapt resource value: 0x7F0D0001
-			public const int abc_action_bar_up_description = 2131558401;
+			static Raw()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
 			
-			// aapt resource value: 0x7F0D0002
-			public const int abc_action_menu_overflow_description = 2131558402;
+			private Raw()
+			{
+			}
+		}
+		
+		public partial class String
+		{
 			
-			// aapt resource value: 0x7F0D0003
-			public const int abc_action_mode_done = 2131558403;
+			// aapt resource value: 0x7F0E0000
+			public const int abc_action_bar_home_description = 2131623936;
 			
-			// aapt resource value: 0x7F0D0005
-			public const int abc_activitychooserview_choose_application = 2131558405;
+			// aapt resource value: 0x7F0E0001
+			public const int abc_action_bar_up_description = 2131623937;
 			
-			// aapt resource value: 0x7F0D0004
-			public const int abc_activity_chooser_view_see_all = 2131558404;
+			// aapt resource value: 0x7F0E0002
+			public const int abc_action_menu_overflow_description = 2131623938;
 			
-			// aapt resource value: 0x7F0D0006
-			public const int abc_capital_off = 2131558406;
+			// aapt resource value: 0x7F0E0003
+			public const int abc_action_mode_done = 2131623939;
 			
-			// aapt resource value: 0x7F0D0007
-			public const int abc_capital_on = 2131558407;
+			// aapt resource value: 0x7F0E0005
+			public const int abc_activitychooserview_choose_application = 2131623941;
 			
-			// aapt resource value: 0x7F0D0008
-			public const int abc_menu_alt_shortcut_label = 2131558408;
+			// aapt resource value: 0x7F0E0004
+			public const int abc_activity_chooser_view_see_all = 2131623940;
 			
-			// aapt resource value: 0x7F0D0009
-			public const int abc_menu_ctrl_shortcut_label = 2131558409;
+			// aapt resource value: 0x7F0E0006
+			public const int abc_capital_off = 2131623942;
 			
-			// aapt resource value: 0x7F0D000A
-			public const int abc_menu_delete_shortcut_label = 2131558410;
+			// aapt resource value: 0x7F0E0007
+			public const int abc_capital_on = 2131623943;
 			
-			// aapt resource value: 0x7F0D000B
-			public const int abc_menu_enter_shortcut_label = 2131558411;
+			// aapt resource value: 0x7F0E0008
+			public const int abc_menu_alt_shortcut_label = 2131623944;
 			
-			// aapt resource value: 0x7F0D000C
-			public const int abc_menu_function_shortcut_label = 2131558412;
+			// aapt resource value: 0x7F0E0009
+			public const int abc_menu_ctrl_shortcut_label = 2131623945;
 			
-			// aapt resource value: 0x7F0D000D
-			public const int abc_menu_meta_shortcut_label = 2131558413;
+			// aapt resource value: 0x7F0E000A
+			public const int abc_menu_delete_shortcut_label = 2131623946;
 			
-			// aapt resource value: 0x7F0D000E
-			public const int abc_menu_shift_shortcut_label = 2131558414;
+			// aapt resource value: 0x7F0E000B
+			public const int abc_menu_enter_shortcut_label = 2131623947;
 			
-			// aapt resource value: 0x7F0D000F
-			public const int abc_menu_space_shortcut_label = 2131558415;
+			// aapt resource value: 0x7F0E000C
+			public const int abc_menu_function_shortcut_label = 2131623948;
 			
-			// aapt resource value: 0x7F0D0010
-			public const int abc_menu_sym_shortcut_label = 2131558416;
+			// aapt resource value: 0x7F0E000D
+			public const int abc_menu_meta_shortcut_label = 2131623949;
 			
-			// aapt resource value: 0x7F0D0011
-			public const int abc_prepend_shortcut_label = 2131558417;
+			// aapt resource value: 0x7F0E000E
+			public const int abc_menu_shift_shortcut_label = 2131623950;
 			
-			// aapt resource value: 0x7F0D0013
-			public const int abc_searchview_description_clear = 2131558419;
+			// aapt resource value: 0x7F0E000F
+			public const int abc_menu_space_shortcut_label = 2131623951;
 			
-			// aapt resource value: 0x7F0D0014
-			public const int abc_searchview_description_query = 2131558420;
+			// aapt resource value: 0x7F0E0010
+			public const int abc_menu_sym_shortcut_label = 2131623952;
 			
-			// aapt resource value: 0x7F0D0015
-			public const int abc_searchview_description_search = 2131558421;
+			// aapt resource value: 0x7F0E0011
+			public const int abc_prepend_shortcut_label = 2131623953;
 			
-			// aapt resource value: 0x7F0D0016
-			public const int abc_searchview_description_submit = 2131558422;
+			// aapt resource value: 0x7F0E0013
+			public const int abc_searchview_description_clear = 2131623955;
 			
-			// aapt resource value: 0x7F0D0017
-			public const int abc_searchview_description_voice = 2131558423;
+			// aapt resource value: 0x7F0E0014
+			public const int abc_searchview_description_query = 2131623956;
 			
-			// aapt resource value: 0x7F0D0012
-			public const int abc_search_hint = 2131558418;
+			// aapt resource value: 0x7F0E0015
+			public const int abc_searchview_description_search = 2131623957;
 			
-			// aapt resource value: 0x7F0D0018
-			public const int abc_shareactionprovider_share_with = 2131558424;
+			// aapt resource value: 0x7F0E0016
+			public const int abc_searchview_description_submit = 2131623958;
 			
-			// aapt resource value: 0x7F0D0019
-			public const int abc_shareactionprovider_share_with_application = 2131558425;
+			// aapt resource value: 0x7F0E0017
+			public const int abc_searchview_description_voice = 2131623959;
 			
-			// aapt resource value: 0x7F0D001A
-			public const int abc_toolbar_collapse_description = 2131558426;
+			// aapt resource value: 0x7F0E0012
+			public const int abc_search_hint = 2131623954;
 			
-			// aapt resource value: 0x7F0D001B
-			public const int appbar_scrolling_view_behavior = 2131558427;
+			// aapt resource value: 0x7F0E0018
+			public const int abc_shareactionprovider_share_with = 2131623960;
 			
-			// aapt resource value: 0x7F0D001C
-			public const int bottom_sheet_behavior = 2131558428;
+			// aapt resource value: 0x7F0E0019
+			public const int abc_shareactionprovider_share_with_application = 2131623961;
 			
-			// aapt resource value: 0x7F0D001D
-			public const int character_counter_content_description = 2131558429;
+			// aapt resource value: 0x7F0E001A
+			public const int abc_toolbar_collapse_description = 2131623962;
 			
-			// aapt resource value: 0x7F0D001E
-			public const int character_counter_pattern = 2131558430;
+			// aapt resource value: 0x7F0E001C
+			public const int appbar_scrolling_view_behavior = 2131623964;
 			
-			// aapt resource value: 0x7F0D001F
-			public const int fab_transformation_scrim_behavior = 2131558431;
+			// aapt resource value: 0x7F0E001B
+			public const int app_name = 2131623963;
 			
-			// aapt resource value: 0x7F0D0020
-			public const int fab_transformation_sheet_behavior = 2131558432;
+			// aapt resource value: 0x7F0E001D
+			public const int bottom_sheet_behavior = 2131623965;
 			
-			// aapt resource value: 0x7F0D0021
-			public const int hide_bottom_view_on_scroll_behavior = 2131558433;
+			// aapt resource value: 0x7F0E001E
+			public const int character_counter_content_description = 2131623966;
 			
-			// aapt resource value: 0x7F0D0022
-			public const int library_name = 2131558434;
+			// aapt resource value: 0x7F0E001F
+			public const int character_counter_pattern = 2131623967;
 			
-			// aapt resource value: 0x7F0D0023
-			public const int mtrl_chip_close_icon_content_description = 2131558435;
+			// aapt resource value: 0x7F0E0020
+			public const int fab_transformation_scrim_behavior = 2131623968;
 			
-			// aapt resource value: 0x7F0D0024
-			public const int overflow_tab_title = 2131558436;
+			// aapt resource value: 0x7F0E0021
+			public const int fab_transformation_sheet_behavior = 2131623969;
 			
-			// aapt resource value: 0x7F0D0025
-			public const int password_toggle_content_description = 2131558437;
+			// aapt resource value: 0x7F0E0022
+			public const int hello = 2131623970;
 			
-			// aapt resource value: 0x7F0D0026
-			public const int path_password_eye = 2131558438;
+			// aapt resource value: 0x7F0E0023
+			public const int hide_bottom_view_on_scroll_behavior = 2131623971;
 			
-			// aapt resource value: 0x7F0D0027
-			public const int path_password_eye_mask_strike_through = 2131558439;
+			// aapt resource value: 0x7F0E0024
+			public const int library_name = 2131623972;
 			
-			// aapt resource value: 0x7F0D0028
-			public const int path_password_eye_mask_visible = 2131558440;
+			// aapt resource value: 0x7F0E0025
+			public const int mtrl_chip_close_icon_content_description = 2131623973;
 			
-			// aapt resource value: 0x7F0D0029
-			public const int path_password_strike_through = 2131558441;
+			// aapt resource value: 0x7F0E0026
+			public const int overflow_tab_title = 2131623974;
 			
-			// aapt resource value: 0x7F0D002A
-			public const int search_menu_title = 2131558442;
+			// aapt resource value: 0x7F0E0027
+			public const int password_toggle_content_description = 2131623975;
 			
-			// aapt resource value: 0x7F0D002B
-			public const int status_bar_notification_info_overflow = 2131558443;
+			// aapt resource value: 0x7F0E0028
+			public const int path_password_eye = 2131623976;
+			
+			// aapt resource value: 0x7F0E0029
+			public const int path_password_eye_mask_strike_through = 2131623977;
+			
+			// aapt resource value: 0x7F0E002A
+			public const int path_password_eye_mask_visible = 2131623978;
+			
+			// aapt resource value: 0x7F0E002B
+			public const int path_password_strike_through = 2131623979;
+			
+			// aapt resource value: 0x7F0E002C
+			public const int search_menu_title = 2131623980;
+			
+			// aapt resource value: 0x7F0E002D
+			public const int status_bar_notification_info_overflow = 2131623981;
 			
 			static String()
 			{
@@ -18265,1535 +21122,1535 @@ namespace MoneyNote.Droid
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7F0E0000
-			public const int AlertDialog_AppCompat = 2131623936;
+			// aapt resource value: 0x7F0F0000
+			public const int AlertDialog_AppCompat = 2131689472;
 			
-			// aapt resource value: 0x7F0E0001
-			public const int AlertDialog_AppCompat_Light = 2131623937;
+			// aapt resource value: 0x7F0F0001
+			public const int AlertDialog_AppCompat_Light = 2131689473;
 			
-			// aapt resource value: 0x7F0E0002
-			public const int Animation_AppCompat_Dialog = 2131623938;
+			// aapt resource value: 0x7F0F0002
+			public const int Animation_AppCompat_Dialog = 2131689474;
 			
-			// aapt resource value: 0x7F0E0003
-			public const int Animation_AppCompat_DropDownUp = 2131623939;
+			// aapt resource value: 0x7F0F0003
+			public const int Animation_AppCompat_DropDownUp = 2131689475;
 			
-			// aapt resource value: 0x7F0E0004
-			public const int Animation_AppCompat_Tooltip = 2131623940;
+			// aapt resource value: 0x7F0F0004
+			public const int Animation_AppCompat_Tooltip = 2131689476;
 			
-			// aapt resource value: 0x7F0E0005
-			public const int Animation_Design_BottomSheetDialog = 2131623941;
+			// aapt resource value: 0x7F0F0005
+			public const int Animation_Design_BottomSheetDialog = 2131689477;
 			
-			// aapt resource value: 0x7F0E0006
-			public const int AppCompatDialogStyle = 2131623942;
+			// aapt resource value: 0x7F0F0006
+			public const int AppCompatDialogStyle = 2131689478;
 			
-			// aapt resource value: 0x7F0E0007
-			public const int Base_AlertDialog_AppCompat = 2131623943;
+			// aapt resource value: 0x7F0F0007
+			public const int Base_AlertDialog_AppCompat = 2131689479;
 			
-			// aapt resource value: 0x7F0E0008
-			public const int Base_AlertDialog_AppCompat_Light = 2131623944;
+			// aapt resource value: 0x7F0F0008
+			public const int Base_AlertDialog_AppCompat_Light = 2131689480;
 			
-			// aapt resource value: 0x7F0E0009
-			public const int Base_Animation_AppCompat_Dialog = 2131623945;
+			// aapt resource value: 0x7F0F0009
+			public const int Base_Animation_AppCompat_Dialog = 2131689481;
 			
-			// aapt resource value: 0x7F0E000A
-			public const int Base_Animation_AppCompat_DropDownUp = 2131623946;
+			// aapt resource value: 0x7F0F000A
+			public const int Base_Animation_AppCompat_DropDownUp = 2131689482;
 			
-			// aapt resource value: 0x7F0E000B
-			public const int Base_Animation_AppCompat_Tooltip = 2131623947;
+			// aapt resource value: 0x7F0F000B
+			public const int Base_Animation_AppCompat_Tooltip = 2131689483;
 			
-			// aapt resource value: 0x7F0E000C
-			public const int Base_CardView = 2131623948;
+			// aapt resource value: 0x7F0F000C
+			public const int Base_CardView = 2131689484;
 			
-			// aapt resource value: 0x7F0E000E
-			public const int Base_DialogWindowTitleBackground_AppCompat = 2131623950;
+			// aapt resource value: 0x7F0F000E
+			public const int Base_DialogWindowTitleBackground_AppCompat = 2131689486;
 			
-			// aapt resource value: 0x7F0E000D
-			public const int Base_DialogWindowTitle_AppCompat = 2131623949;
+			// aapt resource value: 0x7F0F000D
+			public const int Base_DialogWindowTitle_AppCompat = 2131689485;
 			
-			// aapt resource value: 0x7F0E000F
-			public const int Base_TextAppearance_AppCompat = 2131623951;
+			// aapt resource value: 0x7F0F000F
+			public const int Base_TextAppearance_AppCompat = 2131689487;
 			
-			// aapt resource value: 0x7F0E0010
-			public const int Base_TextAppearance_AppCompat_Body1 = 2131623952;
+			// aapt resource value: 0x7F0F0010
+			public const int Base_TextAppearance_AppCompat_Body1 = 2131689488;
 			
-			// aapt resource value: 0x7F0E0011
-			public const int Base_TextAppearance_AppCompat_Body2 = 2131623953;
+			// aapt resource value: 0x7F0F0011
+			public const int Base_TextAppearance_AppCompat_Body2 = 2131689489;
 			
-			// aapt resource value: 0x7F0E0012
-			public const int Base_TextAppearance_AppCompat_Button = 2131623954;
+			// aapt resource value: 0x7F0F0012
+			public const int Base_TextAppearance_AppCompat_Button = 2131689490;
 			
-			// aapt resource value: 0x7F0E0013
-			public const int Base_TextAppearance_AppCompat_Caption = 2131623955;
+			// aapt resource value: 0x7F0F0013
+			public const int Base_TextAppearance_AppCompat_Caption = 2131689491;
 			
-			// aapt resource value: 0x7F0E0014
-			public const int Base_TextAppearance_AppCompat_Display1 = 2131623956;
+			// aapt resource value: 0x7F0F0014
+			public const int Base_TextAppearance_AppCompat_Display1 = 2131689492;
 			
-			// aapt resource value: 0x7F0E0015
-			public const int Base_TextAppearance_AppCompat_Display2 = 2131623957;
+			// aapt resource value: 0x7F0F0015
+			public const int Base_TextAppearance_AppCompat_Display2 = 2131689493;
 			
-			// aapt resource value: 0x7F0E0016
-			public const int Base_TextAppearance_AppCompat_Display3 = 2131623958;
+			// aapt resource value: 0x7F0F0016
+			public const int Base_TextAppearance_AppCompat_Display3 = 2131689494;
 			
-			// aapt resource value: 0x7F0E0017
-			public const int Base_TextAppearance_AppCompat_Display4 = 2131623959;
+			// aapt resource value: 0x7F0F0017
+			public const int Base_TextAppearance_AppCompat_Display4 = 2131689495;
 			
-			// aapt resource value: 0x7F0E0018
-			public const int Base_TextAppearance_AppCompat_Headline = 2131623960;
+			// aapt resource value: 0x7F0F0018
+			public const int Base_TextAppearance_AppCompat_Headline = 2131689496;
 			
-			// aapt resource value: 0x7F0E0019
-			public const int Base_TextAppearance_AppCompat_Inverse = 2131623961;
+			// aapt resource value: 0x7F0F0019
+			public const int Base_TextAppearance_AppCompat_Inverse = 2131689497;
 			
-			// aapt resource value: 0x7F0E001A
-			public const int Base_TextAppearance_AppCompat_Large = 2131623962;
+			// aapt resource value: 0x7F0F001A
+			public const int Base_TextAppearance_AppCompat_Large = 2131689498;
 			
-			// aapt resource value: 0x7F0E001B
-			public const int Base_TextAppearance_AppCompat_Large_Inverse = 2131623963;
+			// aapt resource value: 0x7F0F001B
+			public const int Base_TextAppearance_AppCompat_Large_Inverse = 2131689499;
 			
-			// aapt resource value: 0x7F0E001C
-			public const int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131623964;
+			// aapt resource value: 0x7F0F001C
+			public const int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131689500;
 			
-			// aapt resource value: 0x7F0E001D
-			public const int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131623965;
+			// aapt resource value: 0x7F0F001D
+			public const int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131689501;
 			
-			// aapt resource value: 0x7F0E001E
-			public const int Base_TextAppearance_AppCompat_Medium = 2131623966;
+			// aapt resource value: 0x7F0F001E
+			public const int Base_TextAppearance_AppCompat_Medium = 2131689502;
 			
-			// aapt resource value: 0x7F0E001F
-			public const int Base_TextAppearance_AppCompat_Medium_Inverse = 2131623967;
+			// aapt resource value: 0x7F0F001F
+			public const int Base_TextAppearance_AppCompat_Medium_Inverse = 2131689503;
 			
-			// aapt resource value: 0x7F0E0020
-			public const int Base_TextAppearance_AppCompat_Menu = 2131623968;
+			// aapt resource value: 0x7F0F0020
+			public const int Base_TextAppearance_AppCompat_Menu = 2131689504;
 			
-			// aapt resource value: 0x7F0E0021
-			public const int Base_TextAppearance_AppCompat_SearchResult = 2131623969;
+			// aapt resource value: 0x7F0F0021
+			public const int Base_TextAppearance_AppCompat_SearchResult = 2131689505;
 			
-			// aapt resource value: 0x7F0E0022
-			public const int Base_TextAppearance_AppCompat_SearchResult_Subtitle = 2131623970;
+			// aapt resource value: 0x7F0F0022
+			public const int Base_TextAppearance_AppCompat_SearchResult_Subtitle = 2131689506;
 			
-			// aapt resource value: 0x7F0E0023
-			public const int Base_TextAppearance_AppCompat_SearchResult_Title = 2131623971;
+			// aapt resource value: 0x7F0F0023
+			public const int Base_TextAppearance_AppCompat_SearchResult_Title = 2131689507;
 			
-			// aapt resource value: 0x7F0E0024
-			public const int Base_TextAppearance_AppCompat_Small = 2131623972;
+			// aapt resource value: 0x7F0F0024
+			public const int Base_TextAppearance_AppCompat_Small = 2131689508;
 			
-			// aapt resource value: 0x7F0E0025
-			public const int Base_TextAppearance_AppCompat_Small_Inverse = 2131623973;
+			// aapt resource value: 0x7F0F0025
+			public const int Base_TextAppearance_AppCompat_Small_Inverse = 2131689509;
 			
-			// aapt resource value: 0x7F0E0026
-			public const int Base_TextAppearance_AppCompat_Subhead = 2131623974;
+			// aapt resource value: 0x7F0F0026
+			public const int Base_TextAppearance_AppCompat_Subhead = 2131689510;
 			
-			// aapt resource value: 0x7F0E0027
-			public const int Base_TextAppearance_AppCompat_Subhead_Inverse = 2131623975;
+			// aapt resource value: 0x7F0F0027
+			public const int Base_TextAppearance_AppCompat_Subhead_Inverse = 2131689511;
 			
-			// aapt resource value: 0x7F0E0028
-			public const int Base_TextAppearance_AppCompat_Title = 2131623976;
+			// aapt resource value: 0x7F0F0028
+			public const int Base_TextAppearance_AppCompat_Title = 2131689512;
 			
-			// aapt resource value: 0x7F0E0029
-			public const int Base_TextAppearance_AppCompat_Title_Inverse = 2131623977;
+			// aapt resource value: 0x7F0F0029
+			public const int Base_TextAppearance_AppCompat_Title_Inverse = 2131689513;
 			
-			// aapt resource value: 0x7F0E002A
-			public const int Base_TextAppearance_AppCompat_Tooltip = 2131623978;
+			// aapt resource value: 0x7F0F002A
+			public const int Base_TextAppearance_AppCompat_Tooltip = 2131689514;
 			
-			// aapt resource value: 0x7F0E002B
-			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131623979;
+			// aapt resource value: 0x7F0F002B
+			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131689515;
 			
-			// aapt resource value: 0x7F0E002C
-			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131623980;
+			// aapt resource value: 0x7F0F002C
+			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131689516;
 			
-			// aapt resource value: 0x7F0E002D
-			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131623981;
+			// aapt resource value: 0x7F0F002D
+			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131689517;
 			
-			// aapt resource value: 0x7F0E002E
-			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Title = 2131623982;
+			// aapt resource value: 0x7F0F002E
+			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Title = 2131689518;
 			
-			// aapt resource value: 0x7F0E002F
-			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131623983;
+			// aapt resource value: 0x7F0F002F
+			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131689519;
 			
-			// aapt resource value: 0x7F0E0030
-			public const int Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131623984;
+			// aapt resource value: 0x7F0F0030
+			public const int Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131689520;
 			
-			// aapt resource value: 0x7F0E0031
-			public const int Base_TextAppearance_AppCompat_Widget_ActionMode_Title = 2131623985;
+			// aapt resource value: 0x7F0F0031
+			public const int Base_TextAppearance_AppCompat_Widget_ActionMode_Title = 2131689521;
 			
-			// aapt resource value: 0x7F0E0032
-			public const int Base_TextAppearance_AppCompat_Widget_Button = 2131623986;
+			// aapt resource value: 0x7F0F0032
+			public const int Base_TextAppearance_AppCompat_Widget_Button = 2131689522;
 			
-			// aapt resource value: 0x7F0E0033
-			public const int Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = 2131623987;
+			// aapt resource value: 0x7F0F0033
+			public const int Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = 2131689523;
 			
-			// aapt resource value: 0x7F0E0034
-			public const int Base_TextAppearance_AppCompat_Widget_Button_Colored = 2131623988;
+			// aapt resource value: 0x7F0F0034
+			public const int Base_TextAppearance_AppCompat_Widget_Button_Colored = 2131689524;
 			
-			// aapt resource value: 0x7F0E0035
-			public const int Base_TextAppearance_AppCompat_Widget_Button_Inverse = 2131623989;
+			// aapt resource value: 0x7F0F0035
+			public const int Base_TextAppearance_AppCompat_Widget_Button_Inverse = 2131689525;
 			
-			// aapt resource value: 0x7F0E0036
-			public const int Base_TextAppearance_AppCompat_Widget_DropDownItem = 2131623990;
+			// aapt resource value: 0x7F0F0036
+			public const int Base_TextAppearance_AppCompat_Widget_DropDownItem = 2131689526;
 			
-			// aapt resource value: 0x7F0E0037
-			public const int Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = 2131623991;
+			// aapt resource value: 0x7F0F0037
+			public const int Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = 2131689527;
 			
-			// aapt resource value: 0x7F0E0038
-			public const int Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131623992;
+			// aapt resource value: 0x7F0F0038
+			public const int Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131689528;
 			
-			// aapt resource value: 0x7F0E0039
-			public const int Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131623993;
+			// aapt resource value: 0x7F0F0039
+			public const int Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131689529;
 			
-			// aapt resource value: 0x7F0E003A
-			public const int Base_TextAppearance_AppCompat_Widget_Switch = 2131623994;
+			// aapt resource value: 0x7F0F003A
+			public const int Base_TextAppearance_AppCompat_Widget_Switch = 2131689530;
 			
-			// aapt resource value: 0x7F0E003B
-			public const int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131623995;
+			// aapt resource value: 0x7F0F003B
+			public const int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131689531;
 			
-			// aapt resource value: 0x7F0E003C
-			public const int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131623996;
+			// aapt resource value: 0x7F0F003C
+			public const int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131689532;
 			
-			// aapt resource value: 0x7F0E003D
-			public const int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131623997;
+			// aapt resource value: 0x7F0F003D
+			public const int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131689533;
 			
-			// aapt resource value: 0x7F0E003E
-			public const int Base_TextAppearance_Widget_AppCompat_Toolbar_Title = 2131623998;
+			// aapt resource value: 0x7F0F003E
+			public const int Base_TextAppearance_Widget_AppCompat_Toolbar_Title = 2131689534;
 			
-			// aapt resource value: 0x7F0E005E
-			public const int Base_ThemeOverlay_AppCompat = 2131624030;
+			// aapt resource value: 0x7F0F005E
+			public const int Base_ThemeOverlay_AppCompat = 2131689566;
 			
-			// aapt resource value: 0x7F0E005F
-			public const int Base_ThemeOverlay_AppCompat_ActionBar = 2131624031;
+			// aapt resource value: 0x7F0F005F
+			public const int Base_ThemeOverlay_AppCompat_ActionBar = 2131689567;
 			
-			// aapt resource value: 0x7F0E0060
-			public const int Base_ThemeOverlay_AppCompat_Dark = 2131624032;
+			// aapt resource value: 0x7F0F0060
+			public const int Base_ThemeOverlay_AppCompat_Dark = 2131689568;
 			
-			// aapt resource value: 0x7F0E0061
-			public const int Base_ThemeOverlay_AppCompat_Dark_ActionBar = 2131624033;
+			// aapt resource value: 0x7F0F0061
+			public const int Base_ThemeOverlay_AppCompat_Dark_ActionBar = 2131689569;
 			
-			// aapt resource value: 0x7F0E0062
-			public const int Base_ThemeOverlay_AppCompat_Dialog = 2131624034;
+			// aapt resource value: 0x7F0F0062
+			public const int Base_ThemeOverlay_AppCompat_Dialog = 2131689570;
 			
-			// aapt resource value: 0x7F0E0063
-			public const int Base_ThemeOverlay_AppCompat_Dialog_Alert = 2131624035;
+			// aapt resource value: 0x7F0F0063
+			public const int Base_ThemeOverlay_AppCompat_Dialog_Alert = 2131689571;
 			
-			// aapt resource value: 0x7F0E0064
-			public const int Base_ThemeOverlay_AppCompat_Light = 2131624036;
+			// aapt resource value: 0x7F0F0064
+			public const int Base_ThemeOverlay_AppCompat_Light = 2131689572;
 			
-			// aapt resource value: 0x7F0E0065
-			public const int Base_ThemeOverlay_MaterialComponents_Dialog = 2131624037;
+			// aapt resource value: 0x7F0F0065
+			public const int Base_ThemeOverlay_MaterialComponents_Dialog = 2131689573;
 			
-			// aapt resource value: 0x7F0E0066
-			public const int Base_ThemeOverlay_MaterialComponents_Dialog_Alert = 2131624038;
+			// aapt resource value: 0x7F0F0066
+			public const int Base_ThemeOverlay_MaterialComponents_Dialog_Alert = 2131689574;
 			
-			// aapt resource value: 0x7F0E003F
-			public const int Base_Theme_AppCompat = 2131623999;
+			// aapt resource value: 0x7F0F003F
+			public const int Base_Theme_AppCompat = 2131689535;
 			
-			// aapt resource value: 0x7F0E0040
-			public const int Base_Theme_AppCompat_CompactMenu = 2131624000;
+			// aapt resource value: 0x7F0F0040
+			public const int Base_Theme_AppCompat_CompactMenu = 2131689536;
 			
-			// aapt resource value: 0x7F0E0041
-			public const int Base_Theme_AppCompat_Dialog = 2131624001;
+			// aapt resource value: 0x7F0F0041
+			public const int Base_Theme_AppCompat_Dialog = 2131689537;
 			
-			// aapt resource value: 0x7F0E0045
-			public const int Base_Theme_AppCompat_DialogWhenLarge = 2131624005;
+			// aapt resource value: 0x7F0F0045
+			public const int Base_Theme_AppCompat_DialogWhenLarge = 2131689541;
 			
-			// aapt resource value: 0x7F0E0042
-			public const int Base_Theme_AppCompat_Dialog_Alert = 2131624002;
+			// aapt resource value: 0x7F0F0042
+			public const int Base_Theme_AppCompat_Dialog_Alert = 2131689538;
 			
-			// aapt resource value: 0x7F0E0043
-			public const int Base_Theme_AppCompat_Dialog_FixedSize = 2131624003;
+			// aapt resource value: 0x7F0F0043
+			public const int Base_Theme_AppCompat_Dialog_FixedSize = 2131689539;
 			
-			// aapt resource value: 0x7F0E0044
-			public const int Base_Theme_AppCompat_Dialog_MinWidth = 2131624004;
+			// aapt resource value: 0x7F0F0044
+			public const int Base_Theme_AppCompat_Dialog_MinWidth = 2131689540;
 			
-			// aapt resource value: 0x7F0E0046
-			public const int Base_Theme_AppCompat_Light = 2131624006;
+			// aapt resource value: 0x7F0F0046
+			public const int Base_Theme_AppCompat_Light = 2131689542;
 			
-			// aapt resource value: 0x7F0E0047
-			public const int Base_Theme_AppCompat_Light_DarkActionBar = 2131624007;
+			// aapt resource value: 0x7F0F0047
+			public const int Base_Theme_AppCompat_Light_DarkActionBar = 2131689543;
 			
-			// aapt resource value: 0x7F0E0048
-			public const int Base_Theme_AppCompat_Light_Dialog = 2131624008;
+			// aapt resource value: 0x7F0F0048
+			public const int Base_Theme_AppCompat_Light_Dialog = 2131689544;
 			
-			// aapt resource value: 0x7F0E004C
-			public const int Base_Theme_AppCompat_Light_DialogWhenLarge = 2131624012;
+			// aapt resource value: 0x7F0F004C
+			public const int Base_Theme_AppCompat_Light_DialogWhenLarge = 2131689548;
 			
-			// aapt resource value: 0x7F0E0049
-			public const int Base_Theme_AppCompat_Light_Dialog_Alert = 2131624009;
+			// aapt resource value: 0x7F0F0049
+			public const int Base_Theme_AppCompat_Light_Dialog_Alert = 2131689545;
 			
-			// aapt resource value: 0x7F0E004A
-			public const int Base_Theme_AppCompat_Light_Dialog_FixedSize = 2131624010;
+			// aapt resource value: 0x7F0F004A
+			public const int Base_Theme_AppCompat_Light_Dialog_FixedSize = 2131689546;
 			
-			// aapt resource value: 0x7F0E004B
-			public const int Base_Theme_AppCompat_Light_Dialog_MinWidth = 2131624011;
+			// aapt resource value: 0x7F0F004B
+			public const int Base_Theme_AppCompat_Light_Dialog_MinWidth = 2131689547;
 			
-			// aapt resource value: 0x7F0E004D
-			public const int Base_Theme_MaterialComponents = 2131624013;
+			// aapt resource value: 0x7F0F004D
+			public const int Base_Theme_MaterialComponents = 2131689549;
 			
-			// aapt resource value: 0x7F0E004E
-			public const int Base_Theme_MaterialComponents_Bridge = 2131624014;
+			// aapt resource value: 0x7F0F004E
+			public const int Base_Theme_MaterialComponents_Bridge = 2131689550;
 			
-			// aapt resource value: 0x7F0E004F
-			public const int Base_Theme_MaterialComponents_CompactMenu = 2131624015;
+			// aapt resource value: 0x7F0F004F
+			public const int Base_Theme_MaterialComponents_CompactMenu = 2131689551;
 			
-			// aapt resource value: 0x7F0E0050
-			public const int Base_Theme_MaterialComponents_Dialog = 2131624016;
+			// aapt resource value: 0x7F0F0050
+			public const int Base_Theme_MaterialComponents_Dialog = 2131689552;
 			
-			// aapt resource value: 0x7F0E0054
-			public const int Base_Theme_MaterialComponents_DialogWhenLarge = 2131624020;
+			// aapt resource value: 0x7F0F0054
+			public const int Base_Theme_MaterialComponents_DialogWhenLarge = 2131689556;
 			
-			// aapt resource value: 0x7F0E0051
-			public const int Base_Theme_MaterialComponents_Dialog_Alert = 2131624017;
+			// aapt resource value: 0x7F0F0051
+			public const int Base_Theme_MaterialComponents_Dialog_Alert = 2131689553;
 			
-			// aapt resource value: 0x7F0E0052
-			public const int Base_Theme_MaterialComponents_Dialog_FixedSize = 2131624018;
+			// aapt resource value: 0x7F0F0052
+			public const int Base_Theme_MaterialComponents_Dialog_FixedSize = 2131689554;
 			
-			// aapt resource value: 0x7F0E0053
-			public const int Base_Theme_MaterialComponents_Dialog_MinWidth = 2131624019;
+			// aapt resource value: 0x7F0F0053
+			public const int Base_Theme_MaterialComponents_Dialog_MinWidth = 2131689555;
 			
-			// aapt resource value: 0x7F0E0055
-			public const int Base_Theme_MaterialComponents_Light = 2131624021;
+			// aapt resource value: 0x7F0F0055
+			public const int Base_Theme_MaterialComponents_Light = 2131689557;
 			
-			// aapt resource value: 0x7F0E0056
-			public const int Base_Theme_MaterialComponents_Light_Bridge = 2131624022;
+			// aapt resource value: 0x7F0F0056
+			public const int Base_Theme_MaterialComponents_Light_Bridge = 2131689558;
 			
-			// aapt resource value: 0x7F0E0057
-			public const int Base_Theme_MaterialComponents_Light_DarkActionBar = 2131624023;
+			// aapt resource value: 0x7F0F0057
+			public const int Base_Theme_MaterialComponents_Light_DarkActionBar = 2131689559;
 			
-			// aapt resource value: 0x7F0E0058
-			public const int Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge = 2131624024;
+			// aapt resource value: 0x7F0F0058
+			public const int Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge = 2131689560;
 			
-			// aapt resource value: 0x7F0E0059
-			public const int Base_Theme_MaterialComponents_Light_Dialog = 2131624025;
+			// aapt resource value: 0x7F0F0059
+			public const int Base_Theme_MaterialComponents_Light_Dialog = 2131689561;
 			
-			// aapt resource value: 0x7F0E005D
-			public const int Base_Theme_MaterialComponents_Light_DialogWhenLarge = 2131624029;
+			// aapt resource value: 0x7F0F005D
+			public const int Base_Theme_MaterialComponents_Light_DialogWhenLarge = 2131689565;
 			
-			// aapt resource value: 0x7F0E005A
-			public const int Base_Theme_MaterialComponents_Light_Dialog_Alert = 2131624026;
+			// aapt resource value: 0x7F0F005A
+			public const int Base_Theme_MaterialComponents_Light_Dialog_Alert = 2131689562;
 			
-			// aapt resource value: 0x7F0E005B
-			public const int Base_Theme_MaterialComponents_Light_Dialog_FixedSize = 2131624027;
+			// aapt resource value: 0x7F0F005B
+			public const int Base_Theme_MaterialComponents_Light_Dialog_FixedSize = 2131689563;
 			
-			// aapt resource value: 0x7F0E005C
-			public const int Base_Theme_MaterialComponents_Light_Dialog_MinWidth = 2131624028;
+			// aapt resource value: 0x7F0F005C
+			public const int Base_Theme_MaterialComponents_Light_Dialog_MinWidth = 2131689564;
 			
-			// aapt resource value: 0x7F0E006E
-			public const int Base_V14_ThemeOverlay_MaterialComponents_Dialog = 2131624046;
+			// aapt resource value: 0x7F0F006E
+			public const int Base_V14_ThemeOverlay_MaterialComponents_Dialog = 2131689582;
 			
-			// aapt resource value: 0x7F0E006F
-			public const int Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert = 2131624047;
+			// aapt resource value: 0x7F0F006F
+			public const int Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert = 2131689583;
 			
-			// aapt resource value: 0x7F0E0067
-			public const int Base_V14_Theme_MaterialComponents = 2131624039;
+			// aapt resource value: 0x7F0F0067
+			public const int Base_V14_Theme_MaterialComponents = 2131689575;
 			
-			// aapt resource value: 0x7F0E0068
-			public const int Base_V14_Theme_MaterialComponents_Bridge = 2131624040;
+			// aapt resource value: 0x7F0F0068
+			public const int Base_V14_Theme_MaterialComponents_Bridge = 2131689576;
 			
-			// aapt resource value: 0x7F0E0069
-			public const int Base_V14_Theme_MaterialComponents_Dialog = 2131624041;
+			// aapt resource value: 0x7F0F0069
+			public const int Base_V14_Theme_MaterialComponents_Dialog = 2131689577;
 			
-			// aapt resource value: 0x7F0E006A
-			public const int Base_V14_Theme_MaterialComponents_Light = 2131624042;
+			// aapt resource value: 0x7F0F006A
+			public const int Base_V14_Theme_MaterialComponents_Light = 2131689578;
 			
-			// aapt resource value: 0x7F0E006B
-			public const int Base_V14_Theme_MaterialComponents_Light_Bridge = 2131624043;
+			// aapt resource value: 0x7F0F006B
+			public const int Base_V14_Theme_MaterialComponents_Light_Bridge = 2131689579;
 			
-			// aapt resource value: 0x7F0E006C
-			public const int Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge = 2131624044;
+			// aapt resource value: 0x7F0F006C
+			public const int Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge = 2131689580;
 			
-			// aapt resource value: 0x7F0E006D
-			public const int Base_V14_Theme_MaterialComponents_Light_Dialog = 2131624045;
+			// aapt resource value: 0x7F0F006D
+			public const int Base_V14_Theme_MaterialComponents_Light_Dialog = 2131689581;
 			
-			// aapt resource value: 0x7F0E0074
-			public const int Base_V21_ThemeOverlay_AppCompat_Dialog = 2131624052;
+			// aapt resource value: 0x7F0F0074
+			public const int Base_V21_ThemeOverlay_AppCompat_Dialog = 2131689588;
 			
-			// aapt resource value: 0x7F0E0070
-			public const int Base_V21_Theme_AppCompat = 2131624048;
+			// aapt resource value: 0x7F0F0070
+			public const int Base_V21_Theme_AppCompat = 2131689584;
 			
-			// aapt resource value: 0x7F0E0071
-			public const int Base_V21_Theme_AppCompat_Dialog = 2131624049;
+			// aapt resource value: 0x7F0F0071
+			public const int Base_V21_Theme_AppCompat_Dialog = 2131689585;
 			
-			// aapt resource value: 0x7F0E0072
-			public const int Base_V21_Theme_AppCompat_Light = 2131624050;
+			// aapt resource value: 0x7F0F0072
+			public const int Base_V21_Theme_AppCompat_Light = 2131689586;
 			
-			// aapt resource value: 0x7F0E0073
-			public const int Base_V21_Theme_AppCompat_Light_Dialog = 2131624051;
+			// aapt resource value: 0x7F0F0073
+			public const int Base_V21_Theme_AppCompat_Light_Dialog = 2131689587;
 			
-			// aapt resource value: 0x7F0E0075
-			public const int Base_V22_Theme_AppCompat = 2131624053;
+			// aapt resource value: 0x7F0F0075
+			public const int Base_V22_Theme_AppCompat = 2131689589;
 			
-			// aapt resource value: 0x7F0E0076
-			public const int Base_V22_Theme_AppCompat_Light = 2131624054;
+			// aapt resource value: 0x7F0F0076
+			public const int Base_V22_Theme_AppCompat_Light = 2131689590;
 			
-			// aapt resource value: 0x7F0E0077
-			public const int Base_V23_Theme_AppCompat = 2131624055;
+			// aapt resource value: 0x7F0F0077
+			public const int Base_V23_Theme_AppCompat = 2131689591;
 			
-			// aapt resource value: 0x7F0E0078
-			public const int Base_V23_Theme_AppCompat_Light = 2131624056;
+			// aapt resource value: 0x7F0F0078
+			public const int Base_V23_Theme_AppCompat_Light = 2131689592;
 			
-			// aapt resource value: 0x7F0E0079
-			public const int Base_V26_Theme_AppCompat = 2131624057;
+			// aapt resource value: 0x7F0F0079
+			public const int Base_V26_Theme_AppCompat = 2131689593;
 			
-			// aapt resource value: 0x7F0E007A
-			public const int Base_V26_Theme_AppCompat_Light = 2131624058;
+			// aapt resource value: 0x7F0F007A
+			public const int Base_V26_Theme_AppCompat_Light = 2131689594;
 			
-			// aapt resource value: 0x7F0E007B
-			public const int Base_V26_Widget_AppCompat_Toolbar = 2131624059;
+			// aapt resource value: 0x7F0F007B
+			public const int Base_V26_Widget_AppCompat_Toolbar = 2131689595;
 			
-			// aapt resource value: 0x7F0E007C
-			public const int Base_V28_Theme_AppCompat = 2131624060;
+			// aapt resource value: 0x7F0F007C
+			public const int Base_V28_Theme_AppCompat = 2131689596;
 			
-			// aapt resource value: 0x7F0E007D
-			public const int Base_V28_Theme_AppCompat_Light = 2131624061;
+			// aapt resource value: 0x7F0F007D
+			public const int Base_V28_Theme_AppCompat_Light = 2131689597;
 			
-			// aapt resource value: 0x7F0E0082
-			public const int Base_V7_ThemeOverlay_AppCompat_Dialog = 2131624066;
+			// aapt resource value: 0x7F0F0082
+			public const int Base_V7_ThemeOverlay_AppCompat_Dialog = 2131689602;
 			
-			// aapt resource value: 0x7F0E007E
-			public const int Base_V7_Theme_AppCompat = 2131624062;
+			// aapt resource value: 0x7F0F007E
+			public const int Base_V7_Theme_AppCompat = 2131689598;
 			
-			// aapt resource value: 0x7F0E007F
-			public const int Base_V7_Theme_AppCompat_Dialog = 2131624063;
+			// aapt resource value: 0x7F0F007F
+			public const int Base_V7_Theme_AppCompat_Dialog = 2131689599;
 			
-			// aapt resource value: 0x7F0E0080
-			public const int Base_V7_Theme_AppCompat_Light = 2131624064;
+			// aapt resource value: 0x7F0F0080
+			public const int Base_V7_Theme_AppCompat_Light = 2131689600;
 			
-			// aapt resource value: 0x7F0E0081
-			public const int Base_V7_Theme_AppCompat_Light_Dialog = 2131624065;
+			// aapt resource value: 0x7F0F0081
+			public const int Base_V7_Theme_AppCompat_Light_Dialog = 2131689601;
 			
-			// aapt resource value: 0x7F0E0083
-			public const int Base_V7_Widget_AppCompat_AutoCompleteTextView = 2131624067;
+			// aapt resource value: 0x7F0F0083
+			public const int Base_V7_Widget_AppCompat_AutoCompleteTextView = 2131689603;
 			
-			// aapt resource value: 0x7F0E0084
-			public const int Base_V7_Widget_AppCompat_EditText = 2131624068;
+			// aapt resource value: 0x7F0F0084
+			public const int Base_V7_Widget_AppCompat_EditText = 2131689604;
 			
-			// aapt resource value: 0x7F0E0085
-			public const int Base_V7_Widget_AppCompat_Toolbar = 2131624069;
+			// aapt resource value: 0x7F0F0085
+			public const int Base_V7_Widget_AppCompat_Toolbar = 2131689605;
 			
-			// aapt resource value: 0x7F0E0086
-			public const int Base_Widget_AppCompat_ActionBar = 2131624070;
+			// aapt resource value: 0x7F0F0086
+			public const int Base_Widget_AppCompat_ActionBar = 2131689606;
 			
-			// aapt resource value: 0x7F0E0087
-			public const int Base_Widget_AppCompat_ActionBar_Solid = 2131624071;
+			// aapt resource value: 0x7F0F0087
+			public const int Base_Widget_AppCompat_ActionBar_Solid = 2131689607;
 			
-			// aapt resource value: 0x7F0E0088
-			public const int Base_Widget_AppCompat_ActionBar_TabBar = 2131624072;
+			// aapt resource value: 0x7F0F0088
+			public const int Base_Widget_AppCompat_ActionBar_TabBar = 2131689608;
 			
-			// aapt resource value: 0x7F0E0089
-			public const int Base_Widget_AppCompat_ActionBar_TabText = 2131624073;
+			// aapt resource value: 0x7F0F0089
+			public const int Base_Widget_AppCompat_ActionBar_TabText = 2131689609;
 			
-			// aapt resource value: 0x7F0E008A
-			public const int Base_Widget_AppCompat_ActionBar_TabView = 2131624074;
+			// aapt resource value: 0x7F0F008A
+			public const int Base_Widget_AppCompat_ActionBar_TabView = 2131689610;
 			
-			// aapt resource value: 0x7F0E008B
-			public const int Base_Widget_AppCompat_ActionButton = 2131624075;
+			// aapt resource value: 0x7F0F008B
+			public const int Base_Widget_AppCompat_ActionButton = 2131689611;
 			
-			// aapt resource value: 0x7F0E008C
-			public const int Base_Widget_AppCompat_ActionButton_CloseMode = 2131624076;
+			// aapt resource value: 0x7F0F008C
+			public const int Base_Widget_AppCompat_ActionButton_CloseMode = 2131689612;
 			
-			// aapt resource value: 0x7F0E008D
-			public const int Base_Widget_AppCompat_ActionButton_Overflow = 2131624077;
+			// aapt resource value: 0x7F0F008D
+			public const int Base_Widget_AppCompat_ActionButton_Overflow = 2131689613;
 			
-			// aapt resource value: 0x7F0E008E
-			public const int Base_Widget_AppCompat_ActionMode = 2131624078;
+			// aapt resource value: 0x7F0F008E
+			public const int Base_Widget_AppCompat_ActionMode = 2131689614;
 			
-			// aapt resource value: 0x7F0E008F
-			public const int Base_Widget_AppCompat_ActivityChooserView = 2131624079;
+			// aapt resource value: 0x7F0F008F
+			public const int Base_Widget_AppCompat_ActivityChooserView = 2131689615;
 			
-			// aapt resource value: 0x7F0E0090
-			public const int Base_Widget_AppCompat_AutoCompleteTextView = 2131624080;
+			// aapt resource value: 0x7F0F0090
+			public const int Base_Widget_AppCompat_AutoCompleteTextView = 2131689616;
 			
-			// aapt resource value: 0x7F0E0091
-			public const int Base_Widget_AppCompat_Button = 2131624081;
+			// aapt resource value: 0x7F0F0091
+			public const int Base_Widget_AppCompat_Button = 2131689617;
 			
-			// aapt resource value: 0x7F0E0097
-			public const int Base_Widget_AppCompat_ButtonBar = 2131624087;
+			// aapt resource value: 0x7F0F0097
+			public const int Base_Widget_AppCompat_ButtonBar = 2131689623;
 			
-			// aapt resource value: 0x7F0E0098
-			public const int Base_Widget_AppCompat_ButtonBar_AlertDialog = 2131624088;
+			// aapt resource value: 0x7F0F0098
+			public const int Base_Widget_AppCompat_ButtonBar_AlertDialog = 2131689624;
 			
-			// aapt resource value: 0x7F0E0092
-			public const int Base_Widget_AppCompat_Button_Borderless = 2131624082;
+			// aapt resource value: 0x7F0F0092
+			public const int Base_Widget_AppCompat_Button_Borderless = 2131689618;
 			
-			// aapt resource value: 0x7F0E0093
-			public const int Base_Widget_AppCompat_Button_Borderless_Colored = 2131624083;
+			// aapt resource value: 0x7F0F0093
+			public const int Base_Widget_AppCompat_Button_Borderless_Colored = 2131689619;
 			
-			// aapt resource value: 0x7F0E0094
-			public const int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131624084;
+			// aapt resource value: 0x7F0F0094
+			public const int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131689620;
 			
-			// aapt resource value: 0x7F0E0095
-			public const int Base_Widget_AppCompat_Button_Colored = 2131624085;
+			// aapt resource value: 0x7F0F0095
+			public const int Base_Widget_AppCompat_Button_Colored = 2131689621;
 			
-			// aapt resource value: 0x7F0E0096
-			public const int Base_Widget_AppCompat_Button_Small = 2131624086;
+			// aapt resource value: 0x7F0F0096
+			public const int Base_Widget_AppCompat_Button_Small = 2131689622;
 			
-			// aapt resource value: 0x7F0E0099
-			public const int Base_Widget_AppCompat_CompoundButton_CheckBox = 2131624089;
+			// aapt resource value: 0x7F0F0099
+			public const int Base_Widget_AppCompat_CompoundButton_CheckBox = 2131689625;
 			
-			// aapt resource value: 0x7F0E009A
-			public const int Base_Widget_AppCompat_CompoundButton_RadioButton = 2131624090;
+			// aapt resource value: 0x7F0F009A
+			public const int Base_Widget_AppCompat_CompoundButton_RadioButton = 2131689626;
 			
-			// aapt resource value: 0x7F0E009B
-			public const int Base_Widget_AppCompat_CompoundButton_Switch = 2131624091;
+			// aapt resource value: 0x7F0F009B
+			public const int Base_Widget_AppCompat_CompoundButton_Switch = 2131689627;
 			
-			// aapt resource value: 0x7F0E009C
-			public const int Base_Widget_AppCompat_DrawerArrowToggle = 2131624092;
+			// aapt resource value: 0x7F0F009C
+			public const int Base_Widget_AppCompat_DrawerArrowToggle = 2131689628;
 			
-			// aapt resource value: 0x7F0E009D
-			public const int Base_Widget_AppCompat_DrawerArrowToggle_Common = 2131624093;
+			// aapt resource value: 0x7F0F009D
+			public const int Base_Widget_AppCompat_DrawerArrowToggle_Common = 2131689629;
 			
-			// aapt resource value: 0x7F0E009E
-			public const int Base_Widget_AppCompat_DropDownItem_Spinner = 2131624094;
+			// aapt resource value: 0x7F0F009E
+			public const int Base_Widget_AppCompat_DropDownItem_Spinner = 2131689630;
 			
-			// aapt resource value: 0x7F0E009F
-			public const int Base_Widget_AppCompat_EditText = 2131624095;
+			// aapt resource value: 0x7F0F009F
+			public const int Base_Widget_AppCompat_EditText = 2131689631;
 			
-			// aapt resource value: 0x7F0E00A0
-			public const int Base_Widget_AppCompat_ImageButton = 2131624096;
+			// aapt resource value: 0x7F0F00A0
+			public const int Base_Widget_AppCompat_ImageButton = 2131689632;
 			
-			// aapt resource value: 0x7F0E00A1
-			public const int Base_Widget_AppCompat_Light_ActionBar = 2131624097;
+			// aapt resource value: 0x7F0F00A1
+			public const int Base_Widget_AppCompat_Light_ActionBar = 2131689633;
 			
-			// aapt resource value: 0x7F0E00A2
-			public const int Base_Widget_AppCompat_Light_ActionBar_Solid = 2131624098;
+			// aapt resource value: 0x7F0F00A2
+			public const int Base_Widget_AppCompat_Light_ActionBar_Solid = 2131689634;
 			
-			// aapt resource value: 0x7F0E00A3
-			public const int Base_Widget_AppCompat_Light_ActionBar_TabBar = 2131624099;
+			// aapt resource value: 0x7F0F00A3
+			public const int Base_Widget_AppCompat_Light_ActionBar_TabBar = 2131689635;
 			
-			// aapt resource value: 0x7F0E00A4
-			public const int Base_Widget_AppCompat_Light_ActionBar_TabText = 2131624100;
+			// aapt resource value: 0x7F0F00A4
+			public const int Base_Widget_AppCompat_Light_ActionBar_TabText = 2131689636;
 			
-			// aapt resource value: 0x7F0E00A5
-			public const int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131624101;
+			// aapt resource value: 0x7F0F00A5
+			public const int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131689637;
 			
-			// aapt resource value: 0x7F0E00A6
-			public const int Base_Widget_AppCompat_Light_ActionBar_TabView = 2131624102;
+			// aapt resource value: 0x7F0F00A6
+			public const int Base_Widget_AppCompat_Light_ActionBar_TabView = 2131689638;
 			
-			// aapt resource value: 0x7F0E00A7
-			public const int Base_Widget_AppCompat_Light_PopupMenu = 2131624103;
+			// aapt resource value: 0x7F0F00A7
+			public const int Base_Widget_AppCompat_Light_PopupMenu = 2131689639;
 			
-			// aapt resource value: 0x7F0E00A8
-			public const int Base_Widget_AppCompat_Light_PopupMenu_Overflow = 2131624104;
+			// aapt resource value: 0x7F0F00A8
+			public const int Base_Widget_AppCompat_Light_PopupMenu_Overflow = 2131689640;
 			
-			// aapt resource value: 0x7F0E00A9
-			public const int Base_Widget_AppCompat_ListMenuView = 2131624105;
+			// aapt resource value: 0x7F0F00A9
+			public const int Base_Widget_AppCompat_ListMenuView = 2131689641;
 			
-			// aapt resource value: 0x7F0E00AA
-			public const int Base_Widget_AppCompat_ListPopupWindow = 2131624106;
+			// aapt resource value: 0x7F0F00AA
+			public const int Base_Widget_AppCompat_ListPopupWindow = 2131689642;
 			
-			// aapt resource value: 0x7F0E00AB
-			public const int Base_Widget_AppCompat_ListView = 2131624107;
+			// aapt resource value: 0x7F0F00AB
+			public const int Base_Widget_AppCompat_ListView = 2131689643;
 			
-			// aapt resource value: 0x7F0E00AC
-			public const int Base_Widget_AppCompat_ListView_DropDown = 2131624108;
+			// aapt resource value: 0x7F0F00AC
+			public const int Base_Widget_AppCompat_ListView_DropDown = 2131689644;
 			
-			// aapt resource value: 0x7F0E00AD
-			public const int Base_Widget_AppCompat_ListView_Menu = 2131624109;
+			// aapt resource value: 0x7F0F00AD
+			public const int Base_Widget_AppCompat_ListView_Menu = 2131689645;
 			
-			// aapt resource value: 0x7F0E00AE
-			public const int Base_Widget_AppCompat_PopupMenu = 2131624110;
+			// aapt resource value: 0x7F0F00AE
+			public const int Base_Widget_AppCompat_PopupMenu = 2131689646;
 			
-			// aapt resource value: 0x7F0E00AF
-			public const int Base_Widget_AppCompat_PopupMenu_Overflow = 2131624111;
+			// aapt resource value: 0x7F0F00AF
+			public const int Base_Widget_AppCompat_PopupMenu_Overflow = 2131689647;
 			
-			// aapt resource value: 0x7F0E00B0
-			public const int Base_Widget_AppCompat_PopupWindow = 2131624112;
+			// aapt resource value: 0x7F0F00B0
+			public const int Base_Widget_AppCompat_PopupWindow = 2131689648;
 			
-			// aapt resource value: 0x7F0E00B1
-			public const int Base_Widget_AppCompat_ProgressBar = 2131624113;
+			// aapt resource value: 0x7F0F00B1
+			public const int Base_Widget_AppCompat_ProgressBar = 2131689649;
 			
-			// aapt resource value: 0x7F0E00B2
-			public const int Base_Widget_AppCompat_ProgressBar_Horizontal = 2131624114;
+			// aapt resource value: 0x7F0F00B2
+			public const int Base_Widget_AppCompat_ProgressBar_Horizontal = 2131689650;
 			
-			// aapt resource value: 0x7F0E00B3
-			public const int Base_Widget_AppCompat_RatingBar = 2131624115;
+			// aapt resource value: 0x7F0F00B3
+			public const int Base_Widget_AppCompat_RatingBar = 2131689651;
 			
-			// aapt resource value: 0x7F0E00B4
-			public const int Base_Widget_AppCompat_RatingBar_Indicator = 2131624116;
+			// aapt resource value: 0x7F0F00B4
+			public const int Base_Widget_AppCompat_RatingBar_Indicator = 2131689652;
 			
-			// aapt resource value: 0x7F0E00B5
-			public const int Base_Widget_AppCompat_RatingBar_Small = 2131624117;
+			// aapt resource value: 0x7F0F00B5
+			public const int Base_Widget_AppCompat_RatingBar_Small = 2131689653;
 			
-			// aapt resource value: 0x7F0E00B6
-			public const int Base_Widget_AppCompat_SearchView = 2131624118;
+			// aapt resource value: 0x7F0F00B6
+			public const int Base_Widget_AppCompat_SearchView = 2131689654;
 			
-			// aapt resource value: 0x7F0E00B7
-			public const int Base_Widget_AppCompat_SearchView_ActionBar = 2131624119;
+			// aapt resource value: 0x7F0F00B7
+			public const int Base_Widget_AppCompat_SearchView_ActionBar = 2131689655;
 			
-			// aapt resource value: 0x7F0E00B8
-			public const int Base_Widget_AppCompat_SeekBar = 2131624120;
+			// aapt resource value: 0x7F0F00B8
+			public const int Base_Widget_AppCompat_SeekBar = 2131689656;
 			
-			// aapt resource value: 0x7F0E00B9
-			public const int Base_Widget_AppCompat_SeekBar_Discrete = 2131624121;
+			// aapt resource value: 0x7F0F00B9
+			public const int Base_Widget_AppCompat_SeekBar_Discrete = 2131689657;
 			
-			// aapt resource value: 0x7F0E00BA
-			public const int Base_Widget_AppCompat_Spinner = 2131624122;
+			// aapt resource value: 0x7F0F00BA
+			public const int Base_Widget_AppCompat_Spinner = 2131689658;
 			
-			// aapt resource value: 0x7F0E00BB
-			public const int Base_Widget_AppCompat_Spinner_Underlined = 2131624123;
+			// aapt resource value: 0x7F0F00BB
+			public const int Base_Widget_AppCompat_Spinner_Underlined = 2131689659;
 			
-			// aapt resource value: 0x7F0E00BC
-			public const int Base_Widget_AppCompat_TextView = 2131624124;
+			// aapt resource value: 0x7F0F00BC
+			public const int Base_Widget_AppCompat_TextView = 2131689660;
 			
-			// aapt resource value: 0x7F0E00BD
-			public const int Base_Widget_AppCompat_TextView_SpinnerItem = 2131624125;
+			// aapt resource value: 0x7F0F00BD
+			public const int Base_Widget_AppCompat_TextView_SpinnerItem = 2131689661;
 			
-			// aapt resource value: 0x7F0E00BE
-			public const int Base_Widget_AppCompat_Toolbar = 2131624126;
+			// aapt resource value: 0x7F0F00BE
+			public const int Base_Widget_AppCompat_Toolbar = 2131689662;
 			
-			// aapt resource value: 0x7F0E00BF
-			public const int Base_Widget_AppCompat_Toolbar_Button_Navigation = 2131624127;
+			// aapt resource value: 0x7F0F00BF
+			public const int Base_Widget_AppCompat_Toolbar_Button_Navigation = 2131689663;
 			
-			// aapt resource value: 0x7F0E00C0
-			public const int Base_Widget_Design_TabLayout = 2131624128;
+			// aapt resource value: 0x7F0F00C0
+			public const int Base_Widget_Design_TabLayout = 2131689664;
 			
-			// aapt resource value: 0x7F0E00C1
-			public const int Base_Widget_MaterialComponents_Chip = 2131624129;
+			// aapt resource value: 0x7F0F00C1
+			public const int Base_Widget_MaterialComponents_Chip = 2131689665;
 			
-			// aapt resource value: 0x7F0E00C2
-			public const int Base_Widget_MaterialComponents_TextInputEditText = 2131624130;
+			// aapt resource value: 0x7F0F00C2
+			public const int Base_Widget_MaterialComponents_TextInputEditText = 2131689666;
 			
-			// aapt resource value: 0x7F0E00C3
-			public const int Base_Widget_MaterialComponents_TextInputLayout = 2131624131;
+			// aapt resource value: 0x7F0F00C3
+			public const int Base_Widget_MaterialComponents_TextInputLayout = 2131689667;
 			
-			// aapt resource value: 0x7F0E00C4
-			public const int CardView = 2131624132;
+			// aapt resource value: 0x7F0F00C4
+			public const int CardView = 2131689668;
 			
-			// aapt resource value: 0x7F0E00C5
-			public const int CardView_Dark = 2131624133;
+			// aapt resource value: 0x7F0F00C5
+			public const int CardView_Dark = 2131689669;
 			
-			// aapt resource value: 0x7F0E00C6
-			public const int CardView_Light = 2131624134;
+			// aapt resource value: 0x7F0F00C6
+			public const int CardView_Light = 2131689670;
 			
-			// aapt resource value: 0x7F0E01FC
-			public const int collectionViewScrollBars = 2131624444;
+			// aapt resource value: 0x7F0F01FC
+			public const int collectionViewScrollBars = 2131689980;
 			
-			// aapt resource value: 0x7F0E01FD
-			public const int collectionViewTheme = 2131624445;
+			// aapt resource value: 0x7F0F01FD
+			public const int collectionViewTheme = 2131689981;
 			
-			// aapt resource value: 0x7F0E00C7
-			public const int MainTheme = 2131624135;
+			// aapt resource value: 0x7F0F00C7
+			public const int MainTheme = 2131689671;
 			
-			// aapt resource value: 0x7F0E00C8
-			public const int MainTheme_Base = 2131624136;
+			// aapt resource value: 0x7F0F00C8
+			public const int MainTheme_Base = 2131689672;
 			
-			// aapt resource value: 0x7F0E00C9
-			public const int Platform_AppCompat = 2131624137;
+			// aapt resource value: 0x7F0F00C9
+			public const int Platform_AppCompat = 2131689673;
 			
-			// aapt resource value: 0x7F0E00CA
-			public const int Platform_AppCompat_Light = 2131624138;
+			// aapt resource value: 0x7F0F00CA
+			public const int Platform_AppCompat_Light = 2131689674;
 			
-			// aapt resource value: 0x7F0E00CB
-			public const int Platform_MaterialComponents = 2131624139;
+			// aapt resource value: 0x7F0F00CB
+			public const int Platform_MaterialComponents = 2131689675;
 			
-			// aapt resource value: 0x7F0E00CC
-			public const int Platform_MaterialComponents_Dialog = 2131624140;
+			// aapt resource value: 0x7F0F00CC
+			public const int Platform_MaterialComponents_Dialog = 2131689676;
 			
-			// aapt resource value: 0x7F0E00CD
-			public const int Platform_MaterialComponents_Light = 2131624141;
+			// aapt resource value: 0x7F0F00CD
+			public const int Platform_MaterialComponents_Light = 2131689677;
 			
-			// aapt resource value: 0x7F0E00CE
-			public const int Platform_MaterialComponents_Light_Dialog = 2131624142;
+			// aapt resource value: 0x7F0F00CE
+			public const int Platform_MaterialComponents_Light_Dialog = 2131689678;
 			
-			// aapt resource value: 0x7F0E00CF
-			public const int Platform_ThemeOverlay_AppCompat = 2131624143;
+			// aapt resource value: 0x7F0F00CF
+			public const int Platform_ThemeOverlay_AppCompat = 2131689679;
 			
-			// aapt resource value: 0x7F0E00D0
-			public const int Platform_ThemeOverlay_AppCompat_Dark = 2131624144;
+			// aapt resource value: 0x7F0F00D0
+			public const int Platform_ThemeOverlay_AppCompat_Dark = 2131689680;
 			
-			// aapt resource value: 0x7F0E00D1
-			public const int Platform_ThemeOverlay_AppCompat_Light = 2131624145;
+			// aapt resource value: 0x7F0F00D1
+			public const int Platform_ThemeOverlay_AppCompat_Light = 2131689681;
 			
-			// aapt resource value: 0x7F0E00D2
-			public const int Platform_V21_AppCompat = 2131624146;
+			// aapt resource value: 0x7F0F00D2
+			public const int Platform_V21_AppCompat = 2131689682;
 			
-			// aapt resource value: 0x7F0E00D3
-			public const int Platform_V21_AppCompat_Light = 2131624147;
+			// aapt resource value: 0x7F0F00D3
+			public const int Platform_V21_AppCompat_Light = 2131689683;
 			
-			// aapt resource value: 0x7F0E00D4
-			public const int Platform_V25_AppCompat = 2131624148;
+			// aapt resource value: 0x7F0F00D4
+			public const int Platform_V25_AppCompat = 2131689684;
 			
-			// aapt resource value: 0x7F0E00D5
-			public const int Platform_V25_AppCompat_Light = 2131624149;
+			// aapt resource value: 0x7F0F00D5
+			public const int Platform_V25_AppCompat_Light = 2131689685;
 			
-			// aapt resource value: 0x7F0E00D6
-			public const int Platform_Widget_AppCompat_Spinner = 2131624150;
+			// aapt resource value: 0x7F0F00D6
+			public const int Platform_Widget_AppCompat_Spinner = 2131689686;
 			
-			// aapt resource value: 0x7F0E00D7
-			public const int RtlOverlay_DialogWindowTitle_AppCompat = 2131624151;
+			// aapt resource value: 0x7F0F00D7
+			public const int RtlOverlay_DialogWindowTitle_AppCompat = 2131689687;
 			
-			// aapt resource value: 0x7F0E00D8
-			public const int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = 2131624152;
+			// aapt resource value: 0x7F0F00D8
+			public const int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = 2131689688;
 			
-			// aapt resource value: 0x7F0E00D9
-			public const int RtlOverlay_Widget_AppCompat_DialogTitle_Icon = 2131624153;
+			// aapt resource value: 0x7F0F00D9
+			public const int RtlOverlay_Widget_AppCompat_DialogTitle_Icon = 2131689689;
 			
-			// aapt resource value: 0x7F0E00DA
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem = 2131624154;
+			// aapt resource value: 0x7F0F00DA
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem = 2131689690;
 			
-			// aapt resource value: 0x7F0E00DB
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = 2131624155;
+			// aapt resource value: 0x7F0F00DB
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = 2131689691;
 			
-			// aapt resource value: 0x7F0E00DC
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = 2131624156;
+			// aapt resource value: 0x7F0F00DC
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = 2131689692;
 			
-			// aapt resource value: 0x7F0E00DD
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = 2131624157;
+			// aapt resource value: 0x7F0F00DD
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = 2131689693;
 			
-			// aapt resource value: 0x7F0E00DE
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = 2131624158;
+			// aapt resource value: 0x7F0F00DE
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = 2131689694;
 			
-			// aapt resource value: 0x7F0E00DF
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = 2131624159;
+			// aapt resource value: 0x7F0F00DF
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = 2131689695;
 			
-			// aapt resource value: 0x7F0E00E5
-			public const int RtlOverlay_Widget_AppCompat_SearchView_MagIcon = 2131624165;
+			// aapt resource value: 0x7F0F00E5
+			public const int RtlOverlay_Widget_AppCompat_SearchView_MagIcon = 2131689701;
 			
-			// aapt resource value: 0x7F0E00E0
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown = 2131624160;
+			// aapt resource value: 0x7F0F00E0
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown = 2131689696;
 			
-			// aapt resource value: 0x7F0E00E1
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = 2131624161;
+			// aapt resource value: 0x7F0F00E1
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = 2131689697;
 			
-			// aapt resource value: 0x7F0E00E2
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = 2131624162;
+			// aapt resource value: 0x7F0F00E2
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = 2131689698;
 			
-			// aapt resource value: 0x7F0E00E3
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Query = 2131624163;
+			// aapt resource value: 0x7F0F00E3
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Query = 2131689699;
 			
-			// aapt resource value: 0x7F0E00E4
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Text = 2131624164;
+			// aapt resource value: 0x7F0F00E4
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Text = 2131689700;
 			
-			// aapt resource value: 0x7F0E00E6
-			public const int RtlUnderlay_Widget_AppCompat_ActionButton = 2131624166;
+			// aapt resource value: 0x7F0F00E6
+			public const int RtlUnderlay_Widget_AppCompat_ActionButton = 2131689702;
 			
-			// aapt resource value: 0x7F0E00E7
-			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131624167;
+			// aapt resource value: 0x7F0F00E7
+			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131689703;
 			
-			// aapt resource value: 0x7F0E00E8
-			public const int TextAppearance_AppCompat = 2131624168;
+			// aapt resource value: 0x7F0F00E8
+			public const int TextAppearance_AppCompat = 2131689704;
 			
-			// aapt resource value: 0x7F0E00E9
-			public const int TextAppearance_AppCompat_Body1 = 2131624169;
+			// aapt resource value: 0x7F0F00E9
+			public const int TextAppearance_AppCompat_Body1 = 2131689705;
 			
-			// aapt resource value: 0x7F0E00EA
-			public const int TextAppearance_AppCompat_Body2 = 2131624170;
+			// aapt resource value: 0x7F0F00EA
+			public const int TextAppearance_AppCompat_Body2 = 2131689706;
 			
-			// aapt resource value: 0x7F0E00EB
-			public const int TextAppearance_AppCompat_Button = 2131624171;
+			// aapt resource value: 0x7F0F00EB
+			public const int TextAppearance_AppCompat_Button = 2131689707;
 			
-			// aapt resource value: 0x7F0E00EC
-			public const int TextAppearance_AppCompat_Caption = 2131624172;
+			// aapt resource value: 0x7F0F00EC
+			public const int TextAppearance_AppCompat_Caption = 2131689708;
 			
-			// aapt resource value: 0x7F0E00ED
-			public const int TextAppearance_AppCompat_Display1 = 2131624173;
+			// aapt resource value: 0x7F0F00ED
+			public const int TextAppearance_AppCompat_Display1 = 2131689709;
 			
-			// aapt resource value: 0x7F0E00EE
-			public const int TextAppearance_AppCompat_Display2 = 2131624174;
+			// aapt resource value: 0x7F0F00EE
+			public const int TextAppearance_AppCompat_Display2 = 2131689710;
 			
-			// aapt resource value: 0x7F0E00EF
-			public const int TextAppearance_AppCompat_Display3 = 2131624175;
+			// aapt resource value: 0x7F0F00EF
+			public const int TextAppearance_AppCompat_Display3 = 2131689711;
 			
-			// aapt resource value: 0x7F0E00F0
-			public const int TextAppearance_AppCompat_Display4 = 2131624176;
+			// aapt resource value: 0x7F0F00F0
+			public const int TextAppearance_AppCompat_Display4 = 2131689712;
 			
-			// aapt resource value: 0x7F0E00F1
-			public const int TextAppearance_AppCompat_Headline = 2131624177;
+			// aapt resource value: 0x7F0F00F1
+			public const int TextAppearance_AppCompat_Headline = 2131689713;
 			
-			// aapt resource value: 0x7F0E00F2
-			public const int TextAppearance_AppCompat_Inverse = 2131624178;
+			// aapt resource value: 0x7F0F00F2
+			public const int TextAppearance_AppCompat_Inverse = 2131689714;
 			
-			// aapt resource value: 0x7F0E00F3
-			public const int TextAppearance_AppCompat_Large = 2131624179;
+			// aapt resource value: 0x7F0F00F3
+			public const int TextAppearance_AppCompat_Large = 2131689715;
 			
-			// aapt resource value: 0x7F0E00F4
-			public const int TextAppearance_AppCompat_Large_Inverse = 2131624180;
+			// aapt resource value: 0x7F0F00F4
+			public const int TextAppearance_AppCompat_Large_Inverse = 2131689716;
 			
-			// aapt resource value: 0x7F0E00F5
-			public const int TextAppearance_AppCompat_Light_SearchResult_Subtitle = 2131624181;
+			// aapt resource value: 0x7F0F00F5
+			public const int TextAppearance_AppCompat_Light_SearchResult_Subtitle = 2131689717;
 			
-			// aapt resource value: 0x7F0E00F6
-			public const int TextAppearance_AppCompat_Light_SearchResult_Title = 2131624182;
+			// aapt resource value: 0x7F0F00F6
+			public const int TextAppearance_AppCompat_Light_SearchResult_Title = 2131689718;
 			
-			// aapt resource value: 0x7F0E00F7
-			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131624183;
+			// aapt resource value: 0x7F0F00F7
+			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131689719;
 			
-			// aapt resource value: 0x7F0E00F8
-			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131624184;
+			// aapt resource value: 0x7F0F00F8
+			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131689720;
 			
-			// aapt resource value: 0x7F0E00F9
-			public const int TextAppearance_AppCompat_Medium = 2131624185;
+			// aapt resource value: 0x7F0F00F9
+			public const int TextAppearance_AppCompat_Medium = 2131689721;
 			
-			// aapt resource value: 0x7F0E00FA
-			public const int TextAppearance_AppCompat_Medium_Inverse = 2131624186;
+			// aapt resource value: 0x7F0F00FA
+			public const int TextAppearance_AppCompat_Medium_Inverse = 2131689722;
 			
-			// aapt resource value: 0x7F0E00FB
-			public const int TextAppearance_AppCompat_Menu = 2131624187;
+			// aapt resource value: 0x7F0F00FB
+			public const int TextAppearance_AppCompat_Menu = 2131689723;
 			
-			// aapt resource value: 0x7F0E00FC
-			public const int TextAppearance_AppCompat_SearchResult_Subtitle = 2131624188;
+			// aapt resource value: 0x7F0F00FC
+			public const int TextAppearance_AppCompat_SearchResult_Subtitle = 2131689724;
 			
-			// aapt resource value: 0x7F0E00FD
-			public const int TextAppearance_AppCompat_SearchResult_Title = 2131624189;
+			// aapt resource value: 0x7F0F00FD
+			public const int TextAppearance_AppCompat_SearchResult_Title = 2131689725;
 			
-			// aapt resource value: 0x7F0E00FE
-			public const int TextAppearance_AppCompat_Small = 2131624190;
+			// aapt resource value: 0x7F0F00FE
+			public const int TextAppearance_AppCompat_Small = 2131689726;
 			
-			// aapt resource value: 0x7F0E00FF
-			public const int TextAppearance_AppCompat_Small_Inverse = 2131624191;
+			// aapt resource value: 0x7F0F00FF
+			public const int TextAppearance_AppCompat_Small_Inverse = 2131689727;
 			
-			// aapt resource value: 0x7F0E0100
-			public const int TextAppearance_AppCompat_Subhead = 2131624192;
+			// aapt resource value: 0x7F0F0100
+			public const int TextAppearance_AppCompat_Subhead = 2131689728;
 			
-			// aapt resource value: 0x7F0E0101
-			public const int TextAppearance_AppCompat_Subhead_Inverse = 2131624193;
+			// aapt resource value: 0x7F0F0101
+			public const int TextAppearance_AppCompat_Subhead_Inverse = 2131689729;
 			
-			// aapt resource value: 0x7F0E0102
-			public const int TextAppearance_AppCompat_Title = 2131624194;
+			// aapt resource value: 0x7F0F0102
+			public const int TextAppearance_AppCompat_Title = 2131689730;
 			
-			// aapt resource value: 0x7F0E0103
-			public const int TextAppearance_AppCompat_Title_Inverse = 2131624195;
+			// aapt resource value: 0x7F0F0103
+			public const int TextAppearance_AppCompat_Title_Inverse = 2131689731;
 			
-			// aapt resource value: 0x7F0E0104
-			public const int TextAppearance_AppCompat_Tooltip = 2131624196;
+			// aapt resource value: 0x7F0F0104
+			public const int TextAppearance_AppCompat_Tooltip = 2131689732;
 			
-			// aapt resource value: 0x7F0E0105
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131624197;
+			// aapt resource value: 0x7F0F0105
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131689733;
 			
-			// aapt resource value: 0x7F0E0106
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131624198;
+			// aapt resource value: 0x7F0F0106
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131689734;
 			
-			// aapt resource value: 0x7F0E0107
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131624199;
+			// aapt resource value: 0x7F0F0107
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131689735;
 			
-			// aapt resource value: 0x7F0E0108
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Title = 2131624200;
+			// aapt resource value: 0x7F0F0108
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Title = 2131689736;
 			
-			// aapt resource value: 0x7F0E0109
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131624201;
+			// aapt resource value: 0x7F0F0109
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131689737;
 			
-			// aapt resource value: 0x7F0E010A
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131624202;
+			// aapt resource value: 0x7F0F010A
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131689738;
 			
-			// aapt resource value: 0x7F0E010B
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = 2131624203;
+			// aapt resource value: 0x7F0F010B
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = 2131689739;
 			
-			// aapt resource value: 0x7F0E010C
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Title = 2131624204;
+			// aapt resource value: 0x7F0F010C
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Title = 2131689740;
 			
-			// aapt resource value: 0x7F0E010D
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = 2131624205;
+			// aapt resource value: 0x7F0F010D
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = 2131689741;
 			
-			// aapt resource value: 0x7F0E010E
-			public const int TextAppearance_AppCompat_Widget_Button = 2131624206;
+			// aapt resource value: 0x7F0F010E
+			public const int TextAppearance_AppCompat_Widget_Button = 2131689742;
 			
-			// aapt resource value: 0x7F0E010F
-			public const int TextAppearance_AppCompat_Widget_Button_Borderless_Colored = 2131624207;
+			// aapt resource value: 0x7F0F010F
+			public const int TextAppearance_AppCompat_Widget_Button_Borderless_Colored = 2131689743;
 			
-			// aapt resource value: 0x7F0E0110
-			public const int TextAppearance_AppCompat_Widget_Button_Colored = 2131624208;
+			// aapt resource value: 0x7F0F0110
+			public const int TextAppearance_AppCompat_Widget_Button_Colored = 2131689744;
 			
-			// aapt resource value: 0x7F0E0111
-			public const int TextAppearance_AppCompat_Widget_Button_Inverse = 2131624209;
+			// aapt resource value: 0x7F0F0111
+			public const int TextAppearance_AppCompat_Widget_Button_Inverse = 2131689745;
 			
-			// aapt resource value: 0x7F0E0112
-			public const int TextAppearance_AppCompat_Widget_DropDownItem = 2131624210;
+			// aapt resource value: 0x7F0F0112
+			public const int TextAppearance_AppCompat_Widget_DropDownItem = 2131689746;
 			
-			// aapt resource value: 0x7F0E0113
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Header = 2131624211;
+			// aapt resource value: 0x7F0F0113
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Header = 2131689747;
 			
-			// aapt resource value: 0x7F0E0114
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131624212;
+			// aapt resource value: 0x7F0F0114
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131689748;
 			
-			// aapt resource value: 0x7F0E0115
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131624213;
+			// aapt resource value: 0x7F0F0115
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131689749;
 			
-			// aapt resource value: 0x7F0E0116
-			public const int TextAppearance_AppCompat_Widget_Switch = 2131624214;
+			// aapt resource value: 0x7F0F0116
+			public const int TextAppearance_AppCompat_Widget_Switch = 2131689750;
 			
-			// aapt resource value: 0x7F0E0117
-			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131624215;
+			// aapt resource value: 0x7F0F0117
+			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131689751;
 			
-			// aapt resource value: 0x7F0E0118
-			public const int TextAppearance_Compat_Notification = 2131624216;
+			// aapt resource value: 0x7F0F0118
+			public const int TextAppearance_Compat_Notification = 2131689752;
 			
-			// aapt resource value: 0x7F0E0119
-			public const int TextAppearance_Compat_Notification_Info = 2131624217;
+			// aapt resource value: 0x7F0F0119
+			public const int TextAppearance_Compat_Notification_Info = 2131689753;
 			
-			// aapt resource value: 0x7F0E011A
-			public const int TextAppearance_Compat_Notification_Info_Media = 2131624218;
+			// aapt resource value: 0x7F0F011A
+			public const int TextAppearance_Compat_Notification_Info_Media = 2131689754;
 			
-			// aapt resource value: 0x7F0E011B
-			public const int TextAppearance_Compat_Notification_Line2 = 2131624219;
+			// aapt resource value: 0x7F0F011B
+			public const int TextAppearance_Compat_Notification_Line2 = 2131689755;
 			
-			// aapt resource value: 0x7F0E011C
-			public const int TextAppearance_Compat_Notification_Line2_Media = 2131624220;
+			// aapt resource value: 0x7F0F011C
+			public const int TextAppearance_Compat_Notification_Line2_Media = 2131689756;
 			
-			// aapt resource value: 0x7F0E011D
-			public const int TextAppearance_Compat_Notification_Media = 2131624221;
+			// aapt resource value: 0x7F0F011D
+			public const int TextAppearance_Compat_Notification_Media = 2131689757;
 			
-			// aapt resource value: 0x7F0E011E
-			public const int TextAppearance_Compat_Notification_Time = 2131624222;
+			// aapt resource value: 0x7F0F011E
+			public const int TextAppearance_Compat_Notification_Time = 2131689758;
 			
-			// aapt resource value: 0x7F0E011F
-			public const int TextAppearance_Compat_Notification_Time_Media = 2131624223;
+			// aapt resource value: 0x7F0F011F
+			public const int TextAppearance_Compat_Notification_Time_Media = 2131689759;
 			
-			// aapt resource value: 0x7F0E0120
-			public const int TextAppearance_Compat_Notification_Title = 2131624224;
+			// aapt resource value: 0x7F0F0120
+			public const int TextAppearance_Compat_Notification_Title = 2131689760;
 			
-			// aapt resource value: 0x7F0E0121
-			public const int TextAppearance_Compat_Notification_Title_Media = 2131624225;
+			// aapt resource value: 0x7F0F0121
+			public const int TextAppearance_Compat_Notification_Title_Media = 2131689761;
 			
-			// aapt resource value: 0x7F0E0122
-			public const int TextAppearance_Design_CollapsingToolbar_Expanded = 2131624226;
+			// aapt resource value: 0x7F0F0122
+			public const int TextAppearance_Design_CollapsingToolbar_Expanded = 2131689762;
 			
-			// aapt resource value: 0x7F0E0123
-			public const int TextAppearance_Design_Counter = 2131624227;
+			// aapt resource value: 0x7F0F0123
+			public const int TextAppearance_Design_Counter = 2131689763;
 			
-			// aapt resource value: 0x7F0E0124
-			public const int TextAppearance_Design_Counter_Overflow = 2131624228;
+			// aapt resource value: 0x7F0F0124
+			public const int TextAppearance_Design_Counter_Overflow = 2131689764;
 			
-			// aapt resource value: 0x7F0E0125
-			public const int TextAppearance_Design_Error = 2131624229;
+			// aapt resource value: 0x7F0F0125
+			public const int TextAppearance_Design_Error = 2131689765;
 			
-			// aapt resource value: 0x7F0E0126
-			public const int TextAppearance_Design_HelperText = 2131624230;
+			// aapt resource value: 0x7F0F0126
+			public const int TextAppearance_Design_HelperText = 2131689766;
 			
-			// aapt resource value: 0x7F0E0127
-			public const int TextAppearance_Design_Hint = 2131624231;
+			// aapt resource value: 0x7F0F0127
+			public const int TextAppearance_Design_Hint = 2131689767;
 			
-			// aapt resource value: 0x7F0E0128
-			public const int TextAppearance_Design_Snackbar_Message = 2131624232;
+			// aapt resource value: 0x7F0F0128
+			public const int TextAppearance_Design_Snackbar_Message = 2131689768;
 			
-			// aapt resource value: 0x7F0E0129
-			public const int TextAppearance_Design_Tab = 2131624233;
+			// aapt resource value: 0x7F0F0129
+			public const int TextAppearance_Design_Tab = 2131689769;
 			
-			// aapt resource value: 0x7F0E012A
-			public const int TextAppearance_MaterialComponents_Body1 = 2131624234;
+			// aapt resource value: 0x7F0F012A
+			public const int TextAppearance_MaterialComponents_Body1 = 2131689770;
 			
-			// aapt resource value: 0x7F0E012B
-			public const int TextAppearance_MaterialComponents_Body2 = 2131624235;
+			// aapt resource value: 0x7F0F012B
+			public const int TextAppearance_MaterialComponents_Body2 = 2131689771;
 			
-			// aapt resource value: 0x7F0E012C
-			public const int TextAppearance_MaterialComponents_Button = 2131624236;
+			// aapt resource value: 0x7F0F012C
+			public const int TextAppearance_MaterialComponents_Button = 2131689772;
 			
-			// aapt resource value: 0x7F0E012D
-			public const int TextAppearance_MaterialComponents_Caption = 2131624237;
+			// aapt resource value: 0x7F0F012D
+			public const int TextAppearance_MaterialComponents_Caption = 2131689773;
 			
-			// aapt resource value: 0x7F0E012E
-			public const int TextAppearance_MaterialComponents_Chip = 2131624238;
+			// aapt resource value: 0x7F0F012E
+			public const int TextAppearance_MaterialComponents_Chip = 2131689774;
 			
-			// aapt resource value: 0x7F0E012F
-			public const int TextAppearance_MaterialComponents_Headline1 = 2131624239;
+			// aapt resource value: 0x7F0F012F
+			public const int TextAppearance_MaterialComponents_Headline1 = 2131689775;
 			
-			// aapt resource value: 0x7F0E0130
-			public const int TextAppearance_MaterialComponents_Headline2 = 2131624240;
+			// aapt resource value: 0x7F0F0130
+			public const int TextAppearance_MaterialComponents_Headline2 = 2131689776;
 			
-			// aapt resource value: 0x7F0E0131
-			public const int TextAppearance_MaterialComponents_Headline3 = 2131624241;
+			// aapt resource value: 0x7F0F0131
+			public const int TextAppearance_MaterialComponents_Headline3 = 2131689777;
 			
-			// aapt resource value: 0x7F0E0132
-			public const int TextAppearance_MaterialComponents_Headline4 = 2131624242;
+			// aapt resource value: 0x7F0F0132
+			public const int TextAppearance_MaterialComponents_Headline4 = 2131689778;
 			
-			// aapt resource value: 0x7F0E0133
-			public const int TextAppearance_MaterialComponents_Headline5 = 2131624243;
+			// aapt resource value: 0x7F0F0133
+			public const int TextAppearance_MaterialComponents_Headline5 = 2131689779;
 			
-			// aapt resource value: 0x7F0E0134
-			public const int TextAppearance_MaterialComponents_Headline6 = 2131624244;
+			// aapt resource value: 0x7F0F0134
+			public const int TextAppearance_MaterialComponents_Headline6 = 2131689780;
 			
-			// aapt resource value: 0x7F0E0135
-			public const int TextAppearance_MaterialComponents_Overline = 2131624245;
+			// aapt resource value: 0x7F0F0135
+			public const int TextAppearance_MaterialComponents_Overline = 2131689781;
 			
-			// aapt resource value: 0x7F0E0136
-			public const int TextAppearance_MaterialComponents_Subtitle1 = 2131624246;
+			// aapt resource value: 0x7F0F0136
+			public const int TextAppearance_MaterialComponents_Subtitle1 = 2131689782;
 			
-			// aapt resource value: 0x7F0E0137
-			public const int TextAppearance_MaterialComponents_Subtitle2 = 2131624247;
+			// aapt resource value: 0x7F0F0137
+			public const int TextAppearance_MaterialComponents_Subtitle2 = 2131689783;
 			
-			// aapt resource value: 0x7F0E0138
-			public const int TextAppearance_MaterialComponents_Tab = 2131624248;
+			// aapt resource value: 0x7F0F0138
+			public const int TextAppearance_MaterialComponents_Tab = 2131689784;
 			
-			// aapt resource value: 0x7F0E0139
-			public const int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131624249;
+			// aapt resource value: 0x7F0F0139
+			public const int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131689785;
 			
-			// aapt resource value: 0x7F0E013A
-			public const int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131624250;
+			// aapt resource value: 0x7F0F013A
+			public const int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131689786;
 			
-			// aapt resource value: 0x7F0E013B
-			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131624251;
+			// aapt resource value: 0x7F0F013B
+			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131689787;
 			
-			// aapt resource value: 0x7F0E016D
-			public const int ThemeOverlay_AppCompat = 2131624301;
+			// aapt resource value: 0x7F0F016D
+			public const int ThemeOverlay_AppCompat = 2131689837;
 			
-			// aapt resource value: 0x7F0E016E
-			public const int ThemeOverlay_AppCompat_ActionBar = 2131624302;
+			// aapt resource value: 0x7F0F016E
+			public const int ThemeOverlay_AppCompat_ActionBar = 2131689838;
 			
-			// aapt resource value: 0x7F0E016F
-			public const int ThemeOverlay_AppCompat_Dark = 2131624303;
+			// aapt resource value: 0x7F0F016F
+			public const int ThemeOverlay_AppCompat_Dark = 2131689839;
 			
-			// aapt resource value: 0x7F0E0170
-			public const int ThemeOverlay_AppCompat_Dark_ActionBar = 2131624304;
+			// aapt resource value: 0x7F0F0170
+			public const int ThemeOverlay_AppCompat_Dark_ActionBar = 2131689840;
 			
-			// aapt resource value: 0x7F0E0171
-			public const int ThemeOverlay_AppCompat_DayNight = 2131624305;
+			// aapt resource value: 0x7F0F0171
+			public const int ThemeOverlay_AppCompat_DayNight = 2131689841;
 			
-			// aapt resource value: 0x7F0E0172
-			public const int ThemeOverlay_AppCompat_DayNight_ActionBar = 2131624306;
+			// aapt resource value: 0x7F0F0172
+			public const int ThemeOverlay_AppCompat_DayNight_ActionBar = 2131689842;
 			
-			// aapt resource value: 0x7F0E0173
-			public const int ThemeOverlay_AppCompat_Dialog = 2131624307;
+			// aapt resource value: 0x7F0F0173
+			public const int ThemeOverlay_AppCompat_Dialog = 2131689843;
 			
-			// aapt resource value: 0x7F0E0174
-			public const int ThemeOverlay_AppCompat_Dialog_Alert = 2131624308;
+			// aapt resource value: 0x7F0F0174
+			public const int ThemeOverlay_AppCompat_Dialog_Alert = 2131689844;
 			
-			// aapt resource value: 0x7F0E0175
-			public const int ThemeOverlay_AppCompat_Light = 2131624309;
+			// aapt resource value: 0x7F0F0175
+			public const int ThemeOverlay_AppCompat_Light = 2131689845;
 			
-			// aapt resource value: 0x7F0E0176
-			public const int ThemeOverlay_MaterialComponents = 2131624310;
+			// aapt resource value: 0x7F0F0176
+			public const int ThemeOverlay_MaterialComponents = 2131689846;
 			
-			// aapt resource value: 0x7F0E0177
-			public const int ThemeOverlay_MaterialComponents_ActionBar = 2131624311;
+			// aapt resource value: 0x7F0F0177
+			public const int ThemeOverlay_MaterialComponents_ActionBar = 2131689847;
 			
-			// aapt resource value: 0x7F0E0178
-			public const int ThemeOverlay_MaterialComponents_Dark = 2131624312;
+			// aapt resource value: 0x7F0F0178
+			public const int ThemeOverlay_MaterialComponents_Dark = 2131689848;
 			
-			// aapt resource value: 0x7F0E0179
-			public const int ThemeOverlay_MaterialComponents_Dark_ActionBar = 2131624313;
+			// aapt resource value: 0x7F0F0179
+			public const int ThemeOverlay_MaterialComponents_Dark_ActionBar = 2131689849;
 			
-			// aapt resource value: 0x7F0E017A
-			public const int ThemeOverlay_MaterialComponents_Dialog = 2131624314;
+			// aapt resource value: 0x7F0F017A
+			public const int ThemeOverlay_MaterialComponents_Dialog = 2131689850;
 			
-			// aapt resource value: 0x7F0E017B
-			public const int ThemeOverlay_MaterialComponents_Dialog_Alert = 2131624315;
+			// aapt resource value: 0x7F0F017B
+			public const int ThemeOverlay_MaterialComponents_Dialog_Alert = 2131689851;
 			
-			// aapt resource value: 0x7F0E017C
-			public const int ThemeOverlay_MaterialComponents_Light = 2131624316;
+			// aapt resource value: 0x7F0F017C
+			public const int ThemeOverlay_MaterialComponents_Light = 2131689852;
 			
-			// aapt resource value: 0x7F0E017D
-			public const int ThemeOverlay_MaterialComponents_TextInputEditText = 2131624317;
+			// aapt resource value: 0x7F0F017D
+			public const int ThemeOverlay_MaterialComponents_TextInputEditText = 2131689853;
 			
-			// aapt resource value: 0x7F0E017E
-			public const int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = 2131624318;
+			// aapt resource value: 0x7F0F017E
+			public const int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = 2131689854;
 			
-			// aapt resource value: 0x7F0E017F
-			public const int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = 2131624319;
+			// aapt resource value: 0x7F0F017F
+			public const int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = 2131689855;
 			
-			// aapt resource value: 0x7F0E0180
-			public const int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = 2131624320;
+			// aapt resource value: 0x7F0F0180
+			public const int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = 2131689856;
 			
-			// aapt resource value: 0x7F0E0181
-			public const int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = 2131624321;
+			// aapt resource value: 0x7F0F0181
+			public const int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = 2131689857;
 			
-			// aapt resource value: 0x7F0E013C
-			public const int Theme_AppCompat = 2131624252;
+			// aapt resource value: 0x7F0F013C
+			public const int Theme_AppCompat = 2131689788;
 			
-			// aapt resource value: 0x7F0E013D
-			public const int Theme_AppCompat_CompactMenu = 2131624253;
+			// aapt resource value: 0x7F0F013D
+			public const int Theme_AppCompat_CompactMenu = 2131689789;
 			
-			// aapt resource value: 0x7F0E013E
-			public const int Theme_AppCompat_DayNight = 2131624254;
+			// aapt resource value: 0x7F0F013E
+			public const int Theme_AppCompat_DayNight = 2131689790;
 			
-			// aapt resource value: 0x7F0E013F
-			public const int Theme_AppCompat_DayNight_DarkActionBar = 2131624255;
+			// aapt resource value: 0x7F0F013F
+			public const int Theme_AppCompat_DayNight_DarkActionBar = 2131689791;
 			
-			// aapt resource value: 0x7F0E0140
-			public const int Theme_AppCompat_DayNight_Dialog = 2131624256;
+			// aapt resource value: 0x7F0F0140
+			public const int Theme_AppCompat_DayNight_Dialog = 2131689792;
 			
-			// aapt resource value: 0x7F0E0143
-			public const int Theme_AppCompat_DayNight_DialogWhenLarge = 2131624259;
+			// aapt resource value: 0x7F0F0143
+			public const int Theme_AppCompat_DayNight_DialogWhenLarge = 2131689795;
 			
-			// aapt resource value: 0x7F0E0141
-			public const int Theme_AppCompat_DayNight_Dialog_Alert = 2131624257;
+			// aapt resource value: 0x7F0F0141
+			public const int Theme_AppCompat_DayNight_Dialog_Alert = 2131689793;
 			
-			// aapt resource value: 0x7F0E0142
-			public const int Theme_AppCompat_DayNight_Dialog_MinWidth = 2131624258;
+			// aapt resource value: 0x7F0F0142
+			public const int Theme_AppCompat_DayNight_Dialog_MinWidth = 2131689794;
 			
-			// aapt resource value: 0x7F0E0144
-			public const int Theme_AppCompat_DayNight_NoActionBar = 2131624260;
+			// aapt resource value: 0x7F0F0144
+			public const int Theme_AppCompat_DayNight_NoActionBar = 2131689796;
 			
-			// aapt resource value: 0x7F0E0145
-			public const int Theme_AppCompat_Dialog = 2131624261;
+			// aapt resource value: 0x7F0F0145
+			public const int Theme_AppCompat_Dialog = 2131689797;
 			
-			// aapt resource value: 0x7F0E0148
-			public const int Theme_AppCompat_DialogWhenLarge = 2131624264;
+			// aapt resource value: 0x7F0F0148
+			public const int Theme_AppCompat_DialogWhenLarge = 2131689800;
 			
-			// aapt resource value: 0x7F0E0146
-			public const int Theme_AppCompat_Dialog_Alert = 2131624262;
+			// aapt resource value: 0x7F0F0146
+			public const int Theme_AppCompat_Dialog_Alert = 2131689798;
 			
-			// aapt resource value: 0x7F0E0147
-			public const int Theme_AppCompat_Dialog_MinWidth = 2131624263;
+			// aapt resource value: 0x7F0F0147
+			public const int Theme_AppCompat_Dialog_MinWidth = 2131689799;
 			
-			// aapt resource value: 0x7F0E0149
-			public const int Theme_AppCompat_Empty = 2131624265;
+			// aapt resource value: 0x7F0F0149
+			public const int Theme_AppCompat_Empty = 2131689801;
 			
-			// aapt resource value: 0x7F0E014A
-			public const int Theme_AppCompat_Light = 2131624266;
+			// aapt resource value: 0x7F0F014A
+			public const int Theme_AppCompat_Light = 2131689802;
 			
-			// aapt resource value: 0x7F0E014B
-			public const int Theme_AppCompat_Light_DarkActionBar = 2131624267;
+			// aapt resource value: 0x7F0F014B
+			public const int Theme_AppCompat_Light_DarkActionBar = 2131689803;
 			
-			// aapt resource value: 0x7F0E014C
-			public const int Theme_AppCompat_Light_Dialog = 2131624268;
+			// aapt resource value: 0x7F0F014C
+			public const int Theme_AppCompat_Light_Dialog = 2131689804;
 			
-			// aapt resource value: 0x7F0E014F
-			public const int Theme_AppCompat_Light_DialogWhenLarge = 2131624271;
+			// aapt resource value: 0x7F0F014F
+			public const int Theme_AppCompat_Light_DialogWhenLarge = 2131689807;
 			
-			// aapt resource value: 0x7F0E014D
-			public const int Theme_AppCompat_Light_Dialog_Alert = 2131624269;
+			// aapt resource value: 0x7F0F014D
+			public const int Theme_AppCompat_Light_Dialog_Alert = 2131689805;
 			
-			// aapt resource value: 0x7F0E014E
-			public const int Theme_AppCompat_Light_Dialog_MinWidth = 2131624270;
+			// aapt resource value: 0x7F0F014E
+			public const int Theme_AppCompat_Light_Dialog_MinWidth = 2131689806;
 			
-			// aapt resource value: 0x7F0E0150
-			public const int Theme_AppCompat_Light_NoActionBar = 2131624272;
+			// aapt resource value: 0x7F0F0150
+			public const int Theme_AppCompat_Light_NoActionBar = 2131689808;
 			
-			// aapt resource value: 0x7F0E0151
-			public const int Theme_AppCompat_NoActionBar = 2131624273;
+			// aapt resource value: 0x7F0F0151
+			public const int Theme_AppCompat_NoActionBar = 2131689809;
 			
-			// aapt resource value: 0x7F0E0152
-			public const int Theme_Design = 2131624274;
+			// aapt resource value: 0x7F0F0152
+			public const int Theme_Design = 2131689810;
 			
-			// aapt resource value: 0x7F0E0153
-			public const int Theme_Design_BottomSheetDialog = 2131624275;
+			// aapt resource value: 0x7F0F0153
+			public const int Theme_Design_BottomSheetDialog = 2131689811;
 			
-			// aapt resource value: 0x7F0E0154
-			public const int Theme_Design_Light = 2131624276;
+			// aapt resource value: 0x7F0F0154
+			public const int Theme_Design_Light = 2131689812;
 			
-			// aapt resource value: 0x7F0E0155
-			public const int Theme_Design_Light_BottomSheetDialog = 2131624277;
+			// aapt resource value: 0x7F0F0155
+			public const int Theme_Design_Light_BottomSheetDialog = 2131689813;
 			
-			// aapt resource value: 0x7F0E0156
-			public const int Theme_Design_Light_NoActionBar = 2131624278;
+			// aapt resource value: 0x7F0F0156
+			public const int Theme_Design_Light_NoActionBar = 2131689814;
 			
-			// aapt resource value: 0x7F0E0157
-			public const int Theme_Design_NoActionBar = 2131624279;
+			// aapt resource value: 0x7F0F0157
+			public const int Theme_Design_NoActionBar = 2131689815;
 			
-			// aapt resource value: 0x7F0E0158
-			public const int Theme_MaterialComponents = 2131624280;
+			// aapt resource value: 0x7F0F0158
+			public const int Theme_MaterialComponents = 2131689816;
 			
-			// aapt resource value: 0x7F0E0159
-			public const int Theme_MaterialComponents_BottomSheetDialog = 2131624281;
+			// aapt resource value: 0x7F0F0159
+			public const int Theme_MaterialComponents_BottomSheetDialog = 2131689817;
 			
-			// aapt resource value: 0x7F0E015A
-			public const int Theme_MaterialComponents_Bridge = 2131624282;
+			// aapt resource value: 0x7F0F015A
+			public const int Theme_MaterialComponents_Bridge = 2131689818;
 			
-			// aapt resource value: 0x7F0E015B
-			public const int Theme_MaterialComponents_CompactMenu = 2131624283;
+			// aapt resource value: 0x7F0F015B
+			public const int Theme_MaterialComponents_CompactMenu = 2131689819;
 			
-			// aapt resource value: 0x7F0E015C
-			public const int Theme_MaterialComponents_Dialog = 2131624284;
+			// aapt resource value: 0x7F0F015C
+			public const int Theme_MaterialComponents_Dialog = 2131689820;
 			
-			// aapt resource value: 0x7F0E015F
-			public const int Theme_MaterialComponents_DialogWhenLarge = 2131624287;
+			// aapt resource value: 0x7F0F015F
+			public const int Theme_MaterialComponents_DialogWhenLarge = 2131689823;
 			
-			// aapt resource value: 0x7F0E015D
-			public const int Theme_MaterialComponents_Dialog_Alert = 2131624285;
+			// aapt resource value: 0x7F0F015D
+			public const int Theme_MaterialComponents_Dialog_Alert = 2131689821;
 			
-			// aapt resource value: 0x7F0E015E
-			public const int Theme_MaterialComponents_Dialog_MinWidth = 2131624286;
+			// aapt resource value: 0x7F0F015E
+			public const int Theme_MaterialComponents_Dialog_MinWidth = 2131689822;
 			
-			// aapt resource value: 0x7F0E0160
-			public const int Theme_MaterialComponents_Light = 2131624288;
+			// aapt resource value: 0x7F0F0160
+			public const int Theme_MaterialComponents_Light = 2131689824;
 			
-			// aapt resource value: 0x7F0E0161
-			public const int Theme_MaterialComponents_Light_BottomSheetDialog = 2131624289;
+			// aapt resource value: 0x7F0F0161
+			public const int Theme_MaterialComponents_Light_BottomSheetDialog = 2131689825;
 			
-			// aapt resource value: 0x7F0E0162
-			public const int Theme_MaterialComponents_Light_Bridge = 2131624290;
+			// aapt resource value: 0x7F0F0162
+			public const int Theme_MaterialComponents_Light_Bridge = 2131689826;
 			
-			// aapt resource value: 0x7F0E0163
-			public const int Theme_MaterialComponents_Light_DarkActionBar = 2131624291;
+			// aapt resource value: 0x7F0F0163
+			public const int Theme_MaterialComponents_Light_DarkActionBar = 2131689827;
 			
-			// aapt resource value: 0x7F0E0164
-			public const int Theme_MaterialComponents_Light_DarkActionBar_Bridge = 2131624292;
+			// aapt resource value: 0x7F0F0164
+			public const int Theme_MaterialComponents_Light_DarkActionBar_Bridge = 2131689828;
 			
-			// aapt resource value: 0x7F0E0165
-			public const int Theme_MaterialComponents_Light_Dialog = 2131624293;
+			// aapt resource value: 0x7F0F0165
+			public const int Theme_MaterialComponents_Light_Dialog = 2131689829;
 			
-			// aapt resource value: 0x7F0E0168
-			public const int Theme_MaterialComponents_Light_DialogWhenLarge = 2131624296;
+			// aapt resource value: 0x7F0F0168
+			public const int Theme_MaterialComponents_Light_DialogWhenLarge = 2131689832;
 			
-			// aapt resource value: 0x7F0E0166
-			public const int Theme_MaterialComponents_Light_Dialog_Alert = 2131624294;
+			// aapt resource value: 0x7F0F0166
+			public const int Theme_MaterialComponents_Light_Dialog_Alert = 2131689830;
 			
-			// aapt resource value: 0x7F0E0167
-			public const int Theme_MaterialComponents_Light_Dialog_MinWidth = 2131624295;
+			// aapt resource value: 0x7F0F0167
+			public const int Theme_MaterialComponents_Light_Dialog_MinWidth = 2131689831;
 			
-			// aapt resource value: 0x7F0E0169
-			public const int Theme_MaterialComponents_Light_NoActionBar = 2131624297;
+			// aapt resource value: 0x7F0F0169
+			public const int Theme_MaterialComponents_Light_NoActionBar = 2131689833;
 			
-			// aapt resource value: 0x7F0E016A
-			public const int Theme_MaterialComponents_Light_NoActionBar_Bridge = 2131624298;
+			// aapt resource value: 0x7F0F016A
+			public const int Theme_MaterialComponents_Light_NoActionBar_Bridge = 2131689834;
 			
-			// aapt resource value: 0x7F0E016B
-			public const int Theme_MaterialComponents_NoActionBar = 2131624299;
+			// aapt resource value: 0x7F0F016B
+			public const int Theme_MaterialComponents_NoActionBar = 2131689835;
 			
-			// aapt resource value: 0x7F0E016C
-			public const int Theme_MaterialComponents_NoActionBar_Bridge = 2131624300;
+			// aapt resource value: 0x7F0F016C
+			public const int Theme_MaterialComponents_NoActionBar_Bridge = 2131689836;
 			
-			// aapt resource value: 0x7F0E0182
-			public const int Widget_AppCompat_ActionBar = 2131624322;
+			// aapt resource value: 0x7F0F0182
+			public const int Widget_AppCompat_ActionBar = 2131689858;
 			
-			// aapt resource value: 0x7F0E0183
-			public const int Widget_AppCompat_ActionBar_Solid = 2131624323;
+			// aapt resource value: 0x7F0F0183
+			public const int Widget_AppCompat_ActionBar_Solid = 2131689859;
 			
-			// aapt resource value: 0x7F0E0184
-			public const int Widget_AppCompat_ActionBar_TabBar = 2131624324;
+			// aapt resource value: 0x7F0F0184
+			public const int Widget_AppCompat_ActionBar_TabBar = 2131689860;
 			
-			// aapt resource value: 0x7F0E0185
-			public const int Widget_AppCompat_ActionBar_TabText = 2131624325;
+			// aapt resource value: 0x7F0F0185
+			public const int Widget_AppCompat_ActionBar_TabText = 2131689861;
 			
-			// aapt resource value: 0x7F0E0186
-			public const int Widget_AppCompat_ActionBar_TabView = 2131624326;
+			// aapt resource value: 0x7F0F0186
+			public const int Widget_AppCompat_ActionBar_TabView = 2131689862;
 			
-			// aapt resource value: 0x7F0E0187
-			public const int Widget_AppCompat_ActionButton = 2131624327;
+			// aapt resource value: 0x7F0F0187
+			public const int Widget_AppCompat_ActionButton = 2131689863;
 			
-			// aapt resource value: 0x7F0E0188
-			public const int Widget_AppCompat_ActionButton_CloseMode = 2131624328;
+			// aapt resource value: 0x7F0F0188
+			public const int Widget_AppCompat_ActionButton_CloseMode = 2131689864;
 			
-			// aapt resource value: 0x7F0E0189
-			public const int Widget_AppCompat_ActionButton_Overflow = 2131624329;
+			// aapt resource value: 0x7F0F0189
+			public const int Widget_AppCompat_ActionButton_Overflow = 2131689865;
 			
-			// aapt resource value: 0x7F0E018A
-			public const int Widget_AppCompat_ActionMode = 2131624330;
+			// aapt resource value: 0x7F0F018A
+			public const int Widget_AppCompat_ActionMode = 2131689866;
 			
-			// aapt resource value: 0x7F0E018B
-			public const int Widget_AppCompat_ActivityChooserView = 2131624331;
+			// aapt resource value: 0x7F0F018B
+			public const int Widget_AppCompat_ActivityChooserView = 2131689867;
 			
-			// aapt resource value: 0x7F0E018C
-			public const int Widget_AppCompat_AutoCompleteTextView = 2131624332;
+			// aapt resource value: 0x7F0F018C
+			public const int Widget_AppCompat_AutoCompleteTextView = 2131689868;
 			
-			// aapt resource value: 0x7F0E018D
-			public const int Widget_AppCompat_Button = 2131624333;
+			// aapt resource value: 0x7F0F018D
+			public const int Widget_AppCompat_Button = 2131689869;
 			
-			// aapt resource value: 0x7F0E0193
-			public const int Widget_AppCompat_ButtonBar = 2131624339;
+			// aapt resource value: 0x7F0F0193
+			public const int Widget_AppCompat_ButtonBar = 2131689875;
 			
-			// aapt resource value: 0x7F0E0194
-			public const int Widget_AppCompat_ButtonBar_AlertDialog = 2131624340;
+			// aapt resource value: 0x7F0F0194
+			public const int Widget_AppCompat_ButtonBar_AlertDialog = 2131689876;
 			
-			// aapt resource value: 0x7F0E018E
-			public const int Widget_AppCompat_Button_Borderless = 2131624334;
+			// aapt resource value: 0x7F0F018E
+			public const int Widget_AppCompat_Button_Borderless = 2131689870;
 			
-			// aapt resource value: 0x7F0E018F
-			public const int Widget_AppCompat_Button_Borderless_Colored = 2131624335;
+			// aapt resource value: 0x7F0F018F
+			public const int Widget_AppCompat_Button_Borderless_Colored = 2131689871;
 			
-			// aapt resource value: 0x7F0E0190
-			public const int Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131624336;
+			// aapt resource value: 0x7F0F0190
+			public const int Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131689872;
 			
-			// aapt resource value: 0x7F0E0191
-			public const int Widget_AppCompat_Button_Colored = 2131624337;
+			// aapt resource value: 0x7F0F0191
+			public const int Widget_AppCompat_Button_Colored = 2131689873;
 			
-			// aapt resource value: 0x7F0E0192
-			public const int Widget_AppCompat_Button_Small = 2131624338;
+			// aapt resource value: 0x7F0F0192
+			public const int Widget_AppCompat_Button_Small = 2131689874;
 			
-			// aapt resource value: 0x7F0E0195
-			public const int Widget_AppCompat_CompoundButton_CheckBox = 2131624341;
+			// aapt resource value: 0x7F0F0195
+			public const int Widget_AppCompat_CompoundButton_CheckBox = 2131689877;
 			
-			// aapt resource value: 0x7F0E0196
-			public const int Widget_AppCompat_CompoundButton_RadioButton = 2131624342;
+			// aapt resource value: 0x7F0F0196
+			public const int Widget_AppCompat_CompoundButton_RadioButton = 2131689878;
 			
-			// aapt resource value: 0x7F0E0197
-			public const int Widget_AppCompat_CompoundButton_Switch = 2131624343;
+			// aapt resource value: 0x7F0F0197
+			public const int Widget_AppCompat_CompoundButton_Switch = 2131689879;
 			
-			// aapt resource value: 0x7F0E0198
-			public const int Widget_AppCompat_DrawerArrowToggle = 2131624344;
+			// aapt resource value: 0x7F0F0198
+			public const int Widget_AppCompat_DrawerArrowToggle = 2131689880;
 			
-			// aapt resource value: 0x7F0E0199
-			public const int Widget_AppCompat_DropDownItem_Spinner = 2131624345;
+			// aapt resource value: 0x7F0F0199
+			public const int Widget_AppCompat_DropDownItem_Spinner = 2131689881;
 			
-			// aapt resource value: 0x7F0E019A
-			public const int Widget_AppCompat_EditText = 2131624346;
+			// aapt resource value: 0x7F0F019A
+			public const int Widget_AppCompat_EditText = 2131689882;
 			
-			// aapt resource value: 0x7F0E019B
-			public const int Widget_AppCompat_ImageButton = 2131624347;
+			// aapt resource value: 0x7F0F019B
+			public const int Widget_AppCompat_ImageButton = 2131689883;
 			
-			// aapt resource value: 0x7F0E019C
-			public const int Widget_AppCompat_Light_ActionBar = 2131624348;
+			// aapt resource value: 0x7F0F019C
+			public const int Widget_AppCompat_Light_ActionBar = 2131689884;
 			
-			// aapt resource value: 0x7F0E019D
-			public const int Widget_AppCompat_Light_ActionBar_Solid = 2131624349;
+			// aapt resource value: 0x7F0F019D
+			public const int Widget_AppCompat_Light_ActionBar_Solid = 2131689885;
 			
-			// aapt resource value: 0x7F0E019E
-			public const int Widget_AppCompat_Light_ActionBar_Solid_Inverse = 2131624350;
+			// aapt resource value: 0x7F0F019E
+			public const int Widget_AppCompat_Light_ActionBar_Solid_Inverse = 2131689886;
 			
-			// aapt resource value: 0x7F0E019F
-			public const int Widget_AppCompat_Light_ActionBar_TabBar = 2131624351;
+			// aapt resource value: 0x7F0F019F
+			public const int Widget_AppCompat_Light_ActionBar_TabBar = 2131689887;
 			
-			// aapt resource value: 0x7F0E01A0
-			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131624352;
+			// aapt resource value: 0x7F0F01A0
+			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131689888;
 			
-			// aapt resource value: 0x7F0E01A1
-			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131624353;
+			// aapt resource value: 0x7F0F01A1
+			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131689889;
 			
-			// aapt resource value: 0x7F0E01A2
-			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131624354;
+			// aapt resource value: 0x7F0F01A2
+			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131689890;
 			
-			// aapt resource value: 0x7F0E01A3
-			public const int Widget_AppCompat_Light_ActionBar_TabView = 2131624355;
+			// aapt resource value: 0x7F0F01A3
+			public const int Widget_AppCompat_Light_ActionBar_TabView = 2131689891;
 			
-			// aapt resource value: 0x7F0E01A4
-			public const int Widget_AppCompat_Light_ActionBar_TabView_Inverse = 2131624356;
+			// aapt resource value: 0x7F0F01A4
+			public const int Widget_AppCompat_Light_ActionBar_TabView_Inverse = 2131689892;
 			
-			// aapt resource value: 0x7F0E01A5
-			public const int Widget_AppCompat_Light_ActionButton = 2131624357;
+			// aapt resource value: 0x7F0F01A5
+			public const int Widget_AppCompat_Light_ActionButton = 2131689893;
 			
-			// aapt resource value: 0x7F0E01A6
-			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131624358;
+			// aapt resource value: 0x7F0F01A6
+			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131689894;
 			
-			// aapt resource value: 0x7F0E01A7
-			public const int Widget_AppCompat_Light_ActionButton_Overflow = 2131624359;
+			// aapt resource value: 0x7F0F01A7
+			public const int Widget_AppCompat_Light_ActionButton_Overflow = 2131689895;
 			
-			// aapt resource value: 0x7F0E01A8
-			public const int Widget_AppCompat_Light_ActionMode_Inverse = 2131624360;
+			// aapt resource value: 0x7F0F01A8
+			public const int Widget_AppCompat_Light_ActionMode_Inverse = 2131689896;
 			
-			// aapt resource value: 0x7F0E01A9
-			public const int Widget_AppCompat_Light_ActivityChooserView = 2131624361;
+			// aapt resource value: 0x7F0F01A9
+			public const int Widget_AppCompat_Light_ActivityChooserView = 2131689897;
 			
-			// aapt resource value: 0x7F0E01AA
-			public const int Widget_AppCompat_Light_AutoCompleteTextView = 2131624362;
+			// aapt resource value: 0x7F0F01AA
+			public const int Widget_AppCompat_Light_AutoCompleteTextView = 2131689898;
 			
-			// aapt resource value: 0x7F0E01AB
-			public const int Widget_AppCompat_Light_DropDownItem_Spinner = 2131624363;
+			// aapt resource value: 0x7F0F01AB
+			public const int Widget_AppCompat_Light_DropDownItem_Spinner = 2131689899;
 			
-			// aapt resource value: 0x7F0E01AC
-			public const int Widget_AppCompat_Light_ListPopupWindow = 2131624364;
+			// aapt resource value: 0x7F0F01AC
+			public const int Widget_AppCompat_Light_ListPopupWindow = 2131689900;
 			
-			// aapt resource value: 0x7F0E01AD
-			public const int Widget_AppCompat_Light_ListView_DropDown = 2131624365;
+			// aapt resource value: 0x7F0F01AD
+			public const int Widget_AppCompat_Light_ListView_DropDown = 2131689901;
 			
-			// aapt resource value: 0x7F0E01AE
-			public const int Widget_AppCompat_Light_PopupMenu = 2131624366;
+			// aapt resource value: 0x7F0F01AE
+			public const int Widget_AppCompat_Light_PopupMenu = 2131689902;
 			
-			// aapt resource value: 0x7F0E01AF
-			public const int Widget_AppCompat_Light_PopupMenu_Overflow = 2131624367;
+			// aapt resource value: 0x7F0F01AF
+			public const int Widget_AppCompat_Light_PopupMenu_Overflow = 2131689903;
 			
-			// aapt resource value: 0x7F0E01B0
-			public const int Widget_AppCompat_Light_SearchView = 2131624368;
+			// aapt resource value: 0x7F0F01B0
+			public const int Widget_AppCompat_Light_SearchView = 2131689904;
 			
-			// aapt resource value: 0x7F0E01B1
-			public const int Widget_AppCompat_Light_Spinner_DropDown_ActionBar = 2131624369;
+			// aapt resource value: 0x7F0F01B1
+			public const int Widget_AppCompat_Light_Spinner_DropDown_ActionBar = 2131689905;
 			
-			// aapt resource value: 0x7F0E01B2
-			public const int Widget_AppCompat_ListMenuView = 2131624370;
+			// aapt resource value: 0x7F0F01B2
+			public const int Widget_AppCompat_ListMenuView = 2131689906;
 			
-			// aapt resource value: 0x7F0E01B3
-			public const int Widget_AppCompat_ListPopupWindow = 2131624371;
+			// aapt resource value: 0x7F0F01B3
+			public const int Widget_AppCompat_ListPopupWindow = 2131689907;
 			
-			// aapt resource value: 0x7F0E01B4
-			public const int Widget_AppCompat_ListView = 2131624372;
+			// aapt resource value: 0x7F0F01B4
+			public const int Widget_AppCompat_ListView = 2131689908;
 			
-			// aapt resource value: 0x7F0E01B5
-			public const int Widget_AppCompat_ListView_DropDown = 2131624373;
+			// aapt resource value: 0x7F0F01B5
+			public const int Widget_AppCompat_ListView_DropDown = 2131689909;
 			
-			// aapt resource value: 0x7F0E01B6
-			public const int Widget_AppCompat_ListView_Menu = 2131624374;
+			// aapt resource value: 0x7F0F01B6
+			public const int Widget_AppCompat_ListView_Menu = 2131689910;
 			
-			// aapt resource value: 0x7F0E01B7
-			public const int Widget_AppCompat_PopupMenu = 2131624375;
+			// aapt resource value: 0x7F0F01B7
+			public const int Widget_AppCompat_PopupMenu = 2131689911;
 			
-			// aapt resource value: 0x7F0E01B8
-			public const int Widget_AppCompat_PopupMenu_Overflow = 2131624376;
+			// aapt resource value: 0x7F0F01B8
+			public const int Widget_AppCompat_PopupMenu_Overflow = 2131689912;
 			
-			// aapt resource value: 0x7F0E01B9
-			public const int Widget_AppCompat_PopupWindow = 2131624377;
+			// aapt resource value: 0x7F0F01B9
+			public const int Widget_AppCompat_PopupWindow = 2131689913;
 			
-			// aapt resource value: 0x7F0E01BA
-			public const int Widget_AppCompat_ProgressBar = 2131624378;
+			// aapt resource value: 0x7F0F01BA
+			public const int Widget_AppCompat_ProgressBar = 2131689914;
 			
-			// aapt resource value: 0x7F0E01BB
-			public const int Widget_AppCompat_ProgressBar_Horizontal = 2131624379;
+			// aapt resource value: 0x7F0F01BB
+			public const int Widget_AppCompat_ProgressBar_Horizontal = 2131689915;
 			
-			// aapt resource value: 0x7F0E01BC
-			public const int Widget_AppCompat_RatingBar = 2131624380;
+			// aapt resource value: 0x7F0F01BC
+			public const int Widget_AppCompat_RatingBar = 2131689916;
 			
-			// aapt resource value: 0x7F0E01BD
-			public const int Widget_AppCompat_RatingBar_Indicator = 2131624381;
+			// aapt resource value: 0x7F0F01BD
+			public const int Widget_AppCompat_RatingBar_Indicator = 2131689917;
 			
-			// aapt resource value: 0x7F0E01BE
-			public const int Widget_AppCompat_RatingBar_Small = 2131624382;
+			// aapt resource value: 0x7F0F01BE
+			public const int Widget_AppCompat_RatingBar_Small = 2131689918;
 			
-			// aapt resource value: 0x7F0E01BF
-			public const int Widget_AppCompat_SearchView = 2131624383;
+			// aapt resource value: 0x7F0F01BF
+			public const int Widget_AppCompat_SearchView = 2131689919;
 			
-			// aapt resource value: 0x7F0E01C0
-			public const int Widget_AppCompat_SearchView_ActionBar = 2131624384;
+			// aapt resource value: 0x7F0F01C0
+			public const int Widget_AppCompat_SearchView_ActionBar = 2131689920;
 			
-			// aapt resource value: 0x7F0E01C1
-			public const int Widget_AppCompat_SeekBar = 2131624385;
+			// aapt resource value: 0x7F0F01C1
+			public const int Widget_AppCompat_SeekBar = 2131689921;
 			
-			// aapt resource value: 0x7F0E01C2
-			public const int Widget_AppCompat_SeekBar_Discrete = 2131624386;
+			// aapt resource value: 0x7F0F01C2
+			public const int Widget_AppCompat_SeekBar_Discrete = 2131689922;
 			
-			// aapt resource value: 0x7F0E01C3
-			public const int Widget_AppCompat_Spinner = 2131624387;
+			// aapt resource value: 0x7F0F01C3
+			public const int Widget_AppCompat_Spinner = 2131689923;
 			
-			// aapt resource value: 0x7F0E01C4
-			public const int Widget_AppCompat_Spinner_DropDown = 2131624388;
+			// aapt resource value: 0x7F0F01C4
+			public const int Widget_AppCompat_Spinner_DropDown = 2131689924;
 			
-			// aapt resource value: 0x7F0E01C5
-			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131624389;
+			// aapt resource value: 0x7F0F01C5
+			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131689925;
 			
-			// aapt resource value: 0x7F0E01C6
-			public const int Widget_AppCompat_Spinner_Underlined = 2131624390;
+			// aapt resource value: 0x7F0F01C6
+			public const int Widget_AppCompat_Spinner_Underlined = 2131689926;
 			
-			// aapt resource value: 0x7F0E01C7
-			public const int Widget_AppCompat_TextView = 2131624391;
+			// aapt resource value: 0x7F0F01C7
+			public const int Widget_AppCompat_TextView = 2131689927;
 			
-			// aapt resource value: 0x7F0E01C8
-			public const int Widget_AppCompat_TextView_SpinnerItem = 2131624392;
+			// aapt resource value: 0x7F0F01C8
+			public const int Widget_AppCompat_TextView_SpinnerItem = 2131689928;
 			
-			// aapt resource value: 0x7F0E01C9
-			public const int Widget_AppCompat_Toolbar = 2131624393;
+			// aapt resource value: 0x7F0F01C9
+			public const int Widget_AppCompat_Toolbar = 2131689929;
 			
-			// aapt resource value: 0x7F0E01CA
-			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131624394;
+			// aapt resource value: 0x7F0F01CA
+			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131689930;
 			
-			// aapt resource value: 0x7F0E01CB
-			public const int Widget_Compat_NotificationActionContainer = 2131624395;
+			// aapt resource value: 0x7F0F01CB
+			public const int Widget_Compat_NotificationActionContainer = 2131689931;
 			
-			// aapt resource value: 0x7F0E01CC
-			public const int Widget_Compat_NotificationActionText = 2131624396;
+			// aapt resource value: 0x7F0F01CC
+			public const int Widget_Compat_NotificationActionText = 2131689932;
 			
-			// aapt resource value: 0x7F0E01CD
-			public const int Widget_Design_AppBarLayout = 2131624397;
+			// aapt resource value: 0x7F0F01CD
+			public const int Widget_Design_AppBarLayout = 2131689933;
 			
-			// aapt resource value: 0x7F0E01CE
-			public const int Widget_Design_BottomNavigationView = 2131624398;
+			// aapt resource value: 0x7F0F01CE
+			public const int Widget_Design_BottomNavigationView = 2131689934;
 			
-			// aapt resource value: 0x7F0E01CF
-			public const int Widget_Design_BottomSheet_Modal = 2131624399;
+			// aapt resource value: 0x7F0F01CF
+			public const int Widget_Design_BottomSheet_Modal = 2131689935;
 			
-			// aapt resource value: 0x7F0E01D0
-			public const int Widget_Design_CollapsingToolbar = 2131624400;
+			// aapt resource value: 0x7F0F01D0
+			public const int Widget_Design_CollapsingToolbar = 2131689936;
 			
-			// aapt resource value: 0x7F0E01D1
-			public const int Widget_Design_FloatingActionButton = 2131624401;
+			// aapt resource value: 0x7F0F01D1
+			public const int Widget_Design_FloatingActionButton = 2131689937;
 			
-			// aapt resource value: 0x7F0E01D2
-			public const int Widget_Design_NavigationView = 2131624402;
+			// aapt resource value: 0x7F0F01D2
+			public const int Widget_Design_NavigationView = 2131689938;
 			
-			// aapt resource value: 0x7F0E01D3
-			public const int Widget_Design_ScrimInsetsFrameLayout = 2131624403;
+			// aapt resource value: 0x7F0F01D3
+			public const int Widget_Design_ScrimInsetsFrameLayout = 2131689939;
 			
-			// aapt resource value: 0x7F0E01D4
-			public const int Widget_Design_Snackbar = 2131624404;
+			// aapt resource value: 0x7F0F01D4
+			public const int Widget_Design_Snackbar = 2131689940;
 			
-			// aapt resource value: 0x7F0E01D5
-			public const int Widget_Design_TabLayout = 2131624405;
+			// aapt resource value: 0x7F0F01D5
+			public const int Widget_Design_TabLayout = 2131689941;
 			
-			// aapt resource value: 0x7F0E01D6
-			public const int Widget_Design_TextInputLayout = 2131624406;
+			// aapt resource value: 0x7F0F01D6
+			public const int Widget_Design_TextInputLayout = 2131689942;
 			
-			// aapt resource value: 0x7F0E01D7
-			public const int Widget_MaterialComponents_BottomAppBar = 2131624407;
+			// aapt resource value: 0x7F0F01D7
+			public const int Widget_MaterialComponents_BottomAppBar = 2131689943;
 			
-			// aapt resource value: 0x7F0E01D8
-			public const int Widget_MaterialComponents_BottomAppBar_Colored = 2131624408;
+			// aapt resource value: 0x7F0F01D8
+			public const int Widget_MaterialComponents_BottomAppBar_Colored = 2131689944;
 			
-			// aapt resource value: 0x7F0E01D9
-			public const int Widget_MaterialComponents_BottomNavigationView = 2131624409;
+			// aapt resource value: 0x7F0F01D9
+			public const int Widget_MaterialComponents_BottomNavigationView = 2131689945;
 			
-			// aapt resource value: 0x7F0E01DA
-			public const int Widget_MaterialComponents_BottomNavigationView_Colored = 2131624410;
+			// aapt resource value: 0x7F0F01DA
+			public const int Widget_MaterialComponents_BottomNavigationView_Colored = 2131689946;
 			
-			// aapt resource value: 0x7F0E01DB
-			public const int Widget_MaterialComponents_BottomSheet_Modal = 2131624411;
+			// aapt resource value: 0x7F0F01DB
+			public const int Widget_MaterialComponents_BottomSheet_Modal = 2131689947;
 			
-			// aapt resource value: 0x7F0E01DC
-			public const int Widget_MaterialComponents_Button = 2131624412;
+			// aapt resource value: 0x7F0F01DC
+			public const int Widget_MaterialComponents_Button = 2131689948;
 			
-			// aapt resource value: 0x7F0E01DD
-			public const int Widget_MaterialComponents_Button_Icon = 2131624413;
+			// aapt resource value: 0x7F0F01DD
+			public const int Widget_MaterialComponents_Button_Icon = 2131689949;
 			
-			// aapt resource value: 0x7F0E01DE
-			public const int Widget_MaterialComponents_Button_OutlinedButton = 2131624414;
+			// aapt resource value: 0x7F0F01DE
+			public const int Widget_MaterialComponents_Button_OutlinedButton = 2131689950;
 			
-			// aapt resource value: 0x7F0E01DF
-			public const int Widget_MaterialComponents_Button_OutlinedButton_Icon = 2131624415;
+			// aapt resource value: 0x7F0F01DF
+			public const int Widget_MaterialComponents_Button_OutlinedButton_Icon = 2131689951;
 			
-			// aapt resource value: 0x7F0E01E0
-			public const int Widget_MaterialComponents_Button_TextButton = 2131624416;
+			// aapt resource value: 0x7F0F01E0
+			public const int Widget_MaterialComponents_Button_TextButton = 2131689952;
 			
-			// aapt resource value: 0x7F0E01E1
-			public const int Widget_MaterialComponents_Button_TextButton_Dialog = 2131624417;
+			// aapt resource value: 0x7F0F01E1
+			public const int Widget_MaterialComponents_Button_TextButton_Dialog = 2131689953;
 			
-			// aapt resource value: 0x7F0E01E2
-			public const int Widget_MaterialComponents_Button_TextButton_Dialog_Icon = 2131624418;
+			// aapt resource value: 0x7F0F01E2
+			public const int Widget_MaterialComponents_Button_TextButton_Dialog_Icon = 2131689954;
 			
-			// aapt resource value: 0x7F0E01E3
-			public const int Widget_MaterialComponents_Button_TextButton_Icon = 2131624419;
+			// aapt resource value: 0x7F0F01E3
+			public const int Widget_MaterialComponents_Button_TextButton_Icon = 2131689955;
 			
-			// aapt resource value: 0x7F0E01E4
-			public const int Widget_MaterialComponents_Button_UnelevatedButton = 2131624420;
+			// aapt resource value: 0x7F0F01E4
+			public const int Widget_MaterialComponents_Button_UnelevatedButton = 2131689956;
 			
-			// aapt resource value: 0x7F0E01E5
-			public const int Widget_MaterialComponents_Button_UnelevatedButton_Icon = 2131624421;
+			// aapt resource value: 0x7F0F01E5
+			public const int Widget_MaterialComponents_Button_UnelevatedButton_Icon = 2131689957;
 			
-			// aapt resource value: 0x7F0E01E6
-			public const int Widget_MaterialComponents_CardView = 2131624422;
+			// aapt resource value: 0x7F0F01E6
+			public const int Widget_MaterialComponents_CardView = 2131689958;
 			
-			// aapt resource value: 0x7F0E01EB
-			public const int Widget_MaterialComponents_ChipGroup = 2131624427;
+			// aapt resource value: 0x7F0F01EB
+			public const int Widget_MaterialComponents_ChipGroup = 2131689963;
 			
-			// aapt resource value: 0x7F0E01E7
-			public const int Widget_MaterialComponents_Chip_Action = 2131624423;
+			// aapt resource value: 0x7F0F01E7
+			public const int Widget_MaterialComponents_Chip_Action = 2131689959;
 			
-			// aapt resource value: 0x7F0E01E8
-			public const int Widget_MaterialComponents_Chip_Choice = 2131624424;
+			// aapt resource value: 0x7F0F01E8
+			public const int Widget_MaterialComponents_Chip_Choice = 2131689960;
 			
-			// aapt resource value: 0x7F0E01E9
-			public const int Widget_MaterialComponents_Chip_Entry = 2131624425;
+			// aapt resource value: 0x7F0F01E9
+			public const int Widget_MaterialComponents_Chip_Entry = 2131689961;
 			
-			// aapt resource value: 0x7F0E01EA
-			public const int Widget_MaterialComponents_Chip_Filter = 2131624426;
+			// aapt resource value: 0x7F0F01EA
+			public const int Widget_MaterialComponents_Chip_Filter = 2131689962;
 			
-			// aapt resource value: 0x7F0E01EC
-			public const int Widget_MaterialComponents_FloatingActionButton = 2131624428;
+			// aapt resource value: 0x7F0F01EC
+			public const int Widget_MaterialComponents_FloatingActionButton = 2131689964;
 			
-			// aapt resource value: 0x7F0E01ED
-			public const int Widget_MaterialComponents_NavigationView = 2131624429;
+			// aapt resource value: 0x7F0F01ED
+			public const int Widget_MaterialComponents_NavigationView = 2131689965;
 			
-			// aapt resource value: 0x7F0E01EE
-			public const int Widget_MaterialComponents_Snackbar = 2131624430;
+			// aapt resource value: 0x7F0F01EE
+			public const int Widget_MaterialComponents_Snackbar = 2131689966;
 			
-			// aapt resource value: 0x7F0E01EF
-			public const int Widget_MaterialComponents_Snackbar_FullWidth = 2131624431;
+			// aapt resource value: 0x7F0F01EF
+			public const int Widget_MaterialComponents_Snackbar_FullWidth = 2131689967;
 			
-			// aapt resource value: 0x7F0E01F0
-			public const int Widget_MaterialComponents_TabLayout = 2131624432;
+			// aapt resource value: 0x7F0F01F0
+			public const int Widget_MaterialComponents_TabLayout = 2131689968;
 			
-			// aapt resource value: 0x7F0E01F1
-			public const int Widget_MaterialComponents_TabLayout_Colored = 2131624433;
+			// aapt resource value: 0x7F0F01F1
+			public const int Widget_MaterialComponents_TabLayout_Colored = 2131689969;
 			
-			// aapt resource value: 0x7F0E01F2
-			public const int Widget_MaterialComponents_TextInputEditText_FilledBox = 2131624434;
+			// aapt resource value: 0x7F0F01F2
+			public const int Widget_MaterialComponents_TextInputEditText_FilledBox = 2131689970;
 			
-			// aapt resource value: 0x7F0E01F3
-			public const int Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = 2131624435;
+			// aapt resource value: 0x7F0F01F3
+			public const int Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = 2131689971;
 			
-			// aapt resource value: 0x7F0E01F4
-			public const int Widget_MaterialComponents_TextInputEditText_OutlinedBox = 2131624436;
+			// aapt resource value: 0x7F0F01F4
+			public const int Widget_MaterialComponents_TextInputEditText_OutlinedBox = 2131689972;
 			
-			// aapt resource value: 0x7F0E01F5
-			public const int Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = 2131624437;
+			// aapt resource value: 0x7F0F01F5
+			public const int Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = 2131689973;
 			
-			// aapt resource value: 0x7F0E01F6
-			public const int Widget_MaterialComponents_TextInputLayout_FilledBox = 2131624438;
+			// aapt resource value: 0x7F0F01F6
+			public const int Widget_MaterialComponents_TextInputLayout_FilledBox = 2131689974;
 			
-			// aapt resource value: 0x7F0E01F7
-			public const int Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = 2131624439;
+			// aapt resource value: 0x7F0F01F7
+			public const int Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = 2131689975;
 			
-			// aapt resource value: 0x7F0E01F8
-			public const int Widget_MaterialComponents_TextInputLayout_OutlinedBox = 2131624440;
+			// aapt resource value: 0x7F0F01F8
+			public const int Widget_MaterialComponents_TextInputLayout_OutlinedBox = 2131689976;
 			
-			// aapt resource value: 0x7F0E01F9
-			public const int Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = 2131624441;
+			// aapt resource value: 0x7F0F01F9
+			public const int Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = 2131689977;
 			
-			// aapt resource value: 0x7F0E01FA
-			public const int Widget_MaterialComponents_Toolbar = 2131624442;
+			// aapt resource value: 0x7F0F01FA
+			public const int Widget_MaterialComponents_Toolbar = 2131689978;
 			
-			// aapt resource value: 0x7F0E01FB
-			public const int Widget_Support_CoordinatorLayout = 2131624443;
+			// aapt resource value: 0x7F0F01FB
+			public const int Widget_Support_CoordinatorLayout = 2131689979;
 			
 			static Style()
 			{
@@ -22933,8 +25790,8 @@ namespace MoneyNote.Droid
 		public partial class Xml
 		{
 			
-			// aapt resource value: 0x7F100000
-			public const int xamarin_essentials_fileprovider_file_paths = 2131755008;
+			// aapt resource value: 0x7F110000
+			public const int xamarin_essentials_fileprovider_file_paths = 2131820544;
 			
 			static Xml()
 			{

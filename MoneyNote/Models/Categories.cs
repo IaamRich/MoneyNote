@@ -15,7 +15,7 @@ namespace MoneyNote.Models
                 new CategoryDto { Id = 2, Type = CategoryType.Transport, Name = Strings["type_transport"], Image = "transport.png"},
                 new CategoryDto { Id = 3, Type = CategoryType.Business, Name = Strings["type_business"], Image = "business.png"},
                 new CategoryDto { Id = 4, Type = CategoryType.Network, Name = Strings["type_network"], Image = "network_products.png"},
-                new CategoryDto { Id = 5, Type = CategoryType.Entertainment, Name = Strings["type_entertainment"], Image = "entertainment.png"},
+                new CategoryDto { Id = 5, Type = CategoryType.Entertainment, Name = Strings["type_entertainment"], Image = "entertainment.png"}
             };
         }
         public static List<CategoryDto> GetAllAddingCategories()
@@ -26,6 +26,14 @@ namespace MoneyNote.Models
                 new CategoryDto { Id = 1, Type = CategoryType.Earnings, Name = Strings["type_earnings"], Image = "additional_earnings.png"},
                 new CategoryDto { Id = 2, Type = CategoryType.Gift, Name = Strings["type_gift"], Image = "gift.png"},
                 new CategoryDto { Id = 3, Type = CategoryType.Other, Name = Strings["type_other"], Image = "other.png"}
+            };
+        }
+        public static List<CategoryDto> GetAllBankCategories()
+        {
+            return new List<CategoryDto>
+            {
+                new CategoryDto { Id = 0, Type = CategoryType.Repay, Name = Strings["type_repay_credit"], Image = "repay_credit.png"},
+                new CategoryDto { Id = 1, Type = CategoryType.Lend, Name = Strings["type_take_credit"], Image = "take_credit.png"}
             };
         }
     }

@@ -3,8 +3,6 @@ using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
-using Lottie.Forms.Droid;
-using TouchEffect.Android;
 
 namespace MoneyNote.Droid
 {
@@ -28,10 +26,9 @@ namespace MoneyNote.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
-            TouchEffectPreserver.Preserve(); // touchEffect to every xamarin forms element
-            AnimationViewRenderer.Init(); // Lottie Animations
-            //XF.Material.Droid.Material.Init(this, savedInstanceState);
-            //Forms.SetFlags("SwipeView_Experimental"); //SwipeView Cell
+            TouchEffect.Android.TouchEffectPreserver.Preserve();
+            Lottie.Forms.Droid.AnimationViewRenderer.Init();
+            XF.Material.Droid.Material.Init(this, savedInstanceState);
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

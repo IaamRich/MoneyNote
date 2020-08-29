@@ -29,6 +29,7 @@ namespace MoneyNote
         private static IMoneyService _moneyService;
         //UI variables
         public CategoryDto SelectedCategory { get; set; }
+        public bool IsCreditVisible { get; set; }
         public string SpendDescription { get; set; }
         public string AddMoneyDescription { get; set; }
         public decimal AddMoneyValue { get; set; }
@@ -36,8 +37,7 @@ namespace MoneyNote
         public decimal CurrentBill { get; set; }
         public decimal CurrentCash { get; set; }
         public decimal CurrentCard { get; set; }
-        public bool IsCash { get; set; }
-        public bool IsCard { get; set; }
+        public decimal CurrentCredit { get; set; }
         public bool IsMinusAllowed { get; set; }
         //List Variables
         private int lastID = 0;
@@ -51,8 +51,6 @@ namespace MoneyNote
             HostScreen = hostScreen ?? Locator.Current.GetService<IScreen>();
             _transactionService = transactionService;
             _moneyService = moneyService;
-            IsCash = true;
-            IsCard = false;
             IsMinusAllowed = CrossSettings.Current.GetValueOrDefault("IsMinusAllowed", false);
             CreateCommands();
             GetData();
@@ -72,7 +70,9 @@ namespace MoneyNote
             GetLastTransactions();
             CurrentCard = _moneyService.GetCurrentCard();
             CurrentCash = _moneyService.GetCurrentCash();
+            CurrentCredit = _moneyService.GetCurrentCredit();
             CurrentBill = CurrentCard + CurrentCash;
+            IsCreditVisible = CurrentCredit > 0 ? true : false;
         }
         private void GetLastTransactions()
         {
@@ -111,28 +111,50 @@ namespace MoneyNote
                 Category = SelectedCategory,
                 MathSymbol = '-'
             };
-            await _transactionService.Create(item);
             switch (CrossSettings.Current.GetValueOrDefault("CurrentCommitMoneyFrom", 0))
             {
                 case 0:
-                    if (item.Value > CurrentCash && !IsMinusAllowed)
+                    if (item.Value > CurrentCash)
                     {
-                        await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_cash"]), true);
-                        return;
+                        if (!IsMinusAllowed)
+                        {
+                            await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_cash"]), true);
+                            return;
+                        }
+                        else
+                        {
+                            CurrentCredit += item.Value;
+                            _moneyService.SetCurrentCredit(CurrentCredit);
+                        }
                     }
-                    CurrentCash -= item.Value;
-                    _moneyService.SetCurrentCash(CurrentCash);
+                    else
+                    {
+                        CurrentCash -= item.Value;
+                        _moneyService.SetCurrentCash(CurrentCash);
+                    }
                     break;
                 case 1:
-                    if (item.Value > CurrentCard && !IsMinusAllowed)
+                    if (item.Value > CurrentCard)
                     {
-                        await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_card"]), true);
-                        return;
+                        if (!IsMinusAllowed)
+                        {
+                            await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_card"]), true);
+                            return;
+                        }
+                        else
+                        {
+                            CurrentCredit += item.Value;
+                            _moneyService.SetCurrentCredit(CurrentCredit);
+                        }
                     }
-                    CurrentCard -= item.Value;
-                    _moneyService.SetCurrentCard(CurrentCard);
+                    else
+                    {
+                        CurrentCard -= item.Value;
+                        _moneyService.SetCurrentCard(CurrentCard);
+                    }
                     break;
             }
+            await _transactionService.Create(item);
             LastTransactionsList.Clear();
             SpendValue = "";
             GetData();
