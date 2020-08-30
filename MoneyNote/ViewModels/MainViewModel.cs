@@ -107,7 +107,7 @@ namespace MoneyNote
             SelectedCategory = UnwrapSpendingCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedSpendingCategory", 0));
             var item = new Transaction
             {
-                Id = lastID + 1,
+                Id = ++lastID,
                 Value = decimal.Parse(SpendValue),
                 Note = SpendDescription,
                 Date = DateTime.Now,
@@ -175,7 +175,7 @@ namespace MoneyNote
             SelectedCategory = UnwrapAddingCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedAddingCategory", 0));
             var item = new Transaction
             {
-                Id = lastID + 1,
+                Id = ++lastID,
                 Value = AddMoneyValue,
                 Note = AddMoneyDescription,
                 Date = DateTime.Now,
@@ -207,31 +207,78 @@ namespace MoneyNote
             CreditDescription = CrossSettings.Current.GetValueOrDefault("CreditMessage", "");
             CreditValue = CrossSettings.Current.GetValueOrDefault("CreditValue", 0.0m);
             SelectedCategory = UnwrapBankCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedBankCategory", 0));
-            //HERE NEED TO WRITE LOGIC OF EACH CATEGORI CHOICED
-            var item = new Transaction
+            //HERE NEED TO WRITE LOGIC OF EACH CATEGORY CHOICED
+            switch (SelectedCategory.Type)
             {
-                Id = lastID + 1,
-                Value = CreditValue,
-                Note = CreditDescription,
-                Date = DateTime.Now,
-                Type = TransactionType.Bank,
-                Category = SelectedCategory,
-                MathSymbol = '+'
-            };
-            await _transactionService.Create(item);
-            switch (CrossSettings.Current.GetValueOrDefault("CurrentAddedMoneyTo", 0))
-            {
-                case 0:
-                    CurrentCash += item.Value;
-                    CurrentCredit += item.Value;
-                    _moneyService.SetCurrentCash(CurrentCash);
-                    _moneyService.SetCurrentCredit(CurrentCredit);
+                case CategoryType.Lend:
+                    var transaction = new Transaction
+                    {
+                        Id = ++lastID,
+                        Value = CreditValue,
+                        Note = CreditDescription,
+                        Date = DateTime.Now,
+                        Type = TransactionType.Bank,
+                        Category = SelectedCategory,
+                        MathSymbol = '^'
+                    };
+                    _ = _transactionService.Create(transaction);
+                    switch (CrossSettings.Current.GetValueOrDefault("CurrentAddedMoneyTo", 0))
+                    {
+                        case 0:
+                            CurrentCash += transaction.Value;
+                            CurrentCredit += transaction.Value;
+                            _moneyService.SetCurrentCash(CurrentCash);
+                            _moneyService.SetCurrentCredit(CurrentCredit);
+                            break;
+                        case 1:
+                            CurrentCard += transaction.Value;
+                            CurrentCredit += transaction.Value;
+                            _moneyService.SetCurrentCard(CurrentCard);
+                            _moneyService.SetCurrentCredit(CurrentCredit);
+                            break;
+                    }
                     break;
-                case 1:
-                    CurrentCard += item.Value;
-                    CurrentCredit += item.Value;
-                    _moneyService.SetCurrentCard(CurrentCard);
-                    _moneyService.SetCurrentCredit(CurrentCredit);
+                case CategoryType.Repay:
+                    var item = new Transaction
+                    {
+                        Id = ++lastID,
+                        Value = CreditValue,
+                        Note = CreditDescription,
+                        Date = DateTime.Now,
+                        Type = TransactionType.Bank,
+                        Category = SelectedCategory,
+                        MathSymbol = ' '
+                    };
+                    switch (CrossSettings.Current.GetValueOrDefault("CurrentAddedMoneyTo", 0))
+                    {
+                        case 0:
+                            if (CreditValue > CurrentCash)
+                            {
+                                await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_cash"]), true);
+                                return;
+                            }
+                            if (CreditValue > CurrentCredit) item.Value = CurrentCredit;
+                            CurrentCash -= item.Value;
+                            CurrentCredit -= item.Value;
+                            _moneyService.SetCurrentCash(CurrentCash);
+                            _moneyService.SetCurrentCredit(CurrentCredit);
+                            break;
+                        case 1:
+                            if (CreditValue > CurrentCard)
+                            {
+                                await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_card"]), true);
+                                return;
+                            }
+                            if (CreditValue > CurrentCredit) item.Value = CurrentCredit;
+                            CurrentCard -= item.Value;
+                            CurrentCredit -= item.Value;
+                            _moneyService.SetCurrentCard(CurrentCard);
+                            _moneyService.SetCurrentCredit(CurrentCredit);
+                            break;
+                    }
+                    _ = _transactionService.Create(item);
+                    break;
+                default:
                     break;
             }
             LastTransactionsList.Clear();

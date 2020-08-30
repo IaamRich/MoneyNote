@@ -105,7 +105,7 @@
                             <Label
                                 HorizontalOptions="EndAndExpand"
                                 Text="{Binding CurrentCredit}"
-                                TextColor="{StaticResource RedAlert}" />
+                                TextColor="{StaticResource BankColor}" />
                             <StackLayout.Triggers>
                                 <DataTrigger
                                     Binding="{Binding IsCreditVisible}"
@@ -172,16 +172,6 @@
                             Text="{Binding Strings[commit]}"
                             TextColor="White"
                             VerticalOptions="Center" />
-                        <!--<Button
-
-                            BackgroundColor="{StaticResource MainGreen}"
-                            Command="{Binding AddSpend}"
-                            CornerRadius="0"
-                            HeightRequest="50"
-                            HorizontalOptions="FillAndExpand"
-                            Text="{Binding Strings[commit]}"
-                            TextColor="White"
-                            VerticalOptions="Center" />-->
                     </StackLayout>
                 </Frame>
                 <!--  LIST  -->
@@ -234,7 +224,7 @@
                                                     Grid.Column="2"
                                                     FontSize="Medium"
                                                     HorizontalOptions="End"
-                                                    TextColor="{StaticResource RedAlert}"
+                                                    TextColor="{StaticResource BankColor}"
                                                     VerticalOptions="Center">
                                                     <Label.FormattedText>
                                                         <FormattedString>
@@ -249,6 +239,12 @@
                                                             TargetType="Label"
                                                             Value="+">
                                                             <Setter Property="TextColor" Value="{StaticResource MainGreen}" />
+                                                        </DataTrigger>
+                                                        <DataTrigger
+                                                            Binding="{Binding MathSymbol}"
+                                                            TargetType="Label"
+                                                            Value="-">
+                                                            <Setter Property="TextColor" Value="{StaticResource RedAlert}" />
                                                         </DataTrigger>
                                                     </Label.Triggers>
                                                 </Label>
