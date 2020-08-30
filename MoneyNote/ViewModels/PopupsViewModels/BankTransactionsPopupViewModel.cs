@@ -33,7 +33,7 @@ namespace MoneyNote.ViewModels.PopupsViewModels
                 CategoryList.ToList().ForEach(x => x.IsSelected = false);
                 CategoryList.ToList().FirstOrDefault(x => x.Id == parameter).IsSelected = true;
                 ChooseButtonText = CategoryList.ToList().FirstOrDefault(x => x.Id == parameter).Name;
-                CrossSettings.Current.AddOrUpdateValue("SelectedAddingCategory", parameter);
+                CrossSettings.Current.AddOrUpdateValue("SelectedBankCategory", parameter);
                 IsCategoriesVisible = false;
                 IsOriginalVisible = true;
             });

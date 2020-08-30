@@ -206,7 +206,8 @@ namespace MoneyNote
         {
             CreditDescription = CrossSettings.Current.GetValueOrDefault("CreditMessage", "");
             CreditValue = CrossSettings.Current.GetValueOrDefault("CreditValue", 0.0m);
-            SelectedCategory = UnwrapAddingCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedBankCategory", 0));
+            SelectedCategory = UnwrapBankCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedBankCategory", 0));
+            //HERE NEED TO WRITE LOGIC OF EACH CATEGORI CHOICED
             var item = new Transaction
             {
                 Id = lastID + 1,
@@ -250,6 +251,17 @@ namespace MoneyNote
         private CategoryDto UnwrapSpendingCategoryType(int id)
         {
             foreach (var item in Categories.GetAllSpendingCategories())
+            {
+                if (item.Id == id)
+                {
+                    return item;
+                }
+            }
+            return new CategoryDto();
+        }
+        private CategoryDto UnwrapBankCategoryType(int id)
+        {
+            foreach (var item in Categories.GetAllBankCategories())
             {
                 if (item.Id == id)
                 {

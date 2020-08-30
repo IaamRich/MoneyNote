@@ -57,6 +57,7 @@ namespace MoneyNote.Views.Popups
                         {
                             var moneyValue = decimal.Parse(entry.Text);
                             var result = entryDescription.Text;
+
                             if (String.IsNullOrWhiteSpace(entryDescription.Text))
                             {
                                 var type = UnwrapAddingCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedBankCategory", 0));
