@@ -23,7 +23,8 @@
                     <Label
                         Margin="30,10,0,10"
                         FontSize="Large"
-                        Text="Common"
+                        Text="{Binding Strings[common]}"
+                        TextColor="{StaticResource ButtonText}"
                         VerticalOptions="EndAndExpand" />
                 </Grid>
                 <!--  1  -->
@@ -85,7 +86,7 @@
                                 Grid.RowSpan="2"
                                 FontSize="Medium"
                                 HorizontalOptions="CenterAndExpand"
-                                Text="Default spend area"
+                                Text="{Binding Strings[default_area]}"
                                 VerticalOptions="Center" />
                             <!--  cash  -->
                             <StackLayout
@@ -210,17 +211,17 @@
                     Margin="30,15,0,15"
                     FontSize="Large"
                     HorizontalOptions="Start"
-                    Text="Money Notes" />
+                    Text="{Binding Strings[money_notes]}" />
                 <Frame
                     Margin="10,0"
                     CornerRadius="10"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="EndAndExpand">
-                    <Grid RowDefinitions="50,50">
+                    <Grid RowDefinitions="50,50,50">
                         <StackLayout Grid.Row="0" Orientation="Horizontal">
                             <Label
                                 FontSize="Medium"
-                                Text="Reset all to default"
+                                Text="{Binding Strings[reset_all]}"
                                 VerticalOptions="Center" />
 
 
@@ -242,7 +243,7 @@
                                     FontAttributes="Bold"
                                     HeightRequest="100"
                                     HorizontalOptions="Center"
-                                    Text="Reset"
+                                    Text="{Binding Strings[reset]}"
                                     TextColor="{StaticResource PopupButton}"
                                     VerticalOptions="Center"
                                     VerticalTextAlignment="Center" />
@@ -251,7 +252,7 @@
                         <StackLayout Grid.Row="1" Orientation="Horizontal">
                             <Label
                                 FontSize="Medium"
-                                Text="Set notes manually"
+                                Text="{Binding Strings[set_notes]}"
                                 VerticalOptions="Center" />
 
                             <Grid
@@ -272,19 +273,43 @@
                                     FontAttributes="Bold"
                                     HeightRequest="100"
                                     HorizontalOptions="Center"
-                                    Text="Go"
+                                    Text="{Binding Strings[go]}"
                                     TextColor="{StaticResource PopupButton}"
                                     VerticalOptions="Center"
                                     VerticalTextAlignment="Center" />
                             </Grid>
                         </StackLayout>
+                        <Grid Grid.Row="2" ColumnSpacing="0">
+                            <Label
+                                FontSize="Medium"
+                                Text="{Binding Strings[allow_credit]}"
+                                VerticalOptions="Center" />
+                            <Image
+                                Margin="0"
+                                Aspect="AspectFit"
+                                HorizontalOptions="EndAndExpand"
+                                Source="selected.png"
+                                VerticalOptions="FillAndExpand">
+                                <Image.Triggers>
+                                    <DataTrigger
+                                        Binding="{Binding IsMinus}"
+                                        TargetType="Image"
+                                        Value="False">
+                                        <Setter Property="Source" Value="unselected.png" />
+                                    </DataTrigger>
+                                </Image.Triggers>
+                            </Image>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding IsMinusCommand}" />
+                            </Grid.GestureRecognizers>
+                        </Grid>
                     </Grid>
                 </Frame>
                 <!--  3  -->
                 <Label
                     Margin="30,15,0,15"
                     FontSize="Large"
-                    Text="Other" />
+                    Text="{Binding Strings[other]}" />
                 <Frame
                     Margin="10,0,10,5"
                     CornerRadius="10"
@@ -293,7 +318,7 @@
                         <StackLayout Orientation="Horizontal">
                             <Label
                                 FontSize="Medium"
-                                Text="Disable ads"
+                                Text="{Binding Strings[dis_add]}"
                                 VerticalOptions="Center" />
                             <Button
                                 Command="{Binding ResetAll}"

@@ -8,21 +8,25 @@ using ReactiveUI;
 
 namespace MoneyNote.ViewModels.PopupsViewModels
 {
-    public class AddMoneyPopupViewModel : ReactiveObject
+    public class BankTransactionsPopupViewModel : ReactiveObject
     {
         #region Variables
         public II18N Strings => I18N.Current;
         public bool IsOriginalVisible { get; set; }
         public bool IsCategoriesVisible { get; set; }
         public string ChooseButtonText { get; set; }
+        public string TextFromToCard { get; set; }
+        public string TextFromToCash { get; set; }
         public ObservableCollection<Category> CategoryList { get; set; }
         public ICommand SwitchCategoryCommand { get; set; }
         public ICommand CategoryButtonCommand { get; set; }
         #endregion
-        public AddMoneyPopupViewModel()
+        public BankTransactionsPopupViewModel()
         {
             ChooseButtonText = Strings["choose_category"];
             IsOriginalVisible = true;
+            TextFromToCard = Strings["card"];
+            TextFromToCash = Strings["cash"];
             GetCategories();
             CreateCommands();
         }
@@ -33,7 +37,18 @@ namespace MoneyNote.ViewModels.PopupsViewModels
                 CategoryList.ToList().ForEach(x => x.IsSelected = false);
                 CategoryList.ToList().FirstOrDefault(x => x.Id == parameter).IsSelected = true;
                 ChooseButtonText = CategoryList.ToList().FirstOrDefault(x => x.Id == parameter).Name;
-                CrossSettings.Current.AddOrUpdateValue("SelectedAddingCategory", parameter);
+                var id = CategoryList.ToList().FirstOrDefault(x => x.Id == parameter).Id;
+                if (id == 0)
+                {
+                    TextFromToCard = Strings["from_card"];
+                    TextFromToCash = Strings["from_cash"];
+                }
+                else
+                {
+                    TextFromToCard = Strings["to_card"];
+                    TextFromToCash = Strings["to_cash"];
+                }
+                CrossSettings.Current.AddOrUpdateValue("SelectedBankCategory", parameter);
                 IsCategoriesVisible = false;
                 IsOriginalVisible = true;
             });
@@ -46,7 +61,7 @@ namespace MoneyNote.ViewModels.PopupsViewModels
         public void GetCategories()
         {
             CategoryList = new ObservableCollection<Category>();
-            Categories.GetAllAddingCategories().ForEach(x => CategoryList.Add(new Category
+            Categories.GetAllBankCategories().ForEach(x => CategoryList.Add(new Category
             {
                 Id = x.Id,
                 Name = x.Name,

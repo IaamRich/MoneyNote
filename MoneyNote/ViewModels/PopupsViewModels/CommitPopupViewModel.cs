@@ -33,7 +33,7 @@ namespace MoneyNote.ViewModels.PopupsViewModels
                 CategoryList.ToList().ForEach(x => x.IsSelected = false);
                 CategoryList.ToList().FirstOrDefault(x => x.Id == parameter).IsSelected = true;
                 ChooseButtonText = CategoryList.ToList().FirstOrDefault(x => x.Id == parameter).Name;
-                CrossSettings.Current.AddOrUpdateValue("SelectedCategory", parameter);
+                CrossSettings.Current.AddOrUpdateValue("SelectedSpendingCategory", parameter);
                 IsCategoriesVisible = false;
                 IsOriginalVisible = true;
             });
@@ -46,7 +46,14 @@ namespace MoneyNote.ViewModels.PopupsViewModels
         private void GetCategories()
         {
             CategoryList = new ObservableCollection<Category>();
-            Categories.GetAll(0, 5).ForEach(x => CategoryList.Add(x));
+            Categories.GetAllSpendingCategories().ForEach(x => CategoryList.Add(new Category
+            {
+                Id = x.Id,
+                Name = x.Name,
+                Image = x.Image,
+                Type = x.Type,
+                IsSelected = false
+            }));
         }
     }
 }

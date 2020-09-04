@@ -7,15 +7,16 @@ using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms.Xaml;
 
+
 namespace MoneyNote.Views.Popups
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AddMoneyPopupView : PopupPage
+    public partial class BankTransactionsPopupView : PopupPage
     {
         public II18N Strings => I18N.Current;
         public Action ActionAfter { get; set; }
         public bool IsCancelPressed { get; set; }
-        public AddMoneyPopupView(Action act)
+        public BankTransactionsPopupView(Action act)
         {
             IsCancelPressed = false;
             InitializeComponent();
@@ -56,13 +57,14 @@ namespace MoneyNote.Views.Popups
                         {
                             var moneyValue = decimal.Parse(entry.Text);
                             var result = entryDescription.Text;
+
                             if (String.IsNullOrWhiteSpace(entryDescription.Text))
                             {
-                                var type = UnwrapAddingCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedAddingCategory", 0));
+                                var type = UnwrapAddingCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedBankCategory", 0));
                                 result = type.Type.ToString() + " " + Strings["missed"];
                             }
-                            CrossSettings.Current.AddOrUpdateValue("AddMoneyValue", moneyValue);
-                            CrossSettings.Current.AddOrUpdateValue("AddMoneyMessage", result);
+                            CrossSettings.Current.AddOrUpdateValue("CreditValue", moneyValue);
+                            CrossSettings.Current.AddOrUpdateValue("CreditMessage", result);
                             CrossSettings.Current.AddOrUpdateValue("CurrentAddedMoneyTo", FuncMoneyFrom());
 
                             PopupNavigation.Instance.PopAsync(true);
@@ -87,7 +89,7 @@ namespace MoneyNote.Views.Popups
         }
         private CategoryDto UnwrapAddingCategoryType(int id)
         {
-            foreach (var item in Categories.GetAllAddingCategories())
+            foreach (var item in Categories.GetAllBankCategories())
             {
                 if (item.Id == id)
                 {
@@ -96,7 +98,6 @@ namespace MoneyNote.Views.Popups
             }
             return new CategoryDto();
         }
-
         #region Settings/Animations
         // Invoked when background is clicked
         protected override bool OnBackgroundClicked()

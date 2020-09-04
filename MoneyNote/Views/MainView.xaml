@@ -5,26 +5,27 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:MoneyNote.Controls"
     xmlns:local="clr-namespace:MoneyNote;assembly=MoneyNote"
+    xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
     xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
     x:TypeArguments="local:MainViewModel">
     <ContentPage.ToolbarItems>
-        <ToolbarItem
-            Command="{Binding AddSalary}"
-            IconImageSource="plus.png"
-            Text="+" />
+        <ToolbarItem Command="{Binding BankCommand}" IconImageSource="bank.png" />
+        <ToolbarItem Command="{Binding AddSalary}" IconImageSource="plus.png" />
     </ContentPage.ToolbarItems>
     <Grid BackgroundColor="{StaticResource ListBackColor}">
         <Image Source="header_back.png" VerticalOptions="Start" />
         <StackLayout Margin="0" Spacing="0">
 
             <!--  HEADER  -->
-            <StackLayout Orientation="Horizontal" Spacing="0">
-                <Grid Margin="10,5,0,0" HorizontalOptions="Start">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
+            <Grid
+                ColumnDefinitions="*,Auto"
+                ColumnSpacing="0"
+                RowDefinitions="Auto,Auto">
+                <Grid
+                    Margin="15,0,0,0"
+                    HorizontalOptions="Start"
+                    RowDefinitions="35,Auto">
                     <Label
                         FontSize="Title"
                         Text="{Binding Strings[app_name]}"
@@ -43,56 +44,99 @@
                         HorizontalOptions="Center"
                         Source="steps.png"
                         VerticalOptions="End" />
+
                 </Grid>
+                <Frame
+                    Grid.Column="1"
+                    Margin="0,0,-10,0"
+                    Padding="5"
+                    BorderColor="{StaticResource PopupButton}"
+                    CornerRadius="10"
+                    VerticalOptions="Start">
+                    <StackLayout
+                        Margin="0,0,15,0"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Vertical"
+                        VerticalOptions="Center">
+                        <StackLayout
+                            Grid.Column="0"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal">
+                            <Label Text="{Binding Strings[current_cash]}" TextColor="{StaticResource PopupButton}" />
+                            <Label
+                                HorizontalOptions="EndAndExpand"
+                                Text="{Binding CurrentCash}"
+                                TextColor="{StaticResource MainGreen}" />
+                        </StackLayout>
+                        <BoxView
+                            BackgroundColor="Gray"
+                            HeightRequest="1"
+                            Opacity="0.3" />
+                        <StackLayout
+                            Grid.Column="1"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal">
+                            <Label Text="{Binding Strings[current_card]}" TextColor="{StaticResource PopupButton}" />
+                            <Label
+                                HorizontalOptions="EndAndExpand"
+                                Text="{Binding CurrentCard}"
+                                TextColor="{StaticResource MainGreen}" />
+                        </StackLayout>
+                        <BoxView
+                            BackgroundColor="Gray"
+                            HeightRequest="1"
+                            IsVisible="False"
+                            Opacity="0.3">
+                            <BoxView.Triggers>
+                                <DataTrigger
+                                    Binding="{Binding IsCreditVisible}"
+                                    TargetType="BoxView"
+                                    Value="True">
+                                    <Setter Property="IsVisible" Value="True" />
+                                </DataTrigger>
+                            </BoxView.Triggers>
+                        </BoxView>
+                        <StackLayout
+                            Grid.Column="1"
+                            HorizontalOptions="FillAndExpand"
+                            IsVisible="False"
+                            Orientation="Horizontal">
+                            <Label Text="{Binding Strings[current_credit]}" TextColor="{StaticResource PopupButton}" />
+                            <Label
+                                HorizontalOptions="EndAndExpand"
+                                Text="{Binding CurrentCredit}"
+                                TextColor="{StaticResource BankColor}" />
+                            <StackLayout.Triggers>
+                                <DataTrigger
+                                    Binding="{Binding IsCreditVisible}"
+                                    TargetType="StackLayout"
+                                    Value="True">
+                                    <Setter Property="IsVisible" Value="True" />
+                                </DataTrigger>
+                            </StackLayout.Triggers>
+                        </StackLayout>
+
+                    </StackLayout>
+                </Frame>
                 <StackLayout
-                    Margin="5,40,5,5"
-                    HorizontalOptions="EndAndExpand"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    HorizontalOptions="Center"
                     Orientation="Vertical">
-                    <StackLayout
-                        Grid.Column="0"
-                        Margin="10,0"
-                        HorizontalOptions="EndAndExpand"
-                        Orientation="Vertical">
-                        <Label
-                            HorizontalOptions="EndAndExpand"
-                            Text="{Binding Strings[current_cash]}"
-                            TextColor="Black" />
-                        <Label
-                            HorizontalOptions="EndAndExpand"
-                            Text="{Binding CurrentCash}"
-                            TextColor="White" />
-                    </StackLayout>
-                    <StackLayout
-                        Grid.Column="1"
-                        Margin="10,0"
-                        HorizontalOptions="EndAndExpand"
-                        Orientation="Vertical">
-                        <Label
-                            HorizontalOptions="EndAndExpand"
-                            Text="{Binding Strings[current_card]}"
-                            TextColor="Black" />
-                        <Label
-                            HorizontalOptions="EndAndExpand"
-                            Text="{Binding CurrentCard}"
-                            TextColor="White" />
-                    </StackLayout>
+                    <Label
+                        FontSize="Subtitle"
+                        HorizontalOptions="Center"
+                        Text="{Binding Strings[current]}"
+                        TextColor="Black" />
+                    <Label
+                        FontSize="Large"
+                        HorizontalOptions="Center"
+                        Text="{Binding CurrentBill}"
+                        TextColor="{StaticResource MainGreen}" />
                 </StackLayout>
-            </StackLayout>
-            <StackLayout
-                Grid.Column="1"
-                HorizontalOptions="Center"
-                Orientation="Vertical">
-                <Label
-                    FontSize="Subtitle"
-                    HorizontalOptions="Center"
-                    Text="{Binding Strings[current]}"
-                    TextColor="Black" />
-                <Label
-                    FontSize="Large"
-                    HorizontalOptions="Center"
-                    Text="{Binding CurrentBill}"
-                    TextColor="{StaticResource MainGreen}" />
-            </StackLayout>
+            </Grid>
+            <!--  Current Bill Section  -->
+
             <!--  ENTRY WITH BUTTON  -->
             <StackLayout Margin="10,0">
                 <Frame
@@ -116,11 +160,14 @@
                                 TextColor="{StaticResource PopupButton}"
                                 VerticalOptions="Center" />
                         </Frame>
-                        <Button
+                        <material:MaterialButton
+                            Margin="-7"
+                            Padding="0"
                             BackgroundColor="{StaticResource MainGreen}"
                             Command="{Binding AddSpend}"
                             CornerRadius="0"
-                            HeightRequest="50"
+                            Elevation="10"
+                            HeightRequest="60"
                             HorizontalOptions="FillAndExpand"
                             Text="{Binding Strings[commit]}"
                             TextColor="White"
@@ -158,25 +205,50 @@
                                             touch:TouchEff.PressedTranslationY="5"
                                             touch:TouchEff.RegularAnimationDuration="200"
                                             BackgroundColor="White">
-                                            <StackLayout
-                                                Padding="10,0"
-                                                HeightRequest="50"
-                                                Orientation="Horizontal">
+                                            <Grid
+                                                Padding="5,0,10,0"
+                                                ColumnDefinitions="Auto,*,Auto"
+                                                HeightRequest="50">
                                                 <Image
                                                     Aspect="AspectFit"
                                                     HorizontalOptions="Start"
                                                     Source="{Binding Category.Image}" />
                                                 <Label
+                                                    Grid.Column="1"
                                                     FontSize="Micro"
                                                     HorizontalOptions="Start"
+                                                    HorizontalTextAlignment="Start"
                                                     Text="{Binding Note}"
                                                     VerticalOptions="Center" />
                                                 <Label
+                                                    Grid.Column="2"
                                                     FontSize="Medium"
-                                                    HorizontalOptions="EndAndExpand"
-                                                    Text="{Binding Value}"
-                                                    VerticalOptions="Center" />
-                                            </StackLayout>
+                                                    HorizontalOptions="End"
+                                                    TextColor="{StaticResource BankColor}"
+                                                    VerticalOptions="Center">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="{Binding MathSymbol}" />
+                                                            <Span Text=" " />
+                                                            <Span Text="{Binding Value}" />
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                    <Label.Triggers>
+                                                        <DataTrigger
+                                                            Binding="{Binding MathSymbol}"
+                                                            TargetType="Label"
+                                                            Value="+">
+                                                            <Setter Property="TextColor" Value="{StaticResource MainGreen}" />
+                                                        </DataTrigger>
+                                                        <DataTrigger
+                                                            Binding="{Binding MathSymbol}"
+                                                            TargetType="Label"
+                                                            Value="-">
+                                                            <Setter Property="TextColor" Value="{StaticResource RedAlert}" />
+                                                        </DataTrigger>
+                                                    </Label.Triggers>
+                                                </Label>
+                                            </Grid>
                                         </Frame>
                                     </Frame>
                                 </DataTemplate>

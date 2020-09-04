@@ -1,5 +1,6 @@
 ﻿
 using Foundation;
+using Lottie.Forms.iOS.Renderers;
 using UIKit;
 
 namespace MoneyNote.iOS
@@ -22,7 +23,10 @@ namespace MoneyNote.iOS
             Rg.Plugins.Popup.Popup.Init();
 
             global::Xamarin.Forms.Forms.Init();
+            XF.Material.iOS.Material.Init();
             LoadApplication(new App());
+
+            AnimationViewRenderer.Init();
 
             return base.FinishedLaunching(app, options);
         }

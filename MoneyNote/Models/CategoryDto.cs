@@ -1,6 +1,15 @@
-﻿namespace MoneyNote.Models
+﻿using ReactiveUI;
+
+namespace MoneyNote.Models
 {
-    public class Category
+    public class CategoryDto
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Image { get; set; }
+        public CategoryType Type { get; set; }
+    }
+    public class Category : ReactiveObject
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -8,18 +17,21 @@
         public CategoryType Type { get; set; }
         public bool IsSelected { get; set; }
     }
+
     public enum CategoryType
     {
         None,
         Market,
-        Bar,
+        Restaurant,
         Transport,
         Business,
         Network,
         Entertainment,
-        Gift,
+        Lend,
         Salary,
         Earnings,
+        Gift,
+        Repay,
         Other
     }
 }

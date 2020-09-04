@@ -40,7 +40,7 @@
                     Margin="0,0,0,10"
                     BackgroundColor="{StaticResource BackgroundWhite}"
                     HasUnevenRows="True"
-                    ItemsSource="{Binding SpendingList}">
+                    ItemsSource="{Binding TransactionsList}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -48,30 +48,49 @@
                                     Margin="0,5"
                                     Orientation="Vertical"
                                     Spacing="0">
-                                    <StackLayout Orientation="Horizontal">
+                                    <Grid ColumnDefinitions="Auto,*">
                                         <Label
                                             FontAttributes="Bold"
                                             FontSize="Micro"
-                                            Text="{Binding Path=BindingContext.Strings[history_spent], Source={x:Reference historyListView}}"
+                                            Text="Value: "
                                             VerticalOptions="EndAndExpand" />
                                         <Label
-                                            FontAttributes="Bold"
-                                            FontSize="Small"
-                                            Text="{Binding Amount}"
-                                            TextColor="{StaticResource BoldLabel}"
-                                            VerticalTextAlignment="End" />
+                                            Grid.Column="1"
+                                            FontSize="Medium"
+                                            HorizontalOptions="Start"
+                                            TextColor="{StaticResource RedAlert}"
+                                            VerticalOptions="Center">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="{Binding MathSymbol}" />
+                                                    <Span Text=" " />
+                                                    <Span Text="{Binding Value}" />
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                            <Label.Triggers>
+                                                <DataTrigger
+                                                    Binding="{Binding MathSymbol}"
+                                                    TargetType="Label"
+                                                    Value="+">
+                                                    <Setter Property="TextColor" Value="{StaticResource MainGreen}" />
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                        </Label>
+                                    </Grid>
+                                    <Grid ColumnDefinitions="Auto,*">
                                         <Label
                                             FontAttributes="Bold"
                                             FontSize="Micro"
                                             Text="{Binding Path=BindingContext.Strings[history_description], Source={x:Reference historyListView}}"
-                                            VerticalOptions="EndAndExpand" />
+                                            VerticalOptions="Center" />
                                         <Label
+                                            Grid.Column="1"
                                             FontAttributes="Bold"
                                             FontSize="Small"
-                                            Text="{Binding WhereText}"
+                                            Text="{Binding Note}"
                                             TextColor="{StaticResource BoldLabel}"
                                             VerticalTextAlignment="End" />
-                                    </StackLayout>
+                                    </Grid>
                                     <StackLayout Orientation="Horizontal">
                                         <Label
                                             FontAttributes="Bold"
@@ -80,7 +99,7 @@
                                         <Label
                                             FontAttributes="Bold"
                                             FontSize="Micro"
-                                            Text="{Binding TransactionDate}"
+                                            Text="{Binding Date, StringFormat='{dd:MM:yyyy hh:mm:ss}'}"
                                             TextColor="{StaticResource BoldLabel}" />
                                     </StackLayout>
 

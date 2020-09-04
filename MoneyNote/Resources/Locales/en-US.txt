@@ -2,14 +2,17 @@
 main_title = Main
 current_cash = My Cash:
 current_card = My Card:
+current_credit = My Credit:
 current = Current bill:
 enter_spent_amount = Enter spent amount:
 last_spent_money = Last spent money:
 from_card = from Card
 from_cash = from Cash
+enter_add_text = Enter Add Amount
+enter_bank_text = Enter Credit Amount
 to_cash = to Cash
 to_card = to Card
-missed = Not specified
+missed = by default
 
 /* Account Page */
 my_cash = My cash money:
@@ -41,12 +44,16 @@ history_description = Description:
 history_transaction_date = Note date:
 
 /* Settings Page */
+default_area = Default spend area
+money_notes = Money notes
 reset_all = Reset all to default
 sounds = Sounds
+set_notes = Set notes manually
 area_from_where = By default spending area:
 choose_language = Choose Language
 set_every_places = Set each Money Notes
-dis_add = Turn off Ads
+dis_add = Disable Ads
+allow_credit = Allow auto credit
 
 /* Terms Page */
 terms_main = MoneyNotique's Terms
@@ -68,6 +75,7 @@ environment = Environment by:
 company_name = Sapec Software
 
 /* Common */
+common = Common
 master = Master
 app_name_camel = MoneyNotique
 app_name = MoneyNotique
@@ -75,9 +83,12 @@ delete = Delete
 save = Save
 cancel = Cancel
 ok = Ok
+go = Go
+other = Other
 update = Update
 create = Create
 share = Share
+reset = Reset
 vote = Vote
 amount = Amount
 commit = Commit
@@ -99,6 +110,10 @@ menu_footer = © Sapec Software 2020
 alert_no_value = Enter some value!
 alert_no_value_zero = First digit must not be zero!
 alert_need_category = Please choose a category.
+alert_no_cash = There is no such amount in Cash!
+If you want to note spend amount as credit - go to Settings and click the checkmark "Allow Auto Credit"
+alert_no_card = There is no such amount on Card!
+If you want to note spend amount as credit - go to Settings and click the checkmark "Allow Auto Credit"
 
 /* Category Types*/
 type_market = Market/Shop
@@ -107,9 +122,11 @@ type_transport = Transport
 type_business = Business/Deals
 type_network = Network
 type_entertainment = Entertainment
+type_take_credit = Take Credit
 type_gift = Gift
 type_salary = Salary
 type_earnings = Earnings/Hobby
+type_repay_credit = Repay Credit
 type_other = Other
 
 /* Popups */

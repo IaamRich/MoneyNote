@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <popups:PopupPage
-    x:Class="MoneyNote.Views.Popups.AddMoneyPopupView"
+    x:Class="MoneyNote.Views.Popups.BankTransactionsPopupView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
@@ -12,7 +12,7 @@
     xmlns:viewModels="clr-namespace:MoneyNote.ViewModels.PopupsViewModels"
     mc:Ignorable="d">
     <popups:PopupPage.BindingContext>
-        <viewModels:AddMoneyPopupViewModel x:Name="viewModel" />
+        <viewModels:BankTransactionsPopupViewModel x:Name="viewModel" />
     </popups:PopupPage.BindingContext>
     <popups:PopupPage.Animation>
         <animations:ScaleAnimation
@@ -73,7 +73,7 @@
                         x:Name="entry"
                         HorizontalTextAlignment="Center"
                         Keyboard="Numeric"
-                        Placeholder="{Binding Strings[enter_add_text]}"
+                        Placeholder="{Binding Strings[enter_bank_text]}"
                         PlaceholderColor="{StaticResource AboutBackGround}"
                         ReturnType="Next"
                         TextColor="{StaticResource PopupButton}" />
@@ -90,7 +90,7 @@
                     Margin="10,0"
                     Orientation="Horizontal"
                     Spacing="0">
-                    <Label FontSize="Micro" Text="{Binding Strings[to_cash]}" />
+                    <Label FontSize="Micro" Text="{Binding TextFromToCash}"/>
                     <Switch x:Name="cashSwitch" HorizontalOptions="EndAndExpand">
                         <Switch.Triggers>
                             <DataTrigger
@@ -112,7 +112,7 @@
                     Margin="10,0"
                     Orientation="Horizontal"
                     Spacing="0">
-                    <Label FontSize="Micro" Text="{Binding Strings[to_card]}" />
+                    <Label FontSize="Micro" Text="{Binding TextFromToCard}"/>
                     <Switch x:Name="cardSwitch" HorizontalOptions="EndAndExpand">
                         <Switch.Triggers>
                             <DataTrigger

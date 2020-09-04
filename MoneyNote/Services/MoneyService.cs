@@ -21,6 +21,14 @@ namespace MoneyNote.Services
         {
             CrossSettings.Current.AddOrUpdateValue("CurrentCard", value);
         }
+        public decimal GetCurrentCredit()
+        {
+            return CrossSettings.Current.GetValueOrDefault("CurrentCredit", 0.0m);
+        }
+        public void SetCurrentCredit(decimal value)
+        {
+            CrossSettings.Current.AddOrUpdateValue("CurrentCredit", value);
+        }
         public decimal GetAllOutlay()
         {
             return CrossSettings.Current.GetValueOrDefault("AllOutlay", 0.0m);

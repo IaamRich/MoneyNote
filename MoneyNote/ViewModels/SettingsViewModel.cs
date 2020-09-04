@@ -5,6 +5,7 @@ using MoneyNote.Models;
 using MoneyNote.Resources.Images;
 using MoneyNote.Services;
 using MoneyNote.Services.Contracts;
+using Plugin.Settings;
 using ReactiveUI;
 using Splat;
 using Xamarin.Forms;
@@ -22,6 +23,7 @@ namespace MoneyNote
         public ImageSource LanguageImage { get; set; }
         //Properties 
         public bool Sounds { get; set; }
+        public bool IsMinus { get; set; }
         public bool AreaCash { get; set; }
         public bool AreaCard { get; set; }
         public int CurrentLang { get; set; }
@@ -31,6 +33,7 @@ namespace MoneyNote
         public ICommand GoAccount { get; }
         public ICommand OffAds { get; set; }
         public ICommand SoundsCommand { get; set; }
+        public ICommand IsMinusCommand { get; set; }
         public ICommand AreaByDefaultCommand { get; set; }
         //Variables for normal functionality of the page
         public II18N Strings => I18N.Current;
@@ -46,6 +49,7 @@ namespace MoneyNote
             //get language
             GetLanguages();
             Sounds = _settingsService.GetSoundsSettings();
+            IsMinus = CrossSettings.Current.GetValueOrDefault("IsMinusAllowed", false);
             AreaCash = _settingsService.GetDefaultSpendingAreaSettings() == 0 ? true : false;
             AreaCard = !AreaCash;
             //commands
@@ -74,6 +78,11 @@ namespace MoneyNote
             GoAccount = ReactiveCommand.CreateFromObservable(() =>
             {
                 return HostScreen.Router.Navigate.Execute(new AccountViewModel(new MoneyService(), message: "From Settings"));
+            });
+            IsMinusCommand = ReactiveCommand.Create(() =>
+            {
+                IsMinus = !IsMinus;
+                CrossSettings.Current.AddOrUpdateValue("IsMinusAllowed", IsMinus);
             });
         }
         private async void ResetAllMethod()

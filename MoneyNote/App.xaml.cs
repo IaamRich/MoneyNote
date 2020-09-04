@@ -19,7 +19,7 @@ namespace MoneyNote
         {
             InitializeComponent();
             MainPage = new NavigationPage(new SplashPage());
-            XF.Material.Forms.Material.Init(this);
+            //XF.Material.Forms.Material.Init(this);
             //var bootstrapper = new AppBootstrapper();
             //MainPage = new MasterView(bootstrapper.CreateMasterViewModel());
         }
