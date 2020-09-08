@@ -39,7 +39,7 @@
     <AndroidSupportedAbis>
     </AndroidSupportedAbis>
     <AndroidCreatePackagePerAbi>true</AndroidCreatePackagePerAbi>
-    <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
     <AndroidEnableMultiDex>false</AndroidEnableMultiDex>
   </PropertyGroup>
