@@ -267,12 +267,14 @@
                 VerticalOptions="EndAndExpand">
 
                 <Image
+                    touch:TouchEff.Command="{Binding ShareCommand}"
                     touch:TouchEff.PressedScale="2"
                     touch:TouchEff.RegularAnimationDuration="200"
                     HeightRequest="30"
                     Source="share.png"
                     WidthRequest="30" />
                 <Image
+                    touch:TouchEff.Command="{Binding LikeCommand}"
                     touch:TouchEff.PressedScale="2"
                     touch:TouchEff.RegularAnimationDuration="200"
                     HeightRequest="30"

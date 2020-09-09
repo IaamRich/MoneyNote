@@ -12,6 +12,7 @@ using Plugin.Settings;
 using ReactiveUI;
 using Rg.Plugins.Popup.Services;
 using Splat;
+using Xamarin.Essentials;
 
 namespace MoneyNote
 {
@@ -24,6 +25,8 @@ namespace MoneyNote
         public ICommand UpdateSpend { get; set; }
         public ICommand AddSalary { get; set; }
         public ICommand BankCommand { get; set; }
+        public ICommand ShareCommand { get; set; }
+        public ICommand LikeCommand { get; set; }
         public ReactiveCommand<Unit, Unit> SelectRecord { get; set; }
         //Used Services
         private static ITransactionService _transactionService;
@@ -68,6 +71,17 @@ namespace MoneyNote
             AddSpend = ReactiveCommand.Create(() => { OnSpend(); });
             AddSalary = ReactiveCommand.Create(() => { OnAddSalary(); });
             BankCommand = ReactiveCommand.Create(() => { OnBankCommand(); });
+            ShareCommand = ReactiveCommand.Create(async () =>
+            {
+                await Share.RequestAsync(new ShareTextRequest
+                {
+                    Uri = "https://curaciov.com"
+                });
+            });
+            LikeCommand = ReactiveCommand.Create(() =>
+            {
+                Launcher.OpenAsync(new Uri(@"https://curaciov.com"));
+            });
         }
         private void GetData()
         {
