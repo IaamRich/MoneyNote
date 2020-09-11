@@ -49,13 +49,14 @@ namespace MoneyNote
             await Task.Run(() =>
             {
                 data = _transactionService.GetAll().Result;
-                data.Reverse();
-                if (data.Count != 0 || data != null)
+                if (data != null && data?.Count > 0)
                 {
+                    data.Reverse();
                     lastID = data.First().Id;
+                    TransactionsList = new ObservableCollection<Transaction>();
+                    data.ForEach(x => TransactionsList.Add(x));
                 }
-                TransactionsList = new ObservableCollection<Transaction>();
-                data.ForEach(x => TransactionsList.Add(x));
+
             });
         }
     }
