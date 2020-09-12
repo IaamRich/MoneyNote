@@ -32,6 +32,7 @@ namespace MoneyNote.Models
         Earnings,
         Gift,
         Repay,
+        Save,
         Other
     }
 }

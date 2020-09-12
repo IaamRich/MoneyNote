@@ -10,8 +10,9 @@
     xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
     x:TypeArguments="local:MainViewModel">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Command="{Binding BankCommand}" IconImageSource="bank.png" />
         <ToolbarItem Command="{Binding AddSalary}" IconImageSource="plus.png" />
+        <ToolbarItem Command="{Binding BankCommand}" IconImageSource="bank.png" />
+        <ToolbarItem Command="{Binding SaveCommand}" IconImageSource="pig.png" />
     </ContentPage.ToolbarItems>
     <Grid BackgroundColor="{StaticResource ListBackColor}">
         <Image Source="header_back.png" VerticalOptions="Start" />
@@ -180,7 +181,7 @@
                         Margin="0,5,0,0"
                         FontSize="Subtitle"
                         HorizontalOptions="CenterAndExpand"
-                        Text="Last Transactions:"
+                        Text="{Binding Strings[last_notes]}"
                         TextColor="Black" />
                     <Frame
                         Margin="0"

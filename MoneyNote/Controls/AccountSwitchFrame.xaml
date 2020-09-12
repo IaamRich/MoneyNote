@@ -10,7 +10,8 @@
     <Frame
         x:Name="fra"
         Margin="2"
-        Padding="0">
+        Padding="0"
+        HeightRequest="50">
         <StackLayout
             Padding="10,0"
             BackgroundColor="{StaticResource BackgroundWhite}"

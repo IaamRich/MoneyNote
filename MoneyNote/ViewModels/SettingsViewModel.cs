@@ -77,7 +77,7 @@ namespace MoneyNote
             ImageCommand = new Command(ImageCommandFunc);
             GoAccount = ReactiveCommand.CreateFromObservable(() =>
             {
-                return HostScreen.Router.Navigate.Execute(new AccountViewModel(new MoneyService(), message: "From Settings"));
+                return HostScreen.Router.Navigate.Execute(new AccountViewModel(new TransactionService(), new MoneyService(), message: "From Settings"));
             });
             IsMinusCommand = ReactiveCommand.Create(() =>
             {

@@ -25,6 +25,7 @@ namespace MoneyNote
         public ICommand UpdateSpend { get; set; }
         public ICommand AddSalary { get; set; }
         public ICommand BankCommand { get; set; }
+        public ICommand SaveCommand { get; set; }
         public ICommand ShareCommand { get; set; }
         public ICommand LikeCommand { get; set; }
         public ReactiveCommand<Unit, Unit> SelectRecord { get; set; }
@@ -71,6 +72,7 @@ namespace MoneyNote
             AddSpend = ReactiveCommand.Create(() => { OnSpend(); });
             AddSalary = ReactiveCommand.Create(() => { OnAddSalary(); });
             BankCommand = ReactiveCommand.Create(() => { OnBankCommand(); });
+            SaveCommand = ReactiveCommand.Create(() => { OnSaveCommand(); });
             ShareCommand = ReactiveCommand.Create(async () =>
             {
                 await Share.RequestAsync(new ShareTextRequest
@@ -216,6 +218,10 @@ namespace MoneyNote
         {
             await PopupNavigation.Instance.PushAsync(new BankTransactionsPopupView(OnBankFunc), true);
         }
+        private async void OnSaveCommand()
+        {
+            await PopupNavigation.Instance.PushAsync(new SaveMoneyPopupView(OnSaveFunc), true);
+        }
         private async void OnBankFunc()
         {
             CreditDescription = CrossSettings.Current.GetValueOrDefault("CreditMessage", "");
@@ -297,6 +303,15 @@ namespace MoneyNote
             }
             LastTransactionsList.Clear();
             GetData();
+        }
+        private async void OnSaveFunc()
+        {
+            //CreditDescription = CrossSettings.Current.GetValueOrDefault("CreditMessage", "");
+            //CreditValue = CrossSettings.Current.GetValueOrDefault("CreditValue", 0.0m);
+            //SelectedCategory = UnwrapBankCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedBankCategory", 0));
+
+            //LastTransactionsList.Clear();
+            //GetData();
         }
         private CategoryDto UnwrapAddingCategoryType(int id)
         {

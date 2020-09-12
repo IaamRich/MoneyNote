@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using I18NPortable;
+using MoneyNote.Models;
 using MoneyNote.Services.Contracts;
 using MoneyNote.Views.Popups;
 using Plugin.Settings;
@@ -13,12 +15,13 @@ namespace MoneyNote
 {
     public class AccountViewModel : ReactiveObject, IRoutableViewModel
     {
-
+        //Used Services
+        private static ITransactionService _transactionService;
         private static IMoneyService _moneyService;
+        //Main variables
         public II18N Strings => I18N.Current;
         public string UrlPathSegment => Strings["menu_account"];
         private string _message;
-        private string message;
 
         public IScreen HostScreen { get; }
         public ICommand MyCashCommand { get; set; }
@@ -38,14 +41,15 @@ namespace MoneyNote
         public decimal MyAllOutlay { get; set; }
         public decimal MySavings { get; set; }
         public decimal MyAllSavings { get; set; }
-        public AccountViewModel(IMoneyService moneyService, string message = null, IScreen screen = null)
+        public AccountViewModel(ITransactionService transactionService, IMoneyService moneyService, string message = null, IScreen screen = null)
         {
             _message = message;
             HostScreen = screen ?? Locator.Current.GetService<IScreen>();
             if (!string.IsNullOrEmpty(_message)) Application.Current.MainPage.DisplayAlert("Message", message, "", "ok"); ;
+            _transactionService = transactionService;
             _moneyService = moneyService;
 
-            GetData();
+            _ = GetDataAsync();
             MyCashCommand = ReactiveCommand.Create(async () =>
             {
                 string summ = await Application.Current.MainPage.DisplayPromptAsync("Change My Cash Manually:", "Be carrefull, this function will delete current cash record");
@@ -118,7 +122,7 @@ namespace MoneyNote
                 await PopupNavigation.Instance.PushAsync(new AccountChangePopupView(OnMySavingsFunc, Strings["title_current_savings"], Strings["alert_current_savings"]), true);
             });
         }
-        private async void OnMySavingsFunc()
+        private void OnMySavingsFunc()
         {
             var result = CrossSettings.Current.GetValueOrDefault("CurrentAccountPopupValue", "");
             if (CheckStringForValue(result))
@@ -127,17 +131,55 @@ namespace MoneyNote
                 _moneyService.SetCurrentSavings(MySavings);
             }
         }
-        private void GetData()
+        private async Task GetDataAsync()
         {
             MyCash = _moneyService.GetCurrentCash();
             MyCard = _moneyService.GetCurrentCard();
             MyCurrent = MyCash + MyCard;
-            MyIncome = _moneyService.GetCurrentIncome();
-            MyAllIncome = _moneyService.GetAllIncome();
-            MyOutlay = _moneyService.GetCurrentOutlay();
-            MyAllOutlay = _moneyService.GetAllOutlay();
+
             MySavings = _moneyService.GetCurrentSavings();
             MyAllSavings = _moneyService.GetAllSavings();
+
+            var date = DateTime.Now;
+            var data = await _transactionService.GetAll();
+            if (data != null && data?.Count > 0)
+            {
+                foreach (var note in data)
+                {
+                    switch (note.Type)
+                    {
+                        case TransactionType.Save:
+                            MyAllOutlay += note.Value;
+                            if (note.Date.Month == date.Month)
+                            {
+                                MyOutlay += note.Value;
+                            }
+                            break;
+                        case TransactionType.Spend:
+                            MyAllOutlay += note.Value;
+                            if (note.Date.Month == date.Month)
+                            {
+                                MyOutlay += note.Value;
+                            }
+                            break;
+                        case TransactionType.Add:
+                            MyAllIncome += note.Value;
+                            if (note.Date.Month == date.Month)
+                            {
+                                MyIncome += note.Value;
+                            }
+                            break;
+                        case TransactionType.None:
+                        case TransactionType.Bank:
+                        default:
+                            break;
+                    }
+                }
+            }
+            //MyIncome = _moneyService.GetCurrentIncome();
+            //MyAllIncome = _moneyService.GetAllIncome();
+            //MyOutlay = _moneyService.GetCurrentOutlay();
+            //MyAllOutlay = _moneyService.GetAllOutlay();
         }
         private bool CheckStringForValue(string str)
         {
