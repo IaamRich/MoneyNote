@@ -10,6 +10,7 @@ from_card = from Card
 from_cash = from Cash
 enter_add_text = Enter Add Amount
 enter_bank_text = Enter Credit Amount
+enter_save_text = Enter Save Amount
 to_cash = to Cash
 to_card = to Card
 missed = by default
@@ -111,6 +112,7 @@ alert_no_value = Enter some value!
 alert_no_value_zero = First digit must not be zero!
 alert_need_category = Please choose a category.
 alert_no_cash = There is no such amount in Cash!
+alert_no_savings = There is no such amount in Savings!
 If you want to note spend amount as credit - go to Settings and click the checkmark "Allow Auto Credit"
 alert_no_card = There is no such amount on Card!
 If you want to note spend amount as credit - go to Settings and click the checkmark "Allow Auto Credit"
@@ -127,7 +129,10 @@ type_gift = Gift
 type_salary = Salary
 type_earnings = Earnings/Hobby
 type_repay_credit = Repay Credit
+type_save = Save Money
+type_take = Take Savings
 type_other = Other
 
 /* Popups */
 choose_category = Choose Category:
+enter_miss_description = Enter/Miss Description...

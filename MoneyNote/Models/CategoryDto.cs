@@ -33,6 +33,7 @@ namespace MoneyNote.Models
         Gift,
         Repay,
         Save,
+        Take,
         Other
     }
 }

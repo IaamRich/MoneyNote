@@ -82,7 +82,7 @@
                     <controls:CustomEntry
                         x:Name="entryDescription"
                         ClearButtonVisibility="WhileEditing"
-                        Placeholder="Enter/Miss Description..."
+                        Placeholder="{Binding Strings[enter_miss_description]}"
                         PlaceholderColor="{StaticResource AboutBackGround}"
                         TextColor="{StaticResource PopupButton}" />
                 </Frame>

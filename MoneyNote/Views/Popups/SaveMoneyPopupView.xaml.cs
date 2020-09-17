@@ -19,6 +19,16 @@ namespace MoneyNote.Views.Popups
         {
             IsCancelPressed = false;
             InitializeComponent();
+            switch (CrossSettings.Current.GetValueOrDefault("IdSpendFromWhere", 0))
+            {
+                case 1:
+                    cardSwitch.IsToggled = true;
+                    break;
+                default:
+                    cashSwitch.IsToggled = true;
+                    break;
+            }
+            ActionAfter = act;
             ActionAfter = act;
         }
         private void Button_Clicked(object sender, System.EventArgs e)
@@ -29,6 +39,11 @@ namespace MoneyNote.Views.Popups
                 {
                     await Task.Run(async () =>
                     {
+                        if (categoryButton.Text == Strings["choose_category"])
+                        {
+                            await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_need_category"]), true);
+                            return;
+                        }
                         if (String.IsNullOrEmpty(entry.Text))
                         {
                             PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
@@ -45,11 +60,12 @@ namespace MoneyNote.Views.Popups
 
                             if (String.IsNullOrWhiteSpace(entryDescription.Text))
                             {
-                                var type = UnwrapAddingCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedBankCategory", 0));
+                                var type = UnwrapAddingCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedSaveCategory", 0));
                                 result = type.Type.ToString() + " " + Strings["missed"];
                             }
-                            CrossSettings.Current.AddOrUpdateValue("CreditValue", moneyValue);
-                            CrossSettings.Current.AddOrUpdateValue("CreditMessage", result);
+                            CrossSettings.Current.AddOrUpdateValue("SaveValue", moneyValue);
+                            CrossSettings.Current.AddOrUpdateValue("SaveMessage", result);
+                            CrossSettings.Current.AddOrUpdateValue("CurrentAddedMoneyTo", FuncMoneyFrom());
 
                             PopupNavigation.Instance.PopAsync(true);
                             ActionAfter?.Invoke();
@@ -57,6 +73,10 @@ namespace MoneyNote.Views.Popups
                     });
                 });
             }
+        }
+        private int FuncMoneyFrom()
+        {
+            if (cashSwitch.IsToggled) return 0; else return 1;
         }
         private void Cancel_Button_Clicked(object sender, System.EventArgs e)
         {
@@ -69,7 +89,7 @@ namespace MoneyNote.Views.Popups
         }
         private CategoryDto UnwrapAddingCategoryType(int id)
         {
-            foreach (var item in Categories.GetAllBankCategories())
+            foreach (var item in Categories.GetAllSaveCategories())
             {
                 if (item.Id == id)
                 {

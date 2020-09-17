@@ -38,13 +38,16 @@ namespace MoneyNote
         public string SpendDescription { get; set; }
         public string AddMoneyDescription { get; set; }
         public string CreditDescription { get; set; }
+        public string SaveDescription { get; set; }
         public decimal AddMoneyValue { get; set; }
         public decimal CreditValue { get; set; }
+        public decimal SaveValue { get; set; }
         public string SpendValue { get; set; }
         public decimal CurrentBill { get; set; }
         public decimal CurrentCash { get; set; }
         public decimal CurrentCard { get; set; }
         public decimal CurrentCredit { get; set; }
+        public decimal CurrentAllSavings { get; set; }
         public bool IsMinusAllowed { get; set; }
         //List Variables
         private int lastID = 0;
@@ -91,6 +94,7 @@ namespace MoneyNote
             CurrentCard = _moneyService.GetCurrentCard();
             CurrentCash = _moneyService.GetCurrentCash();
             CurrentCredit = _moneyService.GetCurrentCredit();
+            CurrentAllSavings = _moneyService.GetAllSavings();
             CurrentBill = CurrentCard + CurrentCash;
             IsCreditVisible = CurrentCredit > 0 ? true : false;
         }
@@ -306,12 +310,87 @@ namespace MoneyNote
         }
         private async void OnSaveFunc()
         {
-            //CreditDescription = CrossSettings.Current.GetValueOrDefault("CreditMessage", "");
-            //CreditValue = CrossSettings.Current.GetValueOrDefault("CreditValue", 0.0m);
-            //SelectedCategory = UnwrapBankCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedBankCategory", 0));
-
-            //LastTransactionsList.Clear();
-            //GetData();
+            SaveDescription = CrossSettings.Current.GetValueOrDefault("SaveMessage", "");
+            SaveValue = CrossSettings.Current.GetValueOrDefault("SaveValue", 0.0m);
+            SelectedCategory = UnwrapSaveCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedSaveCategory", 0));
+            switch (SelectedCategory.Type)
+            {
+                case CategoryType.Save:
+                    var transaction = new Transaction
+                    {
+                        Id = ++lastID,
+                        Value = SaveValue,
+                        Note = SaveDescription,
+                        Date = DateTime.Now,
+                        Type = TransactionType.Save,
+                        Category = SelectedCategory,
+                        MathSymbol = '\''
+                    };
+                    switch (CrossSettings.Current.GetValueOrDefault("CurrentAddedMoneyTo", 0))
+                    {
+                        case 0:
+                            if (SaveValue > CurrentCash)
+                            {
+                                await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_cash"]), true);
+                                return;
+                            }
+                            CurrentCash -= transaction.Value;
+                            CurrentAllSavings += transaction.Value;
+                            _moneyService.SetCurrentCash(CurrentCash);
+                            _moneyService.SetAllSavings(CurrentAllSavings);
+                            break;
+                        case 1:
+                            if (SaveValue > CurrentCard)
+                            {
+                                await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_card"]), true);
+                                return;
+                            }
+                            CurrentCard -= transaction.Value;
+                            CurrentAllSavings += transaction.Value;
+                            _moneyService.SetCurrentCard(CurrentCard);
+                            _moneyService.SetAllSavings(CurrentAllSavings);
+                            break;
+                    }
+                    _ = _transactionService.Create(transaction);
+                    break;
+                case CategoryType.Take:
+                    if (SaveValue > CurrentAllSavings)
+                    {
+                        await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_savings"]), true);
+                        return;
+                    }
+                    var item = new Transaction
+                    {
+                        Id = ++lastID,
+                        Value = SaveValue,
+                        Note = SaveDescription,
+                        Date = DateTime.Now,
+                        Type = TransactionType.Save,
+                        Category = SelectedCategory,
+                        MathSymbol = '\"'
+                    };
+                    switch (CrossSettings.Current.GetValueOrDefault("CurrentAddedMoneyTo", 0))
+                    {
+                        case 0:
+                            CurrentCash += item.Value;
+                            CurrentAllSavings -= item.Value;
+                            _moneyService.SetCurrentCash(CurrentCash);
+                            _moneyService.SetAllSavings(CurrentAllSavings);
+                            break;
+                        case 1:
+                            CurrentCard += item.Value;
+                            CurrentAllSavings -= item.Value;
+                            _moneyService.SetCurrentCard(CurrentCard);
+                            _moneyService.SetAllSavings(CurrentAllSavings);
+                            break;
+                    }
+                    _ = _transactionService.Create(item);
+                    break;
+                default:
+                    break;
+            }
+            LastTransactionsList.Clear();
+            GetData();
         }
         private CategoryDto UnwrapAddingCategoryType(int id)
         {
@@ -338,6 +417,17 @@ namespace MoneyNote
         private CategoryDto UnwrapBankCategoryType(int id)
         {
             foreach (var item in Categories.GetAllBankCategories())
+            {
+                if (item.Id == id)
+                {
+                    return item;
+                }
+            }
+            return new CategoryDto();
+        }
+        private CategoryDto UnwrapSaveCategoryType(int id)
+        {
+            foreach (var item in Categories.GetAllSaveCategories())
             {
                 if (item.Id == id)
                 {
