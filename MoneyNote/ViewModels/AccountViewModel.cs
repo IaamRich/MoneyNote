@@ -148,13 +148,6 @@ namespace MoneyNote
                 {
                     switch (note.Type)
                     {
-                        case TransactionType.Save:
-                            MyAllOutlay += note.Value;
-                            if (note.Date.Month == date.Month)
-                            {
-                                MyOutlay += note.Value;
-                            }
-                            break;
                         case TransactionType.Spend:
                             MyAllOutlay += note.Value;
                             if (note.Date.Month == date.Month)
@@ -169,6 +162,7 @@ namespace MoneyNote
                                 MyIncome += note.Value;
                             }
                             break;
+                        case TransactionType.Save:
                         case TransactionType.None:
                         case TransactionType.Bank:
                         default:
