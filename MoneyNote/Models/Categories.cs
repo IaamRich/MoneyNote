@@ -40,8 +40,8 @@ namespace MoneyNote.Models
         {
             return new List<CategoryDto>
             {
-                new CategoryDto { Id = 0, Type = CategoryType.Save, Name = Strings["type_save"], Image = "repay_credit.png"},
-                new CategoryDto { Id = 1, Type = CategoryType.Take, Name = Strings["type_take"], Image = "take_credit.png"}
+                new CategoryDto { Id = 0, Type = CategoryType.Save, Name = Strings["type_save"], Image = "save.png"},
+                new CategoryDto { Id = 1, Type = CategoryType.Take, Name = Strings["type_take"], Image = "take.png"}
             };
         }
     }

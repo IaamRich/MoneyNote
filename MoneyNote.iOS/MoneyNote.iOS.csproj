@@ -71,12 +71,14 @@
     <BundleResource Include="..\MoneyNote\Resources\Animations\pig.json">
       <Link>Resources\Animations\pig.json</Link>
     </BundleResource>
+    <BundleResource Include="..\MoneyNote\Resources\Animations\bank.json">
+      <Link>Resources\Animations\bank.json</Link>
+    </BundleResource>
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
@@ -153,5 +155,295 @@
       <Project>{E9828FCA-0A09-4A2B-A6DD-7A7C3C59E090}</Project>
       <Name>MoneyNote</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\about.png">
+      <Link>Resources\about.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\account.png">
+      <Link>Resources\account.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\account_header.png">
+      <Link>Resources\account_header.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\additional_earnings.png">
+      <Link>Resources\additional_earnings.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\alert.png">
+      <Link>Resources\alert.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\alert_notique.png">
+      <Link>Resources\alert_notique.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\alert_white.png">
+      <Link>Resources\alert_white.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\arrow_right.png">
+      <Link>Resources\arrow_right.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\back.png">
+      <Link>Resources\back.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\bank.png">
+      <Link>Resources\bank.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\business.png">
+      <Link>Resources\business.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\button.png">
+      <Link>Resources\button.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\change_notes.png">
+      <Link>Resources\change_notes.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\change_notes_view.png">
+      <Link>Resources\change_notes_view.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\close.png">
+      <Link>Resources\close.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\close_white.png">
+      <Link>Resources\close_white.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\de.png">
+      <Link>Resources\de.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\down_image_hand.png">
+      <Link>Resources\down_image_hand.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\en.png">
+      <Link>Resources\en.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\entertainment.png">
+      <Link>Resources\entertainment.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\fr.png">
+      <Link>Resources\fr.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\gift.png">
+      <Link>Resources\gift.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\hamburger.png">
+      <Link>Resources\hamburger.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\hamburger_white.png">
+      <Link>Resources\hamburger_white.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\header_back.png">
+      <Link>Resources\header_back.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\history.png">
+      <Link>Resources\history.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\history_header.png">
+      <Link>Resources\history_header.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\it.png">
+      <Link>Resources\it.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\left_image_hand.png">
+      <Link>Resources\left_image_hand.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\logo.png">
+      <Link>Resources\logo.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\main.png">
+      <Link>Resources\main.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\market_shop.png">
+      <Link>Resources\market_shop.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\md.png">
+      <Link>Resources\md.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\network_products.png">
+      <Link>Resources\network_products.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\other.png">
+      <Link>Resources\other.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\pig.png">
+      <Link>Resources\pig.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\plus.png">
+      <Link>Resources\plus.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\repay_credit.png">
+      <Link>Resources\repay_credit.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\restaurant_bar_bistro.png">
+      <Link>Resources\restaurant_bar_bistro.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\right_image_hand.png">
+      <Link>Resources\right_image_hand.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\ru.png">
+      <Link>Resources\ru.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\salary.png">
+      <Link>Resources\salary.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\save.png">
+      <Link>Resources\save.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\selected.png">
+      <Link>Resources\selected.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\settings.png">
+      <Link>Resources\settings.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\settings_header.png">
+      <Link>Resources\settings_header.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\share.png">
+      <Link>Resources\share.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\splash.png">
+      <Link>Resources\splash.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\star.png">
+      <Link>Resources\star.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\steps.png">
+      <Link>Resources\steps.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\take.png">
+      <Link>Resources\take.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\take_credit.png">
+      <Link>Resources\take_credit.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\terms.png">
+      <Link>Resources\terms.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\transport.png">
+      <Link>Resources\transport.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\unselected.png">
+      <Link>Resources\unselected.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\up_image_hand.png">
+      <Link>Resources\up_image_hand.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\xamarin_logo.png">
+      <Link>Resources\xamarin_logo.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\zh.png">
+      <Link>Resources\zh.png</Link>
+    </BundleResource>
   </ItemGroup>
 </Project>

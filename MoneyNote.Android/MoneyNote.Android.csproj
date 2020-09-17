@@ -102,6 +102,12 @@
     <AndroidAsset Include="..\MoneyNote\Resources\Animations\pig.json">
       <Link>Assets\pig.json</Link>
     </AndroidAsset>
+    <AndroidAsset Include="..\MoneyNote\Resources\Animations\bank.json">
+      <Link>Assets\bank.json</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\MoneyNote\Resources\Animations\bank_popup.json">
+      <Link>Assets\bank_popup.json</Link>
+    </AndroidAsset>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
@@ -423,6 +429,16 @@
   <ItemGroup>
     <AndroidResource Include="..\MoneyNote\Resources\Images\pig.png">
       <Link>Resources\drawable\pig.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\save.png">
+      <Link>Resources\drawable\save.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\take.png">
+      <Link>Resources\drawable\take.png</Link>
     </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

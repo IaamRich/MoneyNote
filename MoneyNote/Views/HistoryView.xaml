@@ -58,7 +58,7 @@
                                             Grid.Column="1"
                                             FontSize="Medium"
                                             HorizontalOptions="Start"
-                                            TextColor="{StaticResource RedAlert}"
+                                            TextColor="{StaticResource BankColor}"
                                             VerticalOptions="Center">
                                             <Label.FormattedText>
                                                 <FormattedString>
@@ -73,6 +73,12 @@
                                                     TargetType="Label"
                                                     Value="+">
                                                     <Setter Property="TextColor" Value="{StaticResource MainGreen}" />
+                                                </DataTrigger>
+                                                <DataTrigger
+                                                    Binding="{Binding MathSymbol}"
+                                                    TargetType="Label"
+                                                    Value="-">
+                                                    <Setter Property="TextColor" Value="{StaticResource RedAlert}" />
                                                 </DataTrigger>
                                             </Label.Triggers>
                                         </Label>
