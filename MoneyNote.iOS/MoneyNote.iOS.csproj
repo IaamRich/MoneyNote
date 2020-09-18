@@ -68,11 +68,17 @@
     <BundleResource Include="..\MoneyNote\Resources\Animations\alert.json">
       <Link>Resources\Animations\alert.json</Link>
     </BundleResource>
-    <BundleResource Include="..\MoneyNote\Resources\Animations\pig.json">
-      <Link>Resources\Animations\pig.json</Link>
+    <BundleResource Include="..\MoneyNote\Resources\Animations\add.json">
+      <Link>Resources\Animations\add.json</Link>
     </BundleResource>
-    <BundleResource Include="..\MoneyNote\Resources\Animations\bank.json">
-      <Link>Resources\Animations\bank.json</Link>
+    <BundleResource Include="..\MoneyNote\Resources\Animations\bank_popup.json">
+      <Link>Resources\Animations\bank_popup.json</Link>
+    </BundleResource>
+    <BundleResource Include="..\MoneyNote\Resources\Animations\safe.json">
+      <Link>Resources\Animations\safe.json</Link>
+    </BundleResource>
+    <BundleResource Include="..\MoneyNote\Resources\Animations\spend.json">
+      <Link>Resources\Animations\spend.json</Link>
     </BundleResource>
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />

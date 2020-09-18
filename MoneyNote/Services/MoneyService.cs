@@ -81,14 +81,7 @@ namespace MoneyNote.Services
         //deleting
         public void DeleteAllMoneyNotes()
         {
-            CrossSettings.Current.AddOrUpdateValue("CurrentSavings", 0);
-            CrossSettings.Current.AddOrUpdateValue("CurrentOutlay", 0);
-            CrossSettings.Current.AddOrUpdateValue("CurrentIncome", 0);
-            CrossSettings.Current.AddOrUpdateValue("AllSavings", 0);
-            CrossSettings.Current.AddOrUpdateValue("AllIncome", 0);
-            CrossSettings.Current.AddOrUpdateValue("AllOutlay", 0);
-            CrossSettings.Current.AddOrUpdateValue("CurrentCard", 0);
-            CrossSettings.Current.AddOrUpdateValue("CurrentCash", 0);
+            CrossSettings.Current.Clear();
         }
     }
 }

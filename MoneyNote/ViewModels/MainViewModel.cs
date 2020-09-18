@@ -32,6 +32,7 @@ namespace MoneyNote
         //Used Services
         private static ITransactionService _transactionService;
         private static IMoneyService _moneyService;
+        private static ISettingsService _settingsService;
         //UI variables
         public CategoryDto SelectedCategory { get; set; }
         public bool IsCreditVisible { get; set; }
@@ -56,12 +57,13 @@ namespace MoneyNote
         public string UrlPathSegment => Strings["menu_main"];
         public IScreen HostScreen { get; }
         public II18N Strings => I18N.Current;
-        public MainViewModel(ITransactionService transactionService, IMoneyService moneyService, IScreen hostScreen = null)
+        public MainViewModel(ITransactionService transactionService, IMoneyService moneyService, ISettingsService settingsService, IScreen hostScreen = null)
         {
             HostScreen = hostScreen ?? Locator.Current.GetService<IScreen>();
+            _settingsService = settingsService;
             _transactionService = transactionService;
             _moneyService = moneyService;
-            IsMinusAllowed = CrossSettings.Current.GetValueOrDefault("IsMinusAllowed", false);
+            IsMinusAllowed = _settingsService.GetAutoCreditSettings();
             CreateCommands();
             GetData();
         }

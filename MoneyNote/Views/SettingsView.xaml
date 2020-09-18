@@ -321,7 +321,7 @@
                                 Text="{Binding Strings[dis_add]}"
                                 VerticalOptions="Center" />
                             <Button
-                                Command="{Binding ResetAll}"
+                                Command="{Binding OffAds}"
                                 HorizontalOptions="EndAndExpand"
                                 Text="Pay"
                                 VerticalOptions="Center" />

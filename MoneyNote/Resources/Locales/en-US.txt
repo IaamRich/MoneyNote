@@ -112,6 +112,7 @@ alert_no_value = Enter some value!
 alert_no_value_zero = First digit must not be zero!
 alert_need_category = Please choose a category.
 alert_no_cash = There is no such amount in Cash!
+If you want to note spend amount as credit - go to Settings and click the checkmark "Allow Auto Credit"
 alert_no_savings = There is no such amount in Savings!
 If you want to note spend amount as credit - go to Settings and click the checkmark "Allow Auto Credit"
 alert_no_card = There is no such amount on Card!

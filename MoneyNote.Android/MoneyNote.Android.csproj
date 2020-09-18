@@ -99,14 +99,17 @@
     <AndroidAsset Include="..\MoneyNote\Resources\Animations\alert.json">
       <Link>Assets\alert.json</Link>
     </AndroidAsset>
-    <AndroidAsset Include="..\MoneyNote\Resources\Animations\pig.json">
-      <Link>Assets\pig.json</Link>
-    </AndroidAsset>
-    <AndroidAsset Include="..\MoneyNote\Resources\Animations\bank.json">
-      <Link>Assets\bank.json</Link>
-    </AndroidAsset>
     <AndroidAsset Include="..\MoneyNote\Resources\Animations\bank_popup.json">
       <Link>Assets\bank_popup.json</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\MoneyNote\Resources\Animations\add.json">
+      <Link>Assets\add.json</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\MoneyNote\Resources\Animations\safe.json">
+      <Link>Assets\safe.json</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\MoneyNote\Resources\Animations\spend.json">
+      <Link>Assets\spend.json</Link>
     </AndroidAsset>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />

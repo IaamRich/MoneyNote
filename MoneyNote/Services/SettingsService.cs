@@ -5,11 +5,11 @@ namespace MoneyNote.Services
 {
     public class SettingsService : ISettingsService
     {
-        public int GetCurrentLanguage()
+        public int GetCurrentLanguageSettings()
         {
             return CrossSettings.Current.GetValueOrDefault("CurrentLanguage", 0);
         }
-        public void SetCurrentLanguage(int langId)
+        public void SetCurrentLanguageSettings(int langId)
         {
             CrossSettings.Current.AddOrUpdateValue("CurrentLanguage", langId);
         }
@@ -28,6 +28,14 @@ namespace MoneyNote.Services
         public void SetDefaultSpendingAreaSettings(int idSpendFromWhere)
         {
             CrossSettings.Current.AddOrUpdateValue("IdSpendFromWhere", idSpendFromWhere);
+        }
+        public bool GetAutoCreditSettings()
+        {
+            return CrossSettings.Current.GetValueOrDefault("IsMinusAllowed", false);
+        }
+        public void SetAutoCreditSettings(bool isMinus)
+        {
+            CrossSettings.Current.AddOrUpdateValue("IsMinusAllowed", isMinus);
         }
         //In progress
         public bool GetAdsSetings()

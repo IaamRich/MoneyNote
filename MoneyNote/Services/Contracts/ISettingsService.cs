@@ -2,12 +2,14 @@
 {
     public interface ISettingsService
     {
-        int GetCurrentLanguage();
-        void SetCurrentLanguage(int langId);
+        int GetCurrentLanguageSettings();
+        void SetCurrentLanguageSettings(int langId);
         bool GetSoundsSettings();
         void SetSoundsSettings(bool isSoundsOn);
         int GetDefaultSpendingAreaSettings();
         void SetDefaultSpendingAreaSettings(int idSpendFromWhere);
+        bool GetAutoCreditSettings();
+        void SetAutoCreditSettings(bool isMinus);
         bool GetAdsSetings();
         void SetAdsSetings(bool IsAdsOn);
     }

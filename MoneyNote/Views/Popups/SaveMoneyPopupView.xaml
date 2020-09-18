@@ -59,11 +59,12 @@
                     WidthRequest="20" />
                 <forms:AnimationView
                     Margin="0,-5,0,0"
-                    Animation="pig.json"
+                    Animation="safe.json"
                     AutoPlay="True"
-                    HeightRequest="100"
+                    HeightRequest="150"
                     Loop="True"
-                    Progress="1" />
+                    Progress="1"
+                    WidthRequest="100" />
                 <Frame
                     Margin="10,1"
                     Padding="0"

@@ -5,7 +5,6 @@ using MoneyNote.Models;
 using MoneyNote.Resources.Images;
 using MoneyNote.Services;
 using MoneyNote.Services.Contracts;
-using Plugin.Settings;
 using ReactiveUI;
 using Splat;
 using Xamarin.Forms;
@@ -41,18 +40,19 @@ namespace MoneyNote
         public IScreen HostScreen { get; }
         public SettingsViewModel(ITransactionService transactionService, IMoneyService moneyService, ISettingsService settingsService, IScreen screen = null)
         {
-            //main
-            HostScreen = screen ?? Locator.Current.GetService<IScreen>();
             _transactionService = transactionService;
             _moneyService = moneyService;
             _settingsService = settingsService;
-            //get language
-            GetLanguages();
-            Sounds = _settingsService.GetSoundsSettings();
-            IsMinus = CrossSettings.Current.GetValueOrDefault("IsMinusAllowed", false);
-            AreaCash = _settingsService.GetDefaultSpendingAreaSettings() == 0 ? true : false;
-            AreaCard = !AreaCash;
-            //commands
+            HostScreen = screen ?? Locator.Current.GetService<IScreen>();
+            GoAccount = ReactiveCommand.CreateFromObservable(() =>
+            {
+                return HostScreen.Router.Navigate.Execute(new AccountViewModel(new TransactionService(), new MoneyService(), message: "From Settings"));
+            });
+            CreateCommands();
+            GetSettings();
+        }
+        private void CreateCommands()
+        {
             SoundsCommand = ReactiveCommand.Create(() =>
             {
                 Sounds = !Sounds;
@@ -75,21 +75,28 @@ namespace MoneyNote
                 Application.Current.MainPage.DisplayAlert("Message", "In developing...", "", "ok");
             });
             ImageCommand = new Command(ImageCommandFunc);
-            GoAccount = ReactiveCommand.CreateFromObservable(() =>
-            {
-                return HostScreen.Router.Navigate.Execute(new AccountViewModel(new TransactionService(), new MoneyService(), message: "From Settings"));
-            });
             IsMinusCommand = ReactiveCommand.Create(() =>
             {
                 IsMinus = !IsMinus;
-                CrossSettings.Current.AddOrUpdateValue("IsMinusAllowed", IsMinus);
+                _settingsService.SetAutoCreditSettings(IsMinus);
             });
+        }
+        private void GetSettings()
+        {
+            GetLanguages();
+            Sounds = _settingsService.GetSoundsSettings();
+            IsMinus = _settingsService.GetAutoCreditSettings();
+            AreaCash = _settingsService.GetDefaultSpendingAreaSettings() == 0 ? true : false;
+            AreaCard = !AreaCash;
         }
         private async void ResetAllMethod()
         {
-            _moneyService.DeleteAllMoneyNotes();
-            //await _spendService.DeleteAll();
-            await Application.Current.MainPage.DisplayAlert("Method", "ResetAll is done", "Cancel", "ok");
+            bool answer = await Application.Current.MainPage.DisplayAlert("Be careful!", "Are you sure you want to reset all notes & settings?", "Go Reset", "Cancel");
+            if (answer)
+            {
+                _moneyService.DeleteAllMoneyNotes();
+                GetSettings();
+            };
         }
         private void GetLanguages()
         {
@@ -104,7 +111,7 @@ namespace MoneyNote
                 new Language { Id = 6, Sign = "zh-CN", Name = "Chinese", Image = "zh.png" }
             };
 
-            CurrentLang = _settingsService.GetCurrentLanguage();
+            CurrentLang = _settingsService.GetCurrentLanguageSettings();
             switch (CurrentLang)
             {
                 case 1:
@@ -163,7 +170,7 @@ namespace MoneyNote
                     CurrentLang = 0;
                     break;
             }
-            _settingsService.SetCurrentLanguage(CurrentLang);
+            _settingsService.SetCurrentLanguageSettings(CurrentLang);
         }
     }
 }

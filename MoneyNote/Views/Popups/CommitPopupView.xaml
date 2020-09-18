@@ -6,6 +6,7 @@
     xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
     xmlns:controls="clr-namespace:MoneyNote.Controls"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:popups="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
     xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
@@ -59,6 +60,14 @@
                     HorizontalOptions="End"
                     Source="close.png"
                     VerticalOptions="Start" />
+                <forms:AnimationView
+                    Margin="0,-5,0,0"
+                    Animation="spend.json"
+                    AutoPlay="True"
+                    HeightRequest="100"
+                    Loop="True"
+                    Progress="1"
+                    WidthRequest="100" />
                 <Frame
                     Margin="10,1"
                     Padding="0"

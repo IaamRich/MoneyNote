@@ -54,7 +54,7 @@ namespace MoneyNote
         {
             // Here, we use contracts to distinguish which routable view model we want to instantiate.
             // This helps us avoid a manual cast to IRoutableViewModel when calling Router.Navigate.Execute(...)
-            Locator.CurrentMutable.Register(() => new MainViewModel(new TransactionService(), new MoneyService()), typeof(IRoutableViewModel), typeof(MainViewModel).FullName);
+            Locator.CurrentMutable.Register(() => new MainViewModel(new TransactionService(), new MoneyService(), new SettingsService()), typeof(IRoutableViewModel), typeof(MainViewModel).FullName);
             Locator.CurrentMutable.Register(() => new AccountViewModel(new TransactionService(), new MoneyService()), typeof(IRoutableViewModel), typeof(AccountViewModel).FullName);
             Locator.CurrentMutable.Register(() => new SettingsViewModel(new TransactionService(), new MoneyService(), new SettingsService()), typeof(IRoutableViewModel), typeof(SettingsViewModel).FullName);
             Locator.CurrentMutable.Register(() => new HistoryViewModel(new TransactionService()), typeof(IRoutableViewModel), typeof(HistoryViewModel).FullName);
