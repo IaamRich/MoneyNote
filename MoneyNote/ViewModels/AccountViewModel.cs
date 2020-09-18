@@ -50,6 +50,10 @@ namespace MoneyNote
             _moneyService = moneyService;
 
             _ = GetDataAsync();
+            CreateCommands();
+        }
+        private void CreateCommands()
+        {
             MyCashCommand = ReactiveCommand.Create(async () =>
             {
                 string summ = await Application.Current.MainPage.DisplayPromptAsync("Change My Cash Manually:", "Be carrefull, this function will delete current cash record");
@@ -91,7 +95,7 @@ namespace MoneyNote
                 }
             });
             MyAllSavingsCommand = ReactiveCommand.Create(async () =>
-            {
+            {//need to update MyAdditinalSavings
                 string summ = await Application.Current.MainPage.DisplayPromptAsync("Change All Savings Manually:", "Be carrefull, this function will delete all savings record");
                 if (CheckStringForValue(summ))
                 {
@@ -101,25 +105,25 @@ namespace MoneyNote
             });
             MyIncomeCommand = ReactiveCommand.Create(async () =>
             {
-                string summ = await Application.Current.MainPage.DisplayPromptAsync("Change My Current Income Manually:", "Be carrefull, this function will delete current income record");
-                if (CheckStringForValue(summ))
-                {
-                    MyIncome = decimal.Parse(summ);
-                    _moneyService.SetCurrentIncome(MyIncome);
-                }
+                //string summ = await Application.Current.MainPage.DisplayPromptAsync("Change My Current Income Manually:", "Be carrefull, this function will delete current income record");
+                //if (CheckStringForValue(summ))
+                //{
+                //    MyIncome = decimal.Parse(summ);
+                //    _moneyService.SetCurrentIncome(MyIncome);
+                //}
             });
             MyOutlayCommand = ReactiveCommand.Create(async () =>
             {
-                string summ = await Application.Current.MainPage.DisplayPromptAsync("Change My Current Outlay Manually:", "Be carrefull, this function will delete current outlay record");
-                if (CheckStringForValue(summ))
-                {
-                    MyOutlay = decimal.Parse(summ);
-                    _moneyService.SetCurrentOutlay(MyOutlay);
-                }
+                //string summ = await Application.Current.MainPage.DisplayPromptAsync("Change My Current Outlay Manually:", "Be carrefull, this function will delete current outlay record");
+                //if (CheckStringForValue(summ))
+                //{
+                //    MyOutlay = decimal.Parse(summ);
+                //    _moneyService.SetCurrentOutlay(MyOutlay);
+                //}
             });
             MySavingsCommand = ReactiveCommand.Create(async () =>
             {
-                await PopupNavigation.Instance.PushAsync(new AccountChangePopupView(OnMySavingsFunc, Strings["title_current_savings"], Strings["alert_current_savings"]), true);
+                //await PopupNavigation.Instance.PushAsync(new AccountChangePopupView(OnMySavingsFunc, Strings["title_current_savings"], Strings["alert_current_savings"]), true);
             });
         }
         private void OnMySavingsFunc()
@@ -128,7 +132,7 @@ namespace MoneyNote
             if (CheckStringForValue(result))
             {
                 MySavings = decimal.Parse(result);
-                _moneyService.SetCurrentSavings(MySavings);
+                //_moneyService.SetCurrentSavings(MySavings);
             }
         }
         private async Task GetDataAsync()
@@ -137,8 +141,7 @@ namespace MoneyNote
             MyCard = _moneyService.GetCurrentCard();
             MyCurrent = MyCash + MyCard;
 
-            MySavings = _moneyService.GetCurrentSavings();
-            MyAllSavings = _moneyService.GetAllSavings();
+            MyAllSavings = _moneyService.GetAdditionalSavings();
 
             var date = DateTime.Now;
             var data = await _transactionService.GetAll();
@@ -150,19 +153,36 @@ namespace MoneyNote
                     {
                         case TransactionType.Spend:
                             MyAllOutlay += note.Value;
-                            if (note.Date.Month == date.Month)
+                            if (note.Date.Month == date.Month && note.Date.Year == date.Year)
                             {
                                 MyOutlay += note.Value;
                             }
                             break;
                         case TransactionType.Add:
                             MyAllIncome += note.Value;
-                            if (note.Date.Month == date.Month)
+                            if (note.Date.Month == date.Month && note.Date.Year == date.Year)
                             {
                                 MyIncome += note.Value;
                             }
                             break;
                         case TransactionType.Save:
+                            if (note.MathSymbol == '"')
+                            {
+                                MyAllSavings += note.Value;
+                                if (note.Date.Month == date.Month && note.Date.Year == date.Year)
+                                {
+                                    MySavings += note.Value;
+                                }
+                            }
+                            else
+                            {
+                                MyAllSavings -= note.Value;
+                                if (note.Date.Month == date.Month && note.Date.Year == date.Year)
+                                {
+                                    MySavings -= note.Value;
+                                }
+                            }
+                            break;
                         case TransactionType.None:
                         case TransactionType.Bank:
                         default:
@@ -170,10 +190,6 @@ namespace MoneyNote
                     }
                 }
             }
-            //MyIncome = _moneyService.GetCurrentIncome();
-            //MyAllIncome = _moneyService.GetAllIncome();
-            //MyOutlay = _moneyService.GetCurrentOutlay();
-            //MyAllOutlay = _moneyService.GetAllOutlay();
         }
         private bool CheckStringForValue(string str)
         {

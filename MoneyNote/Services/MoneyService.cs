@@ -53,30 +53,13 @@ namespace MoneyNote.Services
         {
             CrossSettings.Current.AddOrUpdateValue("AllSavings", value);
         }
-        //uneditable
-        public decimal GetCurrentIncome()
+        public decimal GetAdditionalSavings()
         {
-            return CrossSettings.Current.GetValueOrDefault("CurrentIncome", 0.0m);
+            return CrossSettings.Current.GetValueOrDefault("AdditionalSavings", 0.0m);
         }
-        public void SetCurrentIncome(decimal value)
+        public void SetAdditionalSavings(decimal value)
         {
-            CrossSettings.Current.AddOrUpdateValue("CurrentIncome", value);
-        }
-        public decimal GetCurrentOutlay()
-        {
-            return CrossSettings.Current.GetValueOrDefault("CurrentOutlay", 0.0m);
-        }
-        public void SetCurrentOutlay(decimal value)
-        {
-            CrossSettings.Current.AddOrUpdateValue("CurrentOutlay", value);
-        }
-        public decimal GetCurrentSavings()
-        {
-            return CrossSettings.Current.GetValueOrDefault("CurrentSavings", 0.0m);
-        }
-        public void SetCurrentSavings(decimal value)
-        {
-            CrossSettings.Current.AddOrUpdateValue("CurrentSavings", value);
+            CrossSettings.Current.AddOrUpdateValue("AdditionalSavings", value);
         }
         //deleting
         public void DeleteAllMoneyNotes()

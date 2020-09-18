@@ -326,7 +326,7 @@ namespace MoneyNote
                         Date = DateTime.Now,
                         Type = TransactionType.Save,
                         Category = SelectedCategory,
-                        MathSymbol = '\''
+                        MathSymbol = '\"'
                     };
                     switch (CrossSettings.Current.GetValueOrDefault("CurrentAddedMoneyTo", 0))
                     {
@@ -369,7 +369,7 @@ namespace MoneyNote
                         Date = DateTime.Now,
                         Type = TransactionType.Save,
                         Category = SelectedCategory,
-                        MathSymbol = '\"'
+                        MathSymbol = '\''
                     };
                     switch (CrossSettings.Current.GetValueOrDefault("CurrentAddedMoneyTo", 0))
                     {

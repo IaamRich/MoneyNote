@@ -14,12 +14,8 @@
         void SetAllIncome(decimal value);
         decimal GetAllSavings();
         void SetAllSavings(decimal value);
-        decimal GetCurrentIncome();
-        void SetCurrentIncome(decimal value);
-        decimal GetCurrentOutlay();
-        void SetCurrentOutlay(decimal value);
-        decimal GetCurrentSavings();
-        void SetCurrentSavings(decimal value);
+        decimal GetAdditionalSavings();
+        void SetAdditionalSavings(decimal value);
         void DeleteAllMoneyNotes();
     }
 }
