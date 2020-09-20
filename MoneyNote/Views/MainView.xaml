@@ -119,13 +119,16 @@
 
                     </StackLayout>
                 </Frame>
+                <!--  Current Bill Section  -->
                 <StackLayout
                     Grid.Row="1"
                     Grid.ColumnSpan="2"
                     HorizontalOptions="Center"
-                    Orientation="Vertical">
+                    Orientation="Vertical"
+                    Spacing="0">
                     <Label
-                        FontSize="Subtitle"
+                        FontAttributes="Bold"
+                        FontSize="Micro"
                         HorizontalOptions="Center"
                         Text="{Binding Strings[current]}"
                         TextColor="Black" />
@@ -136,9 +139,7 @@
                         TextColor="{StaticResource MainGreen}" />
                 </StackLayout>
             </Grid>
-            <!--  Current Bill Section  -->
-
-            <!--  ENTRY WITH BUTTON  -->
+            <!--  ENTRY & LIST  -->
             <StackLayout Margin="10,0">
                 <Frame
                     Padding="0"
@@ -168,23 +169,25 @@
                             Command="{Binding AddSpend}"
                             CornerRadius="0"
                             Elevation="10"
-                            HeightRequest="60"
+                            FontSize="Title"
+                            HeightRequest="80"
                             HorizontalOptions="FillAndExpand"
-                            Text="{Binding Strings[commit]}"
+                            Text="{Binding Strings[note]}"
                             TextColor="White"
-                            VerticalOptions="Center" />
+                            VerticalOptions="FillAndExpand" />
                     </StackLayout>
                 </Frame>
                 <!--  LIST  -->
                 <StackLayout Padding="0">
                     <Label
                         Margin="0,5,0,0"
-                        FontSize="Subtitle"
+                        FontAttributes="Bold"
+                        FontSize="Micro"
                         HorizontalOptions="CenterAndExpand"
                         Text="{Binding Strings[last_notes]}"
                         TextColor="Black" />
                     <Frame
-                        Margin="0"
+                        Margin="0,0,0,-10"
                         Padding="0"
                         BackgroundColor="White"
                         CornerRadius="10">
@@ -195,10 +198,13 @@
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
                                     <Frame Padding="0" BackgroundColor="Transparent">
+
+
+
                                         <Frame
                                             Margin="10,2"
                                             Padding="0"
-                                            touch:TouchEff.Command="{Binding Source={x:Reference lastTransactions}, Path=BindingContext.SelectRecord}"
+                                            touch:TouchEff.Command="{Binding Source={x:Reference lastTransactions}, Path=BindingContext.SelectNote}"
                                             touch:TouchEff.CommandParameter="{Binding .}"
                                             touch:TouchEff.PressedAnimationDuration="200"
                                             touch:TouchEff.PressedScale="1.1"
@@ -216,7 +222,7 @@
                                                     Source="{Binding Category.Image}" />
                                                 <Label
                                                     Grid.Column="1"
-                                                    FontSize="Micro"
+                                                    FontSize="Small"
                                                     HorizontalOptions="Start"
                                                     HorizontalTextAlignment="Start"
                                                     Text="{Binding Note}"
@@ -257,30 +263,6 @@
                         </CollectionView>
                     </Frame>
                 </StackLayout>
-            </StackLayout>
-
-
-            <StackLayout
-                Margin="5"
-                HorizontalOptions="EndAndExpand"
-                Orientation="Horizontal"
-                Spacing="10"
-                VerticalOptions="EndAndExpand">
-
-                <Image
-                    touch:TouchEff.Command="{Binding ShareCommand}"
-                    touch:TouchEff.PressedScale="2"
-                    touch:TouchEff.RegularAnimationDuration="200"
-                    HeightRequest="30"
-                    Source="share.png"
-                    WidthRequest="30" />
-                <Image
-                    touch:TouchEff.Command="{Binding LikeCommand}"
-                    touch:TouchEff.PressedScale="2"
-                    touch:TouchEff.RegularAnimationDuration="200"
-                    HeightRequest="30"
-                    Source="star.png"
-                    WidthRequest="30" />
             </StackLayout>
         </StackLayout>
     </Grid>

@@ -97,6 +97,7 @@ main = Main
 menu = Menu
 card = Card
 cash = Cash
+note = Note
 
 /* Menu */
 menu_main = Main

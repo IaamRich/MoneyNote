@@ -53,9 +53,14 @@ namespace MoneyNote.Services
             Settings.TransactionData = new TransactionDto { DataBase = all };
             return Task.FromResult(true);
         }
-        public Task<bool> Delete(int id)
+        public async Task<bool> Delete(int id)
         {
-            throw new NotImplementedException();
+            var db = Settings.TransactionData?.DataBase;
+
+            //var dataItem = db.FirstOrDefault(x => x.Id == id);
+            //db.Remove(dataItem);
+            //Settings.TransactionData.DataBase = db;
+            return true;
         }
         public Task DeleteAll()
         {

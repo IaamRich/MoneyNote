@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MoneyNote"
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
+    xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
     x:TypeArguments="local:MasterViewModel">
     <MasterDetailPage.Master>
         <!--  No need reference to strings[]  -->
@@ -50,11 +51,49 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Label
-                    Margin="10,10"
-                    FontSize="Micro"
-                    HorizontalOptions="StartAndExpand"
-                    Text="{Binding Strings[menu_footer]}" />
+                <StackLayout Margin="0,0,0,5" Orientation="Horizontal">
+                    <StackLayout Margin="10,0,0,0" Orientation="Vertical">
+                        <Label FontSize="Micro" VerticalOptions="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="{Binding Strings[app_name]}" />
+                                        <Span Text=" " />
+                                        <Span ForegroundColor="{StaticResource AboutBackGround}" Text="{Binding Strings[about_version]}" />
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label
+                            FontSize="Micro"
+                            HorizontalOptions="StartAndExpand"
+                            Text="{Binding Strings[menu_footer]}" />
+                    </StackLayout>
+
+                    <StackLayout
+                        Margin="5"
+                        HorizontalOptions="EndAndExpand"
+                        Orientation="Horizontal"
+                        Spacing="10"
+                        VerticalOptions="EndAndExpand">
+
+                        <Image
+                            touch:TouchEff.Command="{Binding ShareCommand}"
+                            touch:TouchEff.PressedScale="2"
+                            touch:TouchEff.RegularAnimationDuration="200"
+                            HeightRequest="30"
+                            Source="share.png"
+                            WidthRequest="30" />
+                        <Image
+                            touch:TouchEff.Command="{Binding LikeCommand}"
+                            touch:TouchEff.PressedScale="2"
+                            touch:TouchEff.RegularAnimationDuration="200"
+                            HeightRequest="30"
+                            Source="star.png"
+                            WidthRequest="30" />
+                    </StackLayout>
+                </StackLayout>
+
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>

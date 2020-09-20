@@ -1,17 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reactive;
 using System.Reactive.Linq;
+using System.Windows.Input;
 using I18NPortable;
 using ReactiveUI;
 using Splat;
-
+using Xamarin.Essentials;
 
 namespace MoneyNote
 {
     public class MasterViewModel : ReactiveObject, IScreen
     {
         public II18N Strings => I18N.Current;
+        public ICommand ShareCommand { get; set; }
+        public ICommand LikeCommand { get; set; }
         public MasterViewModel()
         {
             Router = new RoutingState();
@@ -27,6 +31,18 @@ namespace MoneyNote
                 .StartWith(MenuItems.First())
                 .Select(x => Locator.Current.GetService<IRoutableViewModel>(x.TargetType.FullName))
                 .InvokeCommand(NavigateToMenuItem);
+
+            ShareCommand = ReactiveCommand.Create(async () =>
+            {
+                await Share.RequestAsync(new ShareTextRequest
+                {
+                    Uri = "https://curaciov.com"
+                });
+            });
+            LikeCommand = ReactiveCommand.Create(() =>
+            {
+                Launcher.OpenAsync(new Uri(@"https://curaciov.com"));
+            });
         }
 
         private MasterCellViewModel _selected;

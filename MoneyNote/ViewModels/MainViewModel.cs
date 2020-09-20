@@ -12,7 +12,6 @@ using Plugin.Settings;
 using ReactiveUI;
 using Rg.Plugins.Popup.Services;
 using Splat;
-using Xamarin.Essentials;
 
 namespace MoneyNote
 {
@@ -26,9 +25,7 @@ namespace MoneyNote
         public ICommand AddSalary { get; set; }
         public ICommand BankCommand { get; set; }
         public ICommand SaveCommand { get; set; }
-        public ICommand ShareCommand { get; set; }
-        public ICommand LikeCommand { get; set; }
-        public ReactiveCommand<Unit, Unit> SelectRecord { get; set; }
+        public ReactiveCommand<Transaction, Unit> SelectNote { get; set; }
         //Used Services
         private static ITransactionService _transactionService;
         private static IMoneyService _moneyService;
@@ -73,22 +70,21 @@ namespace MoneyNote
             //Reactive Example to navigate
             NavigateToDummyPage = ReactiveCommand
                 .CreateFromObservable(() => HostScreen.Router.Navigate.Execute(new DummyViewModel()).Select(_ => Unit.Default));
-            //SelectRecord = ReactiveCommand.Create();
+            SelectNote = ReactiveCommand.Create<Transaction>(async note =>
+            {
+                var result = await Xamarin.Forms.Application.Current.MainPage.DisplayAlert("Deleting", "Are you sure to delete this note?", "Yes", "No");
+                if (result)
+                {
+                    LastTransactionsList.Remove(note);
+                    //var dataItem = _transactionService.GetAll().Result.FirstOrDefault(x => x.Id == note.Id);
+                    //_transactionService.Delete(note.Id).Result.Remove(dataItem);
+                    //GetData();
+                }
+            });
             AddSpend = ReactiveCommand.Create(() => { OnSpend(); });
             AddSalary = ReactiveCommand.Create(() => { OnAddSalary(); });
             BankCommand = ReactiveCommand.Create(() => { OnBankCommand(); });
             SaveCommand = ReactiveCommand.Create(() => { OnSaveCommand(); });
-            ShareCommand = ReactiveCommand.Create(async () =>
-            {
-                await Share.RequestAsync(new ShareTextRequest
-                {
-                    Uri = "https://curaciov.com"
-                });
-            });
-            LikeCommand = ReactiveCommand.Create(() =>
-            {
-                Launcher.OpenAsync(new Uri(@"https://curaciov.com"));
-            });
         }
         private void GetData()
         {

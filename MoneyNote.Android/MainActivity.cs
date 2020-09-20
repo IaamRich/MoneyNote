@@ -6,6 +6,7 @@ using Android.Runtime;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using Xamarin.Forms;
 
 namespace MoneyNote.Droid
 {
@@ -24,6 +25,7 @@ namespace MoneyNote.Droid
 
             base.OnCreate(savedInstanceState);
 
+            Forms.SetFlags("SwipeView_Experimental");
             Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
 
             AppCenter.Start("f38a5d72-667c-4eeb-8a2c-1c534ccd9b3e", typeof(Analytics), typeof(Crashes));

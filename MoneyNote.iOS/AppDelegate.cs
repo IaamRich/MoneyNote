@@ -5,6 +5,7 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using UIKit;
+using Xamarin.Forms;
 
 namespace MoneyNote.iOS
 {
@@ -23,6 +24,7 @@ namespace MoneyNote.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Forms.SetFlags("SwipeView_Experimental");
             Rg.Plugins.Popup.Popup.Init();
 
             AppCenter.Start("e5753842-cc10-4a5d-b170-dac37070ad4b", typeof(Analytics), typeof(Crashes));

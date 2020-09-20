@@ -96,7 +96,7 @@
 
                     </StackLayout>
                 </Frame>
-                <Label
+                <!--<Label
                     Margin="30,10,0,10"
                     FontSize="Large"
                     HorizontalOptions="Start"
@@ -125,7 +125,7 @@
                     FontSize="Micro"
                     HorizontalOptions="Center"
                     Text="{Binding Strings[about_footer]}"
-                    VerticalOptions="EndAndExpand" />
+                    VerticalOptions="EndAndExpand" />-->
             </StackLayout>
         </ScrollView>
     </Grid>
