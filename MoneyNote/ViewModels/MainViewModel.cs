@@ -60,7 +60,6 @@ namespace MoneyNote
             _settingsService = settingsService;
             _transactionService = transactionService;
             _moneyService = moneyService;
-            IsMinusAllowed = _settingsService.GetAutoCreditSettings();
             CreateCommands();
             GetData();
         }
@@ -75,10 +74,54 @@ namespace MoneyNote
                 var result = await Xamarin.Forms.Application.Current.MainPage.DisplayAlert("Deleting", "Are you sure to delete this note?", "Yes", "No");
                 if (result)
                 {
-                    LastTransactionsList.Remove(note);
-                    //var dataItem = _transactionService.GetAll().Result.FirstOrDefault(x => x.Id == note.Id);
-                    //_transactionService.Delete(note.Id).Result.Remove(dataItem);
-                    //GetData();
+                    if (note.Bill == TransactionBill.Cash)
+                    {
+                        if (CurrentCash < note.Value)
+                        {
+                            await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_cash_delete"]), true);
+                            return;
+
+                        }
+                    }
+                    else
+                    {
+                        if (CurrentCard < note.Value)
+                        {
+                            await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_card_delete"]), true);
+                            return;
+
+                        }
+                    }
+                    if (await _transactionService.Delete(note.Id))
+                    {
+                        LastTransactionsList.Remove(note);
+                        switch (note.MathSymbol)
+                        {
+                            case '+':
+                                if (note.Bill == TransactionBill.Cash)
+                                {
+                                    _moneyService.SetCurrentCash(CurrentCash - note.Value);
+                                }
+                                else
+                                {
+                                    _moneyService.SetCurrentCard(CurrentCard - note.Value);
+                                }
+                                break;
+                            case '-':
+                                if (note.Bill == TransactionBill.Cash)
+                                {
+                                    _moneyService.SetCurrentCash(CurrentCash + note.Value);
+                                }
+                                else
+                                {
+                                    _moneyService.SetCurrentCard(CurrentCard + note.Value);
+                                }
+                                break;
+                            default:
+                                break;
+                        }
+                        GetData();
+                    }
                 }
             });
             AddSpend = ReactiveCommand.Create(() => { OnSpend(); });
@@ -95,6 +138,7 @@ namespace MoneyNote
             CurrentAllSavings = _moneyService.GetAllSavings();
             CurrentBill = CurrentCard + CurrentCash;
             IsCreditVisible = CurrentCredit > 0 ? true : false;
+            IsMinusAllowed = _settingsService.GetAutoCreditSettings();
         }
         private void GetLastTransactions()
         {
@@ -154,6 +198,7 @@ namespace MoneyNote
                         CurrentCash -= item.Value;
                         _moneyService.SetCurrentCash(CurrentCash);
                     }
+                    item.Bill = TransactionBill.Cash;
                     break;
                 case 1:
                     if (item.Value > CurrentCard)
@@ -174,9 +219,10 @@ namespace MoneyNote
                         CurrentCard -= item.Value;
                         _moneyService.SetCurrentCard(CurrentCard);
                     }
+                    item.Bill = TransactionBill.Card;
                     break;
             }
-            await _transactionService.Create(item);
+            _ = _transactionService.Create(item);
             LastTransactionsList.Clear();
             SpendValue = "";
             GetData();
@@ -201,18 +247,20 @@ namespace MoneyNote
                 Category = SelectedCategory,
                 MathSymbol = '+'
             };
-            await _transactionService.Create(item);
             switch (CrossSettings.Current.GetValueOrDefault("CurrentAddedMoneyTo", 0))
             {
                 case 0:
                     CurrentCash += item.Value;
+                    item.Bill = TransactionBill.Cash;
                     _moneyService.SetCurrentCash(CurrentCash);
                     break;
                 case 1:
                     CurrentCard += item.Value;
+                    item.Bill = TransactionBill.Card;
                     _moneyService.SetCurrentCard(CurrentCard);
                     break;
             }
+            _ = _transactionService.Create(item);
             LastTransactionsList.Clear();
             GetData();
         }
@@ -241,9 +289,8 @@ namespace MoneyNote
                         Date = DateTime.Now,
                         Type = TransactionType.Bank,
                         Category = SelectedCategory,
-                        MathSymbol = '^'
+                        MathSymbol = '+'
                     };
-                    _ = _transactionService.Create(transaction);
                     switch (CrossSettings.Current.GetValueOrDefault("CurrentAddedMoneyTo", 0))
                     {
                         case 0:
@@ -251,14 +298,17 @@ namespace MoneyNote
                             CurrentCredit += transaction.Value;
                             _moneyService.SetCurrentCash(CurrentCash);
                             _moneyService.SetCurrentCredit(CurrentCredit);
+                            transaction.Bill = TransactionBill.Cash;
                             break;
                         case 1:
                             CurrentCard += transaction.Value;
                             CurrentCredit += transaction.Value;
                             _moneyService.SetCurrentCard(CurrentCard);
                             _moneyService.SetCurrentCredit(CurrentCredit);
+                            transaction.Bill = TransactionBill.Card;
                             break;
                     }
+                    _ = _transactionService.Create(transaction);
                     break;
                 case CategoryType.Repay:
                     var item = new Transaction
@@ -269,14 +319,14 @@ namespace MoneyNote
                         Date = DateTime.Now,
                         Type = TransactionType.Bank,
                         Category = SelectedCategory,
-                        MathSymbol = ' '
+                        MathSymbol = '-'
                     };
                     switch (CrossSettings.Current.GetValueOrDefault("CurrentAddedMoneyTo", 0))
                     {
                         case 0:
                             if (CreditValue > CurrentCash)
                             {
-                                await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_cash"]), true);
+                                await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_cash_bank"]), true);
                                 return;
                             }
                             if (CreditValue > CurrentCredit) item.Value = CurrentCredit;
@@ -284,11 +334,12 @@ namespace MoneyNote
                             CurrentCredit -= item.Value;
                             _moneyService.SetCurrentCash(CurrentCash);
                             _moneyService.SetCurrentCredit(CurrentCredit);
+                            item.Bill = TransactionBill.Cash;
                             break;
                         case 1:
                             if (CreditValue > CurrentCard)
                             {
-                                await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_card"]), true);
+                                await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_card_bank"]), true);
                                 return;
                             }
                             if (CreditValue > CurrentCredit) item.Value = CurrentCredit;
@@ -296,6 +347,7 @@ namespace MoneyNote
                             CurrentCredit -= item.Value;
                             _moneyService.SetCurrentCard(CurrentCard);
                             _moneyService.SetCurrentCredit(CurrentCredit);
+                            item.Bill = TransactionBill.Card;
                             break;
                     }
                     _ = _transactionService.Create(item);
@@ -322,31 +374,33 @@ namespace MoneyNote
                         Date = DateTime.Now,
                         Type = TransactionType.Save,
                         Category = SelectedCategory,
-                        MathSymbol = '\"'
+                        MathSymbol = '-'
                     };
                     switch (CrossSettings.Current.GetValueOrDefault("CurrentAddedMoneyTo", 0))
                     {
                         case 0:
                             if (SaveValue > CurrentCash)
                             {
-                                await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_cash"]), true);
+                                await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_cash_save"]), true);
                                 return;
                             }
                             CurrentCash -= transaction.Value;
                             CurrentAllSavings += transaction.Value;
                             _moneyService.SetCurrentCash(CurrentCash);
                             _moneyService.SetAllSavings(CurrentAllSavings);
+                            transaction.Bill = TransactionBill.Cash;
                             break;
                         case 1:
                             if (SaveValue > CurrentCard)
                             {
-                                await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_card"]), true);
+                                await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_card_save"]), true);
                                 return;
                             }
                             CurrentCard -= transaction.Value;
                             CurrentAllSavings += transaction.Value;
                             _moneyService.SetCurrentCard(CurrentCard);
                             _moneyService.SetAllSavings(CurrentAllSavings);
+                            transaction.Bill = TransactionBill.Card;
                             break;
                     }
                     _ = _transactionService.Create(transaction);
@@ -365,7 +419,7 @@ namespace MoneyNote
                         Date = DateTime.Now,
                         Type = TransactionType.Save,
                         Category = SelectedCategory,
-                        MathSymbol = '\''
+                        MathSymbol = '+'
                     };
                     switch (CrossSettings.Current.GetValueOrDefault("CurrentAddedMoneyTo", 0))
                     {
@@ -374,12 +428,14 @@ namespace MoneyNote
                             CurrentAllSavings -= item.Value;
                             _moneyService.SetCurrentCash(CurrentCash);
                             _moneyService.SetAllSavings(CurrentAllSavings);
+                            item.Bill = TransactionBill.Cash;
                             break;
                         case 1:
                             CurrentCard += item.Value;
                             CurrentAllSavings -= item.Value;
                             _moneyService.SetCurrentCard(CurrentCard);
                             _moneyService.SetAllSavings(CurrentAllSavings);
+                            item.Bill = TransactionBill.Card;
                             break;
                     }
                     _ = _transactionService.Create(item);

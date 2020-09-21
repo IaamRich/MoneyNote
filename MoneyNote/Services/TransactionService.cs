@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using MoneyNote.Dtos;
 using MoneyNote.Helpers;
@@ -38,7 +39,6 @@ namespace MoneyNote.Services
                     }
                 }
             }
-
             return Task.FromResult(answer);
         }
         public Task<bool> Create(Transaction item)
@@ -57,9 +57,9 @@ namespace MoneyNote.Services
         {
             var db = Settings.TransactionData?.DataBase;
 
-            //var dataItem = db.FirstOrDefault(x => x.Id == id);
-            //db.Remove(dataItem);
-            //Settings.TransactionData.DataBase = db;
+            var dataItem = db.FirstOrDefault(x => x.Id == id);
+            db.Remove(dataItem);
+            Settings.TransactionData = new TransactionDto { DataBase = db };
             return true;
         }
         public Task DeleteAll()
