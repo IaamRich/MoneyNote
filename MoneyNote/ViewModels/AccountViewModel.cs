@@ -166,7 +166,7 @@ namespace MoneyNote
                             }
                             break;
                         case TransactionType.Save:
-                            if (note.MathSymbol == '"')
+                            if (note.MathSymbol == '-')
                             {
                                 MyAllSavings += note.Value;
                                 if (note.Date.Month == date.Month && note.Date.Year == date.Year)
