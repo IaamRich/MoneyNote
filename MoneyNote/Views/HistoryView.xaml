@@ -13,7 +13,7 @@
     </ContentPage.ToolbarItems>
     <Grid BackgroundColor="{StaticResource ListBackColor}">
         <Image Source="header_back.png" VerticalOptions="Start" />
-        <Grid Margin="10,10,10,0" RowSpacing="0">
+        <Grid RowSpacing="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="120" />
                 <RowDefinition Height="*" />
@@ -33,7 +33,7 @@
                 VerticalOptions="End" />
             <Frame
                 Grid.Row="1"
-                Margin="0,0,0,-10"
+                Margin="10,0,10,-10"
                 CornerRadius="10">
                 <ListView
                     x:Name="historyListView"

@@ -29,6 +29,7 @@ month_saving = This month savings:
 all_saving = All time savings:
 title_current_savings = Change Current Savings Manually:
 alert_current_savings = Be carrefull, this function will delete current savings record
+account_credit = Credit:
 
 /* History Page */
 all = All
@@ -84,8 +85,11 @@ delete = Delete
 save = Save
 cancel = Cancel
 ok = Ok
+credits = Credits
 go = Go
 other = Other
+pay = Pay
+bills = Bills
 update = Update
 create = Create
 share = Share

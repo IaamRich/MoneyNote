@@ -17,22 +17,22 @@ namespace MoneyNote.Controls
                 // https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/animation/simple
 
                 // scale the frame to x1.2
-                var scaleUpAnimationTask = fra.ScaleTo(1.2, 500);
+                var scaleUpAnimationTask = this.ScaleTo(1.2, 500);
                 // set opacity to 0 (transparent)
-                var fadeOutAnimationTask = fra.FadeTo(0, 500);
+                var fadeOutAnimationTask = this.FadeTo(0, 500);
 
                 // wait for the 2 animations to finish...
                 await Task.WhenAll(scaleUpAnimationTask, fadeOutAnimationTask);
 
                 // scale the frame back to original size
-                var scaleDownAnimationTask = fra.ScaleTo(1, 500);
+                var scaleDownAnimationTask = this.ScaleTo(1, 500);
                 // set opacity back to 1 (solid)
-                var fadeInAnimationTask = fra.FadeTo(1, 500);
+                var fadeInAnimationTask = this.FadeTo(1, 500);
 
                 // wait for the 2 animations to finish...
                 await Task.WhenAll(scaleDownAnimationTask, fadeInAnimationTask);
             };
-            fra.GestureRecognizers.Add(tapGestureRecognizer);
+            this.GestureRecognizers.Add(tapGestureRecognizer);
         }
 
         protected override void OnPropertyChanged([CallerMemberName] string propertyName = null)

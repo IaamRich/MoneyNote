@@ -41,6 +41,7 @@ namespace MoneyNote
         public decimal MyAllOutlay { get; set; }
         public decimal MySavings { get; set; }
         public decimal MyAllSavings { get; set; }
+        public decimal MyCredit { get; set; }
         public AccountViewModel(ITransactionService transactionService, IMoneyService moneyService, string message = null, IScreen screen = null)
         {
             _message = message;
@@ -140,7 +141,7 @@ namespace MoneyNote
             MyCash = _moneyService.GetCurrentCash();
             MyCard = _moneyService.GetCurrentCard();
             MyCurrent = MyCash + MyCard;
-
+            MyCredit = _moneyService.GetCurrentCredit();
             MyAllSavings = _moneyService.GetAdditionalSavings();
 
             var date = DateTime.Now;

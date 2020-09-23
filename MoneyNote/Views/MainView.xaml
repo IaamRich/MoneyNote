@@ -128,12 +128,11 @@
                     Spacing="0">
                     <Label
                         FontAttributes="Bold"
-                        FontSize="Micro"
+                        FontSize="Small"
                         HorizontalOptions="Center"
-                        Text="{Binding Strings[current]}"
-                        TextColor="Black" />
+                        Text="{Binding Strings[current]}" />
                     <Label
-                        FontSize="Large"
+                        FontSize="40"
                         HorizontalOptions="Center"
                         Text="{Binding CurrentBill}"
                         TextColor="{StaticResource MainGreen}" />
@@ -182,10 +181,9 @@
                     <Label
                         Margin="0,5,0,0"
                         FontAttributes="Bold"
-                        FontSize="Micro"
+                        FontSize="Small"
                         HorizontalOptions="CenterAndExpand"
-                        Text="{Binding Strings[last_notes]}"
-                        TextColor="Black" />
+                        Text="{Binding Strings[last_notes]}" />
                     <Frame
                         Margin="0,0,0,-10"
                         Padding="0"

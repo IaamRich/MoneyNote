@@ -7,29 +7,24 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     x:Name="this"
     mc:Ignorable="d">
-    <Frame
-        x:Name="fra"
-        Margin="2"
-        Padding="0"
-        HeightRequest="50">
-        <StackLayout
-            Padding="10,0"
-            BackgroundColor="{StaticResource BackgroundWhite}"
-            Orientation="Horizontal">
-            <Label
-                x:Name="label"
-                HorizontalOptions="Start"
-                VerticalOptions="CenterAndExpand" />
-            <Label
-                x:Name="money"
-                FontAttributes="Bold"
-                FontSize="Title"
-                HorizontalOptions="EndAndExpand"
-                VerticalOptions="CenterAndExpand" />
+    <StackLayout
+        BackgroundColor="{StaticResource BackgroundWhite}"
+        HeightRequest="70"
+        Orientation="Horizontal">
+        <Label
+            x:Name="label"
+            FontSize="Medium"
+            HorizontalOptions="Start"
+            VerticalOptions="CenterAndExpand" />
+        <Label
+            x:Name="money"
+            FontAttributes="Bold"
+            FontSize="Title"
+            HorizontalOptions="EndAndExpand"
+            VerticalOptions="CenterAndExpand" />
 
-        </StackLayout>
-        <Frame.GestureRecognizers>
-            <TapGestureRecognizer Command="{Binding Source={x:Reference this}, Path=Command}" />
-        </Frame.GestureRecognizers>
-    </Frame>
+    </StackLayout>
+    <ContentView.GestureRecognizers>
+        <TapGestureRecognizer Command="{Binding Source={x:Reference this}, Path=Command}" />
+    </ContentView.GestureRecognizers>
 </ContentView>
