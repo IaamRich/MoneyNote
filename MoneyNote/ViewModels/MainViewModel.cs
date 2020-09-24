@@ -80,7 +80,6 @@ namespace MoneyNote
                         {
                             await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_cash_delete"]), true);
                             return;
-
                         }
                     }
                     else
@@ -89,7 +88,6 @@ namespace MoneyNote
                         {
                             await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_card_delete"]), true);
                             return;
-
                         }
                     }
                     if (await _transactionService.Delete(note.Id))
@@ -101,20 +99,24 @@ namespace MoneyNote
                                 if (note.Bill == TransactionBill.Cash)
                                 {
                                     _moneyService.SetCurrentCash(CurrentCash - note.Value);
+                                    if (note.Type == TransactionType.Bank) _moneyService.SetCurrentCredit(CurrentCash - note.Value);
                                 }
                                 else
                                 {
                                     _moneyService.SetCurrentCard(CurrentCard - note.Value);
+                                    if (note.Type == TransactionType.Bank) _moneyService.SetCurrentCredit(CurrentCard - note.Value);
                                 }
                                 break;
                             case '-':
                                 if (note.Bill == TransactionBill.Cash)
                                 {
                                     _moneyService.SetCurrentCash(CurrentCash + note.Value);
+                                    if (note.Type == TransactionType.Bank) _moneyService.SetCurrentCredit(CurrentCash + note.Value);
                                 }
                                 else
                                 {
                                     _moneyService.SetCurrentCard(CurrentCard + note.Value);
+                                    if (note.Type == TransactionType.Bank) _moneyService.SetCurrentCredit(CurrentCard + note.Value);
                                 }
                                 break;
                             default:
