@@ -18,6 +18,8 @@
 
   <ItemGroup>
     <None Remove="Resources\Animations\alert.json" />
+    <None Remove="Resources\Fonts\FlowExt-Bold.otf" />
+    <None Remove="Resources\Fonts\FlowExt-Regular.otf" />
     <None Remove="Resources\Images\de.png" />
     <None Remove="Resources\Images\en.png" />
     <None Remove="Resources\Images\fr.png" />
@@ -30,6 +32,8 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Resources\Animations\alert.json" />
+    <EmbeddedResource Include="Resources\Fonts\FlowExt-Bold.otf" />
+    <EmbeddedResource Include="Resources\Fonts\FlowExt-Regular.otf" />
     <EmbeddedResource Include="Resources\Images\de.png" />
     <EmbeddedResource Include="Resources\Images\en.png" />
     <EmbeddedResource Include="Resources\Images\fr.png" />
@@ -100,6 +104,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Controls\HistoryChangeNotesView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Styles\LabelStyle.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Popups\AccountChangePopupView.xaml">

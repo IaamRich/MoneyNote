@@ -12,6 +12,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <styles:ColorStyles />
                 <styles:ButtonStyles />
+                <styles:LabelStyle />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

@@ -39,7 +39,10 @@
                                     <FormattedString.Spans>
                                         <Span Text="{Binding Strings[created_by]}" />
                                         <Span Text=" " />
-                                        <Span FontAttributes="Bold" Text="{Binding Strings[creator_name]}" />
+                                        <Span
+                                            FontFamily="MainFontBold"
+                                            Text="{Binding Strings[creator_name]}"
+                                            TextColor="{StaticResource BoldLabel}" />
                                         <Span Text="." />
                                     </FormattedString.Spans>
                                 </FormattedString>
@@ -51,7 +54,10 @@
                                     <FormattedString.Spans>
                                         <Span Text="{Binding Strings[supported_by]}" />
                                         <Span Text=" " />
-                                        <Span FontAttributes="Bold" Text="{Binding Strings[supporter_name]}" />
+                                        <Span
+                                            FontFamily="MainFontBold"
+                                            Text="{Binding Strings[supporter_name]}"
+                                            TextColor="{StaticResource BoldLabel}" />
                                         <Span Text="." />
                                     </FormattedString.Spans>
                                 </FormattedString>
@@ -63,7 +69,10 @@
                                     <FormattedString.Spans>
                                         <Span Text="{Binding Strings[about_platforms]}" />
                                         <Span Text=" " />
-                                        <Span FontAttributes="Bold" Text="{Binding Strings[platforms_available]}" />
+                                        <Span
+                                            FontFamily="MainFontBold"
+                                            Text="{Binding Strings[platforms_available]}"
+                                            TextColor="{StaticResource BoldLabel}" />
                                     </FormattedString.Spans>
                                 </FormattedString>
                             </Label.FormattedText>

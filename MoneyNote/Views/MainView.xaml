@@ -63,7 +63,10 @@
                             Grid.Column="0"
                             HorizontalOptions="FillAndExpand"
                             Orientation="Horizontal">
-                            <Label Text="{Binding Strings[current_cash]}" TextColor="{StaticResource PopupButton}" />
+                            <Label
+                                FontFamily="MainFontBold"
+                                Text="{Binding Strings[current_cash]}"
+                                TextColor="{StaticResource BoldLabel}" />
                             <Label
                                 HorizontalOptions="EndAndExpand"
                                 Text="{Binding CurrentCash}"
@@ -77,7 +80,10 @@
                             Grid.Column="1"
                             HorizontalOptions="FillAndExpand"
                             Orientation="Horizontal">
-                            <Label Text="{Binding Strings[current_card]}" TextColor="{StaticResource PopupButton}" />
+                            <Label
+                                FontFamily="MainFontBold"
+                                Text="{Binding Strings[current_card]}"
+                                TextColor="{StaticResource BoldLabel}" />
                             <Label
                                 HorizontalOptions="EndAndExpand"
                                 Text="{Binding CurrentCard}"
@@ -127,10 +133,11 @@
                     Orientation="Vertical"
                     Spacing="0">
                     <Label
-                        FontAttributes="Bold"
+                        FontFamily="MainFontBold"
                         FontSize="Small"
                         HorizontalOptions="Center"
-                        Text="{Binding Strings[current]}" />
+                        Text="{Binding Strings[current]}"
+                        TextColor="{StaticResource BoldLabel}" />
                     <Label
                         FontSize="40"
                         HorizontalOptions="Center"
@@ -180,10 +187,11 @@
                 <StackLayout Padding="0">
                     <Label
                         Margin="0,5,0,0"
-                        FontAttributes="Bold"
+                        FontFamily="MainFontBold"
                         FontSize="Small"
                         HorizontalOptions="CenterAndExpand"
-                        Text="{Binding Strings[last_notes]}" />
+                        Text="{Binding Strings[last_notes]}"
+                        TextColor="{StaticResource BoldLabel}" />
                     <Frame
                         Margin="0,0,0,-10"
                         Padding="0"
