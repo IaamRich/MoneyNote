@@ -91,6 +91,7 @@
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Renderers\CustomEntryRenderer.cs" />
+    <Compile Include="Renderers\TitleRenderer.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SplashActivity.cs" />
@@ -111,6 +112,10 @@
     <AndroidAsset Include="..\MoneyNote\Resources\Animations\spend.json">
       <Link>Assets\spend.json</Link>
     </AndroidAsset>
+    <AndroidAsset Include="Assets\FlowExt-Bold.otf" />
+    <AndroidAsset Include="Assets\FlowExt-Regular.otf" />
+    <AndroidAsset Include="Assets\flow-bold.otf" />
+    <AndroidAsset Include="Assets\flow-regular.otf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
