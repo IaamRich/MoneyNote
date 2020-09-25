@@ -108,7 +108,10 @@
                             HorizontalOptions="FillAndExpand"
                             IsVisible="False"
                             Orientation="Horizontal">
-                            <Label Text="{Binding Strings[current_credit]}" TextColor="{StaticResource PopupButton}" />
+                            <Label
+                                FontFamily="MainFontBold"
+                                Text="{Binding Strings[current_credit]}"
+                                TextColor="{StaticResource PopupButton}" />
                             <Label
                                 HorizontalOptions="EndAndExpand"
                                 Text="{Binding CurrentCredit}"

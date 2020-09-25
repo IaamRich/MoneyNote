@@ -25,6 +25,7 @@
                         Spacing="0"
                         VerticalOptions="Start">
                         <Label
+                            FontFamily="MainFontBold"
                             FontSize="Small"
                             HorizontalOptions="Center"
                             Text="{Binding Strings[my_current]}"
@@ -44,6 +45,7 @@
                         <StackLayout Spacing="0">
                             <!--  Bills  -->
                             <Label
+                            FontFamily="MainFontBold"
                                 Margin="0,0,0,10"
                                 FontAttributes="Bold"
                                 FontSize="Large"
@@ -72,6 +74,7 @@
                                 HorizontalOptions="FillAndExpand"
                                 Opacity="0.2" />
                             <Label
+                            FontFamily="MainFontBold"
                                 Margin="0,30,0,10"
                                 FontAttributes="Bold"
                                 FontSize="Large"
@@ -100,6 +103,7 @@
                                 HorizontalOptions="FillAndExpand"
                                 Opacity="0.2" />
                             <Label
+                            FontFamily="MainFontBold"
                                 Margin="0,30,0,10"
                                 FontAttributes="Bold"
                                 FontSize="Large"
@@ -142,6 +146,7 @@
                                 HorizontalOptions="FillAndExpand"
                                 Opacity="0.2" />
                             <Label
+                            FontFamily="MainFontBold"
                                 Margin="0,30,0,10"
                                 FontAttributes="Bold"
                                 FontSize="Large"

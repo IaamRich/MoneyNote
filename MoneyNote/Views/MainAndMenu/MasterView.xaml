@@ -29,7 +29,8 @@
                         <Label
                             x:Name="TitleLabel"
                             Grid.Column="1"
-                            FontAttributes="Bold"
+                            FontFamily="MainFontBold"
+                            FontSize="Medium"
                             Text="{Binding Strings[menu]}"
                             TextColor="White"
                             VerticalOptions="CenterAndExpand" />
