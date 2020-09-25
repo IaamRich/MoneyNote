@@ -24,7 +24,6 @@
     <Style TargetType="Label">
         <!--<Setter Property="TextColor" Value="{d:StaticResource Key=ButtonText}" />-->
         <Setter Property="FontFamily" Value="MainFont" />
-        <!--<Setter Property="TextColor" Value="Red" />-->
     </Style>
 
 </ResourceDictionary>

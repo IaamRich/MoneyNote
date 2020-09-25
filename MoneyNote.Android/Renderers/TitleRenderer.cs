@@ -50,7 +50,7 @@ namespace MoneyNote.Droid.Renderers
             if (e.Child.GetType() == typeof(Android.Support.V7.Widget.AppCompatTextView))
             {
                 var textView = (Android.Support.V7.Widget.AppCompatTextView)e.Child;
-                var spaceFont = Typeface.CreateFromAsset(Forms.Context.Assets, "flow-bold.otf");
+                var spaceFont = Typeface.CreateFromAsset(Forms.Context.Assets, "Fonts/flow-bold.otf");
                 textView.Typeface = spaceFont;
                 _toolbar.ChildViewAdded -= Toolbar_ChildViewAdded;
             }

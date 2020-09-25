@@ -41,6 +41,7 @@ expanded = Expanded
 last_week = Last Week
 lase_month = Last Month
 last_notes = Last Notes:
+last_transactions = Last Transactions
 history_spent = Spent:
 history_description = Description:
 history_transaction_date = Note date:
@@ -101,6 +102,8 @@ main = Main
 menu = Menu
 card = Card
 cash = Cash
+guide = Guide
+information = Information
 note = Note
 
 /* Menu */

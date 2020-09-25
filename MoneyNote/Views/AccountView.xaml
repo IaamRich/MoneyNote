@@ -45,9 +45,9 @@
                         <StackLayout Spacing="0">
                             <!--  Bills  -->
                             <Label
-                            FontFamily="MainFontBold"
                                 Margin="0,0,0,10"
                                 FontAttributes="Bold"
+                                FontFamily="MainFontBold"
                                 FontSize="Large"
                                 HorizontalOptions="Start"
                                 Text="{Binding Strings[bills]}"
@@ -74,9 +74,9 @@
                                 HorizontalOptions="FillAndExpand"
                                 Opacity="0.2" />
                             <Label
-                            FontFamily="MainFontBold"
                                 Margin="0,30,0,10"
                                 FontAttributes="Bold"
+                                FontFamily="MainFontBold"
                                 FontSize="Large"
                                 HorizontalOptions="Start"
                                 Text="{Binding Strings[savings]}"
@@ -103,9 +103,9 @@
                                 HorizontalOptions="FillAndExpand"
                                 Opacity="0.2" />
                             <Label
-                            FontFamily="MainFontBold"
                                 Margin="0,30,0,10"
                                 FontAttributes="Bold"
+                                FontFamily="MainFontBold"
                                 FontSize="Large"
                                 HorizontalOptions="Start"
                                 Text="{Binding Strings[income_outlay]}"
@@ -146,9 +146,9 @@
                                 HorizontalOptions="FillAndExpand"
                                 Opacity="0.2" />
                             <Label
-                            FontFamily="MainFontBold"
                                 Margin="0,30,0,10"
                                 FontAttributes="Bold"
+                                FontFamily="MainFontBold"
                                 FontSize="Large"
                                 HorizontalOptions="Start"
                                 Text="{Binding Strings[credits]}"

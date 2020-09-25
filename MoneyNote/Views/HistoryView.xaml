@@ -20,10 +20,10 @@
             </Grid.RowDefinitions>
             <Label
                 Margin="30,0,0,10"
-                FontSize="Medium"
+                FontSize="Large"
                 HorizontalOptions="Start"
-                Text="Last Transactions"
-                TextColor="White"
+                Text="{Binding Strings[last_transactions]}"
+                TextColor="{StaticResource ButtonText}"
                 VerticalOptions="End" />
             <Image
                 Margin="0,0,30,0"

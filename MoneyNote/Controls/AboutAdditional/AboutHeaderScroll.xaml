@@ -4,16 +4,23 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Grid RowSpacing="0">
-        <Image
+        <Grid
             x:Name="arrow"
-            Margin="0,20,40,0"
-            HeightRequest="40"
+            Margin="0,15"
+            ColumnDefinitions="70"
             HorizontalOptions="End"
-            Source="arrow_right.png"
-            VerticalOptions="Center" />
+            RowDefinitions="70"
+            VerticalOptions="End">
+            <forms:AnimationView
+                Animation="slide_arrow.json"
+                AutoPlay="True"
+                Loop="True"
+                Progress="1" />
+        </Grid>
         <ScrollView
             x:Name="scroll"
             Padding="25,0,15,0"

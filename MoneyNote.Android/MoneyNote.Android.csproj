@@ -112,10 +112,10 @@
     <AndroidAsset Include="..\MoneyNote\Resources\Animations\spend.json">
       <Link>Assets\spend.json</Link>
     </AndroidAsset>
-    <AndroidAsset Include="Assets\FlowExt-Bold.otf" />
-    <AndroidAsset Include="Assets\FlowExt-Regular.otf" />
-    <AndroidAsset Include="Assets\flow-bold.otf" />
-    <AndroidAsset Include="Assets\flow-regular.otf" />
+    <AndroidAsset Include="Assets\Fonts\flow-bold.otf" />
+    <AndroidAsset Include="..\MoneyNote\Resources\Animations\slide_arrow.json">
+      <Link>Assets\slide_arrow.json</Link>
+    </AndroidAsset>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
@@ -449,5 +449,6 @@
       <Link>Resources\drawable\take.png</Link>
     </AndroidResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

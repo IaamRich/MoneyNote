@@ -99,44 +99,58 @@
                             CornerRadius="10"
                             Elevation="2"
                             FontSize="Medium"
-                            HeightRequest="50"
+                            HeightRequest="70"
                             HorizontalOptions="Center"
                             Text="{Binding Strings[learn_more]}"
                             TextColor="White"
                             VerticalOptions="FillAndExpand" />
 
-                    </StackLayout>
-                </Frame>
-                <!--<Label
-                    Margin="30,10,0,10"
-                    FontSize="Large"
-                    HorizontalOptions="Start"
-                    Text="Terms"
-                    VerticalOptions="Center" />
-                <Frame Margin="10,0" CornerRadius="10">
-                    <StackLayout>
-                        <Label FontAttributes="Bold" Text="Term 1" />
+                        <!--  === Terms Section ===  -->
+                        <Label
+                            Margin="0,30,0,10"
+                            FontFamily="MainFontBold"
+                            FontSize="Large"
+                            HorizontalOptions="Start"
+                            Text="Terms"
+                            VerticalOptions="Center" />
                         <Label Text="{Binding Strings[terms_text]}" />
-                    </StackLayout>
-                </Frame>
-                <Frame Margin="10,0" CornerRadius="10">
-                    <StackLayout>
-                        <Label FontAttributes="Bold" Text="Term 2" />
+                        <!--  === Guide Section ===  -->
+                        <BoxView
+                            BackgroundColor="Gray"
+                            HeightRequest="1"
+                            HorizontalOptions="FillAndExpand"
+                            Opacity="0.2" />
+                        <Label
+                            Margin="0,30,0,10"
+                            FontFamily="MainFontBold"
+                            FontSize="Large"
+                            HorizontalOptions="Start"
+                            Text="{Binding Strings[guide]}"
+                            VerticalOptions="Center" />
                         <Label Text="{Binding Strings[terms_text]}" />
-                    </StackLayout>
-                </Frame>
-                <Frame Margin="10,0" CornerRadius="10">
-                    <StackLayout>
-                        <Label FontAttributes="Bold" Text="Term 3" />
+                        <!--  === Information Section ===  -->
+                        <BoxView
+                            BackgroundColor="Gray"
+                            HeightRequest="1"
+                            HorizontalOptions="FillAndExpand"
+                            Opacity="0.2" />
+                        <Label
+                            Margin="0,30,0,10"
+                            FontFamily="MainFontBold"
+                            FontSize="Large"
+                            HorizontalOptions="Start"
+                            Text="{Binding Strings[information]}"
+                            VerticalOptions="Center" />
                         <Label Text="{Binding Strings[terms_text]}" />
+                        <Label
+                            Margin="0,10"
+                            FontSize="Micro"
+                            HorizontalOptions="Center"
+                            Text="{Binding Strings[about_footer]}"
+                            VerticalOptions="EndAndExpand" />
                     </StackLayout>
                 </Frame>
-                <Label
-                    Margin="0,10"
-                    FontSize="Micro"
-                    HorizontalOptions="Center"
-                    Text="{Binding Strings[about_footer]}"
-                    VerticalOptions="EndAndExpand" />-->
+
             </StackLayout>
         </ScrollView>
     </Grid>
