@@ -69,7 +69,7 @@
                                 TextColor="{StaticResource BoldLabel}" />
                             <Label
                                 HorizontalOptions="EndAndExpand"
-                                Text="{Binding CurrentCash}"
+                                Text="{Binding CurrentCash, StringFormat='{0:F0}'}"
                                 TextColor="{StaticResource MainGreen}" />
                         </StackLayout>
                         <BoxView
@@ -86,7 +86,7 @@
                                 TextColor="{StaticResource BoldLabel}" />
                             <Label
                                 HorizontalOptions="EndAndExpand"
-                                Text="{Binding CurrentCard}"
+                                Text="{Binding CurrentCard, StringFormat='{0:F0}'}"
                                 TextColor="{StaticResource MainGreen}" />
                         </StackLayout>
                         <BoxView
@@ -114,7 +114,7 @@
                                 TextColor="{StaticResource PopupButton}" />
                             <Label
                                 HorizontalOptions="EndAndExpand"
-                                Text="{Binding CurrentCredit}"
+                                Text="{Binding CurrentCredit, StringFormat='{0:F0}'}"
                                 TextColor="{StaticResource BankColor}" />
                             <StackLayout.Triggers>
                                 <DataTrigger
@@ -144,7 +144,7 @@
                     <Label
                         FontSize="40"
                         HorizontalOptions="Center"
-                        Text="{Binding CurrentBill}"
+                        Text="{Binding CurrentBill, StringFormat='{0:F0}'}"
                         TextColor="{StaticResource MainGreen}" />
                 </StackLayout>
             </Grid>
@@ -207,9 +207,6 @@
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
                                     <Frame Padding="0" BackgroundColor="Transparent">
-
-
-
                                         <Frame
                                             Margin="10,2"
                                             Padding="0"
@@ -246,7 +243,7 @@
                                                         <FormattedString>
                                                             <Span Text="{Binding MathSymbol}" />
                                                             <Span Text=" " />
-                                                            <Span Text="{Binding Value}" />
+                                                            <Span Text="{Binding Value, StringFormat='{0:F0}'}" />
                                                         </FormattedString>
                                                     </Label.FormattedText>
                                                     <Label.Triggers>

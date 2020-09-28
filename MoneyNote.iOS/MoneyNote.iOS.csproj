@@ -83,6 +83,9 @@
     <BundleResource Include="..\MoneyNote\Resources\Animations\slide_arrow.json">
       <Link>Resources\Animations\slide_arrow.json</Link>
     </BundleResource>
+    <BundleResource Include="..\MoneyNote\Resources\Animations\arrow_slide.json">
+      <Link>Resources\Animations\arrow_slide.json</Link>
+    </BundleResource>
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />

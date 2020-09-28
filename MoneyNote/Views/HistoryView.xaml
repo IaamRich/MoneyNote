@@ -6,6 +6,7 @@
     xmlns:controls="clr-namespace:MoneyNote.Controls"
     xmlns:local="clr-namespace:MoneyNote"
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
+    xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
     x:TypeArguments="local:HistoryViewModel">
     <ContentPage.ToolbarItems>
         <ToolbarItem Command="{Binding ChangeNotes}" IconImageSource="change_notes.png" />
@@ -35,86 +36,81 @@
                 Grid.Row="1"
                 Margin="10,0,10,-10"
                 CornerRadius="10">
-                <ListView
+                <CollectionView
                     x:Name="historyListView"
                     Margin="0,0,0,10"
                     BackgroundColor="{StaticResource BackgroundWhite}"
-                    HasUnevenRows="True"
                     ItemsSource="{Binding TransactionsList}">
-                    <ListView.ItemTemplate>
+                    <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <ViewCell>
-                                <StackLayout
-                                    Margin="0,5"
-                                    Orientation="Vertical"
-                                    Spacing="0">
-                                    <Grid ColumnDefinitions="Auto,*">
-                                        <Label
-                                            FontAttributes="Bold"
-                                            FontSize="Micro"
-                                            Text="Value: "
-                                            VerticalOptions="EndAndExpand" />
-                                        <Label
-                                            Grid.Column="1"
-                                            FontSize="Medium"
-                                            HorizontalOptions="Start"
-                                            TextColor="{StaticResource BankColor}"
-                                            VerticalOptions="Center">
-                                            <Label.FormattedText>
-                                                <FormattedString>
-                                                    <Span Text="{Binding MathSymbol}" />
-                                                    <Span Text=" " />
-                                                    <Span Text="{Binding Value}" />
-                                                </FormattedString>
-                                            </Label.FormattedText>
-                                            <Label.Triggers>
-                                                <DataTrigger
-                                                    Binding="{Binding MathSymbol}"
-                                                    TargetType="Label"
-                                                    Value="+">
-                                                    <Setter Property="TextColor" Value="{StaticResource MainGreen}" />
-                                                </DataTrigger>
-                                                <DataTrigger
-                                                    Binding="{Binding MathSymbol}"
-                                                    TargetType="Label"
-                                                    Value="-">
-                                                    <Setter Property="TextColor" Value="{StaticResource RedAlert}" />
-                                                </DataTrigger>
-                                            </Label.Triggers>
-                                        </Label>
-                                    </Grid>
-                                    <Grid ColumnDefinitions="Auto,*">
-                                        <Label
-                                            FontAttributes="Bold"
-                                            FontSize="Micro"
-                                            Text="{Binding Path=BindingContext.Strings[history_description], Source={x:Reference historyListView}}"
-                                            VerticalOptions="Center" />
-                                        <Label
-                                            Grid.Column="1"
-                                            FontAttributes="Bold"
-                                            FontSize="Small"
-                                            Text="{Binding Note}"
-                                            TextColor="{StaticResource BoldLabel}"
-                                            VerticalTextAlignment="End" />
-                                    </Grid>
-                                    <StackLayout Orientation="Horizontal">
-                                        <Label
-                                            FontAttributes="Bold"
-                                            FontSize="Micro"
-                                            Text="{Binding Path=BindingContext.Strings[history_transaction_date], Source={x:Reference historyListView}}" />
-                                        <Label
-                                            FontAttributes="Bold"
-                                            FontSize="Micro"
-                                            Text="{Binding Date, StringFormat='{dd:MM:yyyy hh:mm:ss}'}"
-                                            TextColor="{StaticResource BoldLabel}" />
-                                    </StackLayout>
-
+                            <Grid
+                                Margin="5"
+                                touch:TouchEff.Command="{Binding Source={x:Reference lastTransactions}, Path=BindingContext.SelectNote}"
+                                touch:TouchEff.CommandParameter="{Binding .}"
+                                touch:TouchEff.PressedScale="0.9"
+                                touch:TouchEff.RegularAnimationDuration="200"
+                                BackgroundColor="White"
+                                ColumnDefinitions="*,Auto"
+                                ColumnSpacing="0"
+                                RowDefinitions="Auto,Auto,Auto"
+                                RowSpacing="0">
+                                <!--  Description  -->
+                                <Label
+                                    FontSize="Small"
+                                    Text="{Binding Note}"
+                                    VerticalTextAlignment="End" />
+                                <!--  Bill / Date  -->
+                                <StackLayout Grid.Row="1" Orientation="Horizontal">
+                                    <Label FontSize="Micro" Text="to">
+                                        <Label.Triggers>
+                                            <DataTrigger
+                                                Binding="{Binding MathSymbol}"
+                                                TargetType="Label"
+                                                Value="-">
+                                                <Setter Property="Text" Value="from" />
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                    </Label>
+                                    <Label FontSize="Micro" Text="{Binding Bill}" />
+                                    <Label FontSize="Micro" Text="-" />
+                                    <Label
+                                        Grid.Row="1"
+                                        FontSize="Micro"
+                                        Text="{Binding Date, StringFormat='{0:dd.MM.yyyy  HH:mm}'}" />
                                 </StackLayout>
-
-                            </ViewCell>
+                                <!--  Value  -->
+                                <Label
+                                    Grid.RowSpan="2"
+                                    Grid.Column="1"
+                                    FontSize="Medium"
+                                    TextColor="{StaticResource BankColor}"
+                                    VerticalOptions="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{Binding MathSymbol}" />
+                                            <Span Text=" " />
+                                            <Span Text="{Binding Value, StringFormat='{0:F0}'}" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                    <Label.Triggers>
+                                        <DataTrigger
+                                            Binding="{Binding MathSymbol}"
+                                            TargetType="Label"
+                                            Value="+">
+                                            <Setter Property="TextColor" Value="{StaticResource MainGreen}" />
+                                        </DataTrigger>
+                                        <DataTrigger
+                                            Binding="{Binding MathSymbol}"
+                                            TargetType="Label"
+                                            Value="-">
+                                            <Setter Property="TextColor" Value="{StaticResource RedAlert}" />
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                            </Grid>
                         </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
             </Frame>
         </Grid>
         <controls:HistoryChangeNotesView />

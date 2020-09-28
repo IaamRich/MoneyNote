@@ -16,7 +16,7 @@
             RowDefinitions="70"
             VerticalOptions="End">
             <forms:AnimationView
-                Animation="slide_arrow.json"
+                Animation="arrow_slide.json"
                 AutoPlay="True"
                 Loop="True"
                 Progress="1" />

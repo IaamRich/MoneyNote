@@ -35,6 +35,7 @@ namespace MoneyNote
         public decimal MyCash { get; set; }
         public decimal MyCard { get; set; }
         public decimal MyCurrent { get; set; }
+        public decimal MyAll { get; set; }
         public decimal MyIncome { get; set; }
         public decimal MyOutlay { get; set; }
         public decimal MyAllIncome { get; set; }
@@ -190,6 +191,8 @@ namespace MoneyNote
                             break;
                     }
                 }
+
+                MyAll = MyCurrent + MyAllSavings;
             }
         }
         private bool CheckStringForValue(string str)

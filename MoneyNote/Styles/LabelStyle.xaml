@@ -26,4 +26,6 @@
         <Setter Property="FontFamily" Value="MainFont" />
     </Style>
 
+    <x:String x:Key="formatdecimalfourplaces">{0:dd:MM:yy}</x:String>
+
 </ResourceDictionary>

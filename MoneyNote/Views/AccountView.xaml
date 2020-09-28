@@ -6,7 +6,11 @@
     xmlns:controls="clr-namespace:MoneyNote.Controls"
     xmlns:local="clr-namespace:MoneyNote"
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
-    x:TypeArguments="local:AccountViewModel">
+    x:TypeArguments="local:AccountViewModel"
+    NavigationPage.HasBackButton="False">
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Text="10000000"  />
+    </ContentPage.ToolbarItems>-->
     <ScrollView Margin="0" Padding="0">
         <Grid BackgroundColor="{StaticResource ListBackColor}">
             <Image
@@ -20,22 +24,42 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                     <!--  Current  -->
-                    <StackLayout
-                        Orientation="Vertical"
-                        Spacing="0"
-                        VerticalOptions="Start">
-                        <Label
-                            FontFamily="MainFontBold"
-                            FontSize="Small"
-                            HorizontalOptions="Center"
-                            Text="{Binding Strings[my_current]}"
-                            TextColor="{StaticResource ButtonText}" />
-                        <Label
-                            FontSize="40"
-                            HorizontalOptions="Center"
-                            Text="{Binding MyCurrent, Mode=TwoWay}"
-                            TextColor="{StaticResource ButtonText}" />
-                    </StackLayout>
+                    <Grid>
+
+                        <StackLayout
+                            Orientation="Vertical"
+                            Spacing="0"
+                            VerticalOptions="Start">
+                            <Label
+                                FontFamily="MainFontBold"
+                                FontSize="Small"
+                                HorizontalOptions="Center"
+                                Text="{Binding Strings[my_current]}"
+                                TextColor="{StaticResource ButtonText}" />
+                            <Label
+                                FontSize="40"
+                                HorizontalOptions="Center"
+                                Text="{Binding MyCurrent, Mode=TwoWay, StringFormat='{0:F0}'}"
+                                TextColor="{StaticResource ButtonText}" />
+                        </StackLayout>
+                        <StackLayout
+                            Grid.Column="1"
+                            Orientation="Vertical"
+                            Spacing="0"
+                            VerticalOptions="Start">
+                            <Label
+                                FontFamily="MainFontBold"
+                                FontSize="Small"
+                                HorizontalOptions="Center"
+                                Text="{Binding Strings[my_all]}"
+                                TextColor="{StaticResource ButtonText}" />
+                            <Label
+                                FontSize="40"
+                                HorizontalOptions="Center"
+                                Text="{Binding MyAll, Mode=TwoWay, StringFormat='{0:F0}'}"
+                                TextColor="{StaticResource ButtonText}" />
+                        </StackLayout>
+                    </Grid>
                     <Frame
                         Grid.Row="1"
                         Margin="10,0,10,-10"
@@ -55,14 +79,14 @@
                             <controls:AccountSwitchFrame
                                 Command="{Binding MyCashCommand}"
                                 HorizontalOptions="FillAndExpand"
-                                Money="{Binding MyCash, Mode=TwoWay}"
+                                Money="{Binding MyCash, Mode=TwoWay, StringFormat='{0:F0}'}"
                                 MoneyColor="{StaticResource MainGreen}"
                                 Text="{Binding Strings[my_cash]}"
                                 VerticalOptions="FillAndExpand" />
                             <controls:AccountSwitchFrame
                                 Command="{Binding MyCardCommand}"
                                 HorizontalOptions="FillAndExpand"
-                                Money="{Binding MyCard, Mode=TwoWay}"
+                                Money="{Binding MyCard, Mode=TwoWay, StringFormat='{0:F0}'}"
                                 MoneyColor="{StaticResource MainGreen}"
                                 Text="{Binding Strings[my_card]}"
                                 VerticalOptions="FillAndExpand" />
@@ -84,14 +108,14 @@
                             <controls:AccountSwitchFrame
                                 Command="{Binding MySavingsCommand}"
                                 HorizontalOptions="FillAndExpand"
-                                Money="{Binding MySavings, Mode=TwoWay}"
+                                Money="{Binding MySavings, Mode=TwoWay, StringFormat='{0:F0}'}"
                                 MoneyColor="{StaticResource MainGreen}"
                                 Text="{Binding Strings[month_saving]}"
                                 VerticalOptions="FillAndExpand" />
                             <controls:AccountSwitchFrame
                                 Command="{Binding MyAllSavingsCommand}"
                                 HorizontalOptions="FillAndExpand"
-                                Money="{Binding MyAllSavings, Mode=TwoWay}"
+                                Money="{Binding MyAllSavings, Mode=TwoWay, StringFormat='{0:F0}'}"
                                 MoneyColor="{StaticResource MainGreen}"
                                 Text="{Binding Strings[all_saving]}"
                                 VerticalOptions="FillAndExpand" />
@@ -113,28 +137,28 @@
                             <controls:AccountSwitchFrame
                                 Command="{Binding MyIncomeCommand}"
                                 HorizontalOptions="FillAndExpand"
-                                Money="{Binding MyIncome, Mode=TwoWay}"
+                                Money="{Binding MyIncome, Mode=TwoWay, StringFormat='{0:F0}'}"
                                 MoneyColor="{StaticResource MainGreen}"
                                 Text="{Binding Strings[month_income]}"
                                 VerticalOptions="FillAndExpand" />
                             <controls:AccountSwitchFrame
                                 Command="{Binding MyAllIncomeCommand}"
                                 HorizontalOptions="FillAndExpand"
-                                Money="{Binding MyAllIncome, Mode=TwoWay}"
+                                Money="{Binding MyAllIncome, Mode=TwoWay, StringFormat='{0:F0}'}"
                                 MoneyColor="{StaticResource MainGreen}"
                                 Text="{Binding Strings[all_income]}"
                                 VerticalOptions="FillAndExpand" />
                             <controls:AccountSwitchFrame
                                 Command="{Binding MyOutlayCommand}"
                                 HorizontalOptions="FillAndExpand"
-                                Money="{Binding MyOutlay, Mode=TwoWay}"
+                                Money="{Binding MyOutlay, Mode=TwoWay, StringFormat='{0:F0}'}"
                                 MoneyColor="{StaticResource RedAlert}"
                                 Text="{Binding Strings[month_outlay]}"
                                 VerticalOptions="FillAndExpand" />
                             <controls:AccountSwitchFrame
                                 Command="{Binding MyAllOutlayCommand}"
                                 HorizontalOptions="FillAndExpand"
-                                Money="{Binding MyAllOutlay, Mode=TwoWay}"
+                                Money="{Binding MyAllOutlay, Mode=TwoWay, StringFormat='{0:F0}'}"
                                 MoneyColor="{StaticResource RedAlert}"
                                 Text="{Binding Strings[all_outlay]}"
                                 VerticalOptions="FillAndExpand" />

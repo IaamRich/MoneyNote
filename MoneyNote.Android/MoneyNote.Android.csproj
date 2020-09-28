@@ -116,6 +116,9 @@
     <AndroidAsset Include="..\MoneyNote\Resources\Animations\slide_arrow.json">
       <Link>Assets\slide_arrow.json</Link>
     </AndroidAsset>
+    <AndroidAsset Include="..\MoneyNote\Resources\Animations\arrow_slide.json">
+      <Link>Assets\arrow_slide.json</Link>
+    </AndroidAsset>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />

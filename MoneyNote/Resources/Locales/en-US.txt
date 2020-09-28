@@ -18,7 +18,8 @@ missed = by default
 /* Account Page */
 my_cash = My cash money:
 my_card = My card money:
-my_current = Current Bill
+my_current = Current Bills
+my_all = With Savings
 income_outlay = Income/Outlay
 month_income = This month income:
 all_income = All Income:
