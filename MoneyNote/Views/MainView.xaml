@@ -212,10 +212,7 @@
                                             Padding="0"
                                             touch:TouchEff.Command="{Binding Source={x:Reference lastTransactions}, Path=BindingContext.SelectNote}"
                                             touch:TouchEff.CommandParameter="{Binding .}"
-                                            touch:TouchEff.PressedAnimationDuration="200"
-                                            touch:TouchEff.PressedScale="1.1"
-                                            touch:TouchEff.PressedTranslationX="5"
-                                            touch:TouchEff.PressedTranslationY="5"
+                                            touch:TouchEff.PressedScale="0.9"
                                             touch:TouchEff.RegularAnimationDuration="200"
                                             BackgroundColor="White">
                                             <Grid

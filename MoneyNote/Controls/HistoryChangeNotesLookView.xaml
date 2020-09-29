@@ -61,7 +61,7 @@
                     Text="{Binding Strings[lase_month]}"
                     VerticalOptions="Center" />
                 <Grid.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="ChangeNotesLookFunc" />
+                    <TapGestureRecognizer Command="{Binding DisplayLastWeek}" Tapped="ChangeNotesLookFunc" />
                 </Grid.GestureRecognizers>
             </Grid>
         </Grid>

@@ -25,6 +25,7 @@ namespace MoneyNote
         public ICommand ChangeNotes { get; set; }
         public bool IsChangeNotesVisible { get; set; }
         public ICommand ChangeNotesLook { get; set; }
+        public ICommand DisplayLastWeek { get; set; }
         public bool IsChangeNotesLookVisible { get; set; }
 
         public HistoryViewModel(ITransactionService transactionService, IScreen screen = null)
@@ -37,6 +38,19 @@ namespace MoneyNote
         }
         private void CreateCommands()
         {
+            DisplayLastWeek = ReactiveCommand.Create(() =>
+            {
+                var date = System.DateTime.Now;
+                var g = new List<Transaction>(); g = TransactionsList.ToList();
+                TransactionsList.Clear();
+                foreach (var item in g)
+                {
+                    if (item.Date.Day == date.Day)
+                    {
+                        TransactionsList.Add(item);
+                    }
+                }
+            });
             ChangeNotes = ReactiveCommand.Create(() =>
             {
                 IsChangeNotesVisible = !IsChangeNotesVisible; IsChangeNotesLookVisible = false;
@@ -56,7 +70,6 @@ namespace MoneyNote
                     TransactionsList = new ObservableCollection<Transaction>();
                     data.ForEach(x => TransactionsList.Add(x));
                 }
-
             });
         }
     }
