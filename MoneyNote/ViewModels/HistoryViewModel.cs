@@ -21,23 +21,23 @@ namespace MoneyNote
         //List Variables
         private int lastID = 0;
         public ObservableCollection<Transaction> TransactionsList { get; set; } = new ObservableCollection<Transaction>();
-        public ObservableCollection<Transaction> TransactionsListOldDb { get; set; } = new ObservableCollection<Transaction>();
-        public ObservableCollection<Transaction> TransactionsListOldDate { get; set; } = new ObservableCollection<Transaction>();
+        public List<Transaction> TransactionsFullList { get; set; } = new List<Transaction>();
         //Commands
-        public ICommand ChangeNotes { get; set; }
-        public bool IsChangeNotesVisible { get; set; }
-        public ICommand ChangeFilter { get; set; }
+        public ICommand GoAnaliticsCommand { get; set; }
+        public ICommand ChangeFilterCommand { get; set; }
+        public ICommand SearchCommand { get; set; }
+        public ICommand SearchingCommand { get; set; }
         //Filter
         public ICommand DisplayAllDate { get; set; }
         public ICommand DisplayLastWeek { get; set; }
         public ICommand DisplayLastMonth { get; set; }
-        public ICommand DisplayLastYear { get; set; }
-        public bool IsChangeNotesLookVisible { get; set; }
+        public bool IsChangeFilterVisible { get; set; }
+        public bool IsSearchPanelVisible { get; set; }
+        public string SearchText { get; set; }
 
         public HistoryViewModel(ITransactionService transactionService, IScreen screen = null)
         {
-            IsChangeNotesVisible = false;
-            IsChangeNotesLookVisible = false;
+            IsChangeFilterVisible = false;
             _transactionService = transactionService;
             CreateCommands();
             GetData();
@@ -47,14 +47,14 @@ namespace MoneyNote
             DisplayAllDate = ReactiveCommand.Create(() =>
             {
                 TransactionsList.Clear();
-                TransactionsList = TransactionsListOldDate;
+                TransactionsFullList.ForEach(x => TransactionsList.Add(x));
             });
             DisplayLastWeek = ReactiveCommand.Create(() =>
             {
                 var date = System.DateTime.Now;
-                var g = new List<Transaction>(); g = TransactionsList.ToList();
+                var tempList = new List<Transaction>(); tempList = TransactionsFullList;
                 TransactionsList.Clear();
-                foreach (var item in g)
+                foreach (var item in tempList)
                 {
                     var ts = date.Subtract(item.Date);
                     if (ts.Days <= 7)
@@ -66,9 +66,9 @@ namespace MoneyNote
             DisplayLastMonth = ReactiveCommand.Create(() =>
             {
                 var date = System.DateTime.Now;
-                var g = new List<Transaction>(); g = TransactionsList.ToList();
+                var tempList = new List<Transaction>(); tempList = TransactionsFullList;
                 TransactionsList.Clear();
-                foreach (var item in g)
+                foreach (var item in tempList)
                 {
                     var ts = date.Subtract(item.Date);
                     if (ts.Days <= 31)
@@ -77,14 +77,32 @@ namespace MoneyNote
                     }
                 }
             });
-            ChangeNotes = ReactiveCommand.Create(() =>
+            SearchCommand = ReactiveCommand.Create(() =>
             {
-                IsChangeNotesVisible = !IsChangeNotesVisible; IsChangeNotesLookVisible = false;
+                IsSearchPanelVisible = !IsSearchPanelVisible;
             });
-            ChangeFilter = ReactiveCommand.Create(() =>
+            SearchingCommand = ReactiveCommand.Create(() =>
             {
-                IsChangeNotesLookVisible = !IsChangeNotesLookVisible;
-                IsChangeNotesVisible = false;
+                if (!string.IsNullOrWhiteSpace(SearchText))
+                {
+                    TransactionsList.Clear();
+                    TransactionsFullList.ForEach(x => x.Note.Contains(SearchText.ToLower()));
+                    foreach (var note in TransactionsFullList)
+                    {
+                        if (note.Note.ToLower().Contains(SearchText.ToLower()))
+                        {
+                            TransactionsList.Add(note);
+                        }
+                    }
+                }
+            });
+            GoAnaliticsCommand = ReactiveCommand.Create(() =>
+            {
+
+            });
+            ChangeFilterCommand = ReactiveCommand.Create(() =>
+            {
+                IsChangeFilterVisible = !IsChangeFilterVisible;
             });
         }
         private async void GetData()
@@ -99,7 +117,7 @@ namespace MoneyNote
                     lastID = data.First().Id;
                     TransactionsList = new ObservableCollection<Transaction>();
                     data.ForEach(x => TransactionsList.Add(x));
-
+                    TransactionsFullList = TransactionsList.ToList();
                 }
             });
         }

@@ -5,13 +5,13 @@ using Xamarin.Forms.Xaml;
 namespace MoneyNote.Controls
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HistoryChangeNotesLookView : ContentView
+    public partial class HistoryFilterView : ContentView
     {
-        public HistoryChangeNotesLookView()
+        public HistoryFilterView()
         {
             InitializeComponent();
         }
-        private void ChangeNotesLookFunc(object sender, System.EventArgs e)
+        private void ChangeFilterClicked(object sender, System.EventArgs e)
         {
             this.IsVisible = false;
         }

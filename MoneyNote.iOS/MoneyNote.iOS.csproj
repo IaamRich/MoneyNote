@@ -468,4 +468,9 @@
       <Link>Resources\filter.png</Link>
     </BundleResource>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\search.png">
+      <Link>Resources\search.png</Link>
+    </BundleResource>
+  </ItemGroup>
 </Project>

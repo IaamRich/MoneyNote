@@ -149,5 +149,5 @@ type_take = Take Savings
 type_other = Other
 
 /* Popups */
-choose_category = Choose Category:
+choose_category = Pick Category
 enter_miss_description = Enter/Miss Description...

@@ -64,9 +64,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Controls\HistoryChangeNotesLookView.xaml.cs">
-      <DependentUpon>HistoryChangeNotesLookView.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Styles\ButtonStyles.xaml.cs">
       <DependentUpon>ButtonStyles.xaml</DependentUpon>
     </Compile>
@@ -100,10 +97,10 @@
     <EmbeddedResource Update="Controls\AboutAdditional\AboutHeaderScroll.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Styles\ButtonStyles.xaml">
+    <EmbeddedResource Update="Controls\HistoryFilterView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Controls\HistoryChangeNotesView.xaml">
+    <EmbeddedResource Update="Styles\ButtonStyles.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Styles\LabelStyle.xaml">
