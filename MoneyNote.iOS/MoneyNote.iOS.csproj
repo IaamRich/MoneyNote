@@ -458,4 +458,14 @@
       <Link>Resources\zh.png</Link>
     </BundleResource>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\analitics.png">
+      <Link>Resources\analitics.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\MoneyNote\Resources\Images\filter.png">
+      <Link>Resources\filter.png</Link>
+    </BundleResource>
+  </ItemGroup>
 </Project>

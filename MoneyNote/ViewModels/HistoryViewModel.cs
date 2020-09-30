@@ -20,12 +20,18 @@ namespace MoneyNote
         public II18N Strings => I18N.Current;
         //List Variables
         private int lastID = 0;
-        public ObservableCollection<Transaction> TransactionsList { get; set; }
+        public ObservableCollection<Transaction> TransactionsList { get; set; } = new ObservableCollection<Transaction>();
+        public ObservableCollection<Transaction> TransactionsListOldDb { get; set; } = new ObservableCollection<Transaction>();
+        public ObservableCollection<Transaction> TransactionsListOldDate { get; set; } = new ObservableCollection<Transaction>();
         //Commands
         public ICommand ChangeNotes { get; set; }
         public bool IsChangeNotesVisible { get; set; }
-        public ICommand ChangeNotesLook { get; set; }
+        public ICommand ChangeFilter { get; set; }
+        //Filter
+        public ICommand DisplayAllDate { get; set; }
         public ICommand DisplayLastWeek { get; set; }
+        public ICommand DisplayLastMonth { get; set; }
+        public ICommand DisplayLastYear { get; set; }
         public bool IsChangeNotesLookVisible { get; set; }
 
         public HistoryViewModel(ITransactionService transactionService, IScreen screen = null)
@@ -38,6 +44,11 @@ namespace MoneyNote
         }
         private void CreateCommands()
         {
+            DisplayAllDate = ReactiveCommand.Create(() =>
+            {
+                TransactionsList.Clear();
+                TransactionsList = TransactionsListOldDate;
+            });
             DisplayLastWeek = ReactiveCommand.Create(() =>
             {
                 var date = System.DateTime.Now;
@@ -45,7 +56,22 @@ namespace MoneyNote
                 TransactionsList.Clear();
                 foreach (var item in g)
                 {
-                    if (item.Date.Day == date.Day)
+                    var ts = date.Subtract(item.Date);
+                    if (ts.Days <= 7)
+                    {
+                        TransactionsList.Add(item);
+                    }
+                }
+            });
+            DisplayLastMonth = ReactiveCommand.Create(() =>
+            {
+                var date = System.DateTime.Now;
+                var g = new List<Transaction>(); g = TransactionsList.ToList();
+                TransactionsList.Clear();
+                foreach (var item in g)
+                {
+                    var ts = date.Subtract(item.Date);
+                    if (ts.Days <= 31)
                     {
                         TransactionsList.Add(item);
                     }
@@ -55,7 +81,11 @@ namespace MoneyNote
             {
                 IsChangeNotesVisible = !IsChangeNotesVisible; IsChangeNotesLookVisible = false;
             });
-            ChangeNotesLook = ReactiveCommand.Create(() => { IsChangeNotesLookVisible = !IsChangeNotesLookVisible; IsChangeNotesVisible = false; });
+            ChangeFilter = ReactiveCommand.Create(() =>
+            {
+                IsChangeNotesLookVisible = !IsChangeNotesLookVisible;
+                IsChangeNotesVisible = false;
+            });
         }
         private async void GetData()
         {
@@ -69,6 +99,7 @@ namespace MoneyNote
                     lastID = data.First().Id;
                     TransactionsList = new ObservableCollection<Transaction>();
                     data.ForEach(x => TransactionsList.Add(x));
+
                 }
             });
         }

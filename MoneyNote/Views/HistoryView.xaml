@@ -9,8 +9,8 @@
     xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
     x:TypeArguments="local:HistoryViewModel">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Command="{Binding ChangeNotes}" IconImageSource="change_notes.png" />
-        <ToolbarItem Command="{Binding ChangeNotesLook}" IconImageSource="change_notes_view.png" />
+        <ToolbarItem Command="{Binding ChangeNotes}" IconImageSource="analitics.png" />
+        <ToolbarItem Command="{Binding ChangeFilter}" IconImageSource="filter.png" />
     </ContentPage.ToolbarItems>
     <Grid BackgroundColor="{StaticResource ListBackColor}">
         <Image Source="header_back.png" VerticalOptions="Start" />
