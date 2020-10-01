@@ -36,6 +36,7 @@
                             HorizontalOptions="FillAndExpand"
                             Placeholder="Enter Searching Text"
                             ReturnCommand="{Binding SearchingCommand}"
+                            ReturnCommandParameter="{Binding SearchText}"
                             ReturnType="Search"
                             Text="{Binding SearchText}" />
                         <material:MaterialButton
@@ -43,6 +44,7 @@
                             Padding="0"
                             BackgroundColor="{StaticResource PopupButton}"
                             Command="{Binding SearchingCommand}"
+                            CommandParameter="{Binding SearchText}"
                             CornerRadius="0"
                             Elevation="10"
                             FontSize="Medium"

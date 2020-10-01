@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Reactive;
+using System.Reactive.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using I18NPortable;
@@ -26,14 +29,19 @@ namespace MoneyNote
         public ICommand GoAnaliticsCommand { get; set; }
         public ICommand ChangeFilterCommand { get; set; }
         public ICommand SearchCommand { get; set; }
-        public ICommand SearchingCommand { get; set; }
         //Filter
         public ICommand DisplayAllDate { get; set; }
         public ICommand DisplayLastWeek { get; set; }
         public ICommand DisplayLastMonth { get; set; }
+        public ReactiveCommand<string, Unit> SearchingCommand { get; set; }
         public bool IsChangeFilterVisible { get; set; }
         public bool IsSearchPanelVisible { get; set; }
-        public string SearchText { get; set; }
+        private string _searchText;
+        public string SearchText
+        {
+            get => _searchText;
+            set => this.RaiseAndSetIfChanged(ref _searchText, value);
+        }
 
         public HistoryViewModel(ITransactionService transactionService, IScreen screen = null)
         {
@@ -41,14 +49,22 @@ namespace MoneyNote
             _transactionService = transactionService;
             CreateCommands();
             GetData();
+
+            this.WhenAnyValue(x => x.SearchText)
+                .Where(x => !String.IsNullOrWhiteSpace(x))
+                .Throttle(TimeSpan.FromSeconds(1))
+                .InvokeCommand(SearchingCommand);
         }
         private void CreateCommands()
         {
+
+
             DisplayAllDate = ReactiveCommand.Create(() =>
             {
                 TransactionsList.Clear();
                 TransactionsFullList.ForEach(x => TransactionsList.Add(x));
             });
+
             DisplayLastWeek = ReactiveCommand.Create(() =>
             {
                 var date = System.DateTime.Now;
@@ -63,6 +79,7 @@ namespace MoneyNote
                     }
                 }
             });
+
             DisplayLastMonth = ReactiveCommand.Create(() =>
             {
                 var date = System.DateTime.Now;
@@ -77,29 +94,30 @@ namespace MoneyNote
                     }
                 }
             });
+
             SearchCommand = ReactiveCommand.Create(() =>
             {
                 IsSearchPanelVisible = !IsSearchPanelVisible;
             });
-            SearchingCommand = ReactiveCommand.Create(() =>
+
+            SearchingCommand = ReactiveCommand.Create<string>(searchParameter =>
             {
-                if (!string.IsNullOrWhiteSpace(SearchText))
+                TransactionsList.Clear();
+                TransactionsFullList.ForEach(x => x.Note.Contains(searchParameter.ToLower()));
+                foreach (var note in TransactionsFullList)
                 {
-                    TransactionsList.Clear();
-                    TransactionsFullList.ForEach(x => x.Note.Contains(SearchText.ToLower()));
-                    foreach (var note in TransactionsFullList)
+                    if (note.Note.ToLower().Contains(searchParameter.ToLower()))
                     {
-                        if (note.Note.ToLower().Contains(SearchText.ToLower()))
-                        {
-                            TransactionsList.Add(note);
-                        }
+                        TransactionsList.Add(note);
                     }
                 }
             });
+
             GoAnaliticsCommand = ReactiveCommand.Create(() =>
             {
 
             });
+
             ChangeFilterCommand = ReactiveCommand.Create(() =>
             {
                 IsChangeFilterVisible = !IsChangeFilterVisible;
