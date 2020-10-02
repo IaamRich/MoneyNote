@@ -16,149 +16,150 @@
     </ContentPage.ToolbarItems>
     <Grid BackgroundColor="{StaticResource ListBackColor}">
         <Image Source="header_back.png" VerticalOptions="Start" />
-        <ScrollView>
-            <StackLayout Orientation="Vertical">
-                <Frame
-                    Margin="10,0"
+        <StackLayout Orientation="Vertical">
+            <!--  Searching Entry With Button  -->
+            <Frame
+                Margin="10,0"
+                Padding="0"
+                CornerRadius="10"
+                HorizontalOptions="FillAndExpand"
+                IsVisible="{Binding IsSearchPanelVisible}"
+                VerticalOptions="Start">
+                <StackLayout
+                    Margin="0"
                     Padding="0"
-                    CornerRadius="10"
-                    HorizontalOptions="FillAndExpand"
-                    IsVisible="{Binding IsSearchPanelVisible}"
-                    VerticalOptions="Start">
-                    <StackLayout
-                        Margin="0"
-                        Padding="0"
-                        HeightRequest="50"
-                        Orientation="Horizontal"
-                        VerticalOptions="Center">
-                        <controls:CustomEntry
-                            Margin="0,2,0,0"
-                            HorizontalOptions="FillAndExpand"
-                            Placeholder="Enter Searching Text"
-                            ReturnCommand="{Binding SearchingCommand}"
-                            ReturnCommandParameter="{Binding SearchText}"
-                            ReturnType="Search"
-                            Text="{Binding SearchText}" />
-                        <material:MaterialButton
-                            Margin="-10"
-                            Padding="0"
-                            BackgroundColor="{StaticResource PopupButton}"
-                            Command="{Binding SearchingCommand}"
-                            CommandParameter="{Binding SearchText}"
-                            CornerRadius="0"
-                            Elevation="10"
-                            FontSize="Medium"
-                            HeightRequest="20"
-                            HorizontalOptions="End"
-                            Text="search"
-                            TextColor="White"
-                            VerticalOptions="FillAndExpand" />
-                    </StackLayout>
-                </Frame>
-                <Grid RowSpacing="0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="120" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                    <Label
-                        Margin="30,0,0,10"
-                        FontSize="Large"
-                        HorizontalOptions="Start"
-                        Text="{Binding Strings[last_transactions]}"
-                        TextColor="{StaticResource ButtonText}"
-                        VerticalOptions="End" />
-                    <Image
-                        Margin="0,0,30,0"
-                        HeightRequest="90"
+                    HeightRequest="50"
+                    Orientation="Horizontal"
+                    VerticalOptions="Center">
+                    <controls:CustomEntry
+                        Margin="5,2,0,0"
+                        HorizontalOptions="FillAndExpand"
+                        Placeholder="{Binding Strings[enter_searching_text]}"
+                        ReturnCommand="{Binding SearchingCommand}"
+                        ReturnCommandParameter="{Binding SearchText}"
+                        ReturnType="Search"
+                        Text="{Binding SearchText}" />
+                    <material:MaterialButton
+                        Margin="-10"
+                        Padding="10,0"
+                        BackgroundColor="{StaticResource PopupButton}"
+                        Command="{Binding SearchingCommand}"
+                        CommandParameter="{Binding SearchText}"
+                        CornerRadius="0"
+                        Elevation="10"
+                        FontSize="Small"
+                        HeightRequest="20"
                         HorizontalOptions="End"
-                        Source="history_header.png"
-                        VerticalOptions="End" />
-                    <Frame
-                        Grid.Row="1"
-                        Margin="10,0,10,-10"
-                        CornerRadius="10">
-                        <CollectionView
-                            x:Name="historyListView"
-                            Margin="0,0,0,10"
-                            BackgroundColor="{StaticResource BackgroundWhite}"
-                            ItemsSource="{Binding TransactionsList}">
-                            <CollectionView.ItemTemplate>
-                                <DataTemplate>
-                                    <Grid
-                                        Margin="5"
-                                        touch:TouchEff.PressedScale="0.9"
-                                        touch:TouchEff.RegularAnimationDuration="200"
-                                        BackgroundColor="White"
-                                        ColumnDefinitions="*,Auto"
-                                        ColumnSpacing="0"
-                                        RowDefinitions="Auto,Auto,Auto,0.5"
-                                        RowSpacing="0">
-                                        <!--  Description  -->
-                                        <Label
-                                            FontSize="Small"
-                                            Text="{Binding Note}"
-                                            VerticalTextAlignment="End" />
-                                        <!--  Bill / Date  -->
-                                        <StackLayout Grid.Row="1" Orientation="Horizontal">
-                                            <Label FontSize="Micro" Text="to">
-                                                <Label.Triggers>
-                                                    <DataTrigger
-                                                        Binding="{Binding MathSymbol}"
-                                                        TargetType="Label"
-                                                        Value="-">
-                                                        <Setter Property="Text" Value="from" />
-                                                    </DataTrigger>
-                                                </Label.Triggers>
-                                            </Label>
-                                            <Label FontSize="Micro" Text="{Binding Bill}" />
-                                            <Label FontSize="Micro" Text="-" />
-                                            <Label
-                                                Grid.Row="1"
-                                                FontSize="Micro"
-                                                Text="{Binding Date, StringFormat='{0:dd.MM.yyyy  HH:mm}'}" />
-                                        </StackLayout>
-                                        <!--  Value  -->
-                                        <Label
-                                            Grid.RowSpan="2"
-                                            Grid.Column="1"
-                                            FontSize="Medium"
-                                            TextColor="{StaticResource BankColor}"
-                                            VerticalOptions="Center">
-                                            <Label.FormattedText>
-                                                <FormattedString>
-                                                    <Span Text="{Binding MathSymbol}" />
-                                                    <Span Text=" " />
-                                                    <Span Text="{Binding Value, StringFormat='{0:F0}'}" />
-                                                </FormattedString>
-                                            </Label.FormattedText>
+                        Text="{Binding Strings[search]}"
+                        TextColor="White"
+                        VerticalOptions="FillAndExpand" />
+                </StackLayout>
+            </Frame>
+            <!--  Header Image With List  -->
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label
+                    Margin="30,0,0,10"
+                    FontSize="Large"
+                    HorizontalOptions="Start"
+                    Text="{Binding Strings[last_transactions]}"
+                    TextColor="{StaticResource ButtonText}"
+                    VerticalOptions="End" />
+                <Image
+                    Margin="0,0,30,0"
+                    HeightRequest="90"
+                    HorizontalOptions="End"
+                    Source="history_header.png"
+                    VerticalOptions="End" />
+                <Frame
+                    Grid.Row="1"
+                    Margin="10,0,10,-25"
+                    Padding="15,15,15,0"
+                    CornerRadius="10">
+                    <CollectionView
+                        x:Name="historyListView"
+                        Margin="0,0,0,10"
+                        BackgroundColor="{StaticResource BackgroundWhite}"
+                        ItemsSource="{Binding TransactionsList}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid
+                                    Margin="5"
+                                    touch:TouchEff.PressedScale="0.9"
+                                    touch:TouchEff.RegularAnimationDuration="200"
+                                    BackgroundColor="White"
+                                    ColumnDefinitions="*,Auto"
+                                    ColumnSpacing="0"
+                                    RowDefinitions="Auto,Auto,Auto,0.5"
+                                    RowSpacing="0">
+                                    <!--  Description  -->
+                                    <Label
+                                        FontSize="Small"
+                                        Text="{Binding Note}"
+                                        VerticalTextAlignment="End" />
+                                    <!--  Bill / Date  -->
+                                    <StackLayout Grid.Row="1" Orientation="Horizontal">
+                                        <Label FontSize="Micro" Text="to">
                                             <Label.Triggers>
                                                 <DataTrigger
                                                     Binding="{Binding MathSymbol}"
                                                     TargetType="Label"
-                                                    Value="+">
-                                                    <Setter Property="TextColor" Value="{StaticResource MainGreen}" />
-                                                </DataTrigger>
-                                                <DataTrigger
-                                                    Binding="{Binding MathSymbol}"
-                                                    TargetType="Label"
                                                     Value="-">
-                                                    <Setter Property="TextColor" Value="{StaticResource RedAlert}" />
+                                                    <Setter Property="Text" Value="from" />
                                                 </DataTrigger>
                                             </Label.Triggers>
                                         </Label>
-                                        <!--  Line  -->
-                                        <BoxView
-                                            Grid.Row="3"
-                                            Grid.ColumnSpan="2"
-                                            BackgroundColor="{StaticResource AboutBackGround}" />
-                                    </Grid>
-                                </DataTemplate>
-                            </CollectionView.ItemTemplate>
-                        </CollectionView>
-                    </Frame>
-                </Grid>
-            </StackLayout>
-        </ScrollView>
+                                        <Label FontSize="Micro" Text="{Binding Bill}" />
+                                        <Label FontSize="Micro" Text="-" />
+                                        <Label
+                                            Grid.Row="1"
+                                            FontSize="Micro"
+                                            Text="{Binding Date, StringFormat='{0:dd.MM.yyyy  HH:mm}'}" />
+                                    </StackLayout>
+                                    <!--  Value  -->
+                                    <Label
+                                        Grid.RowSpan="2"
+                                        Grid.Column="1"
+                                        FontSize="Medium"
+                                        TextColor="{StaticResource BankColor}"
+                                        VerticalOptions="Center">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="{Binding MathSymbol}" />
+                                                <Span Text=" " />
+                                                <Span Text="{Binding Value, StringFormat='{0:F0}'}" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                        <Label.Triggers>
+                                            <DataTrigger
+                                                Binding="{Binding MathSymbol}"
+                                                TargetType="Label"
+                                                Value="+">
+                                                <Setter Property="TextColor" Value="{StaticResource MainGreen}" />
+                                            </DataTrigger>
+                                            <DataTrigger
+                                                Binding="{Binding MathSymbol}"
+                                                TargetType="Label"
+                                                Value="-">
+                                                <Setter Property="TextColor" Value="{StaticResource RedAlert}" />
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                    </Label>
+                                    <!--  Line  -->
+                                    <BoxView
+                                        Grid.Row="3"
+                                        Grid.ColumnSpan="2"
+                                        BackgroundColor="{StaticResource AboutBackGround}" />
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Frame>
+            </Grid>
+        </StackLayout>
         <controls:HistoryFilterView />
     </Grid>
 </rxui:ReactiveContentPage>

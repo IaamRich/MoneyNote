@@ -40,12 +40,13 @@ history_savings = Savings
 short = Short
 expanded = Expanded
 last_week = Last Week
-lase_month = Last Month
+last_month = Last Month
 last_notes = Last Notes:
 last_transactions = Last Transactions
 history_spent = Spent:
 history_description = Description:
 history_transaction_date = Note date:
+enter_searching_text = Enter Searching Text
 
 /* Settings Page */
 default_area = Default spend area
@@ -94,6 +95,7 @@ pay = Pay
 bills = Bills
 update = Update
 create = Create
+search = Search
 share = Share
 reset = Reset
 vote = Vote

@@ -98,19 +98,24 @@ namespace MoneyNote
             SearchCommand = ReactiveCommand.Create(() =>
             {
                 IsSearchPanelVisible = !IsSearchPanelVisible;
+                IsChangeFilterVisible = false;
             });
 
             SearchingCommand = ReactiveCommand.Create<string>(searchParameter =>
             {
                 TransactionsList.Clear();
-                TransactionsFullList.ForEach(x => x.Note.Contains(searchParameter.ToLower()));
-                foreach (var note in TransactionsFullList)
+                if (!String.IsNullOrWhiteSpace(searchParameter))
                 {
-                    if (note.Note.ToLower().Contains(searchParameter.ToLower()))
+                    TransactionsFullList.ForEach(x => x.Note.Contains(searchParameter?.ToLower()));
+                    foreach (var note in TransactionsFullList)
                     {
-                        TransactionsList.Add(note);
+                        if (note.Note.ToLower().Contains(searchParameter.ToLower()))
+                        {
+                            TransactionsList.Add(note);
+                        }
                     }
                 }
+                else TransactionsFullList.ForEach(x => TransactionsList.Add(x));
             });
 
             GoAnaliticsCommand = ReactiveCommand.Create(() =>
@@ -121,6 +126,7 @@ namespace MoneyNote
             ChangeFilterCommand = ReactiveCommand.Create(() =>
             {
                 IsChangeFilterVisible = !IsChangeFilterVisible;
+                IsSearchPanelVisible = false;
             });
         }
         private async void GetData()

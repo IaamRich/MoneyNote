@@ -16,16 +16,18 @@
         HasShadow="True"
         HorizontalOptions="End"
         VerticalOptions="Start">
-        <Grid RowDefinitions="50,50,50" RowSpacing="0">
-
+        <Grid RowDefinitions="50,50,50" RowSpacing="2">
             <BoxView
                 Grid.RowSpan="3"
-                BackgroundColor="Black"
+                BackgroundColor="{StaticResource PopupButton}"
                 CornerRadius="10,0,10,0" />
-            <Frame Padding="0" CornerRadius="10">
+            <Frame
+                Margin="0,0,-10,0"
+                Padding="0"
+                CornerRadius="10">
                 <material:MaterialButton
-                    Margin="-7"
-                    Padding="0"
+                    Margin="-7,-7,0,-7"
+                    Padding="20,0"
                     BackgroundColor="{StaticResource PopupButton}"
                     Clicked="ChangeFilterClicked"
                     Command="{Binding DisplayAllDate}"
@@ -36,32 +38,42 @@
                     TextColor="{StaticResource ListBackColor}"
                     VerticalOptions="FillAndExpand" />
             </Frame>
-            <material:MaterialButton
+            <Frame
                 Grid.Row="1"
-                Margin="-5"
-                Padding="10,0"
-                BackgroundColor="{StaticResource PopupButton}"
-                Clicked="ChangeFilterClicked"
-                Command="{Binding DisplayLastWeek}"
-                Elevation="10"
-                FontSize="Small"
-                HorizontalOptions="FillAndExpand"
-                Text="{Binding Strings[last_week]}"
-                TextColor="{StaticResource ListBackColor}"
-                VerticalOptions="FillAndExpand" />
-            <material:MaterialButton
+                Margin="0,0,-10,0"
+                Padding="0"
+                CornerRadius="10">
+                <material:MaterialButton
+                    Margin="-7,-7,0,-7"
+                    Padding="20,0"
+                    BackgroundColor="{StaticResource PopupButton}"
+                    Clicked="ChangeFilterClicked"
+                    Command="{Binding DisplayLastWeek}"
+                    Elevation="10"
+                    FontSize="Small"
+                    HorizontalOptions="FillAndExpand"
+                    Text="{Binding Strings[last_week]}"
+                    TextColor="{StaticResource ListBackColor}"
+                    VerticalOptions="FillAndExpand" />
+            </Frame>
+            <Frame
                 Grid.Row="2"
-                Margin="-5"
-                Padding="10,0"
-                BackgroundColor="{StaticResource PopupButton}"
-                Clicked="ChangeFilterClicked"
-                Command="{Binding DisplayLastMonth}"
-                Elevation="10"
-                FontSize="Small"
-                HorizontalOptions="FillAndExpand"
-                Text="{Binding Strings[lase_month]}"
-                TextColor="{StaticResource ListBackColor}"
-                VerticalOptions="FillAndExpand" />
+                Margin="0,0,-10,0"
+                Padding="0"
+                CornerRadius="10">
+                <material:MaterialButton
+                    Margin="-7,-7,0,-7"
+                    Padding="20,0"
+                    BackgroundColor="{StaticResource PopupButton}"
+                    Clicked="ChangeFilterClicked"
+                    Command="{Binding DisplayLastMonth}"
+                    Elevation="10"
+                    FontSize="Small"
+                    HorizontalOptions="FillAndExpand"
+                    Text="{Binding Strings[last_month]}"
+                    TextColor="{StaticResource ListBackColor}"
+                    VerticalOptions="FillAndExpand" />
+            </Frame>
         </Grid>
 
     </Frame>
