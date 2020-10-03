@@ -86,13 +86,20 @@
                         ItemsSource="{Binding TransactionsList}">
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Grid RowDefinitions="Auto,*">
-                                    <Label Text="{Binding Date, StringFormat='{0:MMMM d - dddd}'}" />
-                                    <CollectionView
-                                        x:Name="separateDayNotes"
+                                <Grid RowDefinitions="Auto,*" RowSpacing="0">
+                                    <!--  Day  -->
+                                    <Label
+                                        Margin="0,30,0,0"
+                                        FontSize="Small"
+                                        Opacity="0.8"
+                                        Text="{Binding Date, StringFormat='{0:MMMM d - dddd}'}"
+                                        TextColor="{StaticResource AboutBackGround}" />
+                                    <!--  Separate Note  -->
+                                    <StackLayout
                                         Grid.Row="1"
-                                        ItemsSource="{Binding DayNotes}">
-                                        <CollectionView.ItemTemplate>
+                                        BindableLayout.ItemsSource="{Binding DayNotes}"
+                                        Orientation="Vertical">
+                                        <BindableLayout.ItemTemplate>
                                             <DataTemplate>
                                                 <Grid
                                                     Margin="5"
@@ -102,17 +109,13 @@
                                                     ColumnDefinitions="*,Auto"
                                                     ColumnSpacing="0"
                                                     RowDefinitions="Auto,Auto,Auto,0.5"
-                                                    RowSpacing="0">
-
+                                                    RowSpacing="1">
                                                     <!--  Description  -->
-
                                                     <Label
                                                         FontSize="Small"
                                                         Text="{Binding Note}"
                                                         VerticalTextAlignment="End" />
-
                                                     <!--  Bill / Date  -->
-
                                                     <StackLayout Grid.Row="1" Orientation="Horizontal">
                                                         <Label FontSize="Micro" Text="to">
                                                             <Label.Triggers>
@@ -131,9 +134,7 @@
                                                             FontSize="Micro"
                                                             Text="{Binding Date, StringFormat='{0:dd.MM.yyyy  HH:mm}'}" />
                                                     </StackLayout>
-
                                                     <!--  Value  -->
-
                                                     <Label
                                                         Grid.RowSpan="2"
                                                         Grid.Column="1"
@@ -162,18 +163,15 @@
                                                             </DataTrigger>
                                                         </Label.Triggers>
                                                     </Label>
-
                                                     <!--  Line  -->
-
                                                     <BoxView
                                                         Grid.Row="3"
                                                         Grid.ColumnSpan="2"
                                                         BackgroundColor="{StaticResource AboutBackGround}" />
                                                 </Grid>
                                             </DataTemplate>
-                                        </CollectionView.ItemTemplate>
-                                    </CollectionView>
-
+                                        </BindableLayout.ItemTemplate>
+                                    </StackLayout>
                                 </Grid>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
