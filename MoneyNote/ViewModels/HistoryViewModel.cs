@@ -24,7 +24,7 @@ namespace MoneyNote
         //List Variables
         private int lastID = 0;
         public ObservableCollection<TransactionDay> TransactionsList { get; set; } = new ObservableCollection<TransactionDay>();
-        public List<TransactionDay> TransactionsFullList { get; set; } = new List<TransactionDay>();
+        public List<Transaction> TransactionsFullList { get; set; } = new List<Transaction>();
         //Commands
         public ICommand GoAnaliticsCommand { get; set; }
         public ICommand ChangeFilterCommand { get; set; }
@@ -62,37 +62,39 @@ namespace MoneyNote
             DisplayAllDate = ReactiveCommand.Create(() =>
             {
                 TransactionsList.Clear();
-                TransactionsFullList.ForEach(x => TransactionsList.Add(x));
+                var tempList = new List<Transaction>();
+                TransactionsFullList.ForEach(x => tempList.Add(x));
+                DisplayGroupingList(tempList);
             });
 
             DisplayLastWeek = ReactiveCommand.Create(() =>
             {
-                //var date = System.DateTime.Now;
-                //var tempList = new List<Transaction>(); tempList = TransactionsFullList;
-                //TransactionsList.Clear();
-                //foreach (var item in tempList)
-                //{
-                //    var ts = date.Subtract(item.Date);
-                //    if (ts.Days <= 7)
-                //    {
-                //        TransactionsList.Add(item);
-                //    }
-                //}
+                var date = System.DateTime.Now;
+                var tempList = new List<Transaction>();
+                foreach (var item in TransactionsFullList)
+                {
+                    var ts = date.Subtract(item.Date);
+                    if (ts.Days <= 7)
+                    {
+                        tempList.Add(item);
+                    }
+                }
+                DisplayGroupingList(tempList);
             });
 
             DisplayLastMonth = ReactiveCommand.Create(() =>
             {
-                //var date = System.DateTime.Now;
-                //var tempList = new List<Transaction>(); tempList = TransactionsFullList;
-                //TransactionsList.Clear();
-                //foreach (var item in tempList)
-                //{
-                //    var ts = date.Subtract(item.Date);
-                //    if (ts.Days <= 31)
-                //    {
-                //        TransactionsList.Add(item);
-                //    }
-                //}
+                var date = System.DateTime.Now;
+                var tempList = new List<Transaction>();
+                foreach (var item in TransactionsFullList)
+                {
+                    var ts = date.Subtract(item.Date);
+                    if (ts.Days <= 31)
+                    {
+                        tempList.Add(item);
+                    }
+                }
+                DisplayGroupingList(tempList);
             });
 
             SearchCommand = ReactiveCommand.Create(() =>
@@ -103,19 +105,20 @@ namespace MoneyNote
 
             SearchingCommand = ReactiveCommand.Create<string>(searchParameter =>
             {
-                //TransactionsList.Clear();
-                //if (!String.IsNullOrWhiteSpace(searchParameter))
-                //{
-                //    TransactionsFullList.ForEach(x => x.Note.Contains(searchParameter?.ToLower()));
-                //    foreach (var note in TransactionsFullList)
-                //    {
-                //        if (note.Note.ToLower().Contains(searchParameter.ToLower()))
-                //        {
-                //            TransactionsList.Add(note);
-                //        }
-                //    }
-                //}
-                //else TransactionsFullList.ForEach(x => TransactionsList.Add(x));
+                var tempList = new List<Transaction>();
+                if (!String.IsNullOrWhiteSpace(searchParameter))
+                {
+                    TransactionsFullList.ForEach(x => x.Note.Contains(searchParameter?.ToLower()));
+                    foreach (var note in TransactionsFullList)
+                    {
+                        if (note.Note.ToLower().Contains(searchParameter.ToLower()))
+                        {
+                            tempList.Add(note);
+                        }
+                    }
+                }
+                else TransactionsFullList.ForEach(x => tempList.Add(x));
+                DisplayGroupingList(tempList);
             });
 
             GoAnaliticsCommand = ReactiveCommand.Create(() =>
@@ -139,21 +142,25 @@ namespace MoneyNote
                 {
                     data.Reverse();
                     lastID = data.First().Id;
-                    TransactionsList = new ObservableCollection<TransactionDay>();
-                    var days = data.GroupBy(d => new { year = d.Date.Year, month = d.Date.Month, day = d.Date.Day });
-                    foreach (var item in days)
-                    {
-                        var day = new ObservableCollection<Transaction>();
-                        foreach (var note in item) day.Add(note);
-                        TransactionsList.Add(new TransactionDay
-                        {
-                            Date = day.FirstOrDefault().Date,
-                            DayNotes = day
-                        });
-                    }
-                    TransactionsFullList = TransactionsList.ToList();
+                    TransactionsFullList = data;
+                    DisplayGroupingList(data);
                 }
             });
+        }
+        private void DisplayGroupingList(List<Transaction> data)
+        {
+            TransactionsList = new ObservableCollection<TransactionDay>();
+            var days = data.GroupBy(d => new { year = d.Date.Year, month = d.Date.Month, day = d.Date.Day });
+            foreach (var item in days)
+            {
+                var day = new ObservableCollection<Transaction>();
+                foreach (var note in item) day.Add(note);
+                TransactionsList.Add(new TransactionDay
+                {
+                    Date = day.FirstOrDefault().Date,
+                    DayNotes = day
+                });
+            }
         }
     }
     public class TransactionDay : ReactiveObject

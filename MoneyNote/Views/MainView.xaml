@@ -137,7 +137,7 @@
                     Spacing="0">
                     <Label
                         FontFamily="MainFontBold"
-                        FontSize="Small"
+                        FontSize="Medium"
                         HorizontalOptions="Center"
                         Text="{Binding Strings[current]}"
                         TextColor="{StaticResource BoldLabel}" />
@@ -191,13 +191,13 @@
                     <Label
                         Margin="0,5,0,0"
                         FontFamily="MainFontBold"
-                        FontSize="Small"
+                        FontSize="Medium"
                         HorizontalOptions="CenterAndExpand"
                         Text="{Binding Strings[last_notes]}"
                         TextColor="{StaticResource BoldLabel}" />
                     <Frame
                         Margin="0,0,0,-10"
-                        Padding="0"
+                        Padding="10,5"
                         BackgroundColor="White"
                         CornerRadius="10">
                         <CollectionView
@@ -206,61 +206,64 @@
                             ItemsSource="{Binding LastTransactionsList}">
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
-                                    <Frame Padding="0" BackgroundColor="Transparent">
-                                        <Frame
-                                            Margin="10,2"
-                                            Padding="0"
-                                            touch:TouchEff.Command="{Binding Source={x:Reference lastTransactions}, Path=BindingContext.SelectNote}"
-                                            touch:TouchEff.CommandParameter="{Binding .}"
-                                            touch:TouchEff.PressedScale="0.9"
-                                            touch:TouchEff.RegularAnimationDuration="200"
-                                            BackgroundColor="White">
-                                            <Grid
-                                                Padding="5,0,10,0"
-                                                ColumnDefinitions="Auto,*,Auto"
-                                                HeightRequest="50">
-                                                <Image
-                                                    Aspect="AspectFit"
-                                                    HorizontalOptions="Start"
-                                                    Source="{Binding Category.Image}" />
-                                                <Label
-                                                    Grid.Column="1"
-                                                    FontSize="Small"
-                                                    HorizontalOptions="Start"
-                                                    HorizontalTextAlignment="Start"
-                                                    Text="{Binding Note}"
-                                                    VerticalOptions="Center" />
-                                                <Label
-                                                    Grid.Column="2"
-                                                    FontSize="Medium"
-                                                    HorizontalOptions="End"
-                                                    TextColor="{StaticResource BankColor}"
-                                                    VerticalOptions="Center">
-                                                    <Label.FormattedText>
-                                                        <FormattedString>
-                                                            <Span Text="{Binding MathSymbol}" />
-                                                            <Span Text=" " />
-                                                            <Span Text="{Binding Value, StringFormat='{0:F0}'}" />
-                                                        </FormattedString>
-                                                    </Label.FormattedText>
-                                                    <Label.Triggers>
-                                                        <DataTrigger
-                                                            Binding="{Binding MathSymbol}"
-                                                            TargetType="Label"
-                                                            Value="+">
-                                                            <Setter Property="TextColor" Value="{StaticResource MainGreen}" />
-                                                        </DataTrigger>
-                                                        <DataTrigger
-                                                            Binding="{Binding MathSymbol}"
-                                                            TargetType="Label"
-                                                            Value="-">
-                                                            <Setter Property="TextColor" Value="{StaticResource RedAlert}" />
-                                                        </DataTrigger>
-                                                    </Label.Triggers>
-                                                </Label>
-                                            </Grid>
-                                        </Frame>
-                                    </Frame>
+
+                                    <Grid
+                                        Margin="5"
+                                        Padding="5,0,10,0"
+                                        touch:TouchEff.Command="{Binding Source={x:Reference lastTransactions}, Path=BindingContext.SelectNote}"
+                                        touch:TouchEff.CommandParameter="{Binding .}"
+                                        touch:TouchEff.PressedScale="0.9"
+                                        touch:TouchEff.RegularAnimationDuration="200"
+                                        ColumnDefinitions="Auto,*,Auto"
+                                        ColumnSpacing="5"
+                                        RowDefinitions="Auto,0.5">
+                                        <Image
+                                            Aspect="AspectFit"
+                                            HeightRequest="50"
+                                            HorizontalOptions="Start"
+                                            Source="{Binding Category.Image}" />
+                                        <Label
+                                            Grid.Column="1"
+                                            FontSize="Small"
+                                            HorizontalOptions="Start"
+                                            HorizontalTextAlignment="Start"
+                                            Text="{Binding Note}"
+                                            VerticalOptions="Center" />
+                                        <Label
+                                            Grid.Column="2"
+                                            FontSize="Medium"
+                                            HorizontalOptions="End"
+                                            TextColor="{StaticResource BankColor}"
+                                            VerticalOptions="Center">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="{Binding MathSymbol}" />
+                                                    <Span Text=" " />
+                                                    <Span Text="{Binding Value, StringFormat='{0:F0}'}" />
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                            <Label.Triggers>
+                                                <DataTrigger
+                                                    Binding="{Binding MathSymbol}"
+                                                    TargetType="Label"
+                                                    Value="+">
+                                                    <Setter Property="TextColor" Value="{StaticResource MainGreen}" />
+                                                </DataTrigger>
+                                                <DataTrigger
+                                                    Binding="{Binding MathSymbol}"
+                                                    TargetType="Label"
+                                                    Value="-">
+                                                    <Setter Property="TextColor" Value="{StaticResource RedAlert}" />
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                        </Label>
+
+                                        <!--  Line  -->
+                                        <BoxView
+                                            Grid.Row="1"
+                                            Grid.ColumnSpan="3"
+                                            BackgroundColor="{StaticResource AboutBackGround}" />
+                                    </Grid>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
                         </CollectionView>

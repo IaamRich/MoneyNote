@@ -63,7 +63,7 @@
                 </Grid.RowDefinitions>
                 <Label
                     Margin="30,0,0,10"
-                    FontSize="Large"
+                    FontSize="Title"
                     HorizontalOptions="Start"
                     Text="{Binding Strings[last_transactions]}"
                     TextColor="{StaticResource ButtonText}"
@@ -90,10 +90,10 @@
                                     <!--  Day  -->
                                     <Label
                                         Margin="0,30,0,0"
-                                        FontSize="Small"
-                                        Opacity="0.8"
-                                        Text="{Binding Date, StringFormat='{0:MMMM d - dddd}'}"
-                                        TextColor="{StaticResource AboutBackGround}" />
+                                        FontFamily="MainFontBold"
+                                        FontSize="Medium"
+                                        Text="{Binding Date, StringFormat='{0:MMMM d, dddd}'}"
+                                        TextColor="{StaticResource BoldLabel}" />
                                     <!--  Separate Note  -->
                                     <StackLayout
                                         Grid.Row="1"
@@ -106,17 +106,33 @@
                                                     touch:TouchEff.PressedScale="0.9"
                                                     touch:TouchEff.RegularAnimationDuration="200"
                                                     BackgroundColor="White"
-                                                    ColumnDefinitions="*,Auto"
+                                                    ColumnDefinitions="Auto,*,Auto"
                                                     ColumnSpacing="0"
-                                                    RowDefinitions="Auto,Auto,Auto,0.5"
-                                                    RowSpacing="1">
+                                                    RowDefinitions="Auto,Auto,0.5"
+                                                    RowSpacing="0">
+                                                    <!--  Image  -->
+                                                    <Image
+                                                        Grid.RowSpan="3"
+                                                        Margin="0,0,0,5"
+                                                        Aspect="AspectFit"
+                                                        HeightRequest="50"
+                                                        HorizontalOptions="Start"
+                                                        Source="{Binding Category.Image}" />
                                                     <!--  Description  -->
                                                     <Label
+                                                        Grid.Column="1"
+                                                        Margin="10,0,0,0"
                                                         FontSize="Small"
                                                         Text="{Binding Note}"
+                                                        VerticalOptions="CenterAndExpand"
                                                         VerticalTextAlignment="End" />
                                                     <!--  Bill / Date  -->
-                                                    <StackLayout Grid.Row="1" Orientation="Horizontal">
+                                                    <StackLayout
+                                                        Grid.Row="1"
+                                                        Grid.Column="1"
+                                                        Margin="10,0,0,0"
+                                                        Orientation="Horizontal"
+                                                        VerticalOptions="CenterAndExpand">
                                                         <Label FontSize="Micro" Text="to">
                                                             <Label.Triggers>
                                                                 <DataTrigger
@@ -136,8 +152,8 @@
                                                     </StackLayout>
                                                     <!--  Value  -->
                                                     <Label
-                                                        Grid.RowSpan="2"
-                                                        Grid.Column="1"
+                                                        Grid.RowSpan="3"
+                                                        Grid.Column="2"
                                                         FontSize="Medium"
                                                         TextColor="{StaticResource BankColor}"
                                                         VerticalOptions="Center">
@@ -165,8 +181,8 @@
                                                     </Label>
                                                     <!--  Line  -->
                                                     <BoxView
-                                                        Grid.Row="3"
-                                                        Grid.ColumnSpan="2"
+                                                        Grid.Row="2"
+                                                        Grid.ColumnSpan="3"
                                                         BackgroundColor="{StaticResource AboutBackGround}" />
                                                 </Grid>
                                             </DataTemplate>
