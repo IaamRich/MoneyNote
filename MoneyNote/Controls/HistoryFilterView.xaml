@@ -10,21 +10,21 @@
     IsVisible="{Binding IsChangeFilterVisible, Mode=TwoWay}"
     mc:Ignorable="d">
     <Frame
+        Margin="0,0,-10,0"
         Padding="0"
-        BackgroundColor="Transparent"
-        CornerRadius="0"
+        CornerRadius="10"
         HasShadow="True"
         HorizontalOptions="End"
         VerticalOptions="Start">
-        <Grid RowDefinitions="50,50,50" RowSpacing="2">
+        <Grid
+            Margin="0,0,10,0"
+            RowDefinitions="50,50,50"
+            RowSpacing="3">
             <BoxView
                 Grid.RowSpan="3"
                 BackgroundColor="{StaticResource PopupButton}"
                 CornerRadius="10,0,10,0" />
-            <Frame
-                Margin="0,0,-10,0"
-                Padding="0"
-                CornerRadius="10">
+            <Frame Margin="0,0,-10,0" Padding="0">
                 <material:MaterialButton
                     Margin="-7,-7,0,-7"
                     Padding="20,0"
@@ -41,8 +41,7 @@
             <Frame
                 Grid.Row="1"
                 Margin="0,0,-10,0"
-                Padding="0"
-                CornerRadius="10">
+                Padding="0">
                 <material:MaterialButton
                     Margin="-7,-7,0,-7"
                     Padding="20,0"
@@ -59,8 +58,7 @@
             <Frame
                 Grid.Row="2"
                 Margin="0,0,-10,0"
-                Padding="0"
-                CornerRadius="10">
+                Padding="0">
                 <material:MaterialButton
                     Margin="-7,-7,0,-7"
                     Padding="20,0"

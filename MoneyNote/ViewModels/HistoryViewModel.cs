@@ -146,4 +146,8 @@ namespace MoneyNote
             });
         }
     }
+    public class TransactionDay
+    {
+        public ObservableCollection<Transaction> Transaction { get; set; }
+    }
 }
