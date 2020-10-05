@@ -23,5 +23,9 @@ namespace MoneyNote
             //            .DisposeWith(disposables);
             //    });
         }
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
     }
 }

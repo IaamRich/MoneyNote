@@ -14,7 +14,10 @@ namespace MoneyNote
         {
             base.OnAppearing();
         }
-
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
 
     }
 }

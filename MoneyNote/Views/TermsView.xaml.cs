@@ -10,5 +10,9 @@ namespace MoneyNote
         {
             InitializeComponent();
         }
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
     }
 }

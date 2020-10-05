@@ -46,5 +46,9 @@ namespace MoneyNote
         {
             WidthAfter = element;
         }
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
     }
 }
