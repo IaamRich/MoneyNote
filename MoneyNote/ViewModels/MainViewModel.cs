@@ -279,7 +279,6 @@ namespace MoneyNote
             CreditDescription = CrossSettings.Current.GetValueOrDefault("CreditMessage", "");
             CreditValue = CrossSettings.Current.GetValueOrDefault("CreditValue", 0.0m);
             SelectedCategory = UnwrapBankCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedBankCategory", 0));
-            //HERE NEED TO WRITE LOGIC OF EACH CATEGORY CHOICED
             switch (SelectedCategory.Type)
             {
                 case CategoryType.Lend:
@@ -313,6 +312,11 @@ namespace MoneyNote
                     _ = _transactionService.Create(transaction);
                     break;
                 case CategoryType.Repay:
+                    if (CurrentCredit <= 0)
+                    {
+                        await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_credit"]), true);
+                        return;
+                    }
                     var item = new Transaction
                     {
                         Id = ++lastID,
