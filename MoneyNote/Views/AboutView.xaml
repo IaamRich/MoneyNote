@@ -111,7 +111,8 @@
                             FontFamily="MainFontBold"
                             FontSize="Large"
                             HorizontalOptions="Start"
-                            Text="Terms"
+                            Text="{Binding Strings[terms]}"
+                            TextColor="{StaticResource BoldLabel}"
                             VerticalOptions="Center" />
                         <Label Text="{Binding Strings[terms_text]}" />
                         <!--  === Guide Section ===  -->
@@ -126,6 +127,7 @@
                             FontSize="Large"
                             HorizontalOptions="Start"
                             Text="{Binding Strings[guide]}"
+                            TextColor="{StaticResource BoldLabel}"
                             VerticalOptions="Center" />
                         <Label Text="{Binding Strings[terms_text]}" />
                         <!--  === Information Section ===  -->
@@ -140,6 +142,7 @@
                             FontSize="Large"
                             HorizontalOptions="Start"
                             Text="{Binding Strings[information]}"
+                            TextColor="{StaticResource BoldLabel}"
                             VerticalOptions="Center" />
                         <Label Text="{Binding Strings[terms_text]}" />
                         <Label

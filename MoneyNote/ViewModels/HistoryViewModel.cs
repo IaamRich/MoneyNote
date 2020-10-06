@@ -74,7 +74,7 @@ namespace MoneyNote
                 foreach (var item in TransactionsFullList)
                 {
                     var ts = date.Subtract(item.Date);
-                    if (ts.Days <= 7)
+                    if (ts.Days < 7)
                     {
                         tempList.Add(item);
                     }
@@ -89,7 +89,7 @@ namespace MoneyNote
                 foreach (var item in TransactionsFullList)
                 {
                     var ts = date.Subtract(item.Date);
-                    if (ts.Days <= 31)
+                    if (ts.Days < 31)
                     {
                         tempList.Add(item);
                     }

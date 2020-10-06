@@ -32,17 +32,10 @@
         -->
     </popups:PopupPage.Animation>
 
-    <Grid ColumnSpacing="0">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+    <Grid
+        ColumnDefinitions="*,Auto,*"
+        ColumnSpacing="0"
+        RowDefinitions="*,Auto,*">
         <Frame
             x:Name="originalPanel"
             Grid.Row="1"
@@ -91,7 +84,8 @@
                     <controls:CustomEntry
                         x:Name="entry"
                         ClearButtonVisibility="WhileEditing"
-                        Placeholder="Enter/Miss Description..."
+                        Keyboard="Numeric"
+                        Placeholder="{Binding Strings[enter_miss_description]}"
                         PlaceholderColor="{StaticResource AboutBackGround}"
                         TextColor="{StaticResource PopupButton}" />
                 </Frame>
@@ -186,9 +180,9 @@
                     HeightRequest="30"
                     HorizontalOptions="Center"
                     Text="{Binding Strings[choose_category]}"
-                    TextColor="Black" />
+                    TextColor="{StaticResource BoldLabel}" />
                 <ScrollView
-                    Margin="6,0,6,6"
+                    Margin="6"
                     Padding="0"
                     Orientation="Vertical">
                     <StackLayout

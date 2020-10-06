@@ -91,6 +91,7 @@ ok = Ok
 credits = Credits
 go = Go
 other = Other
+terms = Terms
 pay = Pay
 bills = Bills
 update = Update
