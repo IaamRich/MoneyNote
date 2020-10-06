@@ -7,6 +7,7 @@
     xmlns:controls="clr-namespace:MoneyNote.Controls"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+    xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:popups="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
     xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
@@ -26,16 +27,10 @@
             ScaleIn="1.2"
             ScaleOut="0.1" />
     </popups:PopupPage.Animation>
-    <Grid ColumnSpacing="0">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
+    <Grid
+        ColumnDefinitions="*,Auto,*"
+        ColumnSpacing="0"
+        RowDefinitions="Auto,Auto">
         <Frame
             x:Name="originalPanel"
             Grid.Column="1"
@@ -45,18 +40,18 @@
             IsVisible="{Binding IsOriginalVisible, Mode=TwoWay}"
             VerticalOptions="Start">
             <StackLayout
-                BackgroundColor="White"
-                HorizontalOptions="Center"
+                x:Name="this"
                 Orientation="Vertical"
-                VerticalOptions="Center">
+                WidthRequest="300">
                 <ImageButton
+                    Margin="0,10,10,0"
+                    Aspect="AspectFit"
                     BackgroundColor="Transparent"
                     Clicked="Cancel_Button_Clicked"
-                    HeightRequest="20"
+                    HeightRequest="30"
                     HorizontalOptions="End"
                     Source="close.png"
-                    VerticalOptions="Start"
-                    WidthRequest="20" />
+                    VerticalOptions="Start" />
                 <forms:AnimationView
                     Margin="0,-5,0,0"
                     Animation="add.json"
@@ -65,22 +60,24 @@
                     Loop="True"
                     Progress="1"
                     WidthRequest="100" />
-                <Frame
-                    Margin="10,1"
+                <material:MaterialButton
+                    x:Name="categoryButton"
+                    Margin="3,0"
                     Padding="0"
-                    touch:TouchEff.Command="{Binding CategoryButtonCommand}"
-                    touch:TouchEff.PressedScale="1.2"
-                    touch:TouchEff.RegularAnimationDuration="100">
-                    <Button
-                        x:Name="categoryButton"
-                        BackgroundColor="Transparent"
-                        Text="{Binding ChooseButtonText}"
-                        TextColor="{StaticResource MainGreen}" />
-                </Frame>
+                    BackgroundColor="{StaticResource PopupButton}"
+                    Command="{Binding CategoryButtonCommand}"
+                    CornerRadius="5"
+                    Elevation="10"
+                    FontSize="Medium"
+                    HeightRequest="70"
+                    HorizontalOptions="FillAndExpand"
+                    Text="{Binding ChooseButtonText}"
+                    TextColor="{StaticResource ButtonText}"
+                    VerticalOptions="FillAndExpand" />
                 <Frame Margin="10,1" Padding="0">
                     <controls:CustomEntry
                         x:Name="entry"
-                        HorizontalTextAlignment="Center"
+                        ClearButtonVisibility="WhileEditing"
                         Keyboard="Numeric"
                         Placeholder="{Binding Strings[enter_add_text]}"
                         PlaceholderColor="{StaticResource AboutBackGround}"
@@ -91,15 +88,18 @@
                     <controls:CustomEntry
                         x:Name="entryDescription"
                         ClearButtonVisibility="WhileEditing"
-                        Placeholder="Enter/Miss Description..."
+                        Placeholder="{Binding Strings[enter_miss_description]}"
                         PlaceholderColor="{StaticResource AboutBackGround}"
                         TextColor="{StaticResource PopupButton}" />
                 </Frame>
                 <StackLayout
-                    Margin="10,0"
+                    Margin="15,5,10,0"
                     Orientation="Horizontal"
                     Spacing="0">
-                    <Label FontSize="Micro" Text="{Binding Strings[to_cash]}" />
+                    <Label
+                        FontSize="Small"
+                        Text="{Binding Strings[to_cash]}"
+                        VerticalOptions="Center" />
                     <Switch x:Name="cashSwitch" HorizontalOptions="EndAndExpand">
                         <Switch.Triggers>
                             <DataTrigger
@@ -118,10 +118,13 @@
                     </Switch>
                 </StackLayout>
                 <StackLayout
-                    Margin="10,0"
+                    Margin="15,5,10,0"
                     Orientation="Horizontal"
                     Spacing="0">
-                    <Label FontSize="Micro" Text="{Binding Strings[to_card]}" />
+                    <Label
+                        FontSize="Small"
+                        Text="{Binding Strings[to_card]}"
+                        VerticalOptions="Center" />
                     <Switch x:Name="cardSwitch" HorizontalOptions="EndAndExpand">
                         <Switch.Triggers>
                             <DataTrigger
@@ -139,11 +142,19 @@
                         </Switch.Triggers>
                     </Switch>
                 </StackLayout>
-                <Button
+                <material:MaterialButton
+                    Margin="-7"
+                    Padding="0"
                     BackgroundColor="{StaticResource PopupButton}"
                     Clicked="Button_Clicked"
                     CornerRadius="0"
-                    Text="{Binding Strings[save]}" />
+                    Elevation="10"
+                    FontSize="Title"
+                    HeightRequest="80"
+                    HorizontalOptions="FillAndExpand"
+                    Text="{Binding Strings[save]}"
+                    TextColor="{StaticResource BackgroundWhite}"
+                    VerticalOptions="FillAndExpand" />
             </StackLayout>
             <Frame.GestureRecognizers>
                 <TapGestureRecognizer Tapped="PlugForGridGesture" />
@@ -156,23 +167,24 @@
             CornerRadius="10"
             IsVisible="{Binding IsCategoriesVisible, Mode=TwoWay}"
             VerticalOptions="Center">
-            <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Vertical" WidthRequest="300">
                 <ImageButton
+                    Margin="0,10,10,0"
                     Aspect="AspectFit"
                     BackgroundColor="Transparent"
                     Clicked="Cancel_Button_Clicked"
-                    HeightRequest="20"
+                    HeightRequest="30"
                     HorizontalOptions="End"
                     Source="close.png"
                     VerticalOptions="Start" />
                 <Label
-                    FontSize="Subtitle"
+                    FontSize="Title"
                     HeightRequest="30"
                     HorizontalOptions="Center"
                     Text="{Binding Strings[choose_category]}"
-                    TextColor="Black" />
+                    TextColor="{StaticResource BoldLabel}" />
                 <ScrollView
-                    Margin="0"
+                    Margin="6"
                     Padding="0"
                     Orientation="Vertical">
                     <StackLayout
@@ -188,16 +200,17 @@
                                     Padding="0"
                                     touch:TouchEff.Command="{Binding Path=SwitchCategoryCommand, Source={x:Reference viewModel}}"
                                     touch:TouchEff.CommandParameter="{Binding Id}"
-                                    touch:TouchEff.PressedScale="1.2"
+                                    touch:TouchEff.PressedScale="0.9"
                                     touch:TouchEff.RegularAnimationDuration="100">
                                     <Grid
-                                        ColumnDefinitions="50, 150"
-                                        HorizontalOptions="Center"
+                                        ColumnDefinitions="50, *"
+                                        HorizontalOptions="Start"
                                         RowDefinitions="50">
                                         <Image x:Name="image" Source="{Binding Image}" />
                                         <Label
                                             x:Name="label"
                                             Grid.Column="1"
+                                            FontSize="Medium"
                                             Text="{Binding Name}"
                                             TextColor="{StaticResource PopupButton}"
                                             VerticalOptions="Center">

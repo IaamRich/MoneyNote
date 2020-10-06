@@ -150,7 +150,7 @@
                     HeightRequest="80"
                     HorizontalOptions="FillAndExpand"
                     Text="{Binding Strings[save]}"
-                    TextColor="White"
+                    TextColor="{StaticResource BackgroundWhite}"
                     VerticalOptions="FillAndExpand" />
             </StackLayout>
             <Frame.GestureRecognizers>
