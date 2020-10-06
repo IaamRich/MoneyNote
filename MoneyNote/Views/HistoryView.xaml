@@ -11,7 +11,7 @@
     x:TypeArguments="local:HistoryViewModel">
     <ContentPage.ToolbarItems>
         <ToolbarItem Command="{Binding SearchCommand}" IconImageSource="search.png" />
-        <ToolbarItem Command="{Binding GoAnaliticsCommand}" IconImageSource="analitics.png" />
+        <ToolbarItem Command="{Binding DiagramCommand}" IconImageSource="analitics.png" />
         <ToolbarItem Command="{Binding ChangeFilterCommand}" IconImageSource="filter.png" />
     </ContentPage.ToolbarItems>
     <Grid BackgroundColor="{StaticResource ListBackColor}">

@@ -1,5 +1,7 @@
 ﻿//using MoneyNote.Views;
 using MoneyNote.Services;
+using MoneyNote.ViewModels;
+using MoneyNote.Views;
 using ReactiveUI;
 using Splat;
 
@@ -46,6 +48,7 @@ namespace MoneyNote
             Locator.CurrentMutable.Register(() => new SettingsView(), typeof(IViewFor<SettingsViewModel>));
             Locator.CurrentMutable.Register(() => new HistoryView(), typeof(IViewFor<HistoryViewModel>));
             //Locator.CurrentMutable.Register(() => new TermsView(), typeof(IViewFor<TermsViewModel>));
+            Locator.CurrentMutable.Register(() => new DiagramView(), typeof(IViewFor<DiagramViewModel>));
             Locator.CurrentMutable.Register(() => new AboutView(), typeof(IViewFor<AboutViewModel>));
 
             //Locator.CurrentMutable.RegisterViewsForViewModels(Assembly.GetExecutingAssembly());
@@ -57,6 +60,7 @@ namespace MoneyNote
             Locator.CurrentMutable.Register(() => new MainViewModel(new TransactionService(), new MoneyService(), new SettingsService()), typeof(IRoutableViewModel), typeof(MainViewModel).FullName);
             Locator.CurrentMutable.Register(() => new AccountViewModel(new TransactionService(), new MoneyService()), typeof(IRoutableViewModel), typeof(AccountViewModel).FullName);
             Locator.CurrentMutable.Register(() => new SettingsViewModel(new TransactionService(), new MoneyService(), new SettingsService()), typeof(IRoutableViewModel), typeof(SettingsViewModel).FullName);
+            Locator.CurrentMutable.Register(() => new DiagramViewModel(new TransactionService(), new MoneyService(), new SettingsService()), typeof(IRoutableViewModel), typeof(DiagramViewModel).FullName);
             Locator.CurrentMutable.Register(() => new HistoryViewModel(new TransactionService()), typeof(IRoutableViewModel), typeof(HistoryViewModel).FullName);
             //Locator.CurrentMutable.Register(() => new TermsViewModel(), typeof(IRoutableViewModel), typeof(TermsViewModel).FullName);
             Locator.CurrentMutable.Register(() => new AboutViewModel(), typeof(IRoutableViewModel), typeof(AboutViewModel).FullName);

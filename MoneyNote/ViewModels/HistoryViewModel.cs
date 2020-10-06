@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using I18NPortable;
 using MoneyNote.Models;
+using MoneyNote.Services;
 using MoneyNote.Services.Contracts;
 using ReactiveUI;
 
@@ -29,6 +30,7 @@ namespace MoneyNote
         public ICommand GoAnaliticsCommand { get; set; }
         public ICommand ChangeFilterCommand { get; set; }
         public ICommand SearchCommand { get; set; }
+        public ICommand DiagramCommand { get; set; }
         //Filter
         public ICommand DisplayAllDate { get; set; }
         public ICommand DisplayLastWeek { get; set; }
@@ -50,6 +52,11 @@ namespace MoneyNote
             CreateCommands();
             GetData();
 
+            DiagramCommand = ReactiveCommand.CreateFromObservable(() =>
+            {
+                return HostScreen.Router.Navigate.Execute(new ViewModels.DiagramViewModel(new TransactionService(), new MoneyService(), new SettingsService()));//message: "From History"));
+            });
+
             this.WhenAnyValue(x => x.SearchText)
                 .Where(x => !String.IsNullOrWhiteSpace(x))
                 .Throttle(TimeSpan.FromSeconds(1))
@@ -57,8 +64,6 @@ namespace MoneyNote
         }
         private void CreateCommands()
         {
-
-
             DisplayAllDate = ReactiveCommand.Create(() =>
             {
                 TransactionsList.Clear();
