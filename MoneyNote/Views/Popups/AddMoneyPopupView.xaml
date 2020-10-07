@@ -78,6 +78,7 @@
                     <controls:CustomEntry
                         x:Name="entry"
                         ClearButtonVisibility="WhileEditing"
+                        FontFamily="MainFont"
                         Keyboard="Numeric"
                         Placeholder="{Binding Strings[enter_add_text]}"
                         PlaceholderColor="{StaticResource AboutBackGround}"
@@ -85,11 +86,14 @@
                         TextColor="{StaticResource PopupButton}" />
                 </Frame>
                 <Frame Margin="10,1" Padding="0">
-                    <controls:CustomEntry
+                    <controls:CustomTextEntry
                         x:Name="entryDescription"
                         ClearButtonVisibility="WhileEditing"
+                        FontFamily="MainFont"
+                        Keyboard="Text"
                         Placeholder="{Binding Strings[enter_miss_description]}"
                         PlaceholderColor="{StaticResource AboutBackGround}"
+                        ReturnType="Done"
                         TextColor="{StaticResource PopupButton}" />
                 </Frame>
                 <StackLayout

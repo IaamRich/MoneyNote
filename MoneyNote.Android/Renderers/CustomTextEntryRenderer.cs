@@ -6,12 +6,12 @@ using MoneyNote.Droid.Renderers;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-[assembly: ExportRenderer(typeof(CustomEntry), typeof(CustomEntryRenderer))]
+[assembly: ExportRenderer(typeof(CustomTextEntry), typeof(CustomTextEntryRenderer))]
 namespace MoneyNote.Droid.Renderers
 {
-    class CustomEntryRenderer : EntryRenderer
+    class CustomTextEntryRenderer : EntryRenderer
     {
-        public CustomEntryRenderer(Context context) : base(context)
+        public CustomTextEntryRenderer(Context context) : base(context)
         {
         }
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
@@ -25,10 +25,9 @@ namespace MoneyNote.Droid.Renderers
 #pragma warning disable CS0618 // Type or member is obsolete
                 Control.SetBackgroundDrawable(gd);
 #pragma warning restore CS0618 // Type or member is obsolete
-                Control.SetRawInputType(InputTypes.ClassNumber);
+                Control.SetRawInputType(InputTypes.TextFlagNoSuggestions);
                 //Control.SetHintTextColor(ColorStateList.ValueOf(global::Android.Graphics.Color.Black));
             }
         }
     }
-
 }

@@ -79,15 +79,19 @@
                         x:Name="entry"
                         ClearButtonVisibility="WhileEditing"
                         Keyboard="Numeric"
+                        FontFamily="MainFont"
                         Placeholder="{Binding Strings[enter_bank_text]}"
                         PlaceholderColor="{StaticResource AboutBackGround}"
                         ReturnType="Next"
                         TextColor="{StaticResource PopupButton}" />
                 </Frame>
                 <Frame Margin="10,1" Padding="0">
-                    <controls:CustomEntry
+                    <controls:CustomTextEntry
                         x:Name="entryDescription"
                         ClearButtonVisibility="WhileEditing"
+                        Keyboard="Text"
+                        ReturnType="Done"
+                        FontFamily="MainFont"
                         Placeholder="{Binding Strings[enter_miss_description]}"
                         PlaceholderColor="{StaticResource AboutBackGround}"
                         TextColor="{StaticResource PopupButton}" />

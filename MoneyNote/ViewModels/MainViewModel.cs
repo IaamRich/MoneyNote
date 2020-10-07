@@ -162,7 +162,14 @@ namespace MoneyNote
             {
                 await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value_zero"]), true);
             }
-            else if (SpendValue[0] == '.') await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
+            else if (SpendValue[0] == '.')
+            {
+                await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
+            }
+            else if (SpendValue[0] == '-')
+            {
+                await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_minus"]), true);
+            }
             else await PopupNavigation.Instance.PushAsync(new CommitPopupView(OnSpendFunc), true);
         }
         private async void OnSpendFunc()

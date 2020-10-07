@@ -81,12 +81,14 @@
                     TextColor="{StaticResource ButtonText}"
                     VerticalOptions="FillAndExpand" />
                 <Frame Margin="9,0" Padding="0">
-                    <controls:CustomEntry
+                    <controls:CustomTextEntry
                         x:Name="entry"
                         ClearButtonVisibility="WhileEditing"
-                        Keyboard="Numeric"
+                        FontFamily="MainFont"
+                        Keyboard="Text"
                         Placeholder="{Binding Strings[enter_miss_description]}"
                         PlaceholderColor="{StaticResource AboutBackGround}"
+                        ReturnType="Done"
                         TextColor="{StaticResource PopupButton}" />
                 </Frame>
                 <StackLayout

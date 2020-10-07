@@ -47,6 +47,10 @@ namespace MoneyNote.Views.Popups
                         {
                             PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
                         }
+                        else if (entry.Text[0] == '-')
+                        {
+                            await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_minus"]), true);
+                        }
                         else if (entry.Text[0] == '0')
                         {
                             PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value_zero"]), true);
