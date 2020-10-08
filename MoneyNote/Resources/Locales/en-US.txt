@@ -111,7 +111,7 @@ information = Information
 note = Note
 
 /* Menu */
-menu_diagram = Spend Diagram
+menu_diagram = Diagram
 menu_main = Main
 menu_account = Account
 menu_settings = Settings

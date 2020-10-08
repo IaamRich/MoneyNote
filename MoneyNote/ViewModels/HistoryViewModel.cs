@@ -11,6 +11,7 @@ using MoneyNote.Models;
 using MoneyNote.Services;
 using MoneyNote.Services.Contracts;
 using ReactiveUI;
+using Splat;
 
 namespace MoneyNote
 {
@@ -19,9 +20,9 @@ namespace MoneyNote
         //Used Services
         private static ITransactionService _transactionService;
         //Variables for normal functionality of the page
+        public II18N Strings => I18N.Current;
         public string UrlPathSegment => Strings["menu_history"];
         public IScreen HostScreen { get; }
-        public II18N Strings => I18N.Current;
         //List Variables
         private int lastID = 0;
         public ObservableCollection<TransactionDay> TransactionsList { get; set; } = new ObservableCollection<TransactionDay>();
@@ -49,12 +50,13 @@ namespace MoneyNote
         {
             IsChangeFilterVisible = false;
             _transactionService = transactionService;
+            HostScreen = screen ?? Locator.Current.GetService<IScreen>();
             CreateCommands();
             GetData();
 
             DiagramCommand = ReactiveCommand.CreateFromObservable(() =>
             {
-                return HostScreen.Router.Navigate.Execute(new ViewModels.DiagramViewModel(new TransactionService(), new MoneyService(), new SettingsService()));//message: "From History"));
+                return HostScreen.Router.Navigate.Execute(new ViewModels.DiagramViewModel(new TransactionService(), new MoneyService(), new SettingsService(), message: "From History"));
             });
 
             this.WhenAnyValue(x => x.SearchText)

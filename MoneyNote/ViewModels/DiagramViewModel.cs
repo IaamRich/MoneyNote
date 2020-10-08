@@ -2,6 +2,7 @@
 using MoneyNote.Services.Contracts;
 using ReactiveUI;
 using Splat;
+using Xamarin.Forms;
 
 namespace MoneyNote.ViewModels
 {
@@ -11,16 +12,20 @@ namespace MoneyNote.ViewModels
         private static IMoneyService _moneyService;
         private static ISettingsService _settingsService;
         private static ITransactionService _transactionService;
+
+        private string _message;
         //Variables for normal functionality of the page
         public string UrlPathSegment => Strings["menu_diagram"];
         public II18N Strings => I18N.Current;
         public IScreen HostScreen { get; }
-        public DiagramViewModel(ITransactionService transactionService, IMoneyService moneyService, ISettingsService settingsService, IScreen screen = null)
+        public DiagramViewModel(ITransactionService transactionService, IMoneyService moneyService, ISettingsService settingsService, string message = null, IScreen screen = null)
         {
+            _message = message;
+            HostScreen = screen ?? Locator.Current.GetService<IScreen>();
+            if (!string.IsNullOrEmpty(_message)) Application.Current.MainPage.DisplayAlert("Message", message, "", "ok"); ;
             _transactionService = transactionService;
             _moneyService = moneyService;
             _settingsService = settingsService;
-            HostScreen = screen ?? Locator.Current.GetService<IScreen>();
         }
     }
 }
