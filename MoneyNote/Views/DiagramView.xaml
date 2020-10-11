@@ -9,7 +9,7 @@
     <Grid>
         <Label
             HorizontalOptions="Center"
-            Text="Diagram Page"
+            Text="Page is in development..."
             VerticalOptions="Center" />
     </Grid>
 </rxui:ReactiveContentPage>

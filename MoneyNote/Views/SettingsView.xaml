@@ -228,7 +228,7 @@
 
                             <material:MaterialButton
                                 BackgroundColor="{StaticResource MainGreen}"
-                                Command="{Binding GoAccount}"
+                                Command="{Binding OffAds}"
                                 CornerRadius="10"
                                 Elevation="2"
                                 FontSize="Medium"

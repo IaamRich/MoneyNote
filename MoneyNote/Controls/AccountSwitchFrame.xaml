@@ -5,9 +5,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
     x:Name="this"
     mc:Ignorable="d">
     <StackLayout
+        touch:TouchEff.PressedScale="0.9"
+        touch:TouchEff.RegularAnimationDuration="200"
         BackgroundColor="{StaticResource BackgroundWhite}"
         HeightRequest="70"
         Orientation="Horizontal">

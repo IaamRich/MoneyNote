@@ -31,8 +31,9 @@
                     HeightRequest="50"
                     Orientation="Horizontal"
                     VerticalOptions="Center">
-                    <controls:CustomEntry
+                    <controls:CustomTextEntry
                         Margin="5,2,0,0"
+                        Keyboard="Text"
                         HorizontalOptions="FillAndExpand"
                         Placeholder="{Binding Strings[enter_searching_text]}"
                         ReturnCommand="{Binding SearchingCommand}"

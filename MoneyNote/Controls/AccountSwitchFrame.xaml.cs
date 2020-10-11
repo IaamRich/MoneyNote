@@ -32,7 +32,7 @@ namespace MoneyNote.Controls
                 // wait for the 2 animations to finish...
                 await Task.WhenAll(scaleDownAnimationTask, fadeInAnimationTask);
             };
-            this.GestureRecognizers.Add(tapGestureRecognizer);
+            //this.GestureRecognizers.Add(tapGestureRecognizer);
         }
 
         protected override void OnPropertyChanged([CallerMemberName] string propertyName = null)

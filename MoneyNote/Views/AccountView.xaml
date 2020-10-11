@@ -25,7 +25,6 @@
                     </Grid.RowDefinitions>
                     <!--  Current  -->
                     <Grid>
-
                         <StackLayout
                             Orientation="Vertical"
                             Spacing="0"
