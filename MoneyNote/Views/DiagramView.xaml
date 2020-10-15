@@ -5,11 +5,17 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MoneyNote.ViewModels"
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
+    xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
     x:TypeArguments="local:DiagramViewModel">
     <Grid>
-        <Label
+        <!--<Label
             HorizontalOptions="Center"
             Text="Page is in development..."
-            VerticalOptions="Center" />
+            VerticalOptions="Center" />-->
+        <skia:SKCanvasView PaintSurface="SKCanvasView_PaintSurface">
+            <skia:SKCanvasView.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped" />
+            </skia:SKCanvasView.GestureRecognizers>
+        </skia:SKCanvasView>
     </Grid>
 </rxui:ReactiveContentPage>

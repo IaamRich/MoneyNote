@@ -2,7 +2,6 @@
 using MoneyNote.Services.Contracts;
 using ReactiveUI;
 using Splat;
-using Xamarin.Forms;
 
 namespace MoneyNote.ViewModels
 {
@@ -22,7 +21,7 @@ namespace MoneyNote.ViewModels
         {
             _message = message;
             HostScreen = screen ?? Locator.Current.GetService<IScreen>();
-            if (!string.IsNullOrEmpty(_message)) Application.Current.MainPage.DisplayAlert("Message", message, "", "ok"); ;
+            // if (!string.IsNullOrEmpty(_message)) Application.Current.MainPage.DisplayAlert("Message", message, "", "ok"); ;
             _transactionService = transactionService;
             _moneyService = moneyService;
             _settingsService = settingsService;

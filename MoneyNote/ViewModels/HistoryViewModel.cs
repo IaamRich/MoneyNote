@@ -113,14 +113,30 @@ namespace MoneyNote
             SearchingCommand = ReactiveCommand.Create<string>(searchParameter =>
             {
                 var tempList = new List<Transaction>();
+
                 if (!String.IsNullOrWhiteSpace(searchParameter))
                 {
-                    TransactionsFullList.ForEach(x => x.Note.Contains(searchParameter?.ToLower()));
-                    foreach (var note in TransactionsFullList)
+                    var dec = 0.0m;
+                    if (decimal.TryParse(searchParameter, out dec))
                     {
-                        if (note.Note.ToLower().Contains(searchParameter.ToLower()))
+                        //TransactionsFullList.ForEach(x => x.Value = dec);
+                        foreach (var note in TransactionsFullList)
                         {
-                            tempList.Add(note);
+                            if (note.Value == dec)
+                            {
+                                tempList.Add(note);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        //TransactionsFullList.ForEach(x => x.Note.Contains(searchParameter?.ToLower()));
+                        foreach (var note in TransactionsFullList)
+                        {
+                            if (note.Note.ToLower().Contains(searchParameter.ToLower()))
+                            {
+                                tempList.Add(note);
+                            }
                         }
                     }
                 }
