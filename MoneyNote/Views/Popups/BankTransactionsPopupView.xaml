@@ -77,9 +77,8 @@
                 <Frame Margin="10,1" Padding="0">
                     <controls:CustomEntry
                         x:Name="entry"
-                        ClearButtonVisibility="WhileEditing"
-                        Keyboard="Numeric"
                         FontFamily="MainFont"
+                        Keyboard="Numeric"
                         Placeholder="{Binding Strings[enter_bank_text]}"
                         PlaceholderColor="{StaticResource AboutBackGround}"
                         ReturnType="Next"
@@ -89,11 +88,11 @@
                     <controls:CustomTextEntry
                         x:Name="entryDescription"
                         ClearButtonVisibility="WhileEditing"
-                        Keyboard="Text"
-                        ReturnType="Done"
                         FontFamily="MainFont"
+                        Keyboard="Text"
                         Placeholder="{Binding Strings[enter_miss_description]}"
                         PlaceholderColor="{StaticResource AboutBackGround}"
+                        ReturnType="Done"
                         TextColor="{StaticResource PopupButton}" />
                 </Frame>
                 <StackLayout

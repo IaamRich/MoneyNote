@@ -60,6 +60,11 @@ namespace MoneyNote
             });
 
             this.WhenAnyValue(x => x.SearchText)
+                .Where(x => x == "")
+                .Throttle(TimeSpan.FromSeconds(1))
+                .InvokeCommand(SearchingCommand);
+
+            this.WhenAnyValue(x => x.SearchText)
                 .Where(x => !String.IsNullOrWhiteSpace(x))
                 .Throttle(TimeSpan.FromSeconds(1))
                 .InvokeCommand(SearchingCommand);

@@ -33,6 +33,7 @@
                     VerticalOptions="Center">
                     <controls:CustomTextEntry
                         Margin="5,2,0,0"
+                        ClearButtonVisibility="WhileEditing"
                         HorizontalOptions="FillAndExpand"
                         Keyboard="Text"
                         Placeholder="{Binding Strings[enter_searching_text]}"

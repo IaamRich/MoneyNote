@@ -15,6 +15,7 @@ namespace MoneyNote.Controls
         private void scroll_Scrolled(object sender, Xamarin.Forms.ScrolledEventArgs e)
         {
             arrow.IsVisible = false;
+            textForArrow.IsVisible = false;
         }
     }
 }

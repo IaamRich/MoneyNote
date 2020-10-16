@@ -8,6 +8,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Grid RowSpacing="0">
+        <Label
+            x:Name="textForArrow"
+            Margin="0,15,80,40"
+            HorizontalOptions="End"
+            Text="slide"
+            TextColor="White"
+            VerticalOptions="End" />
         <Grid
             x:Name="arrow"
             Margin="0,15"
