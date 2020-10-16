@@ -23,6 +23,7 @@
                 ColumnDefinitions="*,Auto"
                 ColumnSpacing="0"
                 RowDefinitions="Auto,Auto">
+                <!--  Logo  -->
                 <Grid
                     Margin="15,0,0,0"
                     HorizontalOptions="Start"
@@ -111,7 +112,7 @@
                             <Label
                                 FontFamily="MainFontBold"
                                 Text="{Binding Strings[current_credit]}"
-                                TextColor="{StaticResource PopupButton}" />
+                                TextColor="{StaticResource BoldLabel}" />
                             <Label
                                 HorizontalOptions="EndAndExpand"
                                 Text="{Binding CurrentCredit, StringFormat='{0:F0}'}"

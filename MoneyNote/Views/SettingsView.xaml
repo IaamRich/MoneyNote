@@ -33,7 +33,8 @@
                             FontAttributes="Bold"
                             FontFamily="MainFontBold"
                             FontSize="Large"
-                            Text="{Binding Strings[common]}" />
+                            Text="{Binding Strings[common]}"
+                            TextColor="{StaticResource BoldLabel}" />
                         <!--  Language  -->
                         <StackLayout
                             x:Name="chooseLanguageStack"
@@ -200,7 +201,8 @@
                             FontAttributes="Bold"
                             FontFamily="MainFontBold"
                             FontSize="Large"
-                            Text="{Binding Strings[money_notes]}" />
+                            Text="{Binding Strings[money_notes]}"
+                            TextColor="{StaticResource BoldLabel}" />
                         <!--  Reset all  -->
                         <StackLayout HeightRequest="70" Orientation="Horizontal">
                             <Label
@@ -274,7 +276,8 @@
                             FontAttributes="Bold"
                             FontFamily="MainFontBold"
                             FontSize="Large"
-                            Text="{Binding Strings[other]}" />
+                            Text="{Binding Strings[other]}"
+                            TextColor="{StaticResource BoldLabel}" />
                         <Grid HeightRequest="70">
                             <StackLayout Orientation="Horizontal">
                                 <Label

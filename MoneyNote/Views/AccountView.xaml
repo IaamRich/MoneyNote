@@ -74,6 +74,7 @@
                                 FontSize="Large"
                                 HorizontalOptions="Start"
                                 Text="{Binding Strings[bills]}"
+                                TextColor="{StaticResource BoldLabel}"
                                 VerticalOptions="End" />
                             <controls:AccountSwitchFrame
                                 Command="{Binding MyCashCommand}"
@@ -103,6 +104,7 @@
                                 FontSize="Large"
                                 HorizontalOptions="Start"
                                 Text="{Binding Strings[savings]}"
+                                TextColor="{StaticResource BoldLabel}"
                                 VerticalOptions="End" />
                             <controls:AccountSwitchFrame
                                 Command="{Binding MySavingsCommand}"
@@ -132,6 +134,7 @@
                                 FontSize="Large"
                                 HorizontalOptions="Start"
                                 Text="{Binding Strings[income_outlay]}"
+                                TextColor="{StaticResource BoldLabel}"
                                 VerticalOptions="End" />
                             <controls:AccountSwitchFrame
                                 Command="{Binding MyIncomeCommand}"
@@ -175,6 +178,7 @@
                                 FontSize="Large"
                                 HorizontalOptions="Start"
                                 Text="{Binding Strings[credits]}"
+                                TextColor="{StaticResource BoldLabel}"
                                 VerticalOptions="End" />
                             <controls:AccountSwitchFrame
                                 Command="{Binding MyCreditCommand}"
