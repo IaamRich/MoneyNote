@@ -1,34 +1,64 @@
-﻿using MoneyNote.ViewModels;
+﻿using System.Collections.Generic;
+using Microcharts;
+using MoneyNote.ViewModels;
 using ReactiveUI.XamForms;
 using SkiaSharp;
-using SkiaSharp.Views.Forms;
-using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Entry = Microcharts.ChartEntry;
 
 namespace MoneyNote.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DiagramView : ReactiveContentPage<DiagramViewModel>
     {
+        List<Entry> entries = new List<Entry>
+        {
+            new Entry(200)
+            {
+                Color = SKColor.Parse("#FF1493"),
+                Label = "January",
+                ValueLabel = "200",
+            },
+            new Entry(400)
+            {
+                Color = SKColor.Parse("#00BFFF"),
+                Label = "February",
+                ValueLabel = "400"
+            },
+            new Entry(-100)
+            {
+                Color = SKColor.Parse("#00CED1"),
+                Label = "March",
+                ValueLabel = "100"
+            }
+        };
+
         //Basics 2 variable
-        public bool ShowFill { get; set; }
-        //Basics 4 variable
-        SKCanvasView canvasView;
+        //public bool ShowFill { get; set; }
+        ////Basics 4 variable
+        //SKCanvasView canvasView;
         public DiagramView()
         {
             InitializeComponent();
+
+            //chart.Chart = new RadialGaugeChart { Entries = entries };
+            //chart.Chart = new BarChart { Entries = entries };
+            chart.Chart = new DonutChart { Entries = entries, BackgroundColor = SKColor.Parse("#000000"), LabelTextSize = 30 };
+            //chart.Chart = new PointChart { Entries = entries };
+
             //Title = "GGGGG";
             //canvasView = new SKCanvasView();
             //canvasView.PaintSurface += SKCanvasView_PaintSurface;
             //Content = canvasView;
         }
 
-        private void TapGestureRecognizer_Tapped(object sender, System.EventArgs e)
-        {
-            ShowFill ^= true;
-            (sender as SKCanvasView).InvalidateSurface();
-        }
+        //private void TapGestureRecognizer_Tapped(object sender, System.EventArgs e)
+        //{
+        //    ShowFill ^= true;
+        //    (sender as SKCanvasView).InvalidateSurface();
+        //}
 
+        /*
         private void SKCanvasView_PaintSurface(object sender, SKPaintSurfaceEventArgs e)
         {
             SKImageInfo info = e.Info;
@@ -87,5 +117,6 @@ namespace MoneyNote.Views
             //y += fontSpacing;
             //canvas.DrawText(info.Size.ToString(), x + indent, y, paint);
         }
+        */
     }
 }
