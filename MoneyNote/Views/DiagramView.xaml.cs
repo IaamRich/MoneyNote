@@ -25,11 +25,11 @@ namespace MoneyNote.Views
                 Label = "February",
                 ValueLabel = "400"
             },
-            new Entry(-100)
+            new Entry(300)
             {
-                Color = SKColor.Parse("#00CED1"),
+                Color = SKColor.Parse("#5f6f2e "),
                 Label = "March",
-                ValueLabel = "100"
+                ValueLabel = "300"
             }
         };
 
@@ -43,7 +43,16 @@ namespace MoneyNote.Views
 
             //chart.Chart = new RadialGaugeChart { Entries = entries };
             //chart.Chart = new BarChart { Entries = entries };
-            chart.Chart = new DonutChart { Entries = entries, BackgroundColor = SKColor.Parse("#000000"), LabelTextSize = 30 };
+            chart.Chart = new DonutChart
+            {
+                Entries = entries,
+                BackgroundColor = SKColor.Parse("#ffffff"),
+                LabelTextSize = 50,
+                LabelColor = SKColor.Parse("#6d6a61"),
+                LabelMode = LabelMode.None,
+                IsAnimated = true,
+                GraphPosition = GraphPosition.AutoFill
+            };
             //chart.Chart = new PointChart { Entries = entries };
 
             //Title = "GGGGG";

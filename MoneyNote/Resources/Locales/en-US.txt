@@ -48,6 +48,9 @@ history_description = Description:
 history_transaction_date = Note date:
 enter_searching_text = Enter Searching Text
 
+/* Diagram Page */
+outlay_by_percentage = Outlay by percentage
+
 /* Settings Page */
 default_area = Default spend area
 money_notes = Money notes

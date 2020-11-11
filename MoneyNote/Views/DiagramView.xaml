@@ -8,15 +8,45 @@
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
     xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
     x:TypeArguments="local:DiagramViewModel">
-    <Grid RowDefinitions="*,3*">
-        <!--<skia:SKCanvasView PaintSurface="SKCanvasView_PaintSurface">
-            <skia:SKCanvasView.GestureRecognizers>
-                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped" />
-            </skia:SKCanvasView.GestureRecognizers>
-        </skia:SKCanvasView>-->
-        <forms:ChartView
-            x:Name="chart"
-            BackgroundColor="Transparent"
-            HeightRequest="100" />
-    </Grid>
+    <ScrollView>
+        <StackLayout>
+            <Grid Margin="5,0" ColumnDefinitions="*,10*,*">
+                <forms:ChartView
+                    x:Name="chart"
+                    Grid.Column="1"
+                    BackgroundColor="Transparent"
+                    HeightRequest="300" />
+                <ImageButton
+                    BackgroundColor="Transparent"
+                    Rotation="180"
+                    Source="arrow_right.png" />
+                <ImageButton
+                    Grid.Column="2"
+                    BackgroundColor="Transparent"
+                    Source="arrow_right.png" />
+                <Label
+                    Grid.Column="1"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Text="November"
+                    VerticalOptions="Center" />
+            </Grid>
+            <Label
+                Margin="15,0"
+                FontAttributes="Bold"
+                FontFamily="MainFontBold"
+                FontSize="Large"
+                Text="{Binding Strings[outlay_by_percentage]}"
+                TextColor="{StaticResource BoldLabel}" />
+            <StackLayout BindableLayout.ItemsSource="{Binding DiagramList}" Orientation="Vertical">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Label Text="{Binding Name}" />
+                        </Grid>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
 </rxui:ReactiveContentPage>
