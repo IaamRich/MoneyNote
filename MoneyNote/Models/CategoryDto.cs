@@ -16,6 +16,7 @@ namespace MoneyNote.Models
         public string Image { get; set; }
         public CategoryType Type { get; set; }
         public bool IsSelected { get; set; }
+        public string Percentage { get; set; }
     }
 
     public enum CategoryType

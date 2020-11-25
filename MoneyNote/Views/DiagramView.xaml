@@ -41,8 +41,37 @@
             <StackLayout BindableLayout.ItemsSource="{Binding DiagramList}" Orientation="Vertical">
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
-                        <Grid>
-                            <Label Text="{Binding Name}" />
+                        <Grid
+                            Margin="10,0"
+                            ColumnDefinitions="Auto,*,Auto"
+                            HorizontalOptions="Start"
+                            RowDefinitions="50">
+                            <Image
+                                x:Name="image"
+                                HeightRequest="50"
+                                Source="{Binding Image}" />
+                            <Label
+                                x:Name="label"
+                                Grid.Column="1"
+                                FontSize="Medium"
+                                Text="{Binding Name}"
+                                TextColor="{StaticResource PopupButton}"
+                                VerticalOptions="Center" />
+                            <Label
+                                Grid.Column="2"
+                                FontSize="Medium"
+                                HorizontalOptions="End"
+                                Text="{Binding Percentage}"
+                                TextColor="{StaticResource PopupButton}"
+                                VerticalOptions="Center" />
+                            <!--<Grid.Triggers>
+                                    <DataTrigger
+                                        Binding="{Binding IsSelected}"
+                                        TargetType="Grid"
+                                        Value="True">
+                                        <Setter Property="IsVisible" Value="False" />
+                                    </DataTrigger>
+                                </Grid.Triggers>-->
                         </Grid>
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>

@@ -207,7 +207,6 @@
                             ItemsSource="{Binding LastTransactionsList}">
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
-
                                     <Grid
                                         Margin="5"
                                         Padding="5,0,10,0"

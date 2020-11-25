@@ -3,6 +3,7 @@ using Microcharts;
 using MoneyNote.ViewModels;
 using ReactiveUI.XamForms;
 using SkiaSharp;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Entry = Microcharts.ChartEntry;
 
@@ -43,10 +44,11 @@ namespace MoneyNote.Views
 
             //chart.Chart = new RadialGaugeChart { Entries = entries };
             //chart.Chart = new BarChart { Entries = entries };
+            var color = (Color)App.Current.Resources["RedAlert"];
             chart.Chart = new DonutChart
             {
                 Entries = entries,
-                BackgroundColor = SKColor.Parse("#ffffff"),
+                BackgroundColor = SKColor.Parse("#00ec7788"),
                 LabelTextSize = 50,
                 LabelColor = SKColor.Parse("#6d6a61"),
                 LabelMode = LabelMode.None,
