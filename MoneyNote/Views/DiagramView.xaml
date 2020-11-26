@@ -24,12 +24,20 @@
                     Grid.Column="2"
                     BackgroundColor="Transparent"
                     Source="arrow_right.png" />
-                <Label
+                <StackLayout
                     Grid.Column="1"
                     HorizontalOptions="Center"
-                    HorizontalTextAlignment="Center"
-                    Text="November"
-                    VerticalOptions="Center" />
+                    VerticalOptions="Center">
+                    <Label
+                        FontSize="Medium"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding CurrentMonthText}" />
+                    <Label
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding CurrentOutlay, StringFormat='{0:0.00}'}" />
+                </StackLayout>
+
             </Grid>
             <Label
                 Margin="15,0"
@@ -61,7 +69,7 @@
                                 Grid.Column="2"
                                 FontSize="Medium"
                                 HorizontalOptions="End"
-                                Text="{Binding Percentage, StringFormat='{0:0.00}%'}"
+                                Text="{Binding Percentage, StringFormat='{0:0.0}%'}"
                                 TextColor="{StaticResource PopupButton}"
                                 VerticalOptions="Center" />
                             <!--<Grid.Triggers>

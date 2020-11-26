@@ -56,7 +56,15 @@ namespace MoneyNote
 
             DiagramCommand = ReactiveCommand.CreateFromObservable(() =>
             {
-                return HostScreen.Router.Navigate.Execute(new ViewModels.DiagramViewModel(new TransactionService(), new MoneyService(), new SettingsService(), message: "From History"));
+                if (TransactionsFullList != null && TransactionsFullList.Count > 0)
+                {
+                    return HostScreen.Router.Navigate.Execute(new ViewModels.DiagramViewModel(new TransactionService(), TransactionsFullList));
+                }
+                else
+                {
+                    App.Current.MainPage.DisplayAlert("Alert", "No Data", "ok");
+                    return null;
+                }
             });
 
             this.WhenAnyValue(x => x.SearchText)

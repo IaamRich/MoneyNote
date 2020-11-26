@@ -1,9 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using Microcharts;
+using MoneyNote.Models;
 using MoneyNote.ViewModels;
+using ReactiveUI;
 using ReactiveUI.XamForms;
 using SkiaSharp;
-using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Entry = Microcharts.ChartEntry;
 
@@ -12,58 +15,73 @@ namespace MoneyNote.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DiagramView : ReactiveContentPage<DiagramViewModel>
     {
-
-
-        DiagramViewModel viewModel;
         //Basics 2 variable
         //public bool ShowFill { get; set; }
         ////Basics 4 variable
         //SKCanvasView canvasView;
+        private ObservableCollection<Category> List = new ObservableCollection<Category>();
+        private ObservableCollection<Entry> entries = new ObservableCollection<Entry>();
         public DiagramView()
         {
             InitializeComponent();
-            //this.BindingContext = viewModel = new DiagramViewModel();
+            this.WhenAnyValue(x => x.ViewModel.DiagramList)
+                .BindTo(this, view => DoFunction(view.List));
 
-            List<Entry> entries = new List<Entry>
-            {
-                new Entry(200)
-                {
-                    Color = SKColor.Parse("#FF1493"),
-                    Label = "January",
-                    ValueLabel = "200",
-                },
-                new Entry(400)
-                {
-                    Color = SKColor.Parse("#00BFFF"),
-                    Label = "February",
-                    ValueLabel = "400"
-                },
-                new Entry(300)
-                {
-                    Color = SKColor.Parse("#5f6f2e "),
-                    Label = "March",
-                    ValueLabel = "300"
-                }
-            };
+            //{
+            //    new Entry(200)
+            //    {
+            //        Color = SKColor.Parse("#FF1493"),
+            //        Label = "January",
+            //        ValueLabel = "200",
+            //    },
+            //    new Entry(400)
+            //    {
+            //        Color = SKColor.Parse("#00BFFF"),
+            //        Label = "February",
+            //        ValueLabel = "400"
+            //    },
+            //    new Entry(300)
+            //    {
+            //        Color = SKColor.Parse("#5f6f2e "),
+            //        Label = "March",
+            //        ValueLabel = "300"
+            //    }
+            //};
             //chart.Chart = new RadialGaugeChart { Entries = entries };
             //chart.Chart = new BarChart { Entries = entries };
-            var color = (Color)App.Current.Resources["RedAlert"];
-            chart.Chart = new DonutChart
-            {
-                Entries = entries,
-                BackgroundColor = SKColor.Parse("#00ec7788"),
-                LabelTextSize = 50,
-                LabelColor = SKColor.Parse("#6d6a61"),
-                LabelMode = LabelMode.None,
-                IsAnimated = true,
-                GraphPosition = GraphPosition.AutoFill
-            };
+            //var color = (Color)App.Current.Resources["RedAlert"];
+
             //chart.Chart = new PointChart { Entries = entries };
 
             //Title = "GGGGG";
             //canvasView = new SKCanvasView();
             //canvasView.PaintSurface += SKCanvasView_PaintSurface;
             //Content = canvasView;
+        }
+        private async Task DoFunction(ObservableCollection<Category> list)
+        {
+            foreach (var item in list)
+            {
+                float piece = (float)item.Percentage;
+                var random = new Random();
+                var color = String.Format("#{0:X6}", random.Next(0x1000000)); // = "#A197B9"
+                entries.Add(new Entry(piece)
+                {
+                    Color = SKColor.Parse(color),
+                    Label = item.Name,
+                    ValueLabel = String.Format("{0:0.00}%", item.Percentage)
+                });
+            }
+            chart.Chart = new DonutChart
+            {
+                Entries = entries,
+                BackgroundColor = SKColor.Parse("#00ec7788"),
+                LabelTextSize = 20,
+                LabelColor = SKColor.Parse("#ff0000"),
+                LabelMode = LabelMode.None,
+                IsAnimated = true,
+                GraphPosition = GraphPosition.AutoFill
+            };
         }
 
         //private void TapGestureRecognizer_Tapped(object sender, System.EventArgs e)

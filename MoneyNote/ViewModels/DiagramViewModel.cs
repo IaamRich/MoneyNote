@@ -1,4 +1,6 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using I18NPortable;
 using MoneyNote.Models;
@@ -10,42 +12,44 @@ namespace MoneyNote.ViewModels
 {
     public class DiagramViewModel : ReactiveObject, IRoutableViewModel
     {
-        //Used Services
-        private static IMoneyService _moneyService;
-        private static ISettingsService _settingsService;
-        private static ITransactionService _transactionService;
-        private string _message;
-        private decimal market, restaurant, transport, business, network, entertainment;
         //Variables for normal functionality of the page
+        private static ITransactionService _transactionService;
         public string UrlPathSegment => Strings["menu_diagram"];
         public II18N Strings => I18N.Current;
         public IScreen HostScreen { get; }
         //Variables
+        private decimal market, restaurant, transport, business, network, entertainment;
+        public DateTime CurrentDate { get; set; }
+        public string CurrentMonthText { get; set; }
+        public decimal CurrentOutlay { get; set; } = 0;
         public ObservableCollection<Category> DiagramList { get; set; } = new ObservableCollection<Category>();
-        public DiagramViewModel(ITransactionService transactionService, IMoneyService moneyService, ISettingsService settingsService, string message = null, IScreen screen = null)
+        private List<Transaction> AllData { get; set; } = new List<Transaction>();
+        public DiagramViewModel(ITransactionService transactionService, List<Transaction> alldata = null, IScreen screen = null)
         {
-            _message = message;
             HostScreen = screen ?? Locator.Current.GetService<IScreen>();
-            // if (!string.IsNullOrEmpty(_message)) Application.Current.MainPage.DisplayAlert("Message", message, "", "ok"); ;
             _transactionService = transactionService;
-            _moneyService = moneyService;
-            _settingsService = settingsService;
-            GetData();
+            CurrentDate = DateTime.Now;
+            CurrentMonthText = DateTime.Now.ToString("MMMM");
+            if (AllData.Count == 0 && alldata != null)
+            {
+                AllData = alldata;
+                GetData();
+            }
         }
 
         private void GetData()
         {
-            GetCategories();
+            if (AllData == null) return;
+            GetOutlayByMonth(CurrentDate);
         }
-
-        private async void GetCategories()
+        private void GetOutlayByMonth(DateTime date)
         {
-            var data = await _transactionService.GetAll();
-            var outlay = from transaction in data where transaction.Type == TransactionType.Spend select transaction;
+            var outlay = from transaction in AllData where (transaction.Type == TransactionType.Spend && transaction.Date.Month == date.Month) select transaction;
             decimal onePercent = outlay.Sum(x => x.Value) / 100;
 
             foreach (var note in outlay)
             {
+                CurrentOutlay += note.Value;
                 switch (note.Category.Type)
                 {
                     case CategoryType.Market:

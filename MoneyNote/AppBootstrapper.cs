@@ -17,7 +17,7 @@ namespace MoneyNote
             RegisterViews();
             RegisterViewModels();
 
-            //Router.Navigate.Execute(new MasterViewModel());
+            //Router.Navigate.Execute(new DiagramViewModel(new TransactionService()));
         }
 
         public RoutingState Router { get; }
@@ -60,7 +60,7 @@ namespace MoneyNote
             Locator.CurrentMutable.Register(() => new MainViewModel(new TransactionService(), new MoneyService(), new SettingsService()), typeof(IRoutableViewModel), typeof(MainViewModel).FullName);
             Locator.CurrentMutable.Register(() => new AccountViewModel(new TransactionService(), new MoneyService()), typeof(IRoutableViewModel), typeof(AccountViewModel).FullName);
             Locator.CurrentMutable.Register(() => new SettingsViewModel(new TransactionService(), new MoneyService(), new SettingsService()), typeof(IRoutableViewModel), typeof(SettingsViewModel).FullName);
-            Locator.CurrentMutable.Register(() => new DiagramViewModel(new TransactionService(), new MoneyService(), new SettingsService()), typeof(IRoutableViewModel), typeof(DiagramViewModel).FullName);
+            Locator.CurrentMutable.Register(() => new DiagramViewModel(new TransactionService()), typeof(IRoutableViewModel), typeof(DiagramViewModel).FullName);
             Locator.CurrentMutable.Register(() => new HistoryViewModel(new TransactionService()), typeof(IRoutableViewModel), typeof(HistoryViewModel).FullName);
             //Locator.CurrentMutable.Register(() => new TermsViewModel(), typeof(IRoutableViewModel), typeof(TermsViewModel).FullName);
             Locator.CurrentMutable.Register(() => new AboutViewModel(), typeof(IRoutableViewModel), typeof(AboutViewModel).FullName);
