@@ -12,28 +12,9 @@ namespace MoneyNote.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DiagramView : ReactiveContentPage<DiagramViewModel>
     {
-        List<Entry> entries = new List<Entry>
-        {
-            new Entry(200)
-            {
-                Color = SKColor.Parse("#FF1493"),
-                Label = "January",
-                ValueLabel = "200",
-            },
-            new Entry(400)
-            {
-                Color = SKColor.Parse("#00BFFF"),
-                Label = "February",
-                ValueLabel = "400"
-            },
-            new Entry(300)
-            {
-                Color = SKColor.Parse("#5f6f2e "),
-                Label = "March",
-                ValueLabel = "300"
-            }
-        };
 
+
+        DiagramViewModel viewModel;
         //Basics 2 variable
         //public bool ShowFill { get; set; }
         ////Basics 4 variable
@@ -41,7 +22,29 @@ namespace MoneyNote.Views
         public DiagramView()
         {
             InitializeComponent();
+            //this.BindingContext = viewModel = new DiagramViewModel();
 
+            List<Entry> entries = new List<Entry>
+            {
+                new Entry(200)
+                {
+                    Color = SKColor.Parse("#FF1493"),
+                    Label = "January",
+                    ValueLabel = "200",
+                },
+                new Entry(400)
+                {
+                    Color = SKColor.Parse("#00BFFF"),
+                    Label = "February",
+                    ValueLabel = "400"
+                },
+                new Entry(300)
+                {
+                    Color = SKColor.Parse("#5f6f2e "),
+                    Label = "March",
+                    ValueLabel = "300"
+                }
+            };
             //chart.Chart = new RadialGaugeChart { Entries = entries };
             //chart.Chart = new BarChart { Entries = entries };
             var color = (Color)App.Current.Resources["RedAlert"];

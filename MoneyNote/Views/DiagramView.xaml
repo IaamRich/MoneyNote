@@ -61,7 +61,7 @@
                                 Grid.Column="2"
                                 FontSize="Medium"
                                 HorizontalOptions="End"
-                                Text="{Binding Percentage}"
+                                Text="{Binding Percentage, StringFormat='{0:0.00}%'}"
                                 TextColor="{StaticResource PopupButton}"
                                 VerticalOptions="Center" />
                             <!--<Grid.Triggers>
