@@ -3,11 +3,21 @@
     x:Class="MoneyNote.Views.DiagramView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converter="clr-namespace:MoneyNote.Converters"
     xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
     xmlns:local="clr-namespace:MoneyNote.ViewModels"
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
     xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
     x:TypeArguments="local:DiagramViewModel">
+    <rxui:ReactiveContentPage.Resources>
+        <ResourceDictionary>
+            <converter:MonthConverter x:Key="checkCurrentMonth" />
+            <converter:MinimumMonthConverter x:Key="checkMinimumMonth" />
+        </ResourceDictionary>
+    </rxui:ReactiveContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding FilterCommand}" IconImageSource="filter.png" />
+    </ContentPage.ToolbarItems>
     <ScrollView>
         <StackLayout>
             <Grid Margin="5,0" ColumnDefinitions="*,10*,*">
@@ -18,12 +28,32 @@
                     HeightRequest="300" />
                 <ImageButton
                     BackgroundColor="Transparent"
+                    Command="{Binding GoMonthBack}"
                     Rotation="180"
-                    Source="arrow_right.png" />
+                    Source="arrow_right.png">
+                    <ImageButton.Triggers>
+                        <DataTrigger
+                            Binding="{Binding CurrentDate, Converter={StaticResource checkMinimumMonth}}"
+                            TargetType="ImageButton"
+                            Value="True">
+                            <Setter Property="IsVisible" Value="False" />
+                        </DataTrigger>
+                    </ImageButton.Triggers>
+                </ImageButton>
                 <ImageButton
                     Grid.Column="2"
                     BackgroundColor="Transparent"
-                    Source="arrow_right.png" />
+                    Command="{Binding GoMonthForward}"
+                    Source="arrow_right.png">
+                    <ImageButton.Triggers>
+                        <DataTrigger
+                            Binding="{Binding CurrentDate, Converter={StaticResource checkCurrentMonth}}"
+                            TargetType="ImageButton"
+                            Value="True">
+                            <Setter Property="IsVisible" Value="False" />
+                        </DataTrigger>
+                    </ImageButton.Triggers>
+                </ImageButton>
                 <StackLayout
                     Grid.Column="1"
                     HorizontalOptions="Center"
