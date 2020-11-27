@@ -24,22 +24,23 @@ namespace MoneyNote.ViewModels
         public decimal CurrentOutlay { get; set; } = 0;
         public ObservableCollection<Category> DiagramList { get; set; } = new ObservableCollection<Category>();
         private List<Transaction> AllData { get; set; } = new List<Transaction>();
-        public DiagramViewModel(ITransactionService transactionService, List<Transaction> alldata = null, IScreen screen = null)
+        public DiagramViewModel(ITransactionService transactionService, string message = null, IScreen screen = null)
         {
             HostScreen = screen ?? Locator.Current.GetService<IScreen>();
             _transactionService = transactionService;
             CurrentDate = DateTime.Now;
             CurrentMonthText = DateTime.Now.ToString("MMMM");
-            if (AllData.Count == 0 && alldata != null)
-            {
-                AllData = alldata;
-                GetData();
-            }
+            GetData();
         }
 
         private void GetData()
         {
-            if (AllData == null) return;
+            GetCategories();
+        }
+
+        private async void GetCategories()
+        {
+            AllData = await _transactionService.GetAll();
             GetOutlayByMonth(CurrentDate);
         }
         private void GetOutlayByMonth(DateTime date)

@@ -58,7 +58,7 @@ namespace MoneyNote
             {
                 if (TransactionsFullList != null && TransactionsFullList.Count > 0)
                 {
-                    return HostScreen.Router.Navigate.Execute(new ViewModels.DiagramViewModel(new TransactionService(), TransactionsFullList));
+                    return HostScreen.Router.Navigate.Execute(new ViewModels.DiagramViewModel(new TransactionService()/*, TransactionsFullList*/));
                 }
                 else
                 {
