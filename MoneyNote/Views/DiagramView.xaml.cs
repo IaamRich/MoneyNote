@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.ObjectModel;
-using System.Threading.Tasks;
+using System.Collections.Generic;
 using Microcharts;
-using MoneyNote.Models;
+using MoneyNote.Services;
 using MoneyNote.ViewModels;
-using ReactiveUI;
 using ReactiveUI.XamForms;
 using SkiaSharp;
 using Xamarin.Forms.Xaml;
@@ -19,14 +17,24 @@ namespace MoneyNote.Views
         //public bool ShowFill { get; set; }
         ////Basics 4 variable
         //SKCanvasView canvasView;
-        private ObservableCollection<Category> List = new ObservableCollection<Category>();
-        private ObservableCollection<Entry> entries = new ObservableCollection<Entry>();
         public DiagramView()
         {
             InitializeComponent();
-            this.WhenAnyValue(x => x.ViewModel.DiagramList)
-                .BindTo(this, view => DoFunction(view.List));
-
+            List<Entry> entries = new List<Entry>();
+            BindingContext = ViewModel = new DiagramViewModel(new TransactionService());
+            var list = ViewModel.DiagramList;
+            foreach (var item in list)
+            {
+                float piece = (float)item.Percentage;
+                var random = new Random();
+                var color = String.Format("#{0:X6}", random.Next(0x1000000)); // = "#A197B9"
+                entries.Add(new Entry(piece)
+                {
+                    Color = SKColor.Parse(color),
+                    Label = item.Name,
+                    ValueLabel = String.Format("{0:0.00}%", item.Percentage)
+                });
+            }
             //{
             //    new Entry(200)
             //    {
@@ -50,28 +58,6 @@ namespace MoneyNote.Views
             //chart.Chart = new RadialGaugeChart { Entries = entries };
             //chart.Chart = new BarChart { Entries = entries };
             //var color = (Color)App.Current.Resources["RedAlert"];
-
-            //chart.Chart = new PointChart { Entries = entries };
-
-            //Title = "GGGGG";
-            //canvasView = new SKCanvasView();
-            //canvasView.PaintSurface += SKCanvasView_PaintSurface;
-            //Content = canvasView;
-        }
-        private async Task DoFunction(ObservableCollection<Category> list)
-        {
-            foreach (var item in list)
-            {
-                float piece = (float)item.Percentage;
-                var random = new Random();
-                var color = String.Format("#{0:X6}", random.Next(0x1000000)); // = "#A197B9"
-                entries.Add(new Entry(piece)
-                {
-                    Color = SKColor.Parse(color),
-                    Label = item.Name,
-                    ValueLabel = String.Format("{0:0.00}%", item.Percentage)
-                });
-            }
             chart.Chart = new DonutChart
             {
                 Entries = entries,
@@ -82,6 +68,12 @@ namespace MoneyNote.Views
                 IsAnimated = true,
                 GraphPosition = GraphPosition.AutoFill
             };
+            //chart.Chart = new PointChart { Entries = entries };
+
+            //Title = "GGGGG";
+            //canvasView = new SKCanvasView();
+            //canvasView.PaintSurface += SKCanvasView_PaintSurface;
+            //Content = canvasView;
         }
 
         //private void TapGestureRecognizer_Tapped(object sender, System.EventArgs e)
