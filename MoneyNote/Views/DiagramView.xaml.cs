@@ -23,7 +23,7 @@ namespace MoneyNote.Views
             {
                 float piece = (float)item.Percentage;
                 var random = new Random();
-                var color = String.Format("#{0:X6}", random.Next(0x1000000)); // = "#A197B9"
+                var color = String.Format("#{0:X6}", random.Next(0x1000000));
                 entries.Add(new Entry(piece)
                 {
                     Color = SKColor.Parse(color),

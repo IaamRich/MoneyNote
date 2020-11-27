@@ -33,7 +33,7 @@ namespace MoneyNote.ViewModels
             _transactionService = transactionService;
             CurrentDate = DateTime.Now;
             CurrentMonthText = DateTime.Now.ToString("MMMM");
-            GetData();
+            GetCategories();
             CreateCommands();
         }
         private void CreateCommands()
@@ -41,26 +41,22 @@ namespace MoneyNote.ViewModels
             GoMonthBack = ReactiveCommand.Create(() =>
             {
                 CurrentDate = CurrentDate.AddMonths(-1);
-                CurrentMonthText = CurrentDate.ToString("MMMM");
-                CurrentOutlay = 0;
-                DiagramList = new ObservableCollection<Category>();
                 RefreshData();
                 GetOutlayByMonth(CurrentDate);
             });
             GoMonthForward = ReactiveCommand.Create(() =>
             {
                 CurrentDate = CurrentDate.AddMonths(1);
-                CurrentMonthText = CurrentDate.ToString("MMMM");
-                CurrentOutlay = 0;
-                DiagramList = new ObservableCollection<Category>();
                 RefreshData();
                 GetOutlayByMonth(CurrentDate);
             });
         }
-
-        private void GetData()
+        private void RefreshData()
         {
-            GetCategories();
+            CurrentOutlay = 0;
+            CurrentMonthText = CurrentDate.ToString("MMMM");
+            DiagramList = new ObservableCollection<Category>();
+            market = restaurant = transport = business = network = entertainment = 0;
         }
 
         private async void GetCategories()
@@ -146,9 +142,6 @@ namespace MoneyNote.ViewModels
                     return 0;
             }
         }
-        private void RefreshData()
-        {
-            market = restaurant = transport = business = network = entertainment = 0;
-        }
+
     }
 }
