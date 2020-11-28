@@ -30,6 +30,7 @@
                     BackgroundColor="Transparent"
                     Command="{Binding GoMonthBack}"
                     Rotation="180"
+                    Clicked="ImageButton_Clicked"
                     Source="arrow_right.png">
                     <ImageButton.Triggers>
                         <DataTrigger
@@ -42,6 +43,7 @@
                 </ImageButton>
                 <ImageButton
                     Grid.Column="2"
+                    Clicked="ImageButton_Clicked"
                     BackgroundColor="Transparent"
                     Command="{Binding GoMonthForward}"
                     Source="arrow_right.png">
@@ -81,7 +83,7 @@
                     <DataTemplate>
                         <Grid
                             Margin="10,0"
-                            ColumnDefinitions="Auto,*,Auto"
+                            ColumnDefinitions="Auto,*,30,Auto"
                             HorizontalOptions="Start"
                             RowDefinitions="50">
                             <Image
@@ -95,8 +97,10 @@
                                 Text="{Binding Name}"
                                 TextColor="{StaticResource PopupButton}"
                                 VerticalOptions="Center" />
+
+                            <BoxView Grid.Column="2" BackgroundColor="{Binding Color}" />
                             <Label
-                                Grid.Column="2"
+                                Grid.Column="3"
                                 FontSize="Medium"
                                 HorizontalOptions="End"
                                 Text="{Binding Percentage, StringFormat='{0:0.0}%'}"

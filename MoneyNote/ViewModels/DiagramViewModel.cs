@@ -19,11 +19,10 @@ namespace MoneyNote.ViewModels
         public II18N Strings => I18N.Current;
         public IScreen HostScreen { get; }
         //Variables
-        private decimal market, restaurant, transport, business, network, entertainment;
         public DateTime CurrentDate { get; set; }
         public string CurrentMonthText { get; set; }
         public decimal CurrentOutlay { get; set; } = 0;
-        public ObservableCollection<Category> DiagramList { get; set; } = new ObservableCollection<Category>();
+        public ObservableCollection<PercentageCategory> DiagramList { get; set; } = new ObservableCollection<PercentageCategory>();
         private List<Transaction> AllData { get; set; } = new List<Transaction>();
         public ICommand GoMonthBack { get; set; }
         public ICommand GoMonthForward { get; set; }
@@ -35,6 +34,11 @@ namespace MoneyNote.ViewModels
             CurrentMonthText = DateTime.Now.ToString("MMMM");
             GetCategories();
             CreateCommands();
+        }
+        private async void GetCategories()
+        {
+            AllData = await _transactionService.GetAll();
+            GetOutlayByMonth(CurrentDate);
         }
         private void CreateCommands()
         {
@@ -55,14 +59,7 @@ namespace MoneyNote.ViewModels
         {
             CurrentOutlay = 0;
             CurrentMonthText = CurrentDate.ToString("MMMM");
-            DiagramList = new ObservableCollection<Category>();
-            market = restaurant = transport = business = network = entertainment = 0;
-        }
-
-        private async void GetCategories()
-        {
-            AllData = await _transactionService.GetAll();
-            GetOutlayByMonth(CurrentDate);
+            DiagramList = new ObservableCollection<PercentageCategory>();
         }
         private void GetOutlayByMonth(DateTime date)
         {
@@ -71,77 +68,52 @@ namespace MoneyNote.ViewModels
 
             if (outlay.Any())
             {
-                foreach (var note in outlay)
-                {
-                    CurrentOutlay += note.Value;
-                    switch (note.Category.Type)
-                    {
-                        case CategoryType.Market:
-                            market += note.Value;
-                            break;
-                        case CategoryType.Restaurant:
-                            restaurant += note.Value;
-                            break;
-                        case CategoryType.Transport:
-                            transport += note.Value;
-                            break;
-                        case CategoryType.Business:
-                            business += note.Value;
-                            break;
-                        case CategoryType.Network:
-                            network += note.Value;
-                            break;
-                        case CategoryType.Entertainment:
-                            entertainment += note.Value;
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                market /= onePercent;
-                restaurant /= onePercent;
-                transport /= onePercent;
-                business /= onePercent;
-                network /= onePercent;
-                entertainment /= onePercent;
-                var list = new ObservableCollection<Category>();
-                Categories.GetAllSpendingCategories().ForEach(x => list.Add(new Category
+                var random = new Random();
+                var list = new ObservableCollection<PercentageCategory>();
+                Categories.GetAllSpendingCategories().ForEach(x => list.Add(new PercentageCategory
                 {
                     Id = x.Id,
                     Name = x.Name,
                     Image = x.Image,
                     Type = x.Type,
                     IsSelected = false,
-                    Percentage = GetPercentageByType(x.Type)
+                    Percentage = 0,
+                    //Color = String.Format("#{0:X6}", random.Next(0x1000000)),
+                    Color = ConvertTypeToColor(x.Type),
+                    Value = 0
                 }));
-                var sortList = list.OrderByDescending(x => x.Percentage);
-                foreach (var item in sortList)
+                foreach (var note in outlay)
                 {
-                    DiagramList.Add(item);
+                    CurrentOutlay += note.Value;
+                    list.FirstOrDefault(x => x.Type == note.Category.Type).Value += note.Value;
                 }
+                list.ToList().ForEach(x => x.Percentage = x.Value / onePercent);
+                var sortList = list.OrderByDescending(x => x.Percentage);
+                sortList.ToList().ForEach(x => DiagramList.Add(x));
             }
             else App.Current.MainPage.DisplayAlert("Alert", "No Data for this Month", "Ok");
         }
-        private decimal GetPercentageByType(CategoryType type)
+
+        //Temp Method
+        private string ConvertTypeToColor(CategoryType type)
         {
             switch (type)
             {
                 case CategoryType.Market:
-                    return market;
+                    return "#ff6633";
                 case CategoryType.Restaurant:
-                    return restaurant;
+                    return "#6ff6ff";
                 case CategoryType.Transport:
-                    return transport;
+                    return "#887799";
                 case CategoryType.Business:
-                    return business;
+                    return "#879969";
                 case CategoryType.Network:
-                    return network;
+                    return "#ff80c0";
                 case CategoryType.Entertainment:
-                    return entertainment;
+                    return "#e8f0ba";
                 default:
-                    return 0;
+                    return "#000000";
             }
         }
-
     }
 }

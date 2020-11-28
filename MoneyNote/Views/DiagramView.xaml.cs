@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microcharts;
 using MoneyNote.Services;
 using MoneyNote.ViewModels;
@@ -16,19 +15,24 @@ namespace MoneyNote.Views
         public DiagramView()
         {
             InitializeComponent();
-            List<Entry> entries = new List<Entry>();
             BindingContext = ViewModel = new DiagramViewModel(new TransactionService());
+            RefreshDiagram();
+        }
+
+        private void ImageButton_Clicked(object sender, System.EventArgs e)
+        {
+            RefreshDiagram();
+        }
+        private void RefreshDiagram()
+        {
+            List<Entry> entries = new List<Entry>();
             var list = ViewModel.DiagramList;
             foreach (var item in list)
             {
                 float piece = (float)item.Percentage;
-                var random = new Random();
-                var color = String.Format("#{0:X6}", random.Next(0x1000000));
                 entries.Add(new Entry(piece)
                 {
-                    Color = SKColor.Parse(color),
-                    Label = item.Name,
-                    ValueLabel = String.Format("{0:0.00}%", item.Percentage)
+                    Color = SKColor.Parse(item.Color)
                 });
             }
             chart.Chart = new DonutChart

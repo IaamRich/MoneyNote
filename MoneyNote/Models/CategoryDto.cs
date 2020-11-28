@@ -18,6 +18,11 @@ namespace MoneyNote.Models
         public bool IsSelected { get; set; }
         public decimal Percentage { get; set; }
     }
+    public class PercentageCategory : Category
+    {
+        public decimal Value { get; set; }
+        public string Color { get; set; }
+    }
 
     public enum CategoryType
     {
