@@ -8,6 +8,7 @@
     xmlns:local="clr-namespace:MoneyNote.ViewModels"
     xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
+    xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
     x:TypeArguments="local:DiagramViewModel">
     <rxui:ReactiveContentPage.Resources>
         <ResourceDictionary>
@@ -79,11 +80,18 @@
                     FontSize="Large"
                     Text="{Binding TextByPercentage}"
                     TextColor="{StaticResource BoldLabel}" />
-                <StackLayout BindableLayout.ItemsSource="{Binding DiagramList}" Orientation="Vertical">
+                <StackLayout
+                    x:Name="diagramList"
+                    BindableLayout.ItemsSource="{Binding DiagramList}"
+                    Orientation="Vertical">
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
                             <Grid
                                 Margin="10,0"
+                                touch:TouchEff.Command="{Binding Source={x:Reference diagramList}, Path=BindingContext.SelectCategory}"
+                                touch:TouchEff.CommandParameter="{Binding .}"
+                                touch:TouchEff.PressedScale="0.9"
+                                touch:TouchEff.RegularAnimationDuration="200"
                                 ColumnDefinitions="Auto,*,Auto,20"
                                 HorizontalOptions="Start"
                                 RowDefinitions="50">
@@ -110,14 +118,6 @@
                                     BackgroundColor="{Binding Color}"
                                     CornerRadius="10"
                                     WidthRequest="20" />
-                                <!--<Grid.Triggers>
-                                    <DataTrigger
-                                        Binding="{Binding IsSelected}"
-                                        TargetType="Grid"
-                                        Value="True">
-                                        <Setter Property="IsVisible" Value="False" />
-                                    </DataTrigger>
-                                </Grid.Triggers>-->
                             </Grid>
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>

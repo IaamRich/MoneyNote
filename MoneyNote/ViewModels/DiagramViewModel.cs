@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Reactive;
 using System.Windows.Input;
 using I18NPortable;
 using MoneyNote.Models;
@@ -29,6 +30,7 @@ namespace MoneyNote.ViewModels
         public bool IsDiagramChangeFilterVisible { get; set; }
         public ObservableCollection<PercentageCategory> DiagramList { get; set; } = new ObservableCollection<PercentageCategory>();
         private List<Transaction> AllData { get; set; } = new List<Transaction>();
+        public ReactiveCommand<PercentageCategory, Unit> SelectCategory { get; set; }
         public ICommand GoMonthBack { get; set; }
         public ICommand DisplayOutlay { get; set; }
         public ICommand DisplayIncome { get; set; }
@@ -84,6 +86,11 @@ namespace MoneyNote.ViewModels
                 CurrentType = TransactionType.Spend;
                 RefreshData();
                 GetDataByDateAndType(CurrentDate, CurrentType);
+            });
+            SelectCategory = ReactiveCommand.Create<PercentageCategory>(async note =>
+            {
+                await PopupNavigation.Instance.PushAsync(new AlertPopupView(note.Value.ToString()));
+                return;
             });
         }
         private void RefreshData()
