@@ -84,7 +84,7 @@
                         <DataTemplate>
                             <Grid
                                 Margin="10,0"
-                                ColumnDefinitions="Auto,*,30,Auto"
+                                ColumnDefinitions="Auto,*,Auto,20"
                                 HorizontalOptions="Start"
                                 RowDefinitions="50">
                                 <Image
@@ -98,15 +98,18 @@
                                     Text="{Binding Name}"
                                     TextColor="{StaticResource PopupButton}"
                                     VerticalOptions="Center" />
-
-                                <BoxView Grid.Column="2" BackgroundColor="{Binding Color}" />
                                 <Label
-                                    Grid.Column="3"
+                                    Grid.Column="2"
                                     FontSize="Medium"
                                     HorizontalOptions="End"
                                     Text="{Binding Percentage, StringFormat='{0:0.0}%'}"
                                     TextColor="{StaticResource PopupButton}"
                                     VerticalOptions="Center" />
+                                <BoxView
+                                    Grid.Column="3"
+                                    BackgroundColor="{Binding Color}"
+                                    CornerRadius="10"
+                                    WidthRequest="20" />
                                 <!--<Grid.Triggers>
                                     <DataTrigger
                                         Binding="{Binding IsSelected}"

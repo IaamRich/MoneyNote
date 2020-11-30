@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.Linq;
 using System.Windows.Input;
 using I18NPortable;
 using MoneyNote.Models;
 using MoneyNote.Services.Contracts;
+using MoneyNote.Views.Popups;
 using ReactiveUI;
+using Rg.Plugins.Popup.Services;
 using Splat;
 
 namespace MoneyNote.ViewModels
@@ -96,29 +97,21 @@ namespace MoneyNote.ViewModels
             var outlay = from transaction in AllData where (transaction.Type == type && transaction.Date.Month == date.Month) select transaction;
             decimal onePercent = outlay.Sum(x => x.Value) / 100;
 
-            try
+            if (outlay != null && outlay.Count() != 0)
             {
-                if (outlay != null && outlay.Count() != 0)
+                var random = new Random();
+                var list = new List<PercentageCategory>();
+                GetCategoriesByType(type, ref list);
+                foreach (var note in outlay)
                 {
-                    var random = new Random();
-                    var list = new List<PercentageCategory>();
-                    GetCategoriesByType(type, ref list);
-                    foreach (var note in outlay)
-                    {
-                        CurrentMainValue += note.Value;
-                        list.FirstOrDefault(x => x.Type == note.Category.Type).Value += note.Value;
-                    }
-                    list.ToList().ForEach(x => x.Percentage = x.Value / onePercent);
-                    var sortList = list.OrderByDescending(x => x.Percentage);
-                    sortList.ToList().ForEach(x => DiagramList.Add(x));
+                    CurrentMainValue += note.Value;
+                    list.FirstOrDefault(x => x.Type == note.Category.Type).Value += note.Value;
                 }
-                else App.Current.MainPage.DisplayAlert("Alert", "No Data for this Month", "Ok");
+                list.ToList().ForEach(x => x.Percentage = x.Value / onePercent);
+                var sortList = list.OrderByDescending(x => x.Percentage);
+                sortList.ToList().ForEach(x => DiagramList.Add(x));
             }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.Message);
-            }
-
+            else PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_data"]), true);
         }
         private void GetCategoriesByType(TransactionType type, ref List<PercentageCategory> list)
         {
