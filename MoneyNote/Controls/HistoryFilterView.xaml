@@ -6,7 +6,6 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
     IsVisible="{Binding IsChangeFilterVisible, Mode=TwoWay}"
     mc:Ignorable="d">
     <Frame
@@ -75,12 +74,4 @@
         </Grid>
 
     </Frame>
-    <ContentView.Triggers>
-        <DataTrigger
-            Binding="{Binding IsChangeFilterVisible}"
-            TargetType="ContentView"
-            Value="True">
-            <Setter Property="IsVisible" Value="True" />
-        </DataTrigger>
-    </ContentView.Triggers>
 </ContentView>

@@ -46,5 +46,10 @@ namespace MoneyNote.Views
                 GraphPosition = GraphPosition.AutoFill
             };
         }
+        private void ChangeFilterClicked(object sender, System.EventArgs e)
+        {
+            filterPanel.IsVisible = false;
+            RefreshDiagram();
+        }
     }
 }

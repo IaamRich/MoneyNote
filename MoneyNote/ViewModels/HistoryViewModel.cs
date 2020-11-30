@@ -28,7 +28,6 @@ namespace MoneyNote
         public ObservableCollection<TransactionDay> TransactionsList { get; set; } = new ObservableCollection<TransactionDay>();
         public List<Transaction> TransactionsFullList { get; set; } = new List<Transaction>();
         //Commands
-        public ICommand GoAnaliticsCommand { get; set; }
         public ICommand ChangeFilterCommand { get; set; }
         public ICommand SearchCommand { get; set; }
         public ICommand DiagramCommand { get; set; }
@@ -54,6 +53,16 @@ namespace MoneyNote
             CreateCommands();
             GetData();
 
+            this.WhenAnyValue(x => x.SearchText)
+                .Where(x => x == "")
+                .Throttle(TimeSpan.FromSeconds(1))
+                .InvokeCommand(SearchingCommand);
+
+            this.WhenAnyValue(x => x.SearchText)
+                .InvokeCommand(SearchingCommand);
+        }
+        private void CreateCommands()
+        {
             DiagramCommand = ReactiveCommand.CreateFromObservable(() =>
             {
                 if (TransactionsFullList != null && TransactionsFullList.Count > 0)
@@ -66,19 +75,6 @@ namespace MoneyNote
                     return null;
                 }
             });
-
-            this.WhenAnyValue(x => x.SearchText)
-                .Where(x => x == "")
-                .Throttle(TimeSpan.FromSeconds(1))
-                .InvokeCommand(SearchingCommand);
-
-            this.WhenAnyValue(x => x.SearchText)
-                .Where(x => !String.IsNullOrWhiteSpace(x))
-                .Throttle(TimeSpan.FromSeconds(1))
-                .InvokeCommand(SearchingCommand);
-        }
-        private void CreateCommands()
-        {
             DisplayAllDate = ReactiveCommand.Create(() =>
             {
                 TransactionsList.Clear();
@@ -132,7 +128,6 @@ namespace MoneyNote
                     var dec = 0.0m;
                     if (decimal.TryParse(searchParameter, out dec))
                     {
-                        //TransactionsFullList.ForEach(x => x.Value = dec);
                         foreach (var note in TransactionsFullList)
                         {
                             if (note.Value == dec)
@@ -143,7 +138,6 @@ namespace MoneyNote
                     }
                     else
                     {
-                        //TransactionsFullList.ForEach(x => x.Note.Contains(searchParameter?.ToLower()));
                         foreach (var note in TransactionsFullList)
                         {
                             if (note.Note.ToLower().Contains(searchParameter.ToLower()))
@@ -155,11 +149,6 @@ namespace MoneyNote
                 }
                 else TransactionsFullList.ForEach(x => tempList.Add(x));
                 DisplayGroupingList(tempList);
-            });
-
-            GoAnaliticsCommand = ReactiveCommand.Create(() =>
-            {
-
             });
 
             ChangeFilterCommand = ReactiveCommand.Create(() =>

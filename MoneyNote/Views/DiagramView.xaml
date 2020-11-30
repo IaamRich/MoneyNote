@@ -6,8 +6,8 @@
     xmlns:converter="clr-namespace:MoneyNote.Converters"
     xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
     xmlns:local="clr-namespace:MoneyNote.ViewModels"
+    xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
-    xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
     x:TypeArguments="local:DiagramViewModel">
     <rxui:ReactiveContentPage.Resources>
         <ResourceDictionary>
@@ -16,97 +16,98 @@
         </ResourceDictionary>
     </rxui:ReactiveContentPage.Resources>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Command="{Binding FilterCommand}" IconImageSource="filter.png" />
+        <ToolbarItem Command="{Binding ChangeDiagramFilterCommand}" IconImageSource="filter.png" />
     </ContentPage.ToolbarItems>
-    <ScrollView>
-        <StackLayout>
-            <Grid Margin="5,0" ColumnDefinitions="*,10*,*">
-                <forms:ChartView
-                    x:Name="chart"
-                    Grid.Column="1"
-                    BackgroundColor="Transparent"
-                    HeightRequest="300" />
-                <ImageButton
-                    BackgroundColor="Transparent"
-                    Command="{Binding GoMonthBack}"
-                    Rotation="180"
-                    Clicked="ImageButton_Clicked"
-                    Source="arrow_right.png">
-                    <ImageButton.Triggers>
-                        <DataTrigger
-                            Binding="{Binding CurrentDate, Converter={StaticResource checkMinimumMonth}}"
-                            TargetType="ImageButton"
-                            Value="True">
-                            <Setter Property="IsVisible" Value="False" />
-                        </DataTrigger>
-                    </ImageButton.Triggers>
-                </ImageButton>
-                <ImageButton
-                    Grid.Column="2"
-                    Clicked="ImageButton_Clicked"
-                    BackgroundColor="Transparent"
-                    Command="{Binding GoMonthForward}"
-                    Source="arrow_right.png">
-                    <ImageButton.Triggers>
-                        <DataTrigger
-                            Binding="{Binding CurrentDate, Converter={StaticResource checkCurrentMonth}}"
-                            TargetType="ImageButton"
-                            Value="True">
-                            <Setter Property="IsVisible" Value="False" />
-                        </DataTrigger>
-                    </ImageButton.Triggers>
-                </ImageButton>
-                <StackLayout
-                    Grid.Column="1"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center">
-                    <Label
-                        FontSize="Medium"
-                        HorizontalTextAlignment="Center"
-                        Text="{Binding CurrentMonthText}" />
-                    <Label
-                        FontSize="Large"
-                        HorizontalTextAlignment="Center"
-                        Text="{Binding CurrentOutlay, StringFormat='{0:0.00}'}" />
-                </StackLayout>
+    <Grid>
+        <ScrollView>
+            <StackLayout>
+                <Grid Margin="5,0" ColumnDefinitions="*,10*,*">
+                    <forms:ChartView
+                        x:Name="chart"
+                        Grid.Column="1"
+                        BackgroundColor="Transparent"
+                        HeightRequest="300" />
+                    <ImageButton
+                        BackgroundColor="Transparent"
+                        Clicked="ImageButton_Clicked"
+                        Command="{Binding GoMonthBack}"
+                        Rotation="180"
+                        Source="arrow_right.png">
+                        <ImageButton.Triggers>
+                            <DataTrigger
+                                Binding="{Binding CurrentDate, Converter={StaticResource checkMinimumMonth}}"
+                                TargetType="ImageButton"
+                                Value="True">
+                                <Setter Property="IsVisible" Value="False" />
+                            </DataTrigger>
+                        </ImageButton.Triggers>
+                    </ImageButton>
+                    <ImageButton
+                        Grid.Column="2"
+                        BackgroundColor="Transparent"
+                        Clicked="ImageButton_Clicked"
+                        Command="{Binding GoMonthForward}"
+                        Source="arrow_right.png">
+                        <ImageButton.Triggers>
+                            <DataTrigger
+                                Binding="{Binding CurrentDate, Converter={StaticResource checkCurrentMonth}}"
+                                TargetType="ImageButton"
+                                Value="True">
+                                <Setter Property="IsVisible" Value="False" />
+                            </DataTrigger>
+                        </ImageButton.Triggers>
+                    </ImageButton>
+                    <StackLayout
+                        Grid.Column="1"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center">
+                        <Label
+                            FontSize="Medium"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding CurrentMonthText}" />
+                        <Label
+                            FontSize="Large"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding CurrentMainValue, StringFormat='{0:0.00}'}" />
+                    </StackLayout>
 
-            </Grid>
-            <Label
-                Margin="15,0"
-                FontAttributes="Bold"
-                FontFamily="MainFontBold"
-                FontSize="Large"
-                Text="{Binding Strings[outlay_by_percentage]}"
-                TextColor="{StaticResource BoldLabel}" />
-            <StackLayout BindableLayout.ItemsSource="{Binding DiagramList}" Orientation="Vertical">
-                <BindableLayout.ItemTemplate>
-                    <DataTemplate>
-                        <Grid
-                            Margin="10,0"
-                            ColumnDefinitions="Auto,*,30,Auto"
-                            HorizontalOptions="Start"
-                            RowDefinitions="50">
-                            <Image
-                                x:Name="image"
-                                HeightRequest="50"
-                                Source="{Binding Image}" />
-                            <Label
-                                x:Name="label"
-                                Grid.Column="1"
-                                FontSize="Medium"
-                                Text="{Binding Name}"
-                                TextColor="{StaticResource PopupButton}"
-                                VerticalOptions="Center" />
+                </Grid>
+                <Label
+                    Margin="15,0"
+                    FontAttributes="Bold"
+                    FontFamily="MainFontBold"
+                    FontSize="Large"
+                    Text="{Binding TextByPercentage}"
+                    TextColor="{StaticResource BoldLabel}" />
+                <StackLayout BindableLayout.ItemsSource="{Binding DiagramList}" Orientation="Vertical">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Grid
+                                Margin="10,0"
+                                ColumnDefinitions="Auto,*,30,Auto"
+                                HorizontalOptions="Start"
+                                RowDefinitions="50">
+                                <Image
+                                    x:Name="image"
+                                    HeightRequest="50"
+                                    Source="{Binding Image}" />
+                                <Label
+                                    x:Name="label"
+                                    Grid.Column="1"
+                                    FontSize="Medium"
+                                    Text="{Binding Name}"
+                                    TextColor="{StaticResource PopupButton}"
+                                    VerticalOptions="Center" />
 
-                            <BoxView Grid.Column="2" BackgroundColor="{Binding Color}" />
-                            <Label
-                                Grid.Column="3"
-                                FontSize="Medium"
-                                HorizontalOptions="End"
-                                Text="{Binding Percentage, StringFormat='{0:0.0}%'}"
-                                TextColor="{StaticResource PopupButton}"
-                                VerticalOptions="Center" />
-                            <!--<Grid.Triggers>
+                                <BoxView Grid.Column="2" BackgroundColor="{Binding Color}" />
+                                <Label
+                                    Grid.Column="3"
+                                    FontSize="Medium"
+                                    HorizontalOptions="End"
+                                    Text="{Binding Percentage, StringFormat='{0:0.0}%'}"
+                                    TextColor="{StaticResource PopupButton}"
+                                    VerticalOptions="Center" />
+                                <!--<Grid.Triggers>
                                     <DataTrigger
                                         Binding="{Binding IsSelected}"
                                         TargetType="Grid"
@@ -114,10 +115,62 @@
                                         <Setter Property="IsVisible" Value="False" />
                                     </DataTrigger>
                                 </Grid.Triggers>-->
-                        </Grid>
-                    </DataTemplate>
-                </BindableLayout.ItemTemplate>
+                            </Grid>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
             </StackLayout>
-        </StackLayout>
-    </ScrollView>
+        </ScrollView>
+        <!--  Filters  -->
+        <Frame
+            x:Name="filterPanel"
+            Margin="0,0,-10,0"
+            Padding="0"
+            CornerRadius="10"
+            HasShadow="True"
+            HorizontalOptions="End"
+            IsVisible="{Binding IsDiagramChangeFilterVisible, Mode=TwoWay}"
+            VerticalOptions="Start">
+            <Grid
+                Margin="0,0,10,0"
+                RowDefinitions="50,50"
+                RowSpacing="3">
+                <BoxView
+                    Grid.RowSpan="3"
+                    BackgroundColor="{StaticResource PopupButton}"
+                    CornerRadius="10,0,10,0" />
+                <Frame Margin="0,0,-10,0" Padding="0">
+                    <material:MaterialButton
+                        Margin="-7,-7,0,-7"
+                        Padding="20,0"
+                        BackgroundColor="{StaticResource PopupButton}"
+                        Clicked="ChangeFilterClicked"
+                        Command="{Binding DisplayOutlay}"
+                        Elevation="10"
+                        FontSize="Small"
+                        HorizontalOptions="FillAndExpand"
+                        Text="{Binding Strings[outlay]}"
+                        TextColor="{StaticResource ListBackColor}"
+                        VerticalOptions="FillAndExpand" />
+                </Frame>
+                <Frame
+                    Grid.Row="1"
+                    Margin="0,0,-10,0"
+                    Padding="0">
+                    <material:MaterialButton
+                        Margin="-7,-7,0,-7"
+                        Padding="20,0"
+                        BackgroundColor="{StaticResource PopupButton}"
+                        Clicked="ChangeFilterClicked"
+                        Command="{Binding DisplayIncome}"
+                        Elevation="10"
+                        FontSize="Small"
+                        HorizontalOptions="FillAndExpand"
+                        Text="{Binding Strings[income]}"
+                        TextColor="{StaticResource ListBackColor}"
+                        VerticalOptions="FillAndExpand" />
+                </Frame>
+            </Grid>
+        </Frame>
+    </Grid>
 </rxui:ReactiveContentPage>
