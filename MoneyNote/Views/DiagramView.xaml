@@ -21,7 +21,7 @@
     </ContentPage.ToolbarItems>
     <Grid>
         <ScrollView>
-            <StackLayout>
+            <StackLayout BackgroundColor="{StaticResource ListBackColor}">
                 <Grid Margin="5,0" ColumnDefinitions="*,10*,*">
                     <forms:ChartView
                         x:Name="chart"
@@ -63,65 +63,72 @@
                         HorizontalOptions="Center"
                         VerticalOptions="Center">
                         <Label
-                            FontSize="Medium"
+                            FontFamily="MainFontBold"
+                            FontSize="Large"
                             HorizontalTextAlignment="Center"
                             Text="{Binding CurrentMonthText}" />
                         <Label
-                            FontSize="Large"
+                            FontFamily="MainFontBold"
+                            FontSize="Title"
                             HorizontalTextAlignment="Center"
                             Text="{Binding CurrentMainValue, StringFormat='{0:0.00}'}" />
                     </StackLayout>
-
                 </Grid>
                 <Label
-                    Margin="15,0"
+                    Margin="30,0"
                     FontAttributes="Bold"
                     FontFamily="MainFontBold"
                     FontSize="Large"
                     Text="{Binding TextByPercentage}"
                     TextColor="{StaticResource BoldLabel}" />
-                <StackLayout
-                    x:Name="diagramList"
-                    BindableLayout.ItemsSource="{Binding DiagramList}"
-                    Orientation="Vertical">
-                    <BindableLayout.ItemTemplate>
-                        <DataTemplate>
-                            <Grid
-                                Margin="10,0"
-                                touch:TouchEff.Command="{Binding Source={x:Reference diagramList}, Path=BindingContext.SelectCategory}"
-                                touch:TouchEff.CommandParameter="{Binding .}"
-                                touch:TouchEff.PressedScale="0.9"
-                                touch:TouchEff.RegularAnimationDuration="200"
-                                ColumnDefinitions="Auto,*,Auto,20"
-                                HorizontalOptions="Start"
-                                RowDefinitions="50">
-                                <Image
-                                    x:Name="image"
-                                    HeightRequest="50"
-                                    Source="{Binding Image}" />
-                                <Label
-                                    x:Name="label"
-                                    Grid.Column="1"
-                                    FontSize="Medium"
-                                    Text="{Binding Name}"
-                                    TextColor="{StaticResource PopupButton}"
-                                    VerticalOptions="Center" />
-                                <Label
-                                    Grid.Column="2"
-                                    FontSize="Medium"
-                                    HorizontalOptions="End"
-                                    Text="{Binding Percentage, StringFormat='{0:0.0}%'}"
-                                    TextColor="{StaticResource PopupButton}"
-                                    VerticalOptions="Center" />
-                                <BoxView
-                                    Grid.Column="3"
-                                    BackgroundColor="{Binding Color}"
-                                    CornerRadius="10"
-                                    WidthRequest="20" />
-                            </Grid>
-                        </DataTemplate>
-                    </BindableLayout.ItemTemplate>
-                </StackLayout>
+                <Frame
+                    Margin="10"
+                    Padding="10,5"
+                    BackgroundColor="{StaticResource BackgroundWhite}"
+                    CornerRadius="10">
+                    <StackLayout
+                        x:Name="diagramList"
+                        Margin="0,5"
+                        BindableLayout.ItemsSource="{Binding DiagramList}"
+                        Orientation="Vertical">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <Grid
+                                    touch:TouchEff.Command="{Binding Source={x:Reference diagramList}, Path=BindingContext.SelectCategory}"
+                                    touch:TouchEff.CommandParameter="{Binding .}"
+                                    touch:TouchEff.PressedScale="0.9"
+                                    touch:TouchEff.RegularAnimationDuration="200"
+                                    ColumnDefinitions="Auto,*,Auto,20"
+                                    HorizontalOptions="Start"
+                                    RowDefinitions="50">
+                                    <Image
+                                        x:Name="image"
+                                        HeightRequest="50"
+                                        Source="{Binding Image}" />
+                                    <Label
+                                        x:Name="label"
+                                        Grid.Column="1"
+                                        FontSize="Medium"
+                                        Text="{Binding Name}"
+                                        TextColor="{StaticResource PopupButton}"
+                                        VerticalOptions="Center" />
+                                    <Label
+                                        Grid.Column="2"
+                                        FontSize="Medium"
+                                        HorizontalOptions="End"
+                                        Text="{Binding Percentage, StringFormat='{0:0.0}%'}"
+                                        TextColor="{StaticResource PopupButton}"
+                                        VerticalOptions="Center" />
+                                    <BoxView
+                                        Grid.Column="3"
+                                        BackgroundColor="{Binding Color}"
+                                        CornerRadius="10"
+                                        WidthRequest="20" />
+                                </Grid>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
+                </Frame>
             </StackLayout>
         </ScrollView>
         <!--  Filters  -->
