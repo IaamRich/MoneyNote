@@ -69,6 +69,9 @@
     <Compile Update="Styles\ButtonStyles.xaml.cs">
       <DependentUpon>ButtonStyles.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\Popups\DiagramPopupView.xaml.cs">
+      <DependentUpon>DiagramPopupView.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\Popups\CommitPopupView.xaml.cs">
       <DependentUpon>CommitPopupView.xaml</DependentUpon>
     </Compile>

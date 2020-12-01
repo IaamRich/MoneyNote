@@ -8,9 +8,6 @@
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
     x:TypeArguments="local:AccountViewModel"
     NavigationPage.HasBackButton="False">
-    <!--<ContentPage.ToolbarItems>
-        <ToolbarItem Text="10000000"  />
-    </ContentPage.ToolbarItems>-->
     <ScrollView Margin="0" Padding="0">
         <Grid BackgroundColor="{StaticResource ListBackColor}">
             <Image
