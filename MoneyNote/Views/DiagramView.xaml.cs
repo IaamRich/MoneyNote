@@ -27,7 +27,6 @@ namespace MoneyNote.Views
         private void RefreshDiagram()
         {
             List<Entry> entries = new List<Entry>();
-
             foreach (var item in ViewModel.DiagramList)
             {
                 float piece = (float)item.Percentage;

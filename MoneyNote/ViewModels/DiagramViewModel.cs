@@ -116,7 +116,7 @@ namespace MoneyNote.ViewModels
                 }
                 list.ToList().ForEach(x => x.Percentage = x.Value / onePercent);
                 var sortList = list.OrderByDescending(x => x.Percentage);
-                sortList.ToList().ForEach(x => DiagramList.Add(x));
+                sortList.ToList().ForEach(x => { if (x.Value > 0) DiagramList.Add(x); });
             }
             else PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_data"]), true);
         }

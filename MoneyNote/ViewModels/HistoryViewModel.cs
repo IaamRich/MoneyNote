@@ -10,7 +10,9 @@ using I18NPortable;
 using MoneyNote.Models;
 using MoneyNote.Services;
 using MoneyNote.Services.Contracts;
+using MoneyNote.Views.Popups;
 using ReactiveUI;
+using Rg.Plugins.Popup.Services;
 using Splat;
 
 namespace MoneyNote
@@ -67,11 +69,11 @@ namespace MoneyNote
             {
                 if (TransactionsFullList != null && TransactionsFullList.Count > 0)
                 {
-                    return HostScreen.Router.Navigate.Execute(new ViewModels.DiagramViewModel(new TransactionService()/*, TransactionsFullList*/));
+                    return HostScreen.Router.Navigate.Execute(new ViewModels.DiagramViewModel(new TransactionService()));
                 }
                 else
                 {
-                    App.Current.MainPage.DisplayAlert("Alert", "No Data", "ok");
+                    PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_history"]), true);
                     return null;
                 }
             });
