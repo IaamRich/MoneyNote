@@ -15,7 +15,9 @@ namespace MoneyNote.Views.Popups
         public DiagramPopupView(PercentageCategory category)
         {
             InitializeComponent();
-            this.title.Text = category.Value.ToString();
+            this.title.Text = category.Name.ToString();
+            this.value.Text = category.Value.ToString();
+            this.img.Source = category.Image;
         }
         private void Cancel_Button_Clicked(object sender, System.EventArgs e)
         {

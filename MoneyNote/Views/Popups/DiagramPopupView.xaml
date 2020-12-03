@@ -12,24 +12,17 @@
         <animations:ScaleAnimation
             x:Name="animation"
             DurationIn="500"
-            DurationOut="1000"
+            DurationOut="500"
             HasBackgroundAnimation="True"
             PositionIn="Bottom"
-            PositionOut="Top"
+            PositionOut="Bottom"
             ScaleIn="3"
-            ScaleOut="0.3" />
+            ScaleOut="3" />
     </popups:PopupPage.Animation>
-    <Grid ColumnSpacing="0">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+    <Grid
+        ColumnDefinitions="*,Auto,*"
+        ColumnSpacing="0"
+        RowDefinitions="*,Auto,*">
         <Frame
             Grid.Row="1"
             Grid.Column="1"
@@ -45,31 +38,30 @@
                     HorizontalOptions="End"
                     Source="close.png"
                     VerticalOptions="Start" />
-                <Image
-                    Aspect="AspectFit"
-                    HeightRequest="50"
-                    HorizontalOptions="Center"
-                    Source="alert.png" />
                 <Label
                     x:Name="title"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center" />
+                <Image
+                    x:Name="img"
+                    HeightRequest="50"
+                    HorizontalOptions="Center" />
+                <Label
+                    x:Name="value"
                     FontSize="Body"
                     HorizontalOptions="Center"
                     HorizontalTextAlignment="Center" />
                 <Label x:Name="alertMessage" FontSize="Small" />
-                <Entry
-                    x:Name="entry"
-                    HorizontalOptions="Center"
-                    HorizontalTextAlignment="Center"
-                    Keyboard="Numeric"
-                    Placeholder="Enter Value" />
                 <Button
                     Grid.Row="3"
-                    Text="Save" />
+                    Clicked="Cancel_Button_Clicked"
+                    Text="Ok" />
             </StackLayout>
             <Frame.GestureRecognizers>
                 <TapGestureRecognizer Tapped="PlugForGridGesture" />
             </Frame.GestureRecognizers>
         </Frame>
+        <!--  Hands  -->
         <Image
             x:Name="leftHand"
             Grid.Row="1"

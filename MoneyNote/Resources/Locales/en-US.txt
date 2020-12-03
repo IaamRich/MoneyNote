@@ -84,6 +84,8 @@ environment = Environment by:
 company_name = Sapec Software
 
 /* Common */
+value = Value
+name = Name
 common = Common
 master = Master
 app_name_camel = MoneyNotique
