@@ -128,6 +128,14 @@
                             </DataTemplate>
                         </BindableLayout.ItemTemplate>
                     </StackLayout>
+                    <Frame.Triggers>
+                        <DataTrigger
+                            Binding="{Binding DiagramList.Count}"
+                            TargetType="Frame"
+                            Value="0">
+                            <Setter Property="IsVisible" Value="False" />
+                        </DataTrigger>
+                    </Frame.Triggers>
                 </Frame>
             </StackLayout>
         </ScrollView>

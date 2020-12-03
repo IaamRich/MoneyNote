@@ -158,7 +158,7 @@ namespace MoneyNote
             {
                 await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
             }
-            else if (SpendValue[0] == '0')
+            else if (SpendValue == "0" || SpendValue == "0.")
             {
                 await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value_zero"]), true);
             }
