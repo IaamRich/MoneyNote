@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Microcharts;
-using MoneyNote.Services;
 using MoneyNote.ViewModels;
+using ReactiveUI;
 using ReactiveUI.XamForms;
 using SkiaSharp;
 using Xamarin.Forms.Xaml;
@@ -15,8 +16,8 @@ namespace MoneyNote.Views
         public DiagramView()
         {
             InitializeComponent();
-            BindingContext = ViewModel = new DiagramViewModel(new TransactionService());
-            RefreshDiagram();
+
+            this.WhenAnyValue(x => x.ViewModel.DiagramList).Subscribe(x => RefreshDiagram());
         }
 
         private void ImageButton_Clicked(object sender, System.EventArgs e)
@@ -26,8 +27,8 @@ namespace MoneyNote.Views
         private void RefreshDiagram()
         {
             List<Entry> entries = new List<Entry>();
-            var list = ViewModel.DiagramList;
-            foreach (var item in list)
+
+            foreach (var item in ViewModel.DiagramList)
             {
                 float piece = (float)item.Percentage;
                 entries.Add(new Entry(piece)
