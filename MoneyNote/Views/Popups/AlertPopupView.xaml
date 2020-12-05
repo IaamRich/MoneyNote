@@ -20,15 +20,10 @@
             ScaleIn="1"
             ScaleOut="1" />
     </popups:PopupPage.Animation>
-    <Grid ColumnSpacing="0">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
+    <Grid
+        ColumnDefinitions="Auto,Auto"
+        ColumnSpacing="0"
+        RowDefinitions="Auto,Auto">
         <Frame
             Margin="-20,20,0,0"
             Padding="0"
@@ -38,7 +33,6 @@
             HorizontalOptions="Start"
             VerticalOptions="Start">
             <StackLayout Margin="20,0,0,0" Orientation="Vertical">
-
                 <ImageButton
                     Margin="5"
                     Aspect="AspectFit"

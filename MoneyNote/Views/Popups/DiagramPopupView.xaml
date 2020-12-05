@@ -16,46 +16,46 @@
             HasBackgroundAnimation="True"
             PositionIn="Bottom"
             PositionOut="Bottom"
-            ScaleIn="3"
-            ScaleOut="3" />
+            ScaleIn="1"
+            ScaleOut="1" />
     </popups:PopupPage.Animation>
-    <Grid
-        ColumnDefinitions="*,Auto,*"
-        ColumnSpacing="0"
-        RowDefinitions="*,Auto,*">
+    <Grid ColumnSpacing="0" RowDefinitions="*,Auto">
         <Frame
             Grid.Row="1"
-            Grid.Column="1"
-            CornerRadius="10"
-            VerticalOptions="Center">
+            Padding="10,10,10,15"
+            CornerRadius="10">
             <StackLayout x:Name="this" Orientation="Vertical">
-
                 <ImageButton
                     Aspect="AspectFit"
                     BackgroundColor="Transparent"
                     Clicked="Cancel_Button_Clicked"
-                    HeightRequest="20"
+                    HeightRequest="30"
                     HorizontalOptions="End"
                     Source="close.png"
                     VerticalOptions="Start" />
-                <Label
-                    x:Name="title"
-                    HorizontalOptions="Center"
-                    HorizontalTextAlignment="Center" />
-                <Image
-                    x:Name="img"
-                    HeightRequest="50"
-                    HorizontalOptions="Center" />
-                <Label
-                    x:Name="value"
-                    FontSize="Body"
-                    HorizontalOptions="Center"
-                    HorizontalTextAlignment="Center" />
-                <Label x:Name="alertMessage" FontSize="Small" />
-                <Button
-                    Grid.Row="3"
-                    Clicked="Cancel_Button_Clicked"
-                    Text="Ok" />
+                <StackLayout Orientation="Horizontal">
+                    <Image
+                        x:Name="img"
+                        HeightRequest="50"
+                        HorizontalOptions="Start" />
+                    <Label
+                        x:Name="title"
+                        FontSize="Large"
+                        HorizontalOptions="Start"
+                        HorizontalTextAlignment="Start"
+                        VerticalOptions="Center" />
+                    <Label
+                        x:Name="value"
+                        FontFamily=""
+                        Margin="0,0,5,0"
+                        FontSize="Large"
+                        HorizontalOptions="EndAndExpand"
+                        HorizontalTextAlignment="End"
+                        VerticalOptions="Center" />
+                </StackLayout>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Cancel_Button_Clicked" />
+                </StackLayout.GestureRecognizers>
             </StackLayout>
             <Frame.GestureRecognizers>
                 <TapGestureRecognizer Tapped="PlugForGridGesture" />
@@ -63,31 +63,8 @@
         </Frame>
         <!--  Hands  -->
         <Image
-            x:Name="leftHand"
-            Grid.Row="1"
-            Grid.Column="1"
-            Margin="-25,0,0,0"
-            HeightRequest="50"
-            HorizontalOptions="Start"
-            IsVisible="False"
-            Source="left_image_hand.png"
-            VerticalOptions="Center"
-            WidthRequest="50" />
-        <Image
-            x:Name="rightHand"
-            Grid.Row="1"
-            Grid.Column="1"
-            Margin="0,0,-25,0"
-            HeightRequest="50"
-            HorizontalOptions="End"
-            IsVisible="False"
-            Source="right_image_hand.png"
-            VerticalOptions="Center"
-            WidthRequest="50" />
-        <Image
             x:Name="upHand"
             Grid.Row="0"
-            Grid.Column="1"
             Margin="0,0,0,-25"
             HeightRequest="50"
             HorizontalOptions="Center"
@@ -95,18 +72,6 @@
             Source="up_image_hand.png"
             VerticalOptions="End"
             WidthRequest="50" />
-        <Image
-            x:Name="downHand"
-            Grid.Row="2"
-            Grid.Column="1"
-            Margin="0,-25,0,0"
-            HeightRequest="50"
-            HorizontalOptions="Center"
-            IsVisible="False"
-            Source="down_image_hand.png"
-            VerticalOptions="Start"
-            WidthRequest="50" />
-
         <Grid.GestureRecognizers>
             <TapGestureRecognizer Tapped="Cancel_Button_Clicked" />
         </Grid.GestureRecognizers>
