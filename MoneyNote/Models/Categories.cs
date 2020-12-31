@@ -15,7 +15,8 @@ namespace MoneyNote.Models
                 new CategoryDto { Id = 2, Type = CategoryType.Transport, Name = Strings["type_transport"], Image = "transport.png"},
                 new CategoryDto { Id = 3, Type = CategoryType.Business, Name = Strings["type_business"], Image = "business.png"},
                 new CategoryDto { Id = 4, Type = CategoryType.Network, Name = Strings["type_network"], Image = "network_products.png"},
-                new CategoryDto { Id = 5, Type = CategoryType.Entertainment, Name = Strings["type_entertainment"], Image = "entertainment.png"}
+                new CategoryDto { Id = 5, Type = CategoryType.Entertainment, Name = Strings["type_entertainment"], Image = "entertainment.png"},
+                new CategoryDto { Id = 6, Type = CategoryType.Medicine, Name = Strings["type_medicine"], Image = "medicine.png"}
             };
         }
         public static List<CategoryDto> GetAllAddingCategories()

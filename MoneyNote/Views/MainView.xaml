@@ -46,7 +46,6 @@
                         HorizontalOptions="Center"
                         Source="steps.png"
                         VerticalOptions="End" />
-
                 </Grid>
                 <Frame
                     Grid.Column="1"
@@ -208,15 +207,26 @@
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
                                     <Grid
+                                        x:Name="grid"
                                         Margin="5"
                                         Padding="5,0,10,0"
-                                        touch:TouchEff.Command="{Binding Source={x:Reference lastTransactions}, Path=BindingContext.SelectNote}"
-                                        touch:TouchEff.CommandParameter="{Binding .}"
-                                        touch:TouchEff.PressedScale="0.9"
-                                        touch:TouchEff.RegularAnimationDuration="200"
                                         ColumnDefinitions="Auto,*,Auto"
                                         ColumnSpacing="5"
                                         RowDefinitions="Auto,0.5">
+                                        <Grid.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                CommandParameter="{Binding .}"
+                                                NumberOfTapsRequired="1"
+                                                Tapped="TapGestureRecognizer_Tapped" />
+                                            <SwipeGestureRecognizer
+                                                CommandParameter="{Binding .}"
+                                                Direction="Left"
+                                                Swiped="SwipeGestureRecognizer_Left" />
+                                            <SwipeGestureRecognizer
+                                                CommandParameter="{Binding .}"
+                                                Direction="Right"
+                                                Swiped="SwipeGestureRecognizer_Right" />
+                                        </Grid.GestureRecognizers>
                                         <Image
                                             Aspect="AspectFit"
                                             HeightRequest="50"

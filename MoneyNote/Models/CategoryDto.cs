@@ -33,6 +33,7 @@ namespace MoneyNote.Models
         Business,
         Network,
         Entertainment,
+        Medicine,
         Lend,
         Salary,
         Earnings,
