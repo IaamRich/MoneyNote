@@ -11,8 +11,8 @@ namespace MoneyNote.Converters
             if (value is DateTime)
             {
                 var date = (DateTime)value;
-                var minimumMonth = DateTime.Now.AddMonths(-2);
-                if (date.Month < minimumMonth.Month) return true;
+                var minimumMonth = DateTime.Now.AddMonths(-3);
+                if (date < minimumMonth) return true;
                 else return false;
             }
             else return false;

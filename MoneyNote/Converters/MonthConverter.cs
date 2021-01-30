@@ -11,7 +11,7 @@ namespace MoneyNote.Converters
             if (value is DateTime)
             {
                 var date = (DateTime)value;
-                if (date.Month >= DateTime.Now.Month) return true;
+                if (date >= DateTime.Now || date.Month == DateTime.Now.Month) return true;
                 else return false;
             }
             else return false;
