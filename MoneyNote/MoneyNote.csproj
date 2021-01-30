@@ -75,9 +75,6 @@
     <Compile Update="Views\Popups\CommitPopupView.xaml.cs">
       <DependentUpon>CommitPopupView.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\TermsView.xaml.cs">
-      <DependentUpon>TermsView.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Views\AboutView.xaml.cs">
       <DependentUpon>AboutView.xaml</DependentUpon>
     </Compile>

@@ -115,7 +115,7 @@
                             TextColor="{StaticResource BoldLabel}"
                             VerticalOptions="Center" />
                         <Label Text="{Binding Strings[terms_text]}" />
-                        <!--  === Guide Section ===  -->
+                        <!--  ===  Policy ===  -->
                         <BoxView
                             BackgroundColor="Gray"
                             HeightRequest="1"
@@ -126,11 +126,11 @@
                             FontFamily="MainFontBold"
                             FontSize="Large"
                             HorizontalOptions="Start"
-                            Text="{Binding Strings[guide]}"
+                            Text="{Binding Strings[policy]}"
                             TextColor="{StaticResource BoldLabel}"
                             VerticalOptions="Center" />
-                        <Label Text="{Binding Strings[terms_text]}" />
-                        <!--  === Information Section ===  -->
+                        <Label Text="{Binding Strings[policy_text]}" />
+                        <!--  === License Section ===  -->
                         <BoxView
                             BackgroundColor="Gray"
                             HeightRequest="1"
@@ -141,10 +141,10 @@
                             FontFamily="MainFontBold"
                             FontSize="Large"
                             HorizontalOptions="Start"
-                            Text="{Binding Strings[information]}"
+                            Text="{Binding Strings[license]}"
                             TextColor="{StaticResource BoldLabel}"
                             VerticalOptions="Center" />
-                        <Label Text="{Binding Strings[terms_text]}" />
+                        <Label Text="{Binding Strings[license_text]}" />
                         <Label
                             Margin="0,10"
                             FontSize="Micro"

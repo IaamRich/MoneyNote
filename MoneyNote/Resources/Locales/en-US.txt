@@ -64,10 +64,6 @@ set_every_places = Set each Money Notes
 dis_add = Disable Ads
 allow_credit = Allow auto credit
 
-/* Terms Page */
-terms_main = MoneyNotique's Terms
-terms_text = 1. This page (together with the documents referred to on it) tells you the terms of use (the 'Terms of Use') on which you may make use of our 'goop city guides' application for mobile devices (the 'App'). Please read these Terms of Use carefully before you download, install or use the App. By downloading, installing or using the App, you indicate that you accept these Terms of Use and that you agree to abide by them. Your download, installation or use of the App constitutes your acceptance of these Terms of Use which takes effect on the date on which you download, install or use the App. If you do not agree with these Terms of Use, you should cease downloading, installing or using the App immediately.
-
 /* About Page */
 creator_name = Vladimir Curaciov
 supporter_name = Feodor Songurov
@@ -97,7 +93,6 @@ ok = Ok
 credits = Credits
 go = Go
 other = Other
-terms = Terms
 pay = Pay
 bills = Bills
 update = Update
@@ -122,7 +117,6 @@ menu_main = Main
 menu_account = Account
 menu_settings = Settings
 menu_history = History
-menu_terms = Terms
 menu_about = About
 menu_footer = © Sapec Software 2020
 
@@ -166,3 +160,64 @@ type_other = Other
 /* Popups */
 choose_category = Pick Category
 enter_miss_description = Enter/Miss Description...
+
+/* Terms of Service, Privacy Policy, License Agreement*/
+terms = Terms of Service
+policy = Privacy Policy
+license = License of Agreement
+terms_text = Terms of use of the MoneyNotique application at this stage of the application does not exist due to the absence of a need for it. Each user decides for himself how to use this application for personal purposes, the main thing is that all the rules of the license agreement described below are observed.
+policy_text = At this stage, the privacy policy of the MoneyNotique application is absent due to the fact that user data in this application is not collected at all, in the future, when the application functions are expanded, this document will also be updated.
+license_text = MoneyNotique Mobile Application License Agreement.
+Before using the program, please read the terms of the following License Agreement. Any use of the MoneyNotique program by you constitutes your full and unconditional acceptance of the terms of this present License Agreement. If you do not accept the terms of this License Agreement in full, you are not entitled to use the MoneyNotique program for any purpose. This License Agreement comes into effect from the moment MoneyNotique is installed on any digital device that allows it, and is valid indefinitely.
+1. General Provisions
+1.1. This License Agreement sets forth the terms of use of the MoneyNotique program for mobile devices (hereinafter referred to as the Program) by any capable individual (hereinafter referred to as the User).
+1.2. The Copyright Holder of the Program is Sapec.md (hereinafter referred to as the Copyright Holder).
+1.3. By copying the Program, installing it on your mobile device or using the Program in any way, the User expresses his full and unconditional acceptance of all the terms of this License Agreement.
+1.4. The use of the Program is permitted only under the terms of this License Agreement. If the User does not accept the terms of this License Agreement in full, the User is not entitled to use the Program. Using the Program in violation (non-fulfillment) of any of the terms of this License Agreement is prohibited.
+1.5. The use of the Program by the User under the terms of this License Agreement is free of charge. Use of the Program on terms and in ways not provided for by this License Agreement is possible only on the basis of a separate agreement with the Copyright Holder.
+1.6. If the User fully or partially disagrees with this License Agreement, he must immediately stop using the Program and remove it.
+1.7. Use of the Program by the User means his unconditional acceptance of all the terms of this License Agreement, as well as all the conditions posted in the Application.
+1.8. The program provides a service, the purpose of which is to maintain your own accounting of finance, income, expenses, calculation operations, grouping, display in a convenient form on the screen of a mobile device, etc.
+2. Rights to the Program
+2.1. The program contains materials protected by copyright, trademarks and other materials protected by law, including, but not limited to: texts, photographs, graphics, etc.
+2.2. The sole owner of the Program and the documentation related to it is the Copyright Holder. Any intellectual property rights to the Program and related to it belong to the Copyright Holder legally. Any intellectual property rights (including, but not limited to, copyright, trade secrets, trademarks, patents, etc.) arising from the Program belong to the Copyright Holder legally.
+3. Use of the Program (License)
+3.1. The Copyright Holder grants the User, and the User accepts a personal non-exclusive non-commercial limited license without the right to transfer the Program to third parties. The Rightholder grants the User the right to use the Program in the following ways:
+3.1.1. Use the Program for its direct functional purpose, in order to copy it and install (reproduce) it on the User's mobile device (s). The User has the right to install the Program on an unlimited number of mobile devices belonging to the User.
+3.1.2. Distribute the Program free of charge for non-commercial purposes by communicating information about it to an indefinite number of persons without the right of subsequent transfer.
+3.2. Unless otherwise specifically indicated in the text of this License Agreement, the User cannot, without the prior written consent of the Copyright Holder:
+use, modify, embed in or combine with other software, create a revised version of any part of the Program;
+sell, transfer for temporary use, assign, pledge or otherwise dispose of the acquired rights to the Program, except as provided for in this License Agreement;
+copy, distribute or reproduce the Program, including in the interests of third parties, except as provided for in this License Agreement;
+publish the results of any benchmarking against the Program, use said results for competing software development activities;
+modify, disassemble, decompile, disassemble into component codes, rework or improve the Program, torture Please get the source code of the Program.
+3.3. The Copyright Holder is not obligated to provide support, maintenance, updates, modifications and new versions of the Program. The Copyright Holder may from time to time release updates for the Program and automatically, by electronic communication, update its version installed on the User's mobile device. By accepting this License Agreement, the User agrees to such automatic update, and also accepts that the terms and conditions of this License Agreement will be valid for the specified updates.
+3.4. The right to use the Program after the installation of the application by the User is non-transferable. The User is fully responsible for the actions of transferring the Program by third parties, as well as for damage caused to the Program and / or the Copyright Holder caused by third parties as a result of such transfer.
+3.5. The program is provided without quality assurance, does not imply any guarantees, express or implied. The copyright holder does not guarantee that the Program will meet the User's requirements, and that its operation will be uninterrupted and error-free. The copyright holder is not responsible for the accuracy, completeness, applicability or reliability of the results obtained during the use of the Program or any data and information downloaded or otherwise obtained through the use of the Program. The User accepts the responsibility to download, otherwise receive information through the Program at his own risk and at his own discretion, while no claims can be made against the Copyright Holder regarding damage received by the User or in relation to the User's property.
+3.6. The right to use the Program in a mobile device provided on the basis of this License Agreement may be completely canceled by the Copyright Holder at any time.
+4. Responsibility
+4.1. The program is provided on an "as is" basis. The Copyright Holder does not provide any guarantees regarding the error-free and uninterrupted operation of the Program or its individual components and / or functions, the compliance of the Program with the specific goals of the User, does not guarantee the reliability, accuracy, completeness and timeliness of the Data, and does not provide any other guarantees not expressly specified in this License Agreement.
+4.2. The copyright holder is not liable due to an offense, as well as in other cases, to the User or third parties for any damage or loss (taking into account indirect, actual, subsequent), including, but not limited to, any damage or loss in relation to income from commercial activities, lost profits, business reputation, damaged or lost data or documentation incurred by this or that person as a result of or in connection with the use of the Program, even if the Copyright Holder became aware of the possibility of such damage.
+4.3. In accordance with the current legislation, liability that can be applied due to improper provision of services, including when providing information about the service, providing information about the contractor (supplier), the conditions for the provision of the service, applicable prices, as well as the provision of the service itself, its safety, issuance of documents of strict accountability, damage caused during the provision of services, other obligations, is borne exclusively by the supplier.
+4.4. In some specially agreed cases, the Rightholder may act in the interests and on behalf of the suppliers, if this is provided if it is possible to pay for services or other services by using bank cards using the Program. In other cases, where there is no unambiguous definition of the Copyright Holder as an authorized representative of the suppliers, the suppliers act independently, and the User enters into relations directly with the suppliers.
+4.5. The Copyright Holder is not responsible for any direct or indirect consequences of any use or inability to use the Program (including data) and, or losses caused to the User and, or to third parties as a result of any use, non-use or inability to use the Program (including data) or its individual components and / or functions, including due to possible errors or failures in their work, except for cases expressly provided for by law.
+4.6. The Rightholder has the right to interrupt the work of the Program in order to optimize its work, to eliminate problems in the work of the Program, to configure the Program, as well as in other cases at the discretion of the Rightholder.
+4.7. All questions and claims related to the use / inability to use the Program, as well as possible violation by the Program of legislation and, or the rights of third parties, should be sent to the Copyright Holder.
+4.8. All relations associated with the use of the Program are governed by the legislation of the Republic of Moldova.
+4.9. By accepting this License Agreement, the User agrees that if the court finds the Copyright Holder as the culprit of the inflictor of harm, the civil liability of the Copyright Holder is limited to a maximum payment of $ 50. The User is notified and knows that the Copyright Holder undertakes to pay only direct damage and only on the basis of a court decision. Lost profits are not refundable.
+5. Consent to receive information and advertising
+5.1. When using the Program, the User confirms that he is the legal owner of the mobile device on which the Program is installed, as well as a properly registered and legal user of mobile radiotelephone communication or telematic services that allow using the data transfer capabilities to use the Program and identify the User. Also, the User unconditionally agrees to receive service sms and push messages necessary to implement the functionality of the Program.
+5.2. The User unconditionally agrees that the Copyright Holder has the right to inform him about the procedure and methods of using the Program, about the marketing, advertising and other events carried out by the suppliers, about the conditions for the purchase and consumption of third-party services using the Program, by sending messages, including those containing advertising, to the mobile telephone, computer or other device, including using a communication network, in any available way. Acceptance of the terms of this License Agreement means the unconditional consent of the User with the right of the Copyright Holder to send messages to the User.
+5.3. The User agrees to receive advertising mailings from the Copyright Holder and its cooperating suppliers and other persons, as well as other information about products and services, including through telephone calls, e-mail and SMS mailings.
+6. Updates
+6.1 This present License Agreement applies to all subsequent updates / new versions of the Program. By agreeing to install an update / new version of the Program, the User accepts the terms of this present License Agreement for the corresponding updates / new versions of the Program, unless the update / installation of a new version of the Program is accompanied by another license agreement.
+7. Other provisions
+7.1 The terms of this License Agreement and all changes to it are posted on the MoneyNotique application itself.
+7.2 The Rightholder has the right to develop and implement additional security measures for the use of the Program at any time without additional address notification.
+7.3 If the User violates this License Agreement or the current legislation of the Republic of Moldova, the Copyright Holder has the right to block the User's access to the use of the Program.
+7.4 Any disputes arising from this Agreement shall be resolved through negotiations between the Parties.
+7.5 In case of failure to reach a mutual agreement through negotiations within 30 (thirty) calendar days from the receipt of a claim by one of the Parties, all disputes, disagreements or claims arising from or in connection with this Agreement, including those related to its execution, violation, termination or invalidity are subject to judicial resolution.
+7.6 The Copyright Holder has the right to unilaterally amend this License Agreement by posting a new text containing such changes. Changes come into force from the moment of such posting, unless another date for the entry into force of the changes is determined upon publication. In case of disagreement with the change in the terms of this License Agreement, the User has the right to refuse to execute it by deleting the Program.
+7.7 By installing the Program, the User guarantees that all the terms of this License Agreement are clear to them, and the User accepts the terms without reservations and in full, guarantees that he will not use the Program for purposes other than those specified in the text of this License Agreement.
+8. Details of the Copyright Holder
+Sapec.md Moldova, Chisinau, Grenoble 257 str.
