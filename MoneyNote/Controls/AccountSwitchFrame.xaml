@@ -9,11 +9,13 @@
     x:Name="this"
     mc:Ignorable="d">
     <StackLayout
-        touch:TouchEff.PressedScale="0.9"
-        touch:TouchEff.RegularAnimationDuration="200"
         BackgroundColor="{StaticResource BackgroundWhite}"
         HeightRequest="70"
         Orientation="Horizontal">
+        <!--
+            touch:TouchEff.PressedScale="0.9"
+            touch:TouchEff.RegularAnimationDuration="200"
+        -->
         <Label
             x:Name="label"
             FontSize="Medium"

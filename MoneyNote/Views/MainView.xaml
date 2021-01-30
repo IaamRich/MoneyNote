@@ -215,6 +215,7 @@
                                         RowDefinitions="Auto,0.5">
                                         <Grid.GestureRecognizers>
                                             <TapGestureRecognizer
+                                                Command="{Binding BindingContext.SelectNote, Source={x:Reference lastTransactions}}"
                                                 CommandParameter="{Binding .}"
                                                 NumberOfTapsRequired="1"
                                                 Tapped="TapGestureRecognizer_Tapped" />

@@ -90,7 +90,12 @@
                             </ScrollView>
                         </StackLayout>
                         <!--  Sounds  -->
-                        <Grid ColumnSpacing="0" HeightRequest="70">
+                        <Grid
+                            touch:TouchEff.Command="{Binding SoundsCommand}"
+                            touch:TouchEff.PressedScale="0.9"
+                            touch:TouchEff.RegularAnimationDuration="200"
+                            ColumnSpacing="0"
+                            HeightRequest="70">
                             <Label
                                 FontSize="Medium"
                                 Text="{Binding Strings[sounds]}"
@@ -109,9 +114,6 @@
                                     </DataTrigger>
                                 </Image.Triggers>
                             </Image>
-                            <Grid.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding SoundsCommand}" />
-                            </Grid.GestureRecognizers>
                         </Grid>
                         <!--  From Where By Default  -->
                         <Grid
@@ -125,6 +127,9 @@
                             <!--  text Area  -->
                             <Label
                                 Grid.RowSpan="2"
+                                touch:TouchEff.Command="{Binding AreaByDefaultCommand}"
+                                touch:TouchEff.PressedScale="0.9"
+                                touch:TouchEff.RegularAnimationDuration="200"
                                 FontSize="Medium"
                                 HorizontalOptions="CenterAndExpand"
                                 Text="{Binding Strings[default_area]}"
@@ -132,6 +137,9 @@
                             <!--  cash  -->
                             <StackLayout
                                 Grid.Column="1"
+                                touch:TouchEff.Command="{Binding AreaByDefaultCommand}"
+                                touch:TouchEff.PressedScale="0.9"
+                                touch:TouchEff.RegularAnimationDuration="200"
                                 HorizontalOptions="End"
                                 Orientation="Horizontal">
                                 <Label
@@ -154,14 +162,14 @@
                                         </DataTrigger>
                                     </Image.Triggers>
                                 </Image>
-                                <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding AreaByDefaultCommand}" />
-                                </StackLayout.GestureRecognizers>
                             </StackLayout>
                             <!--  card  -->
                             <StackLayout
                                 Grid.Row="1"
                                 Grid.Column="1"
+                                touch:TouchEff.Command="{Binding AreaByDefaultCommand}"
+                                touch:TouchEff.PressedScale="0.9"
+                                touch:TouchEff.RegularAnimationDuration="200"
                                 HorizontalOptions="End"
                                 Orientation="Horizontal">
                                 <Label
@@ -184,9 +192,6 @@
                                         </DataTrigger>
                                     </Image.Triggers>
                                 </Image>
-                                <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding AreaByDefaultCommand}" />
-                                </StackLayout.GestureRecognizers>
                             </StackLayout>
                         </Grid>
 
@@ -206,6 +211,9 @@
                         <!--  Reset all  -->
                         <StackLayout HeightRequest="70" Orientation="Horizontal">
                             <Label
+                                touch:TouchEff.Command="{Binding ResetAll}"
+                                touch:TouchEff.PressedScale="0.9"
+                                touch:TouchEff.RegularAnimationDuration="200"
                                 FontSize="Medium"
                                 Text="{Binding Strings[reset_all]}"
                                 VerticalOptions="Center" />
@@ -224,6 +232,9 @@
                         <!--  Set notes  -->
                         <StackLayout HeightRequest="70" Orientation="Horizontal">
                             <Label
+                                touch:TouchEff.Command="{Binding OffAds}"
+                                touch:TouchEff.PressedScale="0.9"
+                                touch:TouchEff.RegularAnimationDuration="200"
                                 FontSize="Medium"
                                 Text="{Binding Strings[set_notes]}"
                                 VerticalOptions="Center" />
@@ -241,7 +252,12 @@
                                 WidthRequest="120" />
                         </StackLayout>
                         <!--  Auto credit  -->
-                        <Grid ColumnSpacing="0" HeightRequest="70">
+                        <Grid
+                            touch:TouchEff.Command="{Binding IsMinusCommand}"
+                            touch:TouchEff.PressedScale="0.9"
+                            touch:TouchEff.RegularAnimationDuration="200"
+                            ColumnSpacing="0"
+                            HeightRequest="70">
                             <Label
                                 FontSize="Medium"
                                 Text="{Binding Strings[allow_credit]}"
@@ -261,9 +277,6 @@
                                     </DataTrigger>
                                 </Image.Triggers>
                             </Image>
-                            <Grid.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding IsMinusCommand}" />
-                            </Grid.GestureRecognizers>
                         </Grid>
                         <!--  === Other Section ===  -->
                         <BoxView
@@ -281,6 +294,9 @@
                         <Grid HeightRequest="70">
                             <StackLayout Orientation="Horizontal">
                                 <Label
+                                    touch:TouchEff.Command="{Binding OffAds}"
+                                    touch:TouchEff.PressedScale="0.9"
+                                    touch:TouchEff.RegularAnimationDuration="200"
                                     FontSize="Medium"
                                     Text="{Binding Strings[dis_add]}"
                                     VerticalOptions="Center" />

@@ -75,6 +75,10 @@ namespace MoneyNote
                 var result = await Xamarin.Forms.Application.Current.MainPage.DisplayAlert("Deleting", "Are you sure to delete this note?", "Yes", "No");
                 if (result)
                 {
+                    if (note.Date.Month != DateTime.Now.Month && note.Date.Year != DateTime.Now.Year)
+                    {
+
+                    }
                     if (note.Bill == TransactionBill.Cash)
                     {
                         if (CurrentCash < note.Value)

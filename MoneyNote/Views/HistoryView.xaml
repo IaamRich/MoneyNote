@@ -105,13 +105,15 @@
                                             <DataTemplate>
                                                 <Grid
                                                     Margin="5"
-                                                    touch:TouchEff.PressedScale="0.9"
-                                                    touch:TouchEff.RegularAnimationDuration="200"
                                                     BackgroundColor="White"
                                                     ColumnDefinitions="Auto,*,Auto"
                                                     ColumnSpacing="0"
                                                     RowDefinitions="Auto,Auto,0.5"
                                                     RowSpacing="0">
+                                                    <!--
+                                                        touch:TouchEff.PressedScale="0.9"
+                                                        touch:TouchEff.RegularAnimationDuration="200"
+                                                    -->
                                                     <!--  Image  -->
                                                     <Image
                                                         Grid.RowSpan="3"
