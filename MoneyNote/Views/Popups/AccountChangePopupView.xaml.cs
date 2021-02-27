@@ -40,24 +40,5 @@ namespace MoneyNote.Views.Popups
                 ActionAfter?.Invoke();
             }
         }
-        //private bool CheckStringForValue(string str)
-        //{
-        //    if (String.IsNullOrEmpty(str))
-        //    {
-        //        PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
-        //        return false;
-        //    }
-        //    else if (str[0] == '0')
-        //    {
-        //        PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value_zero"]), true);
-        //        return false;
-        //    }
-        //    else if (str[0] == '.')
-        //    {
-        //        PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
-        //        return false;
-        //    }
-        //    return true;
-        //}
     }
 }

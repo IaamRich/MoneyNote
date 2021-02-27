@@ -69,11 +69,13 @@
         </Frame>
         <Image
             Grid.Column="1"
+            Margin="-20,20,0,0"
             Aspect="AspectFit"
+            HeightRequest="75"
             HorizontalOptions="Start"
+            Rotation="90"
             Source="alert_notique"
-            VerticalOptions="Center"
-            WidthRequest="50" />
+            VerticalOptions="Center" />
         <Grid.GestureRecognizers>
             <TapGestureRecognizer Tapped="CloseButton_Clicked" />
         </Grid.GestureRecognizers>

@@ -46,7 +46,7 @@ namespace MoneyNote.Views.Popups
                         }
                         if (String.IsNullOrEmpty(entry.Text))
                         {
-                            PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
+                            await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
                         }
                         else if (entry.Text[0] == '-')
                         {
@@ -54,9 +54,9 @@ namespace MoneyNote.Views.Popups
                         }
                         else if (entry.Text[0] == '0')
                         {
-                            PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value_zero"]), true);
+                            await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value_zero"]), true);
                         }
-                        else if (entry.Text[0] == '.') PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
+                        else if (entry.Text[0] == '.') await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_value"]), true);
                         else
                         {
                             var moneyValue = decimal.Parse(entry.Text);
@@ -71,7 +71,7 @@ namespace MoneyNote.Views.Popups
                             CrossSettings.Current.AddOrUpdateValue("SaveMessage", result);
                             CrossSettings.Current.AddOrUpdateValue("CurrentAddedMoneyTo", FuncMoneyFrom());
 
-                            PopupNavigation.Instance.PopAsync(true);
+                            await PopupNavigation.Instance.PopAsync(true);
                             ActionAfter?.Invoke();
                         }
                     });
@@ -85,9 +85,6 @@ namespace MoneyNote.Views.Popups
         private void Cancel_Button_Clicked(object sender, System.EventArgs e)
         {
             IsCancelPressed = true;
-            downHand.IsVisible = true;
-            leftHand.IsVisible = false;
-            rightHand.IsVisible = false;
             OnBackgroundClicked();
             PopupNavigation.Instance.PopAsync(true);
         }
@@ -114,32 +111,22 @@ namespace MoneyNote.Views.Popups
         protected override void OnDisappearingAnimationBegin()
         {
             base.OnDisappearingAnimationBegin();
-            if (!IsCancelPressed)
-            {
-                leftHand.IsVisible = true;
-                rightHand.IsVisible = true;
-            }
-
         }
         // Invoked after an animation disappearing
         protected override void OnDisappearingAnimationEnd()
         {
             base.OnDisappearingAnimationEnd();
-            leftHand.IsVisible = false;
-            rightHand.IsVisible = false;
         }
         // Invoked before an animation appearing
         protected override void OnAppearingAnimationBegin()
         {
             base.OnAppearingAnimationBegin();
-            downHand.IsVisible = true;
 
         }
         // Invoked after an animation appearing
         protected override void OnAppearingAnimationEnd()
         {
             base.OnAppearingAnimationEnd();
-            downHand.IsVisible = false;
         }
         private void PlugForGridGesture(object sender, EventArgs e)
         {

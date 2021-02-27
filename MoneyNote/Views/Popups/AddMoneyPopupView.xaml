@@ -245,39 +245,6 @@
                 <TapGestureRecognizer Tapped="PlugForGridGesture" />
             </Frame.GestureRecognizers>
         </Frame>
-        <Image
-            x:Name="leftHand"
-            Grid.Row="0"
-            Grid.Column="1"
-            Margin="-25,0,0,0"
-            HeightRequest="50"
-            HorizontalOptions="Start"
-            IsVisible="False"
-            Source="left_image_hand.png"
-            VerticalOptions="Center"
-            WidthRequest="50" />
-        <Image
-            x:Name="rightHand"
-            Grid.Row="0"
-            Grid.Column="1"
-            Margin="0,0,-25,0"
-            HeightRequest="50"
-            HorizontalOptions="End"
-            IsVisible="False"
-            Source="right_image_hand.png"
-            VerticalOptions="Center"
-            WidthRequest="50" />
-        <Image
-            x:Name="downHand"
-            Grid.Row="1"
-            Grid.Column="1"
-            Margin="0,-25,0,0"
-            HeightRequest="50"
-            HorizontalOptions="Center"
-            IsVisible="false"
-            Source="down_image_hand.png"
-            VerticalOptions="Start"
-            WidthRequest="50" />
         <Grid.GestureRecognizers>
             <TapGestureRecognizer Tapped="Cancel_Button_Clicked" />
         </Grid.GestureRecognizers>

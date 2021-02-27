@@ -35,13 +35,13 @@
                     <Image
                         Grid.Row="1"
                         Aspect="AspectFit"
-                        HeightRequest="80"
+                        HeightRequest="90"
                         HorizontalOptions="Center"
                         Source="logo.png"
                         VerticalOptions="Start" />
                     <Image
                         Grid.Row="1"
-                        Margin="-520,0,0,0"
+                        Margin="-560,0,0,0"
                         HeightRequest="12"
                         HorizontalOptions="Center"
                         Source="steps.png"

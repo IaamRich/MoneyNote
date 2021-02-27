@@ -215,11 +215,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\down_image_hand.png">
-      <Link>Resources\drawable\down_image_hand.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="..\MoneyNote\Resources\Images\en.png">
       <Link>Resources\drawable\en.png</Link>
     </AndroidResource>
@@ -250,11 +245,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\left_image_hand.png">
-      <Link>Resources\drawable\left_image_hand.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="..\MoneyNote\Resources\Images\logo.png">
       <Link>Resources\drawable\logo.png</Link>
     </AndroidResource>
@@ -272,11 +262,6 @@
   <ItemGroup>
     <AndroidResource Include="..\MoneyNote\Resources\Images\plus.png">
       <Link>Resources\drawable\plus.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\right_image_hand.png">
-      <Link>Resources\drawable\right_image_hand.png</Link>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
@@ -307,11 +292,6 @@
   <ItemGroup>
     <AndroidResource Include="..\MoneyNote\Resources\Images\unselected.png">
       <Link>Resources\drawable\unselected.png</Link>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="..\MoneyNote\Resources\Images\up_image_hand.png">
-      <Link>Resources\drawable\up_image_hand.png</Link>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
@@ -477,6 +457,11 @@
   <ItemGroup>
     <AndroidResource Include="..\MoneyNote\Resources\Images\medicine.png">
       <Link>Resources\drawable\medicine.png</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\MoneyNote\Resources\Images\settings_header_glasses.png">
+      <Link>Resources\drawable\settings_header_glasses.png</Link>
     </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

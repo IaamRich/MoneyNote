@@ -11,8 +11,8 @@
     <Grid BackgroundColor="{StaticResource ListBackColor}">
         <Image Source="header_back.png" VerticalOptions="Start" />
         <ScrollView>
-            <StackLayout Spacing="5">
-                <Grid HeightRequest="125">
+            <StackLayout Spacing="0">
+                <Grid HeightRequest="120">
                     <Label
                         Margin="30,0,0,0"
                         FontSize="Title"

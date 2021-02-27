@@ -46,8 +46,8 @@
                         VerticalOptions="Center" />
                     <Label
                         x:Name="value"
-                        FontFamily=""
                         Margin="0,0,5,0"
+                        FontFamily=""
                         FontSize="Large"
                         HorizontalOptions="EndAndExpand"
                         HorizontalTextAlignment="End"
@@ -61,17 +61,6 @@
                 <TapGestureRecognizer Tapped="PlugForGridGesture" />
             </Frame.GestureRecognizers>
         </Frame>
-        <!--  Hands  -->
-        <Image
-            x:Name="upHand"
-            Grid.Row="0"
-            Margin="0,0,0,-25"
-            HeightRequest="50"
-            HorizontalOptions="Center"
-            IsVisible="False"
-            Source="up_image_hand.png"
-            VerticalOptions="End"
-            WidthRequest="50" />
         <Grid.GestureRecognizers>
             <TapGestureRecognizer Tapped="Cancel_Button_Clicked" />
         </Grid.GestureRecognizers>

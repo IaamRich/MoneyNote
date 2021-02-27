@@ -19,7 +19,6 @@ namespace MoneyNote.Views.Popups
         public CommitPopupView(Action act)
         {
             InitializeComponent();
-            downHand.IsVisible = false;
             switch (CrossSettings.Current.GetValueOrDefault("IdSpendFromWhere", 0))
             {
                 case 1:
@@ -49,7 +48,7 @@ namespace MoneyNote.Views.Popups
                 CrossSettings.Current.AddOrUpdateValue("CommitMessage", result);
                 CrossSettings.Current.AddOrUpdateValue("CurrentCommitMoneyFrom", FuncMoneyFrom());
 
-                PopupNavigation.Instance.PopAsync(true);
+                await PopupNavigation.Instance.PopAsync(true);
                 ActionAfter?.Invoke();
             }
 
@@ -61,9 +60,6 @@ namespace MoneyNote.Views.Popups
         private void Cancel_Button_Clicked(object sender, System.EventArgs e)
         {
             IsCancelPressed = true;
-            downHand.IsVisible = true;
-            leftHand.IsVisible = false;
-            rightHand.IsVisible = false;
             OnBackgroundClicked();
             PopupNavigation.Instance.PopAsync(true);
         }
@@ -87,7 +83,6 @@ namespace MoneyNote.Views.Popups
         protected override bool OnBackgroundClicked()
         {
             IsCancelPressed = true;
-            downHand.IsVisible = true;
             animation.PositionOut = Rg.Plugins.Popup.Enums.MoveAnimationOptions.Bottom;
             animation.ScaleOut = 1;
             return base.OnBackgroundClicked();
@@ -96,31 +91,21 @@ namespace MoneyNote.Views.Popups
         protected override void OnDisappearingAnimationBegin()
         {
             base.OnDisappearingAnimationBegin();
-            if (!IsCancelPressed)
-            {
-                leftHand.IsVisible = true;
-                rightHand.IsVisible = true;
-            }
         }
         // Invoked after an animation disappearing
         protected override void OnDisappearingAnimationEnd()
         {
             base.OnDisappearingAnimationEnd();
-            leftHand.IsVisible = false;
-            rightHand.IsVisible = false;
         }
         // Invoked before an animation appearing
         protected override void OnAppearingAnimationBegin()
         {
             base.OnAppearingAnimationBegin();
-            upHand.IsVisible = true;
-
         }
         // Invoked after an animation appearing
         protected override void OnAppearingAnimationEnd()
         {
             base.OnAppearingAnimationEnd();
-            upHand.IsVisible = false;
         }
         private void PlugForGridGesture(object sender, EventArgs e)
         {

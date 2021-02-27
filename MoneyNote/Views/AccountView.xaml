@@ -187,9 +187,9 @@
                         </StackLayout>
                     </Frame>
                     <Image
-                        Margin="0,0,30,-8"
+                        Margin="0,0,30,-6"
                         Aspect="AspectFit"
-                        HeightRequest="60"
+                        HeightRequest="96"
                         HorizontalOptions="End"
                         Source="account_header.png"
                         VerticalOptions="End" />
