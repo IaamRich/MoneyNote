@@ -1,9 +1,9 @@
-﻿using ReactiveUI;
-using ReactiveUI.XamForms;
-using System;
+﻿using System;
 using System.Linq;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
+using ReactiveUI;
+using ReactiveUI.XamForms;
 using Xamarin.Forms;
 
 namespace MoneyNote
@@ -50,10 +50,10 @@ namespace MoneyNote
                 IsPresented = false;
                 // now you have a reference to the image
             };
-            foreach (var item in menuTitle.Children)
-            {
-                item.GestureRecognizers.Add(tapGestureRecognizer);
-            }
+            //foreach (var item in menuTitle.Children)
+            //{
+            //    item.GestureRecognizers.Add(tapGestureRecognizer);
+            //}
         }
     }
 }

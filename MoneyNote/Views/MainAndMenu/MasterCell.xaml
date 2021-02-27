@@ -21,13 +21,13 @@
             x:Name="titleLabel"
             Grid.Column="1"
             FontSize="Large"
-            TextColor="{StaticResource AboutBackGround}"
+            TextColor="{StaticResource BackgroundWhite}"
             VerticalOptions="Center" />
-        <BoxView
+        <!--<BoxView
             Grid.Row="1"
             Grid.ColumnSpan="2"
             BackgroundColor="{StaticResource BackgroundWhite}"
-            Opacity="0.5" />
+            Opacity="0.5" />-->
     </Grid>
 
 </rxui:ReactiveViewCell>

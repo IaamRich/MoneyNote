@@ -37,6 +37,7 @@ namespace MoneyNote
         public ICommand DisplayAllDate { get; set; }
         public ICommand DisplayLastWeek { get; set; }
         public ICommand DisplayLastMonth { get; set; }
+        public ICommand GetGlassesCommand { get; set; }
         public ReactiveCommand<string, Unit> SearchingCommand { get; set; }
         public bool IsChangeFilterVisible { get; set; }
         public bool IsSearchPanelVisible { get; set; }
@@ -46,6 +47,7 @@ namespace MoneyNote
             get => _searchText;
             set => this.RaiseAndSetIfChanged(ref _searchText, value);
         }
+        public string HistoryPicture { get; set; } = "history_header.png";
 
         public HistoryViewModel(ITransactionService transactionService, IScreen screen = null)
         {
@@ -65,16 +67,15 @@ namespace MoneyNote
         }
         private void CreateCommands()
         {
-            DiagramCommand = ReactiveCommand.CreateFromObservable(() =>
+            DiagramCommand = ReactiveCommand.Create(async () =>
             {
                 if (TransactionsFullList != null && TransactionsFullList.Count > 0)
                 {
-                    return HostScreen.Router.Navigate.Execute(new ViewModels.DiagramViewModel(new TransactionService()));
+                    await HostScreen.Router.Navigate.Execute(new ViewModels.DiagramViewModel(new TransactionService()));
                 }
                 else
                 {
-                    PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_history"]), true);
-                    return null;
+                    await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_history"]), true);
                 }
             });
             DisplayAllDate = ReactiveCommand.Create(() =>
