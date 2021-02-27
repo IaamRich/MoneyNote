@@ -1,4 +1,5 @@
 ﻿
+using FFImageLoading.Forms.Platform;
 using Foundation;
 using Lottie.Forms.iOS.Renderers;
 using Microsoft.AppCenter;
@@ -27,6 +28,7 @@ namespace MoneyNote.iOS
             Forms.SetFlags("SwipeView_Experimental");
             Rg.Plugins.Popup.Popup.Init();
 
+            CachedImageRenderer.Init();
             AppCenter.Start("e5753842-cc10-4a5d-b170-dac37070ad4b", typeof(Analytics), typeof(Crashes));
 
             global::Xamarin.Forms.Forms.Init();

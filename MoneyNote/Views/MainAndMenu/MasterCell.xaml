@@ -5,21 +5,29 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MoneyNote"
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
+    xmlns:tint="clr-namespace:MoneyNote.MarkupExtensions"
     x:TypeArguments="local:MasterCellViewModel">
 
-    <Grid Margin="10" ColumnSpacing="10">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="30" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="30" />
-        </Grid.RowDefinitions>
-        <Image x:Name="iconImage" />
+    <Grid
+        Margin="10"
+        ColumnDefinitions="40,*"
+        ColumnSpacing="20"
+        RowDefinitions="40, 0.5">
+        <tint:TintedCachedImage
+            x:Name="iconImage"
+            TintColor="{StaticResource BackgroundWhite}"
+            VerticalOptions="Center" />
         <Label
             x:Name="titleLabel"
             Grid.Column="1"
-            VerticalOptions="CenterAndExpand" />
+            FontSize="Large"
+            TextColor="{StaticResource AboutBackGround}"
+            VerticalOptions="Center" />
+        <BoxView
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            BackgroundColor="{StaticResource BackgroundWhite}"
+            Opacity="0.5" />
     </Grid>
 
 </rxui:ReactiveViewCell>

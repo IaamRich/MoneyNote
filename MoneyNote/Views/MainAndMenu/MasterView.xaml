@@ -5,32 +5,30 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MoneyNote"
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
+    xmlns:tint="clr-namespace:MoneyNote.MarkupExtensions"
     xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
     x:TypeArguments="local:MasterViewModel">
     <MasterDetailPage.Master>
         <!--  No need reference to strings[]  -->
         <ContentPage Title="Master">
             <StackLayout Spacing="0">
-                <Grid x:Name="menuTitle" ColumnSpacing="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="36" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="56" />
-                    </Grid.RowDefinitions>
+                <!--<Grid
+                    x:Name="menuTitle"
+                    ColumnDefinitions="*,36"
+                    ColumnSpacing="20"
+                    RowDefinitions="56">
                     <BoxView Grid.ColumnSpan="2" BackgroundColor="{StaticResource MainGreen}" />
-                    <Grid Grid.Column="0" ColumnSpacing="20">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="30" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
+                    <Grid
+                        Grid.Column="0"
+                        ColumnDefinitions="40,*"
+                        ColumnSpacing="20">
                         <Image x:Name="IconImage" />
                         <Label
                             x:Name="TitleLabel"
                             Grid.Column="1"
                             FontFamily="MainFontBold"
                             FontSize="Medium"
+                            HorizontalOptions="Start"
                             Text="{Binding Strings[menu]}"
                             TextColor="White"
                             VerticalOptions="CenterAndExpand" />
@@ -39,12 +37,13 @@
                         Grid.Column="1"
                         Margin="0,0,18,0"
                         Source="hamburger_white.png" />
-                </Grid>
+                </Grid>-->
+
                 <ListView
                     x:Name="MyListView"
+                    BackgroundColor="{StaticResource MainGreen}"
                     HasUnevenRows="True"
-                    SeparatorColor="Green"
-                    SeparatorVisibility="Default"
+                    SeparatorVisibility="None"
                     VerticalOptions="Start">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -52,9 +51,36 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <StackLayout Margin="0,0,0,5" Orientation="Horizontal">
+
+                <StackLayout
+                    Margin="0,0,0,5"
+                    BackgroundColor="{StaticResource MainGreen}"
+                    Orientation="Horizontal">
                     <StackLayout Margin="10,0,0,0" Orientation="Vertical">
-                        <Label FontSize="Micro" VerticalOptions="Center">
+                        <Grid
+                            Padding="25,0,0,0"
+                            BackgroundColor="{StaticResource MainGreen}"
+                            HeightRequest="200"
+                            HorizontalOptions="Start"
+                            VerticalOptions="EndAndExpand">
+                            <Image
+                                Margin="-500,0,0,5"
+                                HeightRequest="12"
+                                HorizontalOptions="Center"
+                                Source="steps.png"
+                                VerticalOptions="End" />
+                            <Image
+                                Aspect="AspectFit"
+                                HeightRequest="90"
+                                HorizontalOptions="Center"
+                                Source="logo.png"
+                                VerticalOptions="End" />
+
+                        </Grid>
+                        <Label
+                            FontSize="Small"
+                            TextColor="{StaticResource BackgroundWhite}"
+                            VerticalOptions="Center">
                             <Label.FormattedText>
                                 <FormattedString>
                                     <FormattedString.Spans>
@@ -65,10 +91,12 @@
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
+
                         <Label
-                            FontSize="Micro"
+                            FontSize="Small"
                             HorizontalOptions="StartAndExpand"
-                            Text="{Binding Strings[menu_footer]}" />
+                            Text="{Binding Strings[menu_footer]}"
+                            TextColor="{StaticResource BackgroundWhite}" />
                     </StackLayout>
 
                     <StackLayout
@@ -78,23 +106,24 @@
                         Spacing="10"
                         VerticalOptions="EndAndExpand">
 
-                        <Image
+                        <tint:TintedCachedImage
                             touch:TouchEff.Command="{Binding ShareCommand}"
                             touch:TouchEff.PressedScale="2"
                             touch:TouchEff.RegularAnimationDuration="200"
                             HeightRequest="30"
                             Source="share.png"
+                            TintColor="{StaticResource BackgroundWhite}"
                             WidthRequest="30" />
-                        <Image
+                        <tint:TintedCachedImage
                             touch:TouchEff.Command="{Binding LikeCommand}"
                             touch:TouchEff.PressedScale="2"
                             touch:TouchEff.RegularAnimationDuration="200"
                             HeightRequest="30"
                             Source="star.png"
+                            TintColor="{StaticResource BackgroundWhite}"
                             WidthRequest="30" />
                     </StackLayout>
                 </StackLayout>
-
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>

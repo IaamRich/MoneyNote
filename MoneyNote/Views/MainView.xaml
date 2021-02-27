@@ -23,30 +23,6 @@
                 ColumnDefinitions="*,Auto"
                 ColumnSpacing="0"
                 RowDefinitions="Auto,Auto">
-                <!--  Logo  -->
-                <Grid
-                    Margin="15,0,0,0"
-                    HorizontalOptions="Start"
-                    RowDefinitions="35,Auto">
-                    <Label
-                        FontSize="Title"
-                        Text="{Binding Strings[app_name]}"
-                        TextColor="White" />
-                    <Image
-                        Grid.Row="1"
-                        Aspect="AspectFit"
-                        HeightRequest="90"
-                        HorizontalOptions="Center"
-                        Source="logo.png"
-                        VerticalOptions="Start" />
-                    <Image
-                        Grid.Row="1"
-                        Margin="-560,0,0,0"
-                        HeightRequest="12"
-                        HorizontalOptions="Center"
-                        Source="steps.png"
-                        VerticalOptions="End" />
-                </Grid>
                 <Frame
                     Grid.Column="1"
                     Margin="0,0,-10,0"

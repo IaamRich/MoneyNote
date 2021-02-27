@@ -1,7 +1,7 @@
-﻿using ReactiveUI;
-using ReactiveUI.XamForms;
-using System;
+﻿using System;
 using System.Reactive.Linq;
+using ReactiveUI;
+using ReactiveUI.XamForms;
 
 namespace MoneyNote
 {
