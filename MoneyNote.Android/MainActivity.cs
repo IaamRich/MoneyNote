@@ -7,6 +7,7 @@ using FFImageLoading.Forms.Platform;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using PanCardView.Droid;
 using Xamarin.Forms;
 
 namespace MoneyNote.Droid
@@ -34,6 +35,7 @@ namespace MoneyNote.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            CardsViewRenderer.Preserve();
             LoadApplication(new App());
             TouchEffect.Android.TouchEffectPreserver.Preserve();
             Lottie.Forms.Droid.AnimationViewRenderer.Init();

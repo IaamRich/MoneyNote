@@ -5,6 +5,7 @@ using Lottie.Forms.iOS.Renderers;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using PanCardView.iOS;
 using UIKit;
 using Xamarin.Forms;
 
@@ -32,6 +33,7 @@ namespace MoneyNote.iOS
             AppCenter.Start("e5753842-cc10-4a5d-b170-dac37070ad4b", typeof(Analytics), typeof(Crashes));
 
             global::Xamarin.Forms.Forms.Init();
+            CardsViewRenderer.Preserve();
             XF.Material.iOS.Material.Init();
             LoadApplication(new App());
 
