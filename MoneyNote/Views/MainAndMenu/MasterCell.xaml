@@ -10,9 +10,9 @@
 
     <Grid
         Margin="10"
-        ColumnDefinitions="40,*"
+        ColumnDefinitions="35,*"
         ColumnSpacing="20"
-        RowDefinitions="40, 0.5">
+        RowDefinitions="35, 0.5">
         <tint:TintedCachedImage
             x:Name="iconImage"
             TintColor="{StaticResource BackgroundWhite}"
@@ -20,14 +20,9 @@
         <Label
             x:Name="titleLabel"
             Grid.Column="1"
-            FontSize="Large"
+            FontSize="Medium"
             TextColor="{StaticResource BackgroundWhite}"
             VerticalOptions="Center" />
-        <!--<BoxView
-            Grid.Row="1"
-            Grid.ColumnSpan="2"
-            BackgroundColor="{StaticResource BackgroundWhite}"
-            Opacity="0.5" />-->
     </Grid>
 
 </rxui:ReactiveViewCell>

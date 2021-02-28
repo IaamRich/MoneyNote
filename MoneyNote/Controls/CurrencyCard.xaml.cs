@@ -26,6 +26,16 @@ namespace MoneyNote.Controls
             get => (string)GetValue(ValueProperty);
             set => SetValue(ValueProperty, value);
         }
+
+        //========================= ColorValue ==================
+        public static readonly BindableProperty ValueColorProperty = BindableProperty
+            .Create(nameof(ValueColor), typeof(Color), typeof(CurrencyCard), default(Color));
+
+        public Color ValueColor
+        {
+            get => (Color)GetValue(ValueColorProperty);
+            set => SetValue(ValueColorProperty, value);
+        }
         public CurrencyCard()
         {
             InitializeComponent();
@@ -41,6 +51,10 @@ namespace MoneyNote.Controls
             if (propertyName == ValueProperty.PropertyName)
             {
                 valuelabel.Text = Value;
+            }
+            if (propertyName == ValueColorProperty.PropertyName)
+            {
+                valuelabel.TextColor = ValueColor;
             }
         }
     }

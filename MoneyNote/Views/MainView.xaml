@@ -29,17 +29,38 @@
                 <StackLayout>
                     <cards:CoverFlowView
                         IsCyclical="False"
-                        PositionShiftPercentage="0.6"
+                        PositionShiftPercentage="0.5"
                         SelectedIndex="1">
                         <x:Arguments>
                             <proc:CoverFlowProcessor OpacityFactor="0.25" ScaleFactor="0.5" />
                         </x:Arguments>
                         <cards:CoverFlowView.ItemsSource>
                             <x:Array Type="{x:Type controls:CurrencyCard}">
-                                <controls:CurrencyCard Title="{Binding Strings[current_card]}" Value="{Binding CurrentCard}" />
-                                <controls:CurrencyCard Title="{Binding Strings[current_cash]}" Value="{Binding CurrentCash}" />
-                                <controls:CurrencyCard Title="{Binding Strings[current_credit]}" Value="{Binding CurrentCredit}" />
-                                <controls:CurrencyCard Title="{Binding Strings[current_savings]}" Value="{Binding CurrentSavings}" />
+                                <controls:CurrencyCard
+                                    Title="{Binding Strings[current_card]}"
+                                    ValueColor="{StaticResource MainGreen}"
+                                    Value="{Binding CurrentCard}" />
+                                <controls:CurrencyCard
+                                    Title="{Binding Strings[current_cash]}"
+                                    ValueColor="{StaticResource MainGreen}"
+                                    Value="{Binding CurrentCash}" />
+                                <controls:CurrencyCard
+                                    Title="{Binding Strings[current_savings]}"
+                                    ValueColor="{StaticResource MainGreen}"
+                                    Value="{Binding CurrentAllSavings}" />
+                                <controls:CurrencyCard
+                                    Title="{Binding Strings[current_credit]}"
+                                    ValueColor="{StaticResource RedAlert}"
+                                    Value="{Binding CurrentCredit}">
+                                    <controls:CurrencyCard.Triggers>
+                                        <DataTrigger
+                                            Binding="{Binding CurrentCredit}"
+                                            TargetType="controls:CurrencyCard"
+                                            Value="0">
+                                            <Setter Property="ValueColor" Value="{StaticResource MainGreen}" />
+                                        </DataTrigger>
+                                    </controls:CurrencyCard.Triggers>
+                                </controls:CurrencyCard>
                             </x:Array>
                         </cards:CoverFlowView.ItemsSource>
                     </cards:CoverFlowView>

@@ -1,10 +1,10 @@
 ﻿/* Main Page */
 main_title = Main
-current_cash = My Cash
-current_card = My Card
-current_credit = My Credit
-current_savings = My Savings
-current = Current bill:
+current_cash = Cash
+current_card = Card
+current_credit = Credit
+current_savings = Saving
+current = Overall balance:
 enter_spent_amount = Enter spent amount:
 last_spent_money = Last spent money:
 from_card = from Card
@@ -19,7 +19,7 @@ missed = by default
 /* Account Page */
 my_cash = My cash money:
 my_card = My card money:
-my_current = Current Bills
+my_current = Without savings
 my_all = With Savings
 income_outlay = Income/Outlay
 month_income = This month income:
