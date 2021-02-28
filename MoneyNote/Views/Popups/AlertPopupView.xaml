@@ -8,6 +8,7 @@
     xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:popups="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:tint="clr-namespace:MoneyNote.MarkupExtensions"
     mc:Ignorable="d">
     <popups:PopupPage.Animation>
         <animations:ScaleAnimation
@@ -27,20 +28,24 @@
         <Frame
             Margin="-20,20,0,0"
             Padding="0"
-            BackgroundColor="{StaticResource BackgroundWhite}"
+            BackgroundColor="{StaticResource RedAlert}"
             BorderColor="{StaticResource BoldLabel}"
             CornerRadius="10"
             HorizontalOptions="Start"
             VerticalOptions="Start">
             <StackLayout Margin="20,0,0,0" Orientation="Vertical">
-                <ImageButton
+
+                <tint:TintedCachedImage
                     Margin="5"
                     Aspect="AspectFit"
-                    BackgroundColor="Transparent"
-                    Clicked="CloseButton_Clicked"
                     HeightRequest="30"
                     HorizontalOptions="End"
-                    Source="close.png" />
+                    Source="close.png"
+                    TintColor="{StaticResource BackgroundWhite}">
+                    <tint:TintedCachedImage.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="CloseButton_Clicked" />
+                    </tint:TintedCachedImage.GestureRecognizers>
+                </tint:TintedCachedImage>
                 <Grid Margin="0,-10,0,0" HeightRequest="50">
                     <forms:AnimationView
                         Margin="0,5,0,2"
@@ -48,10 +53,12 @@
                         AutoPlay="True"
                         Loop="True"
                         Progress="1" />
-                    <Image
+
+                    <tint:TintedCachedImage
                         Aspect="AspectFill"
                         HorizontalOptions="Center"
                         Source="alert.png"
+                        TintColor="{StaticResource BackgroundWhite}"
                         VerticalOptions="FillAndExpand" />
                 </Grid>
                 <Label
@@ -60,14 +67,14 @@
                     FontSize="Body"
                     HorizontalOptions="CenterAndExpand"
                     HorizontalTextAlignment="Center"
-                    TextColor="{StaticResource RedAlert}"
+                    TextColor="{StaticResource BackgroundWhite}"
                     VerticalOptions="Center" />
             </StackLayout>
             <Frame.GestureRecognizers>
                 <TapGestureRecognizer Tapped="PlugForGridGesture" />
             </Frame.GestureRecognizers>
         </Frame>
-        <Image
+        <!--<Image
             Grid.Column="1"
             Margin="-20,20,0,0"
             Aspect="AspectFit"
@@ -75,7 +82,7 @@
             HorizontalOptions="Start"
             Rotation="90"
             Source="alert_notique"
-            VerticalOptions="Center" />
+            VerticalOptions="Center" />-->
         <Grid.GestureRecognizers>
             <TapGestureRecognizer Tapped="CloseButton_Clicked" />
         </Grid.GestureRecognizers>

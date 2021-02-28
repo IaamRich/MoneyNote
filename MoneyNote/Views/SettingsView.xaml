@@ -15,12 +15,22 @@
         <ScrollView Padding="0">
             <StackLayout Padding="0" Spacing="0">
                 <Grid RowDefinitions="120" VerticalOptions="EndAndExpand">
+                    <!--<Label
+                        Margin="40,0,0,10"
+                        FontSize="Title"
+                        Text="{Binding Strings[menu_settings]}"
+                        TextColor="{StaticResource BackgroundWhite}"
+                        VerticalOptions="End" />-->
                     <Image
                         Margin="0,0,30,0"
                         HeightRequest="90"
                         HorizontalOptions="End"
-                        Source="settings_header.png"
-                        VerticalOptions="End" />
+                        Source="{Binding SettingsHeaderSource}"
+                        VerticalOptions="End">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GetGlassesCommand}" NumberOfTapsRequired="1" />
+                        </Image.GestureRecognizers>
+                    </Image>
                 </Grid>
                 <Frame
                     Margin="10,0,10,-10"

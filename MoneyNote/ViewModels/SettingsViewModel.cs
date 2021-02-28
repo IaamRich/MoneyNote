@@ -33,11 +33,13 @@ namespace MoneyNote
         public ICommand OffAds { get; set; }
         public ICommand SoundsCommand { get; set; }
         public ICommand IsMinusCommand { get; set; }
+        public ICommand GetGlassesCommand { get; set; }
         public ICommand AreaByDefaultCommand { get; set; }
         //Variables for normal functionality of the page
         public II18N Strings => I18N.Current;
         public string UrlPathSegment => Strings["menu_settings"];
         public IScreen HostScreen { get; }
+        public string SettingsHeaderSource { get; set; } = "settings_header.png";
         public SettingsViewModel(ITransactionService transactionService, IMoneyService moneyService, ISettingsService settingsService, IScreen screen = null)
         {
             _transactionService = transactionService;
@@ -53,6 +55,14 @@ namespace MoneyNote
         }
         private void CreateCommands()
         {
+            GetGlassesCommand = ReactiveCommand.Create(() =>
+            {
+                if (SettingsHeaderSource == "settings_header.png")
+                    SettingsHeaderSource = "settings_header_glasses.png";
+                else
+                    SettingsHeaderSource = "settings_header.png";
+
+            });
             SoundsCommand = ReactiveCommand.Create(() =>
             {
                 Sounds = !Sounds;

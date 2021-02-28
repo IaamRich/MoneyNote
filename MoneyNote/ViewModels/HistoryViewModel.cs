@@ -37,7 +37,6 @@ namespace MoneyNote
         public ICommand DisplayAllDate { get; set; }
         public ICommand DisplayLastWeek { get; set; }
         public ICommand DisplayLastMonth { get; set; }
-        public ICommand GetGlassesCommand { get; set; }
         public ReactiveCommand<string, Unit> SearchingCommand { get; set; }
         public bool IsChangeFilterVisible { get; set; }
         public bool IsSearchPanelVisible { get; set; }
@@ -47,7 +46,6 @@ namespace MoneyNote
             get => _searchText;
             set => this.RaiseAndSetIfChanged(ref _searchText, value);
         }
-        public string HistoryPicture { get; set; } = "history_header.png";
 
         public HistoryViewModel(ITransactionService transactionService, IScreen screen = null)
         {

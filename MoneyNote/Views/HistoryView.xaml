@@ -74,12 +74,8 @@
                     Margin="0,0,30,0"
                     HeightRequest="90"
                     HorizontalOptions="End"
-                    Source="{Binding HistoryPicture}"
-                    VerticalOptions="End">
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding GetGlassesCommand}" NumberOfTapsRequired="1" />
-                    </Image.GestureRecognizers>
-                </Image>
+                    Source="history_header.png"
+                    VerticalOptions="End" />
                 <Frame
                     Grid.Row="1"
                     Margin="10,0,10,-25"

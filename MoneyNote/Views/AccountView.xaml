@@ -187,10 +187,10 @@
                         </StackLayout>
                     </Frame>
                     <Image
-                        Margin="0,0,30,-6"
+                        Margin="40,0,30,-9"
                         Aspect="AspectFit"
-                        HeightRequest="96"
-                        HorizontalOptions="End"
+                        HeightRequest="129"
+                        HorizontalOptions="Center"
                         Source="account_header.png"
                         VerticalOptions="End" />
                 </Grid>
