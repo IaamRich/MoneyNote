@@ -8,6 +8,7 @@ using Microsoft.AppCenter.Crashes;
 using MoneyNote.Resources;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Plugin.Settings;
 using Xamarin.Forms;
 
 namespace MoneyNote
@@ -39,6 +40,10 @@ namespace MoneyNote
                 .SetLogger(text => Debug.WriteLine(text)) // action to output traces
                                                           //.SetResourcesFolder("OtherLocales") // Optional: The directory containing the resource files (defaults to "Locales")
                 .Init(GetType().GetTypeInfo().Assembly); // assembly where locales live
+
+            var result = CrossSettings.Current.GetValueOrDefault("CurrentLanguage", 0);
+            var language = result == 0 ? "en-US" : "ru-RU";
+            I18N.Current.Locale = language;
 
             Crashes.SentErrorReport += (sender, e) => { Console.WriteLine(e); };
             JsonConvert.DefaultSettings = (() =>

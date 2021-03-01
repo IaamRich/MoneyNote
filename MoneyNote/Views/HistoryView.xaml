@@ -67,13 +67,6 @@
                     <RowDefinition Height="120" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <!--<Label
-                    Margin="30,0,0,10"
-                    FontSize="Title"
-                    HorizontalOptions="Start"
-                    Text="{Binding Strings[last_transactions]}"
-                    TextColor="{StaticResource ButtonText}"
-                    VerticalOptions="End" />-->
                 <Image
                     HeightRequest="90"
                     HorizontalOptions="Center"

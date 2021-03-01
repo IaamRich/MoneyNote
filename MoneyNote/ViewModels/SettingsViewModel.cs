@@ -151,6 +151,7 @@ namespace MoneyNote
                 case 6:
                     LanguageImage = ImageSource.FromResource(ImageResources.chinese_language);
                     break;
+                case 0:
                 default:
                     LanguageImage = ImageSource.FromResource(ImageResources.english_language);
                     break;
@@ -162,7 +163,7 @@ namespace MoneyNote
             {
                 case 1:
                     LanguageImage = ImageSource.FromResource(ImageResources.russian_language);
-                    CurrentLang = 1;
+                    I18N.Current.Locale = "ru-RU";
                     break;
                 case 2:
                     LanguageImage = ImageSource.FromResource(ImageResources.romanian_language);
@@ -186,7 +187,7 @@ namespace MoneyNote
                     break;
                 default:
                     LanguageImage = ImageSource.FromResource(ImageResources.english_language);
-                    CurrentLang = 0;
+                    I18N.Current.Locale = "en-US";
                     break;
             }
             _settingsService.SetCurrentLanguageSettings(CurrentLang);

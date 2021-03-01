@@ -1,4 +1,13 @@
-﻿/* Main Page */
+﻿/* Menu */
+menu_diagram = Diagram
+menu_main = Main
+menu_account = Account
+menu_settings = Settings
+menu_history = History
+menu_about = About
+menu_footer = © Sapec Software 2020
+
+/* Main Page */
 main_title = Main
 current_cash = Cash
 current_card = Card
@@ -6,7 +15,6 @@ current_credit = Credit
 current_savings = Saving
 current = Overall balance:
 enter_spent_amount = Enter spent amount:
-last_spent_money = Last spent money:
 from_card = from Card
 from_cash = from Cash
 enter_add_text = Enter Add Amount
@@ -15,38 +23,26 @@ enter_save_text = Enter Save Amount
 to_cash = to Cash
 to_card = to Card
 missed = by default
+last_notes = Last Notes:
 
 /* Account Page */
 my_cash = My cash money:
 my_card = My card money:
-my_current = Without savings
-my_all = With Savings
-income_outlay = Income/Outlay
+income_outlay = Income / Outlay
 month_income = This month income:
 all_income = All Income:
 month_outlay = This month outlay:
 all_outlay = All Outlay:
-savings = Savings
 month_saving = This month savings:
 all_saving = All time savings:
-title_current_savings = Change Current Savings Manually:
-alert_current_savings = Be carrefull, this function will delete current savings record
 account_credit = Credit:
 
 /* History Page */
 all = All
 income = Income
 outlay = Outlay
-history_savings = Savings
-short = Short
-expanded = Expanded
 last_week = Last Week
 last_month = Last Month
-last_notes = Last Notes:
-last_transactions = Last Transactions
-history_spent = Spent:
-history_description = Description:
-history_transaction_date = Note date:
 enter_searching_text = Enter Searching Text
 
 /* Diagram Page */
@@ -69,8 +65,6 @@ overall_setting = Show overall with savings
 /* About Page */
 creator_name = Vladimir Curaciov
 supporter_name = Feodor Songurov
-thankful_name = Alexandr Tsurcan
-thanks_by = Thanks by:
 created_by = Created by:
 supported_by = Supported by:
 about_platforms = Platforms available:
@@ -78,7 +72,7 @@ platforms_available = iOS, Android.
 learn_more = Learn more
 about_footer = © Sapec Software. All Rights Reserved. 2020
 about_version = 1.0
-environment = Environment by: 
+environment = Development Environment: 
 company_name = Sapec Software
 
 /* Common */
@@ -89,6 +83,7 @@ master = Master
 app_name_camel = MoneyNotique
 app_name = MoneyNotique
 delete = Delete
+savings = Savings
 save = Save
 cancel = Cancel
 ok = Ok
@@ -112,15 +107,6 @@ cash = Cash
 guide = Guide
 information = Information
 note = Note
-
-/* Menu */
-menu_diagram = Diagram
-menu_main = Main
-menu_account = Account
-menu_settings = Settings
-menu_history = History
-menu_about = About
-menu_footer = © Sapec Software 2020
 
 /* Alerts */
 alert_no_history = No history records exists, make a note.
