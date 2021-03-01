@@ -20,8 +20,14 @@
         <ToolbarItem Command="{Binding ChangeDiagramFilterCommand}" IconImageSource="filter.png" />
     </ContentPage.ToolbarItems>
     <Grid>
+
+        <Image
+            Aspect="Fill"
+            HorizontalOptions="Fill"
+            Source="header_back.png"
+            VerticalOptions="Start" />
         <ScrollView>
-            <StackLayout BackgroundColor="{StaticResource ListBackColor}">
+            <StackLayout>
                 <Grid Margin="5,0" ColumnDefinitions="*,10*,*">
                     <forms:ChartView
                         x:Name="chart"

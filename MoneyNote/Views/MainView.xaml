@@ -17,7 +17,11 @@
         <ToolbarItem Command="{Binding SaveCommand}" IconImageSource="pig.png" />
     </ContentPage.ToolbarItems>
     <Grid BackgroundColor="{StaticResource ListBackColor}">
-        <Image Source="header_back.png" VerticalOptions="Start" />
+        <Image
+            Aspect="Fill"
+            HorizontalOptions="Fill"
+            Source="header_back.png"
+            VerticalOptions="Start" />
         <StackLayout Margin="0" Spacing="0">
 
             <!--  HEADER  -->

@@ -11,7 +11,7 @@
     <ScrollView Margin="0" Padding="0">
         <Grid BackgroundColor="{StaticResource ListBackColor}">
             <Image
-                IsVisible="True"
+                HorizontalOptions="Fill"
                 Source="header_back.png"
                 VerticalOptions="Start" />
             <StackLayout>

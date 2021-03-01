@@ -9,7 +9,11 @@
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
     x:TypeArguments="local:AboutViewModel">
     <Grid BackgroundColor="{StaticResource ListBackColor}">
-        <Image Source="header_back.png" VerticalOptions="Start" />
+        <Image
+            Aspect="Fill"
+            HorizontalOptions="Fill"
+            Source="header_back.png"
+            VerticalOptions="Start" />
         <ScrollView>
             <StackLayout Spacing="0">
                 <Grid HeightRequest="120">

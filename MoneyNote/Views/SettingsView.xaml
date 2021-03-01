@@ -11,7 +11,11 @@
     x:Name="this"
     x:TypeArguments="local:SettingsViewModel">
     <Grid BackgroundColor="{StaticResource ListBackColor}">
-        <Image Source="header_back.png" VerticalOptions="Start" />
+        <Image
+            Aspect="Fill"
+            HorizontalOptions="Fill"
+            Source="header_back.png"
+            VerticalOptions="Start" />
         <ScrollView Padding="0">
             <StackLayout Padding="0" Spacing="0">
                 <Grid RowDefinitions="120" VerticalOptions="EndAndExpand">
