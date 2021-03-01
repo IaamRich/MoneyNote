@@ -1,0 +1,160 @@
+﻿/* Главная страница */
+main_title = Главный
+current_cash = Наличные
+current_card = Карта
+current_credit = Кредит
+current_savings = Сохранение
+current = Общий баланс:
+enter_spent_amount = Введите потраченную сумму:
+last_spent_money = Последние потраченные деньги:
+from_card = с карты
+from_cash = наличными
+enter_add_text = Введите сумму добавления
+enter_bank_text = Введите сумму кредита
+enter_save_text = Введите сумму сохранения
+to_cash = в наличные
+to_card = на карту
+пропущено = по умолчанию
+
+/ * Страница учетной записи * /
+my_cash = Мои наличные деньги:
+my_card = Деньги с моей карты:
+my_current = Без сбережений
+my_all = Со скидкой
+доход_outlay = Доход / Расходы
+month_income = Доход за этот месяц:
+all_income = Весь доход:
+month_outlay = Расходы в этом месяце:
+all_outlay = Все затраты:
+экономии = Экономия
+month_saving = Экономия за этот месяц:
+all_saving = Экономия времени:
+title_current_savings = Изменить текущую экономию вручную:
+alert_current_savings = Будьте внимательны, эта функция удалит текущую запись сбережений
+account_credit = Кредит:
+
+/ * Страница истории * /
+all = Все
+доход = Доход
+outlay = Расходы
+history_savings = Экономия
+short = Короткий
+расширенный = расширенный
+last_week = Прошлая неделя
+last_month = В прошлом месяце
+last_notes = Последние заметки:
+last_transactions = Последние транзакции
+history_spent = Израсходовано:
+history_description = Описание:
+history_transaction_date = Дата записи:
+enter_searching_text = Введите текст для поиска
+
+/ * Страница диаграммы * /
+outlay_by_percentage = Расходы в процентах
+yield_by_percentage = Доход в процентах
+
+/ * Страница настроек * /
+default_area = Область расходов по умолчанию
+money_notes = Денежные купюры
+reset_all = Сбросить все по умолчанию
+звуки = Звуки
+set_notes = Установить заметки вручную
+area_from_where = По умолчанию область расходов:
+choose_language = Выбрать язык
+set_every_places = Установить каждую денежную купюру
+dis_add = Отключить рекламу
+allow_credit = Разрешить автоматический кредит
+total_setting = Показать в целом с экономией
+
+/ * О странице * /
+creator_name = Владимир Курачёв
+supporter_name = Федор Сонгуров
+thankful_name = Александр Цуркан
+thank_by = Спасибо:
+created_by = Создано:
+supported_by = Поддерживается:
+about_platforms = Доступные платформы:
+platform_available = iOS, Android.
+learn_more = Узнать больше
+about_footer = © Sapec Software. Все права защищены. 2020 г.
+about_version = 1.0
+environment = Environment от:
+company_name = Программное обеспечение Sapec
+
+/* Общий */
+value = Значение
+name = Имя
+common = Общий
+master = Мастер
+app_name_camel = MoneyNotique
+app_name = MoneyNotique
+delete = Удалить
+save = Сохранить
+cancel = Отменить
+ok = Хорошо
+credits = Кредиты
+go = Идти
+other = Другое
+pay = Платить
+bills = Счета
+update = Обновить
+create = Создать
+search = Искать
+share = Поделиться
+reset = Сбросить
+Голосовать = Голосовать
+amount = Сумма
+commit = Зафиксировать
+main = Главный
+menu = Меню
+card = Карта
+cash = Наличные
+guide = Гид
+information = Информация
+note = Примечание
+
+/ * Меню * /
+menu_diagram = Диаграмма
+menu_main = Главное
+menu_account = Аккаунт
+menu_settings = Настройки
+menu_history = История
+menu_about = О
+menu_footer = © Sapec Software, 2020 г.
+
+/ * Оповещения * /
+alert_no_history = Записей истории не существует, сделайте заметку.
+alert_no_data = Нет данных за этот месяц!
+alert_no_minus = Число должно быть положительным!
+alert_no_value = Введите какое-нибудь значение!
+alert_no_value_zero = Значение не должно быть нулевым!
+alert_need_category = Выберите категорию.
+alert_no_credit = У вас нет кредита для погашения.
+alert_no_cash_bank = В наличных нет такой суммы!
+alert_no_card_bank = На Карте нет такой суммы!
+alert_no_cash_delete = В наличных такой суммы не будет! Проверьте свои удаляемые заметки или удалите заметки перед этим.
+alert_no_card_delete = На Карте не будет такой суммы! Проверьте свои удаляемые заметки или удалите заметки перед этим.
+alert_no_cash_save = В наличных нет такой суммы!
+alert_no_card_save = На карте нет такой суммы!
+alert_no_cash = В наличных нет такой суммы!
+Если вы хотите отметить сумму потраченных средств как кредит - перейдите в «Настройки» и установите флажок «Разрешить автоматический кредит».
+alert_no_savings = В сбережениях такой суммы нет!
+alert_no_card = На Карте нет такой суммы!
+Если вы хотите отметить сумму потраченных средств как кредит - перейдите в «Настройки» и установите флажок «Разрешить автоматический кредит».
+
+/ * Типы категорий * /
+type_market = Рынок / Магазин
+type_bar = Ресторан / Кейтеринг
+type_transport = Транспорт
+type_business = Бизнес / Сделки
+type_network = Сеть
+type_entertainment = Развлечения
+type_medicine = Медицина
+type_take_credit = Взять кредит
+type_gift = Подарок
+type_salary = Заработная плата
+type_earnings = Заработок / Хобби
+type_repay_credit = Погасить кредит
+type_save = Экономия денег
+type_take = Возьмите экономию
+type_other = Другое

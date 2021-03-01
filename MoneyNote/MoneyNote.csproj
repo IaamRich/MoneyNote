@@ -1,139 +1,143 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
-    <LangVersion>8.0</LangVersion>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+		<LangVersion>8.0</LangVersion>
+	</PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DebugType>portable</DebugType>
-    <DebugSymbols>true</DebugSymbols>
-  </PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DebugType>portable</DebugType>
+		<DebugSymbols>true</DebugSymbols>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Pages\**" />
-    <EmbeddedResource Remove="Pages\**" />
-    <None Remove="Pages\**" />
-  </ItemGroup>
+	<ItemGroup>
+		<Compile Remove="Pages\**" />
+		<EmbeddedResource Remove="Pages\**" />
+		<None Remove="Pages\**" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Remove="Resources\Animations\alert.json" />
-    <None Remove="Resources\Fonts\FlowExt-Bold.otf" />
-    <None Remove="Resources\Fonts\FlowExt-Regular.otf" />
-    <None Remove="Resources\Images\de.png" />
-    <None Remove="Resources\Images\en.png" />
-    <None Remove="Resources\Images\fr.png" />
-    <None Remove="Resources\Images\it.png" />
-    <None Remove="Resources\Images\md.png" />
-    <None Remove="Resources\Images\ru.png" />
-    <None Remove="Resources\Images\zh.png" />
-    <None Remove="Resources\Locales\en-US.txt" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Remove="Resources\Animations\alert.json" />
+		<None Remove="Resources\Animations\arrow_slide.json" />
+		<None Remove="Resources\Fonts\FlowExt-Bold.otf" />
+		<None Remove="Resources\Fonts\FlowExt-Regular.otf" />
+		<None Remove="Resources\Images\de.png" />
+		<None Remove="Resources\Images\en.png" />
+		<None Remove="Resources\Images\fr.png" />
+		<None Remove="Resources\Images\it.png" />
+		<None Remove="Resources\Images\md.png" />
+		<None Remove="Resources\Images\ru.png" />
+		<None Remove="Resources\Images\zh.png" />
+		<None Remove="Resources\Locales\en-US.txt" />
+		<None Remove="Resources\Locales\ru-RU.txt" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Animations\alert.json" />
-    <EmbeddedResource Include="Resources\Fonts\FlowExt-Bold.otf" />
-    <EmbeddedResource Include="Resources\Fonts\FlowExt-Regular.otf" />
-    <EmbeddedResource Include="Resources\Images\de.png" />
-    <EmbeddedResource Include="Resources\Images\en.png" />
-    <EmbeddedResource Include="Resources\Images\fr.png" />
-    <EmbeddedResource Include="Resources\Images\it.png" />
-    <EmbeddedResource Include="Resources\Images\md.png" />
-    <EmbeddedResource Include="Resources\Images\ru.png" />
-    <EmbeddedResource Include="Resources\Images\zh.png" />
-    <EmbeddedResource Include="Resources\Locales\en-US.txt" />
-  </ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="Resources\Animations\alert.json" />
+		<EmbeddedResource Include="Resources\Animations\arrow_slide.json" />
+		<EmbeddedResource Include="Resources\Fonts\FlowExt-Bold.otf" />
+		<EmbeddedResource Include="Resources\Fonts\FlowExt-Regular.otf" />
+		<EmbeddedResource Include="Resources\Images\de.png" />
+		<EmbeddedResource Include="Resources\Images\en.png" />
+		<EmbeddedResource Include="Resources\Images\fr.png" />
+		<EmbeddedResource Include="Resources\Images\it.png" />
+		<EmbeddedResource Include="Resources\Images\md.png" />
+		<EmbeddedResource Include="Resources\Images\ru.png" />
+		<EmbeddedResource Include="Resources\Images\zh.png" />
+		<EmbeddedResource Include="Resources\Locales\en-US.txt" />
+		<EmbeddedResource Include="Resources\Locales\ru-RU.txt" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="CardsView" Version="2.7.0" />
-    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="3.1.3" />
-    <PackageReference Include="I18NPortable" Version="1.0.1" />
-    <PackageReference Include="Microcharts.Forms" Version="0.9.5.9" />
-    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.4.0" />
-    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.4.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="PropertyChanged.Fody" Version="3.2.8" />
-    <PackageReference Include="ReactiveUI" Version="11.5.17" />
-    <PackageReference Include="ReactiveUI.Validation" Version="1.5.5" />
-    <PackageReference Include="ReactiveUI.XamForms" Version="11.5.17" />
-    <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.4" />
-    <PackageReference Include="SkiaSharp.Views.Forms" Version="2.80.2" />
-    <PackageReference Include="TouchView" Version="4.1.78" />
-    <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
-    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
-    <PackageReference Include="XF.Material" Version="1.6.6" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="CardsView" Version="2.7.0" />
+		<PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="3.1.3" />
+		<PackageReference Include="I18NPortable" Version="1.0.1" />
+		<PackageReference Include="Microcharts.Forms" Version="0.9.5.9" />
+		<PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.4.0" />
+		<PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.4.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+		<PackageReference Include="PropertyChanged.Fody" Version="3.2.8" />
+		<PackageReference Include="ReactiveUI" Version="11.5.17" />
+		<PackageReference Include="ReactiveUI.Validation" Version="1.5.5" />
+		<PackageReference Include="ReactiveUI.XamForms" Version="11.5.17" />
+		<PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.4" />
+		<PackageReference Include="SkiaSharp.Views.Forms" Version="2.80.2" />
+		<PackageReference Include="TouchView" Version="4.1.78" />
+		<PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
+		<PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
+		<PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.11.982" />
+		<PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />
+		<PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+		<PackageReference Include="XF.Material" Version="1.6.6" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="Styles\ButtonStyles.xaml.cs">
-      <DependentUpon>ButtonStyles.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\Popups\DiagramPopupView.xaml.cs">
-      <DependentUpon>DiagramPopupView.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\Popups\CommitPopupView.xaml.cs">
-      <DependentUpon>CommitPopupView.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\AboutView.xaml.cs">
-      <DependentUpon>AboutView.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\HistoryView.xaml.cs">
-      <DependentUpon>HistoryView.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\SettingsView.xaml.cs">
-      <DependentUpon>SettingsView.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\MainAndMenu\MasterView.xaml.cs">
-      <DependentUpon>MasterView.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\MainView.xaml.cs">
-      <DependentUpon>MainView.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\AccountView.xaml.cs">
-      <DependentUpon>AccountView.xaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
+	<ItemGroup>
+		<Compile Update="Styles\ButtonStyles.xaml.cs">
+			<DependentUpon>ButtonStyles.xaml</DependentUpon>
+		</Compile>
+		<Compile Update="Views\Popups\DiagramPopupView.xaml.cs">
+			<DependentUpon>DiagramPopupView.xaml</DependentUpon>
+		</Compile>
+		<Compile Update="Views\Popups\CommitPopupView.xaml.cs">
+			<DependentUpon>CommitPopupView.xaml</DependentUpon>
+		</Compile>
+		<Compile Update="Views\AboutView.xaml.cs">
+			<DependentUpon>AboutView.xaml</DependentUpon>
+		</Compile>
+		<Compile Update="Views\HistoryView.xaml.cs">
+			<DependentUpon>HistoryView.xaml</DependentUpon>
+		</Compile>
+		<Compile Update="Views\SettingsView.xaml.cs">
+			<DependentUpon>SettingsView.xaml</DependentUpon>
+		</Compile>
+		<Compile Update="Views\MainAndMenu\MasterView.xaml.cs">
+			<DependentUpon>MasterView.xaml</DependentUpon>
+		</Compile>
+		<Compile Update="Views\MainView.xaml.cs">
+			<DependentUpon>MainView.xaml</DependentUpon>
+		</Compile>
+		<Compile Update="Views\AccountView.xaml.cs">
+			<DependentUpon>AccountView.xaml</DependentUpon>
+		</Compile>
+	</ItemGroup>
 
-  <ItemGroup>
-    <EmbeddedResource Update="Controls\AboutAdditional\AboutHeaderScroll.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Controls\CurrencyCard.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Controls\HistoryFilterView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Styles\ButtonStyles.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Styles\LabelStyle.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\DiagramView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Popups\AccountChangePopupView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Popups\AddMoneyPopupView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Popups\AlertPopupView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Popups\BankTransactionsPopupView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Popups\CommitPopupView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Popups\SaveMoneyPopupView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Update="Controls\AboutAdditional\AboutHeaderScroll.xaml">
+			<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Controls\CurrencyCard.xaml">
+			<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Controls\HistoryFilterView.xaml">
+			<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Styles\ButtonStyles.xaml">
+			<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Styles\LabelStyle.xaml">
+			<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Views\DiagramView.xaml">
+			<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Views\Popups\AccountChangePopupView.xaml">
+			<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Views\Popups\AddMoneyPopupView.xaml">
+			<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Views\Popups\AlertPopupView.xaml">
+			<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Views\Popups\BankTransactionsPopupView.xaml">
+			<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Views\Popups\CommitPopupView.xaml">
+			<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Views\Popups\SaveMoneyPopupView.xaml">
+			<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+		</EmbeddedResource>
+	</ItemGroup>
 </Project>

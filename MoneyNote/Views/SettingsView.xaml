@@ -243,7 +243,7 @@
                                 WidthRequest="120" />
                         </StackLayout>
                         <!--  Set notes  -->
-                        <StackLayout HeightRequest="70" Orientation="Horizontal">
+                        <!--<StackLayout HeightRequest="70" Orientation="Horizontal">
                             <Label
                                 touch:TouchEff.Command="{Binding OffAds}"
                                 touch:TouchEff.PressedScale="0.9"
@@ -263,7 +263,7 @@
                                 TextColor="White"
                                 VerticalOptions="FillAndExpand"
                                 WidthRequest="120" />
-                        </StackLayout>
+                        </StackLayout>-->
                         <!--  Auto credit  -->
                         <Grid
                             touch:TouchEff.Command="{Binding IsMinusCommand}"
