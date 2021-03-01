@@ -19,8 +19,8 @@
     <popups:PopupPage.Animation>
         <animations:ScaleAnimation
             x:Name="animation"
-            DurationIn="800"
-            DurationOut="1000"
+            DurationIn="300"
+            DurationOut="300"
             HasBackgroundAnimation="True"
             PositionIn="Top"
             PositionOut="Center"

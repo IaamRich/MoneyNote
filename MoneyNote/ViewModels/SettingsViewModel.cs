@@ -23,6 +23,7 @@ namespace MoneyNote
         //Properties 
         public bool Sounds { get; set; }
         public bool IsMinus { get; set; }
+        public bool IsShowSavings { get; set; }
         public bool AreaCash { get; set; }
         public bool AreaCard { get; set; }
         public int CurrentLang { get; set; }
@@ -33,6 +34,7 @@ namespace MoneyNote
         public ICommand OffAds { get; set; }
         public ICommand SoundsCommand { get; set; }
         public ICommand IsMinusCommand { get; set; }
+        public ICommand IsShowSavingsCommand { get; set; }
         public ICommand GetGlassesCommand { get; set; }
         public ICommand AreaByDefaultCommand { get; set; }
         //Variables for normal functionality of the page
@@ -90,12 +92,19 @@ namespace MoneyNote
                 IsMinus = !IsMinus;
                 _settingsService.SetAutoCreditSettings(IsMinus);
             });
+
+            IsShowSavingsCommand = ReactiveCommand.Create(() =>
+            {
+                IsShowSavings = !IsShowSavings;
+                _settingsService.SetBalanceSettings(IsShowSavings);
+            });
         }
         private void GetSettings()
         {
             GetLanguages();
             Sounds = _settingsService.GetSoundsSettings();
             IsMinus = _settingsService.GetAutoCreditSettings();
+            IsShowSavings = _settingsService.GetBalanceSettings();
             AreaCash = _settingsService.GetDefaultSpendingAreaSettings() == 0 ? true : false;
             AreaCard = !AreaCash;
         }

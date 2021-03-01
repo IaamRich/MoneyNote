@@ -143,7 +143,10 @@ namespace MoneyNote
             CurrentCash = _moneyService.GetCurrentCash();
             CurrentCredit = _moneyService.GetCurrentCredit();
             CurrentAllSavings = _moneyService.GetAllSavings();
-            CurrentBill = CurrentCard + CurrentCash + CurrentAllSavings;
+            if (_settingsService.GetBalanceSettings())
+                CurrentBill = CurrentCard + CurrentCash + CurrentAllSavings;
+            else
+                CurrentBill = CurrentCard + CurrentCash;
             IsCreditVisible = CurrentCredit > 0 ? true : false;
             IsMinusAllowed = _settingsService.GetAutoCreditSettings();
         }

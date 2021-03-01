@@ -33,9 +33,19 @@ namespace MoneyNote.Services
         {
             return CrossSettings.Current.GetValueOrDefault("IsMinusAllowed", false);
         }
+
         public void SetAutoCreditSettings(bool isMinus)
         {
             CrossSettings.Current.AddOrUpdateValue("IsMinusAllowed", isMinus);
+        }
+
+        public bool GetBalanceSettings()
+        {
+            return CrossSettings.Current.GetValueOrDefault("IsShowSavingsAllowed", true);
+        }
+        public void SetBalanceSettings(bool isShowSettings)
+        {
+            CrossSettings.Current.AddOrUpdateValue("IsShowSavingsAllowed", isShowSettings);
         }
         //In progress
         public bool GetAdsSetings()

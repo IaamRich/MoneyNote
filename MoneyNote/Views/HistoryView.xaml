@@ -63,17 +63,16 @@
                     <RowDefinition Height="120" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <Label
+                <!--<Label
                     Margin="30,0,0,10"
                     FontSize="Title"
                     HorizontalOptions="Start"
                     Text="{Binding Strings[last_transactions]}"
                     TextColor="{StaticResource ButtonText}"
-                    VerticalOptions="End" />
+                    VerticalOptions="End" />-->
                 <Image
-                    Margin="0,0,30,0"
                     HeightRequest="90"
-                    HorizontalOptions="End"
+                    HorizontalOptions="Center"
                     Source="history_header.png"
                     VerticalOptions="End" />
                 <Frame

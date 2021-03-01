@@ -22,9 +22,8 @@
                         TextColor="{StaticResource BackgroundWhite}"
                         VerticalOptions="End" />-->
                     <Image
-                        Margin="0,0,30,0"
                         HeightRequest="90"
-                        HorizontalOptions="End"
+                        HorizontalOptions="Center"
                         Source="{Binding SettingsHeaderSource}"
                         VerticalOptions="End">
                         <Image.GestureRecognizers>
@@ -288,6 +287,33 @@
                                 </Image.Triggers>
                             </Image>
                         </Grid>
+                        <!--  overall balance  -->
+                        <Grid
+                            touch:TouchEff.Command="{Binding IsShowSavingsCommand}"
+                            touch:TouchEff.PressedScale="0.9"
+                            touch:TouchEff.RegularAnimationDuration="200"
+                            ColumnSpacing="0"
+                            HeightRequest="70">
+                            <Label
+                                FontSize="Medium"
+                                Text="{Binding Strings[overall_setting]}"
+                                VerticalOptions="Center" />
+                            <Image
+                                Margin="0"
+                                Aspect="AspectFit"
+                                HorizontalOptions="EndAndExpand"
+                                Source="selected.png"
+                                VerticalOptions="FillAndExpand">
+                                <Image.Triggers>
+                                    <DataTrigger
+                                        Binding="{Binding IsShowSavings}"
+                                        TargetType="Image"
+                                        Value="False">
+                                        <Setter Property="Source" Value="unselected.png" />
+                                    </DataTrigger>
+                                </Image.Triggers>
+                            </Image>
+                        </Grid>
                         <!--  === Other Section ===  -->
                         <BoxView
                             BackgroundColor="Gray"
@@ -326,6 +352,9 @@
                     </StackLayout>
                 </Frame>
 
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GetGlassesCommand}" NumberOfTapsRequired="1" />
+                </StackLayout.GestureRecognizers>
             </StackLayout>
         </ScrollView>
     </Grid>

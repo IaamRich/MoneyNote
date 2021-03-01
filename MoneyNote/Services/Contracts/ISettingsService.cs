@@ -12,5 +12,7 @@
         void SetAutoCreditSettings(bool isMinus);
         bool GetAdsSetings();
         void SetAdsSetings(bool IsAdsOn);
+        bool GetBalanceSettings();
+        void SetBalanceSettings(bool IsSavingsOn);
     }
 }

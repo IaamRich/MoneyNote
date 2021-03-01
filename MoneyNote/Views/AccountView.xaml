@@ -20,42 +20,6 @@
                         <RowDefinition Height="120" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <!--  Current  -->
-                    <Grid>
-                        <StackLayout
-                            Orientation="Vertical"
-                            Spacing="0"
-                            VerticalOptions="Start">
-                            <Label
-                                FontFamily="MainFontBold"
-                                FontSize="Small"
-                                HorizontalOptions="Center"
-                                Text="{Binding Strings[my_current]}"
-                                TextColor="{StaticResource ButtonText}" />
-                            <Label
-                                FontSize="40"
-                                HorizontalOptions="Center"
-                                Text="{Binding MyCurrent, Mode=TwoWay, StringFormat='{0:F0}'}"
-                                TextColor="{StaticResource ButtonText}" />
-                        </StackLayout>
-                        <StackLayout
-                            Grid.Column="1"
-                            Orientation="Vertical"
-                            Spacing="0"
-                            VerticalOptions="Start">
-                            <Label
-                                FontFamily="MainFontBold"
-                                FontSize="Small"
-                                HorizontalOptions="Center"
-                                Text="{Binding Strings[my_all]}"
-                                TextColor="{StaticResource ButtonText}" />
-                            <Label
-                                FontSize="40"
-                                HorizontalOptions="Center"
-                                Text="{Binding MyAll, Mode=TwoWay, StringFormat='{0:F0}'}"
-                                TextColor="{StaticResource ButtonText}" />
-                        </StackLayout>
-                    </Grid>
                     <Frame
                         Grid.Row="1"
                         Margin="10,0,10,-10"
@@ -187,7 +151,7 @@
                         </StackLayout>
                     </Frame>
                     <Image
-                        Margin="40,0,30,-9"
+                        Margin="0,0,0,-9"
                         Aspect="AspectFit"
                         HeightRequest="129"
                         HorizontalOptions="Center"

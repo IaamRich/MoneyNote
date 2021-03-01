@@ -64,6 +64,7 @@ choose_language = Choose Language
 set_every_places = Set each Money Notes
 dis_add = Disable Ads
 allow_credit = Allow auto credit
+overall_setting = Show overall with savings
 
 /* About Page */
 creator_name = Vladimir Curaciov
@@ -147,7 +148,7 @@ type_bar = Restaurant/Catering
 type_transport = Transport
 type_business = Business/Deals
 type_network = Network
-type_entertainment = Entertainment,
+type_entertainment = Entertainment
 type_medicine = Medicine
 type_take_credit = Take Credit
 type_gift = Gift
