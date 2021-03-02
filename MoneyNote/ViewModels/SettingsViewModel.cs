@@ -2,6 +2,7 @@
 using System.Windows.Input;
 using I18NPortable;
 using MoneyNote.Models;
+using MoneyNote.Resources;
 using MoneyNote.Resources.Images;
 using MoneyNote.Services;
 using MoneyNote.Services.Contracts;
@@ -38,6 +39,7 @@ namespace MoneyNote
         public ICommand GetGlassesCommand { get; set; }
         public ICommand AreaByDefaultCommand { get; set; }
         //Variables for normal functionality of the page
+        public RoutingState Router { get; }
         public II18N Strings => I18N.Current;
         public string UrlPathSegment => Strings["menu_settings"];
         public IScreen HostScreen { get; }
@@ -123,11 +125,11 @@ namespace MoneyNote
             {
                 new Language { Id = 0, Sign = "en-US", Name = "English", Image = "en.png" },
                 new Language { Id = 1, Sign = "ru-RU", Name = "Russian", Image = "ru.png" },
-                new Language { Id = 2, Sign = "md-MD", Name = "Romanian", Image = "md.png" },
-                new Language { Id = 3, Sign = "it-IT", Name = "Italian", Image = "it.png" },
-                new Language { Id = 4, Sign = "de-DE", Name = "German", Image = "de.png" },
-                new Language { Id = 5, Sign = "fr-FR", Name = "French", Image = "fr.png" },
-                new Language { Id = 6, Sign = "zh-CN", Name = "Chinese", Image = "zh.png" }
+                //new Language { Id = 2, Sign = "md-MD", Name = "Romanian", Image = "md.png" },
+                //new Language { Id = 3, Sign = "it-IT", Name = "Italian", Image = "it.png" },
+                //new Language { Id = 4, Sign = "de-DE", Name = "German", Image = "de.png" },
+                //new Language { Id = 5, Sign = "fr-FR", Name = "French", Image = "fr.png" },
+                //new Language { Id = 6, Sign = "zh-CN", Name = "Chinese", Image = "zh.png" }
             };
 
             CurrentLang = _settingsService.GetCurrentLanguageSettings();
@@ -164,6 +166,10 @@ namespace MoneyNote
                 case 1:
                     LanguageImage = ImageSource.FromResource(ImageResources.russian_language);
                     I18N.Current.Locale = "ru-RU";
+                    _settingsService.SetCurrentLanguageSettings(1);
+                    GetSettings();
+                    (Application.Current).MainPage = new NavigationPage(new SplashPage());
+                    //Router.Navigate.Execute(new SettingsViewModel(new TransactionService(), new MoneyService(), new SettingsService(), null));
                     break;
                 case 2:
                     LanguageImage = ImageSource.FromResource(ImageResources.romanian_language);
@@ -185,9 +191,13 @@ namespace MoneyNote
                     LanguageImage = ImageSource.FromResource(ImageResources.chinese_language);
                     CurrentLang = 6;
                     break;
+                case 0:
                 default:
                     LanguageImage = ImageSource.FromResource(ImageResources.english_language);
                     I18N.Current.Locale = "en-US";
+                    _settingsService.SetCurrentLanguageSettings(0);
+                    GetSettings();
+                    (Application.Current).MainPage = new NavigationPage(new SplashPage());
                     break;
             }
             _settingsService.SetCurrentLanguageSettings(CurrentLang);

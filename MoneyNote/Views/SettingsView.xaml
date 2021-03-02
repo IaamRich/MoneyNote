@@ -19,12 +19,6 @@
         <ScrollView Padding="0">
             <StackLayout Padding="0" Spacing="0">
                 <Grid RowDefinitions="120" VerticalOptions="EndAndExpand">
-                    <!--<Label
-                        Margin="40,0,0,10"
-                        FontSize="Title"
-                        Text="{Binding Strings[menu_settings]}"
-                        TextColor="{StaticResource BackgroundWhite}"
-                        VerticalOptions="End" />-->
                     <Image
                         HeightRequest="90"
                         HorizontalOptions="Center"
@@ -130,9 +124,8 @@
                         </Grid>
                         <!--  From Where By Default  -->
                         <Grid
-                            ColumnDefinitions="Auto, Auto"
+                            ColumnDefinitions="*, Auto"
                             ColumnSpacing="0"
-                            HeightRequest="140"
                             RowSpacing="0">
                             <!--  text Area  -->
                             <Label
@@ -141,7 +134,7 @@
                                 touch:TouchEff.PressedScale="0.9"
                                 touch:TouchEff.RegularAnimationDuration="200"
                                 FontSize="Medium"
-                                HorizontalOptions="CenterAndExpand"
+                                HorizontalOptions="StartAndExpand"
                                 MaxLines="3"
                                 Text="{Binding Strings[default_area]}"
                                 VerticalOptions="CenterAndExpand" />
@@ -161,6 +154,7 @@
                                 <Image
                                     x:Name="cashToggleImage"
                                     Margin="0"
+                                    HeightRequest="70"
                                     HorizontalOptions="End"
                                     Source="selected.png"
                                     VerticalOptions="FillAndExpand">
@@ -191,6 +185,7 @@
                                 <Image
                                     x:Name="cardToggleImage"
                                     Margin="0"
+                                    HeightRequest="70"
                                     HorizontalOptions="EndAndExpand"
                                     Source="selected.png"
                                     VerticalOptions="FillAndExpand">

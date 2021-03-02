@@ -135,6 +135,10 @@ namespace MoneyNote
                             {
                                 tempList.Add(note);
                             }
+                            else if (note.Value.ToString().Contains(searchParameter))
+                            {
+                                tempList.Add(note);
+                            }
                         }
                     }
                     else
