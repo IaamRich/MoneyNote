@@ -245,8 +245,11 @@
                             touch:TouchEff.Command="{Binding IsMinusCommand}"
                             touch:TouchEff.PressedScale="0.9"
                             touch:TouchEff.RegularAnimationDuration="200"
-                            ColumnSpacing="0">
+                            ColumnDefinitions="*,Auto"
+                            ColumnSpacing="5"
+                            RowDefinitions="Auto">
                             <Label
+                                Grid.Column="0"
                                 FontSize="Medium"
                                 MaxLines="3"
                                 Text="{Binding Strings[allow_credit]}"
@@ -274,13 +277,16 @@
                             touch:TouchEff.Command="{Binding IsShowSavingsCommand}"
                             touch:TouchEff.PressedScale="0.9"
                             touch:TouchEff.RegularAnimationDuration="200"
-                            ColumnSpacing="0">
+                            ColumnDefinitions="*,Auto"
+                            ColumnSpacing="5">
                             <Label
+                                Grid.Column="0"
                                 FontSize="Medium"
                                 MaxLines="3"
                                 Text="{Binding Strings[overall_setting]}"
                                 VerticalOptions="Center" />
                             <Image
+                                Grid.Column="1"
                                 Margin="0"
                                 Aspect="AspectFit"
                                 HeightRequest="70"
