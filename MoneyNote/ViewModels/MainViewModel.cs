@@ -72,7 +72,7 @@ namespace MoneyNote
             SelectNote = ReactiveCommand.Create<Transaction>(async note =>
             {
                 //await PopupNavigation.Instance.PushAsync(new DiagramPopupView(Strings["alert_no_cash_delete"]), true);
-                var result = await Xamarin.Forms.Application.Current.MainPage.DisplayAlert("Deleting", "Are you sure to delete this note?", "Yes", "No");
+                var result = await Xamarin.Forms.Application.Current.MainPage.DisplayAlert(Strings["deleting"], Strings["are_you_delete"], Strings["yes"], Strings["no"]);
                 if (result)
                 {
                     if (note.Date.Month != DateTime.Now.Month && note.Date.Year != DateTime.Now.Year)

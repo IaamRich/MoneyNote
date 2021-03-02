@@ -84,7 +84,7 @@ namespace MoneyNote
             });
             OffAds = ReactiveCommand.Create(() =>
             {
-                Application.Current.MainPage.DisplayAlert("Message", "In developing...", "", "ok");
+                Application.Current.MainPage.DisplayAlert(Strings["alert"], Strings["in_developing"], "", Strings["ok"]);
             });
             ImageCommand = new Command(ImageCommandFunc);
             IsMinusCommand = ReactiveCommand.Create(() =>
@@ -110,7 +110,7 @@ namespace MoneyNote
         }
         private async void ResetAllMethod()
         {
-            bool answer = await Application.Current.MainPage.DisplayAlert("Be careful!", "Are you sure you want to reset all notes & settings?", "Go Reset", "Cancel");
+            bool answer = await Application.Current.MainPage.DisplayAlert(Strings["be_careful"], Strings["are_you_reset"], Strings["reset"], Strings["cancel"]);
             if (answer)
             {
                 _moneyService.DeleteAllMoneyNotes();

@@ -57,7 +57,6 @@ sounds = Sounds
 set_notes = Set notes manually
 area_from_where = By default spending area:
 choose_language = Choose Language
-set_every_places = Set each Money Notes
 dis_add = Disable Ads
 allow_credit = Allow auto credit
 overall_setting = Show overall with savings
@@ -76,19 +75,17 @@ environment = Development Environment:
 company_name = Sapec Software
 
 /* Common */
-value = Value
+app_name = MoneyNotique
 name = Name
 common = Common
-master = Master
-app_name_camel = MoneyNotique
-app_name = MoneyNotique
 delete = Delete
 savings = Savings
 save = Save
 cancel = Cancel
 ok = Ok
 credits = Credits
-go = Go
+yes = Yes
+no = No
 other = Other
 pay = Pay
 bills = Bills
@@ -99,16 +96,19 @@ share = Share
 reset = Reset
 vote = Vote
 amount = Amount
-commit = Commit
-main = Main
 menu = Menu
 card = Card
 cash = Cash
-guide = Guide
 information = Information
 note = Note
+alert = Alert
 
 /* Alerts */
+deleting = Deleting
+in_developing = In developing...
+be_careful = Be careful!
+are_you_reset = Are you sure you want to delete all notes and reset settings?
+are_you_delete = Are you sure you want to delete this note?
 alert_no_history = No history records exists, make a note.
 alert_no_data = No Data for this Month!
 alert_no_minus = The number must be positive!
@@ -129,17 +129,17 @@ alert_no_card = There is no such amount on Card!
 If you want to note spend amount as credit - go to Settings and click the checkmark "Allow Auto Credit"
 
 /* Category Types*/
-type_market = Market/Shop
-type_bar = Restaurant/Catering
+type_market = Market / Shop
+type_bar = Restaurant / Fast Food
 type_transport = Transport
-type_business = Business/Deals
+type_business = Business / Deals
 type_network = Network
 type_entertainment = Entertainment
 type_medicine = Medicine
 type_take_credit = Take Credit
 type_gift = Gift
 type_salary = Salary
-type_earnings = Earnings/Hobby
+type_earnings = Earnings / Hobby
 type_repay_credit = Repay Credit
 type_save = Save Money
 type_take = Take Savings

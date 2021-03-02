@@ -47,68 +47,67 @@ enter_searching_text = Введите текст для поиска
 
 /* Diagram Page */
 outlay_by_percentage = Затраты в процентах
-yield_by_percentage = Доход в процентах
+income_by_percentage = Доход в процентах
 
-/ * Страница настроек * /
+/* Settings Page */
 default_area = Область затрат по умолчанию
-money_notes = Денежные купюры
+money_notes = Записи финансов
 reset_all = Сбросить все по умолчанию
 sounds = Звуки
 set_notes = Установить заметки вручную
 area_from_where = По умолчанию область затрат:
 choose_language = Выбрать язык
-set_every_places = Установить каждую денежную купюру
 dis_add = Отключить рекламу
 allow_credit = Разрешить автоматический кредит
-total_setting = Показать в целом с экономией
+total_setting = Включить сбережения в общий баланс
 
 /* About Page */
 creator_name = Владимир Курачёв
-supporter_name = Федор Сонгуров
+supporter_name = Фёдор Сонгуров
 created_by = Создано:
 supported_by = При поддержке:
 about_platforms = Доступные платформы:
-platform_available = iOS, Android.
+platforms_available = iOS, Android.
 learn_more = Узнать больше
 about_footer = © Sapec Software. Все права защищены. 2020 г.
 about_version = 1.0
 environment = Среда разработки:
 company_name = Программное обеспечение Sapec
 
-/* Общий */
-value = Значение
+/* Common */
+app_name = MoneyNotique
 name = Имя
 common = Общий
-master = Мастер
-app_name_camel = MoneyNotique
-app_name = MoneyNotique
 delete = Удалить
 savings = Сбережения
 save = Сохранить
 cancel = Отменить
 ok = Хорошо
 credits = Кредиты
-go = Идти
+yes = Да
+no = Нет
 other = Другое
-pay = Платить
+pay = Оплатить
 bills = Счета
 update = Обновить
 create = Создать
 search = Поиск
 share = Поделиться
 reset = Сбросить
-Голосовать = Голосовать
+Голосовать = Проголосовать
 amount = Сумма
-commit = Зафиксировать
-main = Главный
 menu = Меню
 card = Карта
 cash = Наличные
-guide = Гид
 information = Информация
 note = Записать
+alert = Предупреждение
 
-/ * Оповещения * /
+/* Alerts */
+deleting = Удаление
+in_developing = В разработке...
+be_careful = Вы уверены, что хотите удалить все записи и сбросить настройки?
+are_you_delete = Вы уверены, что хотите удалить эту запись?
 alert_no_history = Записей истории не существует, сделайте заметку.
 alert_no_data = Нет данных за этот месяц!
 alert_no_minus = Число должно быть положительным!
@@ -128,12 +127,12 @@ alert_no_savings = В сбережениях такой суммы нет!
 alert_no_card = На Карте нет такой суммы!
 Если вы хотите отметить сумму потраченных средств как кредит - перейдите в «Настройки» и установите флажок «Разрешить автоматический кредит».
 
-/ * Типы категорий * /
+/* Category Types*/
 type_market = Рынок / Магазин
-type_bar = Ресторан / Кейтеринг
+type_bar = Ресторан / Фастфуд
 type_transport = Транспорт
 type_business = Бизнес / Сделки
-type_network = Сеть
+type_network = Сеть / Связь
 type_entertainment = Развлечения
 type_medicine = Медицина
 type_take_credit = Взять кредит
@@ -141,8 +140,8 @@ type_gift = Подарок
 type_salary = Заработная плата
 type_earnings = Заработок / Хобби
 type_repay_credit = Погасить кредит
-type_save = Экономия денег
-type_take = Возьмите экономию
+type_save = Отложить деньги
+type_take = Взять из сбережений
 type_other = Другое
 
 /* Всплывающие окна */
@@ -152,7 +151,7 @@ enter_miss_description = Введите / пропустите описание 
 / * Условия использования, Политика конфиденциальности, Лицензионное соглашение * /
 terms = Условия использования
 policy = Политика конфиденциальности
-license = Лицензия соглашения
+license = Лицензионное соглашение
 terms_text = Условия использования приложения MoneyNotique на данном этапе приложения не существуют из-за отсутствия в нем необходимости. Каждый пользователь сам решает, как использовать это приложение в личных целях, главное, чтобы соблюдались все правила лицензионного соглашения, описанные ниже.
 policy_text = На данном этапе политика конфиденциальности приложения MoneyNotique отсутствует из-за того, что пользовательские данные в этом приложении вообще не собираются, в будущем, когда функции приложения будут расширены, этот документ также будет обновлен.
 license_text = Лицензионное соглашение для мобильного приложения MoneyNotique.

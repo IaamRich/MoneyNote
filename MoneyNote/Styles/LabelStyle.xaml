@@ -21,6 +21,10 @@
         <Setter Property="FontFamily" Value="MainFont" />
     </Style>
 
+    <Style TargetType="controls:CustomTextEntry">
+        <Setter Property="FontFamily" Value="MainFont" />
+    </Style>
+
     <Style TargetType="Label">
         <!--<Setter Property="TextColor" Value="{d:StaticResource Key=ButtonText}" />-->
         <Setter Property="FontFamily" Value="MainFont" />
