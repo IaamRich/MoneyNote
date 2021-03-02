@@ -130,13 +130,10 @@
                         </Grid>
                         <!--  From Where By Default  -->
                         <Grid
+                            ColumnDefinitions="Auto, Auto"
                             ColumnSpacing="0"
                             HeightRequest="140"
                             RowSpacing="0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
                             <!--  text Area  -->
                             <Label
                                 Grid.RowSpan="2"
@@ -145,6 +142,7 @@
                                 touch:TouchEff.RegularAnimationDuration="200"
                                 FontSize="Medium"
                                 HorizontalOptions="CenterAndExpand"
+                                MaxLines="3"
                                 Text="{Binding Strings[default_area]}"
                                 VerticalOptions="CenterAndExpand" />
                             <!--  cash  -->
@@ -240,44 +238,24 @@
                                 Text="{Binding Strings[reset]}"
                                 TextColor="White"
                                 VerticalOptions="FillAndExpand"
-                                WidthRequest="120" />
+                                WidthRequest="160" />
                         </StackLayout>
-                        <!--  Set notes  -->
-                        <!--<StackLayout HeightRequest="70" Orientation="Horizontal">
-                            <Label
-                                touch:TouchEff.Command="{Binding OffAds}"
-                                touch:TouchEff.PressedScale="0.9"
-                                touch:TouchEff.RegularAnimationDuration="200"
-                                FontSize="Medium"
-                                Text="{Binding Strings[set_notes]}"
-                                VerticalOptions="Center" />
-
-                            <material:MaterialButton
-                                BackgroundColor="{StaticResource MainGreen}"
-                                Command="{Binding OffAds}"
-                                CornerRadius="10"
-                                Elevation="2"
-                                FontSize="Medium"
-                                HorizontalOptions="EndAndExpand"
-                                Text="{Binding Strings[go]}"
-                                TextColor="White"
-                                VerticalOptions="FillAndExpand"
-                                WidthRequest="120" />
-                        </StackLayout>-->
                         <!--  Auto credit  -->
                         <Grid
                             touch:TouchEff.Command="{Binding IsMinusCommand}"
                             touch:TouchEff.PressedScale="0.9"
                             touch:TouchEff.RegularAnimationDuration="200"
-                            ColumnSpacing="0"
-                            HeightRequest="70">
+                            ColumnSpacing="0">
                             <Label
                                 FontSize="Medium"
+                                MaxLines="3"
                                 Text="{Binding Strings[allow_credit]}"
                                 VerticalOptions="Center" />
                             <Image
+                                Grid.Column="1"
                                 Margin="0"
                                 Aspect="AspectFit"
+                                HeightRequest="70"
                                 HorizontalOptions="EndAndExpand"
                                 Source="selected.png"
                                 VerticalOptions="FillAndExpand">
@@ -296,15 +274,16 @@
                             touch:TouchEff.Command="{Binding IsShowSavingsCommand}"
                             touch:TouchEff.PressedScale="0.9"
                             touch:TouchEff.RegularAnimationDuration="200"
-                            ColumnSpacing="0"
-                            HeightRequest="70">
+                            ColumnSpacing="0">
                             <Label
                                 FontSize="Medium"
+                                MaxLines="3"
                                 Text="{Binding Strings[overall_setting]}"
                                 VerticalOptions="Center" />
                             <Image
                                 Margin="0"
                                 Aspect="AspectFit"
+                                HeightRequest="70"
                                 HorizontalOptions="EndAndExpand"
                                 Source="selected.png"
                                 VerticalOptions="FillAndExpand">
@@ -350,7 +329,7 @@
                                     Text="{Binding Strings[pay]}"
                                     TextColor="White"
                                     VerticalOptions="FillAndExpand"
-                                    WidthRequest="120" />
+                                    WidthRequest="160" />
                             </StackLayout>
                         </Grid>
                     </StackLayout>

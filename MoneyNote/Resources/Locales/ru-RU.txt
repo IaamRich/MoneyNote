@@ -52,14 +52,14 @@ income_by_percentage = Доход в процентах
 /* Settings Page */
 default_area = Область затрат по умолчанию
 money_notes = Записи финансов
-reset_all = Сбросить все по умолчанию
+reset_all = Сбросить всё по умолчанию
 sounds = Звуки
 set_notes = Установить заметки вручную
 area_from_where = По умолчанию область затрат:
 choose_language = Выбрать язык
 dis_add = Отключить рекламу
 allow_credit = Разрешить автоматический кредит
-total_setting = Включить сбережения в общий баланс
+overall_setting = Включить сбережения в общий баланс
 
 /* About Page */
 creator_name = Владимир Курачёв
