@@ -65,7 +65,7 @@ namespace MoneyNote.Views.Popups
                             if (String.IsNullOrWhiteSpace(entryDescription.Text))
                             {
                                 var type = UnwrapAddingCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedSaveCategory", 0));
-                                result = type.Type.ToString() + " " + Strings["missed"];
+                                result = type.Name + " " + Strings["missed"];
                             }
                             CrossSettings.Current.AddOrUpdateValue("SaveValue", moneyValue);
                             CrossSettings.Current.AddOrUpdateValue("SaveMessage", result);

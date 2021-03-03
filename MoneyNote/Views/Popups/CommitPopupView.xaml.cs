@@ -43,7 +43,7 @@ namespace MoneyNote.Views.Popups
                 if (String.IsNullOrWhiteSpace(entry.Text))
                 {
                     var type = UnwrapSpendingCategoryType(CrossSettings.Current.GetValueOrDefault("SelectedSpendingCategory", 0));
-                    result = type.Type.ToString() + " " + Strings["missed"];
+                    result = type.Name + " " + Strings["missed"];
                 }
                 CrossSettings.Current.AddOrUpdateValue("CommitMessage", result);
                 CrossSettings.Current.AddOrUpdateValue("CurrentCommitMoneyFrom", FuncMoneyFrom());

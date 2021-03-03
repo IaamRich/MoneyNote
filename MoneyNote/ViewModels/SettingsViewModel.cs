@@ -125,7 +125,7 @@ namespace MoneyNote
             {
                 new Language { Id = 0, Sign = "en-US", Name = "English", Image = "en.png" },
                 new Language { Id = 1, Sign = "ru-RU", Name = "Russian", Image = "ru.png" },
-                //new Language { Id = 2, Sign = "md-MD", Name = "Romanian", Image = "md.png" },
+                new Language { Id = 2, Sign = "md-MD", Name = "Romanian", Image = "md.png" },
                 //new Language { Id = 3, Sign = "it-IT", Name = "Italian", Image = "it.png" },
                 //new Language { Id = 4, Sign = "de-DE", Name = "German", Image = "de.png" },
                 //new Language { Id = 5, Sign = "fr-FR", Name = "French", Image = "fr.png" },
@@ -165,15 +165,18 @@ namespace MoneyNote
             {
                 case 1:
                     LanguageImage = ImageSource.FromResource(ImageResources.russian_language);
+                    CurrentLang = 1;
                     I18N.Current.Locale = "ru-RU";
                     _settingsService.SetCurrentLanguageSettings(1);
-                    GetSettings();
                     (Application.Current).MainPage = new NavigationPage(new SplashPage());
                     //Router.Navigate.Execute(new SettingsViewModel(new TransactionService(), new MoneyService(), new SettingsService(), null));
                     break;
                 case 2:
                     LanguageImage = ImageSource.FromResource(ImageResources.romanian_language);
                     CurrentLang = 2;
+                    I18N.Current.Locale = "ro-RO";
+                    _settingsService.SetCurrentLanguageSettings(2);
+                    (Application.Current).MainPage = new NavigationPage(new SplashPage());
                     break;
                 case 3:
                     LanguageImage = ImageSource.FromResource(ImageResources.italian_language);
@@ -194,9 +197,9 @@ namespace MoneyNote
                 case 0:
                 default:
                     LanguageImage = ImageSource.FromResource(ImageResources.english_language);
+                    CurrentLang = 0;
                     I18N.Current.Locale = "en-US";
                     _settingsService.SetCurrentLanguageSettings(0);
-                    GetSettings();
                     (Application.Current).MainPage = new NavigationPage(new SplashPage());
                     break;
             }

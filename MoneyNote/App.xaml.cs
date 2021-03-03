@@ -42,8 +42,19 @@ namespace MoneyNote
                 .Init(GetType().GetTypeInfo().Assembly); // assembly where locales live
 
             var result = CrossSettings.Current.GetValueOrDefault("CurrentLanguage", 0);
-            var language = result == 0 ? "en-US" : "ru-RU";
-            I18N.Current.Locale = language;
+            switch (result)
+            {
+                case 1:
+                    I18N.Current.Locale = "ru-RU";
+                    break;
+                case 2:
+                    I18N.Current.Locale = "ro-RO";
+                    break;
+                case 0:
+                default:
+                    I18N.Current.Locale = "en-US";
+                    break;
+            }
 
             Crashes.SentErrorReport += (sender, e) => { Console.WriteLine(e); };
             JsonConvert.DefaultSettings = (() =>

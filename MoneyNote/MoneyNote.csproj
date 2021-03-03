@@ -30,6 +30,7 @@
 		<None Remove="Resources\Images\ru.png" />
 		<None Remove="Resources\Images\zh.png" />
 		<None Remove="Resources\Locales\en-US.txt" />
+		<None Remove="Resources\Locales\ro-RO.txt" />
 		<None Remove="Resources\Locales\ru-RU.txt" />
 	</ItemGroup>
 
@@ -46,6 +47,7 @@
 		<EmbeddedResource Include="Resources\Images\ru.png" />
 		<EmbeddedResource Include="Resources\Images\zh.png" />
 		<EmbeddedResource Include="Resources\Locales\en-US.txt" />
+		<EmbeddedResource Include="Resources\Locales\ro-RO.txt" />
 		<EmbeddedResource Include="Resources\Locales\ru-RU.txt" />
 	</ItemGroup>
 

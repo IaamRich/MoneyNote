@@ -50,12 +50,10 @@ outlay_by_percentage = Затраты в процентах
 income_by_percentage = Доход в процентах
 
 /* Settings Page */
-default_area = Область затрат по умолчанию
+default_area = Источник затрат по умолчанию
 money_notes = Записи финансов
 reset_all = Сбросить всё по умолчанию
 sounds = Звуки
-set_notes = Установить заметки вручную
-area_from_where = По умолчанию область затрат:
 choose_language = Выбрать язык
 dis_add = Отключить рекламу
 allow_credit = Разрешить автоматический кредит
@@ -72,7 +70,7 @@ learn_more = Узнать больше
 about_footer = © Sapec Software. Все права защищены. 2020 г.
 about_version = 1.0
 environment = Среда разработки:
-company_name = Программное обеспечение Sapec
+company_name = Sapec Software
 
 /* Common */
 app_name = MoneyNotique
@@ -94,7 +92,7 @@ create = Создать
 search = Поиск
 share = Поделиться
 reset = Сбросить
-Голосовать = Проголосовать
+vote = Проголосовать
 amount = Сумма
 menu = Меню
 card = Карта
@@ -144,11 +142,14 @@ type_save = Отложить деньги
 type_take = Взять из сбережений
 type_other = Другое
 
-/* Всплывающие окна */
+/* Popups */
 choose_category = Выбрать категорию
 enter_miss_description = Введите / пропустите описание ...
 
-/ * Условия использования, Политика конфиденциальности, Лицензионное соглашение * /
+/* All Languages */
+by_default = messagebydefault
+
+/* Terms of Service, Privacy Policy, License Agreement*/
 terms = Условия использования
 policy = Политика конфиденциальности
 license = Лицензионное соглашение

@@ -1,0 +1,212 @@
+﻿/* Menu */
+menu_diagram = Diagrama
+menu_main = Conturi
+menu_account = Account
+menu_settings = Setări
+menu_history = Istorie
+menu_about = Despre noi
+menu_footer = © 2020 Sapec Software.
+
+/* Main Page */
+main_title = Conturi
+current_cash = Numerar
+current_card = Card
+current_credit = Credit
+current_savings = Depozit
+curent = Sold total:
+enter_spent_amount = Introduceți suma cheltuită:
+from_card = din card
+from_cash = din cash
+enter_add_text = Introduceți suma venitului
+enter_bank_text = Introduceți suma împrumutului
+enter_save_text = Introduceți suma de depozit
+to_cash = spre cash
+to_card = spre card
+missed = în mod implicit
+last_notes = Ultimele mențiuni:
+
+/* Account Page */
+my_cash = Cash propriu:
+my_card = Bani pe card propriu:
+income_outlay = Venit / Cheltuieli
+month_income = Venit luna curentă:
+all_income = Venitul total:
+month_outlay = Cheltuieli luna curentă:
+all_outlay = Cheltuieli total:
+month_saving = Depozit lună curentă:
+all_saving = Depozit total:
+account_credit = Credit:
+
+/* History Page */
+all = Total
+income = Venit
+outlay = Cheltuieli
+last_week = Săptămâna precedentă
+last_month = Luna precedentă
+enter_searching_text = Introduceți text căutare
+
+/* Diagram Page */
+outlay_by_percentage = Cheltuieli procentual
+income_by_percentage = Venit procentual
+
+/* Settings Page */
+default_area = Sursa cheltuieli implicit
+money_notes = Mențiuni financiare
+reset_all = Resetați totul implicit
+sounds = Sunete
+choose_language = Selectați limba
+dis_add = Deactivare anunțuri
+allow_credit = Permite credit automat
+Overall_setting = Includeți deposit în soldul total
+
+/* About Page */
+creator_name = Vladimir Kurachev
+supporter_name = Fyodor Songurov
+created_by = Creat:
+supported_by = Sprijinit de:
+about_platforms = Platforme disponibile:
+platforme_available = iOS, Android.
+learn_more = Aflați mai multe
+about_footer = © Sapec Software. Toate drepturile rezervate. 2020 a.
+about_version = 1.0
+environment = Mediu de dezvoltare:
+company_name = Sapec Software
+
+/* Common */
+app_name = MoneyNotique
+name = Nume
+common = General
+delete = Șterge
+savings = Deposit
+save = Salvează
+cancel = Anulare
+ok = Bine
+credits = Credite
+yes = Da
+no = Nu
+other = Altele
+pay = Achită
+bills = Conturi
+update = Actualizați
+create = Crează
+search = Căutare
+share = Share
+reset = Reset
+vote = Vot
+amount = Suma
+menu = Meniu
+card = Card
+cash = Cash
+information = Informație
+note = Notează
+alert = Avertisment
+
+/* Alerts */
+deleting = Ștergere
+in_developing = În curs de dezvoltare ...
+be_careful = Sigur doriți să ștergeți toate mențiunele și să resetați setările?
+are_you_delete = Sigur doriți să ștergeți această mențiune?
+alert_no_history = Nu există înregistrări, vă rugăm să introduceți o notă.
+alert_no_data = Nu există date pentru această lună!
+alert_no_minus = Numărul trebuie să fie pozitiv!
+alert_no_value = Vă rugăm să introduceți o valoare!
+alert_no_value_zero = Valoarea nu trebuie să fie zero!
+alert_need_category = Selectați o categorie.
+alert_no_credit = Nu aveți credit de rambursat.
+alert_no_cash_bank = Nu există o astfel de sumă în numerar!
+alert_no_card_bank = Nu există o astfel de sumă în Card!
+alert_no_cash_delete = Nu va exista o astfel de sumă în numerar! Verificați mențiunele de ștergere sau ștergeți-le înainte de a face acest lucru.
+alert_no_card_delete = Nu va exista o astfel de sumă în Card! Verificați mențiunele de ștergere sau ștergeți-le înainte de a face acest lucru.
+alert_no_cash_save = Nu există o astfel de sumă în numerar!
+alert_no_card_save = Nu există o astfel de sumă în card!
+alert_no_cash = Nu există o astfel de sumă în numerar!
+Dacă doriți să marcați suma cheltuită drept credit, accesați "Setări" și bifați "Permiteți împrumut automat".
+alert_no_savings = Nu există o astfel de sumă în economii!
+alert_no_card = Nu există o astfel de sumă pe Card!
+Dacă doriți să marcați suma cheltuită drept credit, accesați "Setări" și bifați "Permiteți împrumut automat".
+
+/* Category Types*/
+type_market = Market / Piață
+type_bar = Restaurant / Fast food
+type_transport = Transport
+type_business = Afaceri / Oferte
+type_network = Rețea / Telefonie
+type_entertainment = Divertisment
+tip_medicină = Medicină
+type_take_credit = Ia un credit
+type_gift = Cadou
+type_salary = Salariu
+type_earnings = Câștiguri / Hobby-uri
+type_repay_credit = Rambursarea creditului
+type_save = Depozitați bani
+type_take = Ia din depozit
+type_other = Altele
+
+/* Popups */
+choose_category = Alege categoria
+enter_miss_description = Introduceți / pierdeți descrierea ...
+
+/* All Languages */
+by_default = messagebydefault
+
+/* Terms of Service, Privacy Policy, License Agreement*/
+terms = Termeni și condiții
+policy = Politica de confidențialitate
+license = Licență
+terms_text = Termenii și condițiile pentru aplicația MoneyNotique nu există în acest stadiu al aplicației din cauza lipsei de nevoie pentru aceasta. Fiecare utilizator decide singur cum să folosească această aplicație în scopuri personale, principalul lucru fiind că sunt respectate toate regulile acordului de licență descrise mai jos.
+policy_text = În acest stadiu
+policy_text = În acest stadiu, politica de confidențialitate a aplicației MoneyNotique este absentă din cauza faptului că datele utilizatorilor din această aplicație nu sunt colectate deloc, în viitor, când funcțiile aplicației sunt extinse, acest document va fi, de asemenea, actualizat.
+license_text = Acord de licență pentru aplicația mobilă MoneyNotique.
+Înainte de a utiliza programul, vă rugăm să citiți termenii următorului acord de licență. Orice utilizare a programului MoneyNotique de către dvs. constituie acceptarea deplină și necondiționată a termenilor prezentului Acord de licență. Dacă nu acceptați integral termenii acestui Acord de licență, nu aveți dreptul să utilizați programul MoneyNotique în niciun scop. Acest Acord de licență intră în vigoare din momentul în care MoneyNotique este instalat pe orice dispozitiv digital care îl permite și este valabil pe termen nelimitat.
+1. Dispoziții generale
+1.1. Acest Acord de licență stabilește condițiile de utilizare a programului MoneyNotique pentru dispozitive mobile (denumit în continuare „Programul”) de către orice persoană capabilă (denumită în continuare „Utilizatorul”).
+1.2. Titularul drepturilor de autor al programului este Sapec.md (denumit în continuare Titularul drepturilor de autor).
+1.3. Copiind Programul, instalându-l pe dispozitivul dvs. mobil sau utilizând Programul în orice mod, Utilizatorul își exprimă acceptarea deplină și necondiționată a tuturor condițiilor prezentului Contract de licență.
+1.4. Utilizarea programului este permisă numai în condițiile prezentului acord de licență. Dacă Utilizatorul nu acceptă integral termenii prezentului Acord de licență, Utilizatorul nu are dreptul să utilizeze Programul. Utilizarea Programului cu încălcarea (neîndeplinirea) oricăruia dintre termenii acestui Acord de licență este interzisă.
+1.5. Utilizarea Programului de către Utilizator în condițiile prezentului Acord de licență este gratuită. Utilizarea Programului în condiții și modalități care nu sunt prevăzute de prezentul Acord de licență este posibilă numai pe baza unui acord separat cu Titularul drepturilor de autor.
+1.6. Dacă Utilizatorul nu este în totalitate sau parțial de acord cu prezentul Acord de licență, trebuie să înceteze imediat utilizarea Programului și să îl elimine.
+1.7. Utilizarea Programului de către Utilizator înseamnă acceptarea necondiționată a tuturor termenilor prezentului Acord de licență, precum și a tuturor condițiilor postate în Aplicație.
+1.8. Programul oferă un serviciu, al cărui scop este să vă mențineți propria contabilitate a finanțelor, veniturilor, cheltuielilor, operațiunilor de calcul, grupare, afișare într-o formă convenabilă pe ecranul unui dispozitiv mobil etc.
+2. Drepturile la program
+2.1. Programul conține materiale protejate prin drepturi de autor, mărci comerciale și alte materiale protejate prin lege, inclusiv, dar fără a se limita la: texte, fotografii, grafică etc.
+2.2. Singurul proprietar al Programului și documentația aferentă acestuia este Titularul drepturilor de autor. Orice drepturi de proprietate intelectuală asupra Programului și legate de acesta aparțin titularului drepturilor de autor în mod legal. Orice drepturi de proprietate intelectuală (inclusiv, dar fără a se limita la, drepturi de autor, secrete comerciale, mărci comerciale, brevete etc.) care decurg din Program aparțin titularului drepturilor de autor în mod legal.
+3. Utilizarea programului (licență)
+3.1. Deținătorul drepturilor de autor acordă utilizatorului, iar acesta acceptă o licență limitată necomercială non-exclusivă fără dreptul de a transfera programul către terți. Titularul drepturilor acordă Utilizatorului dreptul de a utiliza Programul în următoarele moduri:
+3.1.1. Utilizați Programul în scopul său funcțional direct, pentru a-l copia și instala (reproduce) pe dispozitivul (dispozitivele) mobil (e) al Utilizatorului. Utilizatorul are dreptul de a instala Programul pe un număr nelimitat de dispozitive mobile aparținând Utilizatorului.
+3.1.2. Distribuiți gratuit programul în scopuri necomerciale comunicând informații despre acesta unui număr nedefinit de persoane fără dreptul de transfer ulterior.
+3.2. Cu excepția cazului în care se specifică altfel în textul prezentului acord de licență, utilizatorul nu poate, fără acordul prealabil scris al titularului drepturilor de autor:
+utilizați, modificați, încorporați sau combinați cu alte programe, creați o versiune revizuită a oricărei părți a programului;
+vinde, transfera pentru uz temporar, cesiona, gajează sau dispune în alt mod de drepturile dobândite asupra programului, cu excepția celor prevăzute în prezentul acord de licență;
+copiați, distribuiți sau reproduceți Programul, inclusiv în interesul terților, cu excepția celor prevăzute în prezentul Acord de licență;
+publica rezultatele oricărui benchmarking în raport cu programul, folosește rezultatele menționate pentru activități concurente de dezvoltare software;
+modificați, dezasamblați, decompilați, dezasamblați în coduri componente, refaceți sau îmbunătățiți programul, torturați Vă rugăm să obțineți codul sursă al programului.
+3.3. Titularul drepturilor de autor nu este obligat să ofere asistență, întreținere, actualizări, modificări și noi versiuni ale programului. Deținătorul drepturilor de autor poate lansa din când în când actualizări pentru program și, automat, prin comunicare electronică, își poate actualiza versiunea instalată pe dispozitivul mobil al utilizatorului. Prin acceptarea prezentului Acord de licență, Utilizatorul este de acord cu o astfel de actualizare automată și acceptă, de asemenea, că termenii și condițiile acestui Acord de licență vor fi valabili pentru actualizările specificate.
+3.4. Dreptul de a utiliza Programul după instalarea aplicației de către Utilizator este netransferabil. Utilizatorul este pe deplin responsabil pentru acțiunile de transfer al Programului de către terți, precum și pentru daunele cauzate Programului și / sau Titularului drepturilor de autor cauzate de terți ca urmare a unui astfel de transfer.
+3.5. Programul este furnizat fără asigurarea calității, nu implică nicio garanție, expresă sau implicită. Titularul drepturilor de autor nu garantează că Programul va îndeplini cerințele Utilizatorului și că funcționarea acestuia va fi neîntreruptă și fără erori. Titularul drepturilor de autor nu este responsabil pentru acuratețea, exhaustivitatea, aplicabilitatea sau fiabilitatea rezultatelor obținute în timpul utilizării Programului sau a oricăror date și informații descărcate sau obținute în alt mod prin utilizarea Programului. Utilizatorul acceptă responsabilitatea de a descărca, în caz contrar primește informații prin intermediul Programului pe propria răspundere și la propria sa discreție, în timp ce nu poate fi formulată nicio revendicare împotriva Titularului drepturilor de autor cu privire la daunele primite de Utilizator sau în legătură cu proprietatea Utilizatorului.
+3.6. Dreptul de a utiliza Programul pe un dispozitiv mobil furnizat în baza prezentului Contract de licență poate fi anulat complet de către Titularul drepturilor de autor în orice moment.
+4. Responsabilitate
+4.1. Programul este furnizat „așa cum este”. Titularul drepturilor de autor nu oferă nicio garanție cu privire la funcționarea fără erori și neîntreruptă a programului sau a componentelor și / sau funcțiilor sale individuale, conformitatea programului cu obiectivele specifice ale utilizatorului, nu garantează fiabilitatea, acuratețea, completitudinea și actualitatea Datelor și nu oferă alte garanții nespecificate în mod expres în prezentul Acord de licență.
+4.2. Titularul drepturilor de autor nu este răspunzător din cauza unei infracțiuni, precum și în alte cazuri, față de Utilizator sau de terți pentru orice daune sau pierderi (luând în considerare indirectă, reală, ulterioară), inclusiv, dar fără a se limita la, orice daune sau pierderea în legătură cu venitul din activități comerciale, profiturile pierdute, reputația afacerii, datele sau documentele deteriorate sau pierdute suportate de această persoană sau de aceasta în urma sau în legătură cu utilizarea Programului, chiar dacă Titularul drepturilor de autor a luat cunoștință de posibilitatea unei astfel de daune.
+4.3. În conformitate cu legislația în vigoare, răspunderea care poate fi aplicată din cauza furnizării necorespunzătoare a serviciilor, inclusiv la furnizarea de informații despre serviciu, furnizarea de informații despre contractor (furnizor), condițiile pentru furnizarea serviciului, prețurile aplicabile, precum și întrucât furnizarea serviciului în sine, siguranța acestuia, emiterea de documente de strictă responsabilitate, daune cauzate în timpul prestării serviciilor, alte obligații, sunt suportate exclusiv de către furnizor.
+4.4. În unele cazuri special convenite, Titularul drepturilor poate acționa în interesul și în numele furnizorilor, dacă acest lucru este furnizat dacă este posibil să plătească servicii sau alte servicii utilizând carduri bancare utilizând Programul. În alte cazuri, în cazul în care nu există o definiție clară a Titularului drepturilor de autor ca reprezentant autorizat al furnizorilor, furnizorii acționează independent, iar utilizatorul intră în relații directe cu furnizorii.
+4.5. Titularul drepturilor de autor nu este responsabil pentru consecințele directe sau indirecte ale oricărei utilizări sau incapacități de a utiliza Programul (inclusiv date) și, sau pierderile cauzate utilizatorului și, sau terților, ca urmare a oricărei utilizări, neutilizări sau incapacitatea de a utiliza Programul (inclusiv datele) sau componentele și / sau funcțiile sale individuale, inclusiv din cauza unor posibile erori sau eșecuri în activitatea lor, cu excepția cazurilor prevăzute în mod expres de lege.
+4.6. Titularul drepturilor are dreptul să întrerupă activitatea programului pentru a-și optimiza activitatea, pentru a elimina problemele din activitatea programului, pentru a configura programul, precum și în alte cazuri, la discreția titularului drepturilor.
+4.7. Toate întrebările și revendicările legate de utilizarea / incapacitatea de a utiliza Programul, precum și posibila încălcare de către Program a legislației și, sau a drepturilor terților, trebuie trimise deținătorului drepturilor de autor.
+4.8. Toate relațiile asociate cu utilizarea Programului sunt guvernate de legislația Republicii Moldova.
+4.9. Prin acceptarea prezentului Acord de licență, Utilizatorul este de acord că, în cazul în care instanța îl consideră pe Titularul drepturilor de autor drept vinovatul infractorului prejudiciului, răspunderea civilă a titularului drepturilor de autor este limitată la o plată maximă de 50 USD. Utilizatorul este notificat și știe că Titularul drepturilor de autor se obligă să plătească numai daune directe și numai pe baza unei decizii judecătorești. Profiturile pierdute nu sunt rambursabile.
+5. Consimțământul pentru a primi informații și publicitate
+5.1. Atunci când folosește programul, utilizatorul confirmă că este proprietarul legal al dispozitivului mobil pe care este instalat programul, precum și un utilizator legal înregistrat și legal al serviciilor de comunicații radiotelefonice mobile sau telematice care permit utilizarea capacităților de transfer de date pentru a utiliza Programul și identificați Utilizatorul. De asemenea, Utilizatorul este de acord necondiționat să primească sms-uri de serviciu și să transmită mesajele necesare pentru implementarea funcționalității Programului.
+5.2. Utilizatorul este de acord necondiționat că Deținătorul drepturilor de autor are dreptul să-l informeze despre procedura și metodele de utilizare a Programului, despre marketingul, publicitatea și alte evenimente desfășurate de furnizori, despre condițiile pentru cumpărarea și consumul terților. serviciile care utilizează Programul, prin trimiterea de mesaje, inclusiv a celor care conțin publicitate, către telefonul mobil, computer sau alt dispozitiv, inclusiv utilizarea unei rețele de comunicații, în orice mod disponibil. Acceptarea termenilor acestui Acord de licență înseamnă consimțământul necondiționat al Utilizatorului cu dreptul deținătorului drepturilor de autor de a trimite mesaje către Utilizator.
+5.3. Utilizatorul este de acord să primească mesaje publicitare de la Deținătorul drepturilor de autor și furnizorii săi care cooperează și alte persoane, precum și alte informații despre produse și servicii, inclusiv prin apeluri telefonice, e-mail și mesaje SMS.
+6. Actualizări
+6.1 Prezentul acord de licență se aplică tuturor actualizărilor ulterioare / noilor versiuni ale programului. Acceptând să instaleze o actualizare / o nouă versiune a programului, utilizatorul acceptă condițiile prezentului acord de licență pentru actualizările corespunzătoare / noile versiuni ale programului, cu excepția cazului în care actualizarea / instalarea unei noi versiuni a programului este însoțită de o altă acord de licențiere.
+7. Alte prevederi
+7.1 Condițiile prezentului Acord de licență și toate modificările aduse acestuia sunt înregistrate în aplicația MoneyNotique însăși.
+7.2 Titularul drepturilor are dreptul de a dezvolta și implementa măsuri de securitate suplimentare pentru utilizarea Programului în orice moment, fără notificarea adresei suplimentare.
+7.3 Dacă Utilizatorul încalcă prezentul Acord de licență sau legislația actuală a Republicii Moldova, Titularul drepturilor de autor are dreptul să blocheze accesul Utilizatorului la utilizarea Programului.
+7.4 Orice dispute care decurg din prezentul acord vor fi soluționate prin negocieri între părți.
+7.5 În cazul în care nu se ajunge la un acord reciproc prin negocieri în termen de 30 (treizeci) de zile calendaristice de la primirea unei cereri de către una dintre părți, toate disputele, dezacordurile sau revendicările care decurg din sau în legătură cu prezentul acord, inclusiv cele legate de executarea, încălcarea, încetarea sau invaliditatea acesteia sunt supuse unei rezoluții judiciare.
+7.6 Titularul drepturilor de autor are dreptul de a modifica unilateral prezentul acord de licență prin publicarea unui nou text care conține astfel de modificări. Modificările intră în vigoare din momentul publicării, cu excepția cazului în care o altă dată pentru intrarea în vigoare a modificărilor este stabilită la publicare. În caz de dezacord cu modificarea termenilor prezentului Acord de licență, Utilizatorul are dreptul de a refuza executarea acestuia prin ștergerea Programului.
+7.7 Prin instalarea programului, utilizatorul garantează că toți termenii prezentului acord de licență sunt clari pentru ei, iar utilizatorul acceptă termenii fără rezerve și în totalitate, garantează că nu va utiliza programul în alte scopuri decât cele specificate în textul acestui Acord de licență.
+8. Detalii despre titularul drepturilor de autor
+Sapec.md Moldova, Chișinău, Grenoble str. 257

@@ -54,8 +54,6 @@ default_area = Default spend area
 money_notes = Money notes
 reset_all = Reset all to default
 sounds = Sounds
-set_notes = Set notes manually
-area_from_where = By default spending area:
 choose_language = Choose Language
 dis_add = Disable Ads
 allow_credit = Allow auto credit
@@ -148,6 +146,9 @@ type_other = Other
 /* Popups */
 choose_category = Pick Category
 enter_miss_description = Enter/Miss Description...
+
+/* All Languages */
+by_default = messagebydefault
 
 /* Terms of Service, Privacy Policy, License Agreement*/
 terms = Terms of Service
