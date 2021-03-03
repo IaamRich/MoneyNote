@@ -4,6 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:MoneyNote.Controls"
+    xmlns:converter="clr-namespace:MoneyNote.Converters"
     xmlns:local="clr-namespace:MoneyNote"
     xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
     xmlns:rxui="clr-namespace:ReactiveUI.XamForms;assembly=ReactiveUI.XamForms"
@@ -14,6 +15,11 @@
         <ToolbarItem Command="{Binding DiagramCommand}" IconImageSource="analitics.png" />
         <ToolbarItem Command="{Binding ChangeFilterCommand}" IconImageSource="filter.png" />
     </ContentPage.ToolbarItems>
+    <rxui:ReactiveContentPage.Resources>
+        <ResourceDictionary>
+            <converter:ToStringConverter x:Key="toStringConverter" />
+        </ResourceDictionary>
+    </rxui:ReactiveContentPage.Resources>
     <Grid BackgroundColor="{StaticResource ListBackColor}">
         <Image
             Aspect="Fill"
@@ -133,17 +139,7 @@
                                                         Margin="10,0,0,0"
                                                         Orientation="Horizontal"
                                                         VerticalOptions="CenterAndExpand">
-                                                        <Label FontSize="Micro" Text="to">
-                                                            <Label.Triggers>
-                                                                <DataTrigger
-                                                                    Binding="{Binding MathSymbol}"
-                                                                    TargetType="Label"
-                                                                    Value="-">
-                                                                    <Setter Property="Text" Value="from" />
-                                                                </DataTrigger>
-                                                            </Label.Triggers>
-                                                        </Label>
-                                                        <Label FontSize="Micro" Text="{Binding Bill}" />
+                                                        <Label FontSize="Micro" Text="{Binding Bill, Converter={StaticResource toStringConverter}}" />
                                                         <Label FontSize="Micro" Text="-" />
                                                         <Label
                                                             Grid.Row="1"
