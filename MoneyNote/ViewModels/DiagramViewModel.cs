@@ -146,25 +146,27 @@ namespace MoneyNote.ViewModels
             switch (type)
             {
                 case CategoryType.Market:
-                    return "#ff6633";
+                    return "#9daf9c";
                 case CategoryType.Restaurant:
-                    return "#6ff6ff";
+                    return "#50624f";
                 case CategoryType.Transport:
-                    return "#887799";
+                    return "#a5535f";
                 case CategoryType.Business:
-                    return "#879969";
+                    return "#f19fab";
                 case CategoryType.Network:
-                    return "#ff80c0";
+                    return "#989690";
                 case CategoryType.Entertainment:
-                    return "#e8f0ba";
+                    return "#7aa37a";
                 case CategoryType.Salary:
-                    return "#ff6633";
+                    return "#99cc99";
                 case CategoryType.Gift:
-                    return "#6ff6ff";
+                    return "#a2a29c";
                 case CategoryType.Earnings:
-                    return "#887799";
+                    return "#5e2f36";
                 case CategoryType.Other:
-                    return "#879969";
+                    return "#c7d1c6";
+                case CategoryType.Medicine:
+                    return "#afddad";
                 default:
                     return "#000000";
             }
