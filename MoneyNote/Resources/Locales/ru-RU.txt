@@ -104,7 +104,8 @@ alert = Предупреждение
 /* Alerts */
 deleting = Удаление
 in_developing = В разработке...
-be_careful = Вы уверены, что хотите удалить все записи и сбросить настройки?
+be_careful = Осторожно!
+are_you_reset = Вы уверены, что хотите удалить все записи и сбросить настройки?
 are_you_delete = Вы уверены, что хотите удалить эту запись?
 alert_no_history = Записей истории не существует, сделайте заметку.
 alert_no_data = Нет данных за этот месяц!
@@ -149,7 +150,7 @@ enter_miss_description = Введите / пропустите описание 
 /* All Languages */
 by_default = messagebydefault
 
-/* Terms of Service, Privacy Policy, License Agreement*/
+/* Terms of Service, Privacy Policy, License Agreement */
 terms = Условия использования
 policy = Политика конфиденциальности
 license = Лицензионное соглашение

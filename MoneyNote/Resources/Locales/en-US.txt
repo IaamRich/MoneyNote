@@ -150,7 +150,7 @@ enter_miss_description = Enter/Miss Description...
 /* All Languages */
 by_default = messagebydefault
 
-/* Terms of Service, Privacy Policy, License Agreement*/
+/* Terms of Service, Privacy Policy, License Agreement */
 terms = Terms of Service
 policy = Privacy Policy
 license = License of Agreement

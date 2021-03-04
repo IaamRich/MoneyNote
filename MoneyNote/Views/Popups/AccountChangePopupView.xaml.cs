@@ -1,5 +1,4 @@
 ﻿using System;
-using Plugin.Settings;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms.Xaml;
@@ -12,11 +11,10 @@ namespace MoneyNote.Views.Popups
         //public II18N Strings => I18N.Current;
         public bool IsCancelPressed { get; set; }
         public Action ActionAfter { get; set; }
-        public AccountChangePopupView(Action act, string title, string alert)
+        public AccountChangePopupView(Action act, string title)
         {
             InitializeComponent();
             this.title.Text = title;
-            this.alertMessage.Text = alert;
             ActionAfter = act;
         }
         private void Cancel_Button_Clicked(object sender, System.EventArgs e)
@@ -29,13 +27,10 @@ namespace MoneyNote.Views.Popups
             //dont delete this method for unclosing popup when it tapped on empty space
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void Button_Clicked_Yes(object sender, EventArgs e)
         {
             if (!IsCancelPressed)
             {
-                var result = entry.Text;
-                CrossSettings.Current.AddOrUpdateValue("CurrentAccountPopupValue", result);
-
                 PopupNavigation.Instance.PopAsync(true);
                 ActionAfter?.Invoke();
             }

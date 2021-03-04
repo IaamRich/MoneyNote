@@ -149,12 +149,11 @@ enter_miss_description = Introduceți / pierdeți descrierea ...
 /* All Languages */
 by_default = messagebydefault
 
-/* Terms of Service, Privacy Policy, License Agreement*/
+/* Terms of Service, Privacy Policy, License Agreement */
 terms = Termeni și condiții
 policy = Politica de confidențialitate
 license = Licență
 terms_text = Termenii și condițiile pentru aplicația MoneyNotique nu există în acest stadiu al aplicației din cauza lipsei de nevoie pentru aceasta. Fiecare utilizator decide singur cum să folosească această aplicație în scopuri personale, principalul lucru fiind că sunt respectate toate regulile acordului de licență descrise mai jos.
-policy_text = În acest stadiu
 policy_text = În acest stadiu, politica de confidențialitate a aplicației MoneyNotique este absentă din cauza faptului că datele utilizatorilor din această aplicație nu sunt colectate deloc, în viitor, când funcțiile aplicației sunt extinse, acest document va fi, de asemenea, actualizat.
 license_text = Acord de licență pentru aplicația mobilă MoneyNotique.
 Înainte de a utiliza programul, vă rugăm să citiți termenii următorului acord de licență. Orice utilizare a programului MoneyNotique de către dvs. constituie acceptarea deplină și necondiționată a termenilor prezentului Acord de licență. Dacă nu acceptați integral termenii acestui Acord de licență, nu aveți dreptul să utilizați programul MoneyNotique în niciun scop. Acest Acord de licență intră în vigoare din momentul în care MoneyNotique este instalat pe orice dispozitiv digital care îl permite și este valabil pe termen nelimitat.

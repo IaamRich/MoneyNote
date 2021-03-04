@@ -6,7 +6,9 @@ using MoneyNote.Resources;
 using MoneyNote.Resources.Images;
 using MoneyNote.Services;
 using MoneyNote.Services.Contracts;
+using MoneyNote.Views.Popups;
 using ReactiveUI;
+using Rg.Plugins.Popup.Services;
 using Splat;
 using Xamarin.Forms;
 
@@ -84,9 +86,10 @@ namespace MoneyNote
             {
                 ResetAllMethod();
             });
-            OffAds = ReactiveCommand.Create(() =>
+            OffAds = ReactiveCommand.Create(async () =>
             {
-                Application.Current.MainPage.DisplayAlert(Strings["alert"], Strings["in_developing"], "", Strings["ok"]);
+                await PopupNavigation.Instance.PushAsync(new AccountChangePopupView(null, Strings["in_developing"]), true);
+                //Application.Current.MainPage.DisplayAlert(Strings["alert"], Strings["in_developing"], "", Strings["ok"]);
             });
             ImageCommand = new Command(ImageCommandFunc);
             IsMinusCommand = ReactiveCommand.Create(() =>
