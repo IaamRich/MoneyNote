@@ -89,7 +89,7 @@ namespace MoneyNote.ViewModels
             });
             SelectCategory = ReactiveCommand.Create<PercentageCategory>(async note =>
             {
-                await PopupNavigation.Instance.PushAsync(new DiagramPopupView(note), true);
+                await PopupNavigation.Instance.PushAsync(new DiagramPopupView(note, CurrentMonthText), true);
                 return;
             });
         }
