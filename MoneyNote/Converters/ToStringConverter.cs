@@ -15,13 +15,10 @@ namespace MoneyNote.Converters
             {
                 case "Cash":
                     return Strings["cash"];
-                    break;
                 case "Card":
                 default:
                     return Strings["card"];
-                    break;
             }
-            return result;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

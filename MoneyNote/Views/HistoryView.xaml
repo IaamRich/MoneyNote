@@ -18,6 +18,7 @@
     <rxui:ReactiveContentPage.Resources>
         <ResourceDictionary>
             <converter:ToStringConverter x:Key="toStringConverter" />
+            <converter:DateTranslateConverter x:Key="dateTranslateConverter" />
         </ResourceDictionary>
     </rxui:ReactiveContentPage.Resources>
     <Grid BackgroundColor="{StaticResource ListBackColor}">
@@ -96,7 +97,7 @@
                                         Margin="0,30,0,0"
                                         FontFamily="MainFontBold"
                                         FontSize="Medium"
-                                        Text="{Binding Date, StringFormat='{0:MMMM d, dddd}'}"
+                                        Text="{Binding Date, Converter={StaticResource dateTranslateConverter}}"
                                         TextColor="{StaticResource BoldLabel}" />
                                     <!--  Separate Note  -->
                                     <StackLayout
