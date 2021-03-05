@@ -53,6 +53,7 @@ namespace MoneyNote
         //Main Variables
         public string UrlPathSegment => Strings["menu_main"];
         public IScreen HostScreen { get; }
+        public Transaction ChoicedNote { get; set; }
         public II18N Strings => I18N.Current;
         public MainViewModel(ITransactionService transactionService, IMoneyService moneyService, ISettingsService settingsService, IScreen hostScreen = null)
         {
@@ -71,69 +72,70 @@ namespace MoneyNote
                 .CreateFromObservable(() => HostScreen.Router.Navigate.Execute(new DummyViewModel()).Select(_ => Unit.Default));
             SelectNote = ReactiveCommand.Create<Transaction>(async note =>
             {
-                var result = await Xamarin.Forms.Application.Current.MainPage.DisplayAlert(Strings["deleting"], Strings["are_you_delete"], Strings["yes"], Strings["no"]);
-                if (result)
-                {
-                    if (note.Date.Month != DateTime.Now.Month && note.Date.Year != DateTime.Now.Year)
-                    {
-
-                    }
-                    if (note.Bill == TransactionBill.Cash)
-                    {
-                        if (CurrentCash < note.Value)
-                        {
-                            await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_cash_delete"]), true);
-                            return;
-                        }
-                    }
-                    else
-                    {
-                        if (CurrentCard < note.Value)
-                        {
-                            await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_card_delete"]), true);
-                            return;
-                        }
-                    }
-                    if (await _transactionService.Delete(note.Id))
-                    {
-                        LastTransactionsList.Remove(note);
-                        switch (note.MathSymbol)
-                        {
-                            case '+':
-                                if (note.Bill == TransactionBill.Cash)
-                                {
-                                    _moneyService.SetCurrentCash(CurrentCash - note.Value);
-                                    if (note.Type == TransactionType.Bank) _moneyService.SetCurrentCredit(CurrentCash - note.Value);
-                                }
-                                else
-                                {
-                                    _moneyService.SetCurrentCard(CurrentCard - note.Value);
-                                    if (note.Type == TransactionType.Bank) _moneyService.SetCurrentCredit(CurrentCard - note.Value);
-                                }
-                                break;
-                            case '-':
-                                if (note.Bill == TransactionBill.Cash)
-                                {
-                                    _moneyService.SetCurrentCash(CurrentCash + note.Value);
-                                    if (note.Type == TransactionType.Bank) _moneyService.SetCurrentCredit(CurrentCash + note.Value);
-                                }
-                                else
-                                {
-                                    _moneyService.SetCurrentCard(CurrentCard + note.Value);
-                                    if (note.Type == TransactionType.Bank) _moneyService.SetCurrentCredit(CurrentCard + note.Value);
-                                }
-                                break;
-                            default:
-                                break;
-                        }
-                        GetData();
-                    }
-                }
+                ChoicedNote = note;
+                await PopupNavigation.Instance.PushAsync(new DeleteNotePopupView(DeleteNoteFunc, Strings["are_you_delete"]), true);
             });
             AddSpend = ReactiveCommand.Create(() => { OnSpend(); });
             AddSalary = ReactiveCommand.Create(() => { OnAddSalary(); });
             BankCommand = ReactiveCommand.Create(() => { OnBankCommand(); });
             SaveCommand = ReactiveCommand.Create(() => { OnSaveCommand(); });
+        }
+        private async void DeleteNoteFunc()
+        {
+            if (ChoicedNote.Date.Month != DateTime.Now.Month && ChoicedNote.Date.Year != DateTime.Now.Year)
+            {
+
+            }
+            if (ChoicedNote.Bill == TransactionBill.Cash)
+            {
+                if (CurrentCash < ChoicedNote.Value)
+                {
+                    await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_cash_delete"]), true);
+                    return;
+                }
+            }
+            else
+            {
+                if (CurrentCard < ChoicedNote.Value)
+                {
+                    await PopupNavigation.Instance.PushAsync(new AlertPopupView(Strings["alert_no_card_delete"]), true);
+                    return;
+                }
+            }
+            if (await _transactionService.Delete(ChoicedNote.Id))
+            {
+                LastTransactionsList.Remove(ChoicedNote);
+                switch (ChoicedNote.MathSymbol)
+                {
+                    case '+':
+                        if (ChoicedNote.Bill == TransactionBill.Cash)
+                        {
+                            _moneyService.SetCurrentCash(CurrentCash - ChoicedNote.Value);
+                            if (ChoicedNote.Type == TransactionType.Bank) _moneyService.SetCurrentCredit(CurrentCash - ChoicedNote.Value);
+                        }
+                        else
+                        {
+                            _moneyService.SetCurrentCard(CurrentCard - ChoicedNote.Value);
+                            if (ChoicedNote.Type == TransactionType.Bank) _moneyService.SetCurrentCredit(CurrentCard - ChoicedNote.Value);
+                        }
+                        break;
+                    case '-':
+                        if (ChoicedNote.Bill == TransactionBill.Cash)
+                        {
+                            _moneyService.SetCurrentCash(CurrentCash + ChoicedNote.Value);
+                            if (ChoicedNote.Type == TransactionType.Bank) _moneyService.SetCurrentCredit(CurrentCash + ChoicedNote.Value);
+                        }
+                        else
+                        {
+                            _moneyService.SetCurrentCard(CurrentCard + ChoicedNote.Value);
+                            if (ChoicedNote.Type == TransactionType.Bank) _moneyService.SetCurrentCredit(CurrentCard + ChoicedNote.Value);
+                        }
+                        break;
+                    default:
+                        break;
+                }
+                GetData();
+            }
         }
         private void GetData()
         {
