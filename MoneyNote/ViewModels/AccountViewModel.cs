@@ -9,7 +9,6 @@ using Plugin.Settings;
 using ReactiveUI;
 using Rg.Plugins.Popup.Services;
 using Splat;
-using Xamarin.Forms;
 
 namespace MoneyNote
 {
@@ -47,7 +46,7 @@ namespace MoneyNote
         {
             _message = message;
             HostScreen = screen ?? Locator.Current.GetService<IScreen>();
-            if (!string.IsNullOrEmpty(_message)) Application.Current.MainPage.DisplayAlert("Message", message, "", "ok"); ;
+            //if (!string.IsNullOrEmpty(_message)) Application.Current.MainPage.DisplayAlert("Message", message, "", "ok"); ;
             _transactionService = transactionService;
             _moneyService = moneyService;
 

@@ -82,14 +82,13 @@ namespace MoneyNote
                 else _settingsService.SetDefaultSpendingAreaSettings(1);
 
             });
-            ResetAll = ReactiveCommand.Create(() =>
+            ResetAll = ReactiveCommand.Create(async () =>
             {
-                ResetAllMethod();
+                await PopupNavigation.Instance.PushAsync(new AccountChangePopupView(ResetAllMethod, Strings["are_you_reset"]), true);
             });
             OffAds = ReactiveCommand.Create(async () =>
             {
-                await PopupNavigation.Instance.PushAsync(new AccountChangePopupView(null, Strings["in_developing"]), true);
-                //Application.Current.MainPage.DisplayAlert(Strings["alert"], Strings["in_developing"], "", Strings["ok"]);
+                await PopupNavigation.Instance.PushAsync(new InDevelopingPopupView(Strings["in_developing"]), true);
             });
             ImageCommand = new Command(ImageCommandFunc);
             IsMinusCommand = ReactiveCommand.Create(() =>
@@ -113,14 +112,10 @@ namespace MoneyNote
             AreaCash = _settingsService.GetDefaultSpendingAreaSettings() == 0 ? true : false;
             AreaCard = !AreaCash;
         }
-        private async void ResetAllMethod()
+        private void ResetAllMethod()
         {
-            bool answer = await Application.Current.MainPage.DisplayAlert(Strings["be_careful"], Strings["are_you_reset"], Strings["reset"], Strings["cancel"]);
-            if (answer)
-            {
-                _moneyService.DeleteAllMoneyNotes();
-                GetSettings();
-            };
+            _moneyService.DeleteAllMoneyNotes();
+            GetSettings();
         }
         private void GetLanguages()
         {
