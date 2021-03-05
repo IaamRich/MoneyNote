@@ -57,7 +57,7 @@ sounds = Sunete
 choose_language = Selectați limba
 dis_add = Deactivare anunțuri
 allow_credit = Permite credit automat
-Overall_setting = Includeți deposit în soldul total
+overall_setting = Includeți deposit în soldul total
 
 /* About Page */
 creator_name = Vladimir Kurachev
