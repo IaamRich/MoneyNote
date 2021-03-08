@@ -97,7 +97,7 @@
                             </ScrollView>
                         </StackLayout>
                         <!--  Sounds  -->
-                        <Grid
+                        <!--<Grid
                             touch:TouchEff.Command="{Binding SoundsCommand}"
                             touch:TouchEff.PressedScale="0.9"
                             touch:TouchEff.RegularAnimationDuration="200"
@@ -121,7 +121,7 @@
                                     </DataTrigger>
                                 </Image.Triggers>
                             </Image>
-                        </Grid>
+                        </Grid>-->
                         <!--  From Where By Default  -->
                         <Grid
                             ColumnDefinitions="*, Auto"
