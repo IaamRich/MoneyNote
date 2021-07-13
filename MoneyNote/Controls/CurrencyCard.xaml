@@ -6,7 +6,8 @@
     <Frame
         Margin="100,0"
         Padding="5"
-        CornerRadius="10">
+        CornerRadius="10"
+        HasShadow="False">
         <StackLayout Orientation="Vertical" VerticalOptions="Center">
             <Label
                 x:Name="titleLabel"

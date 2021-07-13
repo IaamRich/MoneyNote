@@ -60,6 +60,7 @@
     <MtouchArch>ARM64</MtouchArch>
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -173,7 +174,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\MoneyNote\MoneyNote.csproj">
-      <Project>{E9828FCA-0A09-4A2B-A6DD-7A7C3C59E090}</Project>
+      <Project>{918F9B8C-D867-4E89-8CFB-62A99B4541DA}</Project>
       <Name>MoneyNote</Name>
     </ProjectReference>
   </ItemGroup>
@@ -471,5 +472,12 @@
     <BundleResource Include="..\MoneyNote\Resources\Images\settings_header_glasses.png">
       <Link>Resources\settings_header_glasses.png</Link>
     </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\en.lproj\SplashScreen.storyboard" />
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\Splash.imageset\" />
   </ItemGroup>
 </Project>
