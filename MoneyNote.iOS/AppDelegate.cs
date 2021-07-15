@@ -6,6 +6,7 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using PanCardView.iOS;
+using TouchEffect.iOS;
 using UIKit;
 using Xamarin.Forms;
 
@@ -38,7 +39,7 @@ namespace MoneyNote.iOS
             LoadApplication(new App());
 
             AnimationViewRenderer.Init();
-
+            TouchEffectPreserver.Preserve();
             return base.FinishedLaunching(app, options);
         }
     }

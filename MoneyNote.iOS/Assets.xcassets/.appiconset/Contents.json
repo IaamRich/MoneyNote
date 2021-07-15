@@ -55,7 +55,7 @@
       "idiom": "ipad"
     },
     {
-      "filename": "Icon-App-20x20@2x-1.png",
+      "filename": "Icon-App-20x20@2x.png",
       "size": "20x20",
       "scale": "2x",
       "idiom": "ipad"
@@ -67,7 +67,7 @@
       "idiom": "ipad"
     },
     {
-      "filename": "Icon-App-29x29@2x-1.png",
+      "filename": "Icon-App-29x29@2x.png",
       "size": "29x29",
       "scale": "2x",
       "idiom": "ipad"
@@ -79,7 +79,7 @@
       "idiom": "ipad"
     },
     {
-      "filename": "Icon-App-40x40@2x-1.png",
+      "filename": "Icon-App-40x40@2x.png",
       "size": "40x40",
       "scale": "2x",
       "idiom": "ipad"
@@ -103,7 +103,7 @@
       "idiom": "ipad"
     },
     {
-      "filename": "Icon-App-83.5x83.5@2x-1.png",
+      "filename": "ItunesArtwork@2x.png",
       "size": "1024x1024",
       "scale": "1x",
       "idiom": "ios-marketing"
@@ -187,7 +187,6 @@
       "idiom": "watch"
     },
     {
-      "filename": "Icon-App-83.5x83.5@2x-2.png",
       "size": "1024x1024",
       "scale": "1x",
       "idiom": "watch-marketing"
