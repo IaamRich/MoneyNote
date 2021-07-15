@@ -430,10 +430,6 @@
     </BundleResource>
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="Resources\en.lproj\SplashScreen.storyboard" />
-    <InterfaceDefinition Include="LaunchScreen.storyboard" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Assets.xcassets\Splash.imageset\" />
     <Folder Include="Assets.xcassets\.appiconset\" />
   </ItemGroup>
