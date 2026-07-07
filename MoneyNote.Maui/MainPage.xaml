@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoneyNote.Maui.MainPage"
+             Title="Money Note">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="16" VerticalOptions="Center">
+            <Label Text="Money Note"
+                   Style="{StaticResource Headline}"
+                   HorizontalTextAlignment="Center" />
+            <Label Text="MAUI launcher ready."
+                   Style="{StaticResource SubHeadline}"
+                   HorizontalTextAlignment="Center" />
+            <Label Text="This is the first Android-runnable MAUI shell for the legacy app."
+                   HorizontalTextAlignment="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
