@@ -1,18 +1,101 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MoneyNote.Maui.MainPage"
-             Title="Money Note">
-    <ScrollView>
-        <VerticalStackLayout Padding="24" Spacing="16" VerticalOptions="Center">
-            <Label Text="Money Note"
-                   Style="{StaticResource Headline}"
-                   HorizontalTextAlignment="Center" />
-            <Label Text="MAUI launcher ready."
-                   Style="{StaticResource SubHeadline}"
-                   HorizontalTextAlignment="Center" />
-            <Label Text="This is the first Android-runnable MAUI shell for the legacy app."
-                   HorizontalTextAlignment="Center" />
-        </VerticalStackLayout>
-    </ScrollView>
-</ContentPage>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="MoneyNote.Maui.MainPage"
+            x:Name="RootPage"
+            FlyoutLayoutBehavior="Popover">
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Menu">
+            <Grid BackgroundColor="{StaticResource MainGreen}"
+                  RowDefinitions="Auto,*,Auto">
+                <Image Grid.RowSpan="3"
+                       Aspect="AspectFill"
+                       Opacity="0.22"
+                       Source="header_back.png" />
+                <BoxView Grid.RowSpan="3"
+                         Color="{StaticResource FlyoutOverlay}"
+                         Opacity="0.4" />
+
+                <Grid Padding="24,32,24,18"
+                      RowDefinitions="Auto,Auto,Auto">
+                    <Image HeightRequest="84"
+                           HorizontalOptions="Start"
+                           Source="logo.png"
+                           WidthRequest="84" />
+                    <Label Grid.Row="1"
+                           Margin="0,14,0,0"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           Text="{Binding AppName}"
+                           TextColor="White" />
+                    <Label Grid.Row="2"
+                           FontSize="13"
+                           Text="{Binding VersionText}"
+                           TextColor="{StaticResource AboutBackGround}" />
+                </Grid>
+
+                <CollectionView Grid.Row="1"
+                                ItemsSource="{Binding MenuItems}"
+                                SelectedItem="{Binding SelectedMenuItem, Mode=TwoWay}"
+                                SelectionChanged="OnMenuSelectionChanged"
+                                SelectionMode="Single">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="14,10"
+                                  ColumnDefinitions="36,*">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroupList>
+                                        <VisualStateGroup Name="CommonStates">
+                                            <VisualState Name="Normal" />
+                                            <VisualState Name="Selected">
+                                                <VisualState.Setters>
+                                                    <Setter Property="BackgroundColor" Value="{StaticResource FlyoutSelection}" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateGroupList>
+                                </VisualStateManager.VisualStateGroups>
+                                <Image HeightRequest="26"
+                                       Source="{Binding Icon}"
+                                       VerticalOptions="Center"
+                                       WidthRequest="26" />
+                                <Label Grid.Column="1"
+                                       FontSize="15"
+                                       Text="{Binding Title}"
+                                       TextColor="White"
+                                       VerticalTextAlignment="Center" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <Grid Grid.Row="2"
+                      Padding="24,16,24,20"
+                      RowDefinitions="Auto,Auto,Auto"
+                      RowSpacing="12">
+                    <Image HeightRequest="12"
+                           HorizontalOptions="Start"
+                           Opacity="0.8"
+                           Source="steps.png" />
+                    <HorizontalStackLayout Spacing="16">
+                        <ImageButton BackgroundColor="Transparent"
+                                     Clicked="OnShareClicked"
+                                     HeightRequest="28"
+                                     Source="share.png"
+                                     WidthRequest="28" />
+                        <ImageButton BackgroundColor="Transparent"
+                                     Clicked="OnLikeClicked"
+                                     HeightRequest="28"
+                                     Source="star.png"
+                                     WidthRequest="28" />
+                    </HorizontalStackLayout>
+                    <Label Grid.Row="2"
+                           FontSize="12"
+                           LineBreakMode="WordWrap"
+                           Text="{Binding FooterText}"
+                           TextColor="White" />
+                </Grid>
+            </Grid>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+</FlyoutPage>

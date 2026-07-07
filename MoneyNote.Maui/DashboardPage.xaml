@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoneyNote.Maui.DashboardPage"
+             Title="{Binding PageTitle}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="plus.png"
+                     Command="{Binding AddSalaryCommand}" />
+        <ToolbarItem IconImageSource="bank.png"
+                     Command="{Binding BankCommand}" />
+        <ToolbarItem IconImageSource="pig.png"
+                     Command="{Binding SaveCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <Grid BackgroundColor="{StaticResource ListBackColor}" RowDefinitions="Auto,Auto,*">
+        <Grid Padding="20,20,20,26"
+              RowDefinitions="Auto,Auto,Auto">
+            <Image Grid.RowSpan="3"
+                   Aspect="Fill"
+                   Source="header_back.png" />
+            <HorizontalStackLayout Spacing="12">
+                <Image HeightRequest="48"
+                       Source="logo.png"
+                       WidthRequest="48" />
+                <VerticalStackLayout Spacing="2" VerticalOptions="Center">
+                    <Label FontAttributes="Bold"
+                           FontSize="20"
+                           Text="{Binding AppName}"
+                           TextColor="White" />
+                    <Label FontSize="13"
+                           Text="{Binding PageTitle}"
+                           TextColor="{StaticResource AboutBackGround}" />
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+            <Label Grid.Row="1"
+                   Margin="0,18,0,0"
+                   FontAttributes="Bold"
+                   Text="{Binding BalanceLabel}"
+                   TextColor="White" />
+            <Label Grid.Row="2"
+                   FontAttributes="Bold"
+                   FontSize="38"
+                   Text="{Binding BalanceAmount}"
+                   TextColor="White" />
+        </Grid>
+
+        <CollectionView Grid.Row="1"
+                        Margin="14,-18,14,0"
+                        HeightRequest="130"
+                        ItemsSource="{Binding BalanceCards}"
+                        SelectionMode="None">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout ItemSpacing="12" Orientation="Horizontal" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Padding="16,14"
+                            BackgroundColor="White"
+                            MinimumWidthRequest="150"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 18">
+                        <VerticalStackLayout Spacing="8">
+                            <Label FontAttributes="Bold"
+                                   FontSize="13"
+                                   Text="{Binding Title}"
+                                   TextColor="{StaticResource TextSecondary}" />
+                            <Label FontAttributes="Bold"
+                                   FontSize="24"
+                                   Text="{Binding ValueText}"
+                                   TextColor="{Binding ValueColor}" />
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <ScrollView Grid.Row="2">
+            <VerticalStackLayout Padding="14,14,14,20" Spacing="14">
+                <Border Padding="14"
+                        BackgroundColor="{StaticResource SoftCardBackground}"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 18">
+                    <VerticalStackLayout Spacing="6">
+                        <Label FontAttributes="Bold"
+                               FontSize="16"
+                               Text="{Binding StartupSliceTitle}" />
+                        <Label FontSize="13"
+                               Text="{Binding StartupSliceBody}"
+                               TextColor="{StaticResource TextSecondary}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Padding="14"
+                        BackgroundColor="White"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 18">
+                    <VerticalStackLayout Spacing="12">
+                        <Entry Placeholder="{Binding NotePrompt}"
+                               IsEnabled="False"
+                               Keyboard="Numeric"
+                               TextColor="{StaticResource PopupButton}" />
+                        <Button BackgroundColor="{StaticResource MainGreen}"
+                                Command="{Binding AddSpendCommand}"
+                                CornerRadius="14"
+                                FontAttributes="Bold"
+                                HeightRequest="58"
+                                Text="{Binding NoteActionLabel}"
+                                TextColor="White" />
+                        <Label FontSize="12"
+                               Text="{Binding DeferredActionMessage}"
+                               TextColor="{StaticResource TextSecondary}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <Label FontAttributes="Bold"
+                       FontSize="18"
+                       Text="{Binding RecentTransactionsLabel}"
+                       TextColor="{StaticResource BoldLabel}" />
+
+                <Border BackgroundColor="White"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 18">
+                    <CollectionView ItemsSource="{Binding RecentTransactions}"
+                                    Margin="0,6"
+                                    SelectionMode="None">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Padding="14,12"
+                                      ColumnDefinitions="Auto,*,Auto"
+                                      ColumnSpacing="12"
+                                      RowDefinitions="Auto,Auto,1">
+                                    <Border Grid.RowSpan="2"
+                                            Padding="10"
+                                            BackgroundColor="{StaticResource SoftCardBackground}"
+                                            StrokeThickness="0"
+                                            StrokeShape="RoundRectangle 14">
+                                        <Image HeightRequest="28"
+                                               Source="{Binding Icon}"
+                                               WidthRequest="28" />
+                                    </Border>
+                                    <Label Grid.Column="1"
+                                           FontAttributes="Bold"
+                                           FontSize="14"
+                                           LineBreakMode="TailTruncation"
+                                           Text="{Binding Title}" />
+                                    <Label Grid.Column="1"
+                                           Grid.Row="1"
+                                           FontSize="12"
+                                           Text="{Binding Subtitle}"
+                                           TextColor="{StaticResource TextSecondary}" />
+                                    <Label Grid.Column="2"
+                                           Grid.RowSpan="2"
+                                           FontAttributes="Bold"
+                                           FontSize="18"
+                                           Text="{Binding AmountText}"
+                                           TextColor="{Binding AmountColor}"
+                                           VerticalTextAlignment="Center" />
+                                    <BoxView Grid.Row="2"
+                                             Grid.ColumnSpan="3"
+                                             Color="{StaticResource DividerColor}" />
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Border>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

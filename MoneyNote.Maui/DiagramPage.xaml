@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoneyNote.Maui.DiagramPage"
+             Title="{Binding Title}">
+    <Grid BackgroundColor="{StaticResource ListBackColor}" RowDefinitions="Auto,*">
+        <Grid HeightRequest="220"
+              Padding="18,16,18,24"
+              RowDefinitions="Auto,Auto,*">
+            <Image Grid.RowSpan="3"
+                   Aspect="Fill"
+                   Source="header_back.png" />
+            <HorizontalStackLayout HorizontalOptions="End" Spacing="10">
+                <Button BackgroundColor="White"
+                        Command="{Binding ShowOutlayCommand}"
+                        CornerRadius="12"
+                        FontSize="12"
+                        Text="Outlay"
+                        TextColor="{StaticResource PopupButton}" />
+                <Button BackgroundColor="{StaticResource SoftCardBackground}"
+                        Command="{Binding ShowIncomeCommand}"
+                        CornerRadius="12"
+                        FontSize="12"
+                        Text="Income"
+                        TextColor="{StaticResource PopupButton}" />
+            </HorizontalStackLayout>
+            <Grid Grid.Row="1"
+                  Margin="0,16,0,0"
+                  ColumnDefinitions="Auto,*,Auto">
+                <ImageButton BackgroundColor="Transparent"
+                             Command="{Binding GoMonthBackCommand}"
+                             IsEnabled="{Binding CanGoBack}"
+                             Rotation="180"
+                             Source="arrow_right.png" />
+                <VerticalStackLayout Grid.Column="1"
+                                     HorizontalOptions="Center"
+                                     Spacing="2">
+                    <Label FontAttributes="Bold"
+                           FontSize="18"
+                           HorizontalTextAlignment="Center"
+                           Text="{Binding CurrentMonthText}"
+                           TextColor="White" />
+                    <Label FontAttributes="Bold"
+                           FontSize="34"
+                           HorizontalTextAlignment="Center"
+                           Text="{Binding TotalText}"
+                           TextColor="White" />
+                </VerticalStackLayout>
+                <ImageButton Grid.Column="2"
+                             BackgroundColor="Transparent"
+                             Command="{Binding GoMonthForwardCommand}"
+                             IsEnabled="{Binding CanGoForward}"
+                             Source="arrow_right.png" />
+            </Grid>
+            <Label Grid.Row="2"
+                   Margin="0,26,0,0"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   Text="{Binding SummaryLabel}"
+                   TextColor="White"
+                   VerticalOptions="Start" />
+        </Grid>
+
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="14,14,14,20" Spacing="10">
+                <CollectionView ItemsSource="{Binding Shares}"
+                                SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Border Padding="14"
+                                    Margin="0,0,0,10"
+                                    BackgroundColor="White"
+                                    StrokeThickness="0"
+                                    StrokeShape="RoundRectangle 18">
+                                <Grid ColumnDefinitions="Auto,*,Auto"
+                                      RowDefinitions="Auto,Auto">
+                                    <Image Grid.RowSpan="2"
+                                           HeightRequest="40"
+                                           Source="{Binding Icon}"
+                                           WidthRequest="40" />
+                                    <Label Grid.Column="1"
+                                           FontAttributes="Bold"
+                                           FontSize="14"
+                                           Margin="10,0,0,0"
+                                           Text="{Binding Name}" />
+                                    <Label Grid.Column="2"
+                                           FontAttributes="Bold"
+                                           FontSize="14"
+                                           Text="{Binding PercentageText}"
+                                           TextColor="{StaticResource PopupButton}" />
+                                    <Grid Grid.Column="1"
+                                          Grid.ColumnSpan="2"
+                                          Grid.Row="1"
+                                          Margin="10,8,0,0"
+                                          RowDefinitions="Auto,Auto">
+                                        <ProgressBar HeightRequest="8"
+                                                     Progress="{Binding Ratio}"
+                                                     ProgressColor="{Binding BarColor}" />
+                                        <Label Grid.Row="1"
+                                               Margin="0,6,0,0"
+                                               FontSize="12"
+                                               Text="{Binding ValueText}"
+                                               TextColor="{StaticResource TextSecondary}" />
+                                    </Grid>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

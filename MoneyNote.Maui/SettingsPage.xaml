@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoneyNote.Maui.SettingsPage"
+             Title="{Binding Title}">
+    <Grid BackgroundColor="{StaticResource ListBackColor}">
+        <Image Aspect="Fill"
+               Source="header_back.png"
+               VerticalOptions="Start" />
+        <ScrollView>
+            <VerticalStackLayout Spacing="0">
+                <Grid HeightRequest="136">
+                    <Image HeightRequest="96"
+                           Source="{Binding SettingsHeaderSource}"
+                           VerticalOptions="End"
+                           HorizontalOptions="Center">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ToggleHeaderCommand}" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+
+                <Border Margin="12,0,12,18"
+                        Padding="18"
+                        BackgroundColor="White"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 18">
+                    <VerticalStackLayout Spacing="18">
+                        <Label FontAttributes="Bold"
+                               FontSize="18"
+                               Text="{Binding CommonTitle}" />
+                        <Grid ColumnDefinitions="*,Auto,Auto"
+                              ColumnSpacing="12">
+                            <Label Text="{Binding ChooseLanguageLabel}"
+                                   VerticalTextAlignment="Center" />
+                            <Label Grid.Column="1"
+                                   Text="{Binding LanguageName}"
+                                   VerticalTextAlignment="Center" />
+                            <ImageButton Grid.Column="2"
+                                         BackgroundColor="Transparent"
+                                         Command="{Binding CycleLanguageCommand}"
+                                         Source="{Binding LanguageFlag}"
+                                         WidthRequest="42" />
+                        </Grid>
+                        <Grid ColumnDefinitions="*,Auto"
+                              ColumnSpacing="12">
+                            <Label Text="{Binding DefaultAreaLabel}"
+                                   VerticalTextAlignment="Center" />
+                            <Button Grid.Column="1"
+                                    BackgroundColor="{StaticResource SoftCardBackground}"
+                                    Command="{Binding ToggleAreaCommand}"
+                                    CornerRadius="12"
+                                    Text="{Binding DefaultAreaValue}"
+                                    TextColor="{StaticResource PopupButton}" />
+                        </Grid>
+
+                        <BoxView HeightRequest="1"
+                                 Color="{StaticResource DividerColor}" />
+
+                        <Label FontAttributes="Bold"
+                               FontSize="18"
+                               Text="{Binding MoneyNotesTitle}" />
+                        <Grid ColumnDefinitions="*,Auto"
+                              ColumnSpacing="12">
+                            <Label Text="{Binding ResetLabel}"
+                                   VerticalTextAlignment="Center" />
+                            <Button Grid.Column="1"
+                                    BackgroundColor="{StaticResource MainGreen}"
+                                    Command="{Binding ResetCommand}"
+                                    CornerRadius="12"
+                                    Text="{Binding ResetButtonText}"
+                                    TextColor="White" />
+                        </Grid>
+                        <Grid ColumnDefinitions="*,Auto"
+                              ColumnSpacing="12">
+                            <Label Text="{Binding AllowCreditLabel}"
+                                   VerticalTextAlignment="Center" />
+                            <Switch Grid.Column="1"
+                                    IsToggled="{Binding AutoCredit, Mode=OneWay}"
+                                    Toggled="OnAutoCreditToggled" />
+                        </Grid>
+                        <Grid ColumnDefinitions="*,Auto"
+                              ColumnSpacing="12">
+                            <Label Text="{Binding OverallBalanceLabel}"
+                                   VerticalTextAlignment="Center" />
+                            <Switch Grid.Column="1"
+                                    IsToggled="{Binding ShowSavings, Mode=OneWay}"
+                                    Toggled="OnShowSavingsToggled" />
+                        </Grid>
+
+                        <BoxView HeightRequest="1"
+                                 Color="{StaticResource DividerColor}" />
+
+                        <Label FontAttributes="Bold"
+                               FontSize="18"
+                               Text="{Binding OtherTitle}" />
+                        <Grid ColumnDefinitions="*,Auto"
+                              ColumnSpacing="12">
+                            <Label Text="{Binding DisableAdsLabel}"
+                                   VerticalTextAlignment="Center" />
+                            <Button Grid.Column="1"
+                                    BackgroundColor="{StaticResource MainGreen}"
+                                    Command="{Binding DisableAdsCommand}"
+                                    CornerRadius="12"
+                                    Text="{Binding DisableAdsButtonText}"
+                                    TextColor="White" />
+                        </Grid>
+                        <Label FontSize="12"
+                               Text="{Binding TodoMessage}"
+                               TextColor="{StaticResource TextSecondary}" />
+                    </VerticalStackLayout>
+                </Border>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

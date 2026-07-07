@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoneyNote.Maui.AccountsPage"
+             Title="{Binding Title}">
+    <Grid BackgroundColor="{StaticResource ListBackColor}">
+        <Image Aspect="Fill"
+               Source="header_back.png"
+               VerticalOptions="Start" />
+        <ScrollView>
+            <VerticalStackLayout Spacing="0">
+                <Grid HeightRequest="140">
+                    <Image HeightRequest="120"
+                           Margin="0,0,0,-8"
+                           Source="account_header.png"
+                           VerticalOptions="End"
+                           HorizontalOptions="Center" />
+                </Grid>
+
+                <Border Margin="12,0,12,18"
+                        Padding="18"
+                        BackgroundColor="White"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 18">
+                    <CollectionView ItemsSource="{Binding Sections}"
+                                    SelectionMode="None">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <VerticalStackLayout Spacing="12">
+                                    <Label FontAttributes="Bold"
+                                           FontSize="18"
+                                           Margin="0,0,0,4"
+                                           Text="{Binding Title}"
+                                           TextColor="{StaticResource BoldLabel}" />
+                                    <CollectionView ItemsSource="{Binding Metrics}"
+                                                    SelectionMode="None">
+                                        <CollectionView.ItemTemplate>
+                                            <DataTemplate>
+                                                <Border Padding="14,12"
+                                                        Margin="0,0,0,10"
+                                                        BackgroundColor="{StaticResource SoftCardBackground}"
+                                                        StrokeThickness="0"
+                                                        StrokeShape="RoundRectangle 16">
+                                                    <Grid ColumnDefinitions="*,Auto">
+                                                        <Label FontSize="15"
+                                                               Text="{Binding Title}"
+                                                               VerticalTextAlignment="Center" />
+                                                        <Label Grid.Column="1"
+                                                               FontAttributes="Bold"
+                                                               FontSize="18"
+                                                               Text="{Binding AmountText}"
+                                                               TextColor="{Binding AmountColor}" />
+                                                    </Grid>
+                                                </Border>
+                                            </DataTemplate>
+                                        </CollectionView.ItemTemplate>
+                                    </CollectionView>
+                                </VerticalStackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Border>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -9,6 +9,21 @@
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource TextPrimary}, Dark={StaticResource Background}}" />
     </Style>
 
+    <Style TargetType="Button">
+        <Setter Property="CornerRadius" Value="14" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="{StaticResource ButtonText}" />
+    </Style>
+
+    <Style TargetType="Entry">
+        <Setter Property="TextColor" Value="{StaticResource PopupButton}" />
+        <Setter Property="PlaceholderColor" Value="{StaticResource AboutBackGround}" />
+    </Style>
+
+    <Style TargetType="Border">
+        <Setter Property="StrokeThickness" Value="0" />
+    </Style>
+
     <Style TargetType="Label" x:Key="Headline">
         <Setter Property="FontSize" Value="32" />
         <Setter Property="FontAttributes" Value="Bold" />

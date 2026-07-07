@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoneyNote.Maui.AboutPage"
+             Title="{Binding Title}">
+    <Grid BackgroundColor="{StaticResource ListBackColor}">
+        <Image Aspect="Fill"
+               Source="header_back.png"
+               VerticalOptions="Start" />
+        <ScrollView>
+            <VerticalStackLayout Spacing="0">
+                <Grid HeightRequest="140" Padding="24,0">
+                    <Label VerticalOptions="Center"
+                           FontSize="28">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding AppName}"
+                                      TextColor="White" />
+                                <Span Text=" " />
+                                <Span Text="{Binding VersionText}"
+                                      TextColor="{StaticResource AboutBackGround}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Grid>
+
+                <Border Margin="12,0,12,18"
+                        Padding="18"
+                        BackgroundColor="White"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 18">
+                    <VerticalStackLayout Spacing="14">
+                        <Label HorizontalTextAlignment="Center"
+                               Text="{Binding CreatedByText}" />
+                        <Label HorizontalTextAlignment="Center"
+                               Text="{Binding SupportedByText}" />
+                        <Label HorizontalTextAlignment="Center"
+                               Text="{Binding PlatformsText}" />
+                        <Label HorizontalTextAlignment="Center"
+                               Text="{Binding EnvironmentText}">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding VisitCompanyCommand}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Button BackgroundColor="{StaticResource MainGreen}"
+                                Command="{Binding LearnMoreCommand}"
+                                CornerRadius="14"
+                                HeightRequest="58"
+                                Text="{Binding LearnMoreText}"
+                                TextColor="White" />
+
+                        <BoxView HeightRequest="1"
+                                 Color="{StaticResource DividerColor}" />
+                        <Label FontAttributes="Bold"
+                               FontSize="18"
+                               Text="{Binding TermsTitle}" />
+                        <Label Text="{Binding TermsBody}" />
+
+                        <BoxView HeightRequest="1"
+                                 Color="{StaticResource DividerColor}" />
+                        <Label FontAttributes="Bold"
+                               FontSize="18"
+                               Text="{Binding PolicyTitle}" />
+                        <Label Text="{Binding PolicyBody}" />
+
+                        <BoxView HeightRequest="1"
+                                 Color="{StaticResource DividerColor}" />
+                        <Label FontAttributes="Bold"
+                               FontSize="18"
+                               Text="{Binding LicenseTitle}" />
+                        <Label Text="{Binding LicenseBody}" />
+
+                        <Label FontSize="12"
+                               HorizontalTextAlignment="Center"
+                               Text="{Binding ActionStatus}"
+                               TextColor="{StaticResource TextSecondary}" />
+                        <Label FontSize="11"
+                               HorizontalTextAlignment="Center"
+                               Text="{Binding FooterText}"
+                               TextColor="{StaticResource TextSecondary}" />
+                    </VerticalStackLayout>
+                </Border>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <Color x:Key="Primary">#512BD4</Color>
-    <Color x:Key="PrimaryDark">#2B0B98</Color>
+    <Color x:Key="Primary">#738d72</Color>
+    <Color x:Key="PrimaryDark">#5F775E</Color>
     <Color x:Key="Background">#FFFFFF</Color>
     <Color x:Key="BackgroundDark">#1F1F1F</Color>
     <Color x:Key="TextPrimary">#1F1F1F</Color>
-    <Color x:Key="TextSecondary">#6E6E6E</Color>
-    <Color x:Key="Accent">#2B0B98</Color>
+    <Color x:Key="TextSecondary">#6D6A61</Color>
+    <Color x:Key="Accent">#4F61A1</Color>
+    <Color x:Key="ButtonText">#FFFFFF</Color>
+    <Color x:Key="BackgroundWhite">#FFFFFF</Color>
+    <Color x:Key="MainGreen">#738D72</Color>
+    <Color x:Key="MainGreenDark">#50624F</Color>
+    <Color x:Key="AboutBackGround">#DBD6C3</Color>
+    <Color x:Key="PopupButton">#6D6A61</Color>
+    <Color x:Key="ListBackColor">#E8E8E0</Color>
+    <Color x:Key="BoldLabel">#000000</Color>
+    <Color x:Key="Links">#00A8D5</Color>
+    <Color x:Key="RedAlert">#EC7788</Color>
+    <Color x:Key="BankColor">#4F61A1</Color>
+    <Color x:Key="SoftCardBackground">#F4F1E9</Color>
+    <Color x:Key="DividerColor">#E4DED1</Color>
+    <Color x:Key="FlyoutSelection">#8AA187</Color>
+    <Color x:Key="FlyoutOverlay">#6E8A6D</Color>
 </ResourceDictionary>
